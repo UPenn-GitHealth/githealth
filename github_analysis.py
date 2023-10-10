@@ -40,14 +40,13 @@ def get_repos(g):
 g = Github(access_token)
 repo_names = get_repos(g)
 
-# Get repository details
+# Get repository details - we could add this to the main loop below but left out to not mess up data collection
 for repo_name in repo_names:
     r = g.get_repo(repo_name)
     print("Repository Name:", r.name)
     print("Description:", r.description)
     print("Stars:", r.stargazers_count)
-    print("Forks:", r.forks_count)
-    print("\n")
+    print("Forks:", r.forks_count, "\n")
 
 for repo_name in repo_names:
     r = g.get_repo(repo_name)
