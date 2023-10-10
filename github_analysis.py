@@ -39,10 +39,15 @@ def get_repos(g):
 # Create a PyGitHub client
 g = Github(access_token)
 repo_names = get_repos(g)
+# print each repo name on  a new line
+for repo_name in repo_names:
+    print(repo_name)
+
 
 # Get repository details
 for repo_name in repo_names:
-    r = g.get_repo(repo_name)
+    # r = g.get_repo(repo_name)
+    r = g.get_repo("autowarefoundation/autoware_msgs")
     print("Repository Name:", r.name)
     print("Description:", r.description)
     print("Stars:", r.stargazers_count)
