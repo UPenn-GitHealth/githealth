@@ -45,6 +45,8 @@ for repo_name in repo_names:
     r = g.get_repo(repo_name)
     print("Repository Name:", r.name)
     print("Description:", r.description)
+    print("API URL: ", r.url)
+    print("HTML URL: ", r.html_url)
     print("Stars:", r.stargazers_count)
     print("Forks:", r.forks_count, "\n")
 
