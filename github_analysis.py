@@ -22,7 +22,7 @@ def get_repos(g):
 
         for repo_key, repo_details in parsed_content['repositories'].items():
             url = repo_details['url']
-            print(url)
+
             matches = re.search(REGEX, url)
             if matches:
                 owner = matches.group('owner')
@@ -35,7 +35,6 @@ def get_repos(g):
     except Exception as e:
         print(f"Error fetching or processing data: {e}")
         return []
-
 
 # Create a PyGitHub client
 g = Github(access_token)
