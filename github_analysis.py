@@ -46,8 +46,7 @@ for repo_name in repo_names:
 
 # Get repository details
 for repo_name in repo_names:
-    # r = g.get_repo(repo_name)
-    r = g.get_repo("autowarefoundation/autoware_msgs")
+    r = g.get_repo(repo_name)
     print("Repository Name:", r.name)
     print("Description:", r.description)
     print("Stars:", r.stargazers_count)
