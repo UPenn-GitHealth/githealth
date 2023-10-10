@@ -1,5 +1,9 @@
 from github import Github
 import yaml
+import json
+import re
+
+REGEX = r"https://github.com/(?P<owner>[a-zA-Z0-9\-_]+)/(?P<repo>[a-zA-Z0-9\-_]+)\.git"
 
 access_token = "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"
 
@@ -11,32 +15,51 @@ def get_repos(g):
         repo = g.get_repo(repo_name)
         file_content = repo.get_contents(file_path).decoded_content.decode("utf-8")
         
-        # Parse the YAML con
+        # Parse the YAML content
         parsed_content = yaml.safe_load(file_content)
 
-        # Extract repository details
-        repositories = []
+        repository_names = []
+
         for repo_key, repo_details in parsed_content['repositories'].items():
-            repo_name = "/".join(repo_details['url'].split('/')[-2:])
-            repositories.append(g.get_repo(repo_name))
-        return repositories
+            url = repo_details['url']
+            print(url)
+            matches = re.search(REGEX, url)
+            if matches:
+                owner = matches.group('owner')
+                repo = matches.group('repo')
+
+                repository_names.append(f"{owner}/{repo}")
+
+        return repository_names
+
+
+        # # Extract repository details
+        # repositories = []
+        # for repo_key, repo_details in parsed_content['repositories'].items():
+        #     repo_name = "/".join(repo_details['url'].split('/')[-2:])
+        #     repositories.append(g.get_repo(repo_name))
+        # return repositories
     except Exception as e:
         print(f"Error fetching or processing data: {e}")
         return []
 
+
 # Create a PyGitHub client
 g = Github(access_token)
-repos = get_repos(g)
+repo_names = get_repos(g)
+print(repo_names)
 
 # Get repository details
-for r in repos:
+for repo_name in repo_names:
+    r = g.get_repo(repo_name)
     print("Repository Name:", r.name)
     print("Description:", r.description)
     print("Stars:", r.stargazers_count)
     print("Forks:", r.forks_count)
     print("\n")
 
-for r in repos:
+for repo_name in repo_names:
+    r = g.get_repo(repo_name)
     # could make a new spreadsheet page here or something
     issues = r.get_issues(state="all")  # state="all" includes open and closed issues
     for issue in issues:
