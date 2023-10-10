@@ -62,7 +62,6 @@ for repo_name in repo_names:
         print("End time:", issue.closed_at) # if open, then closed_at is None
         print("PR Status: ", issue.state)
         print("Initiator:", issue.user.login)
-        print("Collaboration type: Issue") #FIXME
 
         assignees = []
         for assignee in issue.assignees:
