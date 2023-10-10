@@ -39,10 +39,6 @@ def get_repos(g):
 # Create a PyGitHub client
 g = Github(access_token)
 repo_names = get_repos(g)
-# print each repo name on  a new line
-for repo_name in repo_names:
-    print(repo_name)
-
 
 # Get repository details
 for repo_name in repo_names:
@@ -57,6 +53,7 @@ for repo_name in repo_names:
     r = g.get_repo(repo_name)
     # could make a new spreadsheet page here or something
     issues = r.get_issues(state="all")  # state="all" includes open and closed issues
+    
     for issue in issues:
         # each one of these would be a line in the spreadsheet
         print("API URL: ", issue.url)
@@ -89,16 +86,4 @@ for repo_name in repo_names:
             for review in issue.as_pull_request().get_reviews():
                 reviewers_involved.add(review.user.login)
 
-            print("Reviewers that reviewed: ", list(reviewers_involved))
-
-            users_requested, teams_requested = issue.as_pull_request().get_review_requests()
-
-            for user in users_requested:
-                reviewers_involved.add(user.login)
-
-            for team in teams_requested:
-                for user in team.get_members():
-                    reviewers_involved.add(user.login)
-
-            reviewers_involved = list(reviewers_involved)
-            print("All invited reviewers: ", reviewers_involved)
+            print("Reviewers: ", list(reviewers_involved))
