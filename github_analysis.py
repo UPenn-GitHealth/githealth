@@ -36,29 +36,52 @@ for r in repos:
     print("Forks:", r.forks_count)
     print("\n")
 
+for r in repos:
+    # could make a new spreadsheet page here or something
+    issues = r.get_issues(state="all")  # state="all" includes open and closed issues
+    for issue in issues:
+        # each one of these would be a line in the spreadsheet
+        print("API URL: ", issue.url)
+        print("HTML URL: ", issue.html_url) # goes to the webpage
+        print("Repository:", issue.repository.name)
+        print("Start time:", issue.created_at)
+        print("End time:", issue.closed_at) # if open, then closed_at is None
+        print("PR Status: ", issue.state)
+        print("Initiator:", issue.user.login)
+        print("Collaboration type: Issue") #FIXME
 
-# Get issues
-issues = repo.get_issues(state="all")  # state="all" includes open and closed issues
-i = 0
-# while i < 10:
-for issue in issues:
-    print("Start time:", issue.created_at)
-    print("End time:", issue.closed_at) # if open, then closed_at is None
-    print("Initiator:", issue.user.login)
-    print("Repository:", issue.repository.name)
-    print("Collaboration type:", issue.pull_request) #fixme
-    print("Participants:", issue.assignees) #FIXME
-    # get the people who participated on this issue, such as by commenting or being assigned
-    #print("Participants:", issue.get_participants())
-    print("Participants:", issue.get_comments())
-    #extract the user id's from the comments
-    for comment in issue.get_comments():
-        print("commenter " + comment.user.login)
-    print("Labels:", issue.labels)
-    # print("Reviewers:", issue.requested_reviewers) #FIXME
-    # extract who approved the request
-    for reviewer in issue.get_review_requests():
-        print("reviewer " + reviewer.user.login)
-    print("PR Status: ", issue.state)
-    print("URL: ", issue.url)
-    break
+        assignees = []
+        for assignee in issue.assignees:
+            assignees.append(assignee.login)
+
+        print("Assignees: ", assignees)
+
+        commenters = set()
+        for comment in issue.get_comments():
+            commenters.add(comment.user.login)
+        print("Commenters: ", list(commenters))
+
+        labels = []
+        for label in issue.labels:
+            labels.append(label.name)
+        print("Labels: ", labels)
+        
+        if issue.state == "closed" and issue.pull_request is not None:
+            reviewers_involved = set()
+
+            for review in issue.as_pull_request().get_reviews():
+                reviewers_involved.add(review.user.login)
+
+            print("Reviewers that reviewed: ", list(reviewers_involved))
+
+            users_requested, teams_requested = issue.as_pull_request().get_review_requests()
+
+            for user in users_requested:
+                reviewers_involved.add(user.login)
+
+            for team in teams_requested:
+                for user in team.get_members():
+                    reviewers_involved.add(user.login)
+
+            reviewers_involved = list(reviewers_involved)
+            print("All invited reviewers: ", reviewers_involved)
