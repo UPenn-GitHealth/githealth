@@ -84,6 +84,9 @@ for repo_name in repo_names:
             reviewers_involved = set()
 
             for review in issue.as_pull_request().get_reviews():
-                reviewers_involved.add(review.user.login)
+                if review.user is not None:
+                    reviewers_involved.add(review.user.login)
 
             print("Reviewers: ", list(reviewers_involved))
+
+
