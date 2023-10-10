@@ -87,5 +87,3 @@ for repo_name in repo_names:
                     reviewers_involved.add(review.user.login)
 
             print("Reviewers: ", list(reviewers_involved))
-
-
