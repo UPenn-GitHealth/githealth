@@ -38,37 +38,27 @@ for r in repos:
 
 
 # Get issues
-# issues = repo.get_issues(state="all")  # state="all" includes open and closed issues
-# for issue in issues:
-#     print("Issue Title:", issue.title)
-#     print("State:", issue.state)
-#     print("Created At:", issue.created_at)
-
-
-# below is Anshul's garbage
-# Get issues
-# issues = repo.get_issues(state="all")  # state="all" includes open and closed issues
-# i = 0
-# # while i < 10:
-# for issue in issues:
-#     print("Start time:", issue.created_at)
-#     print("End time:", issue.closed_at) # if open, then closed_at is None
-#     print("Initiator:", issue.user.login)
-#     print("Repository:", issue.repository.name)
-#     print("Collaboration type:", issue.pull_request) #fixme
-#     print("Participants:", issue.assignees) #FIXME
-#     # get the people who participated on this issue, such as by commenting or being assigned
-#     #print("Participants:", issue.get_participants())
-#     print("Participants:", issue.get_comments())
-#     #extract the user id's from the comments
-#     for comment in issue.get_comments():
-#         print("commenter " + comment.user.login)
-#     print("Labels:", issue.labels)
-#     # print("Reviewers:", issue.requested_reviewers) #FIXME
-#     # extract who approved the request
-#     for reviewer in issue.get_review_requests():
-#         print("reviewer " + reviewer.user.login)
-#     print("PR Status: ", issue.state)
-#     print("URL: ", issue.url)
-#     break
-
+issues = repo.get_issues(state="all")  # state="all" includes open and closed issues
+i = 0
+# while i < 10:
+for issue in issues:
+    print("Start time:", issue.created_at)
+    print("End time:", issue.closed_at) # if open, then closed_at is None
+    print("Initiator:", issue.user.login)
+    print("Repository:", issue.repository.name)
+    print("Collaboration type:", issue.pull_request) #fixme
+    print("Participants:", issue.assignees) #FIXME
+    # get the people who participated on this issue, such as by commenting or being assigned
+    #print("Participants:", issue.get_participants())
+    print("Participants:", issue.get_comments())
+    #extract the user id's from the comments
+    for comment in issue.get_comments():
+        print("commenter " + comment.user.login)
+    print("Labels:", issue.labels)
+    # print("Reviewers:", issue.requested_reviewers) #FIXME
+    # extract who approved the request
+    for reviewer in issue.get_review_requests():
+        print("reviewer " + reviewer.user.login)
+    print("PR Status: ", issue.state)
+    print("URL: ", issue.url)
+    break
