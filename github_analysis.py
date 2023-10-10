@@ -32,13 +32,6 @@ def get_repos(g):
 
         return repository_names
 
-
-        # # Extract repository details
-        # repositories = []
-        # for repo_key, repo_details in parsed_content['repositories'].items():
-        #     repo_name = "/".join(repo_details['url'].split('/')[-2:])
-        #     repositories.append(g.get_repo(repo_name))
-        # return repositories
     except Exception as e:
         print(f"Error fetching or processing data: {e}")
         return []
@@ -47,7 +40,6 @@ def get_repos(g):
 # Create a PyGitHub client
 g = Github(access_token)
 repo_names = get_repos(g)
-print(repo_names)
 
 # Get repository details
 for repo_name in repo_names:
