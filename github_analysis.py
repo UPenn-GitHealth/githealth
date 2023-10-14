@@ -1,6 +1,7 @@
 from github import Github
 import yaml
 import json
+import csv
 import re
 
 REGEX = r"https://github.com/(?P<owner>[a-zA-Z0-9\-_]+)/(?P<repo>[a-zA-Z0-9\-_]+)\.git"
@@ -50,6 +51,17 @@ for repo_name in repo_names:
     print("Stars:", r.stargazers_count)
     print("Forks:", r.forks_count, "\n")
 
+# open the file in the write mode
+file = open('data.csv', 'w')
+
+# create the csv writer
+writer = csv.writer(file)
+
+header = ['API URL', 'HTML URL', 'Repository', 'Start time', 'End time', 'PR Status', 'Initiator', 'Assignees', 'Commenters', 'Labels', 'Reviewers']
+
+# write a row to the csv file
+writer.writerow(header)
+
 for repo_name in repo_names:
     r = g.get_repo(repo_name)
     # could make a new spreadsheet page here or something
@@ -57,35 +69,51 @@ for repo_name in repo_names:
     
     for issue in issues:
         # each one of these would be a line in the spreadsheet
-        print("API URL: ", issue.url)
-        print("HTML URL: ", issue.html_url) # goes to the webpage
-        print("Repository:", issue.repository.name)
-        print("Start time:", issue.created_at)
-        print("End time:", issue.closed_at) # if open, then closed_at is None
-        print("PR Status: ", issue.state)
-        print("Initiator:", issue.user.login)
+        row = [issue.url, issue.html_url, issue.repository.name, issue.created_at, issue.closed_at, issue.state, issue.user.login]
+        # print("API URL: ", issue.url)
+        # print("HTML URL: ", issue.html_url) # goes to the webpage
+        # print("Repository:", issue.repository.name)
+        # print("Start time:", issue.created_at)
+        # print("End time:", issue.closed_at) # if open, then closed_at is None
+        # print("PR Status: ", issue.state)
+        # print("Initiator:", issue.user.login)
 
         assignees = []
         for assignee in issue.assignees:
             assignees.append(assignee.login)
 
-        print("Assignees: ", assignees)
+        row.append(assignees)
+
+        # print("Assignees: ", assignees)
 
         commenters = set()
         for comment in issue.get_comments():
             commenters.add(comment.user.login)
-        print("Commenters: ", list(commenters))
+        # print("Commenters: ", list(commenters))
+
+        row.append(list(commenters))
 
         labels = []
         for label in issue.labels:
             labels.append(label.name)
-        print("Labels: ", labels)
+        # print("Labels: ", labels)
+
+        row.append(labels)
+
+        reviewers_involved = set()
         
         if issue.state == "closed" and issue.pull_request is not None:
-            reviewers_involved = set()
 
             for review in issue.as_pull_request().get_reviews():
                 if review.user is not None:
                     reviewers_involved.add(review.user.login)
 
-            print("Reviewers: ", list(reviewers_involved))
+            # print("Reviewers: ", list(reviewers_involved))
+        
+        row.append(list(reviewers_involved))
+        
+        print("Row: ", row)
+        writer.writerow(row)
+
+# close the file
+file.close()
