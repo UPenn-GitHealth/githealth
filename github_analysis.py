@@ -41,25 +41,27 @@ def get_repos(g):
 g = Github(access_token)
 repo_names = get_repos(g)
 
+file = open('repo_info.csv', 'w')
+
+writer = csv.writer(file)
+
+header = ['Repository Name', 'Description', 'API URL', 'HTML URL', 'Stars', 'Forks']
+
+writer.writerow(header)
+
 # Get repository details - we could add this to the main loop below but left out to not mess up data collection
 for repo_name in repo_names:
     r = g.get_repo(repo_name)
-    print("Repository Name:", r.name)
-    print("Description:", r.description)
-    print("API URL: ", r.url)
-    print("HTML URL: ", r.html_url)
-    print("Stars:", r.stargazers_count)
-    print("Forks:", r.forks_count, "\n")
+    writer.writerow([r.name, r.description, r.url, r.html_url, r.stargazers_count, r.forks_count])
 
-# open the file in the write mode
+file.close()
+
 file = open('data.csv', 'w')
 
-# create the csv writer
 writer = csv.writer(file)
 
 header = ['API URL', 'HTML URL', 'Repository', 'Start time', 'End time', 'PR Status', 'Initiator', 'Assignees', 'Commenters', 'Labels', 'Reviewers']
 
-# write a row to the csv file
 writer.writerow(header)
 
 for repo_name in repo_names:
@@ -68,7 +70,6 @@ for repo_name in repo_names:
     issues = r.get_issues(state="all")  # state="all" includes open and closed issues
     
     for issue in issues:
-        # each one of these would be a line in the spreadsheet
         row = [issue.url, issue.html_url, issue.repository.name, issue.created_at, issue.closed_at, issue.state, issue.user.login]
         # print("API URL: ", issue.url)
         # print("HTML URL: ", issue.html_url) # goes to the webpage
@@ -115,5 +116,4 @@ for repo_name in repo_names:
         print("Row: ", row)
         writer.writerow(row)
 
-# close the file
 file.close()
