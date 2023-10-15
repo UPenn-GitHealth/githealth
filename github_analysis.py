@@ -60,7 +60,7 @@ file = open('data.csv', 'w')
 
 writer = csv.writer(file)
 
-header = ['API URL', 'HTML URL', 'Repository', 'Start time', 'End time', 'PR Status', 'Initiator', 'Assignees', 'Commenters', 'Labels', 'Reviewers']
+header = ['API_URL', 'HTML_URL', 'Repository', 'Start_time', 'End_time', 'PR_Status', 'Initiator', 'Assignees', 'Commenters', 'Labels', 'Reviewers']
 
 writer.writerow(header)
 
