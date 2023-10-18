@@ -1,0 +1,2444 @@
+[
+    {
+        "title": "Fix camera_ids.",
+        "user_id": "kuriking",
+        "created_at": "2016-12-25T02:18:45Z",
+        "comments": [
+            {
+                "user_id": "yukkysaito",
+                "created_at": "2017-01-13T16:38:54Z",
+                "comment_text": "@kuriking Thank you for fix. I checked this commit."
+            }
+        ]
+    },
+    {
+        "title": "Hotfix/javad navsat driver",
+        "user_id": "h-ohta",
+        "created_at": "2016-12-22T04:25:03Z",
+        "comments": []
+    },
+    {
+        "title": "Defaults for unset CUDA_CAPABILITY_VERSION",
+        "user_id": "manato",
+        "created_at": "2016-12-18T05:42:09Z",
+        "comments": [
+            {
+                "user_id": "manato",
+                "created_at": "2016-12-18T05:50:24Z",
+                "comment_text": "@tushar-dadlani \r\nThank you for making PR(#536).\r\nAs simple fixing is needed for your modification, I decided to merge your suggestion by this PR(#549) which is added fixing.\r\nThank you very much again for pointing out the problem!"
+            }
+        ]
+    },
+    {
+        "title": "Fixed a bug. It caused by reference to out of image size",
+        "user_id": "yukkysaito",
+        "created_at": "2016-12-16T11:45:31Z",
+        "comments": []
+    },
+    {
+        "title": "Fixed a bug. It caused by reference to out of image size",
+        "user_id": "yukkysaito",
+        "created_at": "2016-12-16T11:07:46Z",
+        "comments": []
+    },
+    {
+        "title": "ndt_matching using local_transform",
+        "user_id": "kitsukawa",
+        "created_at": "2016-12-14T12:25:55Z",
+        "comments": [
+            {
+                "user_id": "HongweiSunny",
+                "created_at": "2019-03-15T06:35:49Z",
+                "comment_text": "HI,I wonder what the mean of local_transform is.Could you please simply explain it?\r\nThx in advance."
+            },
+            {
+                "user_id": "gbiggs",
+                "created_at": "2019-03-18T00:15:15Z",
+                "comment_text": "Thanks for using Autoware and for your question. However the issue tracker is for posting confirmed bugs and feature requests.\r\n\r\nWe ask that you please ask questions on the [Autoware Discourse category](https://discourse.ros.org/c/autoware) following our support guidelines: https://github.com/CPFL/Autoware/wiki/Support-guidelines. Please pay particular attention to the information we ask you to provide."
+            }
+        ]
+    },
+    {
+        "title": "Add an instruction video of astar_navi",
+        "user_id": "TomohitoAndo",
+        "created_at": "2016-12-14T07:44:11Z",
+        "comments": []
+    },
+    {
+        "title": "Add dialog",
+        "user_id": "TomohitoAndo",
+        "created_at": "2016-12-13T10:09:45Z",
+        "comments": []
+    },
+    {
+        "title": "Update default.rviz",
+        "user_id": "TomohitoAndo",
+        "created_at": "2016-12-13T09:12:11Z",
+        "comments": []
+    },
+    {
+        "title": "Fix .gitignore in each packages",
+        "user_id": "h-ohta",
+        "created_at": "2016-12-09T11:00:29Z",
+        "comments": [
+            {
+                "user_id": "h-ohta",
+                "created_at": "2016-12-09T11:01:10Z",
+                "comment_text": "@amc-nu @sujiwo Could you check this PR? Thank you."
+            },
+            {
+                "user_id": "h-ohta",
+                "created_at": "2016-12-10T14:56:34Z",
+                "comment_text": "@amc-nu Thanks!\r\n@sujiwo How about you?"
+            },
+            {
+                "user_id": "sujiwo",
+                "created_at": "2016-12-10T15:02:42Z",
+                "comment_text": "I think they are fine."
+            },
+            {
+                "user_id": "h-ohta",
+                "created_at": "2016-12-10T15:15:51Z",
+                "comment_text": "@sujiwo  Thank you. I'll merge"
+            }
+        ]
+    },
+    {
+        "title": "Fix dependency in \"fusion\" and \"integrated_viewer\" package",
+        "user_id": "h-ohta",
+        "created_at": "2016-12-08T15:36:14Z",
+        "comments": [
+            {
+                "user_id": "h-ohta",
+                "created_at": "2016-12-08T15:36:31Z",
+                "comment_text": "@manato Could you check this PR? thank you."
+            },
+            {
+                "user_id": "manato",
+                "created_at": "2016-12-10T14:26:16Z",
+                "comment_text": "@h-ohta \r\nThank you for fixing!\r\nSorry for my carelessness..."
+            },
+            {
+                "user_id": "manato",
+                "created_at": "2016-12-10T14:28:41Z",
+                "comment_text": "@h-ohta \r\nI merged `fix-dependency` branch into master.\r\nPlease delete the branch if it is no need anymore."
+            },
+            {
+                "user_id": "h-ohta",
+                "created_at": "2016-12-10T14:57:15Z",
+                "comment_text": "@manato Thank you for your cooperation!"
+            }
+        ]
+    },
+    {
+        "title": "Fix cmake error in orb_localizer",
+        "user_id": "h-ohta",
+        "created_at": "2016-12-08T07:13:09Z",
+        "comments": [
+            {
+                "user_id": "h-ohta",
+                "created_at": "2016-12-08T07:13:29Z",
+                "comment_text": "@sujiwo Could you check this PR?"
+            }
+        ]
+    },
+    {
+        "title": "Update gitignore",
+        "user_id": "h-ohta",
+        "created_at": "2016-12-06T21:16:45Z",
+        "comments": []
+    },
+    {
+        "title": "Fix interchanged links",
+        "user_id": "tushar-dadlani",
+        "created_at": "2016-12-04T22:48:00Z",
+        "comments": [
+            {
+                "user_id": "yukkysaito",
+                "created_at": "2016-12-07T17:58:33Z",
+                "comment_text": "Thank you!\r\n"
+            }
+        ]
+    },
+    {
+        "title": "Defaults for unset CUDA_CAPABILITY_VERSION",
+        "user_id": "tushar-dadlani",
+        "created_at": "2016-12-04T21:25:54Z",
+        "comments": []
+    },
+    {
+        "title": "Add Calibration sample data to README.md.",
+        "user_id": "kuriking",
+        "created_at": "2016-12-04T20:56:25Z",
+        "comments": []
+    },
+    {
+        "title": "Add Calibration Toolkit video to README.md.",
+        "user_id": "kuriking",
+        "created_at": "2016-12-04T11:11:33Z",
+        "comments": []
+    },
+    {
+        "title": "Support docker",
+        "user_id": "messi49",
+        "created_at": "2016-11-29T14:08:32Z",
+        "comments": []
+    },
+    {
+        "title": "Runtime Manager Computing tab, fix euclidean_cluster default data",
+        "user_id": "kondoh2",
+        "created_at": "2016-11-29T08:28:37Z",
+        "comments": []
+    },
+    {
+        "title": "Bug fix for ROS > indigo",
+        "user_id": "sujiwo",
+        "created_at": "2016-11-29T07:21:58Z",
+        "comments": [
+            {
+                "user_id": "sujiwo",
+                "created_at": "2016-11-29T07:22:36Z",
+                "comment_text": "@kitsukawa please check current fix for ORB-SLAM whether it is compilable"
+            },
+            {
+                "user_id": "kitsukawa",
+                "created_at": "2016-11-29T08:03:28Z",
+                "comment_text": "/home/kitsukawa/orb_slam/ros/src/computing/perception/localization/packages/orb_localizer/Thirdparty/DBoW2/DUtils/Random.cpp:11:27: fatal error: DUtils/Random.h: No such file or directory\r\n #include \"DUtils/Random.h\"\r\n                           ^\r\ncompilation terminated.\r\nmake[2]: *** [computing/perception/localization/packages/orb_localizer/Thirdparty/DBoW2/CMakeFiles/DBoW2.dir/DUtils/Random.cpp.o] Error 1\r\nmake[2]: *** Waiting for unfinished jobs....\r\n"
+            },
+            {
+                "user_id": "sujiwo",
+                "created_at": "2016-11-29T09:26:50Z",
+                "comment_text": "At this time, please ensure that the branch `orb_slam' is up-to-date."
+            },
+            {
+                "user_id": "kitsukawa",
+                "created_at": "2016-11-30T06:14:54Z",
+                "comment_text": "Same compile error occurs."
+            },
+            {
+                "user_id": "sujiwo",
+                "created_at": "2016-11-30T07:37:01Z",
+                "comment_text": "I'm using these commands to perform merge, and no errors were encountered:\r\n\r\n1) Clone fresh repository:\r\ncd /tmp\r\ngit clone https://github.com/CPFL/Autoware.git\r\ncd Autoware\r\n\r\n2) Checkout branch orb_slam and back to master:\r\ngit checkout orb_slam\r\ngit checkout master\r\n\r\n3) Merge:\r\ngit merge orb_slam\r\n\r\n4) Compile:\r\ncd ros\r\n./catkin_make_release\r\n\r\nAre these sequences correct? Please advise."
+            },
+            {
+                "user_id": "kitsukawa",
+                "created_at": "2016-11-30T14:14:57Z",
+                "comment_text": "I followed the same commands but I met the same error. Are there any missing packages?"
+            }
+        ]
+    },
+    {
+        "title": "Update AUTHORS",
+        "user_id": "pdsljp",
+        "created_at": "2016-11-26T03:57:35Z",
+        "comments": []
+    },
+    {
+        "title": "send transform in global coordinates",
+        "user_id": "kitsukawa",
+        "created_at": "2016-11-25T20:00:08Z",
+        "comments": []
+    },
+    {
+        "title": "Rewrite astar navi",
+        "user_id": "TomohitoAndo",
+        "created_at": "2016-11-25T11:44:41Z",
+        "comments": []
+    },
+    {
+        "title": "add ndt_tku",
+        "user_id": "kitsukawa",
+        "created_at": "2016-11-24T18:30:26Z",
+        "comments": []
+    },
+    {
+        "title": "Removing \"UpTo\" points from all the point cloud topics",
+        "user_id": "amc-nu",
+        "created_at": "2016-11-24T06:58:47Z",
+        "comments": []
+    },
+    {
+        "title": "add checkbox value of lane_stop parameter to pdic",
+        "user_id": "kondoh2",
+        "created_at": "2016-11-24T03:59:37Z",
+        "comments": []
+    },
+    {
+        "title": "Added param to ignore points closer than a threshold",
+        "user_id": "amc-nu",
+        "created_at": "2016-11-24T02:41:34Z",
+        "comments": []
+    },
+    {
+        "title": "Update README.md",
+        "user_id": "kuriking",
+        "created_at": "2016-11-22T11:48:12Z",
+        "comments": []
+    },
+    {
+        "title": "Add a video for traffic light recognition",
+        "user_id": "TomohitoAndo",
+        "created_at": "2016-11-22T08:01:36Z",
+        "comments": []
+    },
+    {
+        "title": "Update README.md",
+        "user_id": "amc-nu",
+        "created_at": "2016-11-22T07:13:41Z",
+        "comments": []
+    },
+    {
+        "title": "Update README.md",
+        "user_id": "pdsljp",
+        "created_at": "2016-11-21T07:07:24Z",
+        "comments": []
+    },
+    {
+        "title": "README update RCNN SSD",
+        "user_id": "amc-nu",
+        "created_at": "2016-11-20T11:57:47Z",
+        "comments": []
+    },
+    {
+        "title": "Make AutowareRider Android Studio compatible",
+        "user_id": "mingrutar",
+        "created_at": "2016-11-17T23:17:35Z",
+        "comments": [
+            {
+                "user_id": "kuriking",
+                "created_at": "2016-11-29T02:06:42Z",
+                "comment_text": "I tried to build and validate.\r\nI can build using Android Studio, but the following problems were found.\r\n\r\n- B,N,D,R,AUTO CRUISE and NORMAL CRUISE buttons did not change when I clicked them.\r\n- The indication of middle was bright first, but it became dark later.\r\n\r\nIf you know about that please let me know."
+            },
+            {
+                "user_id": "h-ohta",
+                "created_at": "2016-12-20T01:19:58Z",
+                "comment_text": "@mingrutar I'll close. Please remake pull request after confirm and fix."
+            }
+        ]
+    },
+    {
+        "title": "Support MKZ",
+        "user_id": "TomohitoAndo",
+        "created_at": "2016-11-17T02:03:42Z",
+        "comments": []
+    },
+    {
+        "title": "Ignore close points",
+        "user_id": "TomohitoAndo",
+        "created_at": "2016-11-16T03:56:21Z",
+        "comments": []
+    },
+    {
+        "title": "Mod velocity set",
+        "user_id": "TomohitoAndo",
+        "created_at": "2016-11-15T22:51:39Z",
+        "comments": []
+    },
+    {
+        "title": "Create red and green lanes from waypoint_saver CSV",
+        "user_id": "syouji",
+        "created_at": "2016-11-15T18:26:21Z",
+        "comments": []
+    },
+    {
+        "title": "Node Name Change for cv tracker",
+        "user_id": "amc-nu",
+        "created_at": "2016-11-15T07:43:31Z",
+        "comments": []
+    },
+    {
+        "title": "Added SSD node to CV Tracker",
+        "user_id": "amc-nu",
+        "created_at": "2016-11-15T03:08:27Z",
+        "comments": []
+    },
+    {
+        "title": "Add WayArea detection service",
+        "user_id": "syouji",
+        "created_at": "2016-11-07T07:00:20Z",
+        "comments": []
+    },
+    {
+        "title": "Rename variables.",
+        "user_id": "kitsukawa",
+        "created_at": "2016-11-04T13:36:29Z",
+        "comments": []
+    },
+    {
+        "title": "delete data_filter",
+        "user_id": "kitsukawa",
+        "created_at": "2016-11-04T10:50:09Z",
+        "comments": []
+    },
+    {
+        "title": "Rename package name.",
+        "user_id": "kitsukawa",
+        "created_at": "2016-11-04T08:53:47Z",
+        "comments": []
+    },
+    {
+        "title": "Lidar segmentation",
+        "user_id": "amc-nu",
+        "created_at": "2016-11-04T07:45:11Z",
+        "comments": []
+    },
+    {
+        "title": "Separate motion planning",
+        "user_id": "TomohitoAndo",
+        "created_at": "2016-11-02T13:49:12Z",
+        "comments": []
+    },
+    {
+        "title": "Module graph",
+        "user_id": "h-ohta",
+        "created_at": "2016-11-02T01:21:50Z",
+        "comments": []
+    },
+    {
+        "title": "Add orb_localizer.",
+        "user_id": "kitsukawa",
+        "created_at": "2016-11-01T08:43:19Z",
+        "comments": []
+    },
+    {
+        "title": "Revert \"Updated to start inside Docker container\"",
+        "user_id": "messi49",
+        "created_at": "2016-10-31T10:13:09Z",
+        "comments": []
+    },
+    {
+        "title": "Add get height",
+        "user_id": "syouji",
+        "created_at": "2016-10-30T05:23:00Z",
+        "comments": []
+    },
+    {
+        "title": "Lidar segmentation",
+        "user_id": "amc-nu",
+        "created_at": "2016-10-29T14:56:03Z",
+        "comments": []
+    },
+    {
+        "title": "Lidar segmentation",
+        "user_id": "amc-nu",
+        "created_at": "2016-10-29T12:00:27Z",
+        "comments": []
+    },
+    {
+        "title": "Added output_frame param",
+        "user_id": "amc-nu",
+        "created_at": "2016-10-29T07:21:13Z",
+        "comments": []
+    },
+    {
+        "title": "Lidar segmentation",
+        "user_id": "amc-nu",
+        "created_at": "2016-10-25T08:35:53Z",
+        "comments": []
+    },
+    {
+        "title": "Update the check.launch for the tablet_socket ",
+        "user_id": "wgcv",
+        "created_at": "2016-10-25T06:03:30Z",
+        "comments": []
+    },
+    {
+        "title": "Mod points2costmap",
+        "user_id": "TomohitoAndo",
+        "created_at": "2016-10-24T09:49:37Z",
+        "comments": []
+    },
+    {
+        "title": "Lidar segmentation",
+        "user_id": "amc-nu",
+        "created_at": "2016-10-21T08:29:38Z",
+        "comments": []
+    },
+    {
+        "title": "Fix to subscribe the new topic",
+        "user_id": "TomohitoAndo",
+        "created_at": "2016-10-19T07:03:54Z",
+        "comments": []
+    },
+    {
+        "title": "Lidar segmentation",
+        "user_id": "amc-nu",
+        "created_at": "2016-10-14T01:28:34Z",
+        "comments": []
+    },
+    {
+        "title": "Updated to start inside Docker container",
+        "user_id": "droter",
+        "created_at": "2016-10-13T20:59:25Z",
+        "comments": [
+            {
+                "user_id": "shinpei0208",
+                "created_at": "2016-10-13T23:19:28Z",
+                "comment_text": "Great :)\n\n2016/10/14 \u5348\u524d5:59 \"Matt\" notifications@github.com:\n\n> The run script would error on:\n> \n> /run: line 41: --geometry=50x10+0+0: command not found\n> ./run: line 44: --geometry=50x10+500+0: command not found\n> \n> ## When starting from a docker container.\n> \n> You can view, comment on, or merge this pull request online at:\n> \n>   https://github.com/CPFL/Autoware/pull/477\n> Commit Summary\n> - Updated to start inside Docker container\n> \n> File Changes\n> - _M_ ros/run https://github.com/CPFL/Autoware/pull/477/files#diff-0\n>   (6)\n> \n> Patch Links:\n> - https://github.com/CPFL/Autoware/pull/477.patch\n> - https://github.com/CPFL/Autoware/pull/477.diff\n> \n> \u2014\n> You are receiving this because you are subscribed to this thread.\n> Reply to this email directly, view it on GitHub\n> https://github.com/CPFL/Autoware/pull/477, or mute the thread\n> https://github.com/notifications/unsubscribe-auth/AAToCz22CNQkk1eNPvOybHiifrrzlhvsks5qzputgaJpZM4KWXMN\n> .\n"
+            },
+            {
+                "user_id": "messi49",
+                "created_at": "2016-10-25T23:51:15Z",
+                "comment_text": "@droter \nPlease fix code and push again.\nAfter that, I will merge this pull request.\n"
+            },
+            {
+                "user_id": "droter",
+                "created_at": "2016-10-28T05:06:08Z",
+                "comment_text": "Updated file.\n"
+            }
+        ]
+    },
+    {
+        "title": "Added",
+        "user_id": "amc-nu",
+        "created_at": "2016-10-11T04:57:52Z",
+        "comments": []
+    },
+    {
+        "title": "Add tf_local.launch",
+        "user_id": "kitsukawa",
+        "created_at": "2016-10-11T04:18:21Z",
+        "comments": []
+    },
+    {
+        "title": "Lidar clustering ",
+        "user_id": "amc-nu",
+        "created_at": "2016-10-10T07:52:38Z",
+        "comments": []
+    },
+    {
+        "title": "Improve visualization of circular arc",
+        "user_id": "h-ohta",
+        "created_at": "2016-10-09T07:51:31Z",
+        "comments": []
+    },
+    {
+        "title": "Mod waypoint follower",
+        "user_id": "h-ohta",
+        "created_at": "2016-10-08T21:07:52Z",
+        "comments": []
+    },
+    {
+        "title": "Runtime Manager Simulation tab, add rosbag info thread",
+        "user_id": "kondoh2",
+        "created_at": "2016-10-06T11:17:45Z",
+        "comments": []
+    },
+    {
+        "title": "Develop planner",
+        "user_id": "h-ohta",
+        "created_at": "2016-10-05T13:33:50Z",
+        "comments": []
+    },
+    {
+        "title": "Output filtered PCD in Binary.",
+        "user_id": "kitsukawa",
+        "created_at": "2016-10-02T11:29:32Z",
+        "comments": []
+    },
+    {
+        "title": "Remove unnecessary error checks",
+        "user_id": "syouji",
+        "created_at": "2016-09-29T13:04:26Z",
+        "comments": []
+    },
+    {
+        "title": "Fix vector map library",
+        "user_id": "syouji",
+        "created_at": "2016-09-29T10:12:43Z",
+        "comments": []
+    },
+    {
+        "title": "Update Quick Start documents",
+        "user_id": "kuriking",
+        "created_at": "2016-09-27T22:57:44Z",
+        "comments": []
+    },
+    {
+        "title": "Update Zmp Patches",
+        "user_id": "kuriking",
+        "created_at": "2016-09-26T15:26:36Z",
+        "comments": []
+    },
+    {
+        "title": "Publish marker when the traffic light detection is unknown",
+        "user_id": "TomohitoAndo",
+        "created_at": "2016-09-26T09:15:56Z",
+        "comments": []
+    },
+    {
+        "title": "Fix autoware path",
+        "user_id": "kuriking",
+        "created_at": "2016-09-24T06:16:43Z",
+        "comments": []
+    },
+    {
+        "title": "Add function to get current data",
+        "user_id": "syouji",
+        "created_at": "2016-09-23T07:00:49Z",
+        "comments": []
+    },
+    {
+        "title": "Add services of road data",
+        "user_id": "syouji",
+        "created_at": "2016-09-23T03:22:33Z",
+        "comments": []
+    },
+    {
+        "title": "Fix namespace of vector_map_server services",
+        "user_id": "syouji",
+        "created_at": "2016-09-21T12:55:17Z",
+        "comments": []
+    },
+    {
+        "title": "Add vector map library",
+        "user_id": "syouji",
+        "created_at": "2016-09-19T06:17:48Z",
+        "comments": []
+    },
+    {
+        "title": "Runtime Manager Map tab, update to more simple implements",
+        "user_id": "kondoh2",
+        "created_at": "2016-09-15T09:45:59Z",
+        "comments": []
+    },
+    {
+        "title": "Runtime Manager Computing tab, add use_crosswalk_detection to velocit\u2026",
+        "user_id": "kondoh2",
+        "created_at": "2016-09-14T09:46:13Z",
+        "comments": []
+    },
+    {
+        "title": "add map_tools/pcd_arealist",
+        "user_id": "kondoh2",
+        "created_at": "2016-09-14T08:57:04Z",
+        "comments": []
+    },
+    {
+        "title": "Add Memsic IMU driver.",
+        "user_id": "kitsukawa",
+        "created_at": "2016-09-14T08:46:12Z",
+        "comments": []
+    },
+    {
+        "title": "Select crosswalk detection",
+        "user_id": "TomohitoAndo",
+        "created_at": "2016-09-14T08:11:00Z",
+        "comments": []
+    },
+    {
+        "title": "Mod velocity set",
+        "user_id": "TomohitoAndo",
+        "created_at": "2016-09-14T07:28:41Z",
+        "comments": []
+    },
+    {
+        "title": "Publish the detection result when it is different from the previous one",
+        "user_id": "TomohitoAndo",
+        "created_at": "2016-09-14T02:37:40Z",
+        "comments": []
+    },
+    {
+        "title": "Support new nmea format",
+        "user_id": "TomohitoAndo",
+        "created_at": "2016-09-12T09:57:39Z",
+        "comments": []
+    },
+    {
+        "title": "Switch output from screen to log",
+        "user_id": "kitsukawa",
+        "created_at": "2016-09-12T05:39:23Z",
+        "comments": []
+    },
+    {
+        "title": "Fix obj_reproj as it subscribed out of date topic (current_pose)",
+        "user_id": "manato",
+        "created_at": "2016-09-10T09:27:45Z",
+        "comments": []
+    },
+    {
+        "title": "Fix to KF caused from synchro changes",
+        "user_id": "amc-nu",
+        "created_at": "2016-09-01T04:35:46Z",
+        "comments": [
+            {
+                "user_id": "amc-nu",
+                "created_at": "2016-09-01T04:58:24Z",
+                "comment_text": "Fixes  Bug autowarefoundation/autoware_ai#863 pointed out by @layssi\n"
+            }
+        ]
+    },
+    {
+        "title": "Runtime Manager, changed wx.Color to wx.Colour for wxPython3",
+        "user_id": "kondoh2",
+        "created_at": "2016-08-30T08:26:04Z",
+        "comments": []
+    },
+    {
+        "title": "Add Quick Start Manual(EN)",
+        "user_id": "kuriking",
+        "created_at": "2016-08-29T12:08:08Z",
+        "comments": []
+    },
+    {
+        "title": "New Visual Localization based on ORB-SLAM",
+        "user_id": "sujiwo",
+        "created_at": "2016-08-29T07:59:23Z",
+        "comments": []
+    },
+    {
+        "title": "Update Quick Start Manual(JP)",
+        "user_id": "kuriking",
+        "created_at": "2016-08-25T23:18:30Z",
+        "comments": []
+    },
+    {
+        "title": "Fix ndt_mapping",
+        "user_id": "kitsukawa",
+        "created_at": "2016-08-25T13:07:19Z",
+        "comments": []
+    },
+    {
+        "title": "Runtime Manager, fix rosbag record stop",
+        "user_id": "kondoh2",
+        "created_at": "2016-08-23T03:16:18Z",
+        "comments": []
+    },
+    {
+        "title": "Add Single thread sync node",
+        "user_id": "yukkysaito",
+        "created_at": "2016-08-10T14:47:41Z",
+        "comments": []
+    },
+    {
+        "title": "Update launch kill to simple",
+        "user_id": "kondoh2",
+        "created_at": "2016-08-09T06:09:40Z",
+        "comments": []
+    },
+    {
+        "title": "Delete no need nodes dic",
+        "user_id": "kondoh2",
+        "created_at": "2016-08-08T04:19:56Z",
+        "comments": []
+    },
+    {
+        "title": "Modify region_tlr so that it publishes superimpose image as topic",
+        "user_id": "manato",
+        "created_at": "2016-08-06T10:02:05Z",
+        "comments": []
+    },
+    {
+        "title": "Runtime Manager, fix old gui theme at RViz remote",
+        "user_id": "kondoh2",
+        "created_at": "2016-08-05T08:53:44Z",
+        "comments": []
+    },
+    {
+        "title": "Runtime Manager, add kill_children flag to RViz cmd for remote termin\u2026",
+        "user_id": "kondoh2",
+        "created_at": "2016-08-05T08:47:42Z",
+        "comments": []
+    },
+    {
+        "title": "Updated fast_pcl",
+        "user_id": "yukkysaito",
+        "created_at": "2016-08-04T15:08:05Z",
+        "comments": []
+    },
+    {
+        "title": "Create vehicle_info directory",
+        "user_id": "h-ohta",
+        "created_at": "2016-08-03T17:12:02Z",
+        "comments": []
+    },
+    {
+        "title": "Runtime Manager Setup tab, add Vehicle Info",
+        "user_id": "kondoh2",
+        "created_at": "2016-08-03T06:06:34Z",
+        "comments": []
+    },
+    {
+        "title": "Add model data for simulation",
+        "user_id": "h-ohta",
+        "created_at": "2016-08-03T04:21:47Z",
+        "comments": []
+    },
+    {
+        "title": "Set precision of log file of ndt_matching",
+        "user_id": "kitsukawa",
+        "created_at": "2016-08-03T01:41:40Z",
+        "comments": []
+    },
+    {
+        "title": "Visualize current_velocity by Plotter2D",
+        "user_id": "h-ohta",
+        "created_at": "2016-08-03T00:54:15Z",
+        "comments": []
+    },
+    {
+        "title": "Change message type for current velocity",
+        "user_id": "h-ohta",
+        "created_at": "2016-08-02T23:35:13Z",
+        "comments": []
+    },
+    {
+        "title": "Runtime Manager, terminate_children() changed to as option",
+        "user_id": "kondoh2",
+        "created_at": "2016-08-02T02:58:31Z",
+        "comments": []
+    },
+    {
+        "title": "Ignore 0 ranges",
+        "user_id": "TomohitoAndo",
+        "created_at": "2016-07-28T06:46:43Z",
+        "comments": []
+    },
+    {
+        "title": "Feature/integrate viewer",
+        "user_id": "manato",
+        "created_at": "2016-07-27T14:20:02Z",
+        "comments": [
+            {
+                "user_id": "shinpei0208",
+                "created_at": "2016-07-27T15:22:00Z",
+                "comment_text": "Sweet!\n\n2016-07-27 23:20 GMT+09:00 Manato Hirabayashi notifications@github.com:\n\n> These are the RViz plugin to display\n> - detection result (object detection, ranging, tracking and points\n>   image)\n> - traffic light recognition and alternatives to existing viewers in\n>   Autoware.\n> \n> ---\n> \n> You can view, comment on, or merge this pull request online at:\n> \n>   https://github.com/CPFL/Autoware/pull/402\n> Commit Summary\n> - Add RViz plugin to display traffic light recognition result\n> - Add RViz integrated viewer plugin to display detection result\n> \n> File Changes\n> - _A_\n>   ros/src/computing/perception/detection/packages/integrated_viewer/CMakeLists.txt\n>   https://github.com/CPFL/Autoware/pull/402/files#diff-0 (104)\n> - _A_\n>   ros/src/computing/perception/detection/packages/integrated_viewer/lib/convert_image.h\n>   https://github.com/CPFL/Autoware/pull/402/files#diff-1 (46)\n> - _A_\n>   ros/src/computing/perception/detection/packages/integrated_viewer/node/image_viewer_plugin/autoware_logo.png\n>   https://github.com/CPFL/Autoware/pull/402/files#diff-2 (1)\n> - _A_\n>   ros/src/computing/perception/detection/packages/integrated_viewer/node/image_viewer_plugin/draw_points.cpp\n>   https://github.com/CPFL/Autoware/pull/402/files#diff-3 (67)\n> - _A_\n>   ros/src/computing/perception/detection/packages/integrated_viewer/node/image_viewer_plugin/draw_points.h\n>   https://github.com/CPFL/Autoware/pull/402/files#diff-4 (21)\n> - _A_\n>   ros/src/computing/perception/detection/packages/integrated_viewer/node/image_viewer_plugin/draw_rects.cpp\n>   https://github.com/CPFL/Autoware/pull/402/files#diff-5 (150)\n> - _A_\n>   ros/src/computing/perception/detection/packages/integrated_viewer/node/image_viewer_plugin/draw_rects.h\n>   https://github.com/CPFL/Autoware/pull/402/files#diff-6 (28)\n> - _A_\n>   ros/src/computing/perception/detection/packages/integrated_viewer/node/image_viewer_plugin/image_viewer_form.ui\n>   https://github.com/CPFL/Autoware/pull/402/files#diff-7 (142)\n> - _A_\n>   ros/src/computing/perception/detection/packages/integrated_viewer/node/image_viewer_plugin/image_viewer_plugin.cpp\n>   https://github.com/CPFL/Autoware/pull/402/files#diff-8 (265)\n> - _A_\n>   ros/src/computing/perception/detection/packages/integrated_viewer/node/image_viewer_plugin/image_viewer_plugin.h\n>   https://github.com/CPFL/Autoware/pull/402/files#diff-9 (108)\n> - _A_\n>   ros/src/computing/perception/detection/packages/integrated_viewer/node/traffic_light_plugin/form.ui\n>   https://github.com/CPFL/Autoware/pull/402/files#diff-10 (106)\n> - _A_\n>   ros/src/computing/perception/detection/packages/integrated_viewer/node/traffic_light_plugin/traffic_light_plugin.cpp\n>   https://github.com/CPFL/Autoware/pull/402/files#diff-11 (119)\n> - _A_\n>   ros/src/computing/perception/detection/packages/integrated_viewer/node/traffic_light_plugin/traffic_light_plugin.h\n>   https://github.com/CPFL/Autoware/pull/402/files#diff-12 (68)\n> - _A_\n>   ros/src/computing/perception/detection/packages/integrated_viewer/package.xml\n>   https://github.com/CPFL/Autoware/pull/402/files#diff-13 (30)\n> - _A_\n>   ros/src/computing/perception/detection/packages/integrated_viewer/rviz_plugin_description.xml\n>   https://github.com/CPFL/Autoware/pull/402/files#diff-14 (19)\n> \n> Patch Links:\n> - https://github.com/CPFL/Autoware/pull/402.patch\n> - https://github.com/CPFL/Autoware/pull/402.diff\n> \n> \u2014\n> You are receiving this because you are subscribed to this thread.\n> Reply to this email directly, view it on GitHub\n> https://github.com/CPFL/Autoware/pull/402, or mute the thread\n> https://github.com/notifications/unsubscribe-auth/AAToC2vEuDFwOKNLe5pTS3K-TWqaxoTxks5qZ2kSgaJpZM4JWPWS\n> .\n"
+            },
+            {
+                "user_id": "manato",
+                "created_at": "2016-08-06T05:35:23Z",
+                "comment_text": "I have merged feature/integrated_viewer branch to the master.\nPlease let me know if you have any trouble by this merge.\n\n@amc-nu , @h-ohta \nThank you very much for your cooperation!\n\nNew RViz plugin is available by:\nRViz menu -> \"Panels\" -> \"Add New Panel\" -> select \"ImageViewerPlugin\" or \"TrafficLightPlugin\" in \"integrated_viewer\" section.\n"
+            }
+        ]
+    },
+    {
+        "title": "Kill sigint",
+        "user_id": "kondoh2",
+        "created_at": "2016-07-22T05:43:31Z",
+        "comments": []
+    },
+    {
+        "title": "Mod waypoint saver",
+        "user_id": "h-ohta",
+        "created_at": "2016-07-11T09:47:54Z",
+        "comments": [
+            {
+                "user_id": "h-ohta",
+                "created_at": "2016-07-11T09:49:04Z",
+                "comment_text": "I verified this node working.\nI'll merge.\n"
+            }
+        ]
+    },
+    {
+        "title": "Accelerated obj detection",
+        "user_id": "yukkysaito",
+        "created_at": "2016-07-08T10:05:35Z",
+        "comments": []
+    },
+    {
+        "title": "Template synchronization library",
+        "user_id": "yukkysaito",
+        "created_at": "2016-07-08T08:07:02Z",
+        "comments": []
+    },
+    {
+        "title": "Hotfix segmentation fault in range_fusion",
+        "user_id": "yukkysaito",
+        "created_at": "2016-07-07T18:24:57Z",
+        "comments": []
+    },
+    {
+        "title": "Time monitor",
+        "user_id": "yukkysaito",
+        "created_at": "2016-07-07T16:17:19Z",
+        "comments": []
+    },
+    {
+        "title": "Hotfix in range_fusion",
+        "user_id": "yukkysaito",
+        "created_at": "2016-07-07T14:15:18Z",
+        "comments": []
+    },
+    {
+        "title": "Add Quick Start manual",
+        "user_id": "kuriking",
+        "created_at": "2016-07-05T20:02:11Z",
+        "comments": []
+    },
+    {
+        "title": "ORB SLAM Fix with History",
+        "user_id": "amc-nu",
+        "created_at": "2016-07-05T08:16:44Z",
+        "comments": []
+    },
+    {
+        "title": "Add exe_time in PointsFilterInfo.msg.",
+        "user_id": "kitsukawa",
+        "created_at": "2016-07-04T08:50:35Z",
+        "comments": []
+    },
+    {
+        "title": "Fix ladybug driver",
+        "user_id": "kuriking",
+        "created_at": "2016-07-04T07:05:51Z",
+        "comments": []
+    },
+    {
+        "title": "Add missing dependencies.",
+        "user_id": "kitsukawa",
+        "created_at": "2016-07-04T07:02:37Z",
+        "comments": []
+    },
+    {
+        "title": "Update documents",
+        "user_id": "kuriking",
+        "created_at": "2016-07-04T07:00:50Z",
+        "comments": []
+    },
+    {
+        "title": "Planner x",
+        "user_id": "hatem-darweesh",
+        "created_at": "2016-07-04T05:20:30Z",
+        "comments": [
+            {
+                "user_id": "amc-nu",
+                "created_at": "2016-07-29T05:30:49Z",
+                "comment_text": "@hatem-darweesh I confirmed your branch compiles correctly. But, can you tell us how to test its functions?\n"
+            },
+            {
+                "user_id": "h-ohta",
+                "created_at": "2016-08-02T23:52:51Z",
+                "comment_text": "@hatem-darweesh Would you show us how to test PlannerX in Autoware?\n"
+            },
+            {
+                "user_id": "shinpei0208",
+                "created_at": "2016-08-03T00:13:29Z",
+                "comment_text": "@hatem-darweesh\n\nWe should also change the name of this package and its nodes. planner_x\ndoes not mean anything. It should be more scientific, providing the correct\ninformation on what algorithms and functions are supported.\n\n2016/08/03 \u5348\u524d8:52 \"Hiroki Ohta\" notifications@github.com:\n\n> @hatem-darweesh https://github.com/hatem-darweesh Would you show us how\n> to test PlannerX in Autoware?\n> \n> \u2014\n> You are receiving this because you are subscribed to this thread.\n> Reply to this email directly, view it on GitHub\n> https://github.com/CPFL/Autoware/pull/379#issuecomment-237086531, or mute\n> the thread\n> https://github.com/notifications/unsubscribe-auth/AAToCzjkNpGupeBJ7vKjEPFvNXNRA8nAks5qb9hUgaJpZM4JEDno\n> .\n"
+            },
+            {
+                "user_id": "hatem-darweesh",
+                "created_at": "2016-08-03T01:01:04Z",
+                "comment_text": "I am working on that,  just fixing a major bug I found yesterday,\n\nAbout the name,  the current  implementation is : multy stage deterministic\nrule based planner.  And it will include mdp and pomdp In the future.  That\nis why I couldn't find a suitable name.\n\nOn Aug 3, 2016 9:13 AM, \"Shinpei Kato\" notifications@github.com wrote:\n\n> @hatem-darweesh\n> \n> We should also change the name of this package and its nodes. planner_x\n> does not mean anything. It should be more scientific, providing the correct\n> information on what algorithms and functions are supported.\n> \n> 2016/08/03 \u5348\u524d8:52 \"Hiroki Ohta\" notifications@github.com:\n> \n> > @hatem-darweesh https://github.com/hatem-darweesh Would you show us\n> > how\n> > to test PlannerX in Autoware?\n> > \n> > \u2014\n> > You are receiving this because you are subscribed to this thread.\n> > Reply to this email directly, view it on GitHub\n> > https://github.com/CPFL/Autoware/pull/379#issuecomment-237086531, or\n> > mute\n> > the thread\n> > <\n> > https://github.com/notifications/unsubscribe-auth/AAToCzjkNpGupeBJ7vKjEPFvNXNRA8nAks5qb9hUgaJpZM4JEDno\n> > \n> > .\n> \n> \u2014\n> You are receiving this because you were mentioned.\n> Reply to this email directly, view it on GitHub\n> https://github.com/CPFL/Autoware/pull/379#issuecomment-237090403, or mute\n> the thread\n> https://github.com/notifications/unsubscribe-auth/ATP3Ebzz3i-vkUIToTiartF9NTP9Wt8qks5qb90tgaJpZM4JEDno\n> .\n"
+            },
+            {
+                "user_id": "shinpei0208",
+                "created_at": "2016-08-05T10:11:11Z",
+                "comment_text": "It can just represent the main concept. What about dp_planner?\n\n2016/08/03 \u5348\u524d10:01 \"hatem-darweesh\" notifications@github.com:\n\n> I am working on that, just fixing a major bug I found yesterday,\n> \n> About the name, the current implementation is : multy stage deterministic\n> rule based planner. And it will include mdp and pomdp In the future. That\n> is why I couldn't find a suitable name.\n> \n> On Aug 3, 2016 9:13 AM, \"Shinpei Kato\" notifications@github.com wrote:\n> \n> > @hatem-darweesh\n> > \n> > We should also change the name of this package and its nodes. planner_x\n> > does not mean anything. It should be more scientific, providing the\n> > correct\n> > information on what algorithms and functions are supported.\n> > \n> > 2016/08/03 \u5348\u524d8:52 \"Hiroki Ohta\" notifications@github.com:\n> > \n> > > @hatem-darweesh https://github.com/hatem-darweesh Would you show us\n> > > how\n> > > to test PlannerX in Autoware?\n> > > \n> > > \u2014\n> > > You are receiving this because you are subscribed to this thread.\n> > > Reply to this email directly, view it on GitHub\n> > > https://github.com/CPFL/Autoware/pull/379#issuecomment-237086531, or\n> > > mute\n> > > the thread\n> > > <\n> > > https://github.com/notifications/unsubscribe-auth/\n> > > AAToCzjkNpGupeBJ7vKjEPFvNXNRA8nAks5qb9hUgaJpZM4JEDno\n> > > \n> > > .\n> > \n> > \u2014\n> > You are receiving this because you were mentioned.\n> > Reply to this email directly, view it on GitHub\n> > https://github.com/CPFL/Autoware/pull/379#issuecomment-237090403, or\n> > mute\n> > the thread\n> > <https://github.com/notifications/unsubscribe-auth/ATP3Ebzz3i-\n> > vkUIToTiartF9NTP9Wt8qks5qb90tgaJpZM4JEDno>\n> > .\n> \n> \u2014\n> You are receiving this because you commented.\n> Reply to this email directly, view it on GitHub\n> https://github.com/CPFL/Autoware/pull/379#issuecomment-237099957, or mute\n> the thread\n> https://github.com/notifications/unsubscribe-auth/AAToC559A8ambM0YCLzuWVg-QPqZs5Suks5qb-hQgaJpZM4JEDno\n> .\n"
+            }
+        ]
+    },
+    {
+        "title": "Runtime Manager, fix getting proc info in ParamPanel class",
+        "user_id": "kondoh2",
+        "created_at": "2016-07-04T04:00:20Z",
+        "comments": []
+    },
+    {
+        "title": "Fix cost calculation for unknown costs",
+        "user_id": "TomohitoAndo",
+        "created_at": "2016-07-02T09:06:38Z",
+        "comments": []
+    },
+    {
+        "title": "Modified correct timestamp",
+        "user_id": "yukkysaito",
+        "created_at": "2016-07-01T13:24:16Z",
+        "comments": []
+    },
+    {
+        "title": "Runtime Manager, update some utility functions",
+        "user_id": "kondoh2",
+        "created_at": "2016-07-01T08:29:57Z",
+        "comments": []
+    },
+    {
+        "title": "Runtime Manager Map tab, fix toggle enable of (Point Cloud) btn",
+        "user_id": "kondoh2",
+        "created_at": "2016-07-01T08:01:47Z",
+        "comments": []
+    },
+    {
+        "title": "Runtime Manager Sensing tab, update filter cmd for Synchronization bu\u2026",
+        "user_id": "kondoh2",
+        "created_at": "2016-07-01T06:46:04Z",
+        "comments": []
+    },
+    {
+        "title": "Runtime Manger, fix camera_id setting at sync on",
+        "user_id": "kondoh2",
+        "created_at": "2016-07-01T05:02:20Z",
+        "comments": []
+    },
+    {
+        "title": "Runtime Manager, fix camera_id selection at Synchronization ON",
+        "user_id": "kondoh2",
+        "created_at": "2016-06-30T04:44:28Z",
+        "comments": []
+    },
+    {
+        "title": "Runtime Manager Simulation tab, fix showing of rosbag pos remains on \u2026",
+        "user_id": "kondoh2",
+        "created_at": "2016-06-29T09:50:28Z",
+        "comments": []
+    },
+    {
+        "title": "Runtime Manager Topics tab, fix for alias of bottom btns",
+        "user_id": "kondoh2",
+        "created_at": "2016-06-29T09:30:46Z",
+        "comments": []
+    },
+    {
+        "title": "Runtime Manager, fix RViz remote setting",
+        "user_id": "kondoh2",
+        "created_at": "2016-06-27T10:37:13Z",
+        "comments": []
+    },
+    {
+        "title": "ndt_mapping pcd save bug fix  and added autoloading of default.rviz",
+        "user_id": "jitrc",
+        "created_at": "2016-06-24T19:44:52Z",
+        "comments": [
+            {
+                "user_id": "h-ohta",
+                "created_at": "2016-07-27T02:06:42Z",
+                "comment_text": "@kitsukawa Would you check changes for ndt_localizer in this PR?\n"
+            },
+            {
+                "user_id": "kitsukawa",
+                "created_at": "2016-08-25T13:12:52Z",
+                "comment_text": "Thank you for your PR. I reflected your changes in #430 . \n"
+            }
+        ]
+    },
+    {
+        "title": "Runtime Manager, fix remote RViz setting",
+        "user_id": "kondoh2",
+        "created_at": "2016-06-23T08:08:27Z",
+        "comments": []
+    },
+    {
+        "title": "Uncomment publish statement of region_tlr",
+        "user_id": "manato",
+        "created_at": "2016-06-19T14:47:38Z",
+        "comments": []
+    },
+    {
+        "title": "Add missing dependencies",
+        "user_id": "syohex",
+        "created_at": "2016-06-16T09:38:41Z",
+        "comments": []
+    },
+    {
+        "title": "Clear points data after detection",
+        "user_id": "TomohitoAndo",
+        "created_at": "2016-06-16T07:05:04Z",
+        "comments": []
+    },
+    {
+        "title": "Fix qs map load ok",
+        "user_id": "kondoh2",
+        "created_at": "2016-06-15T08:57:24Z",
+        "comments": []
+    },
+    {
+        "title": "Modified file name of log for ndt_matching/icp_matching.",
+        "user_id": "kitsukawa",
+        "created_at": "2016-06-12T14:17:30Z",
+        "comments": []
+    },
+    {
+        "title": "Fix lattice",
+        "user_id": "TomohitoAndo",
+        "created_at": "2016-06-10T11:24:37Z",
+        "comments": []
+    },
+    {
+        "title": "Fix email link",
+        "user_id": "kuriking",
+        "created_at": "2016-06-08T12:29:05Z",
+        "comments": []
+    },
+    {
+        "title": "Update Contact of documents",
+        "user_id": "kuriking",
+        "created_at": "2016-06-08T12:12:55Z",
+        "comments": []
+    },
+    {
+        "title": "Make ranges 0 when there are near objects",
+        "user_id": "TomohitoAndo",
+        "created_at": "2016-06-08T10:37:15Z",
+        "comments": []
+    },
+    {
+        "title": "Modify laserscan2costmap",
+        "user_id": "TomohitoAndo",
+        "created_at": "2016-06-08T07:32:03Z",
+        "comments": []
+    },
+    {
+        "title": "Add measuring align_time and getFitnessScore_time.",
+        "user_id": "kitsukawa",
+        "created_at": "2016-06-08T06:25:43Z",
+        "comments": []
+    },
+    {
+        "title": "Bugs on 2.4.8/9",
+        "user_id": "amc-nu",
+        "created_at": "2016-06-06T08:59:48Z",
+        "comments": [
+            {
+                "user_id": "syohex",
+                "created_at": "2016-06-06T09:10:40Z",
+                "comment_text": "However OpenCV version of Ubuntu package is 2.4.8. If Autoware requires OpenCV 2.4.10 or higher versions, then Autoware users have to build and install OpenCV from source code.\n"
+            }
+        ]
+    },
+    {
+        "title": "Parallelized ndt_matching",
+        "user_id": "kitsukawa",
+        "created_at": "2016-06-03T18:50:17Z",
+        "comments": [
+            {
+                "user_id": "kitsukawa",
+                "created_at": "2016-06-03T18:55:49Z",
+                "comment_text": "@syohex @yukkysaito \nOpenMP\u3092\u7528\u3044\u3066\u3044\u308b\u95a2\u6570\u306e\u540d\u524d\u3092omp_***\u3068\u5909\u66f4\u3057\u3001\u65b0\u305f\u306b\u8ffd\u52a0\u3057\u307e\u3057\u305f\u3002\nndt_matching.launch\u3067use_openmp\u3092true/false\u306b\u3059\u308b\u3053\u3068\u306b\u3088\u308a\u3001\u4f7f\u7528\u3059\u308b\u95a2\u6570\u3092\u5207\u308a\u66ff\u3048\u3089\u308c\u308b\u3088\u3046\u306b\u3057\u307e\u3057\u305f\u3002\n\u4f55\u304b\u554f\u984c\u306a\u3044\u304b\u3054\u78ba\u8a8d\u3044\u305f\u3060\u3051\u306a\u3044\u3067\u3057\u3087\u3046\u304b\u3002\n"
+            },
+            {
+                "user_id": "syohex",
+                "created_at": "2016-06-06T01:29:44Z",
+                "comment_text": "PCL 1.7.1\u4ee5\u524d\u304c\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u3055\u308c\u3066\u3044\u308b\u74b0\u5883\u3067\u306f\u30d3\u30eb\u30c9\u30a8\u30e9\u30fc\u306b\u306a\u308a\u307e\u3059. `fast_pcl`\u304c\u30d3\u30eb\u30c9\u3055\u308c\u306a\u3044\u306e\u3067 `omp_*`\u30e1\u30bd\u30c3\u30c9\u304c\u5b58\u5728\u3057\u306a\u3044\u305f\u3081.  `#ifdef USE_FAST_PCL`\u3067\u56f2\u3046\u5fc5\u8981\u304c\u3042\u308b\u3068\u8003\u3048\u307e\u3059.\n(Ubuntu 15.04 ROS Jade, Ubuntu 14.04 Indigo + PCL 1.7.2\u3067\u306f\u554f\u984c\u306a\u304f\u30d3\u30eb\u30c9\u3067\u304d\u308b\u3053\u3068\u3092\u78ba\u8a8d\u3057\u307e\u3057\u305f.)\n"
+            },
+            {
+                "user_id": "syohex",
+                "created_at": "2016-06-06T02:33:08Z",
+                "comment_text": "\u4ee5\u4e0b\u3067\u30d3\u30eb\u30c9\u306f\u901a\u308b\u3053\u3068(Ubuntu 14.04 pcl 1.7.1)\u306f\u78ba\u8a8d\u3067\u304d\u307e\u3057\u305f.\n\n``` diff\ndiff --git a/ros/src/computing/perception/localization/packages/ndt_localizer/nodes/ndt_matching/ndt_matching.cpp b/ros/src/computing/perception/localization/packages/ndt_localizer/nodes/ndt_matching/ndt_matching.cpp\nindex 1875701..e97531f 100644\n--- a/ros/src/computing/perception/localization/packages/ndt_localizer/nodes/ndt_matching/ndt_matching.cpp\n+++ b/ros/src/computing/perception/localization/packages/ndt_localizer/nodes/ndt_matching/ndt_matching.cpp\n@@ -383,21 +383,29 @@ static void points_callback(const sensor_msgs::PointCloud2::ConstPtr& input)\n     Eigen::Matrix4f init_guess = (init_translation * init_rotation_z * init_rotation_y * init_rotation_x) * tf_btol;\n\n     pcl::PointCloud<pcl::PointXYZ>::Ptr output_cloud(new pcl::PointCloud<pcl::PointXYZ>);\n+#ifdef USE_FAST_PCL\n     if(_use_openmp == true){\n        ndt.omp_align(*output_cloud, init_guess);\n     }else{\n+#endif\n        ndt.align(*output_cloud, init_guess);\n+#ifdef USE_FAST_PCL\n     }\n+#endif\n\n     t = ndt.getFinalTransformation();  // localizer\n     t2 = t * tf_ltob;                  // base_link\n\n     iteration = ndt.getFinalNumIteration();\n+#ifdef USE_FAST_PCL\n     if(_use_openmp == true){\n        fitness_score = ndt.omp_getFitnessScore();\n     }else{\n+#endif\n        fitness_score = ndt.getFitnessScore();\n+#ifdef USE_FAST_PCL\n     }\n+#endif\n     trans_probability = ndt.getTransformationProbability();\n\n     tf::Matrix3x3 mat_l;  // localizer\n```\n"
+            },
+            {
+                "user_id": "kitsukawa",
+                "created_at": "2016-06-06T06:37:30Z",
+                "comment_text": "@syohex \n\u3042\u308a\u304c\u3068\u3046\u3054\u3056\u3044\u307e\u3059\u3002\u3054\u6307\u6458\u901a\u308a\u4fee\u6b63\u3044\u305f\u3057\u307e\u3057\u305f\u3002\n"
+            },
+            {
+                "user_id": "syohex",
+                "created_at": "2016-06-06T06:57:56Z",
+                "comment_text": "\u30d3\u30eb\u30c9\u304c\u3067\u304d\u308b\u3088\u3046\u306b\u306a\u3063\u305f\u3053\u3068\u306f\u78ba\u8a8d\u3067\u304d\u307e\u3057\u305f.\n"
+            }
+        ]
+    },
+    {
+        "title": "Fix route file reading convention",
+        "user_id": "syouji",
+        "created_at": "2016-06-03T12:16:08Z",
+        "comments": []
+    },
+    {
+        "title": "Add Autoware messages",
+        "user_id": "syouji",
+        "created_at": "2016-06-03T10:26:26Z",
+        "comments": []
+    },
+    {
+        "title": "Runtime Manager, Add desc",
+        "user_id": "kondoh2",
+        "created_at": "2016-06-03T06:52:34Z",
+        "comments": []
+    },
+    {
+        "title": "Add a text label with a object pose",
+        "user_id": "yukkysaito",
+        "created_at": "2016-06-02T12:09:42Z",
+        "comments": []
+    },
+    {
+        "title": "modify obj_fusion and obj_reproj in order to use tracking ID",
+        "user_id": "yukkysaito",
+        "created_at": "2016-06-02T11:54:12Z",
+        "comments": []
+    },
+    {
+        "title": "Fix deprecated code",
+        "user_id": "syohex",
+        "created_at": "2016-06-02T10:06:41Z",
+        "comments": []
+    },
+    {
+        "title": "Improve CMakeLists.txt and package.xml",
+        "user_id": "syohex",
+        "created_at": "2016-06-02T07:26:13Z",
+        "comments": [
+            {
+                "user_id": "syohex",
+                "created_at": "2016-06-02T07:48:07Z",
+                "comment_text": "By the way, Almost all Autoware programs which depend on OpenCV cannot be built on ROS kinetic, because ROS kinetic bundles OpenCV3 and forces developers to use OpenCV3 by default. Developers cannot use OpenCV2 in general. Some Autoware programs uses deprecated OpenCV functions, classes, structures, they are removed on OpenCV3. If Autoware supports ROS kinetic in the future, we should consider to rewrite some programs with OpenCV3.\n\nAnd some ROS packages which are used by Autoware are missed in ROS kinentic.\n- sound_play\n- nmea-msgs\n\nROS kinentic supports both Qt4 and Qt5, so we can remove some Qt5 hacks from CMakeList.txt.\n\nSee also\n- http://wiki.ros.org/kinetic/Migration\n"
+            }
+        ]
+    },
+    {
+        "title": "Connect Autoware by topic",
+        "user_id": "syouji",
+        "created_at": "2016-06-01T12:24:30Z",
+        "comments": []
+    },
+    {
+        "title": "Fixed bug(The klt trancking node publish same distance data)",
+        "user_id": "yukkysaito",
+        "created_at": "2016-06-01T09:33:40Z",
+        "comments": []
+    },
+    {
+        "title": "Add fast_pcl library.",
+        "user_id": "kitsukawa",
+        "created_at": "2016-06-01T08:07:10Z",
+        "comments": [
+            {
+                "user_id": "kitsukawa",
+                "created_at": "2016-06-01T08:29:31Z",
+                "comment_text": "@syohex \nPCL\u306eFilter\u3068Registration\u30e2\u30b8\u30e5\u30fc\u30eb\u306e\u5fc5\u8981\u306a\u90e8\u5206\u3092fast_pcl\u3068\u3057\u3066\u8ffd\u52a0\u3057\u307e\u3057\u305f\u3002\nndt_matching.cpp\u3067\u306f\u3001\u30a4\u30f3\u30af\u30eb\u30fc\u30c9\u3059\u308b\u30d8\u30c3\u30c0\u3092pcl/registration/ndt.h<-->fast_pcl/registration/ndt.h\u3067\u5207\u308a\u66ff\u3048\u3089\u308c\u308b\u3053\u3068\u306f\u78ba\u8a8d\u3057\u307e\u3057\u305f\u3002\nPCL\u306e\u30bd\u30fc\u30b9\u30b3\u30fc\u30c9\u81ea\u4f53\u306f\u5909\u66f4\u3057\u3066\u3044\u307e\u305b\u3093\u304c\u3001\u30e9\u30a4\u30d6\u30e9\u30ea\u3068\u3057\u3066\u8ffd\u52a0\u3059\u308b\u3053\u3068\u306b\u95a2\u3057\u3066\u3001\u4f55\u304b\u554f\u984c\u306a\u3044\u304b\u78ba\u8a8d\u3057\u3066\u3044\u305f\u3060\u3051\u306a\u3044\u3067\u3057\u3087\u3046\u304b?\n"
+            },
+            {
+                "user_id": "syohex",
+                "created_at": "2016-06-01T09:41:51Z",
+                "comment_text": "\u30d3\u30eb\u30c9\u304c\u901a\u308a\u307e\u305b\u3093. \n\n```\n/home/syohei/Autoware/ros/src/computing/perception/localization/lib/fast_pcl/regis\ntration/include/fast_pcl/registration/impl/correspondence_estimation.hpp:44:35: fa\ntal error: pcl/common/copy_point.h: No such file or directory\n #include <pcl/common/copy_point.h>\n```\n\nUbuntu 14.04\u306e `pcl-1.7`\u30d1\u30c3\u30b1\u30fc\u30b8\u306f 1.7.1\u306a\u306e\u3067, copy_point.h\u304c\u542b\u307e\u308c\u3066\u3044\u307e\u305b\u3093. [https://github.com/PointCloudLibrary/pcl](https://github.com/PointCloudLibrary/pcl)\u3092\u898b\u305f\u3068\u3053\u308d, 1.7.2\u304b\u3089\u542b\u307e\u308c\u3066\u3044\u308b\u30d8\u30c3\u30c0\u30d5\u30a1\u30a4\u30eb\u306e\u3088\u3046\u3067\u3059\u304c, \u3069\u306e\u3088\u3046\u306b\u3053\u306e\u554f\u984c\u3092\u56de\u907f\u3059\u308c\u3070\u3088\u308d\u3057\u3044\u3067\u3057\u3087\u3046\u304b ?\n"
+            },
+            {
+                "user_id": "kitsukawa",
+                "created_at": "2016-06-01T15:07:33Z",
+                "comment_text": "\u3053\u3061\u3089\u306e\u74b0\u5883\u3092\u78ba\u8a8d\u3057\u3066\u307f\u305f\u3068\u3053\u308d\u30011.7.2\u3067\u3057\u305f\u3002\n\u30e6\u30fc\u30b6\u30fc\u306blibpcl-1.7\u306e\u30d0\u30fc\u30b8\u30e7\u30f3\u30921.7.2\u306b\u30a2\u30c3\u30d7\u30c7\u30fc\u30c8\u3057\u3066\u3082\u3089\u3046\u3068\u3044\u3046\u65b9\u6cd5\u3067\u56de\u907f\u3059\u308b\u3068\u3044\u3046\u306e\u3067\u306f\u3060\u3081\u3067\u3057\u3087\u3046\u304b?\n"
+            },
+            {
+                "user_id": "syohex",
+                "created_at": "2016-06-02T01:14:52Z",
+                "comment_text": "\u305d\u306e\u5834\u5408 Ubuntu 14.04\u3067\u306e\u5229\u7528\u8005\u306b\u30bd\u30fc\u30b9\u30b3\u30fc\u30c9\u304b\u3089\u306e\u30d3\u30eb\u30c9\u3092\u8981\u6c42\u3059\u308b\u3053\u3068\u306b\u306a\u3063\u3066\u3057\u307e\u3046\u306e\u3067, \u826f\u3044\u8003\u3048\u3068\u306f\u3044\u3048\u306a\u3044\u3068\u601d\u3044\u307e\u3059. \u5fc5\u9808\u306e\u6a5f\u80fd\u3067\u306a\u3051\u308c\u3070, \u4f4e\u3044\u30d0\u30fc\u30b8\u30e7\u30f3\u306e libpcl\u3092\u5229\u7528\u3057\u3066\u3044\u308b\u5834\u5408\u306f\u30d3\u30eb\u30c9\u3057\u306a\u3044\u3068\u3044\u3046\u306e\u306f\u3044\u304b\u304c\u3067\u3057\u3087\u3046\u304b ?\n\n(Ubuntu 15.04, Ubuntu 16.04\u3067\u306f libpcl 1.7.2\u304c\u30d1\u30c3\u30b1\u30fc\u30b8\u304b\u3089\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u3067\u304d\u308b\u3053\u3068\u3092\u78ba\u8a8d\u3057\u307e\u3057\u305f.)\n"
+            },
+            {
+                "user_id": "syohex",
+                "created_at": "2016-06-02T01:51:33Z",
+                "comment_text": "Ubuntu 15.04 ROS jade\u3067\u306f\u30d3\u30eb\u30c9\u3067\u304d\u308b\u3053\u3068\u306f\u78ba\u8a8d\u3067\u304d\u307e\u3057\u305f.\n"
+            },
+            {
+                "user_id": "kitsukawa",
+                "created_at": "2016-06-02T07:52:56Z",
+                "comment_text": "Ubuntu 14.04\u306e\u5834\u5408\u3001ros-indigo-desktop-full\u3092\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u3057\u305f\u969b\u306b\u3001\u4e00\u7dd2\u306b\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u3055\u308c\u308blibpcl-1.7\u306e\u30d0\u30fc\u30b8\u30e7\u30f3\u304c1.7.1\u307f\u305f\u3044\u3067\u3059\u306d\u3002\n\u305d\u306e\u5834\u5408\u3001\nsudo add-apt-repository ppa:v-launchpad-jochen-sprickerhof-de/pcl\nsudo apt-get update\nsudo apt-get dist-upgrade\n\u3068\u3059\u308c\u3070\u3001libpcl-1.7\u306e\u30d0\u30fc\u30b8\u30e7\u30f3\u30921.7.2\u306b\u66f4\u65b0\u3067\u304d\u308b\u3053\u3068\u3092\u78ba\u8a8d\u3057\u307e\u3057\u305f\u3002\n1\u756a\u3044\u3044\u306e\u306f\u4e0a\u8a18\u306e\u65b9\u6cd5\u3067libpcl-1.7\u306e\u30d0\u30fc\u30b8\u30e7\u30f3\u30921.7.2\u306b\u3057\u3066\u3082\u3089\u3046\u3053\u3068\u3060\u3068\u601d\u3044\u307e\u3059\u3002\u3057\u304b\u3057\u30011.7.1\u306e\u5834\u5408\u306f\u3001\u30d3\u30eb\u30c9\u3057\u306a\u3044\u3068\u3044\u3046\u65b9\u6cd5\u304c\u3044\u3044\u304b\u3068\u601d\u3044\u307e\u3059\u304c\u3001\u305d\u3046\u3059\u308b\u3068ndt_matching\u3067fast_pcl/registration/ndt.h\u3092\u30a4\u30f3\u30af\u30eb\u30fc\u30c9\u3057\u305f\u5834\u5408\u3001\u30a8\u30e9\u30fc\u304c\u51fa\u308b\u3068\u601d\u3044\u307e\u3059\u304c\u3001\u3069\u306e\u3088\u3046\u306b\u5bfe\u51e6\u3057\u305f\u3089\u3044\u3044\u306e\u3067\u3057\u3087\u3046\u304b...\n"
+            },
+            {
+                "user_id": "syohex",
+                "created_at": "2016-06-02T08:22:29Z",
+                "comment_text": "API\u304c\u540c\u3058\u3068\u3044\u3046\u3053\u3068\u3067\u3042\u308c\u3070, \u30d3\u30eb\u30c9\u6642\u306b\u30d0\u30fc\u30b8\u30e7\u30f3\u3092\u30c1\u30a7\u30c3\u30af\u3057\u3066, ifdef\u3067\u5207\u308a\u5206\u3051\u308b\u306e\u3067\u826f\u3044\u3068\u601d\u3044\u307e\u3059.(CMake\u3067 `find_package(PCL)`\u3059\u308c\u3070, `${PCL_VERSION}`\u3067\u30d0\u30fc\u30b8\u30e7\u30f3\u306f\u53d6\u308c\u307e\u3059.)\n"
+            },
+            {
+                "user_id": "kitsukawa",
+                "created_at": "2016-06-02T09:47:17Z",
+                "comment_text": "find_package(PCL)\u3068\u3057\u3001PCL\u306e\u30d0\u30fc\u30b8\u30e7\u30f3\u3092\u53d6\u5f97\u3059\u308b\u3053\u3068\u306f\u3067\u304d\u305f\u306e\u3067\u3059\u304c\u3001CMake\u306e\u66f8\u304d\u65b9\u306b\u7fd2\u719f\u3057\u3066\u304a\u3089\u305a\u601d\u3046\u3088\u3046\u306b\u52d5\u4f5c\u3092\u3057\u306a\u3044\u306e\u3067\u3001PCL\u30d0\u30fc\u30b8\u30e7\u30f3\u3092\u30c1\u30a7\u30c3\u30af\u3057\u3066\u30011.7.2\u4ee5\u964d\u306a\u3089\u3070fast_pcl\u3092\u30b3\u30f3\u30d1\u30a4\u30eb\u3001ndt_localizer\u306eCMakeLists\u3067fast_pcl\u3092\u30ea\u30f3\u30af\u30011.7.1\u306a\u3089\u3070fast_pcl\u306e\u30b3\u30f3\u30d1\u30a4\u30eb\u3001\u30ea\u30f3\u30af\u3092\u3057\u306a\u3044\u3068\u3044\u3046\u3088\u3046\u306b\u5909\u66f4\u3057\u3066\u3044\u305f\u3060\u3051\u306a\u3044\u3067\u3057\u3087\u3046\u304b?\u304a\u624b\u6570\u3092\u304a\u304b\u3051\u3057\u3066\u7533\u3057\u8a33\u3042\u308a\u307e\u305b\u3093\u3002\n"
+            },
+            {
+                "user_id": "syohex",
+                "created_at": "2016-06-02T09:51:51Z",
+                "comment_text": "\u307e\u3060\u5909\u66f4\u5185\u5bb9\u304c\u3088\u304f\u308f\u304b\u3063\u3066\u3044\u306a\u3044\u306e\u3067, \u78ba\u8a8d\u304b\u3089\u884c\u3063\u3066\u307f\u307e\u3059.\n"
+            },
+            {
+                "user_id": "syohex",
+                "created_at": "2016-06-03T03:14:08Z",
+                "comment_text": "https://github.com/CPFL/Autoware/pull/335/commits/1c85e501ce999aa026819619540301e70974408b \u306e\u4fee\u6b63\u3092\u78ba\u8a8d\u3057\u3066\u3044\u305f\u3060\u3051\u306a\u3044\u3067\u3057\u3087\u3046\u304b ? \nUbuntu 14.04 + pcl 1.7.1\u3068 Ubuntu 15.04 + pcl 1.7.2\u3067\u305d\u308c\u305e\u308c\u30d3\u30eb\u30c9\u3067\u304d\u308b\u3053\u3068\u306f\u78ba\u8a8d\u3057\u307e\u3057\u305f.\n"
+            },
+            {
+                "user_id": "kitsukawa",
+                "created_at": "2016-06-03T05:17:40Z",
+                "comment_text": "Ubuntu 14.04 + pcl 1.7.2 \u306e\u5834\u5408\u3067\u3082\u30d3\u30eb\u30c9\u3067\u304d\u308b\u3053\u3068\u3092\u78ba\u8a8d\u3057\u307e\u3057\u305f\u306e\u3067\u30de\u30fc\u30b8\u3057\u307e\u3059\u3002\n\u3054\u5354\u529b\u3044\u305f\u3060\u304d\u307e\u3057\u3066\u3042\u308a\u304c\u3068\u3046\u3054\u3056\u3044\u307e\u3059\u3002\n"
+            }
+        ]
+    },
+    {
+        "title": "Update instruction videos",
+        "user_id": "kitsukawa",
+        "created_at": "2016-05-31T13:36:50Z",
+        "comments": [
+            {
+                "user_id": "shinpei0208",
+                "created_at": "2016-05-31T13:41:18Z",
+                "comment_text": "Great!\n2016/05/31 22:37 \"Yuki Kitsukawa\" notifications@github.com:\n\n> Merged #333 https://github.com/CPFL/Autoware/pull/333.\n> \n> \u2014\n> You are receiving this because you are subscribed to this thread.\n> Reply to this email directly, view it on GitHub\n> https://github.com/CPFL/Autoware/pull/333#event-677010154, or mute the\n> thread\n> https://github.com/notifications/unsubscribe/AAToC2fZkVGRZu_WBOPW42RrgKemBsiBks5qHDl6gaJpZM4Iqibn\n> .\n"
+            },
+            {
+                "user_id": "DeniseJames",
+                "created_at": "2016-05-31T20:13:53Z",
+                "comment_text": "When will the instruction manual be in English?  \n"
+            },
+            {
+                "user_id": "kitsukawa",
+                "created_at": "2016-06-01T07:00:59Z",
+                "comment_text": "@Denisetoo \nI am sorry but I don't know about that because I am not in charge of the manuals.\n"
+            }
+        ]
+    },
+    {
+        "title": "Runtime Manger, add obj_enables utils for widget enable/disable",
+        "user_id": "kondoh2",
+        "created_at": "2016-05-31T09:21:10Z",
+        "comments": []
+    },
+    {
+        "title": "Runtime Manager, refactoring config_dic search, add param sys",
+        "user_id": "kondoh2",
+        "created_at": "2016-05-31T08:16:57Z",
+        "comments": []
+    },
+    {
+        "title": "Runtime Manager, add utils for dict and list",
+        "user_id": "kondoh2",
+        "created_at": "2016-05-31T08:06:38Z",
+        "comments": []
+    },
+    {
+        "title": "Remove needless compiling flags",
+        "user_id": "syohex",
+        "created_at": "2016-05-31T07:07:49Z",
+        "comments": []
+    },
+    {
+        "title": "Add lazy_ndt_mapping.",
+        "user_id": "kitsukawa",
+        "created_at": "2016-05-30T18:35:05Z",
+        "comments": []
+    },
+    {
+        "title": "Fix TF of ndt_mapping.",
+        "user_id": "kitsukawa",
+        "created_at": "2016-05-30T15:04:16Z",
+        "comments": []
+    },
+    {
+        "title": "Add icp_stat.msg.",
+        "user_id": "kitsukawa",
+        "created_at": "2016-05-30T11:44:53Z",
+        "comments": []
+    },
+    {
+        "title": "Add missing ndt_localizer dependency",
+        "user_id": "syohex",
+        "created_at": "2016-05-27T09:28:02Z",
+        "comments": [
+            {
+                "user_id": "kitsukawa",
+                "created_at": "2016-05-30T11:49:25Z",
+                "comment_text": "@syohex \nThank you for reporting and fixing the errors.\nI add icp_stat.msg instead of ndt_stat.msg at #325.\n"
+            }
+        ]
+    },
+    {
+        "title": "Add icp_localizer.",
+        "user_id": "kitsukawa",
+        "created_at": "2016-05-27T06:05:08Z",
+        "comments": []
+    },
+    {
+        "title": "Vecta cam driver",
+        "user_id": "amc-nu",
+        "created_at": "2016-05-27T05:12:44Z",
+        "comments": [
+            {
+                "user_id": "amc-nu",
+                "created_at": "2016-05-27T06:59:35Z",
+                "comment_text": "@syohex \u78ba\u8a8d\u304a\u9858\u3044\u3057\u307e\u3059\u3002\n"
+            },
+            {
+                "user_id": "syohex",
+                "created_at": "2016-05-27T09:10:45Z",
+                "comment_text": "BTW. Please use branch which is branched from latest master branch. Your branch is too old and it cannot build on machine which installs ros-java package(This issue is already fixed on latest master branch)\n"
+            },
+            {
+                "user_id": "amc-nu",
+                "created_at": "2016-05-27T10:08:52Z",
+                "comment_text": "Thanks @syohex I'll attend all\n"
+            },
+            {
+                "user_id": "amc-nu",
+                "created_at": "2016-05-31T01:49:35Z",
+                "comment_text": "\u3082\u3046\u4e00\u5ea6\u78ba\u8a8d\u4e0b\u3055\u3044\u3002 @syohex \n"
+            },
+            {
+                "user_id": "amc-nu",
+                "created_at": "2016-05-31T02:45:03Z",
+                "comment_text": "@syohex done\n"
+            },
+            {
+                "user_id": "syohex",
+                "created_at": "2016-05-31T03:38:33Z",
+                "comment_text": "BTW for Autoware developers, there are some deeply nested code in Autoware. Deeply nested code is difficult to read and understand. You can reduce nest for some patterns. Please consider reducing nest when you write deeply nested code(In general, more than 3-4 nested blocks).\n\nFor example.\n\n``` c\nint ret = some_function(a, b, c);\nif (ret < 0) {\n   log(\"error....\");\n} else {\n  // success case\n}\n```\n\n``` c\nint ret = some_function(a, b, c);\nif (ret < 0) {\n   log(\"error....\");\n   return ret;\n}\n\n// success case\n```\n\nOther example(conditions in loop)\n\n``` c\nwhile (some_iterations()) {\n    int ret = some_function(a, b, c);\n    if (ret < 0) {\n       log(\"error....\");\n    } else {\n      // success case\n    }\n}\n```\n\n``` c\nwhile (some_iterations()) {\n    int ret = some_function(a, b, c);\n    if (ret < 0) {\n       log(\"error....\");\n       continue; // or break, return\n    }\n\n    // success case\n}\n```\n\nPlease consider\n\nSee also\n- https://en.wikibooks.org/wiki/Computer_Programming/Coding_Style/Minimize_nesting\n- Art of Readable code Section 7 Minimize Nesting(\u65e5\u672c\u8a9e\u7248: 7.7 \u30cd\u30b9\u30c8\u3092\u6d45\u304f\u3059\u308b)\n- Code Complete Section 4\n"
+            },
+            {
+                "user_id": "amc-nu",
+                "created_at": "2016-05-31T07:10:47Z",
+                "comment_text": "\u3044\u304b\u304c\u3067\u3059\u304b\uff1f @syohex \n"
+            },
+            {
+                "user_id": "syohex",
+                "created_at": "2016-05-31T09:04:58Z",
+                "comment_text": "It looks there is no big problem.\n"
+            }
+        ]
+    },
+    {
+        "title": "Runtime Manager Map tab, add 1GB check for .pcd files",
+        "user_id": "kondoh2",
+        "created_at": "2016-05-26T09:50:46Z",
+        "comments": []
+    },
+    {
+        "title": "Runtime Manager Computing tab, fix typo points2costmap",
+        "user_id": "kondoh2",
+        "created_at": "2016-05-23T02:37:50Z",
+        "comments": []
+    },
+    {
+        "title": "Remove unnecessary parameters from config window of ndt_matching.",
+        "user_id": "kitsukawa",
+        "created_at": "2016-05-20T11:30:42Z",
+        "comments": []
+    },
+    {
+        "title": "Runtime Manager Computing tab, add Semantics package",
+        "user_id": "kondoh2",
+        "created_at": "2016-05-20T10:42:52Z",
+        "comments": []
+    },
+    {
+        "title": "Show UVC camera ID",
+        "user_id": "syouji",
+        "created_at": "2016-05-20T08:47:13Z",
+        "comments": []
+    },
+    {
+        "title": "Fix points_filter dependencies.",
+        "user_id": "kitsukawa",
+        "created_at": "2016-05-20T04:48:31Z",
+        "comments": [
+            {
+                "user_id": "syohex",
+                "created_at": "2016-05-20T05:08:54Z",
+                "comment_text": "I have confirmed that build successes.\n"
+            }
+        ]
+    },
+    {
+        "title": "Add frame_id to BoundingBoxArray",
+        "user_id": "h-ohta",
+        "created_at": "2016-05-19T08:54:32Z",
+        "comments": [
+            {
+                "user_id": "manato",
+                "created_at": "2016-05-23T15:32:23Z",
+                "comment_text": "@h-ohta ,\nThey were completely my mistake!\nThank you very much to let me know and fix them!\n"
+            }
+        ]
+    },
+    {
+        "title": "Add jsk packages",
+        "user_id": "h-ohta",
+        "created_at": "2016-05-18T12:47:45Z",
+        "comments": [
+            {
+                "user_id": "syohex",
+                "created_at": "2016-05-19T01:57:55Z",
+                "comment_text": "Please comment why you add jsk_visualization package into Autoware repository. Because ros-indigo-jsk-visualization is provided as ROS apt package. \n"
+            },
+            {
+                "user_id": "h-ohta",
+                "created_at": "2016-05-19T08:39:55Z",
+                "comment_text": "> Because ros-indigo-jsk-visualization is provided as ROS apt package.\n\nThank you for your information.\nI did'nt know that.\nI'll check whether that package is available for Autoware.\n"
+            },
+            {
+                "user_id": "h-ohta",
+                "created_at": "2016-05-26T10:50:29Z",
+                "comment_text": "I confirmed that we can use jsk_visualization package provided by apt in Autoware,so I cancel this PR.\n"
+            }
+        ]
+    },
+    {
+        "title": "Separate downsampling of points_raw from ndt_matching.",
+        "user_id": "kitsukawa",
+        "created_at": "2016-05-18T10:57:36Z",
+        "comments": [
+            {
+                "user_id": "kitsukawa",
+                "created_at": "2016-05-18T11:03:22Z",
+                "comment_text": "@syohex \nros/sensing/data_filter/packages\u306b\u65b0\u305f\u306bpoints_filter\u3068\u3044\u3046\u30d1\u30c3\u30b1\u30fc\u30b8\u3092\u4f5c\u6210\u3057\u307e\u3057\u305f\u3002\u304a\u624b\u6570\u3092\u304a\u304b\u3051\u3057\u307e\u3059\u304c\u3001\u4f55\u304b\u554f\u984c\u304c\u306a\u3044\u304b\u30c1\u30a7\u30c3\u30af\u3057\u3066\u3044\u305f\u3060\u3051\u306a\u3044\u3067\u3057\u3087\u3046\u304b?\n"
+            },
+            {
+                "user_id": "syohex",
+                "created_at": "2016-05-19T03:10:45Z",
+                "comment_text": "\u5185\u5bb9\u306f\u7406\u89e3\u3067\u304d\u3066\u3044\u306a\u3044\u306e\u3067\u3042\u308c\u3067\u3059\u304c, \u554f\u984c\u306f\u306a\u3044\u3088\u3046\u306b\u898b\u3048\u307e\u3059. \u305f\u3060\u5909\u66f4\u304c\u591a\u3059\u304e\u308b\u306e\u3067, (\u53ef\u80fd\u3067\u3042\u308c\u3070\u3082\u3046\u5c11\u3057\u5206\u5272\u3057\u3066\u3044\u305f\u3060\u3051\u308b\u3068\u52a9\u304b\u308a\u307e\u3059)\n"
+            },
+            {
+                "user_id": "kitsukawa",
+                "created_at": "2016-05-19T07:03:52Z",
+                "comment_text": "\u3054\u78ba\u8a8d\u3042\u308a\u304c\u3068\u3046\u3054\u3056\u3044\u307e\u3059\u3002\u4eca\u5f8c\u30011\u56de\u306e\u5909\u66f4\u3092\u3082\u3046\u5c11\u3057\u5206\u5272\u3057\u305f\u3044\u3068\u601d\u3044\u307e\u3059\u3002\n"
+            }
+        ]
+    },
+    {
+        "title": "Change Vehicle Model from Marker to RobotModel.",
+        "user_id": "kuriking",
+        "created_at": "2016-05-18T06:13:53Z",
+        "comments": []
+    },
+    {
+        "title": "Don't publish non message object",
+        "user_id": "syohex",
+        "created_at": "2016-05-18T01:47:32Z",
+        "comments": []
+    },
+    {
+        "title": "Add semantics package",
+        "user_id": "TomohitoAndo",
+        "created_at": "2016-05-16T09:58:10Z",
+        "comments": [
+            {
+                "user_id": "TomohitoAndo",
+                "created_at": "2016-05-16T09:59:25Z",
+                "comment_text": "@syohex \n\u304a\u624b\u6570\u304a\u304b\u3051\u3057\u307e\u3059\u304c\uff0c\u4f55\u304b\u554f\u984c\u306a\u3044\u304b\u30c1\u30a7\u30c3\u30af\u3057\u3066\u3044\u305f\u3060\u3044\u3066\u3082\u3088\u308d\u3057\u3044\u3067\u3057\u3087\u3046\u304b?\n"
+            },
+            {
+                "user_id": "syohex",
+                "created_at": "2016-05-17T08:11:10Z",
+                "comment_text": "http://wiki.ros.org/ROSNodeTutorialC++\n\n\u30e1\u30e2\u3068\u3057\u3066\u6b8b\u3057\u3066\u304a\u304d\u307e\u3059\u304c, \u4e0a\u8a18\u306e URL\u306e 3.2 The listener node, 3.3 The NodeExample class\u306e\u3088\u3046\u306b\u5b9f\u88c5\u3059\u308b\u3068, \u95a2\u6570\u30ed\u30fc\u30ab\u30eb\u306a static\u5909\u6570\u304c\u6e1b\u3089\u305b\u308b\u3082\u306e\u3068\u601d\u3044\u307e\u3059. \n\nhttp://wiki.ros.org/ROSNodeTutorialC++#CA-e07dead5795e4d17f3e7d28da49569a19f39cae9_30\n\n\u306b\u3042\u308b\u3088\u3046\u306b\u30b3\u30fc\u30eb\u30d0\u30c3\u30af\u95a2\u6570\u306b\u30e1\u30f3\u30d0\u95a2\u6570\u30dd\u30a4\u30f3\u30bf\u3092\u8a2d\u5b9a, \u305d\u306e\u6b21\u306e\u5f15\u6570\u306b\u30a4\u30f3\u30b9\u30bf\u30f3\u30b9\u306e\u30dd\u30a4\u30f3\u30bf\u3092\u6307\u5b9a\u3059\u308b\u3053\u3068\u3067\u30af\u30e9\u30b9\u5185\u306b\u72b6\u614b\u3092\u9589\u3058\u8fbc\u3081\u308b\u3053\u3068\u304c\u3067\u304d\u307e\u3059.\n"
+            },
+            {
+                "user_id": "TomohitoAndo",
+                "created_at": "2016-05-17T10:42:17Z",
+                "comment_text": "\u52c9\u5f37\u306b\u306a\u308b\u30e1\u30e2\u3042\u308a\u304c\u3068\u3046\u3054\u3056\u3044\u307e\u3059\uff01 \u4eca\u5f8c\u306e\u30b3\u30fc\u30c7\u30a3\u30f3\u30b0\u306e\u53c2\u8003\u306b\u3055\u305b\u3066\u3044\u305f\u3060\u304d\u307e\u3059\uff0e\n\n\u3054\u6307\u6458\u3044\u305f\u3060\u3044\u305f\u70b9\u3092\u4fee\u6b63\u3057\u307e\u3057\u305f\u306e\u3067\uff0c\u518d\u5ea6\u30ec\u30d3\u30e5\u30fc\u3092\u304a\u9858\u3044\u3057\u307e\u3059\uff0e\n"
+            },
+            {
+                "user_id": "TomohitoAndo",
+                "created_at": "2016-05-19T11:11:37Z",
+                "comment_text": "\u3054\u6307\u6458\u3044\u305f\u3060\u3044\u305f\u70b9\u3092\u4fee\u6b63\u3057\u307e\u3057\u305f\uff0e\n\u304a\u624b\u6570\u304b\u3051\u307e\u3059\u304c\uff0c\u518d\u5ea6\u30c1\u30a7\u30c3\u30af\u304a\u9858\u3044\u3057\u307e\u3059\uff0e\n"
+            },
+            {
+                "user_id": "syohex",
+                "created_at": "2016-05-19T11:47:16Z",
+                "comment_text": "\u30d3\u30eb\u30c9\u3082\u901a\u3063\u305f\u306e\u3067\u554f\u984c\u306a\u3044\u3068\u601d\u3044\u307e\u3059.\n"
+            },
+            {
+                "user_id": "TomohitoAndo",
+                "created_at": "2016-05-20T01:51:50Z",
+                "comment_text": "\u30de\u30fc\u30b8\u3057\u307e\u3057\u305f\uff0e\n\u30ec\u30d3\u30e5\u30fc\u3042\u308a\u304c\u3068\u3046\u3054\u3056\u3044\u307e\u3057\u305f\uff01\n"
+            }
+        ]
+    },
+    {
+        "title": "Publish cached waypoint",
+        "user_id": "syouji",
+        "created_at": "2016-05-16T06:20:32Z",
+        "comments": []
+    },
+    {
+        "title": "Mod waypoint follower",
+        "user_id": "h-ohta",
+        "created_at": "2016-05-12T13:13:04Z",
+        "comments": []
+    },
+    {
+        "title": "Runtime Manager Computing tab, fix for sync option problem",
+        "user_id": "kondoh2",
+        "created_at": "2016-05-11T04:16:09Z",
+        "comments": []
+    },
+    {
+        "title": "Fix initialize value of wf_simulator in Runtime Manager",
+        "user_id": "h-ohta",
+        "created_at": "2016-04-28T07:44:13Z",
+        "comments": []
+    },
+    {
+        "title": "Fix for rosjava installed platform",
+        "user_id": "syohex",
+        "created_at": "2016-04-25T12:57:30Z",
+        "comments": [
+            {
+                "user_id": "syohex",
+                "created_at": "2016-04-26T01:46:20Z",
+                "comment_text": "NOTE: Building some message jar files are still failed, however Autoware build process is successful ant its exit status(`$?`) is zero. I'll tackle with this issue.\n"
+            },
+            {
+                "user_id": "syohex",
+                "created_at": "2016-04-26T03:15:37Z",
+                "comment_text": "> NOTE: Building some message jar files are still failed, however Autoware build process is successful ant its exit status($?) is zero. I'll tackle with this issue.\n\nhttps://github.com/rosjava/rosjava_mvn_repo/tree/master/org/ros/rosjava_messages\n\nSome rosjava_messages like pcl_ros are not existed in rosjava maven repository so that we cannot fix build error about it. :-(\n"
+            }
+        ]
+    },
+    {
+        "title": "Fix sound_player dependencies",
+        "user_id": "syohex",
+        "created_at": "2016-04-21T10:42:07Z",
+        "comments": [
+            {
+                "user_id": "beetleskin",
+                "created_at": "2016-04-22T18:45:03Z",
+                "comment_text": "yep, this works\n"
+            },
+            {
+                "user_id": "syohex",
+                "created_at": "2016-04-22T22:42:33Z",
+                "comment_text": "Thanks for checking.\n"
+            }
+        ]
+    },
+    {
+        "title": "Rewrite points_map_loader",
+        "user_id": "syouji",
+        "created_at": "2016-04-20T14:29:49Z",
+        "comments": []
+    },
+    {
+        "title": "Update Readme",
+        "user_id": "h-ohta",
+        "created_at": "2016-04-20T12:53:34Z",
+        "comments": []
+    },
+    {
+        "title": "Some fix",
+        "user_id": "h-ohta",
+        "created_at": "2016-04-18T09:33:53Z",
+        "comments": []
+    },
+    {
+        "title": "Add vel_pose_mux package , and Change some specifications for it ",
+        "user_id": "h-ohta",
+        "created_at": "2016-04-18T09:00:22Z",
+        "comments": []
+    },
+    {
+        "title": "Remove duplicated file",
+        "user_id": "syouji",
+        "created_at": "2016-04-18T04:06:24Z",
+        "comments": []
+    },
+    {
+        "title": "Runtime Manager, fix lane_stop dialog button color",
+        "user_id": "kondoh2",
+        "created_at": "2016-04-14T04:26:11Z",
+        "comments": []
+    },
+    {
+        "title": "Runtime Manager, update for immediately reflection of sys CPU setup",
+        "user_id": "kondoh2",
+        "created_at": "2016-04-14T02:45:26Z",
+        "comments": []
+    },
+    {
+        "title": "Update manuals",
+        "user_id": "kuriking",
+        "created_at": "2016-04-14T02:24:30Z",
+        "comments": []
+    },
+    {
+        "title": "Color vehicle model",
+        "user_id": "yukkysaito",
+        "created_at": "2016-04-11T07:34:10Z",
+        "comments": []
+    },
+    {
+        "title": "Runtime Manager, update for remote rviz",
+        "user_id": "kondoh2",
+        "created_at": "2016-04-11T04:53:22Z",
+        "comments": []
+    },
+    {
+        "title": "Update manuals",
+        "user_id": "kuriking",
+        "created_at": "2016-04-11T04:37:53Z",
+        "comments": []
+    },
+    {
+        "title": "Runtime Manager, update to use gdic(gui: in .yaml) at no param",
+        "user_id": "kondoh2",
+        "created_at": "2016-04-08T06:18:14Z",
+        "comments": []
+    },
+    {
+        "title": "fix save param check, not include sys_prm for check",
+        "user_id": "kondoh2",
+        "created_at": "2016-04-08T06:03:42Z",
+        "comments": []
+    },
+    {
+        "title": "Runtime Manager Setup tab, fix buttons setting",
+        "user_id": "kondoh2",
+        "created_at": "2016-04-06T07:30:35Z",
+        "comments": []
+    },
+    {
+        "title": "Import AutowareTouch",
+        "user_id": "syouji",
+        "created_at": "2016-04-05T14:20:20Z",
+        "comments": []
+    },
+    {
+        "title": "Fix code style",
+        "user_id": "TomohitoAndo",
+        "created_at": "2016-04-05T09:46:18Z",
+        "comments": []
+    },
+    {
+        "title": "fix for float(\"123,456\"), add str_to_float()",
+        "user_id": "kondoh2",
+        "created_at": "2016-04-04T04:17:49Z",
+        "comments": [
+            {
+                "user_id": "syohex",
+                "created_at": "2016-04-04T04:28:32Z",
+                "comment_text": "```\n% env LC_ALL=\"de_DE.UTF-8\" rosrun runtime_manager runtime_manager_dialog.py\n```\n\nI confirmed autowarefoundation/autoware_ai#810 was fixed with above command.\n\n![float](https://cloud.githubusercontent.com/assets/554281/14238197/d5b8796c-fa68-11e5-9a40-b6d346d7a6a0.png)\n"
+            }
+        ]
+    },
+    {
+        "title": "Add jsk library",
+        "user_id": "manato",
+        "created_at": "2016-04-03T05:20:19Z",
+        "comments": [
+            {
+                "user_id": "manato",
+                "created_at": "2016-04-03T05:23:09Z",
+                "comment_text": "@syohex ,\nCould you review my modification?\nThank you for your always help.\n"
+            },
+            {
+                "user_id": "manato",
+                "created_at": "2016-04-09T16:36:10Z",
+                "comment_text": "@syohex ,\nThank you very much for your reviewing.\nYour pointing out are always beneficial for me!\n\nI modified suggested points and push them by `git push origin apply_jsk_RVizPlugin --force`.\nI'm sorry to bother you, but could you please check my modification again?\nThank you for your help.\n"
+            },
+            {
+                "user_id": "syohex",
+                "created_at": "2016-04-10T02:44:04Z",
+                "comment_text": "Thanks for fixing. Please merge.\n"
+            },
+            {
+                "user_id": "manato",
+                "created_at": "2016-04-10T03:15:41Z",
+                "comment_text": "@syohex ,\nThank you for your time. I've merged my PR.\n"
+            }
+        ]
+    },
+    {
+        "title": "Fix pos_downloader time check.",
+        "user_id": "kuriking",
+        "created_at": "2016-03-31T23:53:06Z",
+        "comments": []
+    },
+    {
+        "title": "Fix bug with new vector map",
+        "user_id": "TomohitoAndo",
+        "created_at": "2016-03-31T07:09:01Z",
+        "comments": []
+    },
+    {
+        "title": "Add coding standard in Japanese",
+        "user_id": "syohex",
+        "created_at": "2016-03-30T07:55:01Z",
+        "comments": [
+            {
+                "user_id": "syohex",
+                "created_at": "2016-03-30T09:31:13Z",
+                "comment_text": "Please report me if there are any problems or document which is difficult/impossible to understand.\n"
+            }
+        ]
+    },
+    {
+        "title": "Update videos for planning",
+        "user_id": "TomohitoAndo",
+        "created_at": "2016-03-23T08:18:44Z",
+        "comments": []
+    },
+    {
+        "title": "Fix choices in velocity source",
+        "user_id": "h-ohta",
+        "created_at": "2016-03-17T10:19:40Z",
+        "comments": []
+    },
+    {
+        "title": "Runtime Manager, workaround for file save dialog segfault",
+        "user_id": "kondoh2",
+        "created_at": "2016-03-16T03:40:42Z",
+        "comments": []
+    },
+    {
+        "title": "Update default.rviz to replace old topics",
+        "user_id": "TomohitoAndo",
+        "created_at": "2016-03-15T08:00:32Z",
+        "comments": []
+    },
+    {
+        "title": "Fix lane_select bug.",
+        "user_id": "kuriking",
+        "created_at": "2016-03-14T12:35:34Z",
+        "comments": []
+    },
+    {
+        "title": "Look ahead downloading",
+        "user_id": "syouji",
+        "created_at": "2016-03-14T05:41:29Z",
+        "comments": []
+    },
+    {
+        "title": "Fix point cloud loading",
+        "user_id": "syouji",
+        "created_at": "2016-03-11T05:42:41Z",
+        "comments": []
+    },
+    {
+        "title": "Devide waypoint marker topic",
+        "user_id": "h-ohta",
+        "created_at": "2016-03-08T08:36:38Z",
+        "comments": []
+    },
+    {
+        "title": "add new model for car",
+        "user_id": "pdsljp",
+        "created_at": "2016-03-07T07:37:58Z",
+        "comments": [
+            {
+                "user_id": "pdsljp",
+                "created_at": "2016-03-07T07:41:54Z",
+                "comment_text": "@shinpei0208 \u66ab\u5b9a\u306e\u30c7\u30a3\u30ec\u30af\u30c8\u30ea\u69cb\u6210\u3067\u3059\u304c\u3001\u30c7\u30a3\u30ec\u30af\u30c8\u30ea\u540d\u3084\u69cb\u6210\u306f\u3053\u308c\u3067\u5927\u4e08\u592b\u3067\u3057\u3087\u3046\u304b\uff1f\n"
+            },
+            {
+                "user_id": "shinpei0208",
+                "created_at": "2016-12-02T13:43:10Z",
+                "comment_text": "@amc-nu, can you check this PR?"
+            },
+            {
+                "user_id": "amc-nu",
+                "created_at": "2016-12-02T13:50:47Z",
+                "comment_text": "@shinpei0208 Sure!"
+            },
+            {
+                "user_id": "h-ohta",
+                "created_at": "2016-12-19T22:56:14Z",
+                "comment_text": "@amc-nu  Could you tell me how is it going?"
+            },
+            {
+                "user_id": "amc-nu",
+                "created_at": "2016-12-19T23:03:34Z",
+                "comment_text": "I'll take care of this from the 27th. Currently I'm outside of Japan. Sorry\nBest regardsAbraham\n\n\n\n\n\n\nOn Mon, Dec 19, 2016 at 4:56 PM -0600, \"Hiroki Ohta\" <notifications@github.com> wrote:\n\n\n\n\n\n\n\n\n\n\n\n\n@amc-nu  Could you tell me how is it going?\n\n\n\n\u2014\nYou are receiving this because you were mentioned.\nReply to this email directly, view it on GitHub, or mute the thread.\n\n\n  \n  \n\n\n\n\n\n\n\n\n\n"
+            },
+            {
+                "user_id": "h-ohta",
+                "created_at": "2016-12-19T23:08:15Z",
+                "comment_text": "@amc-nu I see. Can I close this ? Because I'd like to apply new branch model."
+            },
+            {
+                "user_id": "h-ohta",
+                "created_at": "2016-12-21T09:44:12Z",
+                "comment_text": "@amc-nu I'll close this PR to apply new branch model. Please remake new pull request after done that. "
+            }
+        ]
+    },
+    {
+        "title": "Fix update_rate",
+        "user_id": "syouji",
+        "created_at": "2016-03-04T03:12:43Z",
+        "comments": []
+    },
+    {
+        "title": "Redesign map_downloader dialog",
+        "user_id": "syouji",
+        "created_at": "2016-03-03T09:51:32Z",
+        "comments": [
+            {
+                "user_id": "syouji",
+                "created_at": "2016-03-03T10:02:46Z",
+                "comment_text": "Password \u306f\u30c6\u30ad\u30b9\u30c8\u30dc\u30c3\u30af\u30b9\u306b\u306f\u8868\u793a\u3055\u308c\u306a\u3044\u3002\n\u305f\u3060\u3057\u3001\u73fe\u72b6\u306f User \u3068 Password \u306e\u4e21\u65b9\u306b\u3064\u3044\u3066\u3001\u4ee5\u4e0b\u3092\u6ce8\u610f\u3055\u308c\u305f\u3044\u3002\n- Runtime Manager \u304c\u5b9f\u884c\u3055\u308c\u308b\u30bf\u30fc\u30df\u30ca\u30eb\u30bd\u30d5\u30c8\u306b\u3001rosparam set \u306e\u30c7\u30d0\u30c3\u30b0\u51fa\u529b\u3068\u3057\u3066\u5e73\u6587\u3067\u8868\u793a\u3055\u308c\u308b\u3002\n- param.yaml \u306b\u5e73\u6587\u3067\u4fdd\u5b58\u3055\u308c\u308b\u3002\n\n![map_downloader_dialog_20160303a](https://cloud.githubusercontent.com/assets/9031008/13490647/3dccf804-e171-11e5-805c-ad70ca8243bd.png)\n"
+            }
+        ]
+    },
+    {
+        "title": "Add ROS parameters for HTTP server",
+        "user_id": "syouji",
+        "created_at": "2016-03-03T09:19:41Z",
+        "comments": []
+    },
+    {
+        "title": "Don't require initial position",
+        "user_id": "syouji",
+        "created_at": "2016-03-03T09:12:19Z",
+        "comments": []
+    },
+    {
+        "title": "Fix GetFile library",
+        "user_id": "syouji",
+        "created_at": "2016-03-03T08:55:39Z",
+        "comments": []
+    },
+    {
+        "title": "Runtime Manager, support text control passwd flag",
+        "user_id": "kondoh2",
+        "created_at": "2016-03-03T06:54:52Z",
+        "comments": [
+            {
+                "user_id": "syouji",
+                "created_at": "2016-03-03T07:08:42Z",
+                "comment_text": "Thanks for your support :smile:\n"
+            }
+        ]
+    },
+    {
+        "title": "Fix rviz remote execution.",
+        "user_id": "kuriking",
+        "created_at": "2016-03-02T10:58:58Z",
+        "comments": []
+    },
+    {
+        "title": "Apply multi camera",
+        "user_id": "manato",
+        "created_at": "2016-03-01T12:45:18Z",
+        "comments": [
+            {
+                "user_id": "manato",
+                "created_at": "2016-03-01T12:55:48Z",
+                "comment_text": "@syohex ,\nCould you please check this PR?\nI'm sorry for many modification in this PR.\nI' ll be careful not to send PR like this time from next time.\n"
+            },
+            {
+                "user_id": "syohex",
+                "created_at": "2016-03-01T13:24:29Z",
+                "comment_text": "Looks good to me. Please merge.\n"
+            },
+            {
+                "user_id": "manato",
+                "created_at": "2016-03-01T13:35:02Z",
+                "comment_text": "Thank you very much for your quick reply.\nThen I'll merge this PR.\n"
+            }
+        ]
+    },
+    {
+        "title": "Add digest access authentication",
+        "user_id": "syouji",
+        "created_at": "2016-03-01T06:57:43Z",
+        "comments": []
+    },
+    {
+        "title": "Fix CUDA_ERROR_LAUNCH_FAILED error occurred in dpm_ttic",
+        "user_id": "manato",
+        "created_at": "2016-02-24T01:56:29Z",
+        "comments": []
+    },
+    {
+        "title": "Fix pure pursuit",
+        "user_id": "h-ohta",
+        "created_at": "2016-02-17T06:34:41Z",
+        "comments": []
+    },
+    {
+        "title": "Runtime Manager, fix dialog showing after closeing by close box",
+        "user_id": "kondoh2",
+        "created_at": "2016-02-16T11:21:12Z",
+        "comments": []
+    },
+    {
+        "title": "Add new method for distance calculation of fusion",
+        "user_id": "manato",
+        "created_at": "2016-02-15T02:12:40Z",
+        "comments": [
+            {
+                "user_id": "manato",
+                "created_at": "2016-02-15T02:15:43Z",
+                "comment_text": "@syohex ,\nCould you please check this PR and merge it if there is no problem?\nThank you very much for your always help. \n"
+            },
+            {
+                "user_id": "syohex",
+                "created_at": "2016-02-15T02:49:36Z",
+                "comment_text": "\u3053\u306e\u8ffd\u52a0\u3057\u305f\u90e8\u5206\u306f Autoware\u3059\u3079\u3066\u306b\u898b\u3048\u3066\u3057\u307e\u3044\u307e\u3059\u304c, \u305d\u308c\u306f\u6b63\u3057\u3044\u306e\u3067\u3057\u3087\u3046\u304b ? \u73fe\u72b6 `lib/fusion`\u4ee5\u4e0b\u304b\u3089\u3057\u304b\u4f7f\u3063\u3066\u3044\u307e\u305b\u3093\u304c, \u5c06\u6765\u7684\u306b\u4f7f\u3046\u4e88\u5b9a\u306a\u3069\u3042\u308b\u306e\u3067\u3057\u3087\u3046\u304b ?\n\n\u4ee5\u4e0b\u306e\u90e8\u5206\u3092\u4fee\u6b63\u3057\u3066, \u672c\u30d8\u30c3\u30c0\u30d5\u30a1\u30a4\u30eb\u306f\u4ed6\u306e\u30d1\u30c3\u30b1\u30fc\u30b8\u306b\u898b\u305b\u306a\u3044\u3088\u3046\u306b\u3059\u308b\u5fc5\u8981\u304c\u3042\u308a\u307e\u3059.\n\nhttps://github.com/CPFL/Autoware/blob/mod_ranging/ros/src/computing/perception/detection/lib/fusion/CMakeLists.txt#L32-L35\n"
+            },
+            {
+                "user_id": "syohex",
+                "created_at": "2016-02-15T02:51:58Z",
+                "comment_text": "\u305d\u3082\u305d\u3082 class\u3092\u8ffd\u52a0\u3059\u308b\u5fc5\u8981\u306f\u3042\u308b\u306e\u3067\u3057\u3087\u3046\u304b ? \u4e2d\u8eab\u3092\u898b\u308b\u3068, `std::vector<float>`\u306b\u5bfe\u3059\u308b\u51e6\u7406\u3060\u3051\u306e\u3088\u3046\u306b\u898b\u3048\u308b\u306e\u3067\u95a2\u6570\u3067\u5341\u5206\u3067\u306f\u306a\u3044\u3067\u3057\u3087\u3046\u304b ?  (\u30e1\u30bd\u30c3\u30c9\u304b\u3089\u30e1\u30f3\u30d0\u95a2\u6570\u3092\u53c2\u7167\u3057\u3066\u3044\u308b\u7b87\u6240\u3082\u306a\u3044)\n"
+            },
+            {
+                "user_id": "manato",
+                "created_at": "2016-02-15T06:53:16Z",
+                "comment_text": "@syohex ,\n\u8a73\u7d30\u306a\u3054\u6307\u6458\uff0c\u8aa0\u306b\u3042\u308a\u304c\u3068\u3046\u3054\u3056\u3044\u307e\u3059\uff0e\n\uff08\u77e5\u3089\u306a\u304b\u3063\u305f\u3053\u3068\u3082\u591a\u304f\uff0c\u3068\u3066\u3082\u52c9\u5f37\u306b\u306a\u308a\u307e\u3059\uff01\uff09\n\n\u3054\u6307\u6458\u3044\u305f\u3060\u3044\u305f\u7b87\u6240\u306b\u95a2\u3057\u3066\uff0c\u4fee\u6b63\u3057\u307e\u3057\u305f\u306e\u3067\uff0c\u304a\u624b\u6570\u3067\u3059\u304c\uff0c\u518d\u5ea6\u30ec\u30d3\u30e5\u30fc\u3092\n\u304a\u9858\u3044\u3067\u304d\u307e\u3059\u3067\u3057\u3087\u3046\u304b\uff1f\n"
+            },
+            {
+                "user_id": "syohex",
+                "created_at": "2016-02-15T08:23:14Z",
+                "comment_text": "NOTE: \u30b3\u30df\u30c3\u30c8\u306f\u6700\u7d42\u7684\u306b squash\u3057\u3066\u6574\u7406\u3057\u3066\u304f\u3060\u3055\u3044. \u4e00\u3064\u306b\u307e\u3068\u3081\u308b\u5fc5\u8981\u306f\u306a\u3044\u3067\u3059\u304c, \u5f8c\u304b\u3089\u4ed6\u4eba\u304c\u898b\u305f\u6642\u4e0d\u8981\u306a\u30b3\u30df\u30c3\u30c8\u306f\u306a\u3044\u3088\u3046\u306b\u3057\u3066\u304f\u3060\u3055\u3044.\n"
+            },
+            {
+                "user_id": "manato",
+                "created_at": "2016-02-15T09:21:40Z",
+                "comment_text": "> - std::sort\u306f\u7834\u58ca\u7684\u5909\u66f4\u3092\u884c\u3046\u306e\u3067\u53c2\u7167\u3092\u6e21\u3059\u306e\u306f\u5371\u967a\u3067\u3059. \u305d\u3082\u305d\u3082\u53c2\u7167\u3092\u6e21\u3055\u306a\u3044\u304b, \u30b3\u30d4\u30fc\u3057\u3066\u5f15\u6570\u3092\u6e21\u3057\u305f\u65b9\u304c\u826f\u3044\u3068\u601d\u3044\u307e\u3059.\n> - \u8981\u7d20\u304c\u4e00\u3064\u306e\u5834\u5408, \u30bd\u30fc\u30c8\u3059\u308b\u5fc5\u8981\u306a\u3044\u306e\u3067, \u7a7a\u306e\u5834\u5408\u3068\u540c\u69d8\u65e9\u3005\u3068 return\u3057\u305f\u65b9\u304c\u826f\u3044\u3068\u601d\u3044\u307e\u3059.\n\n\u3054\u6307\u6458\u3044\u305f\u3060\u3044\u305f\u70b9\u306b\u95a2\u3057\u3066\uff0c\u4fee\u6b63\u81f4\u3057\u307e\u3057\u305f\uff0e\n\n> NOTE: \u30b3\u30df\u30c3\u30c8\u306f\u6700\u7d42\u7684\u306b squash\u3057\u3066\u6574\u7406\u3057\u3066\u304f\u3060\u3055\u3044. \u4e00\u3064\u306b\u307e\u3068\u3081\u308b\u5fc5\u8981\u306f\u306a\u3044\u3067\u3059\u304c, \u5f8c\u304b\u3089\u4ed6\u4eba\u304c\u898b\u305f\u6642\u4e0d\u8981\u306a\u30b3\u30df\u30c3\u30c8\u306f\u306a\u3044\u3088\u3046\u306b\u3057\u3066\u304f\u3060\u3055\u3044\n\n\u3054\u6559\u793a\uff0c\u3042\u308a\u304c\u3068\u3046\u3054\u3056\u3044\u307e\u3059\uff0e\n\u4eca\u56de\u306f\uff0c\u65e2\u306b\u4ee5\u524d\u306e\u30b3\u30df\u30c3\u30c8\u3092\u30b5\u30fc\u30d0\u306b\u3042\u3052\u3066\u3057\u307e\u3063\u3066\u3042\u308b\u306e\u3067\u884c\u3063\u3066\u3044\u307e\u305b\u3093\u304c\uff0c\u4ee5\u964dsquash\u3059\u308b\u3088\u3046\u306b\u6c17\u3092\u3064\u3051\u307e\u3059\uff0e\n\n\u304a\u624b\u6570\u3092\u304a\u304b\u3051\u3057\u307e\u3059\u304c\uff0c\u518d\u5ea6\u3054\u78ba\u8a8d\u9802\u3051\u307e\u3059\u3067\u3057\u3087\u3046\u304b\uff1f\n\u4eca\u5f8c\u3068\u3082\uff0c\u3054\u6307\u5c0e\u306e\u307b\u3069\u3069\u3046\u305e\u3088\u308d\u3057\u304f\u304a\u9858\u3044\u81f4\u3057\u307e\u3059\uff0e\n"
+            },
+            {
+                "user_id": "syohex",
+                "created_at": "2016-02-15T09:47:06Z",
+                "comment_text": "\u554f\u984c\u306a\u3044\u3068\u601d\u3044\u307e\u3059. squash\u3057\u3066\u30de\u30fc\u30b8\u3057\u3066\u3044\u305f\u3060\u3051\u3070\u3088\u3044\u3068\u601d\u3044\u307e\u3059.\n"
+            },
+            {
+                "user_id": "manato",
+                "created_at": "2016-02-15T10:21:33Z",
+                "comment_text": "\u3054\u78ba\u8a8d\u3042\u308a\u304c\u3068\u3046\u3054\u3056\u3044\u307e\u3057\u305f\uff0e\n\u65e2\u306b\u30ea\u30e2\u30fc\u30c8\u306bPush\u6e08\u307f\u306e\u30b3\u30df\u30c3\u30c8\u3092squash\u3057\u3066\uff0c\u518d\u5ea6Push\u3059\u308b\u5834\u5408\u306f\ngit push --force \u3059\u308c\u3070\u3088\u308d\u3057\u3044\u3067\u3059\u304b\uff1f\n"
+            },
+            {
+                "user_id": "syohex",
+                "created_at": "2016-02-15T10:26:00Z",
+                "comment_text": "> \u65e2\u306b\u30ea\u30e2\u30fc\u30c8\u306bPush\u6e08\u307f\u306e\u30b3\u30df\u30c3\u30c8\u3092squash\u3057\u3066\uff0c\u518d\u5ea6Push\u3059\u308b\u5834\u5408\u306f\n> git push --force \u3059\u308c\u3070\u3088\u308d\u3057\u3044\u3067\u3059\u304b\uff1f\n\n\u306f\u3044, \u304a\u9858\u3044\u3057\u307e\u3059.\n"
+            },
+            {
+                "user_id": "manato",
+                "created_at": "2016-02-15T10:31:26Z",
+                "comment_text": "\u627f\u77e5\u81f4\u3057\u307e\u3057\u305f\uff0e\n\u3054\u6559\u793a\u3042\u308a\u304c\u3068\u3046\u3054\u3056\u3044\u307e\u3057\u305f\uff0e\n"
+            }
+        ]
+    },
+    {
+        "title": "Follow ROS C++ coding style guide",
+        "user_id": "syohex",
+        "created_at": "2016-02-14T04:58:58Z",
+        "comments": [
+            {
+                "user_id": "syohex",
+                "created_at": "2016-02-14T05:19:14Z",
+                "comment_text": "\u5168\u54e1\u306b\u77ef\u6b63\u3059\u308b\u826f\u3044\u624b\u6bb5\u304c\u898b\u3064\u304b\u3089\u306a\u3044\u306e\u3067\u4e00\u65e6\u8ae6\u3081\u307e\u3059.\n"
+            }
+        ]
+    },
+    {
+        "title": "Remove garbage file",
+        "user_id": "syohex",
+        "created_at": "2016-02-14T02:25:12Z",
+        "comments": [
+            {
+                "user_id": "syohex",
+                "created_at": "2016-02-14T02:26:28Z",
+                "comment_text": "@yukkysaito Is this really a needless file ?\n"
+            },
+            {
+                "user_id": "yukkysaito",
+                "created_at": "2016-02-23T04:34:32Z",
+                "comment_text": "@syohex Yes. I made a mistake... It is a temporary file. \n"
+            }
+        ]
+    },
+    {
+        "title": "Follow ROS C++ coding style guide",
+        "user_id": "syohex",
+        "created_at": "2016-02-12T04:25:17Z",
+        "comments": [
+            {
+                "user_id": "syohex",
+                "created_at": "2016-02-14T01:55:00Z",
+                "comment_text": "There are many conflicts with #234. I'll create PR again and apply clang-format files which are added by #234.\n"
+            }
+        ]
+    },
+    {
+        "title": "Update Setup Tab.",
+        "user_id": "kitsukawa",
+        "created_at": "2016-02-11T16:28:43Z",
+        "comments": []
+    },
+    {
+        "title": "Add synchronization system for perception",
+        "user_id": "yukkysaito",
+        "created_at": "2016-02-10T18:13:32Z",
+        "comments": [
+            {
+                "user_id": "syohex",
+                "created_at": "2016-02-12T04:07:59Z",
+                "comment_text": "Please don't merge master branch except your changes conflict with master branch codes. To merge master branch make us difficult to understand what PR changes/improves like this PR.\n\n(\u540d\u53e4\u5c4b\u5927\u5b66\u306e\u65b9\u5168\u822c\u306a\u306e\u3067\u3059\u304c)\u5909\u66f4\u304c\u30b3\u30f3\u30d5\u30ea\u30af\u30c8\u3057\u306a\u3044\u9650\u308a\u306f, master\u3092\u30de\u30fc\u30b8\u3059\u308b\u5fc5\u8981\u306f\u306a\u3044\u3067\u3059. \u4e0b\u624b\u306b\u30de\u30fc\u30b8\u3059\u308b\u3068\u30b3\u30df\u30c3\u30c8\u5c65\u6b74\u304c\u3053\u306e\u3088\u3046\u306b\u30ab\u30aa\u30b9\u306b\u306a\u308b\u3060\u3051\u3067\u3059. \u3053\u3046\u306a\u308b\u3068\u672c\u8cea\u7684\u306a\u5909\u66f4\u304c\u306a\u3093\u306a\u306e\u304b\u304c\u6975\u3081\u3066\u898b\u3048\u3065\u3089\u304f\u306a\u3063\u3066\u3057\u307e\u3044\u307e\u3059.\n"
+            },
+            {
+                "user_id": "syohex",
+                "created_at": "2016-02-12T04:40:26Z",
+                "comment_text": "Please remove `*.orig` files.\n\n*.orig\u30d5\u30a1\u30a4\u30eb\u304c\u542b\u307e\u308c\u3066\u3044\u307e\u3059. \u524a\u9664\u3057\u3066\u304f\u3060\u3055\u3044.\n"
+            },
+            {
+                "user_id": "yukkysaito",
+                "created_at": "2016-02-12T06:47:28Z",
+                "comment_text": "Thank you for your advice. I'm careful not to do it.\n"
+            },
+            {
+                "user_id": "yukkysaito",
+                "created_at": "2016-02-12T06:47:58Z",
+                "comment_text": "*.orig files are removed at f8c4fda\n"
+            },
+            {
+                "user_id": "syohex",
+                "created_at": "2016-02-12T08:52:25Z",
+                "comment_text": "\u30de\u30fc\u30b8\u306f\u81ea\u7531\u306b\u3057\u3066\u3044\u305f\u3060\u3044\u3066\u69cb\u308f\u306a\u3044\u3067\u3059.\n"
+            },
+            {
+                "user_id": "syohex",
+                "created_at": "2016-02-12T09:17:44Z",
+                "comment_text": "\u4e00\u822c\u8ad6\u3067\u3059(\u3053\u306e PR\u3060\u3051\u3092\u8a00\u53ca\u3059\u308b\u3082\u306e\u3067\u306f\u306a\u3044\u3067\u3059).\n\n#### Pull Request\u306e\u4f5c\u6210\n- \u5fc5\u8981\u6700\u5c0f\u9650\u306e\u5909\u66f4\u306b\u3059\u308b\n  - \u4f8b\u3048\u3070\u3053\u306e PR\u306f 55\u30d5\u30a1\u30a4\u30eb\u3092 52\u30b3\u30df\u30c3\u30c8\u3067\u5909\u66f4\u3057\u3066\u3044\u308b\u304c, \u305d\u3053\u307e\u3067\u5fc5\u8981\u306a\u306e\u304b. (\u672c\u8cea\u7684\u306b\u5fc5\u8981\u3067\u3042\u308c\u3070\u4f55\u306e\u554f\u984c\u3082\u306a\u3044.)\n  - (\u4e0d\u8981\u3067\u3042\u308b merge\u304c\u542b\u307e\u308c\u308b\u305f\u3081\u591a\u304f\u898b\u3048\u3066\u3057\u307e\u3063\u3066\u3044\u308b)\n  - PR\u306e\u30bf\u30a4\u30c8\u30eb\u4ee5\u5916\u306e\u3053\u3068\u3092\u3057\u3066\u3044\u306a\u3044\u304b.\n  - \u3053\u3053\u307e\u3067\u591a\u3044\u3068 cherry-pick\u3059\u308b\u3053\u3068\u3082\u96e3\u3057\u3044\n  - \u591a\u304f\u306a\u308b\u5834\u5408\u306f\u5206\u5272\u3067\u304d\u306a\u3044\u304b\u306e\u691c\u8a0e. \u7279\u306b\u8907\u6570\u306e\u3053\u3068\u3092\u5b9f\u73fe\u3057\u3066\u3044\u308b\u5834\u5408\n- \u4e0d\u8981\u306a\u30b3\u30df\u30c3\u30c8\u306e\u524a\u9664\n  - \u3042\u3068\u3067\u7b2c\u4e09\u8005\u304c `git log`\u3092\u3057\u305f\u5834\u5408\u306b\u6709\u7528\u306a\u3082\u306e\u306e\u307f\u6b8b\u3059\n  - \u81ea\u5206\u306e\u30b3\u30df\u30c3\u30c8\u306e\u8aa4\u308a\u3092\u4fee\u6b63\u3059\u308b\u30b3\u30df\u30c3\u30c8\u306f\u5c65\u6b74\u306b\u4e0d\u8981(rebase\u3067\u8aa4\u308a\u81ea\u4f53\u3092\u306a\u304b\u3063\u305f\u3053\u3068\u306b\u3059\u308b)\n  - \u8aa4\u3063\u3066\u30d5\u30a1\u30a4\u30eb\u3092\u8ffd\u52a0\u3057\u305f\u5834\u5408\u306f, \u8aa4\u3063\u3066\u30d5\u30a1\u30a4\u30eb\u3092\u8ffd\u52a0\u3057\u3066\u3057\u307e\u3063\u305f\u3053\u3068\u81ea\u4f53\u3092\u6d88\u3059\n  - \u81ea\u5206\u304c\u540c\u4e00 PR\u5185\u3067\u8ffd\u52a0\u3057\u305f\u30d0\u30b0\u3092\u4fee\u6b63\u3059\u308b\u30d0\u30b0\u7b49\u3082\u540c\u69d8.\n"
+            },
+            {
+                "user_id": "yukkysaito",
+                "created_at": "2016-02-12T12:19:28Z",
+                "comment_text": "@syohex \u30a2\u30c9\u30d0\u30a4\u30b9\u3042\u308a\u304c\u3068\u3046\u3054\u3056\u3044\u307e\u3059\u3002\u4eca\u5f8c\u306e\u30b3\u30df\u30c3\u30c8\u5c65\u6b74\u306e\u4e8b\u3082\u8003\u3048\u3001\u51fa\u6765\u308b\u9650\u308a\u6700\u5c0f\u9650\u306e\u5909\u66f4\u3067\u306e\u30b3\u30df\u30c3\u30c8\u306b\u3059\u308b\u3088\u3046\u306b\u6ce8\u610f\u3044\u305f\u3057\u307e\u3059\u3002\n"
+            }
+        ]
+    },
+    {
+        "title": "Add sleep command to decrease CPU occupancy",
+        "user_id": "manato",
+        "created_at": "2016-02-09T06:24:45Z",
+        "comments": []
+    },
+    {
+        "title": "Allow dialog fields to be tagged with [nl]",
+        "user_id": "KenYN",
+        "created_at": "2016-02-05T05:01:57Z",
+        "comments": [
+            {
+                "user_id": "kuriking",
+                "created_at": "2016-12-20T02:33:52Z",
+                "comment_text": "Thank you for making PR.\r\nBut I think we should specify nl in flags of gui.\r\nSo I will close."
+            }
+        ]
+    },
+    {
+        "title": "Fix pure pursuit",
+        "user_id": "h-ohta",
+        "created_at": "2016-02-03T11:38:58Z",
+        "comments": []
+    },
+    {
+        "title": "Update lane_stop",
+        "user_id": "syouji",
+        "created_at": "2016-02-02T07:13:44Z",
+        "comments": []
+    },
+    {
+        "title": "Correct points2image dependency",
+        "user_id": "syohex",
+        "created_at": "2016-02-02T04:13:34Z",
+        "comments": [
+            {
+                "user_id": "badguy07",
+                "created_at": "2023-09-12T08:54:10Z",
+                "comment_text": "usb_cam called a 500W pixel camera with a USB interface, tensorrt_yolo subscribe to the topic of usb_cam, the node crashes directly, and the reason for the program crash cannot be found\r\n![\u5fae\u4fe1\u56fe\u7247_20230912165343](https://github.com/autowarefoundation/autoware/assets/121431946/ace191da-ff44-4df3-be64-844698364d1d)\r\n"
+            }
+        ]
+    },
+    {
+        "title": "Correct map_file dependency about message header",
+        "user_id": "syohex",
+        "created_at": "2016-02-01T09:46:11Z",
+        "comments": []
+    },
+    {
+        "title": "Output error code",
+        "user_id": "syouji",
+        "created_at": "2016-02-01T07:18:15Z",
+        "comments": []
+    },
+    {
+        "title": "Correct waypoint_follower dependnecy about message header",
+        "user_id": "syohex",
+        "created_at": "2016-02-01T04:21:34Z",
+        "comments": []
+    },
+    {
+        "title": "Correct calibration_camera_lidar dependnecy about message header",
+        "user_id": "syohex",
+        "created_at": "2016-02-01T03:43:30Z",
+        "comments": []
+    },
+    {
+        "title": "Correct vehicle_socket dependnecy about message header",
+        "user_id": "syohex",
+        "created_at": "2016-02-01T02:32:24Z",
+        "comments": []
+    },
+    {
+        "title": "Improve ndt_mapping.",
+        "user_id": "kitsukawa",
+        "created_at": "2016-01-30T17:51:19Z",
+        "comments": []
+    },
+    {
+        "title": "Correct runtime_manager dependencies",
+        "user_id": "syohex",
+        "created_at": "2016-01-29T11:41:25Z",
+        "comments": []
+    },
+    {
+        "title": "Refactoring build process",
+        "user_id": "syohex",
+        "created_at": "2016-01-29T08:27:09Z",
+        "comments": []
+    },
+    {
+        "title": "Runtime Manager, modify window title",
+        "user_id": "kondoh2",
+        "created_at": "2016-01-28T09:06:20Z",
+        "comments": []
+    },
+    {
+        "title": "Correct dependency name",
+        "user_id": "syohex",
+        "created_at": "2016-01-26T08:59:44Z",
+        "comments": []
+    },
+    {
+        "title": "Send shutdown signal to process manager on exit",
+        "user_id": "syohex",
+        "created_at": "2016-01-26T05:07:34Z",
+        "comments": []
+    },
+    {
+        "title": "Return error value at unknown operation key receieved",
+        "user_id": "syohex",
+        "created_at": "2016-01-26T04:13:08Z",
+        "comments": []
+    },
+    {
+        "title": "Add linear interpolate mode Switch",
+        "user_id": "h-ohta",
+        "created_at": "2016-01-22T12:46:05Z",
+        "comments": []
+    },
+    {
+        "title": "Runtime Manager, fix func overwrite at dialog close",
+        "user_id": "kondoh2",
+        "created_at": "2016-01-22T08:17:29Z",
+        "comments": []
+    },
+    {
+        "title": "Runtime Manager Computing tab, fix obj_reproj, obj_fusion launch",
+        "user_id": "kondoh2",
+        "created_at": "2016-01-22T06:55:00Z",
+        "comments": []
+    },
+    {
+        "title": "Fix dependency",
+        "user_id": "syohex",
+        "created_at": "2016-01-21T14:06:21Z",
+        "comments": []
+    },
+    {
+        "title": "Fixed newer CMake issue",
+        "user_id": "syohex",
+        "created_at": "2016-01-20T11:47:45Z",
+        "comments": []
+    },
+    {
+        "title": "update default.rviz",
+        "user_id": "h-ohta",
+        "created_at": "2016-01-19T09:24:05Z",
+        "comments": []
+    },
+    {
+        "title": "Bug fix about 'calcTwist'",
+        "user_id": "h-ohta",
+        "created_at": "2016-01-19T09:18:08Z",
+        "comments": []
+    },
+    {
+        "title": "Add direction parameter",
+        "user_id": "syouji",
+        "created_at": "2016-01-19T06:38:34Z",
+        "comments": []
+    },
+    {
+        "title": "Fix requirement",
+        "user_id": "manato",
+        "created_at": "2016-01-19T05:48:35Z",
+        "comments": []
+    },
+    {
+        "title": "Improve accuracy of obj_reproj",
+        "user_id": "manato",
+        "created_at": "2016-01-19T05:35:57Z",
+        "comments": [
+            {
+                "user_id": "manato",
+                "created_at": "2016-01-19T05:37:41Z",
+                "comment_text": "Please let me know if there is a problem by this PR merge.\n"
+            }
+        ]
+    },
+    {
+        "title": "Fix ranging",
+        "user_id": "manato",
+        "created_at": "2016-01-18T17:27:20Z",
+        "comments": [
+            {
+                "user_id": "manato",
+                "created_at": "2016-01-18T17:28:52Z",
+                "comment_text": "@syohex ,\nCould you please review this PR and merge it to master if there seems to be no problem?\nThank you very much for your always help.\n"
+            },
+            {
+                "user_id": "manato",
+                "created_at": "2016-01-19T03:44:22Z",
+                "comment_text": "@syohex \nThank you very much for pointing out and kind explanation.\nI modified the places you pointed out.\nCould you please check again?\n"
+            }
+        ]
+    },
+    {
+        "title": "Fix pos_uploader's msec bug.",
+        "user_id": "kuriking",
+        "created_at": "2016-01-17T12:13:14Z",
+        "comments": [
+            {
+                "user_id": "shinpei0208",
+                "created_at": "2016-01-17T12:19:47Z",
+                "comment_text": "\u3042\u308a\u304c\u3068\u3046\u3054\u3056\u3044\u307e\u3059\u3002ML\u306b\u3082\u6d41\u3057\u3066\u304f\u3060\u3055\u3044\u30fc\n2016/01/17 21:13 \"USUDA Hisashi\" notifications@github.com:\n\n> Merged #204 https://github.com/CPFL/Autoware/pull/204.\n> \n> \u2014\n> Reply to this email directly or view it on GitHub\n> https://github.com/CPFL/Autoware/pull/204#event-517229798.\n"
+            }
+        ]
+    },
+    {
+        "title": "Eigen3 with Fallback on ros-catkin-modules",
+        "user_id": "jitrc",
+        "created_at": "2016-01-16T14:12:35Z",
+        "comments": [
+            {
+                "user_id": "syohex",
+                "created_at": "2016-01-20T09:41:54Z",
+                "comment_text": "Why did you think that fallback is necessary ?\n\nWe can install eigen3 packages via `apt-get install`. And `ros-indigo-desktop-full` package contains eigen3 packages.\n"
+            },
+            {
+                "user_id": "jitrc",
+                "created_at": "2016-01-20T10:03:21Z",
+                "comment_text": "With newer version of CMake it cannot find Eigen3 even when it is\ninstalled. I faced it and found this to the best workaround from ROS and\nPCL issue log. I think the fallback(only if invoked when primary method\nfails to find Eigen3) has dependency on ros-indigo-camke-modules\nOn Jan 20, 2016 3:11 PM, \"Syohei YOSHIDA\" notifications@github.com wrote:\n\n> Why did you think that fallback is necessary ?\n> \n> We can install eigen3 packages via apt-get install. And\n> ros-indigo-desktop-full package contains eigen3 packages.\n> \n> \u2014\n> Reply to this email directly or view it on GitHub\n> https://github.com/CPFL/Autoware/pull/203#issuecomment-173146339.\n"
+            },
+            {
+                "user_id": "syohex",
+                "created_at": "2016-01-20T10:12:25Z",
+                "comment_text": "Which CMake version did you use ?\n"
+            },
+            {
+                "user_id": "jitrc",
+                "created_at": "2016-01-20T10:18:46Z",
+                "comment_text": "I think 3.2, sorry on mobile now can't check. But you can see in CMake\ngithub repository, modules folder, FindEigen is missing.\nhttps://github.com/Kitware/CMake/tree/master/Modules\nOn Jan 20, 2016 3:42 PM, \"Syohei YOSHIDA\" notifications@github.com wrote:\n\n> Which CMake version did you use ?\n> \n> \u2014\n> Reply to this email directly or view it on GitHub\n> https://github.com/CPFL/Autoware/pull/203#issuecomment-173156943.\n"
+            },
+            {
+                "user_id": "syohex",
+                "created_at": "2016-01-20T10:20:07Z",
+                "comment_text": "Thanks for information. I'll test.\n"
+            },
+            {
+                "user_id": "jitrc",
+                "created_at": "2016-01-20T10:22:21Z",
+                "comment_text": "Also I did aime major restructuring by seperating packages and msgs as\nthere are cyclic dependencies and causing problem with modern catkin tools.\nDidn't generate pull request though, I would if I fail to find any other\nbetter way, for now using legacy catkin_make for testing.\nOn Jan 20, 2016 3:48 PM, \"Jit Ray Chowdhury\" jit.ray.c@gmail.com wrote:\n\n> I think 3.2, sorry on mobile now can't check. But you can see in CMake\n> github repository, modules folder, FindEigen is missing.\n> https://github.com/Kitware/CMake/tree/master/Modules\n> On Jan 20, 2016 3:42 PM, \"Syohei YOSHIDA\" notifications@github.com\n> wrote:\n> \n> > Which CMake version did you use ?\n> > \n> > \u2014\n> > Reply to this email directly or view it on GitHub\n> > https://github.com/CPFL/Autoware/pull/203#issuecomment-173156943.\n"
+            },
+            {
+                "user_id": "syohex",
+                "created_at": "2016-01-20T11:22:46Z",
+                "comment_text": "I confirmed this issue is reproducible with CMake3.2.\n\n> Also I did aime major restructuring by seperating packages and msgs as there are cyclic dependencies and causing problem with modern catkin tools. Didn't generate pull request though, I would if I fail to find any other better way, for now using legacy catkin_make for testing.\n\nAh, we should fix cyclic dependencies.\n"
+            },
+            {
+                "user_id": "syohex",
+                "created_at": "2016-01-20T11:53:55Z",
+                "comment_text": "Thanks for PR. I cherry-picked your commits and merged at #211. :+1:\n"
+            }
+        ]
+    },
+    {
+        "title": "Publish obj label by marker",
+        "user_id": "manato",
+        "created_at": "2016-01-15T16:27:48Z",
+        "comments": []
+    },
+    {
+        "title": "Fix motion planner",
+        "user_id": "h-ohta",
+        "created_at": "2016-01-15T06:09:29Z",
+        "comments": []
+    },
+    {
+        "title": "Query password by gksu",
+        "user_id": "syohex",
+        "created_at": "2016-01-14T10:43:44Z",
+        "comments": [
+            {
+                "user_id": "syohex",
+                "created_at": "2016-01-14T11:26:22Z",
+                "comment_text": "Autoware users must install `gksu` package for using this feature.\n\n``` bash\n% sudo apt-get install gksu\n```\n"
+            },
+            {
+                "user_id": "kuriking",
+                "created_at": "2016-01-14T11:30:44Z",
+                "comment_text": "GNOME\u7aef\u672b\u7d4c\u7531\u3067\u5b9f\u884c\u3059\u308b\u3001\u3068\u3044\u3046\u65b9\u6cd5\u306a\u3089gksu\u30d1\u30c3\u30b1\u30fc\u30b8\u306f\u4e0d\u8981\u3067\u3059\u304c\u3001\ngksu\u306e\u65b9\u304c\u304d\u308c\u3044\u3060\u3068\u601d\u3044\u307e\u3059\u3002\n"
+            },
+            {
+                "user_id": "syohex",
+                "created_at": "2016-01-14T11:33:07Z",
+                "comment_text": "#### Demo\n\n![run-script](https://cloud.githubusercontent.com/assets/554281/12323364/f3698618-bafd-11e5-8f18-28f2abbaf3ee.gif)\n"
+            },
+            {
+                "user_id": "kuriking",
+                "created_at": "2016-01-14T11:43:15Z",
+                "comment_text": "Runtime Manager\u3068roscore\u3092\u7d42\u4e86\u3057\u3066\u3082\u3001proc_manager\u304c\u6b8b\u3063\u3066\u3044\u308b\u3088\u3046\u306b\u307f\u3048\u307e\u3059\u3002\n\u52d8\u9055\u3044\u3060\u3063\u305f\u3089\u3059\u307f\u307e\u305b\u3093\u3002\n"
+            },
+            {
+                "user_id": "syohex",
+                "created_at": "2016-01-14T11:50:56Z",
+                "comment_text": "> Runtime Manager\u3068roscore\u3092\u7d42\u4e86\u3057\u3066\u3082\u3001proc_manager\u304c\u6b8b\u3063\u3066\u3044\u308b\u3088\u3046\u306b\u307f\u3048\u307e\u3059\u3002\n> \u52d8\u9055\u3044\u3060\u3063\u305f\u3089\u3059\u307f\u307e\u305b\u3093\u3002\n\n\u73fe\u5728\u5bfe\u5fdc\u3092\u691c\u8a0e\u4e2d\u3067\u3059. \u3068\u308a\u3042\u3048\u305a\u8d77\u52d5\u6642\u306b\u540c\u540d\u30d7\u30ed\u30bb\u30b9\u306f\u5168\u90e8 kill\u3059\u308b\u3088\u3046\u306b\u306f\u3057\u3066\u3044\u307e\u3059.\n`run`\u3068\u540c\u30c7\u30a3\u30ec\u30af\u30c8\u30ea\u306b\u3042\u308b `cleanup`\u30b9\u30af\u30ea\u30d7\u30c8\u3067\u3082\u540c\u69d8\u306e\u3053\u3068\u304c\u3067\u304d\u307e\u3059.\n(runtime manager\u306e\u7d42\u4e86\u6642\u306b kill\u3055\u305b\u3088\u3046\u306b\u3082 root\u3068\u3057\u3066\u52d5\u3044\u3066\u3044\u308b\u306e\u3067, \u305d\u3053\u3067\u307e\u305f\u30d1\u30b9\u30ef\u30fc\u30c9\u5165\u529b\u304c\u5fc5\u8981\u306b\u306a\u308b\u306a\u3069\u5358\u7d14\u306b\u306f\u3044\u304b\u306a\u3044\u3068\u3053\u308d\u304c\u3042\u308a\u307e\u3059. \u3044\u3044\u65b9\u6cd5\u304c\u306a\u3044\u304b\u691c\u8a0e\u3057\u307e\u3059.)\n"
+            },
+            {
+                "user_id": "syohex",
+                "created_at": "2016-01-15T03:20:42Z",
+                "comment_text": "Please report me if you have any problems about this change.\n"
+            }
+        ]
+    },
+    {
+        "title": "Runtime Manager, increased frame height for Map tab viewing",
+        "user_id": "kondoh2",
+        "created_at": "2016-01-14T09:12:04Z",
+        "comments": []
+    },
+    {
+        "title": "Query password by zenity",
+        "user_id": "syohex",
+        "created_at": "2016-01-14T08:13:41Z",
+        "comments": [
+            {
+                "user_id": "syohex",
+                "created_at": "2016-01-14T08:28:32Z",
+                "comment_text": "This is very dangerous. Because other people who logs in same machine can steal other user login password by watching process which sends password to `sudo` process.\n"
+            }
+        ]
+    },
+    {
+        "title": "Runtime Manager, from Rviz to RViz",
+        "user_id": "kondoh2",
+        "created_at": "2016-01-14T05:24:53Z",
+        "comments": []
+    },
+    {
+        "title": "Runtime Manager Simulation tab, delete Clock, Sim Time checkbox",
+        "user_id": "kondoh2",
+        "created_at": "2016-01-14T04:25:18Z",
+        "comments": []
+    },
+    {
+        "title": "Fix typo",
+        "user_id": "manato",
+        "created_at": "2016-01-09T05:20:55Z",
+        "comments": []
+    },
+    {
+        "title": "Enabling bayer",
+        "user_id": "manato",
+        "created_at": "2016-01-06T15:14:11Z",
+        "comments": [
+            {
+                "user_id": "manato",
+                "created_at": "2016-01-06T15:18:45Z",
+                "comment_text": "@syohex ,\nCould you please check and merge this PR if there seems to be no problem?\nThank you very much for always helping us.\n"
+            },
+            {
+                "user_id": "manato",
+                "created_at": "2016-01-07T02:26:37Z",
+                "comment_text": "Thank you for merging!\n"
+            }
+        ]
+    },
+    {
+        "title": "Update AutowareRoute",
+        "user_id": "syouji",
+        "created_at": "2016-01-06T10:12:54Z",
+        "comments": []
+    }
+]
