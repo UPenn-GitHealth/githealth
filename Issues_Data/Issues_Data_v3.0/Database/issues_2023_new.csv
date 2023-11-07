@@ -24,7 +24,7 @@ so that users can check the files easily by running `sha256sum -c SHA256SUMS`, w
 docs(ansible): add readme with manual artifacts downloading explanation,2023-09-22T14:57:36Z,15,3,questioned,"@esteve before I had started I also had this Idea because I wasn't sure. But I come to a conclusion that it will work for the first time and if user will update models manually one by one and will keep engines in the folders and run chechsum it can be confusing. After initial run of autoware user will have some additional files like trt engines. 
 Here is the example for lidar_centerpoint.
 ![image](https://github.com/autowarefoundation/autoware/assets/37497658/25cd89ed-8b8d-47f4-8c39-bc734cb11fa9)
-
+f
 Do you think it will be better to push user to update all artifacts simultaneously? If so we will need to add a new playbook to ansible and modify setup-dev-env.sh or provide separate script for updating. 
 
 ",509841.0,7797.0
