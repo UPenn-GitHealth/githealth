@@ -42,7 +42,7 @@ average_response_times_by_month = all_data.groupby('Month')['Time_to_First_Respo
 # Plot the data
 plt.figure(figsize=(15, 5))
 plt.plot(average_response_times_by_month['Month'].astype(str), average_response_times_by_month['Time_to_First_Response'], marker='o')
-plt.title('Average GitHub Time to First Response By Month')
+plt.title('Average Time to First Response By Month')
 plt.xlabel('Month')
 plt.ylabel('Average Time to First Response (in minutes)')
 plt.xticks(rotation=45)  # Rotate the x-axis labels for better readability
