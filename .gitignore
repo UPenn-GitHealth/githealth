@@ -1,3 +1,10 @@
 githealth_venv/
 *.pyc
 **/.DS_Store
+code.zip
+**/.terraform/*
+.envrc
+layer/
+**/layer.zip
+*.tfstate
+*.tfstate.*
