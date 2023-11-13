@@ -1,0 +1,3 @@
+API_URL,HTML_URL,Repository,Start_time,End_time,PR_Status,Initiator,Assignees,Commenters,Labels,Reviewers
+https://api.github.com/repos/autowarefoundation/autoware_msgs/issues/74,https://github.com/autowarefoundation/autoware_msgs/pull/74,autoware_msgs,2023-11-13 06:10:20+00:00,,open,beginningfan,[],[],[],[]
+https://api.github.com/repos/autowarefoundation/autoware_msgs/issues/73,https://github.com/autowarefoundation/autoware_msgs/pull/73,autoware_msgs,2023-09-05 00:47:27+00:00,,open,dependabot[bot],[],"['dependabot[bot]', 'stale[bot]']","['stale', 'bot']",[]

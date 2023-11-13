@@ -1,0 +1,1102 @@
+issues_title,issues_created_at,issues_thread_id,issues_comment_id,issues_comment_type,issues_comment_text,issues_comment_author,issues_time_to_close,issues_time_to_first_response,issues_no_of_comments,issues_commits,issues_checks,issues_files_changed,issues_lines_changed
+Fix camera_ids.,2017-01-13T16:38:54Z,197484538,272483680,answered,@kuriking Thank you for fix. I checked this commit.,yukkysaito,1762419.0,1693209.0,1,1,0,1,2
+Hotfix/javad navsat driver,2016-12-22T04:25:03Z,197092019,,,,h-ohta,,,0,2,0,1,2
+Defaults for unset CUDA_CAPABILITY_VERSION,2016-12-18T05:50:24Z,196259388,267804927,questioned,"@tushar-dadlani 
+Thank you for making PR(#536).
+As simple fixing is needed for your modification, I decided to merge your suggestion by this PR(#549) which is added fixing.
+Thank you very much again for pointing out the problem!",manato,503.0,495.0,1,1,0,1,2
+Fixed a bug. It caused by reference to out of image size,2016-12-16T11:45:31Z,196041684,,,,yukkysaito,,,0,2,0,1,4
+Fixed a bug. It caused by reference to out of image size,2016-12-16T11:07:46Z,196035054,,,,yukkysaito,,,0,1,0,1,1
+ndt_matching using local_transform,2019-03-15T06:35:49Z,195517937,473175161,answered,"HI,I wonder what the mean of local_transform is.Could you please simply explain it?
+Thx in advance.",HongweiSunny,7.0,70913394.0,2,2,0,2,271
+ndt_matching using local_transform,2019-03-18T00:15:15Z,195517937,473730462,answered,"Thanks for using Autoware and for your question. However the issue tracker is for posting confirmed bugs and feature requests.
+
+We ask that you please ask questions on the [Autoware Discourse category](https://discourse.ros.org/c/autoware) following our support guidelines: https://github.com/CPFL/Autoware/wiki/Support-guidelines. Please pay particular attention to the information we ask you to provide.",gbiggs,7.0,70913394.0,2,2,0,2,271
+Add an instruction video of astar_navi,2016-12-14T07:44:11Z,195461644,,,,TomohitoAndo,,,0,1,0,1,3
+Add dialog,2016-12-13T10:09:45Z,195210924,,,,TomohitoAndo,,,0,2,0,3,26
+Update default.rviz,2016-12-13T09:12:11Z,195198252,,,,TomohitoAndo,,,0,1,0,1,76
+Fix .gitignore in each packages,2016-12-09T11:01:10Z,194568667,265988331,questioned,@amc-nu @sujiwo Could you check this PR? Thank you.,h-ohta,101725.0,41.0,4,1,0,2,7
+Fix .gitignore in each packages,2016-12-10T14:56:34Z,194568667,266214202,questioned,"@amc-nu Thanks!
+@sujiwo How about you?",h-ohta,101725.0,41.0,4,1,0,2,7
+Fix .gitignore in each packages,2016-12-10T15:02:42Z,194568667,266214529,answered,I think they are fine.,sujiwo,101725.0,41.0,4,1,0,2,7
+Fix .gitignore in each packages,2016-12-10T15:15:51Z,194568667,266215206,questioned,@sujiwo  Thank you. I'll merge,h-ohta,101725.0,41.0,4,1,0,2,7
+"Fix dependency in ""fusion"" and ""integrated_viewer"" package",2016-12-08T15:36:31Z,194366857,265770085,questioned,@manato Could you check this PR? thank you.,h-ohta,168608.0,17.0,4,1,0,2,8
+"Fix dependency in ""fusion"" and ""integrated_viewer"" package",2016-12-10T14:26:16Z,194366857,266212341,answered,"@h-ohta 
+Thank you for fixing!
+Sorry for my carelessness...",manato,168608.0,17.0,4,1,0,2,8
+"Fix dependency in ""fusion"" and ""integrated_viewer"" package",2016-12-10T14:28:41Z,194366857,266212503,answered,"@h-ohta 
+I merged `fix-dependency` branch into master.
+Please delete the branch if it is no need anymore.",manato,168608.0,17.0,4,1,0,2,8
+"Fix dependency in ""fusion"" and ""integrated_viewer"" package",2016-12-10T14:57:15Z,194366857,266214249,questioned,@manato Thank you for your cooperation!,h-ohta,168608.0,17.0,4,1,0,2,8
+Fix cmake error in orb_localizer,2016-12-08T07:13:29Z,194263550,265669817,questioned,@sujiwo Could you check this PR?,h-ohta,1637.0,20.0,1,1,0,2,55
+Update gitignore,2016-12-06T21:16:45Z,193887173,,,,h-ohta,,,0,2,0,1,16
+Fix interchanged links,2016-12-07T17:58:33Z,193382201,265521647,answered,"Thank you!
+",yukkysaito,241843.0,241833.0,1,1,0,1,4
+Defaults for unset CUDA_CAPABILITY_VERSION,2016-12-04T21:25:54Z,193376978,,,,tushar-dadlani,,,0,1,0,1,8
+Add Calibration sample data to README.md.,2016-12-04T20:56:25Z,193375073,,,,kuriking,,,0,1,0,1,4
+Add Calibration Toolkit video to README.md.,2016-12-04T11:11:33Z,193345163,,,,kuriking,,,0,1,0,1,3
+Support docker,2016-11-29T14:08:32Z,192291094,,,,messi49,,,0,5,0,4,143
+"Runtime Manager Computing tab, fix euclidean_cluster default data",2016-11-29T08:28:37Z,192217423,,,,kondoh2,,,0,1,0,1,4
+Bug fix for ROS > indigo,2016-11-29T07:22:36Z,192206463,263495728,questioned,@kitsukawa please check current fix for ORB-SLAM whether it is compilable,sujiwo,171104.0,38.0,6,28,0,141,2186
+Bug fix for ROS > indigo,2016-11-29T08:03:28Z,192206463,263502279,answered,"/home/kitsukawa/orb_slam/ros/src/computing/perception/localization/packages/orb_localizer/Thirdparty/DBoW2/DUtils/Random.cpp:11:27: fatal error: DUtils/Random.h: No such file or directory
+ #include ""DUtils/Random.h""
+                           ^
+compilation terminated.
+make[2]: *** [computing/perception/localization/packages/orb_localizer/Thirdparty/DBoW2/CMakeFiles/DBoW2.dir/DUtils/Random.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+",kitsukawa,171104.0,38.0,6,28,0,141,2186
+Bug fix for ROS > indigo,2016-11-29T09:26:50Z,192206463,263519171,questioned,"At this time, please ensure that the branch `orb_slam' is up-to-date.",sujiwo,171104.0,38.0,6,28,0,141,2186
+Bug fix for ROS > indigo,2016-11-30T06:14:54Z,192206463,263792489,answered,Same compile error occurs.,kitsukawa,171104.0,38.0,6,28,0,141,2186
+Bug fix for ROS > indigo,2016-11-30T07:37:01Z,192206463,263803970,questioned,"I'm using these commands to perform merge, and no errors were encountered:
+
+1) Clone fresh repository:
+cd /tmp
+git clone https://github.com/CPFL/Autoware.git
+cd Autoware
+
+2) Checkout branch orb_slam and back to master:
+git checkout orb_slam
+git checkout master
+
+3) Merge:
+git merge orb_slam
+
+4) Compile:
+cd ros
+./catkin_make_release
+
+Are these sequences correct? Please advise.",sujiwo,171104.0,38.0,6,28,0,141,2186
+Bug fix for ROS > indigo,2016-11-30T14:14:57Z,192206463,263883316,answered,I followed the same commands but I met the same error. Are there any missing packages?,kitsukawa,171104.0,38.0,6,28,0,141,2186
+Update AUTHORS,2016-11-26T03:57:35Z,191785247,,,,pdsljp,,,0,1,0,1,2
+send transform in global coordinates,2016-11-25T20:00:08Z,191759685,,,,kitsukawa,,,0,1,0,5,552
+Rewrite astar navi,2016-11-25T11:44:41Z,191684564,,,,TomohitoAndo,,,0,3,0,12,2243
+add ndt_tku,2016-11-24T18:30:26Z,191576359,,,,kitsukawa,,,0,6,0,16,4516
+"Removing ""UpTo"" points from all the point cloud topics",2016-11-24T06:58:47Z,191446362,,,,amc-nu,,,0,1,0,1,38
+add checkbox value of lane_stop parameter to pdic,2016-11-24T03:59:37Z,191428851,,,,kondoh2,,,0,1,0,2,17
+Added param to ignore points closer than a threshold,2016-11-24T02:41:34Z,191421529,,,,amc-nu,,,0,1,0,3,27
+Update README.md,2016-11-22T11:48:12Z,190978617,,,,kuriking,,,0,1,0,1,2
+Add a video for traffic light recognition,2016-11-22T08:01:36Z,190931029,,,,TomohitoAndo,,,0,1,0,1,3
+Update README.md,2016-11-22T07:13:41Z,190924012,,,,amc-nu,,,0,1,0,1,10
+Update README.md,2016-11-21T07:07:24Z,190635585,,,,pdsljp,,,0,1,0,1,4
+README update RCNN SSD,2016-11-20T11:57:47Z,190554152,,,,amc-nu,,,0,2,0,1,7
+Make AutowareRider Android Studio compatible,2016-11-29T02:06:42Z,190193101,263455334,answered,"I tried to build and validate.
+I can build using Android Studio, but the following problems were found.
+
+- B,N,D,R,AUTO CRUISE and NORMAL CRUISE buttons did not change when I clicked them.
+- The indication of middle was bright first, but it became dark later.
+
+If you know about that please let me know.",kuriking,2772143.0,960547.0,2,8,0,82,2268
+Make AutowareRider Android Studio compatible,2016-12-20T01:19:58Z,190193101,268126575,answered,@mingrutar I'll close. Please remake pull request after confirm and fix.,h-ohta,2772143.0,960547.0,2,8,0,82,2268
+Support MKZ,2016-11-17T02:03:42Z,189912578,,,,TomohitoAndo,,,0,1,0,2,13
+Ignore close points,2016-11-16T03:56:21Z,189579024,,,,TomohitoAndo,,,0,1,0,1,4
+Mod velocity set,2016-11-15T22:51:39Z,189530439,,,,TomohitoAndo,,,0,3,0,3,119
+Create red and green lanes from waypoint_saver CSV,2016-11-15T18:26:21Z,189469179,,,,syouji,,,0,1,0,3,114
+Node Name Change for cv tracker,2016-11-15T07:43:31Z,189321264,,,,amc-nu,,,0,1,0,6,36
+Added SSD node to CV Tracker,2016-11-15T03:08:27Z,189288392,,,,amc-nu,,,0,1,0,8,642
+Add WayArea detection service,2016-11-07T07:00:20Z,187638471,,,,syouji,,,0,1,0,3,110
+Rename variables.,2016-11-04T13:36:29Z,187334848,,,,kitsukawa,,,0,1,0,9,196
+delete data_filter,2016-11-04T10:50:09Z,187303377,,,,kitsukawa,,,0,1,0,15,1148
+Rename package name.,2016-11-04T08:53:47Z,187281223,,,,kitsukawa,,,0,1,0,15,1148
+Lidar segmentation,2016-11-04T07:45:11Z,187271367,,,,amc-nu,,,0,64,0,35,3498
+Separate motion planning,2016-11-02T13:49:12Z,186805454,,,,TomohitoAndo,,,0,5,0,24,1317
+Module graph,2016-11-02T01:21:50Z,186689938,,,,h-ohta,,,0,6,0,41,454
+Add orb_localizer.,2016-11-01T08:43:19Z,186484310,,,,kitsukawa,,,0,1,0,302,69806
+"Revert ""Updated to start inside Docker container""",2016-10-31T10:13:09Z,186247367,,,,messi49,,,0,1,0,1,6
+Add get height,2016-10-30T05:23:00Z,186117824,,,,syouji,,,0,1,0,3,28
+Lidar segmentation,2016-10-29T14:56:03Z,186082646,,,,amc-nu,,,0,16,0,1,23
+Lidar segmentation,2016-10-29T12:00:27Z,186074932,,,,amc-nu,,,0,14,0,3,209
+Added output_frame param,2016-10-29T07:21:13Z,186064597,,,,amc-nu,,,0,13,0,3,215
+Lidar segmentation,2016-10-25T08:35:53Z,185052257,,,,amc-nu,,,0,11,0,8,234
+Update the check.launch for the tablet_socket ,2016-10-25T06:03:30Z,185026304,,,,wgcv,,,0,1,0,1,4
+Mod points2costmap,2016-10-24T09:49:37Z,184795357,,,,TomohitoAndo,,,0,2,0,3,18
+Lidar segmentation,2016-10-21T08:29:38Z,184427907,,,,amc-nu,,,0,5,0,6,717
+Fix to subscribe the new topic,2016-10-19T07:03:54Z,183881650,,,,TomohitoAndo,,,0,1,0,1,2
+Lidar segmentation,2016-10-14T01:28:34Z,182942889,,,,amc-nu,,,0,3,0,3,165
+Updated to start inside Docker container,2016-10-13T23:19:28Z,182899521,253667283,answered,"Great :)
+
+2016/10/14 午前5:59 ""Matt"" notifications@github.com:
+
+> The run script would error on:
+> 
+> /run: line 41: --geometry=50x10+0+0: command not found
+> ./run: line 44: --geometry=50x10+500+0: command not found
+> 
+> ## When starting from a docker container.
+> 
+> You can view, comment on, or merge this pull request online at:
+> 
+>   https://github.com/CPFL/Autoware/pull/477
+> Commit Summary
+> - Updated to start inside Docker container
+> 
+> File Changes
+> - _M_ ros/run https://github.com/CPFL/Autoware/pull/477/files#diff-0
+>   (6)
+> 
+> Patch Links:
+> - https://github.com/CPFL/Autoware/pull/477.patch
+> - https://github.com/CPFL/Autoware/pull/477.diff
+> 
+> —
+> You are receiving this because you are subscribed to this thread.
+> Reply to this email directly, view it on GitHub
+> https://github.com/CPFL/Autoware/pull/477, or mute the thread
+> https://github.com/notifications/unsubscribe-auth/AAToCz22CNQkk1eNPvOybHiifrrzlhvsks5qzputgaJpZM4KWXMN
+> .
+",shinpei0208,1271026.0,8403.0,3,2,0,1,6
+Updated to start inside Docker container,2016-10-25T23:51:15Z,182899521,256212047,answered,"@droter 
+Please fix code and push again.
+After that, I will merge this pull request.
+",messi49,1271026.0,8403.0,3,2,0,1,6
+Updated to start inside Docker container,2016-10-28T05:06:08Z,182899521,256837226,questioned,"Updated file.
+",droter,1271026.0,8403.0,3,2,0,1,6
+Added,2016-10-11T04:57:52Z,182174089,,,,amc-nu,,,0,1,0,3,64
+Add tf_local.launch,2016-10-11T04:18:21Z,182169803,,,,kitsukawa,,,0,1,0,1,6
+Lidar clustering ,2016-10-10T07:52:38Z,181954288,,,,amc-nu,,,0,26,0,5,644
+Improve visualization of circular arc,2016-10-09T07:51:31Z,181872607,,,,h-ohta,,,0,1,0,1,6
+Mod waypoint follower,2016-10-08T21:07:52Z,181848839,,,,h-ohta,,,0,6,0,6,78
+"Runtime Manager Simulation tab, add rosbag info thread",2016-10-06T11:17:45Z,181388136,,,,kondoh2,,,0,1,0,1,7
+Develop planner,2016-10-05T13:33:50Z,181155345,,,,h-ohta,,,0,7,0,13,1836
+Output filtered PCD in Binary.,2016-10-02T11:29:32Z,180507889,,,,kitsukawa,,,0,1,0,1,2
+Remove unnecessary error checks,2016-09-29T13:04:26Z,180043552,,,,syouji,,,0,1,0,3,70
+Fix vector map library,2016-09-29T10:12:43Z,180007849,,,,syouji,,,0,2,0,2,266
+Update Quick Start documents,2016-09-27T22:57:44Z,179637229,,,,kuriking,,,0,1,0,2,0
+Update Zmp Patches,2016-09-26T15:26:36Z,179260276,,,,kuriking,,,0,1,0,6,349
+Publish marker when the traffic light detection is unknown,2016-09-26T09:15:56Z,179176890,,,,TomohitoAndo,,,0,1,0,1,8
+Fix autoware path,2016-09-24T06:16:43Z,179014271,,,,kuriking,,,0,1,0,1,0
+Add function to get current data,2016-09-23T07:00:49Z,178800061,,,,syouji,,,0,1,0,1,61
+Add services of road data,2016-09-23T03:22:33Z,178775428,,,,syouji,,,0,1,0,6,121
+Fix namespace of vector_map_server services,2016-09-21T12:55:17Z,178338598,,,,syouji,,,0,1,0,2,56
+Add vector map library,2016-09-19T06:17:48Z,177710808,,,,syouji,,,0,17,0,163,12270
+"Runtime Manager Map tab, update to more simple implements",2016-09-15T09:45:59Z,177133242,,,,kondoh2,,,0,1,0,7,217
+"Runtime Manager Computing tab, add use_crosswalk_detection to velocit…",2016-09-14T09:46:13Z,176862469,,,,kondoh2,,,0,1,0,1,10
+add map_tools/pcd_arealist,2016-09-14T08:57:04Z,176851739,,,,kondoh2,,,0,1,0,2,181
+Add Memsic IMU driver.,2016-09-14T08:46:12Z,176849435,,,,kitsukawa,,,0,1,0,4,509
+Select crosswalk detection,2016-09-14T08:11:00Z,176842334,,,,TomohitoAndo,,,0,2,0,2,11
+Mod velocity set,2016-09-14T07:28:41Z,176834794,,,,TomohitoAndo,,,0,2,0,3,84
+Publish the detection result when it is different from the previous one,2016-09-14T02:37:40Z,176799871,,,,TomohitoAndo,,,0,1,0,1,2
+Support new nmea format,2016-09-12T09:57:39Z,176337131,,,,TomohitoAndo,,,0,1,0,1,20
+Switch output from screen to log,2016-09-12T05:39:23Z,176298299,,,,kitsukawa,,,0,1,0,4,8
+Fix obj_reproj as it subscribed out of date topic (current_pose),2016-09-10T09:27:45Z,176170791,,,,manato,,,0,1,0,1,126
+Fix to KF caused from synchro changes,2016-09-01T04:58:24Z,174434772,243976214,questioned,"Fixes  Bug autowarefoundation/autoware_ai#863 pointed out by @layssi
+",amc-nu,1375.0,1358.0,1,1,0,1,31
+"Runtime Manager, changed wx.Color to wx.Colour for wxPython3",2016-08-30T08:26:04Z,173958480,,,,kondoh2,,,0,1,0,1,8
+Add Quick Start Manual(EN),2016-08-29T12:08:08Z,173759626,,,,kuriking,,,0,1,0,1,0
+New Visual Localization based on ORB-SLAM,2016-08-29T07:59:23Z,173717598,,,,sujiwo,,,0,7,0,151,30347
+Update Quick Start Manual(JP),2016-08-25T23:18:30Z,173334067,,,,kuriking,,,0,1,0,1,0
+Fix ndt_mapping,2016-08-25T13:07:19Z,173198047,,,,kitsukawa,,,0,1,0,5,27
+"Runtime Manager, fix rosbag record stop",2016-08-23T03:16:18Z,172603337,,,,kondoh2,,,0,1,0,1,2
+Add Single thread sync node,2016-08-10T14:47:41Z,170435949,,,,yukkysaito,,,0,1,0,2,284
+Update launch kill to simple,2016-08-09T06:09:40Z,170089375,,,,kondoh2,,,0,10,0,1,334
+Delete no need nodes dic,2016-08-08T04:19:56Z,169840704,,,,kondoh2,,,0,4,0,1,82
+Modify region_tlr so that it publishes superimpose image as topic,2016-08-06T10:02:05Z,169739744,,,,manato,,,0,1,0,1,35
+"Runtime Manager, fix old gui theme at RViz remote",2016-08-05T08:53:44Z,169559942,,,,kondoh2,,,0,1,0,1,1
+"Runtime Manager, add kill_children flag to RViz cmd for remote termin…",2016-08-05T08:47:42Z,169558745,,,,kondoh2,,,0,1,0,1,2
+Updated fast_pcl,2016-08-04T15:08:05Z,169398058,,,,yukkysaito,,,0,1,0,1,6
+Create vehicle_info directory,2016-08-03T17:12:02Z,169184177,,,,h-ohta,,,0,1,0,1,3
+"Runtime Manager Setup tab, add Vehicle Info",2016-08-03T06:06:34Z,169055292,,,,kondoh2,,,0,1,0,6,64
+Add model data for simulation,2016-08-03T04:21:47Z,169044680,,,,h-ohta,,,0,2,0,2,16
+Set precision of log file of ndt_matching,2016-08-03T01:41:40Z,169028254,,,,kitsukawa,,,0,1,0,1,7
+Visualize current_velocity by Plotter2D,2016-08-03T00:54:15Z,169023069,,,,h-ohta,,,0,1,0,2,128
+Change message type for current velocity,2016-08-02T23:35:13Z,169013712,,,,h-ohta,,,0,5,0,6,126
+"Runtime Manager, terminate_children() changed to as option",2016-08-02T02:58:31Z,168788791,,,,kondoh2,,,0,1,0,4,27
+Ignore 0 ranges,2016-07-28T06:46:43Z,168024954,,,,TomohitoAndo,,,0,1,0,1,4
+Feature/integrate viewer,2016-07-27T15:22:00Z,167865841,235620327,answered,"Sweet!
+
+2016-07-27 23:20 GMT+09:00 Manato Hirabayashi notifications@github.com:
+
+> These are the RViz plugin to display
+> - detection result (object detection, ranging, tracking and points
+>   image)
+> - traffic light recognition and alternatives to existing viewers in
+>   Autoware.
+> 
+> ---
+> 
+> You can view, comment on, or merge this pull request online at:
+> 
+>   https://github.com/CPFL/Autoware/pull/402
+> Commit Summary
+> - Add RViz plugin to display traffic light recognition result
+> - Add RViz integrated viewer plugin to display detection result
+> 
+> File Changes
+> - _A_
+>   ros/src/computing/perception/detection/packages/integrated_viewer/CMakeLists.txt
+>   https://github.com/CPFL/Autoware/pull/402/files#diff-0 (104)
+> - _A_
+>   ros/src/computing/perception/detection/packages/integrated_viewer/lib/convert_image.h
+>   https://github.com/CPFL/Autoware/pull/402/files#diff-1 (46)
+> - _A_
+>   ros/src/computing/perception/detection/packages/integrated_viewer/node/image_viewer_plugin/autoware_logo.png
+>   https://github.com/CPFL/Autoware/pull/402/files#diff-2 (1)
+> - _A_
+>   ros/src/computing/perception/detection/packages/integrated_viewer/node/image_viewer_plugin/draw_points.cpp
+>   https://github.com/CPFL/Autoware/pull/402/files#diff-3 (67)
+> - _A_
+>   ros/src/computing/perception/detection/packages/integrated_viewer/node/image_viewer_plugin/draw_points.h
+>   https://github.com/CPFL/Autoware/pull/402/files#diff-4 (21)
+> - _A_
+>   ros/src/computing/perception/detection/packages/integrated_viewer/node/image_viewer_plugin/draw_rects.cpp
+>   https://github.com/CPFL/Autoware/pull/402/files#diff-5 (150)
+> - _A_
+>   ros/src/computing/perception/detection/packages/integrated_viewer/node/image_viewer_plugin/draw_rects.h
+>   https://github.com/CPFL/Autoware/pull/402/files#diff-6 (28)
+> - _A_
+>   ros/src/computing/perception/detection/packages/integrated_viewer/node/image_viewer_plugin/image_viewer_form.ui
+>   https://github.com/CPFL/Autoware/pull/402/files#diff-7 (142)
+> - _A_
+>   ros/src/computing/perception/detection/packages/integrated_viewer/node/image_viewer_plugin/image_viewer_plugin.cpp
+>   https://github.com/CPFL/Autoware/pull/402/files#diff-8 (265)
+> - _A_
+>   ros/src/computing/perception/detection/packages/integrated_viewer/node/image_viewer_plugin/image_viewer_plugin.h
+>   https://github.com/CPFL/Autoware/pull/402/files#diff-9 (108)
+> - _A_
+>   ros/src/computing/perception/detection/packages/integrated_viewer/node/traffic_light_plugin/form.ui
+>   https://github.com/CPFL/Autoware/pull/402/files#diff-10 (106)
+> - _A_
+>   ros/src/computing/perception/detection/packages/integrated_viewer/node/traffic_light_plugin/traffic_light_plugin.cpp
+>   https://github.com/CPFL/Autoware/pull/402/files#diff-11 (119)
+> - _A_
+>   ros/src/computing/perception/detection/packages/integrated_viewer/node/traffic_light_plugin/traffic_light_plugin.h
+>   https://github.com/CPFL/Autoware/pull/402/files#diff-12 (68)
+> - _A_
+>   ros/src/computing/perception/detection/packages/integrated_viewer/package.xml
+>   https://github.com/CPFL/Autoware/pull/402/files#diff-13 (30)
+> - _A_
+>   ros/src/computing/perception/detection/packages/integrated_viewer/rviz_plugin_description.xml
+>   https://github.com/CPFL/Autoware/pull/402/files#diff-14 (19)
+> 
+> Patch Links:
+> - https://github.com/CPFL/Autoware/pull/402.patch
+> - https://github.com/CPFL/Autoware/pull/402.diff
+> 
+> —
+> You are receiving this because you are subscribed to this thread.
+> Reply to this email directly, view it on GitHub
+> https://github.com/CPFL/Autoware/pull/402, or mute the thread
+> https://github.com/notifications/unsubscribe-auth/AAToC2vEuDFwOKNLe5pTS3K-TWqaxoTxks5qZ2kSgaJpZM4JWPWS
+> .
+",shinpei0208,832303.0,3718.0,2,4,0,16,1325
+Feature/integrate viewer,2016-08-06T05:35:23Z,167865841,238007182,questioned,"I have merged feature/integrated_viewer branch to the master.
+Please let me know if you have any trouble by this merge.
+
+@amc-nu , @h-ohta 
+Thank you very much for your cooperation!
+
+New RViz plugin is available by:
+RViz menu -> ""Panels"" -> ""Add New Panel"" -> select ""ImageViewerPlugin"" or ""TrafficLightPlugin"" in ""integrated_viewer"" section.
+",manato,832303.0,3718.0,2,4,0,16,1325
+Kill sigint,2016-07-22T05:43:31Z,166974143,,,,kondoh2,,,0,8,0,8,38
+Mod waypoint saver,2016-07-11T09:49:04Z,164798852,231689809,questioned,"I verified this node working.
+I'll merge.
+",h-ohta,75.0,70.0,1,2,0,3,159
+Accelerated obj detection,2016-07-08T10:05:35Z,164499125,,,,yukkysaito,,,0,3,0,2,59
+Template synchronization library,2016-07-08T08:07:02Z,164479393,,,,yukkysaito,,,0,6,0,11,525
+Hotfix segmentation fault in range_fusion,2016-07-07T18:24:57Z,164375745,,,,yukkysaito,,,0,1,0,1,2
+Time monitor,2016-07-07T16:17:19Z,164350013,,,,yukkysaito,,,0,2,0,2,90
+Hotfix in range_fusion,2016-07-07T14:15:18Z,164319424,,,,yukkysaito,,,0,1,0,1,8
+Add Quick Start manual,2016-07-05T20:02:11Z,163933555,,,,kuriking,,,0,1,0,1,0
+ORB SLAM Fix with History,2016-07-05T08:16:44Z,163795013,,,,amc-nu,,,0,1,0,174,39976
+Add exe_time in PointsFilterInfo.msg.,2016-07-04T08:50:35Z,163630740,,,,kitsukawa,,,0,1,0,7,173
+Fix ladybug driver,2016-07-04T07:05:51Z,163615269,,,,kuriking,,,0,1,0,1,2
+Add missing dependencies.,2016-07-04T07:02:37Z,163614884,,,,kitsukawa,,,0,1,0,1,2
+Update documents,2016-07-04T07:00:50Z,163614659,,,,kuriking,,,0,1,0,4,0
+Planner x,2016-07-29T05:30:49Z,163604536,236097979,answered,"@hatem-darweesh I confirmed your branch compiles correctly. But, can you tell us how to test its functions?
+",amc-nu,14438207.0,2160619.0,5,73,0,475,78091
+Planner x,2016-08-02T23:52:51Z,163604536,237086531,answered,"@hatem-darweesh Would you show us how to test PlannerX in Autoware?
+",h-ohta,14438207.0,2160619.0,5,73,0,475,78091
+Planner x,2016-08-03T00:13:29Z,163604536,237090403,answered,"@hatem-darweesh
+
+We should also change the name of this package and its nodes. planner_x
+does not mean anything. It should be more scientific, providing the correct
+information on what algorithms and functions are supported.
+
+2016/08/03 午前8:52 ""Hiroki Ohta"" notifications@github.com:
+
+> @hatem-darweesh https://github.com/hatem-darweesh Would you show us how
+> to test PlannerX in Autoware?
+> 
+> —
+> You are receiving this because you are subscribed to this thread.
+> Reply to this email directly, view it on GitHub
+> https://github.com/CPFL/Autoware/pull/379#issuecomment-237086531, or mute
+> the thread
+> https://github.com/notifications/unsubscribe-auth/AAToCzjkNpGupeBJ7vKjEPFvNXNRA8nAks5qb9hUgaJpZM4JEDno
+> .
+",shinpei0208,14438207.0,2160619.0,5,73,0,475,78091
+Planner x,2016-08-03T01:01:04Z,163604536,237099957,questioned,"I am working on that,  just fixing a major bug I found yesterday,
+
+About the name,  the current  implementation is : multy stage deterministic
+rule based planner.  And it will include mdp and pomdp In the future.  That
+is why I couldn't find a suitable name.
+
+On Aug 3, 2016 9:13 AM, ""Shinpei Kato"" notifications@github.com wrote:
+
+> @hatem-darweesh
+> 
+> We should also change the name of this package and its nodes. planner_x
+> does not mean anything. It should be more scientific, providing the correct
+> information on what algorithms and functions are supported.
+> 
+> 2016/08/03 午前8:52 ""Hiroki Ohta"" notifications@github.com:
+> 
+> > @hatem-darweesh https://github.com/hatem-darweesh Would you show us
+> > how
+> > to test PlannerX in Autoware?
+> > 
+> > —
+> > You are receiving this because you are subscribed to this thread.
+> > Reply to this email directly, view it on GitHub
+> > https://github.com/CPFL/Autoware/pull/379#issuecomment-237086531, or
+> > mute
+> > the thread
+> > <
+> > https://github.com/notifications/unsubscribe-auth/AAToCzjkNpGupeBJ7vKjEPFvNXNRA8nAks5qb9hUgaJpZM4JEDno
+> > 
+> > .
+> 
+> —
+> You are receiving this because you were mentioned.
+> Reply to this email directly, view it on GitHub
+> https://github.com/CPFL/Autoware/pull/379#issuecomment-237090403, or mute
+> the thread
+> https://github.com/notifications/unsubscribe-auth/ATP3Ebzz3i-vkUIToTiartF9NTP9Wt8qks5qb90tgaJpZM4JEDno
+> .
+",hatem-darweesh,14438207.0,2160619.0,5,73,0,475,78091
+Planner x,2016-08-05T10:11:11Z,163604536,237814344,answered,"It can just represent the main concept. What about dp_planner?
+
+2016/08/03 午前10:01 ""hatem-darweesh"" notifications@github.com:
+
+> I am working on that, just fixing a major bug I found yesterday,
+> 
+> About the name, the current implementation is : multy stage deterministic
+> rule based planner. And it will include mdp and pomdp In the future. That
+> is why I couldn't find a suitable name.
+> 
+> On Aug 3, 2016 9:13 AM, ""Shinpei Kato"" notifications@github.com wrote:
+> 
+> > @hatem-darweesh
+> > 
+> > We should also change the name of this package and its nodes. planner_x
+> > does not mean anything. It should be more scientific, providing the
+> > correct
+> > information on what algorithms and functions are supported.
+> > 
+> > 2016/08/03 午前8:52 ""Hiroki Ohta"" notifications@github.com:
+> > 
+> > > @hatem-darweesh https://github.com/hatem-darweesh Would you show us
+> > > how
+> > > to test PlannerX in Autoware?
+> > > 
+> > > —
+> > > You are receiving this because you are subscribed to this thread.
+> > > Reply to this email directly, view it on GitHub
+> > > https://github.com/CPFL/Autoware/pull/379#issuecomment-237086531, or
+> > > mute
+> > > the thread
+> > > <
+> > > https://github.com/notifications/unsubscribe-auth/
+> > > AAToCzjkNpGupeBJ7vKjEPFvNXNRA8nAks5qb9hUgaJpZM4JEDno
+> > > 
+> > > .
+> > 
+> > —
+> > You are receiving this because you were mentioned.
+> > Reply to this email directly, view it on GitHub
+> > https://github.com/CPFL/Autoware/pull/379#issuecomment-237090403, or
+> > mute
+> > the thread
+> > <https://github.com/notifications/unsubscribe-auth/ATP3Ebzz3i-
+> > vkUIToTiartF9NTP9Wt8qks5qb90tgaJpZM4JEDno>
+> > .
+> 
+> —
+> You are receiving this because you commented.
+> Reply to this email directly, view it on GitHub
+> https://github.com/CPFL/Autoware/pull/379#issuecomment-237099957, or mute
+> the thread
+> https://github.com/notifications/unsubscribe-auth/AAToC559A8ambM0YCLzuWVg-QPqZs5Suks5qb-hQgaJpZM4JEDno
+> .
+",shinpei0208,14438207.0,2160619.0,5,73,0,475,78091
+"Runtime Manager, fix getting proc info in ParamPanel class",2016-07-04T04:00:20Z,163599256,,,,kondoh2,,,0,1,0,1,2
+Fix cost calculation for unknown costs,2016-07-02T09:06:38Z,163509766,,,,TomohitoAndo,,,0,1,0,1,9
+Modified correct timestamp,2016-07-01T13:24:16Z,163394951,,,,yukkysaito,,,0,1,0,4,5
+"Runtime Manager, update some utility functions",2016-07-01T08:29:57Z,163345111,,,,kondoh2,,,0,1,0,1,56
+"Runtime Manager Map tab, fix toggle enable of (Point Cloud) btn",2016-07-01T08:01:47Z,163340859,,,,kondoh2,,,0,1,0,1,4
+"Runtime Manager Sensing tab, update filter cmd for Synchronization bu…",2016-07-01T06:46:04Z,163330020,,,,kondoh2,,,0,1,0,2,56
+"Runtime Manger, fix camera_id setting at sync on",2016-07-01T05:02:20Z,163319846,,,,kondoh2,,,0,1,0,1,2
+"Runtime Manager, fix camera_id selection at Synchronization ON",2016-06-30T04:44:28Z,163079893,,,,kondoh2,,,0,1,0,1,30
+"Runtime Manager Simulation tab, fix showing of rosbag pos remains on …",2016-06-29T09:50:28Z,162884588,,,,kondoh2,,,0,1,0,1,2
+"Runtime Manager Topics tab, fix for alias of bottom btns",2016-06-29T09:30:46Z,162880619,,,,kondoh2,,,0,1,0,1,6
+"Runtime Manager, fix RViz remote setting",2016-06-27T10:37:13Z,162422061,,,,kondoh2,,,0,4,0,3,76
+ndt_mapping pcd save bug fix  and added autoloading of default.rviz,2016-07-27T02:06:42Z,162217534,235460886,answered,"@kitsukawa Would you check changes for ndt_localizer in this PR?
+",h-ohta,5333367.0,2787710.0,2,4,0,6,129
+ndt_mapping pcd save bug fix  and added autoloading of default.rviz,2016-08-25T13:12:52Z,162217534,242380752,answered,"Thank you for your PR. I reflected your changes in #430 . 
+",kitsukawa,5333367.0,2787710.0,2,4,0,6,129
+"Runtime Manager, fix remote RViz setting",2016-06-23T08:08:27Z,161863647,,,,kondoh2,,,0,1,0,1,3
+Uncomment publish statement of region_tlr,2016-06-19T14:47:38Z,161076279,,,,manato,,,0,1,0,1,2
+Add missing dependencies,2016-06-16T09:38:41Z,160619270,,,,syohex,,,0,1,0,2,5
+Clear points data after detection,2016-06-16T07:05:04Z,160591835,,,,TomohitoAndo,,,0,1,0,1,2
+Fix qs map load ok,2016-06-15T08:57:24Z,160371096,,,,kondoh2,,,0,2,0,2,31
+Modified file name of log for ndt_matching/icp_matching.,2016-06-12T14:17:30Z,159829678,,,,kitsukawa,,,0,1,0,2,66
+Fix lattice,2016-06-10T11:24:37Z,159614552,,,,TomohitoAndo,,,0,4,0,1,53
+Fix email link,2016-06-08T12:29:05Z,159151478,,,,kuriking,,,0,1,0,1,2
+Update Contact of documents,2016-06-08T12:12:55Z,159148546,,,,kuriking,,,0,1,0,5,4
+Make ranges 0 when there are near objects,2016-06-08T10:37:15Z,159132237,,,,TomohitoAndo,,,0,1,0,1,2
+Modify laserscan2costmap,2016-06-08T07:32:03Z,159097563,,,,TomohitoAndo,,,0,4,0,1,74
+Add measuring align_time and getFitnessScore_time.,2016-06-08T06:25:43Z,159088376,,,,kitsukawa,,,0,1,0,3,59
+Bugs on 2.4.8/9,2016-06-06T09:10:40Z,158630373,223906269,answered,"However OpenCV version of Ubuntu package is 2.4.8. If Autoware requires OpenCV 2.4.10 or higher versions, then Autoware users have to build and install OpenCV from source code.
+",syohex,6.0,652.0,1,1,0,1,2
+Parallelized ndt_matching,2016-06-03T18:55:49Z,158430605,223663627,questioned,"@syohex @yukkysaito 
+OpenMPを用いている関数の名前をomp_***と変更し、新たに追加しました。
+ndt_matching.launchでuse_openmpをtrue/falseにすることにより、使用する関数を切り替えられるようにしました。
+何か問題ないかご確認いただけないでしょうか。
+",kitsukawa,279836.0,332.0,5,5,0,12,487
+Parallelized ndt_matching,2016-06-06T01:29:44Z,158430605,223851381,answered,"PCL 1.7.1以前がインストールされている環境ではビルドエラーになります. `fast_pcl`がビルドされないので `omp_*`メソッドが存在しないため.  `#ifdef USE_FAST_PCL`で囲う必要があると考えます.
+(Ubuntu 15.04 ROS Jade, Ubuntu 14.04 Indigo + PCL 1.7.2では問題なくビルドできることを確認しました.)
+",syohex,279836.0,332.0,5,5,0,12,487
+Parallelized ndt_matching,2016-06-06T02:33:08Z,158430605,223856806,answered,"以下でビルドは通ること(Ubuntu 14.04 pcl 1.7.1)は確認できました.
+
+``` diff
+diff --git a/ros/src/computing/perception/localization/packages/ndt_localizer/nodes/ndt_matching/ndt_matching.cpp b/ros/src/computing/perception/localization/packages/ndt_localizer/nodes/ndt_matching/ndt_matching.cpp
+index 1875701..e97531f 100644
+--- a/ros/src/computing/perception/localization/packages/ndt_localizer/nodes/ndt_matching/ndt_matching.cpp
++++ b/ros/src/computing/perception/localization/packages/ndt_localizer/nodes/ndt_matching/ndt_matching.cpp
+@@ -383,21 +383,29 @@ static void points_callback(const sensor_msgs::PointCloud2::ConstPtr& input)
+     Eigen::Matrix4f init_guess = (init_translation * init_rotation_z * init_rotation_y * init_rotation_x) * tf_btol;
+
+     pcl::PointCloud<pcl::PointXYZ>::Ptr output_cloud(new pcl::PointCloud<pcl::PointXYZ>);
++#ifdef USE_FAST_PCL
+     if(_use_openmp == true){
+        ndt.omp_align(*output_cloud, init_guess);
+     }else{
++#endif
+        ndt.align(*output_cloud, init_guess);
++#ifdef USE_FAST_PCL
+     }
++#endif
+
+     t = ndt.getFinalTransformation();  // localizer
+     t2 = t * tf_ltob;                  // base_link
+
+     iteration = ndt.getFinalNumIteration();
++#ifdef USE_FAST_PCL
+     if(_use_openmp == true){
+        fitness_score = ndt.omp_getFitnessScore();
+     }else{
++#endif
+        fitness_score = ndt.getFitnessScore();
++#ifdef USE_FAST_PCL
+     }
++#endif
+     trans_probability = ndt.getTransformationProbability();
+
+     tf::Matrix3x3 mat_l;  // localizer
+```
+",syohex,279836.0,332.0,5,5,0,12,487
+Parallelized ndt_matching,2016-06-06T06:37:30Z,158430605,223879156,questioned,"@syohex 
+ありがとうございます。ご指摘通り修正いたしました。
+",kitsukawa,279836.0,332.0,5,5,0,12,487
+Parallelized ndt_matching,2016-06-06T06:57:56Z,158430605,223881951,answered,"ビルドができるようになったことは確認できました.
+",syohex,279836.0,332.0,5,5,0,12,487
+Fix route file reading convention,2016-06-03T12:16:08Z,158354205,,,,syouji,,,0,1,0,2,2
+Add Autoware messages,2016-06-03T10:26:26Z,158337514,,,,syouji,,,0,2,0,7,188
+"Runtime Manager, Add desc",2016-06-03T06:52:34Z,158302534,,,,kondoh2,,,0,7,0,4,439
+Add a text label with a object pose,2016-06-02T12:09:42Z,158125498,,,,yukkysaito,,,0,1,0,1,29
+modify obj_fusion and obj_reproj in order to use tracking ID,2016-06-02T11:54:12Z,158122917,,,,yukkysaito,,,0,1,0,4,183
+Fix deprecated code,2016-06-02T10:06:41Z,158104388,,,,syohex,,,0,1,0,3,6
+Improve CMakeLists.txt and package.xml,2016-06-02T07:48:07Z,158075580,223219856,questioned,"By the way, Almost all Autoware programs which depend on OpenCV cannot be built on ROS kinetic, because ROS kinetic bundles OpenCV3 and forces developers to use OpenCV3 by default. Developers cannot use OpenCV2 in general. Some Autoware programs uses deprecated OpenCV functions, classes, structures, they are removed on OpenCV3. If Autoware supports ROS kinetic in the future, we should consider to rewrite some programs with OpenCV3.
+
+And some ROS packages which are used by Autoware are missed in ROS kinentic.
+- sound_play
+- nmea-msgs
+
+ROS kinentic supports both Qt4 and Qt5, so we can remove some Qt5 hacks from CMakeList.txt.
+
+See also
+- http://wiki.ros.org/kinetic/Migration
+",syohex,3818.0,1314.0,1,2,0,15,59
+Connect Autoware by topic,2016-06-01T12:24:30Z,157893681,,,,syouji,,,0,1,0,7,603
+Fixed bug(The klt trancking node publish same distance data),2016-06-01T09:33:40Z,157862794,,,,yukkysaito,,,0,1,0,1,4
+Add fast_pcl library.,2016-06-01T08:29:31Z,157846779,222926752,questioned,"@syohex 
+PCLのFilterとRegistrationモジュールの必要な部分をfast_pclとして追加しました。
+ndt_matching.cppでは、インクルードするヘッダをpcl/registration/ndt.h<-->fast_pcl/registration/ndt.hで切り替えられることは確認しました。
+PCLのソースコード自体は変更していませんが、ライブラリとして追加することに関して、何か問題ないか確認していただけないでしょうか?
+",kitsukawa,162880.0,1341.0,11,2,0,56,10995
+Add fast_pcl library.,2016-06-01T09:41:51Z,157846779,222943540,answered,"ビルドが通りません. 
+
+```
+/home/syohei/Autoware/ros/src/computing/perception/localization/lib/fast_pcl/regis
+tration/include/fast_pcl/registration/impl/correspondence_estimation.hpp:44:35: fa
+tal error: pcl/common/copy_point.h: No such file or directory
+ #include <pcl/common/copy_point.h>
+```
+
+Ubuntu 14.04の `pcl-1.7`パッケージは 1.7.1なので, copy_point.hが含まれていません. [https://github.com/PointCloudLibrary/pcl](https://github.com/PointCloudLibrary/pcl)を見たところ, 1.7.2から含まれているヘッダファイルのようですが, どのようにこの問題を回避すればよろしいでしょうか ?
+",syohex,162880.0,1341.0,11,2,0,56,10995
+Add fast_pcl library.,2016-06-01T15:07:33Z,157846779,223022906,questioned,"こちらの環境を確認してみたところ、1.7.2でした。
+ユーザーにlibpcl-1.7のバージョンを1.7.2にアップデートしてもらうという方法で回避するというのではだめでしょうか?
+",kitsukawa,162880.0,1341.0,11,2,0,56,10995
+Add fast_pcl library.,2016-06-02T01:14:52Z,157846779,223170543,answered,"その場合 Ubuntu 14.04での利用者にソースコードからのビルドを要求することになってしまうので, 良い考えとはいえないと思います. 必須の機能でなければ, 低いバージョンの libpclを利用している場合はビルドしないというのはいかがでしょうか ?
+
+(Ubuntu 15.04, Ubuntu 16.04では libpcl 1.7.2がパッケージからインストールできることを確認しました.)
+",syohex,162880.0,1341.0,11,2,0,56,10995
+Add fast_pcl library.,2016-06-02T01:51:33Z,157846779,223175134,answered,"Ubuntu 15.04 ROS jadeではビルドできることは確認できました.
+",syohex,162880.0,1341.0,11,2,0,56,10995
+Add fast_pcl library.,2016-06-02T07:52:56Z,157846779,223220737,questioned,"Ubuntu 14.04の場合、ros-indigo-desktop-fullをインストールした際に、一緒にインストールされるlibpcl-1.7のバージョンが1.7.1みたいですね。
+その場合、
+sudo add-apt-repository ppa:v-launchpad-jochen-sprickerhof-de/pcl
+sudo apt-get update
+sudo apt-get dist-upgrade
+とすれば、libpcl-1.7のバージョンを1.7.2に更新できることを確認しました。
+1番いいのは上記の方法でlibpcl-1.7のバージョンを1.7.2にしてもらうことだと思います。しかし、1.7.1の場合は、ビルドしないという方法がいいかと思いますが、そうするとndt_matchingでfast_pcl/registration/ndt.hをインクルードした場合、エラーが出ると思いますが、どのように対処したらいいのでしょうか...
+",kitsukawa,162880.0,1341.0,11,2,0,56,10995
+Add fast_pcl library.,2016-06-02T08:22:29Z,157846779,223226745,answered,"APIが同じということであれば, ビルド時にバージョンをチェックして, ifdefで切り分けるので良いと思います.(CMakeで `find_package(PCL)`すれば, `${PCL_VERSION}`でバージョンは取れます.)
+",syohex,162880.0,1341.0,11,2,0,56,10995
+Add fast_pcl library.,2016-06-02T09:47:17Z,157846779,223245482,questioned,"find_package(PCL)とし、PCLのバージョンを取得することはできたのですが、CMakeの書き方に習熟しておらず思うように動作をしないので、PCLバージョンをチェックして、1.7.2以降ならばfast_pclをコンパイル、ndt_localizerのCMakeListsでfast_pclをリンク、1.7.1ならばfast_pclのコンパイル、リンクをしないというように変更していただけないでしょうか?お手数をおかけして申し訳ありません。
+",kitsukawa,162880.0,1341.0,11,2,0,56,10995
+Add fast_pcl library.,2016-06-02T09:51:51Z,157846779,223246452,answered,"まだ変更内容がよくわかっていないので, 確認から行ってみます.
+",syohex,162880.0,1341.0,11,2,0,56,10995
+Add fast_pcl library.,2016-06-03T03:14:08Z,157846779,223480915,answered,"https://github.com/CPFL/Autoware/pull/335/commits/1c85e501ce999aa026819619540301e70974408b の修正を確認していただけないでしょうか ? 
+Ubuntu 14.04 + pcl 1.7.1と Ubuntu 15.04 + pcl 1.7.2でそれぞれビルドできることは確認しました.
+",syohex,162880.0,1341.0,11,2,0,56,10995
+Add fast_pcl library.,2016-06-03T05:17:40Z,157846779,223492788,questioned,"Ubuntu 14.04 + pcl 1.7.2 の場合でもビルドできることを確認しましたのでマージします。
+ご協力いただきましてありがとうございます。
+",kitsukawa,162880.0,1341.0,11,2,0,56,10995
+Update instruction videos,2016-05-31T13:41:18Z,157673396,222691432,answered,"Great!
+2016/05/31 22:37 ""Yuki Kitsukawa"" notifications@github.com:
+
+> Merged #333 https://github.com/CPFL/Autoware/pull/333.
+> 
+> —
+> You are receiving this because you are subscribed to this thread.
+> Reply to this email directly, view it on GitHub
+> https://github.com/CPFL/Autoware/pull/333#event-677010154, or mute the
+> thread
+> https://github.com/notifications/unsubscribe/AAToC2fZkVGRZu_WBOPW42RrgKemBsiBks5qHDl6gaJpZM4Iqibn
+> .
+",shinpei0208,7.0,268.0,3,2,0,1,6
+Update instruction videos,2016-05-31T20:13:53Z,157673396,222806069,answered,"When will the instruction manual be in English?  
+",DeniseJames,7.0,268.0,3,2,0,1,6
+Update instruction videos,2016-06-01T07:00:59Z,157673396,222909707,questioned,"@Denisetoo 
+I am sorry but I don't know about that because I am not in charge of the manuals.
+",kitsukawa,7.0,268.0,3,2,0,1,6
+"Runtime Manger, add obj_enables utils for widget enable/disable",2016-05-31T09:21:10Z,157626227,,,,kondoh2,,,0,1,0,1,46
+"Runtime Manager, refactoring config_dic search, add param sys",2016-05-31T08:16:57Z,157614397,,,,kondoh2,,,0,1,0,1,46
+"Runtime Manager, add utils for dict and list",2016-05-31T08:06:38Z,157612645,,,,kondoh2,,,0,1,0,1,32
+Remove needless compiling flags,2016-05-31T07:07:49Z,157603577,,,,syohex,,,0,1,0,10,22
+Add lazy_ndt_mapping.,2016-05-30T18:35:05Z,157543074,,,,kitsukawa,,,0,1,0,4,516
+Fix TF of ndt_mapping.,2016-05-30T15:04:16Z,157519244,,,,kitsukawa,,,0,3,0,6,803
+Add icp_stat.msg.,2016-05-30T11:44:53Z,157487033,,,,kitsukawa,,,0,1,0,4,44
+Add missing ndt_localizer dependency,2016-05-30T11:49:25Z,157166047,222475689,answered,"@syohex 
+Thank you for reporting and fixing the errors.
+I add icp_stat.msg instead of ndt_stat.msg at #325.
+",kitsukawa,2761.0,267683.0,1,1,0,2,5
+Add icp_localizer.,2016-05-27T06:05:08Z,157136199,,,,kitsukawa,,,0,3,0,8,938
+Vecta cam driver,2016-05-27T06:59:35Z,157131318,222074498,questioned,"@syohex 確認お願いします。
+",amc-nu,359807.0,6411.0,8,6,0,7,734
+Vecta cam driver,2016-05-27T09:10:45Z,157131318,222098544,answered,"BTW. Please use branch which is branched from latest master branch. Your branch is too old and it cannot build on machine which installs ros-java package(This issue is already fixed on latest master branch)
+",syohex,359807.0,6411.0,8,6,0,7,734
+Vecta cam driver,2016-05-27T10:08:52Z,157131318,222110149,questioned,"Thanks @syohex I'll attend all
+",amc-nu,359807.0,6411.0,8,6,0,7,734
+Vecta cam driver,2016-05-31T01:49:35Z,157131318,222575645,questioned,"もう一度確認下さい。 @syohex 
+",amc-nu,359807.0,6411.0,8,6,0,7,734
+Vecta cam driver,2016-05-31T02:45:03Z,157131318,222580900,questioned,"@syohex done
+",amc-nu,359807.0,6411.0,8,6,0,7,734
+Vecta cam driver,2016-05-31T03:38:33Z,157131318,222585708,answered,"BTW for Autoware developers, there are some deeply nested code in Autoware. Deeply nested code is difficult to read and understand. You can reduce nest for some patterns. Please consider reducing nest when you write deeply nested code(In general, more than 3-4 nested blocks).
+
+For example.
+
+``` c
+int ret = some_function(a, b, c);
+if (ret < 0) {
+   log(""error...."");
+} else {
+  // success case
+}
+```
+
+``` c
+int ret = some_function(a, b, c);
+if (ret < 0) {
+   log(""error...."");
+   return ret;
+}
+
+// success case
+```
+
+Other example(conditions in loop)
+
+``` c
+while (some_iterations()) {
+    int ret = some_function(a, b, c);
+    if (ret < 0) {
+       log(""error...."");
+    } else {
+      // success case
+    }
+}
+```
+
+``` c
+while (some_iterations()) {
+    int ret = some_function(a, b, c);
+    if (ret < 0) {
+       log(""error...."");
+       continue; // or break, return
+    }
+
+    // success case
+}
+```
+
+Please consider
+
+See also
+- https://en.wikibooks.org/wiki/Computer_Programming/Coding_Style/Minimize_nesting
+- Art of Readable code Section 7 Minimize Nesting(日本語版: 7.7 ネストを浅くする)
+- Code Complete Section 4
+",syohex,359807.0,6411.0,8,6,0,7,734
+Vecta cam driver,2016-05-31T07:10:47Z,157131318,222609178,questioned,"いかがですか？ @syohex 
+",amc-nu,359807.0,6411.0,8,6,0,7,734
+Vecta cam driver,2016-05-31T09:04:58Z,157131318,222632288,answered,"It looks there is no big problem.
+",syohex,359807.0,6411.0,8,6,0,7,734
+"Runtime Manager Map tab, add 1GB check for .pcd files",2016-05-26T09:50:46Z,156945985,,,,kondoh2,,,0,1,0,1,20
+"Runtime Manager Computing tab, fix typo points2costmap",2016-05-23T02:37:50Z,156189970,,,,kondoh2,,,0,1,0,1,8
+Remove unnecessary parameters from config window of ndt_matching.,2016-05-20T11:30:42Z,155943122,,,,kitsukawa,,,0,1,0,4,292
+"Runtime Manager Computing tab, add Semantics package",2016-05-20T10:42:52Z,155935741,,,,kondoh2,,,0,1,0,1,96
+Show UVC camera ID,2016-05-20T08:47:13Z,155914545,,,,syouji,,,0,1,0,2,6
+Fix points_filter dependencies.,2016-05-20T05:08:54Z,155886325,220518439,answered,"I have confirmed that build successes.
+",syohex,1205.0,1223.0,1,1,0,2,5
+Add frame_id to BoundingBoxArray,2016-05-23T15:32:23Z,155685155,221011535,answered,"@h-ohta ,
+They were completely my mistake!
+Thank you very much to let me know and fix them!
+",manato,369477.0,369471.0,1,2,0,1,3
+Add jsk packages,2016-05-19T01:57:55Z,155492706,220208338,answered,"Please comment why you add jsk_visualization package into Autoware repository. Because ros-indigo-jsk-visualization is provided as ROS apt package. 
+",syohex,684164.0,47410.0,3,2,0,507,63361
+Add jsk packages,2016-05-19T08:39:55Z,155492706,220262463,questioned,"> Because ros-indigo-jsk-visualization is provided as ROS apt package.
+
+Thank you for your information.
+I did'nt know that.
+I'll check whether that package is available for Autoware.
+",h-ohta,684164.0,47410.0,3,2,0,507,63361
+Add jsk packages,2016-05-26T10:50:29Z,155492706,221839116,questioned,"I confirmed that we can use jsk_visualization package provided by apt in Autoware,so I cancel this PR.
+",h-ohta,684164.0,47410.0,3,2,0,507,63361
+Separate downsampling of points_raw from ndt_matching.,2016-05-18T11:03:22Z,155472877,219994041,questioned,"@syohex 
+ros/sensing/data_filter/packagesに新たにpoints_filterというパッケージを作成しました。お手数をおかけしますが、何か問題がないかチェックしていただけないでしょうか?
+",kitsukawa,72384.0,346.0,3,10,0,19,1966
+Separate downsampling of points_raw from ndt_matching.,2016-05-19T03:10:45Z,155472877,220217177,answered,"内容は理解できていないのであれですが, 問題はないように見えます. ただ変更が多すぎるので, (可能であればもう少し分割していただけると助かります)
+",syohex,72384.0,346.0,3,10,0,19,1966
+Separate downsampling of points_raw from ndt_matching.,2016-05-19T07:03:52Z,155472877,220243892,questioned,"ご確認ありがとうございます。今後、1回の変更をもう少し分割したいと思います。
+",kitsukawa,72384.0,346.0,3,10,0,19,1966
+Change Vehicle Model from Marker to RobotModel.,2016-05-18T06:13:53Z,155423978,,,,kuriking,,,0,1,0,1,18
+Don't publish non message object,2016-05-18T01:47:32Z,155400133,,,,syohex,,,0,1,0,2,15
+Add semantics package,2016-05-16T09:59:25Z,154997502,219390584,questioned,"@syohex 
+お手数おかけしますが，何か問題ないかチェックしていただいてもよろしいでしょうか?
+",TomohitoAndo,316331.0,75.0,6,9,0,6,622
+Add semantics package,2016-05-17T08:11:10Z,154997502,219648706,answered,"http://wiki.ros.org/ROSNodeTutorialC++
+
+メモとして残しておきますが, 上記の URLの 3.2 The listener node, 3.3 The NodeExample classのように実装すると, 関数ローカルな static変数が減らせるものと思います. 
+
+http://wiki.ros.org/ROSNodeTutorialC++#CA-e07dead5795e4d17f3e7d28da49569a19f39cae9_30
+
+にあるようにコールバック関数にメンバ関数ポインタを設定, その次の引数にインスタンスのポインタを指定することでクラス内に状態を閉じ込めることができます.
+",syohex,316331.0,75.0,6,9,0,6,622
+Add semantics package,2016-05-17T10:42:17Z,154997502,219682036,questioned,"勉強になるメモありがとうございます！ 今後のコーディングの参考にさせていただきます．
+
+ご指摘いただいた点を修正しましたので，再度レビューをお願いします．
+",TomohitoAndo,316331.0,75.0,6,9,0,6,622
+Add semantics package,2016-05-19T11:11:37Z,154997502,220294719,questioned,"ご指摘いただいた点を修正しました．
+お手数かけますが，再度チェックお願いします．
+",TomohitoAndo,316331.0,75.0,6,9,0,6,622
+Add semantics package,2016-05-19T11:47:16Z,154997502,220301325,answered,"ビルドも通ったので問題ないと思います.
+",syohex,316331.0,75.0,6,9,0,6,622
+Add semantics package,2016-05-20T01:51:50Z,154997502,220498168,questioned,"マージしました．
+レビューありがとうございました！
+",TomohitoAndo,316331.0,75.0,6,9,0,6,622
+Publish cached waypoint,2016-05-16T06:20:32Z,154968028,,,,syouji,,,0,1,0,1,20
+Mod waypoint follower,2016-05-12T13:13:04Z,154478931,,,,h-ohta,,,0,3,0,3,238
+"Runtime Manager Computing tab, fix for sync option problem",2016-05-11T04:16:09Z,154156725,,,,kondoh2,,,0,1,0,1,4
+Fix initialize value of wf_simulator in Runtime Manager,2016-04-28T07:44:13Z,151570496,,,,h-ohta,,,0,1,0,1,2
+Fix for rosjava installed platform,2016-04-26T01:46:20Z,150848530,214582857,questioned,"NOTE: Building some message jar files are still failed, however Autoware build process is successful ant its exit status(`$?`) is zero. I'll tackle with this issue.
+",syohex,46183.0,46130.0,2,1,0,28,92
+Fix for rosjava installed platform,2016-04-26T03:15:37Z,150848530,214594805,questioned,"> NOTE: Building some message jar files are still failed, however Autoware build process is successful ant its exit status($?) is zero. I'll tackle with this issue.
+
+https://github.com/rosjava/rosjava_mvn_repo/tree/master/org/ros/rosjava_messages
+
+Some rosjava_messages like pcl_ros are not existed in rosjava maven repository so that we cannot fix build error about it. :-(
+",syohex,46183.0,46130.0,2,1,0,28,92
+Fix sound_player dependencies,2016-04-22T18:45:03Z,150034744,213549387,answered,"yep, this works
+",beetleskin,129624.0,115376.0,2,1,0,1,2
+Fix sound_player dependencies,2016-04-22T22:42:33Z,150034744,213614762,questioned,"Thanks for checking.
+",syohex,129624.0,115376.0,2,1,0,1,2
+Rewrite points_map_loader,2016-04-20T14:29:49Z,149784396,,,,syouji,,,0,1,0,2,753
+Update Readme,2016-04-20T12:53:34Z,149759166,,,,h-ohta,,,0,1,0,1,2
+Some fix,2016-04-18T09:33:53Z,149097308,,,,h-ohta,,,0,1,0,2,4
+"Add vel_pose_mux package , and Change some specifications for it ",2016-04-18T09:00:22Z,149088465,,,,h-ohta,,,0,25,0,13,1057
+Remove duplicated file,2016-04-18T04:06:24Z,149036267,,,,syouji,,,0,1,0,1,0
+"Runtime Manager, fix lane_stop dialog button color",2016-04-14T04:26:11Z,148249191,,,,kondoh2,,,0,1,0,1,14
+"Runtime Manager, update for immediately reflection of sys CPU setup",2016-04-14T02:45:26Z,148235457,,,,kondoh2,,,0,1,0,1,2
+Update manuals,2016-04-14T02:24:30Z,148233193,,,,kuriking,,,0,1,0,4,0
+Color vehicle model,2016-04-11T07:34:10Z,147340337,,,,yukkysaito,,,0,3,0,9,25276
+"Runtime Manager, update for remote rviz",2016-04-11T04:53:22Z,147315741,,,,kondoh2,,,0,1,0,3,28
+Update manuals,2016-04-11T04:37:53Z,147314517,,,,kuriking,,,0,1,0,4,0
+"Runtime Manager, update to use gdic(gui: in .yaml) at no param",2016-04-08T06:18:14Z,146825673,,,,kondoh2,,,0,1,0,1,9
+"fix save param check, not include sys_prm for check",2016-04-08T06:03:42Z,146823349,,,,kondoh2,,,0,1,0,1,4
+"Runtime Manager Setup tab, fix buttons setting",2016-04-06T07:30:35Z,146216003,,,,kondoh2,,,0,1,0,3,42
+Import AutowareTouch,2016-04-05T14:20:20Z,146004508,,,,syouji,,,0,1,0,86,1648
+Fix code style,2016-04-05T09:46:18Z,145938343,,,,TomohitoAndo,,,0,6,0,3,1566
+"fix for float(""123,456""), add str_to_float()",2016-04-04T04:28:32Z,145579733,205132809,answered,"```
+% env LC_ALL=""de_DE.UTF-8"" rosrun runtime_manager runtime_manager_dialog.py
+```
+
+I confirmed autowarefoundation/autoware_ai#810 was fixed with above command.
+
+![float](https://cloud.githubusercontent.com/assets/554281/14238197/d5b8796c-fa68-11e5-9a40-b6d346d7a6a0.png)
+",syohex,458.0,643.0,1,1,0,1,22
+Add jsk library,2016-04-03T05:23:09Z,145455872,204878520,questioned,"@syohex ,
+Could you review my modification?
+Thank you for your always help.
+",manato,595958.0,170.0,4,1,0,2,49
+Add jsk library,2016-04-09T16:36:10Z,145455872,207816493,questioned,"@syohex ,
+Thank you very much for your reviewing.
+Your pointing out are always beneficial for me!
+
+I modified suggested points and push them by `git push origin apply_jsk_RVizPlugin --force`.
+I'm sorry to bother you, but could you please check my modification again?
+Thank you for your help.
+",manato,595958.0,170.0,4,1,0,2,49
+Add jsk library,2016-04-10T02:44:04Z,145455872,207902555,answered,"Thanks for fixing. Please merge.
+",syohex,595958.0,170.0,4,1,0,2,49
+Add jsk library,2016-04-10T03:15:41Z,145455872,207904830,questioned,"@syohex ,
+Thank you for your time. I've merged my PR.
+",manato,595958.0,170.0,4,1,0,2,49
+Fix pos_downloader time check.,2016-03-31T23:53:06Z,145048421,,,,kuriking,,,0,1,0,1,6
+Fix bug with new vector map,2016-03-31T07:09:01Z,144810072,,,,TomohitoAndo,,,0,1,0,3,50
+Add coding standard in Japanese,2016-03-30T09:31:13Z,144494485,203345019,questioned,"Please report me if there are any problems or document which is difficult/impossible to understand.
+",syohex,5702.0,5772.0,1,1,0,1,152
+Update videos for planning,2016-03-23T08:18:44Z,142893390,,,,TomohitoAndo,,,0,1,0,1,7
+Fix choices in velocity source,2016-03-17T10:19:40Z,141538606,,,,h-ohta,,,0,1,0,1,5
+"Runtime Manager, workaround for file save dialog segfault",2016-03-16T03:40:42Z,141164372,,,,kondoh2,,,0,1,0,1,67
+Update default.rviz to replace old topics,2016-03-15T08:00:32Z,140901466,,,,TomohitoAndo,,,0,1,0,1,113
+Fix lane_select bug.,2016-03-14T12:35:34Z,140662199,,,,kuriking,,,0,1,0,1,6
+Look ahead downloading,2016-03-14T05:41:29Z,140581393,,,,syouji,,,0,3,0,3,335
+Fix point cloud loading,2016-03-11T05:42:41Z,140094334,,,,syouji,,,0,3,0,1,11
+Devide waypoint marker topic,2016-03-08T08:36:38Z,139212783,,,,h-ohta,,,0,4,0,2,152
+add new model for car,2016-03-07T07:41:54Z,138908654,193139021,questioned,"@shinpei0208 暫定のディレクトリ構成ですが、ディレクトリ名や構成はこれで大丈夫でしょうか？
+",pdsljp,24977182.0,236.0,7,1,0,1,0
+add new model for car,2016-12-02T13:43:10Z,138908654,264456462,answered,"@amc-nu, can you check this PR?",shinpei0208,24977182.0,236.0,7,1,0,1,0
+add new model for car,2016-12-02T13:50:47Z,138908654,264457947,answered,@shinpei0208 Sure!,amc-nu,24977182.0,236.0,7,1,0,1,0
+add new model for car,2016-12-19T22:56:14Z,138908654,268102976,answered,@amc-nu  Could you tell me how is it going?,h-ohta,24977182.0,236.0,7,1,0,1,0
+add new model for car,2016-12-19T23:03:34Z,138908654,268104428,answered,"I'll take care of this from the 27th. Currently I'm outside of Japan. Sorry
+Best regardsAbraham
+
+
+
+
+
+
+On Mon, Dec 19, 2016 at 4:56 PM -0600, ""Hiroki Ohta"" <notifications@github.com> wrote:
+
+
+
+
+
+
+
+
+
+
+
+
+@amc-nu  Could you tell me how is it going?
+
+
+
+—
+You are receiving this because you were mentioned.
+Reply to this email directly, view it on GitHub, or mute the thread.
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+",amc-nu,24977182.0,236.0,7,1,0,1,0
+add new model for car,2016-12-19T23:08:15Z,138908654,268105310,answered,@amc-nu I see. Can I close this ? Because I'd like to apply new branch model.,h-ohta,24977182.0,236.0,7,1,0,1,0
+add new model for car,2016-12-21T09:44:12Z,138908654,268479491,answered,@amc-nu I'll close this PR to apply new branch model. Please remake new pull request after done that. ,h-ohta,24977182.0,236.0,7,1,0,1,0
+Fix update_rate,2016-03-04T03:12:43Z,138363556,,,,syouji,,,0,2,0,1,33
+Redesign map_downloader dialog,2016-03-03T10:02:46Z,138130547,191690365,questioned,"Password はテキストボックスには表示されない。
+ただし、現状は User と Password の両方について、以下を注意されたい。
+- Runtime Manager が実行されるターミナルソフトに、rosparam set のデバッグ出力として平文で表示される。
+- param.yaml に平文で保存される。
+
+![map_downloader_dialog_20160303a](https://cloud.githubusercontent.com/assets/9031008/13490647/3dccf804-e171-11e5-805c-ad70ca8243bd.png)
+",syouji,65.0,674.0,1,1,0,2,107
+Add ROS parameters for HTTP server,2016-03-03T09:19:41Z,138122514,,,,syouji,,,0,1,0,2,27
+Don't require initial position,2016-03-03T09:12:19Z,138120561,,,,syouji,,,0,1,0,1,19
+Fix GetFile library,2016-03-03T08:55:39Z,138116278,,,,syouji,,,0,3,0,1,23
+"Runtime Manager, support text control passwd flag",2016-03-03T07:08:42Z,138092942,191620193,answered,"Thanks for your support :smile:
+",syouji,818.0,830.0,1,1,0,1,7
+Fix rviz remote execution.,2016-03-02T10:58:58Z,137841837,,,,kuriking,,,0,1,0,1,4
+Apply multi camera,2016-03-01T12:55:48Z,137565189,190713214,questioned,"@syohex ,
+Could you please check this PR?
+I'm sorry for many modification in this PR.
+I' ll be careful not to send PR like this time from next time.
+",manato,2988.0,630.0,3,16,0,38,825
+Apply multi camera,2016-03-01T13:24:29Z,137565189,190723537,answered,"Looks good to me. Please merge.
+",syohex,2988.0,630.0,3,16,0,38,825
+Apply multi camera,2016-03-01T13:35:02Z,137565189,190726304,questioned,"Thank you very much for your quick reply.
+Then I'll merge this PR.
+",manato,2988.0,630.0,3,16,0,38,825
+Add digest access authentication,2016-03-01T06:57:43Z,137491009,,,,syouji,,,0,1,0,4,29
+Fix CUDA_ERROR_LAUNCH_FAILED error occurred in dpm_ttic,2016-02-24T01:56:29Z,135925851,,,,manato,,,0,1,0,2,8
+Fix pure pursuit,2016-02-17T06:34:41Z,134192574,,,,h-ohta,,,0,4,0,1,44
+"Runtime Manager, fix dialog showing after closeing by close box",2016-02-16T11:21:12Z,133953549,,,,kondoh2,,,0,1,0,1,21
+Add new method for distance calculation of fusion,2016-02-15T02:15:43Z,133604770,184027744,questioned,"@syohex ,
+Could you please check this PR and merge it if there is no problem?
+Thank you very much for your always help. 
+",manato,35483.0,183.0,10,1,0,4,122
+Add new method for distance calculation of fusion,2016-02-15T02:49:36Z,133604770,184036899,answered,"この追加した部分は Autowareすべてに見えてしまいますが, それは正しいのでしょうか ? 現状 `lib/fusion`以下からしか使っていませんが, 将来的に使う予定などあるのでしょうか ?
+
+以下の部分を修正して, 本ヘッダファイルは他のパッケージに見せないようにする必要があります.
+
+https://github.com/CPFL/Autoware/blob/mod_ranging/ros/src/computing/perception/detection/lib/fusion/CMakeLists.txt#L32-L35
+",syohex,35483.0,183.0,10,1,0,4,122
+Add new method for distance calculation of fusion,2016-02-15T02:51:58Z,133604770,184037532,answered,"そもそも classを追加する必要はあるのでしょうか ? 中身を見ると, `std::vector<float>`に対する処理だけのように見えるので関数で十分ではないでしょうか ?  (メソッドからメンバ関数を参照している箇所もない)
+",syohex,35483.0,183.0,10,1,0,4,122
+Add new method for distance calculation of fusion,2016-02-15T06:53:16Z,133604770,184084639,questioned,"@syohex ,
+詳細なご指摘，誠にありがとうございます．
+（知らなかったことも多く，とても勉強になります！）
+
+ご指摘いただいた箇所に関して，修正しましたので，お手数ですが，再度レビューを
+お願いできますでしょうか？
+",manato,35483.0,183.0,10,1,0,4,122
+Add new method for distance calculation of fusion,2016-02-15T08:23:14Z,133604770,184108922,answered,"NOTE: コミットは最終的に squashして整理してください. 一つにまとめる必要はないですが, 後から他人が見た時不要なコミットはないようにしてください.
+",syohex,35483.0,183.0,10,1,0,4,122
+Add new method for distance calculation of fusion,2016-02-15T09:21:40Z,133604770,184128601,questioned,"> - std::sortは破壊的変更を行うので参照を渡すのは危険です. そもそも参照を渡さないか, コピーして引数を渡した方が良いと思います.
+> - 要素が一つの場合, ソートする必要ないので, 空の場合と同様早々と returnした方が良いと思います.
+
+ご指摘いただいた点に関して，修正致しました．
+
+> NOTE: コミットは最終的に squashして整理してください. 一つにまとめる必要はないですが, 後から他人が見た時不要なコミットはないようにしてください
+
+ご教示，ありがとうございます．
+今回は，既に以前のコミットをサーバにあげてしまってあるので行っていませんが，以降squashするように気をつけます．
+
+お手数をおかけしますが，再度ご確認頂けますでしょうか？
+今後とも，ご指導のほどどうぞよろしくお願い致します．
+",manato,35483.0,183.0,10,1,0,4,122
+Add new method for distance calculation of fusion,2016-02-15T09:47:06Z,133604770,184136467,answered,"問題ないと思います. squashしてマージしていただけばよいと思います.
+",syohex,35483.0,183.0,10,1,0,4,122
+Add new method for distance calculation of fusion,2016-02-15T10:21:33Z,133604770,184150781,questioned,"ご確認ありがとうございました．
+既にリモートにPush済みのコミットをsquashして，再度Pushする場合は
+git push --force すればよろしいですか？
+",manato,35483.0,183.0,10,1,0,4,122
+Add new method for distance calculation of fusion,2016-02-15T10:26:00Z,133604770,184152606,answered,"> 既にリモートにPush済みのコミットをsquashして，再度Pushする場合は
+> git push --force すればよろしいですか？
+
+はい, お願いします.
+",syohex,35483.0,183.0,10,1,0,4,122
+Add new method for distance calculation of fusion,2016-02-15T10:31:26Z,133604770,184155441,questioned,"承知致しました．
+ご教示ありがとうございました．
+",manato,35483.0,183.0,10,1,0,4,122
+Follow ROS C++ coding style guide,2016-02-14T05:19:14Z,133505875,183822973,questioned,"全員に矯正する良い手段が見つからないので一旦諦めます.
+",syohex,1216.0,1216.0,1,2,0,268,82306
+Remove garbage file,2016-02-14T02:26:28Z,133495061,183800469,questioned,"@yukkysaito Is this really a needless file ?
+",syohex,787332.0,76.0,2,1,0,1,1
+Remove garbage file,2016-02-23T04:34:32Z,133495061,187521763,answered,"@syohex Yes. I made a mistake... It is a temporary file. 
+",yukkysaito,787332.0,76.0,2,1,0,1,1
+Follow ROS C++ coding style guide,2016-02-14T01:55:00Z,133155256,183792150,questioned,"There are many conflicts with #234. I'll create PR again and apply clang-format files which are added by #234.
+",syohex,163784.0,163783.0,1,3,0,267,76950
+Update Setup Tab.,2016-02-11T16:28:43Z,133020491,,,,kitsukawa,,,0,6,0,7,1492
+Add synchronization system for perception,2016-02-12T04:07:59Z,132776398,183172207,answered,"Please don't merge master branch except your changes conflict with master branch codes. To merge master branch make us difficult to understand what PR changes/improves like this PR.
+
+(名古屋大学の方全般なのですが)変更がコンフリクトしない限りは, masterをマージする必要はないです. 下手にマージするとコミット履歴がこのようにカオスになるだけです. こうなると本質的な変更がなんなのかが極めて見えづらくなってしまいます.
+",syohex,151569.0,122067.0,7,52,0,55,6007
+Add synchronization system for perception,2016-02-12T04:40:26Z,132776398,183178192,answered,"Please remove `*.orig` files.
+
+*.origファイルが含まれています. 削除してください.
+",syohex,151569.0,122067.0,7,52,0,55,6007
+Add synchronization system for perception,2016-02-12T06:47:28Z,132776398,183201683,questioned,"Thank you for your advice. I'm careful not to do it.
+",yukkysaito,151569.0,122067.0,7,52,0,55,6007
+Add synchronization system for perception,2016-02-12T06:47:58Z,132776398,183201722,questioned,"*.orig files are removed at f8c4fda
+",yukkysaito,151569.0,122067.0,7,52,0,55,6007
+Add synchronization system for perception,2016-02-12T08:52:25Z,132776398,183236201,answered,"マージは自由にしていただいて構わないです.
+",syohex,151569.0,122067.0,7,52,0,55,6007
+Add synchronization system for perception,2016-02-12T09:17:44Z,132776398,183245599,answered,"一般論です(この PRだけを言及するものではないです).
+
+#### Pull Requestの作成
+- 必要最小限の変更にする
+  - 例えばこの PRは 55ファイルを 52コミットで変更しているが, そこまで必要なのか. (本質的に必要であれば何の問題もない.)
+  - (不要である mergeが含まれるため多く見えてしまっている)
+  - PRのタイトル以外のことをしていないか.
+  - ここまで多いと cherry-pickすることも難しい
+  - 多くなる場合は分割できないかの検討. 特に複数のことを実現している場合
+- 不要なコミットの削除
+  - あとで第三者が `git log`をした場合に有用なもののみ残す
+  - 自分のコミットの誤りを修正するコミットは履歴に不要(rebaseで誤り自体をなかったことにする)
+  - 誤ってファイルを追加した場合は, 誤ってファイルを追加してしまったこと自体を消す
+  - 自分が同一 PR内で追加したバグを修正するバグ等も同様.
+",syohex,151569.0,122067.0,7,52,0,55,6007
+Add synchronization system for perception,2016-02-12T12:19:28Z,132776398,183301077,questioned,"@syohex アドバイスありがとうございます。今後のコミット履歴の事も考え、出来る限り最小限の変更でのコミットにするように注意いたします。
+",yukkysaito,151569.0,122067.0,7,52,0,55,6007
+Add sleep command to decrease CPU occupancy,2016-02-09T06:24:45Z,132341645,,,,manato,,,0,1,0,2,8
+Allow dialog fields to be tagged with [nl],2016-12-20T02:33:52Z,131556338,268138049,answered,"Thank you for making PR.
+But I think we should specify nl in flags of gui.
+So I will close.",kuriking,27552723.0,27552715.0,1,1,0,1,2
+Fix pure pursuit,2016-02-03T11:38:58Z,130999290,,,,h-ohta,,,0,3,0,2,30
+Update lane_stop,2016-02-02T07:13:44Z,130597493,,,,syouji,,,0,5,0,8,101
+Correct points2image dependency,2023-09-12T08:54:10Z,130568652,1715295903,answered,"usb_cam called a 500W pixel camera with a USB interface, tensorrt_yolo subscribe to the topic of usb_cam, the node crashes directly, and the reason for the program crash cannot be found
+![微信图片_20230912165343](https://github.com/autowarefoundation/autoware/assets/121431946/ace191da-ff44-4df3-be64-844698364d1d)
+",badguy07,1384.0,240122436.0,1,1,0,2,5
+Correct map_file dependency about message header,2016-02-01T09:46:11Z,130311462,,,,syohex,,,0,1,0,4,7
+Output error code,2016-02-01T07:18:15Z,130281097,,,,syouji,,,0,1,0,1,0
+Correct waypoint_follower dependnecy about message header,2016-02-01T04:21:34Z,130251975,,,,syohex,,,0,1,0,1,1
+Correct calibration_camera_lidar dependnecy about message header,2016-02-01T03:43:30Z,130246839,,,,syohex,,,0,1,0,6,23
+Correct vehicle_socket dependnecy about message header,2016-02-01T02:32:24Z,130235545,,,,syohex,,,0,1,0,4,17
+Improve ndt_mapping.,2016-01-30T17:51:19Z,130017665,,,,kitsukawa,,,0,1,0,3,545
+Correct runtime_manager dependencies,2016-01-29T11:41:25Z,129741812,,,,syohex,,,0,1,0,7,18
+Refactoring build process,2016-01-29T08:27:09Z,129700766,,,,syohex,,,0,2,0,54,253
+"Runtime Manager, modify window title",2016-01-28T09:06:20Z,129389768,,,,kondoh2,,,0,1,0,2,8
+Correct dependency name,2016-01-26T08:59:44Z,128763046,,,,syohex,,,0,1,0,1,2
+Send shutdown signal to process manager on exit,2016-01-26T05:07:34Z,128727150,,,,syohex,,,0,1,0,2,13
+Return error value at unknown operation key receieved,2016-01-26T04:13:08Z,128718711,,,,syohex,,,0,1,0,1,3
+Add linear interpolate mode Switch,2016-01-22T12:46:05Z,128149984,,,,h-ohta,,,0,1,0,3,58
+"Runtime Manager, fix func overwrite at dialog close",2016-01-22T08:17:29Z,128105578,,,,kondoh2,,,0,1,0,1,23
+"Runtime Manager Computing tab, fix obj_reproj, obj_fusion launch",2016-01-22T06:55:00Z,128096705,,,,kondoh2,,,0,1,0,1,26
+Fix dependency,2016-01-21T14:06:21Z,127931099,,,,syohex,,,0,2,0,4,16
+Fixed newer CMake issue,2016-01-20T11:47:45Z,127665706,,,,syohex,,,0,1,0,2,34
+update default.rviz,2016-01-19T09:24:05Z,127401309,,,,h-ohta,,,0,1,0,1,57
+Bug fix about 'calcTwist',2016-01-19T09:18:08Z,127399975,,,,h-ohta,,,0,1,0,1,10
+Add direction parameter,2016-01-19T06:38:34Z,127377069,,,,syouji,,,0,1,0,3,20
+Fix requirement,2016-01-19T05:48:35Z,127371825,,,,manato,,,0,1,0,1,1
+Improve accuracy of obj_reproj,2016-01-19T05:37:41Z,127369915,172744011,questioned,"Please let me know if there is a problem by this PR merge.
+",manato,115.0,104.0,1,1,0,2,376
+Fix ranging,2016-01-18T17:28:52Z,127274638,172598883,questioned,"@syohex ,
+Could you please review this PR and merge it to master if there seems to be no problem?
+Thank you very much for your always help.
+",manato,39803.0,92.0,2,3,0,5,77
+Fix ranging,2016-01-19T03:44:22Z,127274638,172729270,questioned,"@syohex 
+Thank you very much for pointing out and kind explanation.
+I modified the places you pointed out.
+Could you please check again?
+",manato,39803.0,92.0,2,3,0,5,77
+Fix pos_uploader's msec bug.,2016-01-17T12:19:47Z,127091063,172318696,answered,"ありがとうございます。MLにも流してくださいー
+2016/01/17 21:13 ""USUDA Hisashi"" notifications@github.com:
+
+> Merged #204 https://github.com/CPFL/Autoware/pull/204.
+> 
+> —
+> Reply to this email directly or view it on GitHub
+> https://github.com/CPFL/Autoware/pull/204#event-517229798.
+",shinpei0208,32.0,393.0,1,1,0,1,2
+Eigen3 with Fallback on ros-catkin-modules,2016-01-20T09:41:54Z,127027116,173146339,answered,"Why did you think that fallback is necessary ?
+
+We can install eigen3 packages via `apt-get install`. And `ros-indigo-desktop-full` package contains eigen3 packages.
+",syohex,337280.0,329359.0,8,2,0,2,39
+Eigen3 with Fallback on ros-catkin-modules,2016-01-20T10:03:21Z,127027116,173151969,questioned,"With newer version of CMake it cannot find Eigen3 even when it is
+installed. I faced it and found this to the best workaround from ROS and
+PCL issue log. I think the fallback(only if invoked when primary method
+fails to find Eigen3) has dependency on ros-indigo-camke-modules
+On Jan 20, 2016 3:11 PM, ""Syohei YOSHIDA"" notifications@github.com wrote:
+
+> Why did you think that fallback is necessary ?
+> 
+> We can install eigen3 packages via apt-get install. And
+> ros-indigo-desktop-full package contains eigen3 packages.
+> 
+> —
+> Reply to this email directly or view it on GitHub
+> https://github.com/CPFL/Autoware/pull/203#issuecomment-173146339.
+",jitrc,337280.0,329359.0,8,2,0,2,39
+Eigen3 with Fallback on ros-catkin-modules,2016-01-20T10:12:25Z,127027116,173156943,answered,"Which CMake version did you use ?
+",syohex,337280.0,329359.0,8,2,0,2,39
+Eigen3 with Fallback on ros-catkin-modules,2016-01-20T10:18:46Z,127027116,173160416,questioned,"I think 3.2, sorry on mobile now can't check. But you can see in CMake
+github repository, modules folder, FindEigen is missing.
+https://github.com/Kitware/CMake/tree/master/Modules
+On Jan 20, 2016 3:42 PM, ""Syohei YOSHIDA"" notifications@github.com wrote:
+
+> Which CMake version did you use ?
+> 
+> —
+> Reply to this email directly or view it on GitHub
+> https://github.com/CPFL/Autoware/pull/203#issuecomment-173156943.
+",jitrc,337280.0,329359.0,8,2,0,2,39
+Eigen3 with Fallback on ros-catkin-modules,2016-01-20T10:20:07Z,127027116,173160873,answered,"Thanks for information. I'll test.
+",syohex,337280.0,329359.0,8,2,0,2,39
+Eigen3 with Fallback on ros-catkin-modules,2016-01-20T10:22:21Z,127027116,173161563,questioned,"Also I did aime major restructuring by seperating packages and msgs as
+there are cyclic dependencies and causing problem with modern catkin tools.
+Didn't generate pull request though, I would if I fail to find any other
+better way, for now using legacy catkin_make for testing.
+On Jan 20, 2016 3:48 PM, ""Jit Ray Chowdhury"" jit.ray.c@gmail.com wrote:
+
+> I think 3.2, sorry on mobile now can't check. But you can see in CMake
+> github repository, modules folder, FindEigen is missing.
+> https://github.com/Kitware/CMake/tree/master/Modules
+> On Jan 20, 2016 3:42 PM, ""Syohei YOSHIDA"" notifications@github.com
+> wrote:
+> 
+> > Which CMake version did you use ?
+> > 
+> > —
+> > Reply to this email directly or view it on GitHub
+> > https://github.com/CPFL/Autoware/pull/203#issuecomment-173156943.
+",jitrc,337280.0,329359.0,8,2,0,2,39
+Eigen3 with Fallback on ros-catkin-modules,2016-01-20T11:22:46Z,127027116,173176169,answered,"I confirmed this issue is reproducible with CMake3.2.
+
+> Also I did aime major restructuring by seperating packages and msgs as there are cyclic dependencies and causing problem with modern catkin tools. Didn't generate pull request though, I would if I fail to find any other better way, for now using legacy catkin_make for testing.
+
+Ah, we should fix cyclic dependencies.
+",syohex,337280.0,329359.0,8,2,0,2,39
+Eigen3 with Fallback on ros-catkin-modules,2016-01-20T11:53:55Z,127027116,173182493,answered,"Thanks for PR. I cherry-picked your commits and merged at #211. :+1:
+",syohex,337280.0,329359.0,8,2,0,2,39
+Publish obj label by marker,2016-01-15T16:27:48Z,126906464,,,,manato,,,0,3,0,2,72
+Fix motion planner,2016-01-15T06:09:29Z,126813717,,,,h-ohta,,,0,9,0,6,370
+Query password by gksu,2016-01-14T11:26:22Z,126628295,171617633,questioned,"Autoware users must install `gksu` package for using this feature.
+
+``` bash
+% sudo apt-get install gksu
+```
+",syohex,59791.0,2558.0,6,1,0,4,34
+Query password by gksu,2016-01-14T11:30:44Z,126628295,171618368,answered,"GNOME端末経由で実行する、という方法ならgksuパッケージは不要ですが、
+gksuの方がきれいだと思います。
+",kuriking,59791.0,2558.0,6,1,0,4,34
+Query password by gksu,2016-01-14T11:33:07Z,126628295,171618726,questioned,"#### Demo
+
+![run-script](https://cloud.githubusercontent.com/assets/554281/12323364/f3698618-bafd-11e5-8f18-28f2abbaf3ee.gif)
+",syohex,59791.0,2558.0,6,1,0,4,34
+Query password by gksu,2016-01-14T11:43:15Z,126628295,171621091,answered,"Runtime Managerとroscoreを終了しても、proc_managerが残っているようにみえます。
+勘違いだったらすみません。
+",kuriking,59791.0,2558.0,6,1,0,4,34
+Query password by gksu,2016-01-14T11:50:56Z,126628295,171622422,questioned,"> Runtime Managerとroscoreを終了しても、proc_managerが残っているようにみえます。
+> 勘違いだったらすみません。
+
+現在対応を検討中です. とりあえず起動時に同名プロセスは全部 killするようにはしています.
+`run`と同ディレクトリにある `cleanup`スクリプトでも同様のことができます.
+(runtime managerの終了時に killさせようにも rootとして動いているので, そこでまたパスワード入力が必要になるなど単純にはいかないところがあります. いい方法がないか検討します.)
+",syohex,59791.0,2558.0,6,1,0,4,34
+Query password by gksu,2016-01-15T03:20:42Z,126628295,171861181,questioned,"Please report me if you have any problems about this change.
+",syohex,59791.0,2558.0,6,1,0,4,34
+"Runtime Manager, increased frame height for Map tab viewing",2016-01-14T09:12:04Z,126610834,,,,kondoh2,,,0,1,0,2,8
+Query password by zenity,2016-01-14T08:28:32Z,126602723,171570740,questioned,"This is very dangerous. Because other people who logs in same machine can steal other user login password by watching process which sends password to `sudo` process.
+",syohex,891.0,891.0,1,1,0,1,8
+"Runtime Manager, from Rviz to RViz",2016-01-14T05:24:53Z,126580011,,,,kondoh2,,,0,1,0,2,44
+"Runtime Manager Simulation tab, delete Clock, Sim Time checkbox",2016-01-14T04:25:18Z,126574624,,,,kondoh2,,,0,1,0,2,18
+Fix typo,2016-01-09T05:20:55Z,125739728,,,,manato,,,0,1,0,1,2
+Enabling bayer,2016-01-06T15:18:45Z,125194539,169352679,questioned,"@syohex ,
+Could you please check and merge this PR if there seems to be no problem?
+Thank you very much for always helping us.
+",manato,34895.0,274.0,2,3,0,9,107
+Enabling bayer,2016-01-07T02:26:37Z,125194539,169525836,questioned,"Thank you for merging!
+",manato,34895.0,274.0,2,3,0,9,107
+Update AutowareRoute,2016-01-06T10:12:54Z,125147076,,,,syouji,,,0,1,0,1,0
