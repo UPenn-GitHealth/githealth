@@ -1,0 +1,16 @@
+## Issues Data Fields : `pull_requests.csv`
+
+| Column Name                        | Description                                                                                                                                                                               |
+|------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `pull_request_id`                  | The unique identifier for each pull request.                                                                                                                                              |
+| `pull_request_number`              | The numerical identifier assigned to each pull request in the repository.                                                                                                                  |
+| `pull_request_user_id`             | The GitHub login username of the user who created the pull request.                                                                                                                        |
+| `pull_request_created_at`          | The timestamp indicating when the pull request was created.                                                                                                                               |
+| `pull_request_title`               | The title or summary of the pull request.                                                                                                                                                 |
+| `pull_request_commits`             | The number of commits associated with the pull request.                                                                                                                                   |
+| `pull_request_checks`              | The number of check runs associated with the pull request.                                                                                                                                 |
+| `pull_request_files_changed`       | The count of files changed in the pull request.                                                                                                                                          |
+| `pull_request_lines_changed`       | The total count of lines added and deleted in the pull request.                                                                                                                           |
+| `pull_request_commits_no`          | The short SHA-1 hashes of the commits associated with the pull request.                                                                                                                   |
+| `pull_request_commits_creator`     | The names of the authors of the commits associated with the pull request.                                                                                                                 |
+| `pull_request_commits_created_at`  | The timestamps indicating when each commit associated with the pull request was created.                                                                                                  |

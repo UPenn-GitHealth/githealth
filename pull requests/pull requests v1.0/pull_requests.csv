@@ -1,0 +1,101 @@
+pull_request_id,pull_request_number,pull_request_user_id,pull_request_created_at,pull_request_title,pull_request_commits,pull_request_checks,pull_request_files_changed,pull_request_lines_changed
+977914423,2408,mitsudome-r,2022-06-24T05:26:54Z,docs(README): add guide for Autoware.AI users,3,0,1,4
+979168622,2410,awf-autoware-bot[bot],2022-06-26T00:04:43Z,chore: update tool versions,1,0,2,4
+980303457,2691,pre-commit-ci[bot],2022-06-27T16:53:36Z,ci(pre-commit): autoupdate,1,0,1,2
+980900963,2692,kenji-miyake,2022-06-28T04:42:57Z,build(ROS distribution)!: transition to ROS 2 Humble,13,20,12,149
+985926672,2701,kenji-miyake,2022-07-04T03:03:02Z,refactor: refactor scripts,6,0,13,81
+986012068,2703,kenji-miyake,2022-07-04T05:31:28Z,feat(docker_image): add cuda_base_image,1,0,6,15
+986064905,2704,kenji-miyake,2022-07-04T06:46:33Z,refactor: refactor Docker build script,1,0,2,61
+986164407,2705,kenji-miyake,2022-07-04T08:32:54Z,ci(docker-build-and-push): remove a workaround for docker/bake-action,1,0,1,12
+993342677,2725,pre-commit-ci[bot],2022-07-11T17:00:49Z,ci(pre-commit): autoupdate,1,12,1,8
+993744691,2728,kenji-miyake,2022-07-12T02:01:57Z,fix(docker): remove all CUDA apt repositories not to cause errors during apt update,1,0,1,2
+994936261,2732,yukke42,2022-07-13T01:37:40Z,docs: add note to use rocker without the CUDA environment error,2,0,1,2
+996405884,2736,ambroise-arm,2022-07-14T08:58:26Z,fix(docker): register Vulkan GPU vendors,1,0,1,6
+997521200,2740,SoohyeokPark-MORAI,2022-07-15T08:54:24Z,feat(morai_msgs): appending a message package for MORAI SIM: Drive ,2,0,1,4
+1013134923,2763,kenji-miyake,2022-07-31T22:38:41Z,chore(.clang-tidy): add readability-identifier-naming,1,0,1,15
+1014791753,2766,wep21,2022-08-02T08:39:36Z,feat: update cuda version,5,0,3,27
+1015209995,2769,kenji-miyake,2022-08-02T14:41:06Z,chore(.clang-tidy): set readability-inconsistent-declaration-parameter-name.IgnoreMacros to true,1,0,1,2
+1026244813,2794,h-ohta,2022-08-15T09:36:57Z,chore(clang-tidy): add SharedFuture in performance-unnecessary-value-param.AllowedTypes,2,0,1,2
+1027292942,2798,kenji-miyake,2022-08-16T08:12:25Z,ci(docker-build-and-push): use tentative if-condition for scheduled events,1,0,1,3
+1029523064,2807,wep21,2022-08-18T05:00:03Z,revert: install each package of tensorrt,4,0,2,24
+1029590396,2808,kenji-miyake,2022-08-18T06:53:43Z,ci(setup-universe): remove --no-nvidia,1,0,1,2
+1029598565,2809,kenji-miyake,2022-08-18T07:03:56Z,ci(build): enable daily build,1,0,4,8
+1030848986,2810,wep21,2022-08-19T07:52:11Z,fix: remove bin and samples to keep backward compatibility,1,0,1,4
+1039368791,2823,kenji-miyake,2022-08-29T08:56:09Z,chore(.clang-tidy): fix settings of readability-identifier-naming,1,0,1,10
+1039493324,2827,kenji-miyake,2022-08-29T10:38:16Z,chore(.clang-tidy): apply yamllint,1,0,2,44
+1043225330,2834,kenji-miyake,2022-09-01T05:26:31Z,chore(ansible): upgrade version from 5 to 6,1,0,1,4
+1043266984,2835,kenji-miyake,2022-09-01T06:25:37Z,feat(ansible/tensorrt): add allow_change_held_packages option,1,0,1,1
+1044386907,2836,kenji-miyake,2022-09-02T00:53:28Z,ci: add cancel-previous-workflows.yaml,1,0,1,14
+1048123804,2848,awf-autoware-bot[bot],2022-09-07T00:04:03Z,chore: update tool versions,1,15,2,4
+1048247834,2850,kenji-miyake,2022-09-07T04:33:49Z,fix(ansible/plotjuggler): fix workaround of pyOpenSSL,1,0,2,9
+1050985046,2852,kenji-miyake,2022-09-09T01:01:25Z,"ci(build, vcs-import): add vcs export --exact",2,0,5,20
+1052816287,2856,h-ohta,2022-09-12T05:46:42Z,ci: add backport action,1,0,1,26
+1057202904,2867,isamu-takagi,2022-09-15T10:37:17Z,feat: add autoware adapi messages repository,1,0,1,4
+1061265521,2877,shmpwk,2022-09-20T08:51:00Z,chore: update PR template for private links,1,0,1,2
+1063628827,2885,maxime-clem,2022-09-22T04:32:20Z,docs(ansible/tensorrt): update install instructions of tensorrt,1,0,1,8
+1068273641,2897,kenji-miyake,2022-09-27T08:38:39Z,refactor(setup): use pipx for Ansible to avoid conflicts between pip and apt packages,2,0,1,20
+1069640836,2902,h-ohta,2022-09-28T08:09:31Z,ci(backport): use generated token instead of GITHUB_TOKEN,1,0,1,9
+1073390945,2908,dependabot[bot],2022-10-01T03:18:02Z,chore(deps): bump styfle/cancel-workflow-action from 0.10.0 to 0.10.1,1,0,1,2
+1074419827,2912,shmpwk,2022-10-03T09:44:07Z,feat(repos): add awsim_sensor_kit_launch,1,14,1,4
+1078355625,2922,Sharrrrk,2022-10-06T06:48:44Z,perf(docker): reduce prebuilt docker image size,11,17,6,65
+1078678816,2923,Sharrrrk,2022-10-06T10:16:33Z,feat(setup): add an option to install dev packages,2,14,4,36
+1079062235,2924,aaryanmurgunde,2022-10-06T14:06:14Z,docs(ansible/nvidia_docker): update to new docker tag,1,17,1,2
+1079960748,2926,aaryanmurgunde,2022-10-07T07:04:34Z,refactor(ansible/docker_engine): updated docker installation,5,14,2,24
+1080066358,2928,kenji-miyake,2022-10-07T08:49:59Z,fix(setup): fix pipx check,1,16,1,2
+1085960154,2944,dependabot[bot],2022-10-13T11:44:15Z,chore(deps): bump styfle/cancel-workflow-action from 0.10.1 to 0.11.0,1,14,1,2
+1100016848,2971,kenji-miyake,2022-10-26T09:40:00Z,chore(.markdown-link-check.json): ignore 127.0.0.1,1,14,1,3
+1101373970,2975,kminoda,2022-10-27T08:53:08Z,feat: move ndt_omp into universe,1,12,1,4
+1105976769,2986,tleyden,2022-10-31T22:02:53Z,docs(ansible/cuda): fix outdated cuda version in README,1,20,1,2
+1112557970,3006,kenji-miyake,2022-11-07T10:25:07Z,chore(.markdownlint.yaml): use ordered style for MD029,1,16,1,2
+1113823016,3008,maxime-clem,2022-11-08T05:59:54Z,feat(ansible): add option to install nvidia+cuda drivers with ansible,2,18,1,20
+1118806411,3021,kenji-miyake,2022-11-11T08:38:41Z,chore: add release scripts,1,15,2,87
+1122500621,3026,mitsudome-r,2022-11-15T08:04:28Z,ci(docker-build-and-push): add release tag as docker build,1,12,5,7
+1122515262,3027,yukke42,2022-11-15T08:17:15Z,feat(ansible): add git-lfs role,2,17,5,33
+1122588649,3028,kenji-miyake,2022-11-15T09:21:37Z,refactor(ansible/git_lfs): remove unnecessary installation steps,3,12,2,16
+1122684239,3029,yukke42,2022-11-15T10:36:22Z,fix(ansible/git_lfs): fix git lfs installation steps,5,15,2,30
+1122800906,3031,mehmetdogru,2022-11-15T12:12:13Z,fix(gitignore): add capture folder to gitignore,1,15,1,3
+1122829834,3032,yukke42,2022-11-15T12:37:52Z,ci(.pre-commit-config-ansible.yaml): update ansible-lint version,3,15,1,2
+1123962441,3038,isamu-takagi,2022-11-16T07:18:55Z,chore(.clang-format): modify include order for srvs package,1,16,1,3
+1127166216,3050,kenji-miyake,2022-11-18T07:59:51Z,ci(pre-commit): add autoupdate workflow,1,12,3,112
+1127167199,3051,awf-autoware-bot[bot],2022-11-18T08:00:46Z,ci(pre-commit-optional): autoupdate,1,15,1,2
+1127167269,3052,awf-autoware-bot[bot],2022-11-18T08:00:50Z,ci(pre-commit-ansible): autoupdate,1,13,1,2
+1130800080,3059,awf-autoware-bot[bot],2022-11-22T00:10:22Z,ci(pre-commit-ansible): autoupdate,1,16,1,2
+1135637618,3070,angry-crab,2022-11-25T08:05:18Z,feat(docker): add opencl vendor,2,15,1,5
+1140183366,3084,kenji-miyake,2022-11-30T10:59:02Z,build(CUDA): upgrade CUDA versions,3,21,3,33
+1140189794,3085,kenji-miyake,2022-11-30T11:04:19Z,chore(.gitignore): ignore CodeChecker files,1,12,1,3
+1140251709,3086,kenji-miyake,2022-11-30T11:58:38Z,WIP: test Rolling,3,17,6,95
+1140265619,3087,kenji-miyake,2022-11-30T12:09:26Z,ci: refactor workflows,2,15,4,85
+1140316942,3088,kenji-miyake,2022-11-30T12:52:57Z,ci(docker-build-and-push): use dpkg --print-architecture,1,15,2,18
+1140341518,3089,kenji-miyake,2022-11-30T13:11:40Z,feat(ansible): verify OS before running playbooks,2,14,2,11
+1140430602,3090,kenji-miyake,2022-11-30T14:22:28Z,ci(docker-build-and-push): fix the order of steps,1,18,2,12
+1140451701,3091,kenji-miyake,2022-11-30T14:36:18Z,ci: remove Humble CI workflows,1,15,4,210
+1140556298,3092,kenji-miyake,2022-11-30T15:53:21Z,ci: refactor workflows to be OS/distro independent like #3087,3,17,7,108
+1140640930,3093,kenji-miyake,2022-11-30T17:01:58Z,docs(ansible): simplify manual installation steps,1,16,6,24
+1141191174,3094,kenji-miyake,2022-12-01T02:39:25Z,ci(pre-commit): update commit message,1,19,1,2
+1141804968,3098,kenji-miyake,2022-12-01T12:48:37Z,ci(mirror-main-branch): add a new workflow to mirror the main branch to the main distro branch,1,19,1,15
+1142681141,3099,kenji-miyake,2022-12-02T03:05:31Z,ci(update-tool-versions): update clang-format version check,2,16,3,11
+1143891517,3102,awf-autoware-bot[bot],2022-12-03T00:03:37Z,chore: update tool versions,1,16,2,4
+1144506882,3103,awf-autoware-bot[bot],2022-12-04T00:10:46Z,ci(pre-commit-ansible): autoupdate,1,28,1,2
+1145539086,3104,mitsudome-r,2022-12-05T01:55:09Z,fix(.webauto-ci): update Webauto CI for humble,1,28,1,2
+1145540790,3105,mitsudome-r,2022-12-05T01:57:25Z,fix(.webauto-ci): update Webauto CI for humble,1,28,1,2
+1161316340,3131,pre-commit-ci[bot],2022-12-12T17:29:27Z,ci(pre-commit): autoupdate,1,15,1,10
+1174601804,3160,kenji-miyake,2022-12-22T06:15:56Z,chore(pre-commit workflows): add comments to recommend using pre-commit.ci,1,19,2,4
+1222765917,3239,VRichardJP,2023-01-31T06:04:42Z,fix(docker): replace ADD by RUN curl,1,17,1,8
+1222799594,3241,VRichardJP,2023-01-31T06:42:11Z,fix(docker): force docker image building without cache,1,17,1,2
+1228322153,3247,xmfcx,2023-02-03T15:45:54Z,chore: add .fdignore file to allow fd in src,1,16,1,1
+1229510178,3251,wep21,2023-02-05T16:25:39Z,ci(actions): add set cuda path action,1,15,1,13
+1229789528,3253,VRichardJP,2023-02-06T03:28:48Z,feat(docker): add --no-prebuilt option to skip prebuilt,1,17,1,14
+1234273043,3261,rsasaki0109,2023-02-08T23:15:33Z,feat(repos): add gnss/imu localizer,6,17,1,12
+1234395864,3263,kenji-miyake,2023-02-09T01:40:19Z,ci(pre-commit): disable autoupdate,1,16,1,1
+1234399154,3264,kenji-miyake,2023-02-09T01:46:03Z,ci(pre-commit-autoupdate): enable also for public repositories,1,15,1,1
+1234477213,3265,kyoichi-sugahara,2023-02-09T03:28:04Z,feat(repos): add scenario_simulator_v2_msgs to repos,2,17,1,4
+1235380109,3266,wep21,2023-02-09T16:15:31Z,feat(autoware.repos): add cuda api wrappers,2,18,1,4
+1244562607,3276,isamu-takagi,2023-02-17T02:28:18Z,chore(clang-format): change format of short function,1,19,1,1
+1253492416,3287,esteve,2023-02-24T15:48:40Z,fix: add pacmod3_msgs repository for pacmod_interface,1,15,1,4
+1254913230,3290,taikitanaka3,2023-02-27T06:13:56Z,fix(setup): install pip in the setup script,1,21,1,7
+1258105467,3297,caiyuexiang,2023-03-01T03:25:18Z,feat(setup): change option --no-dev to --runtime,1,19,1,9
+1260603316,3303,kazuki0824,2023-03-02T15:02:56Z,fix(docker):  avoid empty string in bake's arguments when `targets` not specified,4,18,1,7
+1261353011,3305,awf-autoware-bot[bot],2023-03-03T01:48:25Z,ci(pre-commit): autoupdate,1,15,1,6
+1261410764,3306,sykwer,2023-03-03T03:23:59Z,feat(repos): add heaphook to repos,2,15,1,5
+1264924793,3312,pre-commit-ci[bot],2023-03-06T17:45:20Z,[pre-commit.ci] pre-commit autoupdate,1,16,1,14
+1269077544,3327,shmpwk,2023-03-09T07:53:22Z,fix(docker/build.sh): args prebuilt_base_image,1,0,1,1
