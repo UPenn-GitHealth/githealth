@@ -1,4 +1,4 @@
-#!/Users/zainkhan/Desktop/GitHealth/githealth_venv/bin/python3.11
+#!/Users/zainkhan/Desktop/UPenn-GitHealth/githealth/githealth_venv/bin/python3.11
 # -*- coding: utf-8 -*-
 import re
 import sys
