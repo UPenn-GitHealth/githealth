@@ -1,0 +1,18 @@
+## Issues Data Fields : `issues_{year}_new.csv`
+
+| Column Name                        | Description                                                                                                                                                                               |
+|------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `issues_title`                     | Title of the GitHub issue. Each row represents an issue, and this column holds the title for each issue.                                                                                   |
+| `issues_created_at`                | Timestamp indicating when the GitHub issue was created.                                                                                                                                   |
+| `issues_thread_id`                 | Unique ID assigned to each GitHub issue. This ID helps in uniquely identifying and tracking each issue.                                                                                    |
+| `issues_comment_id`                | Unique ID assigned to each comment in the GitHub issue. If there are no comments (i.e., `issues_no_of_comments` is 0), this field would be an empty string for threads without comments and the original comment ID for comments and replies. |
+| `issues_comment_type`              | Indicates whether the comment is a top-level comment ("questioned") or a reply ("answered").                                                                                               |
+| `issues_comment_text`              | The text of the comment or reply.                                                                                                                                                          |
+| `issues_comment_author`            | User ID of the author who made the comment or reply.                                                                                                                                      |
+| `issues_time_to_close`             | Time taken to close the GitHub issue in seconds. If the issue is not closed, this field would be None.                                                                                    |
+| `issues_time_to_first_response`    | Time taken for the first response in the GitHub issue in seconds. If there is no response, this field would be None.                                                                      |
+| `issues_no_of_comments`            | Number of comments in the GitHub issue. If there are no comments, it would be 0.                                                                                                         |
+| `issues_commits`                   | Number of commits associated with a pull request (PR) linked to the issue. If the issue is not a PR, this field would be 0.                                                                |
+| `issues_checks`                    | Number of checks (e.g., CI/CD checks) associated with a PR linked to the issue. If the issue is not a PR, this field would be 0.                                                           |
+| `issues_files_changed`             | Number of files changed in the PR linked to the issue. If the issue is not a PR, this field would be 0.                                                                                  |
+| `issues_lines_changed`             | Number of lines changed in the PR linked to the issue. If the issue is not a PR, this field would be 0.                                                                                  |
