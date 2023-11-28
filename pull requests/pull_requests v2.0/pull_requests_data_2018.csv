@@ -1,0 +1,1095 @@
+pull_request_id,pull_request_number,pull_request_user_id,pull_request_created_at,pull_request_title,pull_request_commits,pull_request_checks,pull_request_files_changed,pull_request_lines_changed,comment_id,comment_created_at,comment_text,comment_author,comment_parent_id
+240942612,1815,yukkysaito,2018-12-26T08:55:35Z,Feature/shape estimation,41,1,38,2450,248217120,2019-01-16T10:00:07Z,@yukkysaito is this function a placeholder for something else in the future?,sgermanserrano,
+240942612,1815,yukkysaito,2018-12-26T08:55:35Z,Feature/shape estimation,41,1,38,2450,248221990,2019-01-16T10:14:44Z,Indeed. The idea is to support in the future different “shapes” to estimate their pose.,amc-nu,248217120
+240942612,1815,yukkysaito,2018-12-26T08:55:35Z,Feature/shape estimation,41,1,38,2450,248222442,2019-01-16T10:16:07Z,"OK, might be worth adding a comment with a brief explanation for clarity",sgermanserrano,248217120
+240942612,1815,yukkysaito,2018-12-26T08:55:35Z,Feature/shape estimation,41,1,38,2450,248243190,2019-01-16T11:19:21Z,@amc-nu thank you.https://github.com/CPFL/Autoware/pull/1815/commits/c6da6036a2a8c1159a3892579fdb556fac39fee9,yukkysaito,248217120
+240723947,1808,amc-nu,2018-12-24T05:53:07Z,[fix] CMake error & warning fixes on develop,3,1,3,103,244786545,2019-01-02T16:39:42Z,"We can just use these two lines and it'll work:
+
+```
+     find_package(catkin REQUIRED)
+     catkin_package()
+```
+
+That way we don't have to find the message packages.",esteve,
+240723947,1808,amc-nu,2018-12-24T05:53:07Z,[fix] CMake error & warning fixes on develop,3,1,3,103,244787075,2019-01-02T16:41:21Z,"This will declare a new exported library, but it won't exist unless we're building for the DrivePX",esteve,
+240723947,1808,amc-nu,2018-12-24T05:53:07Z,[fix] CMake error & warning fixes on develop,3,1,3,103,245010181,2019-01-03T14:10:48Z,"@esteve Thanks for checking this. ~Is it ok to remove the definition?
+I don't have a PX nor multiple gmsl cameras to test.
+Can you confirm it is safe?~
+Sorry, I was only looking only at a part of the review.",amc-nu,244786545
+240723947,1808,amc-nu,2018-12-24T05:53:07Z,[fix] CMake error & warning fixes on develop,3,1,3,103,245013252,2019-01-03T14:21:52Z,"Sorry again, but I don't follow the suggestion.
+So you say we add 
+```
+find_package(catkin REQUIRED)
+catkin_package()
+```
+with no packages at the beggining.
+
+And, then again, `find_package` and `catkin_package` with the corresponding packages inside the `if`?",amc-nu,244786545
+240723947,1808,amc-nu,2018-12-24T05:53:07Z,[fix] CMake error & warning fixes on develop,3,1,3,103,245029281,2019-01-03T15:13:51Z,Sorry I wasn't clearer. I meant adding those two lines after the `else()` statement in https://github.com/CPFL/Autoware/blob/develop/ros/src/driveworks/packages/autoware_driveworks_gmsl_interface/CMakeLists.txt#L93,esteve,244786545
+240723947,1808,amc-nu,2018-12-24T05:53:07Z,[fix] CMake error & warning fixes on develop,3,1,3,103,245029778,2019-01-03T15:15:14Z,I see. I agree with that option.,amc-nu,244787075
+239139243,1784,TheodoreRTG,2018-12-17T13:11:23Z,Removing CUDA dependencies for Darknet Yolov3,9,1,1,117,247129721,2019-01-11T14:19:58Z,"I think the $ is missing
+```suggestion
+ELSEIF(EXISTS ""$ENV{HOME}/darknet"")
+```",sgermanserrano,
+239139243,1784,TheodoreRTG,2018-12-17T13:11:23Z,Removing CUDA dependencies for Darknet Yolov3,9,1,1,117,249774057,2019-01-22T13:16:52Z,s/simalar/similar/,filiperinaldi,
+239139243,1784,TheodoreRTG,2018-12-17T13:11:23Z,Removing CUDA dependencies for Darknet Yolov3,9,1,1,117,249821671,2019-01-22T15:13:40Z,Remove extra indent.,filiperinaldi,
+238397883,1778,sujiwo,2018-12-13T13:54:42Z,Offline Tools,11,0,25,2188,256681622,2019-02-14T03:43:32Z,"travis Use CMake 2.8.12.2
+Can you change this line to 2.8.3 ??",hakuturu583,
+238397883,1778,sujiwo,2018-12-13T13:54:42Z,Offline Tools,11,0,25,2188,256682075,2019-02-14T03:46:41Z,apply clang-format.,hakuturu583,
+238397883,1778,sujiwo,2018-12-13T13:54:42Z,Offline Tools,11,0,25,2188,256682157,2019-02-14T03:47:16Z,You made this code in 2015???,hakuturu583,
+238397883,1778,sujiwo,2018-12-13T13:54:42Z,Offline Tools,11,0,25,2188,256682268,2019-02-14T03:48:05Z,Please write LICENCE,hakuturu583,
+238397883,1778,sujiwo,2018-12-13T13:54:42Z,Offline Tools,11,0,25,2188,259183432,2019-02-22T01:26:06Z,Good!,hakuturu583,256681622
+238397883,1778,sujiwo,2018-12-13T13:54:42Z,Offline Tools,11,0,25,2188,259183971,2019-02-22T01:29:10Z,confirmed.,hakuturu583,256682157
+238286256,1774,k0suke-murakami,2018-12-13T07:11:19Z,[Feature] costmap generator,149,0,23,2085,263797759,2019-03-08T14:37:04Z,"@cirpue49 `autoware_msgs::DetectedObject in_object;` is used in multiple tests, although its `convex_hull` member varies you can declare it `in_object` as part of  the TestSuite and initialise `header.frame_id`, `pose`, `score`, `orientation` and `dimensions` in the SetUp since they seem to be the same and clear the `convex_hull` contents in TearDown so that it is fresh for each test.
+The `pose` can be overwritten in the last test where it is different.",sgermanserrano,
+238286256,1774,k0suke-murakami,2018-12-13T07:11:19Z,[Feature] costmap generator,149,0,23,2085,264096426,2019-03-11T05:40:03Z,"Could you check the latest commit?
+Added some scripts in SetUp function.",k0suke-murakami,263797759
+238286256,1774,k0suke-murakami,2018-12-13T07:11:19Z,[Feature] costmap generator,149,0,23,2085,264140023,2019-03-11T09:11:29Z,"@k0suke-murakami `autoware_msgs::DetectedObject in_object;` are not used any more, can you remove them? I'll approve so it can be merged when they are removed",sgermanserrano,
+238286256,1774,k0suke-murakami,2018-12-13T07:11:19Z,[Feature] costmap generator,149,0,23,2085,264153956,2019-03-11T09:48:52Z,"Thank you for checking!
+I deleted unnecessary `in_object`. ",k0suke-murakami,264140023
+235736979,1762,alexandrx,2018-12-04T09:35:27Z,Feature/kitti2bag,6,0,7,283,249612175,2019-01-22T00:53:54Z,this shouldn't be here,amc-nu,
+235736979,1762,alexandrx,2018-12-04T09:35:27Z,Feature/kitti2bag,6,0,7,283,249612226,2019-01-22T00:54:17Z,can you please change the license to Apache2?,amc-nu,
+235736979,1762,alexandrx,2018-12-04T09:35:27Z,Feature/kitti2bag,6,0,7,283,249612312,2019-01-22T00:54:45Z,please add the python dependencies to `package.xml`,amc-nu,
+235736979,1762,alexandrx,2018-12-04T09:35:27Z,Feature/kitti2bag,6,0,7,283,249612432,2019-01-22T00:55:49Z,can you please merge develop branch ? to fix this and the submodules conflict,amc-nu,
+235726311,1761,alexandrx,2018-12-04T08:59:13Z,Feature/pointcloud renaming in bag,6,0,6,264,248505344,2019-01-17T00:46:32Z,@alexandrx why did you change these?,amc-nu,
+235726311,1761,alexandrx,2018-12-04T08:59:13Z,Feature/pointcloud renaming in bag,6,0,6,264,248505709,2019-01-17T00:48:35Z,these changes shouldn't be here,amc-nu,
+235726311,1761,alexandrx,2018-12-04T08:59:13Z,Feature/pointcloud renaming in bag,6,0,6,264,248506184,2019-01-17T00:51:18Z,These dependencies should be added to the `package.xml`,amc-nu,
+235713518,1760,alexandrx,2018-12-04T08:07:16Z,Feature/rosbag play options,5,0,1,16,248504298,2019-01-17T00:41:13Z,"@alexandrx why these blank spaces?
+when I try to play is causing the playback to never start.",amc-nu,
+235713518,1760,alexandrx,2018-12-04T08:07:16Z,Feature/rosbag play options,5,0,1,16,261943556,2019-03-04T07:24:16Z,"The blank spaces were to force the textfield to render with some minimum length.
+It does play! Even if you keep blank spaces there is no problem.",alexandrx,248504298
+235066330,1754,sgermanserrano,2018-11-30T17:48:47Z,Feature/gitlab ci branch in artifact name,4,0,1,17,238191741,2018-12-03T09:24:02Z,"@sgermanserrano Could you add a comment here explaining what this does, it doesn't seem to be very clear. What is `CI_COMMIT_REF_NAME`? What is `COMMIT_REF_NAME` being used for? What sort of values are stored there? Branch names? Commit ids?",esteve,
+235066330,1754,sgermanserrano,2018-11-30T17:48:47Z,Feature/gitlab ci branch in artifact name,4,0,1,17,238198387,2018-12-03T09:43:59Z,@esteve I have made an update to address the comment,sgermanserrano,238191741
+235066330,1754,sgermanserrano,2018-11-30T17:48:47Z,Feature/gitlab ci branch in artifact name,4,0,1,17,238199168,2018-12-03T09:46:07Z,Thanks.,esteve,238191741
+233868885,1744,sgermanserrano,2018-11-27T11:07:45Z,Feature/test state machine lib,66,0,10,389,240945006,2018-12-12T09:51:37Z,"This is a bit fragile, why do you need to check `std::cout`? You could create a fixture that gets updated when a state transition or whatever the state machine does.",esteve,
+233868885,1744,sgermanserrano,2018-11-27T11:07:45Z,Feature/test state machine lib,66,0,10,389,241095091,2018-12-12T16:47:22Z,"@esteve the tests have been updated, please have a look now. Thanks!",sgermanserrano,240945006
+233868885,1744,sgermanserrano,2018-11-27T11:07:45Z,Feature/test state machine lib,66,0,10,389,241101592,2018-12-12T17:03:25Z,"Looks good. I'd go further and remove `showStateName()` from the State API, so as to separate the logic from the UI (in this case the console). It's only being used in one place https://github.com/sgermanserrano/Autoware/blob/feature/test_state_machine_lib/ros/src/common/libs/state_machine_lib/src/state_context.cpp#L142",esteve,240945006
+233868885,1744,sgermanserrano,2018-11-27T11:07:45Z,Feature/test state machine lib,66,0,10,389,251762227,2019-01-29T09:56:21Z,"This can be rewritten as:
+
+```TestClass() : counter_(0) {}```",esteve,
+233868885,1744,sgermanserrano,2018-11-27T11:07:45Z,Feature/test state machine lib,66,0,10,389,251764168,2019-01-29T10:01:28Z,"Returning a const reference here should be slighty faster and it's safer to declare the method as const:
+
+```const std::string & getStateName(void) const```",esteve,
+233601684,1741,esteve,2018-11-26T15:40:14Z,Switch to Apache 2 license (develop branch),7,0,347,12683,245551912,2019-01-07T05:27:07Z,These two lines should not be deleted. I'll create a pull request https://github.com/esteve/Autoware/pull/4 that revert these lines.,kfunaoka,
+233601684,1741,esteve,2018-11-26T15:40:14Z,Switch to Apache 2 license (develop branch),7,0,347,12683,245613115,2019-01-07T10:44:10Z,Merged. Thanks!,esteve,245551912
+233601684,1741,esteve,2018-11-26T15:40:14Z,Switch to Apache 2 license (develop branch),7,0,347,12683,245638455,2019-01-07T12:31:48Z,@esteve esteve#4 might be reverted somewhere until 73fa239?,kfunaoka,
+233601684,1741,esteve,2018-11-26T15:40:14Z,Switch to Apache 2 license (develop branch),7,0,347,12683,245645365,2019-01-07T13:01:54Z,"I've readded your change in https://github.com/CPFL/Autoware/pull/1741/commits/0d8692c57aaf8b04536f1840a75c641483e9fc52 I'm sorry, I think I force-pushed an older version. Thanks for catching it.",esteve,245638455
+230826600,1720,sgermanserrano,2018-11-14T13:00:43Z,Feature/gitlab ci add retry,3,0,1,4,235679596,2018-11-22T10:47:16Z,There's a trailing whitespace here.,esteve,
+230826600,1720,sgermanserrano,2018-11-14T13:00:43Z,Feature/gitlab ci add retry,3,0,1,4,235875022,2018-11-23T09:00:37Z,Removed :),sgermanserrano,235679596
+229699520,1704,esteve,2018-11-09T13:49:53Z,Use colcon as the build tool,9,0,119,1062,239846645,2018-12-07T15:31:32Z,@esteve Please add comment explaining these 2 lines,sgermanserrano,
+229699520,1704,esteve,2018-11-09T13:49:53Z,Use colcon as the build tool,9,0,119,1062,239888146,2018-12-07T17:37:52Z,Done in https://github.com/CPFL/Autoware/pull/1704/commits/f018965126d482722d3f5c1fcc6ab0f7f935a7d6,esteve,239846645
+228419880,1689,esteve,2018-11-05T16:51:32Z,Replace module_comm_msgs with automotive_platform_msgs,1,0,6,71,233391439,2018-11-14T10:30:44Z,"```suggestion
+	url = https://github.com/CPFL/robosense
+[submodule ""automotive_autonomy_msgs""]
+        path = automotive_autonomy_msgs
+        url = git@github.com:astuff/automotive_autonomy_msgs.git
+```",aohsato,
+228419880,1689,esteve,2018-11-05T16:51:32Z,Replace module_comm_msgs with automotive_platform_msgs,1,0,6,71,233394363,2018-11-14T10:39:28Z,"Now that these packages have been released into the ROS index, the following will install the binary packages so we no longer need the submodule:
+
+```
+rosdep install --from-paths src --ignore-src --rosdistro $ROS_DISTRO
+```",esteve,233391439
+228419880,1689,esteve,2018-11-05T16:51:32Z,Replace module_comm_msgs with automotive_platform_msgs,1,0,6,71,233395916,2018-11-14T10:43:56Z,"I got it! In my environment, I need `rosdep update` once. Greatly thanks.
+",aohsato,233391439
+228213952,1685,k0suke-murakami,2018-11-05T00:12:46Z,[Feature] Robust Adaptive UKF,30,1,8,1135,242028287,2018-12-17T05:17:52Z,"```suggestion
+      estimated_z << x_ctrv_(0), x_ctrv_(1), x_ctrv_(3);
+```",yn-mrse,
+228213952,1685,k0suke-murakami,2018-11-05T00:12:46Z,[Feature] Robust Adaptive UKF,30,1,8,1135,242028318,2018-12-17T05:18:19Z,"```suggestion
+      estimated_z << x_cv_(0), x_cv_(1), x_cv_(3);
+```",yn-mrse,
+228213952,1685,k0suke-murakami,2018-11-05T00:12:46Z,[Feature] Robust Adaptive UKF,30,1,8,1135,242028424,2018-12-17T05:19:14Z,"```suggestion
+      estimated_z << x_rm_(0), x_rm_(1), x_rm_(3);
+```",yn-mrse,
+228213952,1685,k0suke-murakami,2018-11-05T00:12:46Z,[Feature] Robust Adaptive UKF,30,1,8,1135,252367538,2019-01-30T17:52:13Z,"@cirpue49 The CI error comes from this block, _s_ is being initialized by _Eigen::VectorXd_ shouldn't it be _Eigen::MatrixXd_?",sgermanserrano,
+228213952,1685,k0suke-murakami,2018-11-05T00:12:46Z,[Feature] Robust Adaptive UKF,30,1,8,1135,259702341,2019-02-25T07:32:51Z,"You are right.
+Thank you for your comment!",k0suke-murakami,252367538
+227943976,1683,esteve,2018-11-02T13:55:04Z,Feature/gmsl multiple (v2),15,0,26,2273,231377684,2018-11-07T04:28:09Z,I'm not sure these comments are necessary.,kfunaoka,
+226806107,1671,k0suke-murakami,2018-10-30T06:30:26Z,[Feature] Evaluating tracking accuracy based on KITTI data,16,1,3,67,229969816,2018-11-01T08:31:08Z,"You can abbreviate the code by using tf::getYaw in ""tf/transform_datatypes.h"".
+http://docs.ros.org/melodic/api/tf/html/c++/transform__datatypes_8h.html",yn-mrse,
+226806107,1671,k0suke-murakami,2018-10-30T06:30:26Z,[Feature] Evaluating tracking accuracy based on KITTI data,16,1,3,67,229986937,2018-11-01T09:44:21Z,"I fixed here by using tf::getYaw. Plus, added benchmark description in README.md",k0suke-murakami,229969816
+225291044,1640,hakuturu583,2018-10-24T07:21:23Z,enables to use tf2 in concat filter,2,1,3,145,227735069,2018-10-24T10:40:22Z,Is tf package still necessary?,yk-fujii,
+225291044,1640,hakuturu583,2018-10-24T07:21:23Z,enables to use tf2 in concat filter,2,1,3,145,227735177,2018-10-24T10:40:46Z,"Is tf package still necessary?
+",yk-fujii,
+225291044,1640,hakuturu583,2018-10-24T07:21:23Z,enables to use tf2 in concat filter,2,1,3,145,227735607,2018-10-24T10:42:20Z,Did you use clang-format?,yk-fujii,
+225291044,1640,hakuturu583,2018-10-24T07:21:23Z,enables to use tf2 in concat filter,2,1,3,145,228393907,2018-10-26T03:03:37Z,this is because other node in this package depends on tf. (cloud_transformer etc...),hakuturu583,227735069
+225291044,1640,hakuturu583,2018-10-24T07:21:23Z,enables to use tf2 in concat filter,2,1,3,145,228393915,2018-10-26T03:03:41Z,this is because other node in this package depends on tf. (cloud_transformer etc...),hakuturu583,227735177
+225291044,1640,hakuturu583,2018-10-24T07:21:23Z,enables to use tf2 in concat filter,2,1,3,145,228394322,2018-10-26T03:07:16Z,apply clang-format,hakuturu583,227735607
+223483053,1616,k0suke-murakami,2018-10-17T06:32:16Z,[Feature] Prediction package template (naive_motion_predictor),7,1,13,569,225800754,2018-10-17T07:05:15Z,Variable name is important. The reader will drop off what `bb` and `dd` mean in the function.,kfunaoka,
+223483053,1616,k0suke-murakami,2018-10-17T06:32:16Z,[Feature] Prediction package template (naive_motion_predictor),7,1,13,569,225803272,2018-10-17T07:15:05Z,Let's insert video,kfunaoka,
+223483053,1616,k0suke-murakami,2018-10-17T06:32:16Z,[Feature] Prediction package template (naive_motion_predictor),7,1,13,569,225805031,2018-10-17T07:21:56Z,which video?,kfunaoka,
+223483053,1616,k0suke-murakami,2018-10-17T06:32:16Z,[Feature] Prediction package template (naive_motion_predictor),7,1,13,569,225809604,2018-10-17T07:37:23Z,What is `4`? Magic number should be avoided.,kfunaoka,
+223483053,1616,k0suke-murakami,2018-10-17T06:32:16Z,[Feature] Prediction package template (naive_motion_predictor),7,1,13,569,225814341,2018-10-17T07:51:51Z,const auto& is better to avoid data copy.,kfunaoka,
+223483053,1616,k0suke-murakami,2018-10-17T06:32:16Z,[Feature] Prediction package template (naive_motion_predictor),7,1,13,569,225864500,2018-10-17T10:17:07Z,"Please check the function. It is not too long. 
+So reader would not forget what dd is.
+",k0suke-murakami,225800754
+223483053,1616,k0suke-murakami,2018-10-17T06:32:16Z,[Feature] Prediction package template (naive_motion_predictor),7,1,13,569,225864897,2018-10-17T10:18:33Z,Added comment for this code ,k0suke-murakami,225809604
+223483053,1616,k0suke-murakami,2018-10-17T06:32:16Z,[Feature] Prediction package template (naive_motion_predictor),7,1,13,569,225869581,2018-10-17T10:34:28Z,but will modify here ,k0suke-murakami,225800754
+223483053,1616,k0suke-murakami,2018-10-17T06:32:16Z,[Feature] Prediction package template (naive_motion_predictor),7,1,13,569,225872076,2018-10-17T10:43:09Z,I sure did.,k0suke-murakami,225803272
+223483053,1616,k0suke-murakami,2018-10-17T06:32:16Z,[Feature] Prediction package template (naive_motion_predictor),7,1,13,569,225872351,2018-10-17T10:44:02Z,I did change for clarification,k0suke-murakami,225800754
+223483053,1616,k0suke-murakami,2018-10-17T06:32:16Z,[Feature] Prediction package template (naive_motion_predictor),7,1,13,569,225872556,2018-10-17T10:44:38Z,"It is not a good idea to change the policy based on function length. Please note that reading code consumes 10, 100, or more times than writing code. The mind making code more readable extends Autoware world :)",kfunaoka,225800754
+223218282,1610,esteve,2018-10-16T11:46:33Z,Fix/split autoware msgs config can,4,0,148,1317,225822727,2018-10-17T08:18:16Z,Thanks! Adding .msg will fix the Travis error.,kfunaoka,
+223218282,1610,esteve,2018-10-16T11:46:33Z,Fix/split autoware msgs config can,4,0,148,1317,225831026,2018-10-17T08:42:09Z,Fixed. Thanks!,esteve,225822727
+223218282,1610,esteve,2018-10-16T11:46:33Z,Fix/split autoware msgs config can,4,0,148,1317,226612975,2018-10-19T11:20:16Z,Shouldn’t this one be SSD according to the naming it’s currently being used?,amc-nu,
+223218282,1610,esteve,2018-10-16T11:46:33Z,Fix/split autoware msgs config can,4,0,148,1317,226613094,2018-10-19T11:20:48Z,Also this one DPM,amc-nu,
+223218282,1610,esteve,2018-10-16T11:46:33Z,Fix/split autoware msgs config can,4,0,148,1317,226613251,2018-10-19T11:21:31Z,"Here as well
+KF",amc-nu,
+223218282,1610,esteve,2018-10-16T11:46:33Z,Fix/split autoware msgs config can,4,0,148,1317,226613586,2018-10-19T11:22:52Z,Also here NDT,amc-nu,
+223218282,1610,esteve,2018-10-16T11:46:33Z,Fix/split autoware msgs config can,4,0,148,1317,226846279,2018-10-21T03:00:52Z,@funaoka Then in that case this would be wrong.,amc-nu,
+223218282,1610,esteve,2018-10-16T11:46:33Z,Fix/split autoware msgs config can,4,0,148,1317,226846364,2018-10-21T03:08:49Z,"@amc-nu I think 3rd choice is not a good idea. 1st and 2nd choices are the fastest way.
+
+1. Merge this pull request as is, and then fix name in another pull request
+1. Merge this pull request with fixing name
+1. Revert the fixing name, and then fix name in another pull request",kfunaoka,226846279
+223218282,1610,esteve,2018-10-16T11:46:33Z,Fix/split autoware msgs config can,4,0,148,1317,226846498,2018-10-21T03:19:25Z,"I think it would be easier to just change the names in this PR
+
+These lines are already being changed.
+
+What do you think?",amc-nu,226846279
+223218282,1610,esteve,2018-10-16T11:46:33Z,Fix/split autoware msgs config can,4,0,148,1317,226846717,2018-10-21T03:38:04Z,"Both are good, I think :)
+
+Depending on esteve?",kfunaoka,226846279
+223218282,1610,esteve,2018-10-16T11:46:33Z,Fix/split autoware msgs config can,4,0,148,1317,226942884,2018-10-22T09:29:36Z,"I'd rather merge this as is. There are other naming issues that need to be addressed as well (e.g. Ros vs ROS), but I think they're out of scope here. I changed `CanInfo` because there were already two other messages with a different naming convention (`CANData` and `CANPacket`).",esteve,226846279
+223140061,1609,s-azumi,2018-10-16T07:21:11Z,Feature/rebuild decision maker,114,1,82,9379,229764016,2018-10-31T16:11:44Z,"This function does not specify any return value, but is it okay?",yn-mrse,
+223140061,1609,s-azumi,2018-10-16T07:21:11Z,Feature/rebuild decision maker,114,1,82,9379,229769242,2018-10-31T16:24:49Z,"If you refer to a value using ""[key]"" in std::map, there is a danger that a new element will be added if the specified key does not exist.
+Therefore, you should refer to ""at(key)"".
+```suggestion
+    return transition_map_.at(key);
+```",yn-mrse,
+223140061,1609,s-azumi,2018-10-16T07:21:11Z,Feature/rebuild decision maker,114,1,82,9379,229769356,2018-10-31T16:25:02Z,"In order to clarify that there is no change in the class member variable, you should add ""const"" to the end of the function.
+```suggestion
+  uint64_t getTansitionVal(std::string key) const
+```",yn-mrse,
+223140061,1609,s-azumi,2018-10-16T07:21:11Z,Feature/rebuild decision maker,114,1,82,9379,229771231,2018-10-31T16:29:33Z,"Considering that it is a function that has been called multiple times, 
+you should output ""const &"" without making a copy each time.
+```suggestion
+  const std::map<std::string, uint64_t>& getTransitionMap(void)
+```",yn-mrse,
+223140061,1609,s-azumi,2018-10-16T07:21:11Z,Feature/rebuild decision maker,114,1,82,9379,229774936,2018-10-31T16:39:15Z,"For the same reason as above, you should use ""at()"" for element access.
+```suggestion
+      _target_state_name = state_map_.at(transition_state_id)->getStateName();
+```",yn-mrse,
+223140061,1609,s-azumi,2018-10-16T07:21:11Z,Feature/rebuild decision maker,114,1,82,9379,229780816,2018-10-31T16:54:12Z,"Since it is confused with member variables, you should omit the underscore at the end of the variable.
+```suggestion
+  std::vector<std::string> key_list;
+```",yn-mrse,
+223140061,1609,s-azumi,2018-10-16T07:21:11Z,Feature/rebuild decision maker,114,1,82,9379,229783539,2018-10-31T17:00:49Z,Please add a line break between functions.,yn-mrse,
+223140061,1609,s-azumi,2018-10-16T07:21:11Z,Feature/rebuild decision maker,114,1,82,9379,229792104,2018-10-31T17:23:34Z,"Is this function no longer supported?
+Or is it not necessary anymore?",yn-mrse,
+223140061,1609,s-azumi,2018-10-16T07:21:11Z,Feature/rebuild decision maker,114,1,82,9379,229807650,2018-10-31T18:02:43Z,"you should omit the underscore at the end of the variable.
+```suggestion
+  static const int param_convergence_count = 10;
+```",yn-mrse,
+223140061,1609,s-azumi,2018-10-16T07:21:11Z,Feature/rebuild decision maker,114,1,82,9379,229807839,2018-10-31T18:03:10Z,"you should omit the underscore at the end of the variable.
+```suggestion
+  if (++distances_count > param_convergence_count) /* num of count to judge convergence*/
+```",yn-mrse,
+223140061,1609,s-azumi,2018-10-16T07:21:11Z,Feature/rebuild decision maker,114,1,82,9379,229825917,2018-10-31T18:53:50Z,"These constant parameters may need to be fine-tuned due to environmental conditions, mobility and waypoint specification (interval difference).
+Is not it better to use variable parameters such as ros param?",yn-mrse,
+223140061,1609,s-azumi,2018-10-16T07:21:11Z,Feature/rebuild decision maker,114,1,82,9379,229829221,2018-10-31T19:04:19Z,Future tasks should be specified in the function of pull request or managed as issue.,yn-mrse,
+223140061,1609,s-azumi,2018-10-16T07:21:11Z,Feature/rebuild decision maker,114,1,82,9379,229830233,2018-10-31T19:07:49Z,Future tasks should be specified in the function of pull request or managed as issue.,yn-mrse,
+223140061,1609,s-azumi,2018-10-16T07:21:11Z,Feature/rebuild decision maker,114,1,82,9379,229830405,2018-10-31T19:08:19Z,Future tasks should be specified in the function of pull request or managed as issue.,yn-mrse,
+223140061,1609,s-azumi,2018-10-16T07:21:11Z,Feature/rebuild decision maker,114,1,82,9379,229830788,2018-10-31T19:09:10Z,Future tasks should be specified in the function of pull request or managed as issue.,yn-mrse,
+223140061,1609,s-azumi,2018-10-16T07:21:11Z,Feature/rebuild decision maker,114,1,82,9379,229831111,2018-10-31T19:10:02Z,Future tasks should be specified in the function of pull request or managed as issue.,yn-mrse,
+223140061,1609,s-azumi,2018-10-16T07:21:11Z,Feature/rebuild decision maker,114,1,82,9379,229832380,2018-10-31T19:13:48Z,"This process is not executed, but are you leaving it?",yn-mrse,
+223140061,1609,s-azumi,2018-10-16T07:21:11Z,Feature/rebuild decision maker,114,1,82,9379,229833217,2018-10-31T19:16:34Z,"Should this message be displayed even in ""on_mode_sim""?",yn-mrse,
+223140061,1609,s-azumi,2018-10-16T07:21:11Z,Feature/rebuild decision maker,114,1,82,9379,229835243,2018-10-31T19:23:49Z,"""planner_selector_node.cpp"" and ""planner_selector.hpp"" are excluded from CMakeLists, but the files remain.
+Also, ""planner_selector.hpp"" conflicts.
+Should not they be deleted?",yn-mrse,
+223140061,1609,s-azumi,2018-10-16T07:21:11Z,Feature/rebuild decision maker,114,1,82,9379,231361953,2018-11-07T02:17:38Z,@yk-fujii Is this an unexpected change? Or delete it?,s-azumi,229764016
+223140061,1609,s-azumi,2018-10-16T07:21:11Z,Feature/rebuild decision maker,114,1,82,9379,231370160,2018-11-07T03:20:58Z,"it is not implemented yet.
+Also it is not used other nodes.
+please remove this api.",yk-fujii,229764016
+223140061,1609,s-azumi,2018-10-16T07:21:11Z,Feature/rebuild decision maker,114,1,82,9379,231373085,2018-11-07T03:46:24Z,I understand. Thank you.,s-azumi,229764016
+223140061,1609,s-azumi,2018-10-16T07:21:11Z,Feature/rebuild decision maker,114,1,82,9379,231389165,2018-11-07T06:11:47Z,"@yk-fujii 
+Is it ok to remove it?",s-azumi,229835243
+223140061,1609,s-azumi,2018-10-16T07:21:11Z,Feature/rebuild decision maker,114,1,82,9379,231396223,2018-11-07T06:52:54Z,"@yk-fujii 
+Is it ok to remove it?",s-azumi,229830788
+223140061,1609,s-azumi,2018-10-16T07:21:11Z,Feature/rebuild decision maker,114,1,82,9379,231398017,2018-11-07T07:03:32Z,Fixed.,s-azumi,229769242
+223140061,1609,s-azumi,2018-10-16T07:21:11Z,Feature/rebuild decision maker,114,1,82,9379,231398264,2018-11-07T07:04:47Z,Fixed.,s-azumi,229769356
+223140061,1609,s-azumi,2018-10-16T07:21:11Z,Feature/rebuild decision maker,114,1,82,9379,231398285,2018-11-07T07:04:54Z,Fixed.,s-azumi,229771231
+223140061,1609,s-azumi,2018-10-16T07:21:11Z,Feature/rebuild decision maker,114,1,82,9379,231398307,2018-11-07T07:05:03Z,Fixed.,s-azumi,229774936
+223140061,1609,s-azumi,2018-10-16T07:21:11Z,Feature/rebuild decision maker,114,1,82,9379,231398350,2018-11-07T07:05:20Z,Fixed.,s-azumi,229780816
+223140061,1609,s-azumi,2018-10-16T07:21:11Z,Feature/rebuild decision maker,114,1,82,9379,231398371,2018-11-07T07:05:28Z,Fixed.,s-azumi,229783539
+223114165,1606,aohsato,2018-10-16T04:49:05Z,[Fix] lidar_euclidean_cluster_detect #1604 #1605 ,4,1,3,22,225396857,2018-10-16T04:52:06Z,I think a typo was included here :P,amc-nu,
+222698924,1594,aohsato,2018-10-14T07:39:23Z,[Feature] Improve Hybrid A* planner,60,0,58,6507,231754419,2018-11-08T03:17:30Z,"
+```suggestion
+ *  Copyright (c) 2018, Nagoya University
+ *  All rights reserved.
+ *
+ *  Redistribution and use in source and binary forms, with or without
+ *  modification, are permitted provided that the following conditions are met:
+ *
+ *  * Redistributions of source code must retain the above copyright notice, this
+ *    list of conditions and the following disclaimer.
+ *
+ *  * Redistributions in binary form must reproduce the above copyright notice,
+ *    this list of conditions and the following disclaimer in the documentation
+ *    and/or other materials provided with the distribution.
+ *
+ *  * Neither the name of Autoware nor the names of its
+ *    contributors may be used to endorse or promote products derived from
+ *    this software without specific prior written permission.
+ *
+ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS ""AS IS""
+ *  AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ *  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ *  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+ *  FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ *  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+ *  OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ *  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/",kfunaoka,
+222698924,1594,aohsato,2018-10-14T07:39:23Z,[Feature] Improve Hybrid A* planner,60,0,58,6507,231754650,2018-11-08T03:19:04Z,"
+nav_msgs::Path contains vector. It seems better to return its const reference.
+```suggestion
+  const nav_msgs::Path& getPath() const
+```",kfunaoka,
+222698924,1594,aohsato,2018-10-14T07:39:23Z,[Feature] Improve Hybrid A* planner,60,0,58,6507,231754822,2018-11-08T03:20:27Z,"```suggestion
+ *  Copyright (c) 2018, Nagoya University
+ *  All rights reserved.
+ *
+ *  Redistribution and use in source and binary forms, with or without
+ *  modification, are permitted provided that the following conditions are met:
+ *
+ *  * Redistributions of source code must retain the above copyright notice, this
+ *    list of conditions and the following disclaimer.
+ *
+ *  * Redistributions in binary form must reproduce the above copyright notice,
+ *    this list of conditions and the following disclaimer in the documentation
+ *    and/or other materials provided with the distribution.
+ *
+ *  * Neither the name of Autoware nor the names of its
+ *    contributors may be used to endorse or promote products derived from
+ *    this software without specific prior written permission.
+ *
+ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS ""AS IS""
+ *  AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ *  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ *  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+ *  FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ *  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+ *  OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ *  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/",kfunaoka,
+222698924,1594,aohsato,2018-10-14T07:39:23Z,[Feature] Improve Hybrid A* planner,60,0,58,6507,231755015,2018-11-08T03:21:56Z,"```suggestion
+ *  Copyright (c) 2018, Nagoya University
+ *  All rights reserved.
+ *
+ *  Redistribution and use in source and binary forms, with or without
+ *  modification, are permitted provided that the following conditions are met:
+ *
+ *  * Redistributions of source code must retain the above copyright notice, this
+ *    list of conditions and the following disclaimer.
+ *
+ *  * Redistributions in binary form must reproduce the above copyright notice,
+ *    this list of conditions and the following disclaimer in the documentation
+ *    and/or other materials provided with the distribution.
+ *
+ *  * Neither the name of Autoware nor the names of its
+ *    contributors may be used to endorse or promote products derived from
+ *    this software without specific prior written permission.
+ *
+ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS ""AS IS""
+ *  AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ *  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ *  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+ *  FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ *  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+ *  OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ *  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/",kfunaoka,
+222698924,1594,aohsato,2018-10-14T07:39:23Z,[Feature] Improve Hybrid A* planner,60,0,58,6507,231760355,2018-11-08T04:06:51Z,"```suggestion
+ *  Copyright (c) 2018, Nagoya University
+ *  All rights reserved.
+ *
+ *  Redistribution and use in source and binary forms, with or without
+ *  modification, are permitted provided that the following conditions are met:
+ *
+ *  * Redistributions of source code must retain the above copyright notice, this
+ *    list of conditions and the following disclaimer.
+ *
+ *  * Redistributions in binary form must reproduce the above copyright notice,
+ *    this list of conditions and the following disclaimer in the documentation
+ *    and/or other materials provided with the distribution.
+ *
+ *  * Neither the name of Autoware nor the names of its
+ *    contributors may be used to endorse or promote products derived from
+ *    this software without specific prior written permission.
+ *
+ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS ""AS IS""
+ *  AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ *  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ *  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+ *  FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ *  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+ *  OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ *  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+```",kfunaoka,
+222698924,1594,aohsato,2018-10-14T07:39:23Z,[Feature] Improve Hybrid A* planner,60,0,58,6507,231760626,2018-11-08T04:09:59Z,"```suggestion
+| `Use Reverse Motion` | `use_back` | *String* | Enable backward motion in Hybrid A* search | true |
+```",kfunaoka,
+222698924,1594,aohsato,2018-10-14T07:39:23Z,[Feature] Improve Hybrid A* planner,60,0,58,6507,231760719,2018-11-08T04:10:58Z,"```suggestion
+| `Costmap Topic` | `costmap_topic` | *Bool* | Costmap topic for Hybrid-A* search | grid_map_filter_visualization/dist_wayarea |
+```",kfunaoka,
+222698924,1594,aohsato,2018-10-14T07:39:23Z,[Feature] Improve Hybrid A* planner,60,0,58,6507,231760795,2018-11-08T04:11:38Z,"```suggestion
+ *  Copyright (c) 2018, Nagoya University
+ *  All rights reserved.
+ *
+ *  Redistribution and use in source and binary forms, with or without
+ *  modification, are permitted provided that the following conditions are met:
+ *
+ *  * Redistributions of source code must retain the above copyright notice, this
+ *    list of conditions and the following disclaimer.
+ *
+ *  * Redistributions in binary form must reproduce the above copyright notice,
+ *    this list of conditions and the following disclaimer in the documentation
+ *    and/or other materials provided with the distribution.
+ *
+ *  * Neither the name of Autoware nor the names of its
+ *    contributors may be used to endorse or promote products derived from
+ *    this software without specific prior written permission.
+ *
+ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS ""AS IS""
+ *  AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ *  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ *  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+ *  FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ *  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+ *  OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ *  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+```",kfunaoka,
+222698924,1594,aohsato,2018-10-14T07:39:23Z,[Feature] Improve Hybrid A* planner,60,0,58,6507,231760853,2018-11-08T04:12:18Z,"```suggestion
+ *  Copyright (c) 2018, Nagoya University
+ *  All rights reserved.
+ *
+ *  Redistribution and use in source and binary forms, with or without
+ *  modification, are permitted provided that the following conditions are met:
+ *
+ *  * Redistributions of source code must retain the above copyright notice, this
+ *    list of conditions and the following disclaimer.
+ *
+ *  * Redistributions in binary form must reproduce the above copyright notice,
+ *    this list of conditions and the following disclaimer in the documentation
+ *    and/or other materials provided with the distribution.
+ *
+ *  * Neither the name of Autoware nor the names of its
+ *    contributors may be used to endorse or promote products derived from
+ *    this software without specific prior written permission.
+ *
+ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS ""AS IS""
+ *  AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ *  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ *  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+ *  FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ *  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+ *  OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ *  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+```",kfunaoka,
+222698924,1594,aohsato,2018-10-14T07:39:23Z,[Feature] Improve Hybrid A* planner,60,0,58,6507,231760946,2018-11-08T04:13:23Z,"```suggestion
+ *  Copyright (c) 2018, Nagoya University
+ *  All rights reserved.
+ *
+ *  Redistribution and use in source and binary forms, with or without
+ *  modification, are permitted provided that the following conditions are met:
+ *
+ *  * Redistributions of source code must retain the above copyright notice, this
+ *    list of conditions and the following disclaimer.
+ *
+ *  * Redistributions in binary form must reproduce the above copyright notice,
+ *    this list of conditions and the following disclaimer in the documentation
+ *    and/or other materials provided with the distribution.
+ *
+ *  * Neither the name of Autoware nor the names of its
+ *    contributors may be used to endorse or promote products derived from
+ *    this software without specific prior written permission.
+ *
+ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS ""AS IS""
+ *  AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ *  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ *  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+ *  FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ *  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+ *  OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ *  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+```",kfunaoka,
+222698924,1594,aohsato,2018-10-14T07:39:23Z,[Feature] Improve Hybrid A* planner,60,0,58,6507,231761159,2018-11-08T04:15:28Z,"rst requires at least the length of string
+```suggestion
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+```",kfunaoka,
+222698924,1594,aohsato,2018-10-14T07:39:23Z,[Feature] Improve Hybrid A* planner,60,0,58,6507,231761182,2018-11-08T04:15:41Z,"```suggestion
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+```",kfunaoka,
+222698924,1594,aohsato,2018-10-14T07:39:23Z,[Feature] Improve Hybrid A* planner,60,0,58,6507,231761299,2018-11-08T04:16:52Z,"```suggestion
+ *  Copyright (c) 2018, Nagoya University
+ *  All rights reserved.
+ *
+ *  Redistribution and use in source and binary forms, with or without
+ *  modification, are permitted provided that the following conditions are met:
+ *
+ *  * Redistributions of source code must retain the above copyright notice, this
+ *    list of conditions and the following disclaimer.
+ *
+ *  * Redistributions in binary form must reproduce the above copyright notice,
+ *    this list of conditions and the following disclaimer in the documentation
+ *    and/or other materials provided with the distribution.
+ *
+ *  * Neither the name of Autoware nor the names of its
+ *    contributors may be used to endorse or promote products derived from
+ *    this software without specific prior written permission.
+ *
+ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS ""AS IS""
+ *  AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ *  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ *  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+ *  FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ *  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+ *  OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ *  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+```",kfunaoka,
+222698924,1594,aohsato,2018-10-14T07:39:23Z,[Feature] Improve Hybrid A* planner,60,0,58,6507,231761542,2018-11-08T04:19:21Z,"```suggestion
+    const autoware_msgs::Waypoint& wp = global_waypoints.waypoints[index];
+```",kfunaoka,
+222698924,1594,aohsato,2018-10-14T07:39:23Z,[Feature] Improve Hybrid A* planner,60,0,58,6507,231761587,2018-11-08T04:19:48Z,"```suggestion
+ *  Copyright (c) 2018, Nagoya University
+ *  All rights reserved.
+ *
+ *  Redistribution and use in source and binary forms, with or without
+ *  modification, are permitted provided that the following conditions are met:
+ *
+ *  * Redistributions of source code must retain the above copyright notice, this
+ *    list of conditions and the following disclaimer.
+ *
+ *  * Redistributions in binary form must reproduce the above copyright notice,
+ *    this list of conditions and the following disclaimer in the documentation
+ *    and/or other materials provided with the distribution.
+ *
+ *  * Neither the name of Autoware nor the names of its
+ *    contributors may be used to endorse or promote products derived from
+ *    this software without specific prior written permission.
+ *
+ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS ""AS IS""
+ *  AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ *  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ *  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+ *  FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ *  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+ *  OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ *  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+```",kfunaoka,
+222698924,1594,aohsato,2018-10-14T07:39:23Z,[Feature] Improve Hybrid A* planner,60,0,58,6507,231761638,2018-11-08T04:20:15Z,"```suggestion
+ *  Copyright (c) 2018, Nagoya University
+ *  All rights reserved.
+ *
+ *  Redistribution and use in source and binary forms, with or without
+ *  modification, are permitted provided that the following conditions are met:
+ *
+ *  * Redistributions of source code must retain the above copyright notice, this
+ *    list of conditions and the following disclaimer.
+ *
+ *  * Redistributions in binary form must reproduce the above copyright notice,
+ *    this list of conditions and the following disclaimer in the documentation
+ *    and/or other materials provided with the distribution.
+ *
+ *  * Neither the name of Autoware nor the names of its
+ *    contributors may be used to endorse or promote products derived from
+ *    this software without specific prior written permission.
+ *
+ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS ""AS IS""
+ *  AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ *  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ *  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+ *  FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ *  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+ *  OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ *  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+```",kfunaoka,
+222698924,1594,aohsato,2018-10-14T07:39:23Z,[Feature] Improve Hybrid A* planner,60,0,58,6507,232156420,2018-11-09T06:53:35Z,Fixed,aohsato,231760626
+222698924,1594,aohsato,2018-10-14T07:39:23Z,[Feature] Improve Hybrid A* planner,60,0,58,6507,232156436,2018-11-09T06:53:44Z,Fixed,aohsato,231760719
+222698924,1594,aohsato,2018-10-14T07:39:23Z,[Feature] Improve Hybrid A* planner,60,0,58,6507,235310525,2018-11-21T09:31:20Z,"Please put ""_"" at the end of the member variable.",yn-mrse,
+222698924,1594,aohsato,2018-10-14T07:39:23Z,[Feature] Improve Hybrid A* planner,60,0,58,6507,235313259,2018-11-21T09:39:40Z,"The ""detectCollision"" function assumed the shape of the vehicle as a rectangle, why is this function assuming a square in this function?",yn-mrse,
+222698924,1594,aohsato,2018-10-14T07:39:23Z,[Feature] Improve Hybrid A* planner,60,0,58,6507,235316328,2018-11-21T09:47:58Z,"Is it thread-safe?
+Does rewriting ""state_"" occur at the same time?",yn-mrse,
+222698924,1594,aohsato,2018-10-14T07:39:23Z,[Feature] Improve Hybrid A* planner,60,0,58,6507,238762418,2018-12-04T17:29:10Z,"Struct member variables should be initialized also by the empty constructor to ensure non-random initial variable values. The same should happen with _SimpleNode_ below
+
+```suggestion
+WaveFrontNode::WaveFrontNode() : index_x(0), index_y(0), hc(0)
+```",sgermanserrano,
+222698924,1594,aohsato,2018-10-14T07:39:23Z,[Feature] Improve Hybrid A* planner,60,0,58,6507,243277064,2018-12-20T13:49:16Z,Done,aohsato,235310525
+222698924,1594,aohsato,2018-10-14T07:39:23Z,[Feature] Improve Hybrid A* planner,60,0,58,6507,243279548,2018-12-20T13:56:40Z,No deep meaning. It's experimental function and not used by default.,aohsato,235313259
+222698924,1594,aohsato,2018-10-14T07:39:23Z,[Feature] Improve Hybrid A* planner,60,0,58,6507,243281182,2018-12-20T14:01:38Z,`state_` can be changed after checking if its transition can be executed. NP.,aohsato,235316328
+221687450,1582,k0suke-murakami,2018-10-10T07:42:27Z,[Feature] DetectedObject type immukfpda,35,1,15,2298,225370314,2018-10-16T01:38:20Z,It seems this deletion is by mistake.,kfunaoka,
+221687450,1582,k0suke-murakami,2018-10-10T07:42:27Z,[Feature] DetectedObject type immukfpda,35,1,15,2298,225371482,2018-10-16T01:46:58Z,objectse -> objects,kfunaoka,
+221687450,1582,k0suke-murakami,2018-10-10T07:42:27Z,[Feature] DetectedObject type immukfpda,35,1,15,2298,225371695,2018-10-16T01:48:47Z,There is no nodes that advertise /detection/lidar_detector/objects,kfunaoka,
+221687450,1582,k0suke-murakami,2018-10-10T07:42:27Z,[Feature] DetectedObject type immukfpda,35,1,15,2298,225372474,2018-10-16T01:54:18Z,Would you add these params into README.md?,kfunaoka,
+221687450,1582,k0suke-murakami,2018-10-10T07:42:27Z,[Feature] DetectedObject type immukfpda,35,1,15,2298,225372957,2018-10-16T01:57:21Z,"Variable names are important. The code reader might be unable to understand the difference among cv, ctrv, rm.",kfunaoka,
+221687450,1582,k0suke-murakami,2018-10-10T07:42:27Z,[Feature] DetectedObject type immukfpda,35,1,15,2298,225373197,2018-10-16T01:58:51Z,"The code reader can not understand the difference between ""c"" and ""s"".",kfunaoka,
+221687450,1582,k0suke-murakami,2018-10-10T07:42:27Z,[Feature] DetectedObject type immukfpda,35,1,15,2298,225373441,2018-10-16T02:00:23Z,Function names are importamt. The reader might be unable to understand what ctrv and cv do.,kfunaoka,
+221687450,1582,k0suke-murakami,2018-10-10T07:42:27Z,[Feature] DetectedObject type immukfpda,35,1,15,2298,225373939,2018-10-16T02:03:46Z,Renaming files or directory with modification hides where real modifications are. Git has a little function to track file renaming. File renaming is not recommended with contents modification.,kfunaoka,
+221687450,1582,k0suke-murakami,2018-10-10T07:42:27Z,[Feature] DetectedObject type immukfpda,35,1,15,2298,225374149,2018-10-16T02:05:33Z,There are no nodes that advertise /detection/lidar_detector/objects,kfunaoka,
+221687450,1582,k0suke-murakami,2018-10-10T07:42:27Z,[Feature] DetectedObject type immukfpda,35,1,15,2298,225374366,2018-10-16T02:07:14Z,"range-based for is recommended where index ""i"" is used only for iterating one array.",kfunaoka,
+221687450,1582,k0suke-murakami,2018-10-10T07:42:27Z,[Feature] DetectedObject type immukfpda,35,1,15,2298,225374989,2018-10-16T02:12:03Z,end()[-ind] is not common style. It's better to use rbegin() and rend(),kfunaoka,
+221687450,1582,k0suke-murakami,2018-10-10T07:42:27Z,[Feature] DetectedObject type immukfpda,35,1,15,2298,225375976,2018-10-16T02:19:18Z,"In this function, it seems that almost same caliculations are made for cv, ctrv, and rm. Making a function might make this function simple.",kfunaoka,
+221687450,1582,k0suke-murakami,2018-10-10T07:42:27Z,[Feature] DetectedObject type immukfpda,35,1,15,2298,225376387,2018-10-16T02:21:51Z,"Is it better to use ROS API instead of standard output?
+http://wiki.ros.org/roscpp/Overview/Logging",kfunaoka,
+221687450,1582,k0suke-murakami,2018-10-10T07:42:27Z,[Feature] DetectedObject type immukfpda,35,1,15,2298,225376727,2018-10-16T02:24:02Z,cos(yaw) and sin(yaw) are calculated multiple times. It's better to use variable to save these value.,kfunaoka,
+221687450,1582,k0suke-murakami,2018-10-10T07:42:27Z,[Feature] DetectedObject type immukfpda,35,1,15,2298,225377074,2018-10-16T02:26:17Z,This statement is hard to be read. Can't we use variables or functions to make this function simple?,kfunaoka,
+221687450,1582,k0suke-murakami,2018-10-10T07:42:27Z,[Feature] DetectedObject type immukfpda,35,1,15,2298,225383591,2018-10-16T03:04:43Z,please change `lidar_detector` to `lidar_tracker` about vizualization,aohsato,
+221687450,1582,k0suke-murakami,2018-10-10T07:42:27Z,[Feature] DetectedObject type immukfpda,35,1,15,2298,225385541,2018-10-16T03:21:11Z,"@kfunaoka We don't need `lidar_`, right? Because those header names are included in directories and packages?",aohsato,
+221687450,1582,k0suke-murakami,2018-10-10T07:42:27Z,[Feature] DetectedObject type immukfpda,35,1,15,2298,225386893,2018-10-16T03:33:01Z,UPPER CASE,aohsato,
+221687450,1582,k0suke-murakami,2018-10-10T07:42:27Z,[Feature] DetectedObject type immukfpda,35,1,15,2298,225387337,2018-10-16T03:37:26Z,Why did you change transform method?,aohsato,
+221687450,1582,k0suke-murakami,2018-10-10T07:42:27Z,[Feature] DetectedObject type immukfpda,35,1,15,2298,225387706,2018-10-16T03:40:26Z,I don't see where are you using the vector map.,amc-nu,
+221687450,1582,k0suke-murakami,2018-10-10T07:42:27Z,[Feature] DetectedObject type immukfpda,35,1,15,2298,225387843,2018-10-16T03:41:57Z,"Is ""Standard"" needed?",aohsato,
+221687450,1582,k0suke-murakami,2018-10-10T07:42:27Z,[Feature] DetectedObject type immukfpda,35,1,15,2298,225388184,2018-10-16T03:44:33Z,"@aohsato @cirpue49 Finally, the name should be imm_ukf_pda because only the packages in Detection have the naming convention {lidar,vision}_name_{detect,track}, e.g., lidar_imm_ukf_pad_track. For example, ndt_matching is not lidar_ndt_matching_localize. However changing name need not be in this pull request because this pull request is not for the purpose.",kfunaoka,225385541
+221687450,1582,k0suke-murakami,2018-10-10T07:42:27Z,[Feature] DetectedObject type immukfpda,35,1,15,2298,225389274,2018-10-16T03:53:58Z,It's better to select motion model by user,aohsato,
+221687450,1582,k0suke-murakami,2018-10-10T07:42:27Z,[Feature] DetectedObject type immukfpda,35,1,15,2298,225389339,2018-10-16T03:54:33Z,I think this size check is needed in `updateIMMUKF` method too.,aohsato,
+221687450,1582,k0suke-murakami,2018-10-10T07:42:27Z,[Feature] DetectedObject type immukfpda,35,1,15,2298,225389417,2018-10-16T03:55:18Z,And this is just debugging message. Plz use `ROS_DEBUG` or remove this.,aohsato,225376387
+221687450,1582,k0suke-murakami,2018-10-10T07:42:27Z,[Feature] DetectedObject type immukfpda,35,1,15,2298,225389688,2018-10-16T03:57:53Z,For robustness?,aohsato,
+221687450,1582,k0suke-murakami,2018-10-10T07:42:27Z,[Feature] DetectedObject type immukfpda,35,1,15,2298,225390747,2018-10-16T04:07:17Z,"FYI: I found this topic. This is like HACK but Eigen style is not suitable against clang-format.
+https://stackoverflow.com/questions/36595538/clang-format-for-eigen-matrix-initialization",aohsato,225377074
+221687450,1582,k0suke-murakami,2018-10-10T07:42:27Z,[Feature] DetectedObject type immukfpda,35,1,15,2298,225642150,2018-10-16T17:44:05Z,Added to README.md,k0suke-murakami,225372474
+221687450,1582,k0suke-murakami,2018-10-10T07:42:27Z,[Feature] DetectedObject type immukfpda,35,1,15,2298,225642359,2018-10-16T17:44:45Z,"Added a comment to explain what cv, ctrv and rm are",k0suke-murakami,225372957
+221687450,1582,k0suke-murakami,2018-10-10T07:42:27Z,[Feature] DetectedObject type immukfpda,35,1,15,2298,225642581,2018-10-16T17:45:24Z,"This pr aims to change topic type.
+Definitely modifying in next pr.",k0suke-murakami,225374989
+219944041,1561,YamatoAndo,2018-10-03T07:50:13Z,Feature/voxel grid filter dynamic leaf,7,1,5,250,223202082,2018-10-07T06:16:29Z,"Line feeds should not be inserted into copyright statement. You might not use [roscpp_code_format](https://github.com/davetcoleman/roscpp_code_format). It is recommended to revert 3877f2c first, and then to use clang-format again.
+
+[ROS CppStyleGuide](http://wiki.ros.org/CppStyleGuide) says 
+```
+6.1 Line length
+Maximum line length is 120 characters.
+```
+
+and [roscpp_code_format](https://github.com/davetcoleman/roscpp_code_format) sets ColumnLimit 120.
+```
+ColumnLimit:    120
+```",kfunaoka,
+219944041,1561,YamatoAndo,2018-10-03T07:50:13Z,Feature/voxel grid filter dynamic leaf,7,1,5,250,225031989,2018-10-15T03:47:17Z,Autoware package that downsamples point cloud using 3D Voxel Grid.,kfunaoka,
+219944041,1561,YamatoAndo,2018-10-03T07:50:13Z,Feature/voxel grid filter dynamic leaf,7,1,5,250,225032137,2018-10-15T03:49:07Z,Please insert `    - ` before `Sensing Tab` for indent to align with `From a sourced terminal`,kfunaoka,
+219944041,1561,YamatoAndo,2018-10-03T07:50:13Z,Feature/voxel grid filter dynamic leaf,7,1,5,250,225032409,2018-10-15T03:52:22Z,Please use `if (!use_dynamic_leaf_size)`. Comparing with true or false is not good way because `use_dynamic_leaf_size` itself is already `bool` required in `if` condition.,kfunaoka,
+219944041,1561,YamatoAndo,2018-10-03T07:50:13Z,Feature/voxel grid filter dynamic leaf,7,1,5,250,225032506,2018-10-15T03:53:32Z,Please use `if (use_dynamic_leaf_size)` as mentioned above.,kfunaoka,
+219944041,1561,YamatoAndo,2018-10-03T07:50:13Z,Feature/voxel grid filter dynamic leaf,7,1,5,250,226140702,2018-10-18T00:58:37Z,Please use if (use_dynamic_leaf_size) as mentioned above.,kfunaoka,
+219944041,1561,YamatoAndo,2018-10-03T07:50:13Z,Feature/voxel grid filter dynamic leaf,7,1,5,250,226140871,2018-10-18T00:59:54Z,"Should we use ROS_INFO, ROS_DEBUG, etc..?",kfunaoka,
+219944041,1561,YamatoAndo,2018-10-03T07:50:13Z,Feature/voxel grid filter dynamic leaf,7,1,5,250,226140929,2018-10-18T01:00:19Z,Please use if (_output_log) as mentioned above.,kfunaoka,
+219944041,1561,YamatoAndo,2018-10-03T07:50:13Z,Feature/voxel grid filter dynamic leaf,7,1,5,250,226140965,2018-10-18T01:00:35Z,Please use if (_output_log) as mentioned above.,kfunaoka,
+219942647,1559,YamatoAndo,2018-10-03T07:44:06Z,Feature/compare map filter,8,1,9,395,222258356,2018-10-03T10:24:24Z,"miss spell?
+heigth => height",yk-fujii,
+219942647,1559,YamatoAndo,2018-10-03T07:44:06Z,Feature/compare map filter,8,1,9,395,222258601,2018-10-03T10:25:29Z,"The name has not been updated.
+",yk-fujii,
+219942647,1559,YamatoAndo,2018-10-03T07:44:06Z,Feature/compare map filter,8,1,9,395,222258806,2018-10-03T10:26:16Z,height,yk-fujii,
+219942647,1559,YamatoAndo,2018-10-03T07:44:06Z,Feature/compare map filter,8,1,9,395,222258922,2018-10-03T10:26:46Z,height,yk-fujii,
+219942647,1559,YamatoAndo,2018-10-03T07:44:06Z,Feature/compare map filter,8,1,9,395,222259468,2018-10-03T10:28:51Z,Are these comments necessary?,yk-fujii,
+219942647,1559,YamatoAndo,2018-10-03T07:44:06Z,Feature/compare map filter,8,1,9,395,223202823,2018-10-07T06:51:40Z,"Line feeds should not be inserted into copyright statement. You might not use [roscpp_code_format](https://github.com/davetcoleman/roscpp_code_format). It is recommended to revert 9586932 first, and then to use clang-format again.
+
+[ROS CppStyleGuide](http://wiki.ros.org/CppStyleGuide) says 
+```
+6.1 Line length
+Maximum line length is 120 characters.
+```
+
+and [roscpp_code_format](https://github.com/davetcoleman/roscpp_code_format) sets ColumnLimit 120.
+```
+ColumnLimit:    120
+```",kfunaoka,
+217498754,1535,amc-nu,2018-09-23T08:17:53Z,"Added support for custom class ""names files"" in darknet format.",3,0,8,196,220183984,2018-09-25T13:07:43Z,"Should ""img_src"" be deleted?",kfunaoka,
+217498754,1535,amc-nu,2018-09-23T08:17:53Z,"Added support for custom class ""names files"" in darknet format.",3,0,8,196,220468029,2018-09-26T08:24:17Z,"My mistake, fixed on latest commit",amc-nu,220183984
+215169494,1516,hakuturu583,2018-09-13T05:37:36Z,add diag_lib,1,1,37,1522,217319794,2018-09-13T09:32:52Z,Please remove unnecessary comment,yk-fujii,
+215169494,1516,hakuturu583,2018-09-13T05:37:36Z,add diag_lib,1,1,37,1522,217320344,2018-09-13T09:34:40Z,"Please remove unnecessary comment.
+Also, please fill in all with reference to the following.
+https://github.com/CPFL/Autoware/blob/master/ros/src/computing/perception/detection/fusion_tools/packages/range_vision_fusion/package.xml",yk-fujii,
+215169494,1516,hakuturu583,2018-09-13T05:37:36Z,add diag_lib,1,1,37,1522,217321005,2018-09-13T09:37:01Z,"This change log is not for the diag package.
+
+please create this one for diag packages by using catkin_generate_changelog",yk-fujii,
+215169494,1516,hakuturu583,2018-09-13T05:37:36Z,add diag_lib,1,1,37,1522,217321137,2018-09-13T09:37:25Z,please change your name and your mail,yk-fujii,
+215169494,1516,hakuturu583,2018-09-13T05:37:36Z,add diag_lib,1,1,37,1522,217321398,2018-09-13T09:38:21Z,"Add another line of your author tag.
+",yk-fujii,
+215169494,1516,hakuturu583,2018-09-13T05:37:36Z,add diag_lib,1,1,37,1522,217321480,2018-09-13T09:38:41Z,please remove unnecessary comments,yk-fujii,
+215169494,1516,hakuturu583,2018-09-13T05:37:36Z,add diag_lib,1,1,37,1522,217321590,2018-09-13T09:39:06Z,please fix,yk-fujii,
+215169494,1516,hakuturu583,2018-09-13T05:37:36Z,add diag_lib,1,1,37,1522,218283576,2018-09-18T02:30:44Z,"I think this comment is necessary.
+Another autoware nodes(ndt_maching,lidar tracker etc...) also contains this line.",hakuturu583,217321480
+215169494,1516,hakuturu583,2018-09-13T05:37:36Z,add diag_lib,1,1,37,1522,218289957,2018-09-18T03:28:36Z,remove unused lines.,hakuturu583,217319794
+215169494,1516,hakuturu583,2018-09-13T05:37:36Z,add diag_lib,1,1,37,1522,218292020,2018-09-18T03:47:43Z,Removed unnecessary comment.,hakuturu583,217320344
+215169494,1516,hakuturu583,2018-09-13T05:37:36Z,add diag_lib,1,1,37,1522,218292274,2018-09-18T03:50:09Z,remove fujii san's name from maintainer.,hakuturu583,217321137
+215169494,1516,hakuturu583,2018-09-13T05:37:36Z,add diag_lib,1,1,37,1522,218292315,2018-09-18T03:50:24Z,add my name to the author.,hakuturu583,217321398
+215169494,1516,hakuturu583,2018-09-13T05:37:36Z,add diag_lib,1,1,37,1522,218292344,2018-09-18T03:50:42Z,removed unnecessary comment.,hakuturu583,217321590
+215169494,1516,hakuturu583,2018-09-13T05:37:36Z,add diag_lib,1,1,37,1522,218292609,2018-09-18T03:53:47Z,add CHANGELOG.rst to all packages,hakuturu583,217321005
+215169494,1516,hakuturu583,2018-09-13T05:37:36Z,add diag_lib,1,1,37,1522,218405004,2018-09-18T12:09:37Z,please add to diag package only.,yk-fujii,217321005
+215169494,1516,hakuturu583,2018-09-13T05:37:36Z,add diag_lib,1,1,37,1522,218405298,2018-09-18T12:10:43Z,is this necessary?,yk-fujii,
+215169494,1516,hakuturu583,2018-09-13T05:37:36Z,add diag_lib,1,1,37,1522,218406109,2018-09-18T12:13:45Z,add build tool is ```autoware_build_flags```,yk-fujii,
+215169494,1516,hakuturu583,2018-09-13T05:37:36Z,add diag_lib,1,1,37,1522,218637328,2018-09-19T00:37:53Z,I removed this package.,hakuturu583,218405298
+215169494,1516,hakuturu583,2018-09-13T05:37:36Z,add diag_lib,1,1,37,1522,218638906,2018-09-19T00:49:13Z,"add <buildtool_depend>autoware_build_flags</buildtool_depend>
+to my packages.",hakuturu583,218406109
+211691328,1473,amc-nu,2018-08-29T09:44:48Z,Feature/beyond pixel tracker,16,1,26,7001,215490705,2018-09-06T04:15:35Z,"It works fine, but min_truck_dimensions might be forgotten.",kfunaoka,
+211691328,1473,amc-nu,2018-08-29T09:44:48Z,Feature/beyond pixel tracker,16,1,26,7001,215490908,2018-09-06T04:17:46Z,"range_vision_fusion.cpp says that the default value of mim_truck_dimensions is [2,2,4.5] that is different from here.",kfunaoka,
+211691328,1473,amc-nu,2018-08-29T09:44:48Z,Feature/beyond pixel tracker,16,1,26,7001,215491652,2018-09-06T04:26:06Z,"You can use range-based-for for more simplicity (not only here).
+https://en.cppreference.com/w/cpp/language/range-for
+
+Also discussed at https://github.com/CPFL/Autoware/pull/1400#discussion_r210462246.",kfunaoka,
+211691328,1473,amc-nu,2018-08-29T09:44:48Z,Feature/beyond pixel tracker,16,1,26,7001,215491976,2018-09-06T04:29:45Z,"It seems that this commented-out codes will be unnecessary.
+If so, the codes should be deleted not to create junk comments.
+Or is it necessary for e.g., debug?",kfunaoka,
+211691328,1473,amc-nu,2018-08-29T09:44:48Z,Feature/beyond pixel tracker,16,1,26,7001,215499167,2018-09-06T05:24:57Z,"yes, I haven't pushed that addition.",amc-nu,215490908
+211691328,1473,amc-nu,2018-08-29T09:44:48Z,Feature/beyond pixel tracker,16,1,26,7001,215499515,2018-09-06T05:27:27Z,"imo, I need to use the index to reference the vector. so instead of creating a new variable to hold the index I'm using a simple for instead of a for each (for simplicity)",amc-nu,215491652
+211691328,1473,amc-nu,2018-08-29T09:44:48Z,Feature/beyond pixel tracker,16,1,26,7001,215499920,2018-09-06T05:31:04Z,"I agree, I'll delete those",amc-nu,215491976
+211691328,1473,amc-nu,2018-08-29T09:44:48Z,Feature/beyond pixel tracker,16,1,26,7001,215518958,2018-09-06T07:18:59Z,"@amc-nu Sorry. After I wrote the following comment, I've found that this loop can't be range-based-for because in_vision_detections->objects[i] uses index information as you mentioned above.
+
+-----
+
+Because I wrote it, I'd like not to delete the following comment :)
+
+I'd like to list the merits of using range-based-for, but it's just my opinion. If you like range-based-for, please use it where range-based-for can be used in the future work :)
+
+1. In reality, index-based-for and range-based-for generate same assembly language, i.e., same performance.
+2. Range-based-for hides detail of data access.  In range-based-for, we need not manage index information, i.e., `i = 0; i < used_vision_detections.size(); i++`.
+3. Range-based-for hides detail of data access. We can change the data type (e.g., from vector to list) without modifying the loops if we want.
+4. The number of characters we type and review can be decreased in range-based for, especially in the case where a lot of array accesses exist.
+5. The reviewer can easily understand that range-based-for just iterates each elements, and it doesn't require index information in the loop.
+
+My choice between index-based-for and range-based-for is that
+
+* I'll use index-based-for everywhere index information is mandatory, e.g., (1) index is used in if-statement: if(i < XXX), (2) index is used for another element: array[i + 1].
+* I'll use range-based-for everywhere index information is unnecessary, i.e., each element is iterated for each iteration.",kfunaoka,215491652
+210609283,1466,Squigglywave,2018-08-24T00:21:48Z,tx2docker,12,1,5,360,268935797,2019-03-26T03:57:08Z,can you please remove this line?,amc-nu,
+210609283,1466,Squigglywave,2018-08-24T00:21:48Z,tx2docker,12,1,5,360,268935944,2019-03-26T03:58:09Z,"can you please replace catkin_make with colcon?
+https://github.com/autowarefoundation/autoware/wiki/Source-Build#build-with-colcon-v111-and-above",amc-nu,
+210609283,1466,Squigglywave,2018-08-24T00:21:48Z,tx2docker,12,1,5,360,268936674,2019-03-26T04:03:35Z,"@gbiggs according to [this](https://docs.nvidia.com/deeplearning/sdk/cudnn-sla/index.html#distribution)
+I think its ok to include cuDNN in binary form right?
+",amc-nu,
+210609283,1466,Squigglywave,2018-08-24T00:21:48Z,tx2docker,12,1,5,360,268953230,2019-03-26T06:05:07Z,"I'm not sure, but possibly not. The license from NVIDIA is non-transferable. Short of getting a lawyer, @esteve, any opinions?",gbiggs,268936674
+209434456,1457,k0suke-murakami,2018-08-20T07:34:18Z,Feature/naive l shape fitting,38,0,10,656,211446156,2018-08-21T00:18:01Z,"Please insert autoware_build_flags.
+https://github.com/CPFL/Autoware/wiki/Quality-Control",kfunaoka,
+209434456,1457,k0suke-murakami,2018-08-20T07:34:18Z,Feature/naive l shape fitting,38,0,10,656,211446250,2018-08-21T00:18:36Z,"Please remove -std=C++11.
+https://github.com/CPFL/Autoware/wiki/Quality-Control",kfunaoka,
+209434456,1457,k0suke-murakami,2018-08-20T07:34:18Z,Feature/naive l shape fitting,38,0,10,656,211447506,2018-08-21T00:27:58Z,"Is it possible to distribute this file under BSD 3-Clause ""New"" or ""Revised"" License?
+If yes, please insert the license terms into all the *.{h,cpp} files.",kfunaoka,
+209434456,1457,k0suke-murakami,2018-08-20T07:34:18Z,Feature/naive l shape fitting,38,0,10,656,211448609,2018-08-21T00:36:33Z,"Three questions:
+- What is m in roi_m_? Is it obvious if the reviewer read the paper described in README.md? Too short abbreviations often incur confusion.
+- Is it a good idea to define roi_m_ and pic_scale_ to be compile-time constant (i.e., constexpr)? Because there are never changed at run-time.
+- How can the reviews understand what 120 and 1800 / roi_m_ are? Are they obvious if they read the paper? If not, please explain what they are on the code. Magic number is not preferred.",kfunaoka,
+209434456,1457,k0suke-murakami,2018-08-20T07:34:18Z,Feature/naive l shape fitting,38,0,10,656,211452949,2018-08-21T01:12:13Z,"In my opinion, using cv::Point2f is better than x and y extracted not only here but also everywhere because it is easy to read. cv::Point_ implements useful operations such as operator + and operator -.
+
+Please assume that you deal in Matrix 2x2. I think the following code is not a good idea.
+```
+c_0_0 = a_0_0 + b_0_0;
+c_0_1 = a_0_1 + b_0_1;
+c_1_0 = a_1_0 + b_1_0;
+c_1_1 = a_1_1 + b_1_1;
+```
+instead of
+```
+c = a + b;
+```",kfunaoka,
+209434456,1457,k0suke-murakami,2018-08-20T07:34:18Z,Feature/naive l shape fitting,38,0,10,656,211456047,2018-08-21T01:37:03Z,"Do pc_points[0], [1], [2], and [3] have completely different meaning? If so, using constants
+```
+pc_points[MIN_M] instead of pc_points[0]    (I don't know what MIN_M and MAX_D are)
+pc_points[MAX_D] instead of pc_points[1]
+```
+or using different variables
+```
+min_m instead of pc_points[0]
+max_d instead of pc_points[1]
+...
+```
+will be a good idea. It is difficult to remember what 0, 1, 2, and 3 are.",kfunaoka,
+209434456,1457,k0suke-murakami,2018-08-20T07:34:18Z,Feature/naive l shape fitting,38,0,10,656,211456499,2018-08-21T01:41:22Z,"What does this comment mean? We can imagine dist = distance is length easily. Is this comment necessary? Or does it mean some other stuff such as e.g., dist2 is not length?",kfunaoka,
+209434456,1457,k0suke-murakami,2018-08-20T07:34:18Z,Feature/naive l shape fitting,38,0,10,656,211457825,2018-08-21T01:52:12Z,"We can use range-based https://en.cppreference.com/w/cpp/language/range-for where index information is not necessary outside accessing elements.
+https://en.cppreference.com/w/cpp/language/range-for
+
+```
+for (const auto& object : in_object_array.objects)
+```",kfunaoka,
+209434456,1457,k0suke-murakami,2018-08-20T07:34:18Z,Feature/naive l shape fitting,38,0,10,656,211458116,2018-08-21T01:54:10Z,"Please insert autoware_build_flags into buildtool_depend.
+https://github.com/CPFL/Autoware/wiki/Quality-Control",kfunaoka,
+209434456,1457,k0suke-murakami,2018-08-20T07:34:18Z,Feature/naive l shape fitting,38,0,10,656,211458304,2018-08-21T01:55:34Z,Can this line be removed? Unnecessary comments will be junk.,kfunaoka,
+209434456,1457,k0suke-murakami,2018-08-20T07:34:18Z,Feature/naive l shape fitting,38,0,10,656,211458869,2018-08-21T02:00:09Z,Is the index _i_ used in this loop? It seems that there is no need to be a loop.,kfunaoka,
+209434456,1457,k0suke-murakami,2018-08-20T07:34:18Z,Feature/naive l shape fitting,38,0,10,656,211818151,2018-08-22T03:08:52Z,It seems no reason to create pic_point. We can use rect_points[point_i] instead.,kfunaoka,
+209434456,1457,k0suke-murakami,2018-08-20T07:34:18Z,Feature/naive l shape fitting,38,0,10,656,211818357,2018-08-22T03:11:06Z,Looks like the ruleBasedFilter is not implemented in the cpp file? Thanks!,kernyan,
+209434456,1457,k0suke-murakami,2018-08-20T07:34:18Z,Feature/naive l shape fitting,38,0,10,656,211830505,2018-08-22T05:09:19Z,"- Is this calculation correct? Isn't it (vec1 \dot vec2) / (|vec1| |vec2|) ?
+- Can we use Point2d::dot and cv::norm instead of extracted x&y.",kfunaoka,
+209434456,1457,k0suke-murakami,2018-08-20T07:34:18Z,Feature/naive l shape fitting,38,0,10,656,211831499,2018-08-22T05:16:32Z,Can we use cv::norm?,kfunaoka,
+209434456,1457,k0suke-murakami,2018-08-20T07:34:18Z,Feature/naive l shape fitting,38,0,10,656,211831895,2018-08-22T05:20:00Z,"From here, it seems we can use Point2f and its operator +&- instead of individual x&y, and cv::norm.",kfunaoka,
+209126138,1451,LukePhairatt,2018-08-17T11:56:10Z,Feature/gmsl multiple,15,0,25,2351,210900025,2018-08-17T12:56:31Z,It's become a convention to add 'autoware_build_flags' as the first package.,bdholt1,
+209126138,1451,LukePhairatt,2018-08-17T11:56:10Z,Feature/gmsl multiple,15,0,25,2351,210900623,2018-08-17T12:58:41Z,"Also add `autoware_build_flags` to https://github.com/CPFL/Autoware/pull/1451/files/429d11eee4af615e9f552f832396ccd9aa1bf268#diff-10c9d8f1b5e5f2f7e4231066d3092b5c as a `buildtool_depend` so that catkin can find it. See:
+
+https://github.com/CPFL/Autoware/wiki/Quality-Control#common-build-flags",esteve,210900025
+209126138,1451,LukePhairatt,2018-08-17T11:56:10Z,Feature/gmsl multiple,15,0,25,2351,210900690,2018-08-17T12:58:59Z,"From PR #1447, the environment variables are:
+
+export DRIVEWORKS_TOOLKIT_ROOT_DIR=/usr/local/driveworks
+export CUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda
+export NVIDIA_TENSORRT_ROOT_DIR=/usr/local/nvidia/tensorrt
+export NVIDIA_DRIVE_SDK_ROOT_DIR=$HOME/NVIDIA/Drive/5050bL_SDK/DriveSDK/drive-t186ref-linux
+
+Should we create a FindDriveWorks.cmake to automate this?",bdholt1,
+209126138,1451,LukePhairatt,2018-08-17T11:56:10Z,Feature/gmsl multiple,15,0,25,2351,210900893,2018-08-17T12:59:47Z,space,bdholt1,
+209126138,1451,LukePhairatt,2018-08-17T11:56:10Z,Feature/gmsl multiple,15,0,25,2351,210900979,2018-08-17T13:00:05Z,indentation,bdholt1,
+209126138,1451,LukePhairatt,2018-08-17T11:56:10Z,Feature/gmsl multiple,15,0,25,2351,210901181,2018-08-17T13:00:50Z,"s/DrivesWork/DriveWorks
+",bdholt1,
+209126138,1451,LukePhairatt,2018-08-17T11:56:10Z,Feature/gmsl multiple,15,0,25,2351,210901526,2018-08-17T13:02:09Z,s/_DRIVES_WORK_API_H_/_DRIVE_WORKS_API_H_,bdholt1,
+209126138,1451,LukePhairatt,2018-08-17T11:56:10Z,Feature/gmsl multiple,15,0,25,2351,210901592,2018-08-17T13:02:25Z,"Is this 4 for the four cameras in the GMSL port? If so, I think it'd better to use a variable or a constant for it.",esteve,
+209126138,1451,LukePhairatt,2018-08-17T11:56:10Z,Feature/gmsl multiple,15,0,25,2351,210901761,2018-08-17T13:03:07Z,The copyright line can be removed,esteve,
+209126138,1451,LukePhairatt,2018-08-17T11:56:10Z,Feature/gmsl multiple,15,0,25,2351,210902180,2018-08-17T13:04:54Z,"> Should we create a FindDriveWorks.cmake to automate this?
+
+That's a good idea, the variables in #1447 are a bit obscure right now.",esteve,210900690
+209126138,1451,LukePhairatt,2018-08-17T11:56:10Z,Feature/gmsl multiple,15,0,25,2351,210902187,2018-08-17T13:04:56Z,"Is this really GPLv3? I thought BSD2 or 3?
+",bdholt1,
+209126138,1451,LukePhairatt,2018-08-17T11:56:10Z,Feature/gmsl multiple,15,0,25,2351,210904160,2018-08-17T13:12:12Z,"This can be changed to use the ROS logging system, like this:
+
+```
+ROS_DEBUG_STREAM(""DEBUG ARGS PORT:  "" << p);
+```
+For more information:
+
+http://wiki.ros.org/roscpp/Overview/Logging#Log_Statements",esteve,
+209126138,1451,LukePhairatt,2018-08-17T11:56:10Z,Feature/gmsl multiple,15,0,25,2351,210904798,2018-08-17T13:14:40Z,"Given that users may not have the CUDA and Driveworks libraries installed, this package should use the following structure:
+
+```
+find_package(CUDA)
+if(CUDA_FOUND)
+# The rest of the CMake code goes here
+...
+endif()
+```
+
+See for example: https://github.com/CPFL/Autoware/blob/develop/ros/src/computing/perception/localization/lib/ndt_gpu/CMakeLists.txt#L21",esteve,
+208584326,1447,esteve,2018-08-15T14:47:13Z,Added driveworks target,4,0,8,2083,210474684,2018-08-16T04:34:22Z,"@esteve Can we use autoware/build:${AUTOWARE_TARGET_PLATFORM}-kinetic-20180809 merged at #1433.
+
+- docker/crossbuild/build_cross_image.sh assumes that  autoware/build:${AUTOWARE_TARGET_PLATFORM}-kinetic-20180809 is built before.
+- I'd like to delete autoware/crossbuild in the future.",kfunaoka,
+208584326,1447,esteve,2018-08-15T14:47:13Z,Added driveworks target,4,0,8,2083,210479327,2018-08-16T05:20:41Z,Should these NVIDIA-specific arguments be in ${AUTOWARE_DOCKER_EXTRA_ARGS} for readability and maintainability?,kfunaoka,
+208584326,1447,esteve,2018-08-15T14:47:13Z,Added driveworks target,4,0,8,2083,210481513,2018-08-16T05:40:34Z,Why should we remove REQUIRED?,kfunaoka,
+208584326,1447,esteve,2018-08-15T14:47:13Z,Added driveworks target,4,0,8,2083,210527414,2018-08-16T09:12:25Z,No problem. I started this before #1433 was merged and then I forgot to update it. Thanks for noticing.,esteve,210474684
+208584326,1447,esteve,2018-08-15T14:47:13Z,Added driveworks target,4,0,8,2083,210528503,2018-08-16T09:15:57Z,Makes sense. Fixed in https://github.com/CPFL/Autoware/pull/1447/commits/7b6cc414f79872b53f6462947cbc48e580e55aa8,esteve,210479327
+208584326,1447,esteve,2018-08-15T14:47:13Z,Added driveworks target,4,0,8,2083,210528574,2018-08-16T09:16:07Z,Fixed in https://github.com/CPFL/Autoware/pull/1447/commits/6fda55f4a3894f1dd4919b49afc8a3f12648367d,esteve,210474684
+208584326,1447,esteve,2018-08-15T14:47:13Z,Added driveworks target,4,0,8,2083,210528856,2018-08-16T09:17:11Z,"Sorry, this was a leftover from a previous attempt. Fixed in d45a2b9e493d76f3137819346cc11011142c6b38",esteve,210481513
+208584326,1447,esteve,2018-08-15T14:47:13Z,Added driveworks target,4,0,8,2083,210529811,2018-08-16T09:20:31Z,"Just noticed this, I'll fix it in a moment.",esteve,
+208584326,1447,esteve,2018-08-15T14:47:13Z,Added driveworks target,4,0,8,2083,210530430,2018-08-16T09:22:48Z,Thanks! This REQUIRE can be reverted too.,kfunaoka,
+208584326,1447,esteve,2018-08-15T14:47:13Z,Added driveworks target,4,0,8,2083,210530818,2018-08-16T09:24:12Z,It seems this line can go to ${AUTOWARE_DOCKER_EXTRA_ARGS} too.,kfunaoka,
+208584326,1447,esteve,2018-08-15T14:47:13Z,Added driveworks target,4,0,8,2083,210531712,2018-08-16T09:27:29Z,"I've removed it, it's not needed if included in the Docker image. Fixed in https://github.com/CPFL/Autoware/pull/1447/commits/42c9ddd593ef6d0cfba8e4613e9e85ccbfd7448d",esteve,210530818
+208584326,1447,esteve,2018-08-15T14:47:13Z,Added driveworks target,4,0,8,2083,210531936,2018-08-16T09:28:21Z,Fixed in https://github.com/CPFL/Autoware/pull/1447/commits/b9ff1caaa3515511816b4708f20d1e48a2d8a635,esteve,210530430
+208584326,1447,esteve,2018-08-15T14:47:13Z,Added driveworks target,4,0,8,2083,210532465,2018-08-16T09:30:37Z,Fixed in 55a0459,esteve,210529811
+207286059,1439,aohsato,2018-08-09T11:33:44Z,[Feature] Lidar fake perception,19,1,9,767,209116978,2018-08-10T00:24:36Z,can be removed because autoware_build_flags sets -std=c++11 at #1395.,kfunaoka,
+207286059,1439,aohsato,2018-08-09T11:33:44Z,[Feature] Lidar fake perception,19,1,9,767,209117338,2018-08-10T00:27:26Z,mis-indented,kfunaoka,
+207286059,1439,aohsato,2018-08-09T11:33:44Z,[Feature] Lidar fake perception,19,1,9,767,209133741,2018-08-10T02:58:48Z,fixed with refactor tool,aohsato,209117338
+207286059,1439,aohsato,2018-08-09T11:33:44Z,[Feature] Lidar fake perception,19,1,9,767,209133808,2018-08-10T02:59:31Z,"fixed, thanks. btw, do you have plan about this common build option?",aohsato,209116978
+207286059,1439,aohsato,2018-08-09T11:33:44Z,[Feature] Lidar fake perception,19,1,9,767,209136958,2018-08-10T03:32:53Z,"@aohsato It'd be better to add some options for controlling the entire quality of Autoware gradually.
+-Werror is a candidate but it should be introduced carefully.",kfunaoka,209116978
+207286059,1439,aohsato,2018-08-09T11:33:44Z,[Feature] Lidar fake perception,19,1,9,767,209137281,2018-08-10T03:36:46Z,"@kfunaoka I see. In future, please add rules about using this flags to our documentation. :)",aohsato,209116978
+207286059,1439,aohsato,2018-08-09T11:33:44Z,[Feature] Lidar fake perception,19,1,9,767,209139235,2018-08-10T03:57:56Z,"@aohsato Of cousrce 👍 
+https://github.com/CPFL/Autoware/wiki/Quality-Control",kfunaoka,209116978
+206940542,1426,k0suke-murakami,2018-08-08T09:10:39Z,[Feature] One segment distance Euclidean Cluster,10,0,9,3150,208802105,2018-08-09T04:17:12Z,Unaligned indent,kfunaoka,
+206940542,1426,k0suke-murakami,2018-08-08T09:10:39Z,[Feature] One segment distance Euclidean Cluster,10,0,9,3150,208802120,2018-08-09T04:17:22Z,Unaligned indent,kfunaoka,
+206940542,1426,k0suke-murakami,2018-08-08T09:10:39Z,[Feature] One segment distance Euclidean Cluster,10,0,9,3150,208802183,2018-08-09T04:18:00Z,Unaligned indent relative to #else and #endif,kfunaoka,
+206940542,1426,k0suke-murakami,2018-08-08T09:10:39Z,[Feature] One segment distance Euclidean Cluster,10,0,9,3150,208802442,2018-08-09T04:20:21Z,Unaligned indent (5 and 13 spaces instead of 4 and 8 spaces),kfunaoka,
+206940542,1426,k0suke-murakami,2018-08-08T09:10:39Z,[Feature] One segment distance Euclidean Cluster,10,0,9,3150,208802643,2018-08-09T04:22:32Z,Unaligned indent (should be 4 spaces),kfunaoka,
+206940542,1426,k0suke-murakami,2018-08-08T09:10:39Z,[Feature] One segment distance Euclidean Cluster,10,0,9,3150,208904401,2018-08-09T12:08:16Z,"segment -> clustering, as well as other lines",aohsato,
+205422176,1412,kitsukawa,2018-08-01T13:18:09Z,Feature/ndt mapping maximum scan range,3,1,5,164,207074523,2018-08-02T00:54:23Z,Does transformation_probability related to this pull request? Should both declaration and this line be deleted?,kfunaoka,
+205422176,1412,kitsukawa,2018-08-01T13:18:09Z,Feature/ndt mapping maximum scan range,3,1,5,164,207074824,2018-08-02T00:57:05Z,"As a future work, not only max_scan_range, it is preferred to add why this magic number 200.0 is selected. README.md seems to be the best place as seen something like https://github.com/CPFL/Autoware/blob/master/ros/src/computing/perception/detection/vision_detector/packages/vision_yolo3_detect/README.md.
+
+Would you write down why it is selected on this pull request for the future work?",kfunaoka,
+205422176,1412,kitsukawa,2018-08-01T13:18:09Z,Feature/ndt mapping maximum scan range,3,1,5,164,207098873,2018-08-02T04:30:20Z,"The measurement distance of lidars we use is around 100m, so I selected 200m with some margin. Yes, I will write README for lidar localizer soon.",kitsukawa,207074824
+205422176,1412,kitsukawa,2018-08-01T13:18:09Z,Feature/ndt mapping maximum scan range,3,1,5,164,207099102,2018-08-02T04:32:32Z,This does not related directly to this pull request but I want to remain this for future use. This value can be used to evaluate the mapping accuracy.,kitsukawa,207074523
+205038720,1408,esteve,2018-07-31T08:48:33Z,[fix] PascalCase messages,4,1,177,1361,225425657,2018-10-16T07:31:25Z,Yolo2 node does not exist anymore. This should be removed.,amc-nu,
+205038720,1408,esteve,2018-07-31T08:48:33Z,[fix] PascalCase messages,4,1,177,1361,225503136,2018-10-16T11:41:48Z,Done.,esteve,225425657
+204309866,1400,hatem-darweesh,2018-07-27T01:50:48Z,Feature/open planner dev,21,0,183,36191,207700456,2018-08-04T05:34:27Z,@hatem-darweesh There are 5 checkboxes for op_car_simulator. This should be only one here.,kitsukawa,
+204309866,1400,hatem-darweesh,2018-07-27T01:50:48Z,Feature/open planner dev,21,0,183,36191,210185276,2018-08-15T07:00:30Z,Is this deletion intended?,kfunaoka,
+204309866,1400,hatem-darweesh,2018-07-27T01:50:48Z,Feature/open planner dev,21,0,183,36191,210189843,2018-08-15T07:28:07Z,"Is it possible to distribute this file under BSD 3-Clause ""New"" or ""Revised"" License?
+If yes, please insert the license terms.",kfunaoka,
+204309866,1400,hatem-darweesh,2018-07-27T01:50:48Z,Feature/open planner dev,21,0,183,36191,210190856,2018-08-15T07:33:28Z,It is better to use int or const int instead of const int&.,kfunaoka,
+204309866,1400,hatem-darweesh,2018-07-27T01:50:48Z,Feature/open planner dev,21,0,183,36191,210191686,2018-08-15T07:38:22Z,"It seems that clang-format was not used. Did you use clang-format? If no, please use clang-format to all the files you modified. (https://github.com/CPFL/Autoware/wiki/Contribution-Rules#ros-c-coding)",kfunaoka,
+204309866,1400,hatem-darweesh,2018-07-27T01:50:48Z,Feature/open planner dev,21,0,183,36191,210193084,2018-08-15T07:46:22Z,It's better to use constexpr instead of #define. (https://en.cppreference.com/w/cpp/language/constexpr),kfunaoka,
+204309866,1400,hatem-darweesh,2018-07-27T01:50:48Z,Feature/open planner dev,21,0,183,36191,210194158,2018-08-15T07:51:40Z,It's better to use range-for if index is not required. (https://en.cppreference.com/w/cpp/language/range-for),kfunaoka,
+204309866,1400,hatem-darweesh,2018-07-27T01:50:48Z,Feature/open planner dev,21,0,183,36191,210198351,2018-08-15T08:11:37Z,track should be const TrajectoryTracker *,kfunaoka,
+204309866,1400,hatem-darweesh,2018-07-27T01:50:48Z,Feature/open planner dev,21,0,183,36191,210199371,2018-08-15T08:16:22Z,It's better to use standard functions. It seems that this loop can be replaced by std::find.,kfunaoka,
+204309866,1400,hatem-darweesh,2018-07-27T01:50:48Z,Feature/open planner dev,21,0,183,36191,210199900,2018-08-15T08:18:38Z,"You can use range-for.
+https://en.cppreference.com/w/cpp/language/range-for",kfunaoka,
+204309866,1400,hatem-darweesh,2018-07-27T01:50:48Z,Feature/open planner dev,21,0,183,36191,210201343,2018-08-15T08:25:13Z,Should be deleted. Unnecessary comments will be junk.,kfunaoka,
+204309866,1400,hatem-darweesh,2018-07-27T01:50:48Z,Feature/open planner dev,21,0,183,36191,210205943,2018-08-15T08:45:38Z,Why are FromIndicatorToNumber and FromNumbertoIndicator necessary? Is it impossible to use enum value itself?,kfunaoka,
+204309866,1400,hatem-darweesh,2018-07-27T01:50:48Z,Feature/open planner dev,21,0,183,36191,210206315,2018-08-15T08:46:59Z,Please remove magic numbers as much as possible.,kfunaoka,
+204309866,1400,hatem-darweesh,2018-07-27T01:50:48Z,Feature/open planner dev,21,0,183,36191,210214960,2018-08-15T09:23:48Z,"Please add buildtool_depend of autoware_build_flags.
+https://github.com/CPFL/Autoware/wiki/Quality-Control",kfunaoka,
+204309866,1400,hatem-darweesh,2018-07-27T01:50:48Z,Feature/open planner dev,21,0,183,36191,210215060,2018-08-15T09:24:10Z,Please delete unnecessary comments.,kfunaoka,
+204309866,1400,hatem-darweesh,2018-07-27T01:50:48Z,Feature/open planner dev,21,0,183,36191,210215311,2018-08-15T09:25:16Z,"Please add autoware_build_flags.
+https://github.com/CPFL/Autoware/wiki/Quality-Control",kfunaoka,
+204309866,1400,hatem-darweesh,2018-07-27T01:50:48Z,Feature/open planner dev,21,0,183,36191,210296441,2018-08-15T14:55:08Z,"I saw a PR which adds common compiler flags to all cmake files ""autoware_build_flags"". so I deleted the special ones  ",hatem-darweesh,210185276
+204309866,1400,hatem-darweesh,2018-07-27T01:50:48Z,Feature/open planner dev,21,0,183,36191,210298172,2018-08-15T14:59:51Z,can you give me an example to follow. ,hatem-darweesh,210189843
+204309866,1400,hatem-darweesh,2018-07-27T01:50:48Z,Feature/open planner dev,21,0,183,36191,210300611,2018-08-15T15:06:47Z,"it is less confusing to use one parameter format for both objects and standard types. 
+and it will be really dangerous and will take plenty of time and testing to change it through the whole OpenPlanner library.",hatem-darweesh,210190856
+204309866,1400,hatem-darweesh,2018-07-27T01:50:48Z,Feature/open planner dev,21,0,183,36191,210301100,2018-08-15T15:08:10Z,"I will apply it later with different PR, after merging this one. ",hatem-darweesh,210191686
+204309866,1400,hatem-darweesh,2018-07-27T01:50:48Z,Feature/open planner dev,21,0,183,36191,210306065,2018-08-15T15:23:26Z,"Can we add this as ToDo, I need to check for each #define whether it is a compiler directive or a constant. so it will take long time. ",hatem-darweesh,210193084
+204309866,1400,hatem-darweesh,2018-07-27T01:50:48Z,Feature/open planner dev,21,0,183,36191,210309281,2018-08-15T15:32:37Z,"I see you prefer C++11 coding style,
+This code is written in C and old C++ style. it is more readable for me, and other old-school programmers. if anything thing producing bugs or will affect the performance I will gladly change it. ",hatem-darweesh,210194158
+204309866,1400,hatem-darweesh,2018-07-27T01:50:48Z,Feature/open planner dev,21,0,183,36191,210313821,2018-08-15T15:45:42Z,Done,hatem-darweesh,210198351
+204309866,1400,hatem-darweesh,2018-07-27T01:50:48Z,Feature/open planner dev,21,0,183,36191,210315911,2018-08-15T15:51:57Z,personal preference ,hatem-darweesh,210199371
+204309866,1400,hatem-darweesh,2018-07-27T01:50:48Z,Feature/open planner dev,21,0,183,36191,210315926,2018-08-15T15:51:59Z,personal preference ,hatem-darweesh,210199900
+204309866,1400,hatem-darweesh,2018-07-27T01:50:48Z,Feature/open planner dev,21,0,183,36191,210317952,2018-08-15T15:58:17Z,"the compiler give me an error casting from int to the enumerator, so I create a function to convert from one to another and the vice versa , just to be consistent ",hatem-darweesh,210205943
+204309866,1400,hatem-darweesh,2018-07-27T01:50:48Z,Feature/open planner dev,21,0,183,36191,210319291,2018-08-15T16:02:26Z,"This part (Prediction) is under development (research work) , all numbers will be removed or added as parameters soon. ",hatem-darweesh,210206315
+204309866,1400,hatem-darweesh,2018-07-27T01:50:48Z,Feature/open planner dev,21,0,183,36191,210441455,2018-08-15T23:36:58Z,Thanks! I should accomplish autoware_build_flags because it sets only -std=c++11 now.,kfunaoka,210185276
+204309866,1400,hatem-darweesh,2018-07-27T01:50:48Z,Feature/open planner dev,21,0,183,36191,210443001,2018-08-15T23:47:29Z,"This is the license.
+https://github.com/CPFL/Autoware/blob/master/LICENSE
+
+An example is here. The year 2015 in it should be replaced with 2018 this year.
+https://github.com/CPFL/Autoware/blob/develop/ros/src/computing/perception/detection/vision_detector/packages/vision_ssd_detect/src/vision_ssd_detect.cpp",kfunaoka,210189843
+204309866,1400,hatem-darweesh,2018-07-27T01:50:48Z,Feature/open planner dev,21,0,183,36191,210446970,2018-08-16T00:14:47Z,"Thanks. I think so too in the point of view where it takes much time and dangerous. I think it is better to be as is in this pull request.
+
+But using const int & instead of int simply incurs piled-up overhead. I think C++ programmers do not confuse about it because they should know C and C++ basically employs pass by value.",kfunaoka,210190856
+202787661,1385,esteve,2018-07-20T09:02:57Z,Fix/strict_linking,12,0,182,333,204205097,2018-07-21T07:44:00Z,These seem like duplicates - should we just uncomment line 37 and 38 and delete 43 and 44?,bdholt1,
+202787661,1385,esteve,2018-07-20T09:02:57Z,Fix/strict_linking,12,0,182,333,204321201,2018-07-23T08:36:14Z,Good catch. I've submitted https://github.com/CPFL/Autoware/pull/1392 to address this.,esteve,204205097
+202787661,1385,esteve,2018-07-20T09:02:57Z,Fix/strict_linking,12,0,182,333,204412271,2018-07-23T14:02:07Z,These are only linker flags.  Are we not interested in setting CMAKE_CXX_FLAGS and CMAKE_C_FLAGS as well?,bdholt1,
+202787661,1385,esteve,2018-07-20T09:02:57Z,Fix/strict_linking,12,0,182,333,204413515,2018-07-23T14:05:45Z,"I realise that adding something like CMAKE_CXX_FLAGS=Wall,Wextra,Werror may be too difficult to add into the code base now - there is probably quite a bit of work to do to get to the point where that is possible. ",bdholt1,204412271
+202787661,1385,esteve,2018-07-20T09:02:57Z,Fix/strict_linking,12,0,182,333,204419304,2018-07-23T14:21:26Z,"Yeah, that'd be really useful. I mentioned that in https://github.com/CPFL/Autoware/pull/1385#issuecomment-406989958, but I think it'd be best to put those flags in a separate PR so that this one can be merged sooner. Also, I noticed that the flags are not consistent across all packages (e.g. `-O2` vs `-O3`, etc.), so for now I'd only add `-Wall` and the flags for enabling C++11.",esteve,204412271
+202787661,1385,esteve,2018-07-20T09:02:57Z,Fix/strict_linking,12,0,182,333,204449159,2018-07-23T15:36:36Z,"I've submitted #1395 which does that, though only for C++11",esteve,204412271
+194516022,1332,yn-mrse,2018-06-13T09:02:15Z,Feature/velocity interpolation,1,1,7,77,195611768,2018-06-15T00:59:35Z,Is there any reason why setClosestWaypoint is called here not in VelocitySetPath::setTemporalWaypoints?,kfunaoka,
+194516022,1332,yn-mrse,2018-06-13T09:02:15Z,Feature/velocity interpolation,1,1,7,77,195687736,2018-06-15T10:03:07Z,Fixed.,yn-mrse,195611768
+188406895,1275,kfunaoka,2018-05-16T11:52:11Z,Release/1.7.0,314,0,1367,250371,189154843,2018-05-18T03:21:03Z,Please delete this line,YamatoAndo,
+188406895,1275,kfunaoka,2018-05-16T11:52:11Z,Release/1.7.0,314,0,1367,250371,189160461,2018-05-18T04:24:47Z,Deleted at Commit 0688f39,kfunaoka,189154843
+186998808,1255,aohsato,2018-05-09T18:11:49Z,[Feature] improve concat filter,12,1,8,247,187224812,2018-05-10T02:17:41Z,You declared this var here.,amc-nu,
+186998808,1255,aohsato,2018-05-09T18:11:49Z,[Feature] improve concat filter,12,1,8,247,187224839,2018-05-10T02:17:56Z,But you’re not using it here,amc-nu,
+186998808,1255,aohsato,2018-05-09T18:11:49Z,[Feature] improve concat filter,12,1,8,247,187225325,2018-05-10T02:22:28Z,Why wait 1.0?,amc-nu,
+186998808,1255,aohsato,2018-05-09T18:11:49Z,[Feature] improve concat filter,12,1,8,247,187225660,2018-05-10T02:25:48Z,Please also add yaml-cpp  to package.xml,amc-nu,
+186998808,1255,aohsato,2018-05-09T18:11:49Z,[Feature] improve concat filter,12,1,8,247,187227801,2018-05-10T02:45:00Z,"Please add TierIV, Inc.",yk-fujii,
+186998808,1255,aohsato,2018-05-09T18:11:49Z,[Feature] improve concat filter,12,1,8,247,187228048,2018-05-10T02:47:26Z,"Add parenthesis
+",yk-fujii,
+186998808,1255,aohsato,2018-05-09T18:11:49Z,[Feature] improve concat filter,12,1,8,247,187229419,2018-05-10T03:01:08Z,@yk-fujii meant brackets,amc-nu,187228048
+186998808,1255,aohsato,2018-05-09T18:11:49Z,[Feature] improve concat filter,12,1,8,247,187504408,2018-05-11T02:01:37Z,"yeah, thanks!
+",yk-fujii,187228048
+186998808,1255,aohsato,2018-05-09T18:11:49Z,[Feature] improve concat filter,12,1,8,247,198054167,2018-06-26T08:24:41Z,"Please don't do this
+you can use `yaml-cpp`, it is supported by rosdep on both Indigo and Kinetic.
+https://github.com/ros/rosdistro/blob/master/rosdep/base.yaml#L5054
+
+you can see an example on how to do it here:
+https://github.com/CPFL/Autoware/blob/master/ros/src/sensing/drivers/lidar/packages/velodyne/velodyne_pointcloud/CMakeLists.txt#L23
+
+",amc-nu,
+186998808,1255,aohsato,2018-05-09T18:11:49Z,[Feature] improve concat filter,12,1,8,247,198056070,2018-06-26T08:30:57Z,"Yep, I found that velodyne cmake too but it's a liitle bit more complex than this.
+https://github.com/CPFL/Autoware/blob/develop/ros/src/socket/packages/mqtt_socket/CMakeLists.txt
+Okey, I'll fix.",aohsato,198054167
+186998808,1255,aohsato,2018-05-09T18:11:49Z,[Feature] improve concat filter,12,1,8,247,198056636,2018-06-26T08:32:46Z,"yeah, that one is also an ugly solution, but there is no support for moquito on rosdep yet.",amc-nu,198054167
+186998808,1255,aohsato,2018-05-09T18:11:49Z,[Feature] improve concat filter,12,1,8,247,198057012,2018-06-26T08:34:01Z,"I see, I just thought this solution was passed your refactoring. :P",aohsato,198054167
+186998808,1255,aohsato,2018-05-09T18:11:49Z,[Feature] improve concat filter,12,1,8,247,198057427,2018-06-26T08:35:22Z,"No, actually I ignored it :P",amc-nu,198054167
+186998808,1255,aohsato,2018-05-09T18:11:49Z,[Feature] improve concat filter,12,1,8,247,198350446,2018-06-27T02:30:37Z,"Thanks!
+I think you forgot to remove this one and replace it by
+`${YAML_CPP_LIBRARIES}`
+Example:
+https://github.com/CPFL/Autoware/blob/master/ros/src/sensing/drivers/lidar/packages/velodyne/velodyne_pointcloud/src/lib/CMakeLists.txt#L4",amc-nu,
+186998808,1255,aohsato,2018-05-09T18:11:49Z,[Feature] improve concat filter,12,1,8,247,198357016,2018-06-27T03:27:01Z,"Oh, god. I forgot about that... :_ (
+Fixed again.",aohsato,198350446
+184864299,1242,andoh104,2018-04-30T00:41:32Z,change Docker README.md,1,0,1,13,186923177,2018-05-09T03:35:18Z,Here!,amc-nu,
+184864299,1242,andoh104,2018-04-30T00:41:32Z,change Docker README.md,1,0,1,13,186923213,2018-05-09T03:35:32Z,and here!,amc-nu,
+184864299,1242,andoh104,2018-04-30T00:41:32Z,change Docker README.md,1,0,1,13,187192958,2018-05-09T22:21:08Z,"Sorry!
+I'll fix it later.",andoh104,186923213
+184864299,1242,andoh104,2018-04-30T00:41:32Z,change Docker README.md,1,0,1,13,187244395,2018-05-10T05:40:26Z,@andoh104 I fixed it.,yn-mrse,186923213
+184611575,1240,amc-nu,2018-04-27T12:43:43Z,[fix] Fixes for all packages and dependencies,99,0,319,6857,185401597,2018-05-02T06:17:06Z,"Moving this IF statement always makes catkin search for module_comm_msgs.
+So, I got error:
+```
+-- Could not find the required component 'module_comm_msgs'. The following CMake error indicates that you either need to install the package with the same name or change your environment so that it can be found.
+CMake Error at /opt/ros/kinetic/share/catkin/cmake/catkinConfig.cmake:83 (find_package):
+  Could not find a package configuration file provided by ""module_comm_msgs""
+  with any of the following names:
+
+    module_comm_msgsConfig.cmake
+    module_comm_msgs-config.cmake
+
+  Add the installation prefix of ""module_comm_msgs"" to CMAKE_PREFIX_PATH or
+  set ""module_comm_msgs_DIR"" to a directory containing one of the above
+  files.  If ""module_comm_msgs"" provides a separate development package or
+  SDK, be sure it has been installed.
+Call Stack (most recent call first):
+  actuation/vehicles/packages/as/CMakeLists.txt:4 (find_package)
+```",yk-fujii,
+184611575,1240,amc-nu,2018-04-27T12:43:43Z,[fix] Fixes for all packages and dependencies,99,0,319,6857,185477382,2018-05-02T12:23:48Z,"I think you're missing the `as` submodule.
+Please run:
+`git submodule update --init --recursive`",amc-nu,185401597
+184611575,1240,amc-nu,2018-04-27T12:43:43Z,[fix] Fixes for all packages and dependencies,99,0,319,6857,185693922,2018-05-03T04:11:50Z,"I know to need `git submodule update --init --recursive`
+But, I think that autoware does not necessarily need to compile ""as"" package because problems often occur frequently by not executing this command.
+
+If you want to use ""as"" default, I think that you need to include this command in catkin_make_release, install manual, or etc.
+How about you think?",yk-fujii,185401597
+184611575,1240,amc-nu,2018-04-27T12:43:43Z,[fix] Fixes for all packages and dependencies,99,0,319,6857,185707394,2018-05-03T06:46:10Z,Then if this package is not needed I recommend to add a CATKIN_IGNORE,amc-nu,185401597
+184611575,1240,amc-nu,2018-04-27T12:43:43Z,[fix] Fixes for all packages and dependencies,99,0,319,6857,186591376,2018-05-08T00:49:44Z,:+1: ,yk-fujii,185401597
+184269466,1235,yn-mrse,2018-04-26T08:55:48Z,Fix velocity planning at end of waypoint,2,1,3,28,186598436,2018-05-08T01:49:20Z,"please add parentheses, ",yk-fujii,
+183899533,1231,k0suke-murakami,2018-04-25T00:39:16Z,Feature/imm ukf pda tracker,31,0,13,2203,186967730,2018-05-09T08:27:12Z,"Please change topic type and name, refer here.
+https://github.com/CPFL/Autoware/blob/master/ros/src/computing/perception/detection/packages/lidar_tracker/nodes/kf_lidar_track/kf_lidar_track.cpp#L64",aohsato,
+183899533,1231,k0suke-murakami,2018-04-25T00:39:16Z,Feature/imm ukf pda tracker,31,0,13,2203,186967876,2018-05-09T08:27:47Z,please use remap to decrease the number of rosparam,aohsato,
+183899533,1231,k0suke-murakami,2018-04-25T00:39:16Z,Feature/imm ukf pda tracker,31,0,13,2203,186968386,2018-05-09T08:29:55Z,please move this launch inside `imm_ukf_pda_tracker.launch`,aohsato,
+183899533,1231,k0suke-murakami,2018-04-25T00:39:16Z,Feature/imm ukf pda tracker,31,0,13,2203,186968434,2018-05-09T08:30:05Z,remove comment,aohsato,
+183899533,1231,k0suke-murakami,2018-04-25T00:39:16Z,Feature/imm ukf pda tracker,31,0,13,2203,186968559,2018-05-09T08:30:29Z,remove comment in this node,aohsato,
+183899533,1231,k0suke-murakami,2018-04-25T00:39:16Z,Feature/imm ukf pda tracker,31,0,13,2203,186971676,2018-05-09T08:42:27Z,"not use namespace for one typedef. currently, you don't need to use namespace in this project.",aohsato,
+183899533,1231,k0suke-murakami,2018-04-25T00:39:16Z,Feature/imm ukf pda tracker,31,0,13,2203,186971904,2018-05-09T08:43:20Z,dont use `*_` naming rule for rosparam,aohsato,
+183899533,1231,k0suke-murakami,2018-04-25T00:39:16Z,Feature/imm ukf pda tracker,31,0,13,2203,186972110,2018-05-09T08:44:11Z,and please use remapping for topic name. you need to decide default topic name in this code.,aohsato,186971904
+183899533,1231,k0suke-murakami,2018-04-25T00:39:16Z,Feature/imm ukf pda tracker,31,0,13,2203,186972668,2018-05-09T08:46:25Z,please describe clearly default parameter ,aohsato,
+183899533,1231,k0suke-murakami,2018-04-25T00:39:16Z,Feature/imm ukf pda tracker,31,0,13,2203,186972788,2018-05-09T08:46:56Z,tf_listener_,aohsato,
+183899533,1231,k0suke-murakami,2018-04-25T00:39:16Z,Feature/imm ukf pda tracker,31,0,13,2203,186973034,2018-05-09T08:47:42Z,please move this to header file as global value,aohsato,
+183899533,1231,k0suke-murakami,2018-04-25T00:39:16Z,Feature/imm ukf pda tracker,31,0,13,2203,186974164,2018-05-09T08:52:08Z,"these are just state names, so please separate count configuration from here.
+in addition, I suggest creating count parameters.",aohsato,
+183899533,1231,k0suke-murakami,2018-04-25T00:39:16Z,Feature/imm ukf pda tracker,31,0,13,2203,186974283,2018-05-09T08:52:35Z,please comment to explain these states.,aohsato,
+183899533,1231,k0suke-murakami,2018-04-25T00:39:16Z,Feature/imm ukf pda tracker,31,0,13,2203,186974333,2018-05-09T08:52:47Z,what is this?,aohsato,
+183899533,1231,k0suke-murakami,2018-04-25T00:39:16Z,Feature/imm ukf pda tracker,31,0,13,2203,186974431,2018-05-09T08:53:13Z,callback,aohsato,
+183899533,1231,k0suke-murakami,2018-04-25T00:39:16Z,Feature/imm ukf pda tracker,31,0,13,2203,186974792,2018-05-09T08:54:29Z,you need to define `tracking_frame_id_`,aohsato,
+183899533,1231,k0suke-murakami,2018-04-25T00:39:16Z,Feature/imm ukf pda tracker,31,0,13,2203,186974854,2018-05-09T08:54:43Z,use Duration(1.0),aohsato,
+183899533,1231,k0suke-murakami,2018-04-25T00:39:16Z,Feature/imm ukf pda tracker,31,0,13,2203,187794165,2018-05-13T09:22:43Z,remove,yk-fujii,
+183899533,1231,k0suke-murakami,2018-04-25T00:39:16Z,Feature/imm ukf pda tracker,31,0,13,2203,187794464,2018-05-13T09:33:46Z,"I suggest you to use ""call by reference"" or ""call by pointer "".
+`void callback (const autoware_msgs::CloudClusterArray &input);`",yk-fujii,
+183899533,1231,k0suke-murakami,2018-04-25T00:39:16Z,Feature/imm ukf pda tracker,31,0,13,2203,187794634,2018-05-13T09:40:01Z,never used,yk-fujii,
+183899533,1231,k0suke-murakami,2018-04-25T00:39:16Z,Feature/imm ukf pda tracker,31,0,13,2203,187795207,2018-05-13T10:02:03Z,"`input` is not modified. 
+Please use const + reference/pointer to exclude copies.",yk-fujii,
+183899533,1231,k0suke-murakami,2018-04-25T00:39:16Z,Feature/imm ukf pda tracker,31,0,13,2203,187795230,2018-05-13T10:02:44Z,"`input` is not modified. 
+Please use const + reference/pointer to exclude copies.",yk-fujii,
+183899533,1231,k0suke-murakami,2018-04-25T00:39:16Z,Feature/imm ukf pda tracker,31,0,13,2203,187795246,2018-05-13T10:03:26Z,"`cluster_vec` is not modified. 
+Please use const + reference/pointer to exclude copies.",yk-fujii,
+183899533,1231,k0suke-murakami,2018-04-25T00:39:16Z,Feature/imm ukf pda tracker,31,0,13,2203,187795293,2018-05-13T10:05:42Z,"Is there a reason to leave this comment part?
+If not, please delete.",yk-fujii,
+183899533,1231,k0suke-murakami,2018-04-25T00:39:16Z,Feature/imm ukf pda tracker,31,0,13,2203,187795455,2018-05-13T10:13:26Z,Please use reference/pointer to exclude copies for `target`.,yk-fujii,
+183899533,1231,k0suke-murakami,2018-04-25T00:39:16Z,Feature/imm ukf pda tracker,31,0,13,2203,187795469,2018-05-13T10:14:09Z,pointer/reference,yk-fujii,
+183899533,1231,k0suke-murakami,2018-04-25T00:39:16Z,Feature/imm ukf pda tracker,31,0,13,2203,187795476,2018-05-13T10:14:25Z,pointer/reference,yk-fujii,
+183899533,1231,k0suke-murakami,2018-04-25T00:39:16Z,Feature/imm ukf pda tracker,31,0,13,2203,187795510,2018-05-13T10:15:01Z,pointer/reference,yk-fujii,
+183899533,1231,k0suke-murakami,2018-04-25T00:39:16Z,Feature/imm ukf pda tracker,31,0,13,2203,187795523,2018-05-13T10:15:25Z,pointer/reference,yk-fujii,
+183899533,1231,k0suke-murakami,2018-04-25T00:39:16Z,Feature/imm ukf pda tracker,31,0,13,2203,187795534,2018-05-13T10:15:42Z,pointer or reference,yk-fujii,
+183570599,1226,sumanth-nirmal,2018-04-23T22:06:28Z,Route Toggle from runtime manager,10,0,9,120,183586443,2018-04-24T01:58:33Z,all_processes.sh,dejanpan,
+183570599,1226,sumanth-nirmal,2018-04-23T22:06:28Z,Route Toggle from runtime manager,10,0,9,120,183601295,2018-04-24T04:19:06Z,"https://github.com/astuff/astuff_sensor_msgs/blob/master/pacmod_msgs/msg/VehicleSpeedRpt.msg on topic `parsed_tx/vehicle_speed_rpt` is already publishing speed in mph. See: https://autonomoustuff.atlassian.net/wiki/spaces/RW/pages/17749288/PACMod+System
+
+In rviz you should be able to just enter topic: `pacmod/parsed_tx/vehicle_speed_rpt/vehicle_speed`",dejanpan,
+183570599,1226,sumanth-nirmal,2018-04-23T22:06:28Z,Route Toggle from runtime manager,10,0,9,120,183601380,2018-04-24T04:20:11Z,so now you removed traffic light state here?,dejanpan,
+182860476,1223,sumanth-nirmal,2018-04-19T18:27:48Z,fix2tfpose,4,0,6,66,183196492,2018-04-21T01:43:53Z,since this is a python ros node it would actually be better to use rospy to publish the message: https://github.com/CPFL/Autoware/blob/c9db2feb17b16334a7d6385ee79f54b1210c77a5/ros/src/util/packages/runtime_manager/scripts/runtime_manager_dialog.py#L136.,dejanpan,
+181585610,1216,sumanth-nirmal,2018-04-13T20:12:46Z,quick fix to solve the missing light_color_managed message,2,0,1,16,181534105,2018-04-14T00:20:30Z,"add before and after above line (we expect 2)
+
+uint32_t ros::Publisher::getNumSubscribers | ( |   | ) | const
+
+
+",dejanpan,
+181159749,1209,YamatoAndo,2018-04-12T10:37:41Z,add ctrl_cmd/cmd/linear_acceletion,2,1,7,81,181037469,2018-04-12T10:40:20Z,Please comment out this line,yk-fujii,
+179550456,1200,sumanth-nirmal,2018-04-05T01:10:16Z,handles the blinkers for autoware_command_bridge,3,0,2,33,179335347,2018-04-05T02:12:39Z,double `;`,dejanpan,
+179395237,1198,yn-mrse,2018-04-04T13:44:39Z,[Feature] velocity re-planning tool for waypoints.csv,37,1,15,1209,186944514,2018-05-09T06:46:34Z,add comment,aohsato,
+179395237,1198,yn-mrse,2018-04-04T13:44:39Z,[Feature] velocity re-planning tool for waypoints.csv,37,1,15,1209,186944752,2018-05-09T06:47:52Z,"use std::pair and global value, `velocity_max_`",aohsato,
+179395237,1198,yn-mrse,2018-04-04T13:44:39Z,[Feature] velocity re-planning tool for waypoints.csv,37,1,15,1209,186944977,2018-05-09T06:49:03Z,fix this function for easily understanding,aohsato,
+179395237,1198,yn-mrse,2018-04-04T13:44:39Z,[Feature] velocity re-planning tool for waypoints.csv,37,1,15,1209,186963948,2018-05-09T08:13:08Z,Fixed.,yn-mrse,186944977
+179395237,1198,yn-mrse,2018-04-04T13:44:39Z,[Feature] velocity re-planning tool for waypoints.csv,37,1,15,1209,186964038,2018-05-09T08:13:30Z,"I fixed it to use velocity_max.
+However, because we made the calculation expressions easy to understand, unnecessary calculations were reduced, so we no longer need to use std::pair.",yn-mrse,186944752
+179395237,1198,yn-mrse,2018-04-04T13:44:39Z,[Feature] velocity re-planning tool for waypoints.csv,37,1,15,1209,186964119,2018-05-09T08:13:45Z,Fixed.,yn-mrse,186944514
+179395237,1198,yn-mrse,2018-04-04T13:44:39Z,[Feature] velocity re-planning tool for waypoints.csv,37,1,15,1209,186981234,2018-05-09T09:17:42Z,Good,aohsato,186944752
+179395237,1198,yn-mrse,2018-04-04T13:44:39Z,[Feature] velocity re-planning tool for waypoints.csv,37,1,15,1209,187535458,2018-05-11T07:05:32Z,I think this is wrong.,yk-fujii,
+179395237,1198,yn-mrse,2018-04-04T13:44:39Z,[Feature] velocity re-planning tool for waypoints.csv,37,1,15,1209,187536135,2018-05-11T07:10:03Z,add brackets,yk-fujii,
+179395237,1198,yn-mrse,2018-04-04T13:44:39Z,[Feature] velocity re-planning tool for waypoints.csv,37,1,15,1209,187536168,2018-05-11T07:10:17Z,add brackets,yk-fujii,
+179395237,1198,yn-mrse,2018-04-04T13:44:39Z,[Feature] velocity re-planning tool for waypoints.csv,37,1,15,1209,187537566,2018-05-11T07:19:16Z,"Member variables are not initialized at constructor.
+Also, these are initialized only on `configCallback()`.
+Are `configCallback()` always called first?
+
+or, is operation guaranteed even if it is not initialized?",yk-fujii,
+179395237,1198,yn-mrse,2018-04-04T13:44:39Z,[Feature] velocity re-planning tool for waypoints.csv,37,1,15,1209,187538754,2018-05-11T07:26:02Z,{},yk-fujii,
+179395237,1198,yn-mrse,2018-04-04T13:44:39Z,[Feature] velocity re-planning tool for waypoints.csv,37,1,15,1209,187588833,2018-05-11T11:29:38Z,Fixed.,yn-mrse,187535458
+179395237,1198,yn-mrse,2018-04-04T13:44:39Z,[Feature] velocity re-planning tool for waypoints.csv,37,1,15,1209,187588872,2018-05-11T11:29:54Z,Fixed.,yn-mrse,187536135
+179395237,1198,yn-mrse,2018-04-04T13:44:39Z,[Feature] velocity re-planning tool for waypoints.csv,37,1,15,1209,187588917,2018-05-11T11:30:11Z,Fixed.,yn-mrse,187538754
+179395237,1198,yn-mrse,2018-04-04T13:44:39Z,[Feature] velocity re-planning tool for waypoints.csv,37,1,15,1209,187592146,2018-05-11T11:49:21Z,"All member functions are called only in `configCallback()`.
+Within `configCallback()`, member variables are initialized first.
+Therefore, uninitialized member variables are not referenced.",yn-mrse,187537566
+178987928,1192,sumanth-nirmal,2018-04-03T03:58:24Z,Fix/pacmod tracking,11,0,5,154,178718076,2018-04-03T05:38:34Z,double dx; => into new line,dejanpan,
+178987928,1192,sumanth-nirmal,2018-04-03T03:58:24Z,Fix/pacmod tracking,11,0,5,154,178719034,2018-04-03T05:46:45Z,in this case we just keep going with whatever the v was before we started getting negative dx?,dejanpan,
+178987928,1192,sumanth-nirmal,2018-04-03T03:58:24Z,Fix/pacmod tracking,11,0,5,154,178719330,2018-04-03T05:49:18Z,are we back to initialization from waypoints' velocity?,dejanpan,
+178987928,1192,sumanth-nirmal,2018-04-03T03:58:24Z,Fix/pacmod tracking,11,0,5,154,178721677,2018-04-03T06:08:20Z,"This is just for debug, I will change it when removing the debug print's",sumanth-nirmal,178718076
+178987928,1192,sumanth-nirmal,2018-04-03T03:58:24Z,Fix/pacmod tracking,11,0,5,154,178721718,2018-04-03T06:08:42Z,"correct, we keep the prev_velocity_",sumanth-nirmal,178719034
+178987928,1192,sumanth-nirmal,2018-04-03T03:58:24Z,Fix/pacmod tracking,11,0,5,154,178721774,2018-04-03T06:09:15Z,this is ego car current velocity used to initialize the `prev_velocity_` variable.,sumanth-nirmal,178719330
+178987928,1192,sumanth-nirmal,2018-04-03T03:58:24Z,Fix/pacmod tracking,11,0,5,154,181532464,2018-04-13T23:57:02Z,of we are => and if we,dejanpan,
+178415796,1182,sumanth-nirmal,2018-03-29T19:10:13Z,Fix params and logic for responsible tracking,1,0,3,10,178161955,2018-03-29T19:42:50Z,"@aohsato  The only thing I am concerned is about this one. Till now we were testing with `getNearestObstaclePoint`. 
+`getObstaclePoint` gets the mean of the `stop_points_`, rather than the nearest point in `stop_points` as `getNearestObstaclePoint`. ",sumanth-nirmal,
+178415796,1182,sumanth-nirmal,2018-03-29T19:10:13Z,Fix params and logic for responsible tracking,1,0,3,10,178425774,2018-03-31T07:31:43Z,"@sumanth-nirmal Your understanding is correct, but I implemented and tested `getNearestObstaclePoint` but this result is noisier than `getNearestObstaclePoint`. Several causes were considered, for example, there are some noises of ground removal.
+Those noises affect KF parameters, and the responsiveness becomes worse.",aohsato,178161955
+176292948,1172,sumanth-nirmal,2018-03-20T19:06:57Z,Feature/pacmod apex separate objects,8,0,7,492,175985095,2018-03-21T04:57:35Z,is this the distance stopline to base_link?,dejanpan,
+176292948,1172,sumanth-nirmal,2018-03-20T19:06:57Z,Feature/pacmod apex separate objects,8,0,7,492,175985275,2018-03-21T05:00:12Z,we see really lots of missed stoplines lately. Is it possible because we check `current_velocity_ == 0.0`? Please change it to compare against epsilon.,dejanpan,
+176292948,1172,sumanth-nirmal,2018-03-20T19:06:57Z,Feature/pacmod apex separate objects,8,0,7,492,175985424,2018-03-21T05:02:32Z,you need to add orientation otherwise rviz crashes because the orientation is not normalized,dejanpan,
+176292948,1172,sumanth-nirmal,2018-03-20T19:06:57Z,Feature/pacmod apex separate objects,8,0,7,492,175985752,2018-03-21T05:07:53Z,why did you remove EObstacleType::NONE?,dejanpan,
+176292948,1172,sumanth-nirmal,2018-03-20T19:06:57Z,Feature/pacmod apex separate objects,8,0,7,492,175985959,2018-03-21T05:11:08Z,i somehow do not understand the meaning of this type of obstacle?,dejanpan,
+176292948,1172,sumanth-nirmal,2018-03-20T19:06:57Z,Feature/pacmod apex separate objects,8,0,7,492,175986128,2018-03-21T05:13:39Z,why is this extra = 4 just here in the code? and not part of distance for stopline or distance for obstacle?,dejanpan,
+176292948,1172,sumanth-nirmal,2018-03-20T19:06:57Z,Feature/pacmod apex separate objects,8,0,7,492,175997337,2018-03-21T07:21:23Z,right,aohsato,175985095
+176292948,1172,sumanth-nirmal,2018-03-20T19:06:57Z,Feature/pacmod apex separate objects,8,0,7,492,175998073,2018-03-21T07:27:46Z,fixed,aohsato,175985275
+176292948,1172,sumanth-nirmal,2018-03-20T19:06:57Z,Feature/pacmod apex separate objects,8,0,7,492,175998684,2018-03-21T07:33:25Z,"but you have this error message, `Marker 'Stop Line/1' contains unnormalized quaternions` , so we need to focus here.
+https://github.com/CPFL/Autoware/blob/741beb9b1a067c7593d507b2074abf39df9d9dbf/ros/src/computing/planning/motion/packages/astar_planner/nodes/velocity_set/velocity_set.cpp#L151",aohsato,175985424
+176292948,1172,sumanth-nirmal,2018-03-20T19:06:57Z,Feature/pacmod apex separate objects,8,0,7,492,175999192,2018-03-21T07:37:31Z,"you have no EObstacleType::NONE obstacle, it's just for initialization of ObstacleInfo.",aohsato,175985752
+176292948,1172,sumanth-nirmal,2018-03-20T19:06:57Z,Feature/pacmod apex separate objects,8,0,7,492,176000029,2018-03-21T07:42:45Z,"exactly, I mean ""obstacle on deceleration area on waypoints"". but for now, we and you almost never use detection and planning for ""deceleration"", so I'll deprecate that.",aohsato,175985959
+176292948,1172,sumanth-nirmal,2018-03-20T19:06:57Z,Feature/pacmod apex separate objects,8,0,7,492,176000971,2018-03-21T07:49:15Z,this code block was just moved in this file and not part of them.,aohsato,175986128
+176292948,1172,sumanth-nirmal,2018-03-20T19:06:57Z,Feature/pacmod apex separate objects,8,0,7,492,176017691,2018-03-21T09:17:06Z,https://github.com/CPFL/Autoware/commit/a22e14eee0b769e63c79c023df0af9f18b7262be,aohsato,175985275
+176292948,1172,sumanth-nirmal,2018-03-20T19:06:57Z,Feature/pacmod apex separate objects,8,0,7,492,176145007,2018-03-21T16:18:51Z,@aohsato why is this needed?,dejanpan,
+176292948,1172,sumanth-nirmal,2018-03-20T19:06:57Z,Feature/pacmod apex separate objects,8,0,7,492,176146371,2018-03-21T16:22:37Z,for vizualizing only nearest stop line and obstacle. you saw doubled geo fence before this.,aohsato,176145007
+176292948,1172,sumanth-nirmal,2018-03-20T19:06:57Z,Feature/pacmod apex separate objects,8,0,7,492,176147809,2018-03-21T16:26:22Z,"this conversion does implicit normalization, see: http://docs.ros.org/diamondback/api/tf/html/c++/transform__datatypes_8h_source.html",dejanpan,
+176292948,1172,sumanth-nirmal,2018-03-20T19:06:57Z,Feature/pacmod apex separate objects,8,0,7,492,176148150,2018-03-21T16:27:18Z,so speed planning was not smooth because of above two parameters?,dejanpan,
+176292948,1172,sumanth-nirmal,2018-03-20T19:06:57Z,Feature/pacmod apex separate objects,8,0,7,492,176148663,2018-03-21T16:28:39Z,"no, see quaternionMsgToTF()
+http://docs.ros.org/diamondback/api/tf/html/c++/transform__datatypes_8h_source.html#l00112",aohsato,176147809
+176292948,1172,sumanth-nirmal,2018-03-20T19:06:57Z,Feature/pacmod apex separate objects,8,0,7,492,176149352,2018-03-21T16:30:25Z,"I saw that it was just moved but my question is why was this originally in? Another hack?
+
+Does not do the same as:
+- stop_distance_obstacle
+- stop_distance_stopline
+?",dejanpan,175986128
+176292948,1172,sumanth-nirmal,2018-03-20T19:06:57Z,Feature/pacmod apex separate objects,8,0,7,492,176149873,2018-03-21T16:31:52Z,estimating velocity of low speed vehicle is difficult and you want stopping behavior before it so I cut out velocity with above parameter.,aohsato,176148150
+176292948,1172,sumanth-nirmal,2018-03-20T19:06:57Z,Feature/pacmod apex separate objects,8,0,7,492,176150599,2018-03-21T16:33:44Z,"just hack, and no relationship with “stop..”",aohsato,175986128
+170101223,1098,anhnv3991,2018-02-20T04:53:47Z,Feature/incremental ndt cpu,2,0,7,1546,170884665,2018-02-27T10:55:54Z,Why is this included? The lidar is not limited to Velodyne.,kitsukawa,
+170101223,1098,anhnv3991,2018-02-20T04:53:47Z,Feature/incremental ndt cpu,2,0,7,1546,170885304,2018-02-27T10:58:27Z,Please put curly braces around all if statements.,kitsukawa,
+169581356,1091,amc-nu,2018-02-16T09:44:22Z,[update] Hokuyo 2D driver update,4,1,6,190,168724783,2018-02-16T10:47:06Z,"Testing for usb devices is not necessary, so the ""probe"" line should be deleted",alexandrx,
+169581356,1091,amc-nu,2018-02-16T09:44:22Z,[update] Hokuyo 2D driver update,4,1,6,190,168726844,2018-02-16T10:56:33Z,"Maybe add this comment:    
+`<!--  Note: when using a USB interface device please make sure the ip_address parameter is the empty string, otherwise the driver will choose the Ethernet interface. -->`",alexandrx,
+169056320,1082,YamatoAndo,2018-02-14T09:18:55Z,[Feature] incremental voxel update for ndt_mapping,7,1,68,11149,168125278,2018-02-14T09:59:14Z,"The tag `eval` is new in Kinetic and is not supported in Indigo.
+http://wiki.ros.org/roslaunch/XML
+Can you rewrite in another expression compatible with Indigo and Kinetic?",kitsukawa,
+167571140,1073,sumanth-nirmal,2018-02-07T00:55:21Z,Mxnet trafficlight detection,12,0,7,268,166499740,2018-02-07T01:54:25Z,check if it also works in the car,dejanpan,
+167571140,1073,sumanth-nirmal,2018-02-07T00:55:21Z,Mxnet trafficlight detection,12,0,7,268,166500685,2018-02-07T02:01:36Z,"please add a comment here why we introduced this:
+Because computing lane to signal light connection is too slow in this function: https://github.com/CPFL/Autoware/blob/feature/pacmod_apex/ros/src/data/packages/vector_map_server/nodes/vector_map_server/vector_map_server.cpp#L357-L363 we go around the problem by providing a list of lights that are on our waypoint. Note: This is a semi-hack that will only work for our demo. If you record different waypoints on different lanes, you need to recreate filteredsignaldata.csv.
+
+To make the proper fix we would need to use a different data structure instead of https://github.com/CPFL/Autoware/blob/feature/pacmod_apex/ros/src/data/packages/vector_map/include/vector_map/vector_map.h#L362 for faster querying.",dejanpan,
+167571140,1073,sumanth-nirmal,2018-02-07T00:55:21Z,Mxnet trafficlight detection,12,0,7,268,166500882,2018-02-07T02:03:07Z,put this in {},dejanpan,
+167571140,1073,sumanth-nirmal,2018-02-07T00:55:21Z,Mxnet trafficlight detection,12,0,7,268,166501023,2018-02-07T02:04:20Z,what is tbl?,dejanpan,
+167571140,1073,sumanth-nirmal,2018-02-07T00:55:21Z,Mxnet trafficlight detection,12,0,7,268,166501041,2018-02-07T02:04:31Z,document function,dejanpan,
+167571140,1073,sumanth-nirmal,2018-02-07T00:55:21Z,Mxnet trafficlight detection,12,0,7,268,166504138,2018-02-07T02:30:38Z,done,sumanth-nirmal,166500685
+167571140,1073,sumanth-nirmal,2018-02-07T00:55:21Z,Mxnet trafficlight detection,12,0,7,268,166504352,2018-02-07T02:32:20Z,fixed.,sumanth-nirmal,166500882
+167571140,1073,sumanth-nirmal,2018-02-07T00:55:21Z,Mxnet trafficlight detection,12,0,7,268,166504404,2018-02-07T02:32:42Z,`typedef std::vector<std::vector<std::string>> Tbl;`,sumanth-nirmal,166501023
+167571140,1073,sumanth-nirmal,2018-02-07T00:55:21Z,Mxnet trafficlight detection,12,0,7,268,166504617,2018-02-07T02:34:48Z,added comments,sumanth-nirmal,166501041
+167571140,1073,sumanth-nirmal,2018-02-07T00:55:21Z,Mxnet trafficlight detection,12,0,7,268,166508189,2018-02-07T03:05:12Z,what happened here?,amc-nu,
+167571140,1073,sumanth-nirmal,2018-02-07T00:55:21Z,Mxnet trafficlight detection,12,0,7,268,166508231,2018-02-07T03:05:36Z,"also here, indentation.",amc-nu,
+167571140,1073,sumanth-nirmal,2018-02-07T00:55:21Z,Mxnet trafficlight detection,12,0,7,268,166508536,2018-02-07T03:08:09Z,"Can you please add documentation on how to create the CSV?
+
+A cleaner way to create the file would be only adding the `signal.id`. Other fields would be read directly from the VectorMap. Reducing the chance to errors.",amc-nu,166500882
+167571140,1073,sumanth-nirmal,2018-02-07T00:55:21Z,Mxnet trafficlight detection,12,0,7,268,166514443,2018-02-07T04:08:11Z,fixed,sumanth-nirmal,166508231
+167571140,1073,sumanth-nirmal,2018-02-07T00:55:21Z,Mxnet trafficlight detection,12,0,7,268,166514629,2018-02-07T04:10:35Z,"Yeah, it would be cleaner. But it would again be the same logic of fetching the signal information from looping through VectorMap based on signalId.",sumanth-nirmal,166500882
+167571140,1073,sumanth-nirmal,2018-02-07T00:55:21Z,Mxnet trafficlight detection,12,0,7,268,166514659,2018-02-07T04:10:52Z,fixed,sumanth-nirmal,166508189
+167571140,1073,sumanth-nirmal,2018-02-07T00:55:21Z,Mxnet trafficlight detection,12,0,7,268,166514804,2018-02-07T04:12:26Z,but only once :) ,amc-nu,166500882
+167571140,1073,sumanth-nirmal,2018-02-07T00:55:21Z,Mxnet trafficlight detection,12,0,7,268,166515799,2018-02-07T04:24:02Z,"What kind of information? Which format? I meant something like:
+
+| signal_id  | pole_id | vector_id | point_id | lane_id |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| uint | uint | uint | uint | uint |
+
+Example contents of CSV :
+```
+1,1536,4445,1235,7856
+3,756,5536,7852,843
+```",amc-nu,
+164654739,1045,aohsato,2018-01-23T18:31:21Z,Feature/pacmod apex as timer publisher,10,0,17,565,164261381,2018-01-27T03:01:31Z,this topic does not exist for our version of pacmod. should we get rid of it?,dejanpan,
+164654739,1045,aohsato,2018-01-23T18:31:21Z,Feature/pacmod apex as timer publisher,10,0,17,565,164261405,2018-01-27T03:02:22Z,use {},dejanpan,
+164654739,1045,aohsato,2018-01-23T18:31:21Z,Feature/pacmod apex as timer publisher,10,0,17,565,164263548,2018-01-27T04:43:09Z,"I changed this topic to ""/as/velocity_accel"", thx.
+Please use ""as_velocity"" in vel_pose_connect node.",aohsato,164261381
+164654739,1045,aohsato,2018-01-23T18:31:21Z,Feature/pacmod apex as timer publisher,10,0,17,565,164263549,2018-01-27T04:43:11Z,fixed ,aohsato,164261405
+161821083,1019,yk-fujii,2018-01-09T09:26:57Z,Hotfix/v1.6.1 normalized quaternion vectormap,4,1,235,637,160355741,2018-01-09T09:33:25Z,"plz fix with same method
+orientation.w = 1.0",aohsato,
+161821083,1019,yk-fujii,2018-01-09T09:26:57Z,Hotfix/v1.6.1 normalized quaternion vectormap,4,1,235,637,160359662,2018-01-09T09:49:50Z,done,yk-fujii,160355741

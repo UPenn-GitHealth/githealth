@@ -1,0 +1,149 @@
+pull_request_id,pull_request_number,pull_request_user_id,pull_request_created_at,pull_request_title,pull_request_commits,pull_request_checks,pull_request_files_changed,pull_request_lines_changed,comment_id,comment_created_at,comment_text,comment_author,comment_parent_id
+71661260,322,amc-nu,2016-05-27T05:12:44Z,Vecta cam driver,6,0,7,734,64873625,2016-05-27T08:35:12Z,"Please set `license tag`.
+",syohex,
+71661260,322,amc-nu,2016-05-27T05:12:44Z,Vecta cam driver,6,0,7,734,64874476,2016-05-27T08:42:38Z,"This path should be fixed because current directory of process(ROS node) is not here, it is root directory of catkin workspace(~/Autoware/ros). So config_file_path is set `~/Autoware/initialization_params.txt`.
+",syohex,
+71661260,322,amc-nu,2016-05-27T05:12:44Z,Vecta cam driver,6,0,7,734,64875208,2016-05-27T08:48:51Z,"You can get package directory path by `ros::package::getPath`.
+
+See also
+- http://docs.ros.org/jade/api/roslib/html/c++/namespaceros_1_1package.html#ae9470dd201aa4e66abb833e710d812a4
+",syohex,
+71661260,322,amc-nu,2016-05-27T05:12:44Z,Vecta cam driver,6,0,7,734,64876565,2016-05-27T09:00:20Z,"`n` should be signed type. `recvfrom` returns `ssize_t` value.
+",syohex,
+71661260,322,amc-nu,2016-05-27T05:12:44Z,Vecta cam driver,6,0,7,734,64876782,2016-05-27T09:02:16Z,"`unsigned` variable always larger than equal 0.
+",syohex,
+71661260,322,amc-nu,2016-05-27T05:12:44Z,Vecta cam driver,6,0,7,734,64876810,2016-05-27T09:02:32Z,"`length` should be `size_t` type.
+",syohex,
+71661260,322,amc-nu,2016-05-27T05:12:44Z,Vecta cam driver,6,0,7,734,64876981,2016-05-27T09:04:04Z,"`packet_offset` and `packet_length` and `header` should be `uint32_t`. Please see `man ntohl`.
+",syohex,
+71661260,322,amc-nu,2016-05-27T05:12:44Z,Vecta cam driver,6,0,7,734,64877481,2016-05-27T09:07:52Z,"These macros should start with `VC`, `VECTACAM` etc for avoiding confusion of other package macros. Or they should be declared as static class constant variable.
+",syohex,
+71661260,322,amc-nu,2016-05-27T05:12:44Z,Vecta cam driver,6,0,7,734,64877602,2016-05-27T09:08:49Z,"You should use macros or constants instead of magic numbers.
+",syohex,
+71661260,322,amc-nu,2016-05-27T05:12:44Z,Vecta cam driver,6,0,7,734,65116225,2016-05-31T02:14:58Z,"`GPL` ?  License comment in `vectacam/nodes/vectacam/vectacam_node.cpp` is 3-BSD.
+",syohex,
+71661260,322,amc-nu,2016-05-27T05:12:44Z,Vecta cam driver,6,0,7,734,65118655,2016-05-31T03:02:21Z,"You need not to convert `short int` to `std::string`.
+",syohex,
+71661260,322,amc-nu,2016-05-27T05:12:44Z,Vecta cam driver,6,0,7,734,65118859,2016-05-31T03:04:32Z,"`BSD` is better than `3-BSD` same as other packages.
+",syohex,
+71661260,322,amc-nu,2016-05-27T05:12:44Z,Vecta cam driver,6,0,7,734,65119113,2016-05-31T03:10:15Z,"Use `socklen_t` instead of `unsigned int`.
+",syohex,
+71661260,322,amc-nu,2016-05-27T05:12:44Z,Vecta cam driver,6,0,7,734,65119175,2016-05-31T03:11:42Z,"You need not to convert `int` to `std::string`.
+",syohex,
+71661260,322,amc-nu,2016-05-27T05:12:44Z,Vecta cam driver,6,0,7,734,65119233,2016-05-31T03:13:14Z,"Return value type of `sendto` is `ssize_t`. Please do not use `unsigned` type. Please see `man 2 sendto`.
+",syohex,
+70174307,303,TomohitoAndo,2016-05-16T09:58:10Z,Add semantics package,9,0,6,622,63451957,2016-05-17T01:07:59Z,"primitiveな型(`int`, `double`)については const参照渡しは特にメリットがないので値渡しでよいです.
+",syohex,
+70174307,303,TomohitoAndo,2016-05-16T09:58:10Z,Add semantics package,9,0,6,622,63452353,2016-05-17T01:13:39Z,"以下の 3つの関数は Grid構造体のメソッドでも良いと思います. (C++の `struct`はデフォルトのアクセス制限が publicな `class`です). そのようにする場合は関数名から `ofGrid`は取り除いた方がよい.
+
+~~あと C++の場合引数の値を書き換える場合は, ポインタ渡しでなく, 参照渡しを使うことが一般的だと思います.~~
+",syohex,
+70174307,303,TomohitoAndo,2016-05-16T09:58:10Z,Add semantics package,9,0,6,622,63452745,2016-05-17T01:20:26Z,"countは 0かどうかという意味でしか使われていないので, bool型の方がよいのではないでしょうか ? またその数値が使われていないので名前も不適切と思います.
+",syohex,
+70174307,303,TomohitoAndo,2016-05-16T09:58:10Z,Add semantics package,9,0,6,622,63468086,2016-05-17T05:58:14Z,"引数の値を書き換える場合ですが，[ROSのC++スタイルガイド](http://wiki.ros.org/CppStyleGuide)に以下のような記述がありました．
+
+``` sh
+11. Output arguments
+Output arguments to methods / functions (i.e., variables that the function can modify) are passed by pointer, not by reference.
+```
+
+これによると引数の値を書き換える場合はポインタを使えということだと思ったのですが，私の認識違いでしたでしょうか？
+",TomohitoAndo,
+70174307,303,TomohitoAndo,2016-05-16T09:58:10Z,Add semantics package,9,0,6,622,63468948,2016-05-17T06:11:13Z,"それは見逃していました. すいません.
+ポインタのままでよいと思います.
+",syohex,
+70174307,303,TomohitoAndo,2016-05-16T09:58:10Z,Add semantics package,9,0,6,622,63479506,2016-05-17T08:06:58Z,"承知しました．
+",TomohitoAndo,
+70174307,303,TomohitoAndo,2016-05-16T09:58:10Z,Add semantics package,9,0,6,622,63637782,2016-05-18T02:39:09Z,"`visualization_msgs/Marker.h`, `geometry_msgs/Point.h`は利用されていないように見えます.
+",syohex,
+70174307,303,TomohitoAndo,2016-05-16T09:58:10Z,Add semantics package,9,0,6,622,63637812,2016-05-18T02:39:39Z,"`geometry_msgs/PoseStamped.h`は利用されていないようにみえます.
+",syohex,
+70174307,303,TomohitoAndo,2016-05-16T09:58:10Z,Add semantics package,9,0,6,622,63638075,2016-05-18T02:44:58Z,"依存するメッセージは build_depend, run_dependに追加しておくべきです.
+
+参考
+- https://github.com/ros/ros_comm/blob/35913bff0dd14b73e7b35b67ba1bc37eb5c82474/clients/roscpp/package.xml#L26-L46
+",syohex,
+70174307,303,TomohitoAndo,2016-05-16T09:58:10Z,Add semantics package,9,0,6,622,63638134,2016-05-18T02:46:01Z,"使用するメッセージが属するパッケージのすべてを `find_package`に追加すべきです.
+
+参考
+- https://github.com/ros/ros_comm/blob/5270dbf77dcc53ab2ea7fdabf85b2fc472581d11/clients/roscpp/CMakeLists.txt#L9
+",syohex,
+70174307,303,TomohitoAndo,2016-05-16T09:58:10Z,Add semantics package,9,0,6,622,63638196,2016-05-18T02:47:14Z,"使用するメッセージが属するパッケージを `CATKIN_DEPENDS`に追加すべきです.
+
+参考
+- https://github.com/ros/ros_comm/blob/5270dbf77dcc53ab2ea7fdabf85b2fc472581d11/clients/roscpp/CMakeLists.txt#L57
+",syohex,
+70174307,303,TomohitoAndo,2016-05-16T09:58:10Z,Add semantics package,9,0,6,622,63843146,2016-05-19T08:54:37Z,"ここで`build_depend`, `run_depend`に追加すべきなのは，
+`roscpp tf sensor_msgs nav_msgs pcl_conversions`
+になるのでしょうか?(`pcl_ros`も必要?)
+また，CMakeListsの`find_package`と`CATKIN_DEPENDS`に追加するパッケージも上記と同じになるのでしょうか?
+",TomohitoAndo,
+70174307,303,TomohitoAndo,2016-05-16T09:58:10Z,Add semantics package,9,0,6,622,63846491,2016-05-19T09:19:27Z,"> ここでbuild_depend, run_dependに追加すべきなのは， roscpp tf sensor_msgs nav_msgs pcl_conversions になるのでしょうか? (pcl_rosも必要?)
+
+はい. そう思います.  pcl_rosはこの場合は不要に思えます. (エラー等が出た場合はそのままにしておいてください).
+
+> また，CMakeListsのfind_packageとCATKIN_DEPENDSに追加するパッケージも上記と同じになるのでしょうか?
+
+CATKIN_DEPENDSは同じと思っていいと思います. find_packageは ROSに関係ないパッケージにも使いますので, 上記以外のものも必要であれば追加する必要があります(OpenCVやその他 ROSに直接関係ないライブラリ).
+",syohex,
+70174307,303,TomohitoAndo,2016-05-16T09:58:10Z,Add semantics package,9,0,6,622,63856009,2016-05-19T10:39:23Z,"詳細な説明ありがとうございます．
+find_packageにpcl_rosがないとビルド時にエラーが出るようです．CMakeListsのfind_packageにのみpcl_rosを残してコミットするということでよろしいでしょうか?
+",TomohitoAndo,
+70174307,303,TomohitoAndo,2016-05-16T09:58:10Z,Add semantics package,9,0,6,622,63856380,2016-05-19T10:42:45Z,"pcl_rosは  ROSのパッケージなので, CATKIN_DEPENDS, package.xmlにも追加するべきだと思います.
+",syohex,
+70174307,303,TomohitoAndo,2016-05-16T09:58:10Z,Add semantics package,9,0,6,622,63858235,2016-05-19T10:56:14Z,"承知しました．
+",TomohitoAndo,
+65059581,267,manato,2016-04-03T05:20:19Z,Add jsk library,1,0,2,49,58322180,2016-04-04T01:27:23Z,"Cast to `double` is not necessary. Floating point literal without suffix is `double` type.
+- http://en.cppreference.com/w/cpp/language/floating_literal
+- http://docs.ros.org/hydro/api/geometry_msgs/html/msg/Vector3.html
+",syohex,
+65059581,267,manato,2016-04-03T05:20:19Z,Add jsk library,1,0,2,49,58322279,2016-04-04T01:30:46Z,"I think comments in this block are redundant and unnecessary. We can understand it from fields name of class/struct.
+",syohex,
+65059581,267,manato,2016-04-03T05:20:19Z,Add jsk library,1,0,2,49,58322401,2016-04-04T01:35:06Z,"I suppose `USE_JSK_PLUGIN` or `HAVE_JSK_PLUGIN` is better name rather than `IS_FOUND_JSK_PLUGIN`. `IS_FOUND_JSK_PLUGIN` looks like predicate function.
+",syohex,
+65059581,267,manato,2016-04-03T05:20:19Z,Add jsk library,1,0,2,49,58323953,2016-04-04T02:24:53Z,"You should write declaration and initialization at same time as possible in C++ code.
+
+It is difficult to explain in English about this. I use Japanese from here.
+
+C++では可能な限り, 宣言と初期化は同時に行うべきです. このように分けて書くと, 宣言時にデフォルトコンストラクタが呼ばれ, 値設定時に別のコンストラクタ or 代入オペレータが呼ばれて, 不要なコストがかかってしまいます(特に巨大なオブジェクトを扱う場合). この場合 C++11だと デフォルトコンストラクタ+ムーブコンストラクタなのでそこまでコストはないと思われますが,  不要な処理があることには変わらないです(ROSのメッセージヘッダはムーブコンストラクタについては生成せず, コンパイラが自動生成したものが使われるが, ポインタが基本的にないのでそれで問題はないと思われる. 問題がある場合は設定する変数を参照渡しする).
+
+関数から単純なオブジェクトを返すこと自体については, C++11以降であればムーブコンストラクタと RVO(Return Value Optimization)があるので, コストを気にする必要は基本的にはないと思います(Cではすべきではないですが). しかしパフォーマンスチューニングを行う際などは, このあたりの知識はあった方がいいと思いますので, 興味があるのであれば C++11以降について書かれた本などを見るとよいと思います. 
+",syohex,
+65059581,267,manato,2016-04-03T05:20:19Z,Add jsk library,1,0,2,49,59125349,2016-04-10T02:00:08Z,"Please remove needless newlines. Looks good to me except this.
+",syohex,
+65059581,267,manato,2016-04-03T05:20:19Z,Add jsk library,1,0,2,49,59125590,2016-04-10T02:29:35Z,"Thank you for advice for perfection.
+I've removed needless newline.
+",manato,
+59314614,239,manato,2016-02-15T02:12:40Z,Add new method for distance calculation of fusion,1,0,4,122,52855645,2016-02-15T02:56:10Z,"利用するとき `SearchMethod::SEARCH_SHORTEST`と **SEARCH**が重複しています. scoped enumの利用も検討してみた方がよいと思います.
+",syohex,
+59314614,239,manato,2016-02-15T02:12:40Z,Add new method for distance calculation of fusion,1,0,4,122,52855663,2016-02-15T02:56:46Z,"`mehthod` -> `method`
+
+一般的にメソッド名, 関数名は小文字で始まります.
+",syohex,
+59314614,239,manato,2016-02-15T02:12:40Z,Add new method for distance calculation of fusion,1,0,4,122,52855667,2016-02-15T02:56:56Z,"空行が無駄です.
+",syohex,
+59314614,239,manato,2016-02-15T02:12:40Z,Add new method for distance calculation of fusion,1,0,4,122,52855735,2016-02-15T02:59:00Z,"`include`は不要です.
+",syohex,
+59314614,239,manato,2016-02-15T02:12:40Z,Add new method for distance calculation of fusion,1,0,4,122,52856061,2016-02-15T03:08:38Z,"シーケンスから最小の値を取ってくる関数は用意されているので以下で十分ではないでしょうか ? sortが不要になるので引数のコピーも避けることができます.
+
+``` c++
+static float GetShortest(const std::vector<float>& candidates) {
+  if (candidates.empty())
+    return 0;
+
+  return *std::min_element(candidates.begin(), candidates.end());
+}
+```
+",syohex,
+59314614,239,manato,2016-02-15T02:12:40Z,Add new method for distance calculation of fusion,1,0,4,122,52856093,2016-02-15T03:09:38Z,"emptyだったら 0を即 returnした方がいいと思います.
+",syohex,
+59314614,239,manato,2016-02-15T02:12:40Z,Add new method for distance calculation of fusion,1,0,4,122,52856133,2016-02-15T03:10:45Z,"引数を const参照渡しでなく, コピーで渡す必要はあるのでしょうか ?
+",syohex,
+59314614,239,manato,2016-02-15T02:12:40Z,Add new method for distance calculation of fusion,1,0,4,122,52870434,2016-02-15T08:27:17Z,"`std::sort`は破壊的変更を行うので参照を渡すのは危険です. そもそも参照を渡さないか, コピーして引数を渡した方が良いと思います.
+",syohex,
+59314614,239,manato,2016-02-15T02:12:40Z,Add new method for distance calculation of fusion,1,0,4,122,52870488,2016-02-15T08:27:54Z,"要素が一つの場合, ソートする必要ないので, 空の場合と同様早々と returnした方が良いと思います.
+",syohex,
+56370787,205,manato,2016-01-18T17:27:20Z,Fix ranging,3,0,5,77,50063676,2016-01-19T01:24:14Z,"This line causes warning. Type of `i` is `int` by type conference because `0` is `int`. While type of `g_scan_image.distance.size()` is `size_t`(unsigned  type). There is a comparison between signed and unsigned type. You should use `size_t` for `i` type. Or use `ranged-for`.
+",syohex,
+56370787,205,manato,2016-01-18T17:27:20Z,Fix ranging,3,0,5,77,50063743,2016-01-19T01:25:37Z,"You need not to insert space for nested template parameter. It's C++03 style. C++11 or higher does not require spaces for it.
+",syohex,

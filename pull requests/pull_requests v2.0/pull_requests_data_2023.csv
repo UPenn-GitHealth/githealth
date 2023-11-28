@@ -1,0 +1,234 @@
+pull_request_id,pull_request_number,pull_request_user_id,pull_request_created_at,pull_request_title,pull_request_commits,pull_request_checks,pull_request_files_changed,pull_request_lines_changed,comment_id,comment_created_at,comment_text,comment_author,comment_parent_id
+1584430085,3956,esteve,2023-11-02T14:20:38Z,build: update to CUDA 12.3,6,19,4,54,1380347105,2023-11-02T15:36:15Z,"```suggestion
+    line: export PATH=""/usr/local/cuda/bin:$PATH""
+```
+
+We can keep them same since the path points to the latest cuda installation by default.
+
+For example on my machine:
+```console
+$ readlink -f /usr/local/cuda
+/usr/local/cuda-12.3
+```",xmfcx,
+1584430085,3956,esteve,2023-11-02T14:20:38Z,build: update to CUDA 12.3,6,19,4,54,1380347857,2023-11-02T15:36:46Z,"```suggestion
+    line: export LD_LIBRARY_PATH=""/usr/local/cuda/lib64:$LD_LIBRARY_PATH""
+```
+Same as https://github.com/autowarefoundation/autoware/pull/3956/files#r1380347105 above.",xmfcx,
+1584430085,3956,esteve,2023-11-02T14:20:38Z,build: update to CUDA 12.3,6,19,4,54,1380349444,2023-11-02T15:37:47Z,"```suggestion
+echo 'export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}' >> ~/.bashrc
+echo 'export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}' >> ~/.bashrc
+```
+
+Same as https://github.com/autowarefoundation/autoware/pull/3956/files#r1380347105",xmfcx,
+1360329171,3515,awf-autoware-bot[bot],2023-05-23T00:06:55Z,ci(pre-commit): autoupdate,1,14,1,14,1393904029,2023-11-15T09:25:01Z,"- https://results.pre-commit.ci/run/github/41331761/1700039086.08oZDBW8SECNTV4SbnF1NA
+- https://github.com/scop/pre-commit-shfmt/issues/20",xmfcx,
+1333222972,3471,awf-autoware-bot[bot],2023-05-01T00:00:47Z,ci(pre-commit-optional): autoupdate,1,16,1,2,1181403082,2023-05-01T05:44:52Z,https://github.com/tcort/markdown-link-check/releases/tag/v3.11.2,kenji-miyake,
+1311735701,3423,shmpwk,2023-04-13T01:43:03Z,docs(PULL_REQUEST_TEMPLATE): add Topic changes and Effects for driving behavior,10,16,2,14,1164863301,2023-04-13T01:49:13Z,"```suggestion
+## Effects on driving behavior
+```",shmpwk,
+1311735701,3423,shmpwk,2023-04-13T01:43:03Z,docs(PULL_REQUEST_TEMPLATE): add Topic changes and Effects for driving behavior,10,16,2,14,1164863418,2023-04-13T01:49:23Z,"```suggestion
+## Effects on driving behavior
+```",shmpwk,
+1311735701,3423,shmpwk,2023-04-13T01:43:03Z,docs(PULL_REQUEST_TEMPLATE): add Topic changes and Effects for driving behavior,10,16,2,14,1164869101,2023-04-13T01:52:26Z,"For service/client.
+
+```suggestion
+## Interface changes
+```",kenji-miyake,
+1311735701,3423,shmpwk,2023-04-13T01:43:03Z,docs(PULL_REQUEST_TEMPLATE): add Topic changes and Effects for driving behavior,10,16,2,14,1164872360,2023-04-13T01:55:00Z,"```suggestion
+<!-- Describe when the PR changes the interface, such as changing the topic name or service client. -->
+```",shmpwk,
+1311735701,3423,shmpwk,2023-04-13T01:43:03Z,docs(PULL_REQUEST_TEMPLATE): add Topic changes and Effects for driving behavior,10,16,2,14,1164885207,2023-04-13T02:04:19Z,"I think it sometimes has a little effect, so rephrasing it to something might be better.
+
+```suggestion
+Not applicable.
+```",kenji-miyake,
+1311735701,3423,shmpwk,2023-04-13T01:43:03Z,docs(PULL_REQUEST_TEMPLATE): add Topic changes and Effects for driving behavior,10,16,2,14,1164888354,2023-04-13T02:07:43Z,"I'm not sure if it's limited to `driving`. I personally feel `system` is safer.
+
+```suggestion
+## Effects on system behavior
+```",kenji-miyake,
+1311735701,3423,shmpwk,2023-04-13T01:43:03Z,docs(PULL_REQUEST_TEMPLATE): add Topic changes and Effects for driving behavior,10,16,2,14,1164890393,2023-04-13T02:08:42Z,Looks better!,shmpwk,1164888354
+1311735701,3423,shmpwk,2023-04-13T01:43:03Z,docs(PULL_REQUEST_TEMPLATE): add Topic changes and Effects for driving behavior,10,16,2,14,1164890414,2023-04-13T02:08:43Z,"Related to https://github.com/autowarefoundation/autoware/pull/3423/files#r1164888354.
+
+```suggestion
+<!-- Describe how this PR affects the system behavior. -->
+```",kenji-miyake,
+1311735701,3423,shmpwk,2023-04-13T01:43:03Z,docs(PULL_REQUEST_TEMPLATE): add Topic changes and Effects for driving behavior,10,16,2,14,1164894915,2023-04-13T02:14:27Z,"```suggestion
+## Effects on system behavior
+
+<!-- Describe how this PR affects the system behavior. -->
+```",kenji-miyake,
+1311735701,3423,shmpwk,2023-04-13T01:43:03Z,docs(PULL_REQUEST_TEMPLATE): add Topic changes and Effects for driving behavior,10,16,2,14,1164902243,2023-04-13T02:20:03Z,"How about this?
+
+```suggestion
+<!-- Describe any changed interfaces, such as topics, services, or parameters. -->
+```
+",kenji-miyake,
+1311735701,3423,shmpwk,2023-04-13T01:43:03Z,docs(PULL_REQUEST_TEMPLATE): add Topic changes and Effects for driving behavior,10,16,2,14,1164905738,2023-04-13T02:23:58Z,"Nice!
+",shmpwk,1164902243
+1295967209,3389,shmpwk,2023-03-30T10:09:32Z,docs(PULL_REQUEST_TEMPLATE): add Tests performed for small change template,8,15,1,7,1153047829,2023-03-30T10:18:20Z,"How about this?
+
+```suggestion
+- [Standard change](?expand=1&template=standard-change.md): For `feat` (features) and `fix` (bug fixes)
+- [Small change](?expand=1&template=small-change.md): For other types
+```
+
+Or this?
+
+```suggestion
+- [Standard change](?expand=1&template=standard-change.md)
+  - Use this template for `feat` (features) and `fix` (bug fixes).
+- [Small change](?expand=1&template=small-change.md)
+  - Use this template for other types.
+```",kenji-miyake,
+1295967209,3389,shmpwk,2023-03-30T10:09:32Z,docs(PULL_REQUEST_TEMPLATE): add Tests performed for small change template,8,15,1,7,1153048457,2023-03-30T10:18:57Z,The reason is that the request should be visible when people click the button.,kenji-miyake,1153047829
+1295967209,3389,shmpwk,2023-03-30T10:09:32Z,docs(PULL_REQUEST_TEMPLATE): add Tests performed for small change template,8,15,1,7,1153062560,2023-03-30T10:32:51Z,Great idea! Thanks!,shmpwk,1153047829
+1295967209,3389,shmpwk,2023-03-30T10:09:32Z,docs(PULL_REQUEST_TEMPLATE): add Tests performed for small change template,8,15,1,7,1153069204,2023-03-30T10:39:28Z,"```suggestion
+```",kenji-miyake,
+1295967209,3389,shmpwk,2023-03-30T10:09:32Z,docs(PULL_REQUEST_TEMPLATE): add Tests performed for small change template,8,15,1,7,1153070301,2023-03-30T10:40:26Z,Sorry I overlooked ,shmpwk,1153069204
+1295967209,3389,shmpwk,2023-03-30T10:09:32Z,docs(PULL_REQUEST_TEMPLATE): add Tests performed for small change template,8,15,1,7,1155059400,2023-04-01T05:17:38Z,"[nits]
+
+```suggestion
+Not applicable.
+```",kenji-miyake,
+1295967209,3389,shmpwk,2023-03-30T10:09:32Z,docs(PULL_REQUEST_TEMPLATE): add Tests performed for small change template,8,15,1,7,1155062826,2023-04-01T05:55:59Z,"How about this? I feel it's clearer than `any other PRs that should be tested`.
+Also, I think this should be written also in `standard-change.md`.
+
+```suggestion
+<!-- Must fill in feat (feature), fix (bug fix), perf (performance), and any other non-trivial PRs. -->
+```",kenji-miyake,
+1295967209,3389,shmpwk,2023-03-30T10:09:32Z,docs(PULL_REQUEST_TEMPLATE): add Tests performed for small change template,8,15,1,7,1155063153,2023-04-01T05:59:53Z,I think non-trivial PRs use standard template not small template.,shmpwk,1155062826
+1295967209,3389,shmpwk,2023-03-30T10:09:32Z,docs(PULL_REQUEST_TEMPLATE): add Tests performed for small change template,8,15,1,7,1155063267,2023-04-01T06:01:06Z,"Hmm, I thought you'd like to write the same content in both templates, but I misunderstood something.
+So, could you describe the background and your purpose?
+https://github.com/autowarefoundation/autoware/pull/3389#issuecomment-1492844394",kenji-miyake,1155062826
+1295967209,3389,shmpwk,2023-03-30T10:09:32Z,docs(PULL_REQUEST_TEMPLATE): add Tests performed for small change template,8,15,1,7,1155064200,2023-04-01T06:12:06Z,"Ok, I updated the backgound in the PR description.",shmpwk,1155062826
+1295967209,3389,shmpwk,2023-03-30T10:09:32Z,docs(PULL_REQUEST_TEMPLATE): add Tests performed for small change template,8,15,1,7,1155065709,2023-04-01T06:25:09Z,"Thank you!
+Then, how about this?
+
+```suggestion
+<!-- Although the default value is set to ""Not Applicable."", please update this section if the type is either [feat, fix, perf], or if requested by the reviewers. -->
+```",kenji-miyake,1155062826
+1295967209,3389,shmpwk,2023-03-30T10:09:32Z,docs(PULL_REQUEST_TEMPLATE): add Tests performed for small change template,8,15,1,7,1155065919,2023-04-01T06:27:47Z,"Sorry, maybe complete -> update would be better here? :thinking: 
+I'll update the suggestion above.",kenji-miyake,1155062826
+1295967209,3389,shmpwk,2023-03-30T10:09:32Z,docs(PULL_REQUEST_TEMPLATE): add Tests performed for small change template,8,15,1,7,1155066515,2023-04-01T06:34:43Z,"Perfects!!! Easier to understand, thank you.",shmpwk,1155062826
+1294524341,3384,awf-autoware-bot[bot],2023-03-29T12:09:54Z,ci(pre-commit-optional): autoupdate,1,16,1,2,1151839364,2023-03-29T12:11:07Z,Wait for the bug to be fixed: https://github.com/autowarefoundation/autoware/pull/3383,kenji-miyake,
+1294524341,3384,awf-autoware-bot[bot],2023-03-29T12:09:54Z,ci(pre-commit-optional): autoupdate,1,16,1,2,1166186052,2023-04-14T01:33:37Z,Fixed in v3.11.1.,kenji-miyake,1151839364
+1293092559,3375,esteve,2023-03-28T14:10:01Z,feat: use ansible to download ONNX files,11,16,5,360,1327268433,2023-09-15T13:10:30Z,"In my case it breaks here: 
+![Screenshot from 2023-09-15 15-31-01](https://github.com/autowarefoundation/autoware/assets/37497658/be55a742-1314-4e7a-9f93-150f268f06f8)
+ This solves it 
+```suggestion
+    checksum: md5:28b408710bcb24f4cdd4d746301d4e78
+```",lexavtanke,
+1293092559,3375,esteve,2023-03-28T14:10:01Z,feat: use ansible to download ONNX files,11,16,5,360,1327268528,2023-09-15T13:10:35Z,"In my case it breaks here and this solves it
+```suggestion
+    checksum: md5:378526d9aa9fc6705cf399f7b35b3053
+```",lexavtanke,
+1293092559,3375,esteve,2023-03-28T14:10:01Z,feat: use ansible to download ONNX files,11,16,5,360,1327268599,2023-09-15T13:10:39Z,"In my case it breaks here: 
+![Screenshot from 2023-09-15 15-10-06](https://github.com/autowarefoundation/autoware/assets/37497658/88825110-6983-4bab-a80e-451da85584b1)
+This solves it
+```suggestion
+    checksum: sha256:1a5a49eeec5593963eab8d70f48b8a01bfb07e753e9688eb1510ad26e803579d
+```",lexavtanke,
+1293092559,3375,esteve,2023-03-28T14:10:01Z,feat: use ansible to download ONNX files,11,16,5,360,1327469855,2023-09-15T15:35:22Z,"```suggestion
+    - role: autoware.dev_env.artifacts
+```",lexavtanke,
+1290226190,3367,kenji-miyake,2023-03-26T03:52:38Z,ci: replace set-output with $GITHUB_OUTPUT,3,15,5,31,1150037458,2023-03-28T05:16:57Z,:thinking: interesting that we have to use randomly generated EOF tokens to deal with injection attacks.,xmfcx,
+1282045101,3350,VRichardJP,2023-03-20T06:00:16Z,fix(docker): broken OpenGL with old mesa libs,4,16,1,11,1141962841,2023-03-20T11:13:37Z,"If it's a tentative solution, how about adding a TODO comment like this?
+
+```suggestion
+TODO: Remove in Ubuntu 24.04
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y software-properties-common \
+```",kenji-miyake,
+1281416871,3349,awf-autoware-bot[bot],2023-03-19T00:00:53Z,ci(pre-commit-optional): autoupdate,1,18,1,2,1141593298,2023-03-20T03:45:06Z,https://github.com/tcort/markdown-link-check/releases/tag/v3.11.0,kenji-miyake,
+1261410764,3306,sykwer,2023-03-03T03:23:59Z,feat(repos): add heaphook to repos,2,15,1,5,1127733250,2023-03-07T11:42:16Z,"Currently, non-AWF repositories are named `external`.
+
+For the background, see https://github.com/autowarefoundation/autoware_core_universe_prototype/pull/374.
+
+```suggestion
+  middleware/external/heaphook:
+```",kenji-miyake,
+1260603316,3303,kazuki0824,2023-03-02T15:02:56Z,fix(docker):  avoid empty string in bake's arguments when `targets` not specified,4,18,1,7,1123942232,2023-03-03T01:31:49Z,"It's from https://github.com/autowarefoundation/autoware/pull/3253.
+I'm sorry for my insufficient review in the PR.
+
+However, the changes by this PR look a little redundant.
+Is it impossible to write as follows instead?
+
+```
+targets=""devel,prebuilt""
+targets=""*""
+```",kenji-miyake,
+1260603316,3303,kazuki0824,2023-03-02T15:02:56Z,fix(docker):  avoid empty string in bake's arguments when `targets` not specified,4,18,1,7,1125600560,2023-03-05T05:27:21Z,"I got it. I'll revert it.
+But unfortunately, I think your solution might not work.
+If the targets are passed chained like `devel target`, them the `bake` will process the line as-is and the command will fail finally.
+According to https://docs.docker.com/engine/reference/commandline/buildx_bake/#file , when passing multiple targets to the `bake`, we have to specify the name(s) with space-separated manner... In scripting mode, targets should not be a single string but array-like.
+",kazuki0824,1123942232
+1258105467,3297,caiyuexiang,2023-03-01T03:25:18Z,feat(setup): change option --no-dev to --runtime,1,19,1,9,1121104760,2023-03-01T03:49:41Z,"@caiyuexiang Why do you want to split this option out of this if-statement?
+I'm asking this because we need to keep the decision logs for future reviews.",kenji-miyake,
+1258105467,3297,caiyuexiang,2023-03-01T03:25:18Z,feat(setup): change option --no-dev to --runtime,1,19,1,9,1121203779,2023-03-01T06:18:39Z,"Hi, @kenji-miyake , split this option just to maintain a uniform style of context, each option controls one args. And those two parameters under --runtime are added aims to minimize the options for exposed interface.",caiyuexiang,1121104760
+1258105467,3297,caiyuexiang,2023-03-01T03:25:18Z,feat(setup): change option --no-dev to --runtime,1,19,1,9,1121209179,2023-03-01T06:24:38Z,"@caiyuexiang Thank you, but I'm sorry, I don't understand well. :cry: 
+The if-statement was split, but both options are set simultaneously when `--runtime` is given.
+So I don't understand the reason for splitting the if-statement.
+Could you elaborate on this a bit more?",kenji-miyake,1121104760
+1258105467,3297,caiyuexiang,2023-03-01T03:25:18Z,feat(setup): change option --no-dev to --runtime,1,19,1,9,1121279858,2023-03-01T07:39:55Z,"Hi, @kenji-miyake Since it's easy to cause confusion here, maybe I should keep the original if-statement and just replace the  --no-dev option with --runtime. What do you think?",caiyuexiang,1121104760
+1258105467,3297,caiyuexiang,2023-03-01T03:25:18Z,feat(setup): change option --no-dev to --runtime,1,19,1,9,1121282434,2023-03-01T07:42:12Z,It sounds clear and good to me!,kenji-miyake,1121104760
+1258105467,3297,caiyuexiang,2023-03-01T03:25:18Z,feat(setup): change option --no-dev to --runtime,1,19,1,9,1121283782,2023-03-01T07:43:28Z,"If you want to change something, it's of course okay, but the reason should always be stated and reviewed.",kenji-miyake,1121104760
+1235380109,3266,wep21,2023-02-09T16:15:31Z,feat(autoware.repos): add cuda api wrappers,2,18,1,4,1102197271,2023-02-10T01:54:28Z,"Don't to need some TODO comment here?
+For example, `TODO(TIER IV): Remove after apt released.`",kenji-miyake,
+1235380109,3266,wep21,2023-02-09T16:15:31Z,feat(autoware.repos): add cuda api wrappers,2,18,1,4,1102286934,2023-02-10T05:27:07Z,"```suggestion
+  universe/external/cuda-api-wrappers: # TODO(TIER IV): Remove after apt released.
+```",wep21,1102197271
+1234477213,3265,kyoichi-sugahara,2023-02-09T03:28:04Z,feat(repos): add scenario_simulator_v2_msgs to repos,2,17,1,4,1100969512,2023-02-09T04:29:24Z,"I'm not sure whether we should add TEIR IV's simulator-specific messages here.
+I'd like to get reviews from @xmfcx @mitsudome-r @yukkysaito.
+
+Why not adding the messages to https://github.com/autowarefoundation/autoware_msgs (Autoware's official messages) or https://github.com/tier4/tier4_autoware_msgs (TIER IV's proposal messages)?
+
+Also, have you considered releasing the messages to the ROS buildfarm? Please share the discussion results.
+In the cases of `autoware_msgs` and `tier4_autoware_msgs`, since they are still under construction, we're not planning to release them yet.",kenji-miyake,
+1234477213,3265,kyoichi-sugahara,2023-02-09T03:28:04Z,feat(repos): add scenario_simulator_v2_msgs to repos,2,17,1,4,1100973035,2023-02-09T04:38:08Z,"@kenji-miyake thank you 👍 
+I do not think it is a good idea to add it since it is a test msg inside TIER IV.
+
+If it is to be added, I think it would be better to make a proposal to AWF whether or not to introduce a scenario simulator. Or if it is ecessary, we should put it in AWF repos",yukkysaito,1100969512
+1234477213,3265,kyoichi-sugahara,2023-02-09T03:28:04Z,feat(repos): add scenario_simulator_v2_msgs to repos,2,17,1,4,1100984307,2023-02-09T05:03:18Z,"@kenji-miyake @yukkysaito cc: @yamacir-kit  
+Thank you for the comments.
+Let me confirm whether [scenarios_simulator_v2](https://github.com/tier4/scenario_simulator_v2) is being used as AWF's evaluator for the evaluation.
+If scenario_simulator_v2 is tier4's specific repository, I think `scenario_simulator_v2_msgs` should be in https://github.com/tier4/tier4_autoware_msgs.
+
+@mitsudome-r 
+Do you know whether scenario_simulator_v2's position is AWF evaluator or tier4's evaluator?
+(I heard scenario_simulator_v2 is being used by AWF's project but not sure if it's used as AWF's evaluator)",kyoichi-sugahara,1100969512
+1234477213,3265,kyoichi-sugahara,2023-02-09T03:28:04Z,feat(repos): add scenario_simulator_v2_msgs to repos,2,17,1,4,1102311522,2023-02-10T06:10:55Z,"We are using TIER IV's evaluator in AWF as well.
+
+However, that does not mean it has to go into autoware_msgs. If you want to make this a core interface between Autoware Foundation and simulator in general, it should go into autoware_msgs.(i.e., if you want to add this to AD API or component interface)
+
+If this topic is only meant to be used by TIER IV, then it should be merged into tier4_autoware_msgs.
+
+In either case, I would like to see more description on what/how this message is used for. You wrote that this message is needed to merge this [pr](https://github.com/autowarefoundation/autoware.universe/pull/2514), but description in the PR doesn't explain what you want to solve. There is no design discussion shared with us to decide why we should add this message to Autoware.",mitsudome-r,1100969512
+1234477213,3265,kyoichi-sugahara,2023-02-09T03:28:04Z,feat(repos): add scenario_simulator_v2_msgs to repos,2,17,1,4,1105304596,2023-02-14T05:19:03Z,"@mitsudome-r 
+I described how the msg is used for in this [pr](https://github.com/autowarefoundation/autoware.universe/pull/2514). Could you check the description? ",kyoichi-sugahara,1100969512
+1234477213,3265,kyoichi-sugahara,2023-02-09T03:28:04Z,feat(repos): add scenario_simulator_v2_msgs to repos,2,17,1,4,1107971152,2023-02-16T03:38:08Z,"@mitsudome-r @kenji-miyake @yukkysaito cc: @yamacir-kit
+We have a message for simulation named `tier4_simulation_msgs` created previously in tier4_autoware_msgs repository, so making a draft [PR](https://github.com/tier4/tier4_autoware_msgs/pull/73), but I'm not sure if it's a good idea.
+Could you give some comments where we should add those msgs? ",kyoichi-sugahara,1100969512
+1234477213,3265,kyoichi-sugahara,2023-02-09T03:28:04Z,feat(repos): add scenario_simulator_v2_msgs to repos,2,17,1,4,1108042653,2023-02-16T05:53:09Z,@kyoichi-sugahara What's your concern? I think it looks good. And it would be good if TIER IV could propose the message definitions to the AWF with more concrete use cases.,kenji-miyake,1100969512
+1234477213,3265,kyoichi-sugahara,2023-02-09T03:28:04Z,feat(repos): add scenario_simulator_v2_msgs to repos,2,17,1,4,1108055163,2023-02-16T06:16:20Z,"@kenji-miyake  cc: @yamacir-kit 
+I was not sure where we should place the proposal msg and that is kind of my concern. So we will put the msg in `tier4_simulation_msgs` for now. And we will organize the what/why/how the msg is used so that AWF members can make decision where the msg should be placed. If it's ok I will close this pr.",kyoichi-sugahara,1100969512
+1234273043,3261,rsasaki0109,2023-02-08T23:15:33Z,feat(repos): add gnss/imu localizer,6,17,1,12,1101200185,2023-02-09T09:39:46Z,"Is it better to add .git?
+```suggestion
+    url: https://github.com/MapIV/eagleye.git
+```",yukkysaito,
+1234273043,3261,rsasaki0109,2023-02-08T23:15:33Z,feat(repos): add gnss/imu localizer,6,17,1,12,1102314625,2023-02-10T06:16:00Z,"I see some packages([gnss_poser](https://github.com/autowarefoundation/autoware.universe/tree/main/sensing/gnss_poser) and [geo_pos_conv](https://github.com/autowarefoundation/autoware.universe/tree/main/sensing/geo_pos_conv)) that seem to do a similar thing with this repository.
+
+Have you ever considered creating PRs to these packages rather than adding new repository?",mitsudome-r,
+1234273043,3261,rsasaki0109,2023-02-08T23:15:33Z,feat(repos): add gnss/imu localizer,6,17,1,12,1102356682,2023-02-10T07:08:21Z,"@mitsudome-r 
+The eagleye is not only used for autoware, but the packages you suggested are in autoware.universe or use their own messages, and they ware hard to incorporate them into ealgeye, so I did not modify or work on them this time.
+Is it possible, for example, to manage those packages in autoware.universe and a separate repository?
+
+Or maybe we could try to use [llh_converter](https://github.com/MapIV/llh_converter/tree/main) on the autoware side.",rsasaki0109,1102314625
+1234273043,3261,rsasaki0109,2023-02-08T23:15:33Z,feat(repos): add gnss/imu localizer,6,17,1,12,1106947224,2023-02-15T10:34:25Z,"If we cannot use the node directly, I would at least would like to see some discussion between Map IV and TIER IV localization team about extraction of library to convert between lat/lon <-> x,y,z coordinates.
+At least I see significant overlap in:
+* https://github.com/MapIV/llh_converter/blob/main/include/llh_converter/llh_converter.hpp
+* https://github.com/autowarefoundation/autoware.universe/blob/main/sensing/gnss_poser/include/gnss_poser/convert.hpp
+so that we are using same projection between different nodes.",mitsudome-r,1102314625
+1234273043,3261,rsasaki0109,2023-02-08T23:15:33Z,feat(repos): add gnss/imu localizer,6,17,1,12,1108071904,2023-02-16T06:45:23Z,"OK, I would like to discuss it once on the MAP IV side and then bring the discussion to TIER IV localization team.",rsasaki0109,1102314625
+1234273043,3261,rsasaki0109,2023-02-08T23:15:33Z,feat(repos): add gnss/imu localizer,6,17,1,12,1111573054,2023-02-20T07:34:39Z,"I have discussed with @rsasaki0109 and @YamatoAndo on this.
+In conclusion, we can merge this PR as a separate package for now to avoid unnecessary dependency between Autoware and Eagleye. However, as a long term, we would like to extract it as a common library once code is more stable.",mitsudome-r,1102314625
+1234273043,3261,rsasaki0109,2023-02-08T23:15:33Z,feat(repos): add gnss/imu localizer,6,17,1,12,1111578879,2023-02-20T07:41:44Z,https://github.com/autowarefoundation/autoware.universe/issues/2915,mitsudome-r,1102314625
