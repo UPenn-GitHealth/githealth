@@ -1,0 +1,549 @@
+pull_request_id,pull_request_number,pull_request_user_id,pull_request_created_at,pull_request_title,pull_request_commits,pull_request_checks,pull_request_files_changed,pull_request_lines_changed,comment_id,comment_created_at,comment_text,comment_author,comment_parent_id
+1142681141,3099,kenji-miyake,2022-12-02T03:05:31Z,ci(update-tool-versions): update clang-format version check,2,16,3,11,1038274845,2022-12-02T15:45:13Z,"Reverted due to https://github.com/ssciwr/clang-format-wheel/issues/56.
+https://github.com/autowarefoundation/autoware/actions/runs/3601518900/jobs/6067419429#step:4:1168
+
+```
+fatal: [localhost]: FAILED! => {""changed"": false, ""cmd"": [""/usr/bin/pip3"", ""install"", ""clang-format==15.0.4""], ""msg"": ""stdout: Collecting clang-format==15.0.4\n  Downloading clang-format-15.0.4.tar.gz (9.6 kB)\n  Installing build dependencies: started\n  Installing build dependencies: finished with status 'done'\n  Getting requirements to build wheel: started\n  Getting requirements to build wheel: finished with status 'done'\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: clang-format\n  Building wheel for clang-format (pyproject.toml): started\n  Building wheel for clang-format (pyproject.toml): finished with status 'error'\nFailed to build clang-format\n\n:stderr:   error: subprocess-exited-with-error\n  \n  × Building wheel for clang-format (pyproject.toml) did not run successfully.\n  │ exit code: 1\n  ╰─> [224 lines of output]\n      \n      \n      --------------------------------------------------------------------------------\n      -- Trying \""Ninja\"" generator\n      --------------------------------\n      ---------------------------\n      ----------------------\n      -----------------\n      ------------\n      -------\n      --\n      Not searching for unused variables given on the command line.\n      -- The C compiler identification is GNU 11.3.0\n      -- Detecting C compiler ABI info\n      -- Detecting C compiler ABI info - done\n      -- Check for working C compiler: /usr/bin/cc - skipped\n      -- Detecting C compile features\n      -- Detecting C compile features - done\n      -- The CXX compiler identification is GNU 11.3.0\n      -- Detecting CXX compiler ABI info\n      -- Detecting CXX compiler ABI info - done\n      -- Check for working CXX compiler: /usr/bin/c++ - skipped\n      -- Detecting CXX compile features\n      -- Detecting CXX compile features - done\n      -- Configuring done\n      -- Generating done\n      -- Build files have been written to: /tmp/pip-install-42n5ektm/clang-format_ce6eda801cb5478ea0a225209d63c7bd/_cmake_test_compile/build\n      --\n      -------\n      ------------\n      -----------------\n      ----------------------\n      ---------------------------\n      --------------------------------\n      -- Trying \""Ninja\"" generator - success\n      --------------------------------------------------------------------------------\n      \n      Configuring Project\n        Working directory:\n          /tmp/pip-install-42n5ektm/clang-format_ce6eda801cb5478ea0a225209d63c7bd/_skbuild/linux-aarch64-3.10/cmake-build\n        Command:\n          cmake /tmp/pip-install-42n5ektm/clang-format_ce6eda801cb5478ea0a225209d63c7bd -G Ninja -DCMAKE_INSTALL_PREFIX:PATH=/tmp/pip-install-42n5ektm/clang-format_ce6eda801cb5478ea0a225209d63c7bd/_skbuild/linux-aarch64-3.10/cmake-install -DPYTHON_VERSION_STRING:STRING=3.10.6 -DSKBUILD:INTERNAL=TRUE -DCMAKE_MODULE_PATH:PATH=/tmp/pip-build-env-5_y4824b/overlay/local/lib/python3.10/dist-packages/skbuild/resources/cmake -DPYTHON_EXECUTABLE:PATH=/usr/bin/python3 -DPYTHON_INCLUDE_DIR:PATH=/usr/include/python3.10 -DPYTHON_LIBRARY:PATH=/usr/lib/aarch64-linux-gnu/libpython3.10.so -DPython_EXECUTABLE:PATH=/usr/bin/python3 -DPython_ROOT_DIR:PATH=/usr -DPython_INCLUDE_DIR:PATH=/usr/include/python3.10 -DPython_FIND_REGISTRY:STRING=NEVER -DPython_NumPy_INCLUDE_DIRS:PATH=/usr/lib/python3/dist-packages/numpy/core/include -DPython3_EXECUTABLE:PATH=/usr/bin/python3 -DPython3_ROOT_DIR:PATH=/usr -DPython3_INCLUDE_DIR:PATH=/usr/include/python3.10 -DPython3_FIND_REGISTRY:STRING=NEVER -DPython3_NumPy_INCLUDE_DIRS:PATH=/usr/lib/python3/dist-packages/numpy/core/include -DCMAKE_MAKE_PROGRAM:FILEPATH=/tmp/pip-build-env-5_y4824b/overlay/local/lib/python3.10/dist-packages/ninja/data/bin/ninja -DCMAKE_BUILD_TYPE:STRING=Release\n      \n      -- The C compiler identification is GNU 11.3.0\n      -- The CXX compiler identification is GNU 11.3.0\n      -- Detecting C compiler ABI info\n      -- Detecting C compiler ABI info - done\n      -- Check for working C compiler: /usr/bin/cc - skipped\n      -- Detecting C compile features\n      -- Detecting C compile features - done\n      -- Detecting CXX compiler ABI info\n      -- Detecting CXX compiler ABI info - done\n      -- Check for working CXX compiler: /usr/bin/c++ - skipped\n      -- Detecting CXX compile features\n      -- Detecting CXX compile features - done\n      -- Configuring done\n      -- Generating done\n      CMake Warning:\n        Manually-specified variables were not used by the project:\n      \n          PYTHON_EXECUTABLE\n          PYTHON_INCLUDE_DIR\n          PYTHON_LIBRARY\n          PYTHON_VERSION_STRING\n          Python3_EXECUTABLE\n          Python3_FIND_REGISTRY\n          Python3_INCLUDE_DIR\n          Python3_NumPy_INCLUDE_DIRS\n          Python3_ROOT_DIR\n          Python_EXECUTABLE\n          Python_FIND_REGISTRY\n          Python_INCLUDE_DIR\n          Python_NumPy_INCLUDE_DIRS\n          Python_ROOT_DIR\n          SKBUILD\n      \n      \n      -- Build files have been written to: /tmp/pip-install-42n5ektm/clang-format_ce6eda801cb5478ea0a225209d63c7bd/_skbuild/linux-aarch64-3.10/cmake-build\n      [1/10] Creating directories for 'build-clang-format'\n      [1/10] Performing download step (download, verify and extract) for 'build-clang-format'\n      -- Downloading...\n         dst='/tmp/pip-install-42n5ektm/clang-format_ce6eda801cb5478ea0a225209d63c7bd/_skbuild/linux-aarch64-3.10/cmake-build/build-clang-format-prefix/src/llvm-project-15.0.4.src.tar.xz'\n         timeout='none'\n         inactivity timeout='none'\n      -- Using src='https://github.com/llvm/llvm-project/releases/download/llvmorg-15.0.4/llvm-project-15.0.4.src.tar.xz'\n      -- [download 0% complete]\n      -- [download 1% complete]\n      -- [download 2% complete]\n      -- [download 3% complete]\n      -- [download 4% complete]\n      -- [download 5% complete]\n      -- [download 6% complete]\n      -- [download 7% complete]\n      -- [download 8% complete]\n      -- [download 9% complete]\n      -- [download 10% complete]\n      -- [download 11% complete]\n      -- [download 12% complete]\n      -- [download 13% complete]\n      -- [download 14% complete]\n      -- [download 15% complete]\n      -- [download 16% complete]\n      -- [download 17% complete]\n      -- [download 18% complete]\n      -- [download 19% complete]\n      -- [download 20% complete]\n      -- [download 21% complete]\n      -- [download 22% complete]\n      -- [download 23% complete]\n      -- [download 24% complete]\n      -- [download 25% complete]\n      -- [download 26% complete]\n      -- [download 27% complete]\n      -- [download 28% complete]\n      -- [download 29% complete]\n      -- [download 30% complete]\n      -- [download 31% complete]\n      -- [download 32% complete]\n      -- [download 33% complete]\n      -- [download 34% complete]\n      -- [download 35% complete]\n      -- [download 36% complete]\n      -- [download 37% complete]\n      -- [download 38% complete]\n      -- [download 39% complete]\n      -- [download 40% complete]\n      -- [download 41% complete]\n      -- [download 42% complete]\n      -- [download 43% complete]\n      -- [download 44% complete]\n      -- [download 45% complete]\n      -- [download 46% complete]\n      -- [download 47% complete]\n      -- [download 48% complete]\n      -- [download 49% complete]\n      -- [download 50% complete]\n      -- [download 51% complete]\n      -- [download 52% complete]\n      -- [download 53% complete]\n      -- [download 54% complete]\n      -- [download 55% complete]\n      -- [download 56% complete]\n      -- [download 57% complete]\n      -- [download 58% complete]\n      -- [download 59% complete]\n      -- [download 60% complete]\n      -- [download 61% complete]\n      -- [download 62% complete]\n      -- [download 63% complete]\n      -- [download 64% complete]\n      -- [download 65% complete]\n      -- [download 66% complete]\n      -- [download 67% complete]\n      -- [download 68% complete]\n      -- [download 69% complete]\n      -- [download 70% complete]\n      -- [download 71% complete]\n      -- [download 72% complete]\n      -- [download 73% complete]\n      -- [download 74% complete]\n      -- [download 75% complete]\n      -- [download 76% complete]\n      -- [download 77% complete]\n      -- [download 78% complete]\n      -- [download 79% complete]\n      -- [download 80% complete]\n      -- [download 81% complete]\n      -- [download 82% complete]\n      -- [download 83% complete]\n      -- [download 84% complete]\n      -- [download 85% complete]\n      -- [download 86% complete]\n      -- [download 87% complete]\n      -- [download 88% complete]\n      -- [download 89% complete]\n      -- [download 91% complete]\n      -- [download 92% complete]\n      -- [download 93% complete]\n      -- [download 94% complete]\n      -- [download 95% complete]\n      -- [download 96% complete]\n      -- [download 97% complete]\n      -- [download 98% complete]\n      -- [download 99% complete]\n      -- [download 100% complete]\n      -- Downloading... done\n      -- extracting...\n           src='/tmp/pip-install-42n5ektm/clang-format_ce6eda801cb5478ea0a225209d63c7bd/_skbuild/linux-aarch64-3.10/cmake-build/build-clang-format-prefix/src/llvm-project-15.0.4.src.tar.xz'\n           dst='/tmp/pip-install-42n5ektm/clang-format_ce6eda801cb5478ea0a225209d63c7bd/_skbuild/linux-aarch64-3.10/cmake-build/llvm-project'\n      -- extracting... [tar xfz]\n      -- extracting... [analysis]\n      -- extracting... [rename]\n      -- extracting... [clean up]\n      -- extracting... done\n      [3/10] No update step for 'build-clang-format'\n      [4/10] No patch step for 'build-clang-format'\n      [4/10] Performing configure step for 'build-clang-format'\n      CMake Error: CMake was unable to find a build program corresponding to \""Ninja\"".  CMAKE_MAKE_PROGRAM is not set.  You probably need to select a different build tool.\n      CMake Error: CMAKE_C_COMPILER not set, after EnableLanguage\n      CMake Error: CMAKE_CXX_COMPILER not set, after EnableLanguage\n      CMake Error: CMAKE_ASM_COMPILER not set, after EnableLanguage\n      -- Configuring incomplete, errors occurred!\n      See also \""/tmp/pip-install-42n5ektm/clang-format_ce6eda801cb5478ea0a225209d63c7bd/_skbuild/linux-aarch64-3.10/cmake-build/llvm/CMakeFiles/CMakeOutput.log\"".\n      FAILED: build-clang-format-prefix/src/build-clang-format-stamp/build-clang-format-configure /tmp/pip-install-42n5ektm/clang-format_ce6eda801cb5478ea0a225209d63c7bd/_skbuild/linux-aarch64-3.10/cmake-build/build-clang-format-prefix/src/build-clang-format-stamp/build-clang-format-configure\n      cd /tmp/pip-install-42n5ektm/clang-format_ce6eda801cb5478ea0a225209d63c7bd/_skbuild/linux-aarch64-3.10/cmake-build/llvm && /usr/bin/cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -DLLVM_ENABLE_PROJECTS=clang -GNinja /tmp/pip-install-42n5ektm/clang-format_ce6eda801cb5478ea0a225209d63c7bd/_skbuild/linux-aarch64-3.10/cmake-build/llvm-project/llvm && /usr/bin/cmake -E touch /tmp/pip-install-42n5ektm/clang-format_ce6eda801cb5478ea0a225209d63c7bd/_skbuild/linux-aarch64-3.10/cmake-build/build-clang-format-prefix/src/build-clang-format-stamp/build-clang-format-configure\n      ninja: build stopped: subcommand failed.\n      Traceback (most recent call last):\n        File \""/tmp/pip-build-env-5_y4824b/overlay/local/lib/python3.10/dist-packages/skbuild/setuptools_wrap.py\"", line 640, in setup\n          cmkr.make(make_args, install_target=cmake_install_target, env=env)\n        File \""/tmp/pip-build-env-5_y4824b/overlay/local/lib/python3.10/dist-packages/skbuild/cmaker.py\"", line 672, in make\n          self.make_impl(clargs=clargs, config=config, source_dir=source_dir, install_target=install_target, env=env)\n        File \""/tmp/pip-build-env-5_y4824b/overlay/local/lib/python3.10/dist-packages/skbuild/cmaker.py\"", line 703, in make_impl\n          raise SKBuildError(\n      \n      An error occurred while building with CMake.\n        Command:\n          cmake --build . --target install --config Release --\n        Install target:\n          install\n        Source directory:\n          /tmp/pip-install-42n5ektm/clang-format_ce6eda801cb5478ea0a225209d63c7bd\n        Working directory:\n          /tmp/pip-install-42n5ektm/clang-format_ce6eda801cb5478ea0a225209d63c7bd/_skbuild/linux-aarch64-3.10/cmake-build\n      Please check the install target is valid and see CMake's output for more information.\n      [end of output]\n  \n  note: This error originates from a subprocess, and is likely not a problem with pip.\n  ERROR: Failed building wheel for clang-format\nERROR: Could not build wheels for clang-format, which is required to install pyproject.toml-based projects\n""}
+```",kenji-miyake,
+1140341518,3089,kenji-miyake,2022-11-30T13:11:40Z,feat(ansible): verify OS before running playbooks,2,14,2,11,1036129124,2022-11-30T15:38:06Z,"@wep21 @0x126 How about this?
+
+```
+TASK [Verify OS] *********************************************************************************************************************************
+fatal: [localhost]: FAILED! => {""changed"": false, ""msg"": ""Only Ubuntu 20.04 is supported for this branch. Please refer to https://autowarefoundation.github.io/autoware-documentation/main/installation/autoware/source-installation/.""}
+
+PLAY RECAP ***************************************************************************************************************************************
+localhost                  : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+Failed.
+```",kenji-miyake,
+1140341518,3089,kenji-miyake,2022-11-30T13:11:40Z,feat(ansible): verify OS before running playbooks,2,14,2,11,1036144879,2022-11-30T15:51:11Z,LGTM !,0x126,1036129124
+1140341518,3089,kenji-miyake,2022-11-30T13:11:40Z,feat(ansible): verify OS before running playbooks,2,14,2,11,1036150625,2022-11-30T15:55:25Z,Looks great!,wep21,1036129124
+1140183366,3084,kenji-miyake,2022-11-30T10:59:02Z,build(CUDA): upgrade CUDA versions,3,21,3,33,1035826071,2022-11-30T10:59:37Z,"Waiting for TensorRT to be released.
+
+```
+❯ find-cuda-versions --os ubuntu2204 --cuda 11.8
+[cudnn x86_64]
+8.6.0.163-1+cuda11.8
+8.7.0.84-1+cuda11.8
+
+[cudnn sbsa]
+8.7.0.84-1+cuda11.8
+
+[nvinfer x86_64]
+8.5.1-1+cuda11.8
+
+[nvinfer sbsa]
+
+[tensorrt x86_64]
+8.5.1.7-1+cuda11.8
+
+[tensorrt sbsa]
+```",kenji-miyake,
+1140183366,3084,kenji-miyake,2022-11-30T10:59:02Z,build(CUDA): upgrade CUDA versions,3,21,3,33,1036230160,2022-11-30T17:03:25Z,"TODO: Update manual installation steps.
+https://github.com/autowarefoundation/autoware/pull/2692/files#r1036203051",kenji-miyake,
+1140183366,3084,kenji-miyake,2022-11-30T10:59:02Z,build(CUDA): upgrade CUDA versions,3,21,3,33,1160428947,2023-04-07T04:34:23Z,"We still need to use the `ubuntu2004` repo.
+
+```console
+❯ find-cuda-versions --cuda 12.0 --os ubuntu2004
+[cudnn x86_64]
+8.8.0.121-1+cuda12.0
+8.8.1.3-1+cuda12.0
+
+[cudnn sbsa]
+8.8.0.121-1+cuda12.0
+8.8.1.3-1+cuda12.0
+
+[nvinfer x86_64]
+8.6.0.12-1+cuda12.0
+
+[nvinfer sbsa]
+8.6.0.12-1+cuda12.0
+
+[tensorrt x86_64]
+8.6.0.12-1+cuda12.0
+
+[tensorrt sbsa]
+8.6.0.12-1+cuda12.0
+
+❯ find-cuda-versions --cuda 12.0 --os ubuntu2204
+[cudnn x86_64]
+8.8.0.121-1+cuda12.0
+8.8.1.3-1+cuda12.0
+
+[cudnn sbsa]
+8.8.0.121-1+cuda12.0
+8.8.1.3-1+cuda12.0
+
+[nvinfer x86_64]
+8.6.0.12-1+cuda12.0
+
+[nvinfer sbsa]
+
+[tensorrt x86_64]
+8.6.0.12-1+cuda12.0
+
+[tensorrt sbsa]
+```",kenji-miyake,1035826071
+1135637618,3070,angry-crab,2022-11-25T08:05:18Z,feat(docker): add opencl vendor,2,15,1,5,1032099606,2022-11-25T08:06:50Z,"```suggestion
+## Register OpenCL GPU vendors
+```",kenji-miyake,
+1135637618,3070,angry-crab,2022-11-25T08:05:18Z,feat(docker): add opencl vendor,2,15,1,5,1032107737,2022-11-25T08:17:25Z,@angry-crab Reverted?,kenji-miyake,1032099606
+1135637618,3070,angry-crab,2022-11-25T08:05:18Z,feat(docker): add opencl vendor,2,15,1,5,1032110801,2022-11-25T08:21:24Z,Last commit was not signed and `DCO` check complained :(,angry-crab,1032099606
+1135637618,3070,angry-crab,2022-11-25T08:05:18Z,feat(docker): add opencl vendor,2,15,1,5,1032111580,2022-11-25T08:22:22Z,"Regarding DCO, we can make it pass manually, so don't need to care about it too much.",kenji-miyake,1032099606
+1135637618,3070,angry-crab,2022-11-25T08:05:18Z,feat(docker): add opencl vendor,2,15,1,5,1032125345,2022-11-25T08:40:03Z,Could you show me some official reference links for this instruction?,kenji-miyake,
+1135637618,3070,angry-crab,2022-11-25T08:05:18Z,feat(docker): add opencl vendor,2,15,1,5,1032127442,2022-11-25T08:42:33Z,https://github.com/KhronosGroup/OpenCL-Docs/blob/a897dfb2e238e7e0b623dd9b774e67a922fe52dc/ext/cl_khr_icd.asciidoc#icd-loader-vendor-enumeration-on-linux,ambroise-arm,1032125345
+1135637618,3070,angry-crab,2022-11-25T08:05:18Z,feat(docker): add opencl vendor,2,15,1,5,1032129084,2022-11-25T08:44:32Z,"Thanks! Added to the description.
+Adding it as a comment would also be good. I'll leave it to you two.",kenji-miyake,1032125345
+1130800080,3059,awf-autoware-bot[bot],2022-11-22T00:10:22Z,ci(pre-commit-ansible): autoupdate,1,16,1,2,1030983462,2022-11-24T01:34:46Z,https://github.com/ansible/ansible-lint/releases/tag/v6.9.0,kenji-miyake,
+1122684239,3029,yukke42,2022-11-15T10:36:22Z,fix(ansible/git_lfs): fix git lfs installation steps,5,15,2,30,1022626309,2022-11-15T10:40:17Z,"```suggestion
+sudo apt install git-lfs
+```",xmfcx,
+1122588649,3028,kenji-miyake,2022-11-15T09:21:37Z,refactor(ansible/git_lfs): remove unnecessary installation steps,3,12,2,16,1022539026,2022-11-15T09:22:46Z,"I think you don't need this at all, it is in here: https://packages.ubuntu.com/jammy/git-lfs",xmfcx,
+1122588649,3028,kenji-miyake,2022-11-15T09:21:37Z,refactor(ansible/git_lfs): remove unnecessary installation steps,3,12,2,16,1022539696,2022-11-15T09:23:12Z,Also in the role too.,xmfcx,1022539026
+1122588649,3028,kenji-miyake,2022-11-15T09:21:37Z,refactor(ansible/git_lfs): remove unnecessary installation steps,3,12,2,16,1022542815,2022-11-15T09:25:46Z,"Okay, I'll try it.",kenji-miyake,1022539026
+1122588649,3028,kenji-miyake,2022-11-15T09:21:37Z,refactor(ansible/git_lfs): remove unnecessary installation steps,3,12,2,16,1022546852,2022-11-15T09:29:17Z,@yukke42 Should we add a new step for `git lfs install`?,kenji-miyake,
+1122588649,3028,kenji-miyake,2022-11-15T09:21:37Z,refactor(ansible/git_lfs): remove unnecessary installation steps,3,12,2,16,1022562757,2022-11-15T09:42:59Z,"No, It's ok if CI passes.",yukke42,1022546852
+1122588649,3028,kenji-miyake,2022-11-15T09:21:37Z,refactor(ansible/git_lfs): remove unnecessary installation steps,3,12,2,16,1022577592,2022-11-15T09:55:27Z,"In that case, should we update the manual installation steps so that it matches this role?
+![image](https://user-images.githubusercontent.com/31987104/201888454-a188c9ad-3a8b-421c-96b6-b8342ea5415a.png)
+
+Like this?
+
+``````
+```bash
+sudo apt install git-lfs
+```
+
+After that, run the following command once.
+
+```bash
+git lfs install
+```
+``````
+
+@xmfcx Do you have any comments?
+",kenji-miyake,1022546852
+1122588649,3028,kenji-miyake,2022-11-15T09:21:37Z,refactor(ansible/git_lfs): remove unnecessary installation steps,3,12,2,16,1022582062,2022-11-15T09:59:15Z,"Right now the ansible does:
+`sudo apt install git-lfs` only.
+
+Ansible doesn't do `git lfs install`.
+
+So we should remove `git lfs install` from the readme.",xmfcx,1022546852
+1122588649,3028,kenji-miyake,2022-11-15T09:21:37Z,refactor(ansible/git_lfs): remove unnecessary installation steps,3,12,2,16,1022582814,2022-11-15T09:59:55Z,@yukke42 Is that okay? Do you have any alternative ideas?,kenji-miyake,1022546852
+1122588649,3028,kenji-miyake,2022-11-15T09:21:37Z,refactor(ansible/git_lfs): remove unnecessary installation steps,3,12,2,16,1022594152,2022-11-15T10:10:14Z,"@kenji-miyake Sorry, I misunderstood your comment.
+We need two steps `sudo apt-get install git-lfs` and `git lfs install` but the second step is missing in the ansible role.
+https://github.com/git-lfs/git-lfs/wiki/Installation#debian-and-ubuntu",yukke42,1022546852
+1122588649,3028,kenji-miyake,2022-11-15T09:21:37Z,refactor(ansible/git_lfs): remove unnecessary installation steps,3,12,2,16,1022605687,2022-11-15T10:20:45Z,I will create a new PR to fix installation steps.,yukke42,1022546852
+1122588649,3028,kenji-miyake,2022-11-15T09:21:37Z,refactor(ansible/git_lfs): remove unnecessary installation steps,3,12,2,16,1022623283,2022-11-15T10:37:28Z,please move to <https://github.com/autowarefoundation/autoware/pull/3029>.,yukke42,1022546852
+1122515262,3027,yukke42,2022-11-15T08:17:15Z,feat(ansible): add git-lfs role,2,17,5,33,1022500896,2022-11-15T08:49:29Z,"[style] Added empty lines before `name`.
+
+```suggestion
+
+- name: Setup
+  become: true
+  environment:
+    os: ""{{ ansible_distribution }}""
+    dist: ""{{ ansible_distribution_release }}""
+  ansible.builtin.script: /tmp/script.sh
+
+- name: Install Git LFS
+```",kenji-miyake,
+1122500621,3026,mitsudome-r,2022-11-15T08:04:28Z,ci(docker-build-and-push): add release tag as docker build,1,12,5,7,1022468271,2022-11-15T08:17:48Z,"I'm not sure, but maybe this is better? (Considering the pattern of `2022.11-1`, `2022.11-2`, etc.)
+
+https://docs.github.com/ja/actions/using-workflows/workflow-syntax-for-github-actions#filter-pattern-cheat-sheet
+
+```suggestion
+      - [0-9]+.[0-9]+*
+```",kenji-miyake,
+1122500621,3026,mitsudome-r,2022-11-15T08:04:28Z,ci(docker-build-and-push): add release tag as docker build,1,12,5,7,1022903658,2022-11-15T15:02:12Z,"Fixed.
+FYI, it seems we need to have quotes `""` for the keys that start with `[`
+
+> The characters *, [, and ! are special characters in YAML. If you start a pattern with *, [, or !, you must enclose the pattern in quotes.",mitsudome-r,1022468271
+1122500621,3026,mitsudome-r,2022-11-15T08:04:28Z,ci(docker-build-and-push): add release tag as docker build,1,12,5,7,1023530149,2022-11-16T05:49:13Z,"I see, thank you!",kenji-miyake,1022468271
+1118806411,3021,kenji-miyake,2022-11-11T08:38:41Z,chore: add release scripts,1,15,2,87,1020359301,2022-11-11T16:08:27Z,"Looks like there were change in command syntax in newer version https://github.com/mikefarah/yq/issues/1203.
+Same change would be necessary for other lines where 'yq' is used.
+
+```suggestion
+    yq e --inplace "".repositories.\""$repository\"".version = \""$new_version\"""" ""$repos_file""
+```
+
+",mitsudome-r,
+1118806411,3021,kenji-miyake,2022-11-11T08:38:41Z,chore: add release scripts,1,15,2,87,1020674496,2022-11-12T04:45:21Z,"I guess it's for older versions of `yq`.
+https://github.com/mikefarah/yq/releases/tag/v4.18.1
+
+> eval is now the default command, you can leave it out dancers https://github.com/mikefarah/yq/issues/113",kenji-miyake,1020359301
+1079960748,2926,aaryanmurgunde,2022-10-07T07:04:34Z,refactor(ansible/docker_engine): updated docker installation,5,0,2,24,989891630,2022-10-07T09:33:11Z,"```console
+$ docker run --rm -it ubuntu:22.04 /bin/bash
+$ stat --format '%a'  /etc/apt/keyrings/
+755
+```",kenji-miyake,
+1078355625,2922,Sharrrrk,2022-10-06T06:48:44Z,perf(docker): reduce prebuilt docker image size,11,17,6,65,988932192,2022-10-06T11:47:29Z,"Do you want to use this image for both `cuda` and `no-cuda` images?
+If not, you need to switch the base image like this.
+https://github.com/autowarefoundation/autoware/blob/b64cfdb55c2106934b5262abd8667c65671ed597/.github/workflows/docker-build-and-push-main.yaml#L21-L28",kenji-miyake,
+1078355625,2922,Sharrrrk,2022-10-06T06:48:44Z,perf(docker): reduce prebuilt docker image size,11,17,6,65,988934511,2022-10-06T11:50:03Z,"If you don't use the `devel` image for the `prebuilt` image (or is it better to rename it to `runtime` to be consistent with CUDA's images), it might be better to split into another Dockerfile.",kenji-miyake,
+1078355625,2922,Sharrrrk,2022-10-06T06:48:44Z,perf(docker): reduce prebuilt docker image size,11,17,6,65,988952297,2022-10-06T12:01:08Z,"I'm sorry for overlooking it, but I think it might be better to also add `install_devel == 'true'` to `ccache`, `pre_commit`, `ros2_dev_tools`.
+https://github.com/autowarefoundation/autoware/blob/b64cfdb55c2106934b5262abd8667c65671ed597/ansible/playbooks/universe.yaml#L37
+
+What do you think?",kenji-miyake,
+1078355625,2922,Sharrrrk,2022-10-06T06:48:44Z,perf(docker): reduce prebuilt docker image size,11,17,6,65,988961598,2022-10-06T12:07:20Z,"Ah, sorry. I misunderstood. Please ignore this comment. :bow: ",kenji-miyake,988934511
+1078355625,2922,Sharrrrk,2022-10-06T06:48:44Z,perf(docker): reduce prebuilt docker image size,11,17,6,65,988964162,2022-10-06T12:09:02Z,"Is this for debugging?
+```suggestion
+```",kenji-miyake,
+1078355625,2922,Sharrrrk,2022-10-06T06:48:44Z,perf(docker): reduce prebuilt docker image size,11,17,6,65,988973220,2022-10-06T12:14:57Z,"Is this option valid?
+
+```suggestion
+  ./setup-dev-env.sh -y $SETUP_ARGS --no-cuda-drivers --no-dev universe \
+```",kenji-miyake,
+1078355625,2922,Sharrrrk,2022-10-06T06:48:44Z,perf(docker): reduce prebuilt docker image size,11,17,6,65,988976244,2022-10-06T12:18:13Z,"Also, I guess `--no-cuda-drivers` should come from `SETUP_ARGS`.
+
+https://github.com/autowarefoundation/autoware/blob/b64cfdb55c2106934b5262abd8667c65671ed597/.github/workflows/docker-build-and-push-main.yaml#L27
+
+```suggestion
+  ./setup-dev-env.sh -y $SETUP_ARGS --no-dev universe \
+```",kenji-miyake,988973220
+1078355625,2922,Sharrrrk,2022-10-06T06:48:44Z,perf(docker): reduce prebuilt docker image size,11,17,6,65,988977117,2022-10-06T12:19:11Z,"If CUDA runtime is light, I think it's okay to use the common base image for both images.",kenji-miyake,988932192
+1078355625,2922,Sharrrrk,2022-10-06T06:48:44Z,perf(docker): reduce prebuilt docker image size,11,17,6,65,988979585,2022-10-06T12:21:49Z,"But seeing the size, I think using the pure Ubuntu image for `no-cuda` is better.
+What do you think?
+
+```console
+❯ docker image ls nvidia/cuda:11.6.2-runtime-ubuntu20.04
+REPOSITORY    TAG                          IMAGE ID       CREATED        SIZE
+nvidia/cuda   11.6.2-runtime-ubuntu20.04   9c23a9860423   4 months ago   2.05GB
+
+~
+❯ docker image ls ubuntu:20.04
+REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
+ubuntu       20.04     a0ce5a295b63   4 weeks ago   72.8MB
+```",kenji-miyake,988932192
+1078355625,2922,Sharrrrk,2022-10-06T06:48:44Z,perf(docker): reduce prebuilt docker image size,11,17,6,65,990589283,2022-10-08T04:48:55Z,"Yes, agree, I will directly change cuda_base_image to 11.6.2-runtime-ubuntu20.04",Sharrrrk,988932192
+1078355625,2922,Sharrrrk,2022-10-06T06:48:44Z,perf(docker): reduce prebuilt docker image size,11,17,6,65,990589583,2022-10-08T04:52:15Z,"`--ros-install-base` It was valid before, but I changed the code, so need to be removed. I will add into $SETUP_ARGS",Sharrrrk,988973220
+1078355625,2922,Sharrrrk,2022-10-06T06:48:44Z,perf(docker): reduce prebuilt docker image size,11,17,6,65,990589859,2022-10-08T04:55:19Z,"It is copied from devel build process. Line 21
+",Sharrrrk,988964162
+1078355625,2922,Sharrrrk,2022-10-06T06:48:44Z,perf(docker): reduce prebuilt docker image size,11,17,6,65,990590018,2022-10-08T04:57:26Z,"Very good suggestion, I think these packages are also not required in runtime. I will add it.",Sharrrrk,988952297
+1078355625,2922,Sharrrrk,2022-10-06T06:48:44Z,perf(docker): reduce prebuilt docker image size,11,17,6,65,990969538,2022-10-10T07:15:38Z,"Oh, sorry. I forgot about that. :sweat_smile: 
+I will recheck if it's necessary by seeing the CI log.",kenji-miyake,988964162
+1078355625,2922,Sharrrrk,2022-10-06T06:48:44Z,perf(docker): reduce prebuilt docker image size,11,17,6,65,1103900284,2023-02-12T23:58:44Z,"The cuda_base_image is given in the matrix condition: https://github.com/autowarefoundation/autoware/blob/964ad927cd6695cd6645dbafda6f43224f274307/.github/workflows/docker-build-and-push-main.yaml#L27
+
+So it should be removed if you use that name.
+
+```suggestion
+```
+
+Or I think you can rename it to `prebuilt_base_image`.
+In that case, it might be good to also rename the normal `base_image` to `devel_base_image`. (But it should be considered in another PR.)
+
+```suggestion
+    --set ""*.args.PREBUILT_BASE_IMAGE=$prebuilt_base_image"" \
+```",kenji-miyake,
+1078355625,2922,Sharrrrk,2022-10-06T06:48:44Z,perf(docker): reduce prebuilt docker image size,11,17,6,65,1103901178,2023-02-13T00:04:22Z,"It might be useful for debugging because we can check what files are included.
+Also, as far as I know, there is no alternative way to print debug messages and it doesn't increase the generated image size.
+So I'll keep it.",kenji-miyake,988964162
+1078355625,2922,Sharrrrk,2022-10-06T06:48:44Z,perf(docker): reduce prebuilt docker image size,11,17,6,65,1103901615,2023-02-13T00:07:39Z,[Question] Do you need to repeat these args? Also written in the line 6-7.,kenji-miyake,
+1078355625,2922,Sharrrrk,2022-10-06T06:48:44Z,perf(docker): reduce prebuilt docker image size,11,17,6,65,1103904186,2023-02-13T00:23:25Z,"It seems this line should come at the beginning of the file.
+Did it work on your environment?
+
+```console
+❯ ./docker/build.sh
++ docker buildx bake --no-cache --load --progress=plain -f /home/kenji/autoware/docker/autoware-universe/docker-bake.hcl --set '*.context=/home/kenji/autoware/docker/../' --set '*.ssh=default' --set '*.platform=linux/amd64' --set '*.args.ROS_DISTRO=humble' --set '*.args.BASE_IMAGE=ubuntu:22.04' --set '*.args.SETUP_ARGS=--no-cuda-drivers' --set '*.args.CUDA_BASE_IMAGE=ubuntu:22.04' --set devel.tags=ghcr.io/autowarefoundation/autoware-universe:humble-latest-cuda --set prebuilt.tags=ghcr.io/autowarefoundation/autoware-universe:humble-latest-prebuilt-cuda
+#1 [devel internal] load build definition from Dockerfile
+#1 transferring dockerfile: 4.34kB done
+#1 DONE 0.0s
+
+#2 [prebuilt internal] load build definition from Dockerfile
+#2 transferring dockerfile: 4.34kB done
+#2 DONE 0.0s
+
+#3 [devel internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [prebuilt internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+ERROR: failed to solve: rpc error: code = Unknown desc = failed to solve with frontend dockerfile.v0: failed to create LLB definition: base name ($CUDA_BASE_IMAGE) should not be blank
+```",kenji-miyake,
+1078355625,2922,Sharrrrk,2022-10-06T06:48:44Z,perf(docker): reduce prebuilt docker image size,11,17,6,65,1103910888,2023-02-13T00:56:12Z,"Mirrored the branch in the AWF, and ran the CI workflow.
+https://github.com/autowarefoundation/autoware/tree/2840-reduce-prebuilt-docker-image-size
+https://github.com/autowarefoundation/autoware/actions/runs/4158993011
+
+But it has failed.
+https://github.com/autowarefoundation/autoware/actions/runs/4158993011/jobs/7194629355#step:5:739",kenji-miyake,1103904186
+1078355625,2922,Sharrrrk,2022-10-06T06:48:44Z,perf(docker): reduce prebuilt docker image size,11,17,6,65,1106757113,2023-02-15T07:45:01Z,"Yes，we have to declare those ARGs in each stage in which want to use the argument. From the docker documentation，“[An ARG instruction goes out of scope at the end of the build stage where it was defined. To use an argument in multiple stages, each stage must include the ARG instruction.](https://docs.docker.com/engine/reference/builder/#:~:text=An%20ARG%20instruction%20goes%20out%20of%20scope%20at%20the%20end%20of%20the%20build%20stage%20where%20it%20was%20defined.%20To%20use%20an%20argument%20in%20multiple%20stages%2C%20each%20stage%20must%20include%20the%20ARG%20instruction.)”",caiyuexiang,1103901615
+1078355625,2922,Sharrrrk,2022-10-06T06:48:44Z,perf(docker): reduce prebuilt docker image size,11,17,6,65,1106758130,2023-02-15T07:46:19Z,Thank you for the information! :smile: ,kenji-miyake,1103901615
+1078355625,2922,Sharrrrk,2022-10-06T06:48:44Z,perf(docker): reduce prebuilt docker image size,11,17,6,65,1108125999,2023-02-16T07:58:31Z,"Thanks for your advice, i will rename it to prebuilt_base_image",Sharrrrk,1103900284
+1078355625,2922,Sharrrrk,2022-10-06T06:48:44Z,perf(docker): reduce prebuilt docker image size,11,17,6,65,1108310055,2023-02-16T10:49:21Z,"Hi, @kenji-miyake , I have pushed a new commit about this docker build issue, could you please help to update the mirrored branch in AWF(https://github.com/autowarefoundation/autoware/tree/2840-reduce-prebuilt-docker-image-size), so we can retry the CI workflow.",Sharrrrk,1103904186
+1078355625,2922,Sharrrrk,2022-10-06T06:48:44Z,perf(docker): reduce prebuilt docker image size,11,17,6,65,1108564482,2023-02-16T14:40:01Z,"Updated and re-ran the workflow.
+https://github.com/autowarefoundation/autoware/actions/runs/4195074077",kenji-miyake,1103904186
+1078355625,2922,Sharrrrk,2022-10-06T06:48:44Z,perf(docker): reduce prebuilt docker image size,11,17,6,65,1109247479,2023-02-17T03:08:25Z,"IF you want an ARG take effect in all FROMs, you should define it before the first FROM, and it will take effect in FROMs only.
+`  1 |     ARG BASE_IMAGE
+   2 |     # hadolint ignore=DL3006
+   3 | >>> FROM $BASE_IMAGE as devel
+   4 |     SHELL [""/bin/bash"", ""-o"", ""pipefail"", ""-c""]
+ERROR: failed to solve: base name ($BASE_IMAGE) should not be blank
+Error: buildx bake failed with: ERROR: failed to solve: base name ($BASE_IMAGE) should not be blank`",caiyuexiang,1103904186
+1078355625,2922,Sharrrrk,2022-10-06T06:48:44Z,perf(docker): reduce prebuilt docker image size,11,17,6,65,1109311669,2023-02-17T05:14:32Z,"@caiyuexiang thanks for your information. 
+Hi, @kenji-miyake , could you please help to update and re-run the workflow?  We have tried to build with the Dockerfile locally, but it always failed with timeout.",Sharrrrk,1103904186
+1078355625,2922,Sharrrrk,2022-10-06T06:48:44Z,perf(docker): reduce prebuilt docker image size,11,17,6,65,1110544328,2023-02-18T03:23:27Z,"@Sharrrrk Sure, I did it. But I guess you can trigger the workflow on your fork as well because it's not the self-hosted machine. Also, you probably have write access to this repository because you're one of the maintainers.
+https://github.com/autowarefoundation/autoware/actions/runs/4209409696",kenji-miyake,1103904186
+1078355625,2922,Sharrrrk,2022-10-06T06:48:44Z,perf(docker): reduce prebuilt docker image size,11,17,6,65,1112584613,2023-02-21T06:14:25Z,"Hi, @kenji-miyake Thanks for your help. After sync the fork from AWF, the workflow shown up under the Action Menu. And now, it has played and successed on my fork, please help to review it  again, thank you.",Sharrrrk,1103904186
+1078355625,2922,Sharrrrk,2022-10-06T06:48:44Z,perf(docker): reduce prebuilt docker image size,11,17,6,65,1119470655,2023-02-28T01:05:12Z,"Actually, it's not `perf` but an API change. It should be done in another PR as `feat` or `feat!`.",kenji-miyake,
+1078355625,2922,Sharrrrk,2022-10-06T06:48:44Z,perf(docker): reduce prebuilt docker image size,11,17,6,65,1119473184,2023-02-28T01:10:27Z,"@Sharrrrk Thank you! I'm sorry to be late.
+
+This one? I'd appreciate it if you could write the link. :bow: 
+https://github.com/Sharrrrk/autoware/actions/runs/4239792898
+
+I ran the workflow on this repository just in case.
+https://github.com/autowarefoundation/autoware/actions/runs/4288464786",kenji-miyake,1103904186
+1074419827,2912,shmpwk,2022-10-03T09:44:07Z,feat(repos): add awsim_sensor_kit_launch,1,0,1,4,985582457,2022-10-03T09:45:33Z,Please add a TODO comment here.,kenji-miyake,
+1074419827,2912,shmpwk,2022-10-03T09:44:07Z,feat(repos): add awsim_sensor_kit_launch,1,0,1,4,985583796,2022-10-03T09:46:30Z,"Currently, we add `external` to non-AWF repositories.
+
+```suggestion
+  sensor_kit/external/awsim_sensor_kit_launch:
+```",kenji-miyake,
+1074419827,2912,shmpwk,2022-10-03T09:44:07Z,feat(repos): add awsim_sensor_kit_launch,1,0,1,4,985593455,2022-10-03T09:53:13Z,"Reflected by 
+https://github.com/autowarefoundation/autoware/pull/2912/commits/5ebc568264f3ca1112d1d35bd0bf9313239a46fa",shmpwk,985582457
+1074419827,2912,shmpwk,2022-10-03T09:44:07Z,feat(repos): add awsim_sensor_kit_launch,1,0,1,4,985593578,2022-10-03T09:53:17Z,"Reflected by 
+https://github.com/autowarefoundation/autoware/pull/2912/commits/5ebc568264f3ca1112d1d35bd0bf9313239a46fa",shmpwk,985583796
+1074419827,2912,shmpwk,2022-10-03T09:44:07Z,feat(repos): add awsim_sensor_kit_launch,1,0,1,4,985615198,2022-10-03T10:11:02Z,"Is it possible transfer the repository to [autowarefoundation](https://github.com/autowarefoundation), then directly put it to `sensor_kit` folder?",xmfcx,
+1074419827,2912,shmpwk,2022-10-03T09:44:07Z,feat(repos): add awsim_sensor_kit_launch,1,0,1,4,985631995,2022-10-03T10:31:53Z,"It might be possible, but as written in the comment, he says this will be integrated into `sample_sensor_kit_launch` (or `awf_reference_sensor_kit_launch`?) and removed in the future.
+@xmfcx What makes you want to transfer it to AWF now?",kenji-miyake,985615198
+1074419827,2912,shmpwk,2022-10-03T09:44:07Z,feat(repos): add awsim_sensor_kit_launch,1,0,1,4,985958984,2022-10-03T15:49:38Z,"I've missed the comment
+> Note that this will be integrated to sample_sensor_kit_launch in the future.
+
+from the description. It's ok for now, thanks.",xmfcx,985615198
+1074343191,2910,shmpwk,2022-10-03T08:38:34Z,chore: update awsim-stable branch,1,0,2,32,985568986,2022-10-03T09:33:09Z,I think this should be added to the `main` branch first.,kenji-miyake,
+1074343191,2910,shmpwk,2022-10-03T08:38:34Z,chore: update awsim-stable branch,1,0,2,32,985630559,2022-10-03T10:30:06Z,Waiting for https://github.com/autowarefoundation/autoware/pull/2912.,kenji-miyake,985568986
+1074343191,2910,shmpwk,2022-10-03T08:38:34Z,chore: update awsim-stable branch,1,0,2,32,986358920,2022-10-04T01:29:21Z,Merged!,shmpwk,985568986
+1074343191,2910,shmpwk,2022-10-03T08:38:34Z,chore: update awsim-stable branch,1,0,2,32,986359174,2022-10-04T01:30:06Z,I'll rebase this branch to make it simple. And then merge it.,kenji-miyake,985568986
+1074343191,2910,shmpwk,2022-10-03T08:38:34Z,chore: update awsim-stable branch,1,0,2,32,986360289,2022-10-04T01:33:05Z,(Revert 2e7cc865ca23ce912885f18c1d64d59d11399926 and rebase main?),shmpwk,985568986
+1061265521,2877,shmpwk,2022-09-20T08:51:00Z,chore: update PR template for private links,1,0,1,2,975115312,2022-09-20T09:33:17Z,"Like this?
+
+https://developers.google.com/style/word-list
+![image](https://user-images.githubusercontent.com/31987104/191217065-2f8d4f15-0e30-4986-8eba-e16b24fd651b.png)
+
+```suggestion
+<!-- Write the links related to this PR. Private links should be clearly marked as private, for example, 'TIER IV INTERNAL LINK'. -->
+```",kenji-miyake,
+1061265521,2877,shmpwk,2022-09-20T08:51:00Z,chore: update PR template for private links,1,0,1,2,975117519,2022-09-20T09:35:21Z,Thank you!,shmpwk,975115312
+1061265521,2877,shmpwk,2022-09-20T08:51:00Z,chore: update PR template for private links,1,0,1,2,975118904,2022-09-20T09:36:41Z,"Sorry, I should have written a URL.
+
+```suggestion
+<!-- Write the links related to this PR. Private links should be clearly marked as private, for example, '[FOO COMPANY INTERNAL LINK] https://example.com'. -->
+```",kenji-miyake,
+1061265521,2877,shmpwk,2022-09-20T08:51:00Z,chore: update PR template for private links,1,0,1,2,975119562,2022-09-20T09:37:22Z,"By the way, it might be better to remove TIER IV.",kenji-miyake,975118904
+1061265521,2877,shmpwk,2022-09-20T08:51:00Z,chore: update PR template for private links,1,0,1,2,975125485,2022-09-20T09:43:01Z,"@shmpwk I'm sorry, could you check it again? :pray: ",kenji-miyake,975118904
+1061265521,2877,shmpwk,2022-09-20T08:51:00Z,chore: update PR template for private links,1,0,1,2,975138274,2022-09-20T09:55:13Z,"How about 
+
+```
+'[FOO COMPANY INTERNAL LINK](https://example.com)'
+```
+instead of 
+```
+'[FOO COMPANY INTERNAL LINK] https://example.com'
+```
+??",shmpwk,975118904
+1061265521,2877,shmpwk,2022-09-20T08:51:00Z,chore: update PR template for private links,1,0,1,2,975143295,2022-09-20T10:00:09Z,"Yeah, it's fine. I'll leave it to you.",kenji-miyake,975118904
+1061265521,2877,shmpwk,2022-09-20T08:51:00Z,chore: update PR template for private links,1,0,1,2,975146484,2022-09-20T10:03:25Z,"Reflected by
+https://github.com/autowarefoundation/autoware/pull/2877/commits/19f09dbbafbb854cee8f4d34263004cb6ba5c163",shmpwk,975118904
+1039368791,2823,kenji-miyake,2022-08-29T08:56:09Z,chore(.clang-tidy): fix settings of readability-identifier-naming,1,0,1,10,958086620,2022-08-30T07:09:09Z,It'll be good to have this finally enforced.,xmfcx,
+1029523064,2807,wep21,2022-08-18T05:00:03Z,revert: install each package of tensorrt,4,0,2,24,948651839,2022-08-18T05:03:10Z,I think you have to update the version in `amd64.env` because `8.4.2.4-1+cuda11.6` is not found for `libnvinfer*`.,kenji-miyake,
+1029523064,2807,wep21,2022-08-18T05:00:03Z,revert: install each package of tensorrt,4,0,2,24,948655152,2022-08-18T05:11:17Z,"tensorrt
+![image](https://user-images.githubusercontent.com/31987104/185298792-c974000b-ef7e-4646-9a65-850a6915c247.png)
+
+libnvinfer8
+![image](https://user-images.githubusercontent.com/31987104/185298845-cb4d36a9-b81f-4434-91a7-04e73e6abed2.png)
+",kenji-miyake,948651839
+1029523064,2807,wep21,2022-08-18T05:00:03Z,revert: install each package of tensorrt,4,0,2,24,948668791,2022-08-18T05:40:21Z,updated https://github.com/autowarefoundation/autoware/pull/2807/commits/fe986c383e26706dbda81abd8842ce9e4ebe1466,wep21,948651839
+1014791753,2766,wep21,2022-08-02T08:39:36Z,feat: update cuda version,5,0,3,27,935280261,2022-08-02T08:41:58Z,"If it's the same, you can delete this line.
+
+```suggestion
+```",kenji-miyake,
+1014791753,2766,wep21,2022-08-02T08:39:36Z,feat: update cuda version,5,0,3,27,935282685,2022-08-02T08:44:21Z,"Memo
+
+```console
+❯ apt-cache depends tensorrt
+tensorrt
+  Depends: libnvinfer8
+  Depends: libnvinfer-plugin8
+  Depends: libnvparsers8
+  Depends: libnvonnxparsers8
+  Depends: libnvinfer-bin
+  Depends: libnvinfer-dev
+  Depends: libnvinfer-plugin-dev
+  Depends: libnvparsers-dev
+  Depends: libnvonnxparsers-dev
+  Depends: libnvinfer-samples
+```
+
+https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/
+https://docs.nvidia.com/deeplearning/tensorrt/install-guide/index.html",kenji-miyake,
+1014791753,2766,wep21,2022-08-02T08:39:36Z,feat: update cuda version,5,0,3,27,935284754,2022-08-02T08:46:21Z,"Isn't it enough to hold only `tensorrt`?
+https://docs.nvidia.com/deeplearning/tensorrt/install-guide/index.html",kenji-miyake,
+1014791753,2766,wep21,2022-08-02T08:39:36Z,feat: update cuda version,5,0,3,27,935313057,2022-08-02T09:14:13Z,You're right. I held only `tensorrt` at https://github.com/autowarefoundation/autoware/pull/2766/commits/8ce41112eeb88718637bf07c5ff8199e7eb6e2b0.,wep21,935284754
+1014791753,2766,wep21,2022-08-02T08:39:36Z,feat: update cuda version,5,0,3,27,936483710,2022-08-03T10:08:35Z,"Probably we need a new version? :thinking: (I'm testing now.)
+https://github.com/autowarefoundation/autoware/pull/2766#issuecomment-1203720547
+
+```console
+❯ find-cuda-versions --os ubuntu2004 --cuda 11.6
+[cudnn x86_64]
+8.4.0.27-1+cuda11.6
+8.4.1.50-1+cuda11.6
+
+[cudnn sbsa]
+8.4.0.27-1+cuda11.6
+8.4.1.50-1+cuda11.6
+
+[tensorrt x86_64]
+8.4.1.5-1+cuda11.6
+8.4.2.4-1+cuda11.6
+
+[tensorrt sbsa]
+8.4.1.5-1+cuda11.6
+8.4.2.4-1+cuda11.6
+```
+
+```suggestion
+tensorrt_version=8.4.2.4-1+cuda11.6
+```
+",kenji-miyake,
+1014791753,2766,wep21,2022-08-02T08:39:36Z,feat: update cuda version,5,0,3,27,936545054,2022-08-03T11:20:49Z,It seems so. @wep21 Could you confirm this change? :pray: ,kenji-miyake,936483710
+996405884,2736,ambroise-arm,2022-07-14T08:58:26Z,fix(docker): register Vulkan GPU vendors,1,0,1,6,921008215,2022-07-14T10:34:21Z,"[Question] Will this problem only occur with Docker? If not, I think it's better to add this as an Ansible role to ensure the same environment for local and Docker development.",kenji-miyake,
+996405884,2736,ambroise-arm,2022-07-14T08:58:26Z,fix(docker): register Vulkan GPU vendors,1,0,1,6,921018573,2022-07-14T10:46:54Z,Those files should already be present in an nvidia-capable native environment. They are installed along with the nvidia drivers.,ambroise-arm,921008215
+996405884,2736,ambroise-arm,2022-07-14T08:58:26Z,fix(docker): register Vulkan GPU vendors,1,0,1,6,922863077,2022-07-17T16:40:27Z,"It seems the NVIDIA repository was changed yesterday and https://gitlab.com/nvidia/container-images/vulkan/raw/master/nvidia_icd.json was removed.
+https://gitlab.com/nvidia/container-images/vulkan/-/commit/19623df20b44a62315d262dedb7e6833daf10986
+
+I think we have to change the approach. Please let me mark this as a draft.",kenji-miyake,921008215
+996405884,2736,ambroise-arm,2022-07-14T08:58:26Z,fix(docker): register Vulkan GPU vendors,1,0,1,6,923152294,2022-07-18T09:43:22Z,"We can replace ""master"" by the commit before the change (https://gitlab.com/nvidia/container-images/vulkan/-/raw/dc389b0445c788901fda1d85be96fd1cb9410164/nvidia_icd.json). It was not a good idea to target the tip of the repository anyway.
+Do you have other concerns for wanting to change the approach?",ambroise-arm,921008215
+996405884,2736,ambroise-arm,2022-07-14T08:58:26Z,fix(docker): register Vulkan GPU vendors,1,0,1,6,923168703,2022-07-18T10:02:48Z,"> Do you have other concerns for wanting to change the approach?
+
+Yes, I'd like to clarify the following items:
+- In the first place, for what do we need `vulkan`?
+- Before installing these settings, don't we need to install `vulkan` to the Docker images first? Currently, it's not installed yet.",kenji-miyake,921008215
+996405884,2736,ambroise-arm,2022-07-14T08:58:26Z,fix(docker): register Vulkan GPU vendors,1,0,1,6,923171341,2022-07-18T10:06:06Z,"Also, as shown [here](https://gitlab.com/nvidia/container-images/vulkan#headless-vulkaninfo), I guess it might be possible to mount volumes that contain `vulkan` files before launching a container. (I haven't confirmed the behavior yet.)
+![image](https://user-images.githubusercontent.com/31987104/179489347-f906c4bd-7d21-4bf1-9493-bb11cf8f695b.png)
+",kenji-miyake,921008215
+996405884,2736,ambroise-arm,2022-07-14T08:58:26Z,fix(docker): register Vulkan GPU vendors,1,0,1,6,923221179,2022-07-18T10:45:35Z,"> for what do we need vulkan?
+
+I'm interested in adding Vulkan support because it is used as a  GPU backend in the TVM example pipelines (https://github.com/autowarefoundation/autoware.universe/issues/628).
+#2427 also evokes potential  future issues with simulators, but I don't know about that.
+
+> don't we need to install vulkan to the Docker images first?
+
+No, the Nvidia Vulkan drivers are exposed from the host into the docker image along with the rest of the Nvidia libraries when using `--gpus all` (or similar) flags of `docker run`.
+
+> as shown [here](https://gitlab.com/nvidia/container-images/vulkan#headless-vulkaninfo), I guess it might be possible to mount volumes that contain vulkan files before launching a container
+
+Strictly doing what they do in the ""Headless vulkan"" example wouldn't be portable, as the location of the `.json` files on the host are not fixed. The [Vulkan documentation](https://vulkan.lunarg.com/doc/view/1.3.204.1/linux/LoaderDriverInterface.html#user-content-driver-discovery-on-linux) describes the order for the search paths. Something like that would have to be replicated to find the location of the files we want to expose. Which would probably only make sense to do with `rocker`. Whereas I like the idea of having things working even without rocker.",ambroise-arm,921008215
+996405884,2736,ambroise-arm,2022-07-14T08:58:26Z,fix(docker): register Vulkan GPU vendors,1,0,1,6,923228786,2022-07-18T10:52:41Z,"Thank you for the detailed explanation. :pray: 
+Okay, in that case, I think we can add these settings.
+
+To merge this PR, could you work on the following tasks?
+- Fix the deleted link.
+- Write a test procedure for this PR.",kenji-miyake,921008215
+996405884,2736,ambroise-arm,2022-07-14T08:58:26Z,fix(docker): register Vulkan GPU vendors,1,0,1,6,923299614,2022-07-18T12:08:37Z,"What kind of test are you thinking of?
+From what I can see, the other steps of the Dockerfile are not tested except on ""build-and-push"" releases. Failure to download the new files would show up at the same time as failures in the the other steps, which sounds reasonable to me.
+And we can't test that Nvidia GPUs are actually picked up by Vulkan in CI (unless there is a GPU attached on some runner?).",ambroise-arm,921008215
+996405884,2736,ambroise-arm,2022-07-14T08:58:26Z,fix(docker): register Vulkan GPU vendors,1,0,1,6,923305838,2022-07-18T12:16:24Z,"I meant manual testing.
+How can I confirm whether this PR works?
+
+For example, like this:
+
+```bash
+cd ~/autoware
+gh pr checkout 2736
+./docker/build.sh
+docker run --rm -it --gpus all ghcr.io/autowarefoundation/autoware-universe:humble-latest-cuda
+apt update && apt install -y vulkan-tools
+Run vulkaninfo or vkcube?
+```",kenji-miyake,921008215
+996405884,2736,ambroise-arm,2022-07-14T08:58:26Z,fix(docker): register Vulkan GPU vendors,1,0,1,6,923308385,2022-07-18T12:19:25Z,"> Failure to download the new files would show up at the same time as failures in the the other steps, which sounds reasonable to me.
+
+By the way, what did you mean by this sentence? I'm sorry but I couldn't understand well.",kenji-miyake,921008215
+996405884,2736,ambroise-arm,2022-07-14T08:58:26Z,fix(docker): register Vulkan GPU vendors,1,0,1,6,924280351,2022-07-19T09:34:36Z,"> I meant manual testing.
+> How can I confirm whether this PR works?
+
+Yes, `vulkan-tools` is a good way to test.
+`vkcube` obviously requires X11 to work, but `vulkaninfo` also seems to require it when running from a local machine (but somehow not when testing it on a machine over ssh without X forwarding). Either way, I could test them both by launching (with `galactic` in my case):
+```sh
+docker run --rm -it --gpus all -e NVIDIA_DRIVER_CAPABILITIES=all -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix:rw -v $HOME/.Xauthority:$HOME/.Xauthority:rw -e XAUTHORITY=$HOME/.Xauthority --net=host ghcr.io/autowarefoundation/autoware-universe:galactic-latest-cuda
+```
+Although `vkcube` will work even without any hardware acceleration because `lavalpipe` is installed in the docker image. So you may want to check that it actually runs on the GPU with `nvidia-smi`.
+
+> what did you mean by this sentence?
+
+My point was that there was no need to individually test the lines I add in this patch.
+If the download link becomes invalid, the Dockerfile `ADD ...` lines I add in this patch will make the `docker build` command fail, which will result in the `docker-build-and-push-*` CI job failing. And that would be good enough testing since it is good enough for the current Dockerfile steps.",ambroise-arm,921008215
+996405884,2736,ambroise-arm,2022-07-14T08:58:26Z,fix(docker): register Vulkan GPU vendors,1,0,1,6,926133898,2022-07-20T23:38:44Z,"Don't we have to also use hash here?
+
+```suggestion
+ADD ""https://gitlab.com/nvidia/container-images/opengl/-/blob/5191cf205d3e4bb1150091f9464499b076104354/glvnd/runtime/10_nvidia.json"" /etc/glvnd/egl_vendor.d/10_nvidia.json
+```",kenji-miyake,
+996405884,2736,ambroise-arm,2022-07-14T08:58:26Z,fix(docker): register Vulkan GPU vendors,1,0,1,6,926136686,2022-07-20T23:45:33Z,"Although they are not large files, using `curl` might be better?
+https://www.ctl.io/developers/blog/post/dockerfile-add-vs-copy/",kenji-miyake,
+996405884,2736,ambroise-arm,2022-07-14T08:58:26Z,fix(docker): register Vulkan GPU vendors,1,0,1,6,926408497,2022-07-21T08:36:06Z,"I was not convinced by the article. In the case we are in where the item to download is not an archive, the process seems very straightforward with `ADD`.
+But if you want me to change to `curl`, I have no problem doing it.",ambroise-arm,926136686
+996405884,2736,ambroise-arm,2022-07-14T08:58:26Z,fix(docker): register Vulkan GPU vendors,1,0,1,6,927812215,2022-07-22T16:21:25Z,Done,ambroise-arm,926133898
+996405884,2736,ambroise-arm,2022-07-14T08:58:26Z,fix(docker): register Vulkan GPU vendors,1,0,1,6,928171051,2022-07-23T22:28:09Z,"Actually, I personally prefer using `RUN curl/wget` because we can test the commands manually in a container like this.
+
+```dockerfile
+RUN wget -O /etc/vulkan/icd.d/nvidia_icd.json ""https://gitlab.com/nvidia/container-images/vulkan/raw/dc389b0445c788901fda1d85be96fd1cb9410164/nvidia_icd.json""
+```
+
+```bash
+docker run --rm -it ghcr.io/autowarefoundation/autoware-universe:galactic-latest-cuda
+wget -O /etc/vulkan/icd.d/nvidia_icd.json ""https://gitlab.com/nvidia/container-images/vulkan/raw/dc389b0445c788901fda1d85be96fd1cb9410164/nvidia_icd.json""
+```
+
+But I think it's okay to use `ADD` for this usage because the files are so small.
+
+We don't have to stick to small things that linters don't show any warning and there is no rationale.",kenji-miyake,926136686
+994936261,2732,yukke42,2022-07-13T01:37:40Z,docs: add note to use rocker without the CUDA environment error,2,0,1,2,919678733,2022-07-13T06:03:15Z,"- Maybe you should use `for` instead of `in`.
+- It's better to write `for more details` first.
+  - https://developers.google.com/style/clause-order?hl=en
+
+```suggestion
+If you use `rocker<=0.2.9`, add an option of `--env NVIDIA_DRIVER_CAPABILITIES=""""` or `--env NVIDIA_DRIVER_CAPABILITIES=compute,utility,graphics` to avoid the CUDA environment error. For more details, see [this issue](https://github.com/autowarefoundation/autoware/issues/2452).
+```",kenji-miyake,
+994936261,2732,yukke42,2022-07-13T01:37:40Z,docs: add note to use rocker without the CUDA environment error,2,0,1,2,919725401,2022-07-13T07:11:40Z,changed at [e4bbdc6](https://github.com/autowarefoundation/autoware/pull/2732/commits/e4bbdc6b04658ccc1cee6797a90dff9fa7f1319a),yukke42,919678733
+980900963,2692,kenji-miyake,2022-06-28T04:42:57Z,build(ROS distribution)!: transition to ROS 2 Humble,13,20,12,149,911590120,2022-07-01T03:39:23Z,@kenji-miyake @xmfcx Is this still necessary to build on arm platform?,wep21,
+980900963,2692,kenji-miyake,2022-06-28T04:42:57Z,build(ROS distribution)!: transition to ROS 2 Humble,13,20,12,149,911593352,2022-07-01T03:49:57Z,I guess so.,kenji-miyake,911590120
+980900963,2692,kenji-miyake,2022-06-28T04:42:57Z,build(ROS distribution)!: transition to ROS 2 Humble,13,20,12,149,1036136105,2022-11-30T15:43:59Z,"@kenji-miyake 
+Currently following have only the AMD64 for now:
+- https://gitlab.com/nvidia/container-images/cuda/blob/master/dist/11.8.0/ubuntu2204/devel/cudnn8/Dockerfile
+
+Once they also have both ARM64 and AMD64 like it was in the old container, we can switch right?
+- https://gitlab.com/nvidia/container-images/cuda/blob/master/dist/11.8.0/ubuntu2004/devel/cudnn8/Dockerfile",xmfcx,
+980900963,2692,kenji-miyake,2022-06-28T04:42:57Z,build(ROS distribution)!: transition to ROS 2 Humble,13,20,12,149,1036138186,2022-11-30T15:45:45Z,"Yes, I believe so. We can update here in https://github.com/autowarefoundation/autoware/pull/3084.
+",kenji-miyake,1036136105
+980900963,2692,kenji-miyake,2022-06-28T04:42:57Z,build(ROS distribution)!: transition to ROS 2 Humble,13,20,12,149,1036152228,2022-11-30T15:56:42Z,@kenji-miyake Can you also update the [README](https://github.com/autowarefoundation/autoware/tree/main/ansible/roles/cuda) for cuda as well?,xmfcx,
+980900963,2692,kenji-miyake,2022-06-28T04:42:57Z,build(ROS distribution)!: transition to ROS 2 Humble,13,20,12,149,1036153131,2022-11-30T15:57:29Z,"Ah, sure. I forgot about it.",kenji-miyake,1036152228
+980900963,2692,kenji-miyake,2022-06-28T04:42:57Z,build(ROS distribution)!: transition to ROS 2 Humble,13,20,12,149,1036203051,2022-11-30T16:39:23Z,"How about this?
+https://github.com/autowarefoundation/autoware/pull/2692/commits/61b159c839e75d62b02eaa99dc1aa93e5ca2da75",kenji-miyake,1036152228
+980900963,2692,kenji-miyake,2022-06-28T04:42:57Z,build(ROS distribution)!: transition to ROS 2 Humble,13,20,12,149,1036207303,2022-11-30T16:42:54Z,"Probably we can remove this since `amd64.env` is sourced.
+@xmfcx What do you think?
+
+```suggestion
+```",kenji-miyake,
+980900963,2692,kenji-miyake,2022-06-28T04:42:57Z,build(ROS distribution)!: transition to ROS 2 Humble,13,20,12,149,1036208192,2022-11-30T16:43:40Z,TODO: replace rolling with humble,kenji-miyake,
+980900963,2692,kenji-miyake,2022-06-28T04:42:57Z,build(ROS distribution)!: transition to ROS 2 Humble,13,20,12,149,1036210787,2022-11-30T16:45:59Z,"If it works, we can do it.",xmfcx,1036207303
+980900963,2692,kenji-miyake,2022-06-28T04:42:57Z,build(ROS distribution)!: transition to ROS 2 Humble,13,20,12,149,1036212098,2022-11-30T16:47:06Z,"Thanks a lot! I will test it too but we don't need to wait for me, it's just a README file.",xmfcx,1036152228
+980900963,2692,kenji-miyake,2022-06-28T04:42:57Z,build(ROS distribution)!: transition to ROS 2 Humble,13,20,12,149,1036212861,2022-11-30T16:47:46Z,"Okay, I'll do it in another PR to keep the diff simple.",kenji-miyake,1036207303
+980900963,2692,kenji-miyake,2022-06-28T04:42:57Z,build(ROS distribution)!: transition to ROS 2 Humble,13,20,12,149,1036228862,2022-11-30T17:02:09Z,https://github.com/autowarefoundation/autoware/pull/3093,kenji-miyake,1036207303
+980900963,2692,kenji-miyake,2022-06-28T04:42:57Z,build(ROS distribution)!: transition to ROS 2 Humble,13,20,12,149,1036616862,2022-12-01T01:52:02Z,FYI: https://gitlab.com/nvidia/container-images/cuda/-/issues/180#note_1191984633,kenji-miyake,1036136105
+977914423,2408,mitsudome-r,2022-06-24T05:26:54Z,docs(README): add guide for Autoware.AI users,3,0,1,4,905730480,2022-06-24T05:34:15Z,"Generally, we can remove `please`.
+https://developers.google.com/style/tone?hl=en
+
+It might be possible to keep the second one.
+
+```suggestion
+If you wish to use Autoware-AI, the previous version of Autoware based on ROS 1, switch to [autoware-ai](https://github.com/autowarefoundation/autoware.ai/tree/autoware-ai) branch. However, be aware that Autoware-AI will reach the end-of-life by the end of 2022, and we strongly recommend transitioning to Autoware Core/Universe for future use.
+```",kenji-miyake,
+977914423,2408,mitsudome-r,2022-06-24T05:26:54Z,docs(README): add guide for Autoware.AI users,3,0,1,4,905731232,2022-06-24T05:36:10Z,"[nits] I guess `Autoware.AI` is the correct notation.
+
+```suggestion
+## Using Autoware.AI
+
+If you wish to use Autoware.AI, the previous version of Autoware based on ROS 1, please switch to [autoware-ai](https://github.com/autowarefoundation/autoware.ai/tree/autoware-ai) branch. However, please be aware that Autoware.AI will reach the end-of-life by the end of 2022, and we strongly recommend transitioning to Autoware Core/Universe for future use.
+```",kenji-miyake,
+977914423,2408,mitsudome-r,2022-06-24T05:26:54Z,docs(README): add guide for Autoware.AI users,3,0,1,4,905800852,2022-06-24T07:37:09Z,Fixed in https://github.com/autowarefoundation/autoware.ai/pull/2408/commits/c17b444db21870f4a4f92ba887a2e8955ed6877b,mitsudome-r,905730480
+977914423,2408,mitsudome-r,2022-06-24T05:26:54Z,docs(README): add guide for Autoware.AI users,3,0,1,4,905800922,2022-06-24T07:37:15Z,Fixed in https://github.com/autowarefoundation/autoware.ai/pull/2408/commits/c17b444db21870f4a4f92ba887a2e8955ed6877b,mitsudome-r,905731232

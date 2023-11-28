@@ -1,0 +1,209 @@
+pull_request_id,pull_request_number,pull_request_user_id,pull_request_created_at,pull_request_title,pull_request_commits,pull_request_checks,pull_request_files_changed,pull_request_lines_changed,comment_id,comment_created_at,comment_text,comment_author,comment_parent_id
+53965664,169,ghost,2015-12-17T11:36:52Z,More complete demo install instructions,1,0,1,23,47992368,2015-12-18T03:53:05Z,"This part is unnecessary by #171.
+",syohex,
+53965664,169,ghost,2015-12-17T11:36:52Z,More complete demo install instructions,1,0,1,23,47992452,2015-12-18T03:55:08Z,"Should be original file fixed than such work around ?
+",syohex,
+53965664,169,ghost,2015-12-17T11:36:52Z,More complete demo install instructions,1,0,1,23,47992674,2015-12-18T04:00:01Z,"Should '.'(dot) be escaped ?
+And is this necessary ? There is no `~/Autoware/data` directory. (`demodata` ?)
+",syohex,
+53965664,169,ghost,2015-12-17T11:36:52Z,More complete demo install instructions,1,0,1,23,48008188,2015-12-18T09:30:48Z,"Yes, with #171 this isn't needed
+",,
+53965664,169,ghost,2015-12-17T11:36:52Z,More complete demo install instructions,1,0,1,23,48008238,2015-12-18T09:31:26Z,"Yes, probably.
+",,
+53965664,169,ghost,2015-12-17T11:36:52Z,More complete demo install instructions,1,0,1,23,48008418,2015-12-18T09:33:31Z,"Is ~/Autoware/data where this would normally exist?
+",,
+53965664,169,ghost,2015-12-17T11:36:52Z,More complete demo install instructions,1,0,1,23,48324911,2015-12-23T06:53:03Z,"@pdsljp Can we replace `/home/pdsljp/` with `~/` ? I don't understand whether demo program works with that change.
+",syohex,
+53965664,169,ghost,2015-12-17T11:36:52Z,More complete demo install instructions,1,0,1,23,48393739,2015-12-24T03:11:34Z,"> Can we replace `/home/pdsljp` with `~/`? 
+
+Yes we can.
+
+These launch files under `Autoware/ros/src.config/quick_start/sample_lidar_camera` assume that a directory named `.autoware` exists under `~/`.
+So demo program should work even after that change if this directory is created
+correctly.
+
+Thank you very much for pointing out and cooperation. > @syohex , @bashrc 
+",manato,
+49926290,112,KenYN,2015-11-06T08:11:54Z,Remove extra level of indirection from cuMemFreeHost,2,0,1,21,44114394,2015-11-06T08:38:14Z,"Typo type name. `CUResult` -> `CUresult`
+",syohex,
+49926290,112,KenYN,2015-11-06T08:11:54Z,Remove extra level of indirection from cuMemFreeHost,2,0,1,21,44114403,2015-11-06T08:38:23Z,"Ditto.
+",syohex,
+49025428,101,yukkysaito,2015-10-28T15:51:07Z,Modified scan2image & calibration_test for calibration_publisher node,8,0,8,550,43359081,2015-10-29T08:22:01Z,"このあたりの変数は `static`である必要があるのでしょうか ?
+`i`や `count`は必要でないように思えますが...
+",syohex,
+49025428,101,yukkysaito,2015-10-28T15:51:07Z,Modified scan2image & calibration_test for calibration_publisher node,8,0,8,550,43481290,2015-10-30T08:40:31Z,"なるべく画像サイズの固定値は排除したいのですが、ここは800x600に固定しなければならない箇所でしょうか？
+画像サイズはsensor_msgs/Image型の場合各々height, widthというメンバから取得出来ます(http://docs.ros.org/api/sensor_msgs/html/msg/Image.html)
+",manato,
+49025428,101,yukkysaito,2015-10-28T15:51:07Z,Modified scan2image & calibration_test for calibration_publisher node,8,0,8,550,43484265,2015-10-30T09:25:53Z,"画像サイズは固定ではありません。calibration publisherから配信されたトピックのサイズに自動的に設定するようになっております。
+その場合、配列を動的に確保する必要があり、毎コールバックでmalloc(calloc)で確保するとリアルタイム性が損なわれるので、毎コールバックで0に初期化するために静的配列を生成するようにしました。この配列は静的に確保するのですが、最大800x600までの画像に対応できるようにMAX_IMAGE_WIDTH、MAX_IMAGE_HEIGHTというのを作成しました。
+現状800x600以下であればどんな画像サイズでも大丈夫になっています。
+",yukkysaito,
+49025428,101,yukkysaito,2015-10-28T15:51:07Z,Modified scan2image & calibration_test for calibration_publisher node,8,0,8,550,43568857,2015-10-31T06:32:18Z,"@yukkysaito さん，
+
+あまり綺麗な方法ではないかもしれませんが，例えば以下の方法でまず画像サイズを
+取得してから，そのサイズに合わせて静的配列を確保するのは如何でしょうか？
+1. main関数内でまず`/image_raw`のCallback関数を呼び出す
+2. Callback関数内では，トピックから画像サイズを大域変数へ読込み，
+   代入が完了したらフラグを立てる(`isReady = true;`といった感じで)
+3. main関数の方では，`/image_raw`のCallback呼び出し直後に下記のようなループで
+   画像サイズが取得できるまで待つ
+   
+   ``` c++
+   /* 1秒ごとにCallbackを呼び，画像サイズが取得できるまで待つ */
+   ros::Rate rate(1);
+   while (isReady != true) {
+     ros::spinOnce();
+     rate.sleep();
+   }
+   
+   /* 
+   　　画像サイズが確保できたら，そのサイズを基に静的配列の確保し，
+   　　その後の処理をすすめる
+   */
+   ```
+
+Autowareを公開するようになってから気づいたのですが，画像サイズに関しての需要は
+様々で，なるべく大きい画像サイズを使いたいと言う声もよく聞くので，対応する画像サイズが800x600以下と言う制約はなるべく無いほうが良い様に思われます．
+",manato,
+49025428,101,yukkysaito,2015-10-28T15:51:07Z,Modified scan2image & calibration_test for calibration_publisher node,8,0,8,550,43569030,2015-10-31T07:03:08Z,"@manato 
+ご指摘ありがとうございます。
+現状の実装では以下のようになっております。
+1.main関数内でまずcalibration publisherのCallback関数を呼び出す
+2.Callback関数内では，トピックから画像サイズを大域変数へ読込み， 代入が完了したらフラグを立てる(isReady = true;といった感じで)
+3.画像サイズが確定後、領域を確保し、scan2imageの本体を処理実行
+
+しかしながら、静的配列はコンパイル時に確保する値が決まっていないといけないため、以下のような実装は言語仕様上できません。
+
+```
+/* 1秒ごとにCallbackを呼び，画像サイズが取得できるまで待つ */
+ros::Rate rate(1);
+while (isReady != true) {
+  ros::spinOnce();
+  rate.sleep();
+}
+
+/* 
+　　画像サイズが確保できたら，そのサイズを基に静的配列の確保し，
+　　その後の処理をすすめる
+*/
+```
+
+したがって、今回、静的確保するため最大値という形でMAX_IMAGE_WIDTH、MAX_IMAGE_HEIGHTを定義しておりました。現在、callocで確保した領域（画像サイズ）を毎コールバックで再利用するため、毎回確保した領域をcleanな状態にしなければいけません。（毎コールバックの画像領域の動的確保は好ましくない）
+このcleanする方法として、「確保した全領域に0をコピーする」もしくは「代入された領域のみを記憶し、その場所のみ0をコピーする」の２択になると思います。前者の場合は、MAX_IMAGE_WIDTH、MAX_IMAGE_HEIGHTは必要なくなりますが、画像全領域に0コピーを行う必要があります。後者の場合は、MAX_IMAGE_WIDTH、MAX_IMAGE_HEIGHTが必要になりますが、ピンポイントの0コピーが可能です。
+今回、後者を選んだ理由としては、scan2imageでは画像にプロジェクションする点群は非常に少ないので、全領域に0をコピーするより、ピンポイントで初期化したほうがいいのではないかと思いこのような実装にしました。
+どちらもメリット・デメリットがあるのですが、どのようにしたほうがよろしいでしょうか？
+",yukkysaito,
+49025428,101,yukkysaito,2015-10-28T15:51:07Z,Modified scan2image & calibration_test for calibration_publisher node,8,0,8,550,43569195,2015-10-31T07:27:31Z,"> しかしながら、静的配列はコンパイル時に確保する値が決まっていないといけないため、以下のような実装は言語仕様上できません
+
+すみません．うっかりしていました...
+
+今回の場合であれば，「確保した全領域に対して0をセット」すると言うことで
+`memset(&image, 0, sizeof(image))`のような形で毎コールバックごとに初期化してしまえば
+良いと思います．(恐らくそんなにコストの高い命令では無いはずですので...)
+",manato,
+49025428,101,yukkysaito,2015-10-28T15:51:07Z,Modified scan2image & calibration_test for calibration_publisher node,8,0,8,550,43596633,2015-11-02T04:34:12Z,"本件について abaaa12 にて修正いたしました。
+お忙しいところチェック・アドバイスしていただき大変助かりました。
+ありがとうございます。
+
+追記：すいません。もう少し、マージを待ってもらえますか？
+追記２：動作確認を行い正常に動作することを確認できました。よければマージをお願いできますでしょうか？
+",yukkysaito,
+48664218,99,travelbureau,2015-10-24T20:15:02Z,Update driving_planner and computing.yaml,11,0,13,952,42939665,2015-10-25T00:31:35Z,"You need not to change compiler option.
+",syohex,
+47115969,81,amc-nu,2015-10-08T06:30:07Z,Integration of RCNN object detection on Autoware ,7,0,18,1203,41624885,2015-10-09T12:33:27Z,"Is `/distribute` necessary ? I build `fast-rcnn` following steps, then there is no `distribute` directory.
+
+```
+% git clone --recursive https://github.com/rbgirshick/fast-rcnn.git
+% git submodule update --init --recursive
+% cd fast-rncc
+% (cd lib/ && make)
+% (cd caffe-fast-rcnn && cmake . && make && make pycaffe)
+```
+",syohex,
+47115969,81,amc-nu,2015-10-08T06:30:07Z,Integration of RCNN object detection on Autoware ,7,0,18,1203,41628584,2015-10-09T13:21:19Z,"Yosh-san
+
+You need to run:
+
+%make distribute
+
+Pycaffe is not required.
+
+Syohei YOSHIDA さんは書きました : 
+
+> In ros/src/computing/perception/detection/lib/image/librcnn/CMakeLists.txt:
+> 
+> > @@ -0,0 +1,59 @@ > +cmake_minimum_required(VERSION 2.8.3) > +project(librcnn) > + > +find_package(catkin REQUIRED COMPONENTS > + roscpp > + sensor_msgs > + std_msgs > +) > + > +find_package(OpenCV REQUIRED) > + > +###########################################CAFFE NEEDS TO BE PREVIOUSLY COMPILED#################### > +##############DONT FORGET TO INSTALL fastrcnn's caffe dynamic libraries to /usr/local/lib  #### > +set(CAFFE_PATH ""$ENV{HOME}/fast-rcnn/caffe-fast-rcnn/distribute"")               #### 
+> 
+> Is /distribute necessary ? I build fast-rcnn following steps, then there is no distribute directory.
+> 
+> % git clone --recursive https://github.com/rbgirshick/fast-rcnn.git % git submodule update --init --recursive % cd fast-rncc % (cd lib/ && make) % (cd caffe-fast-rcnn && cmake . && make && make pycaffe) 
+> 
+> —
+> Reply to this email directly or view it on GitHub.￼
+",amc-nu,
+47115969,81,amc-nu,2015-10-08T06:30:07Z,Integration of RCNN object detection on Autoware ,7,0,18,1203,43344599,2015-10-29T03:01:50Z,"I suppose you should set the library path(`~/fast-rcnn/caffe-fast-rcnn/distribute/lib`) for linking caffe
+
+See also
+- https://cmake.org/cmake/help/v3.0/command/link_directories.html
+",syohex,
+47115969,81,amc-nu,2015-10-08T06:30:07Z,Integration of RCNN object detection on Autoware ,7,0,18,1203,43344661,2015-10-29T03:03:07Z,"Please use `-std=c++11` option instead of `-std=c++0x` because we need not to support older compiler now.
+",syohex,
+47115969,81,amc-nu,2015-10-08T06:30:07Z,Integration of RCNN object detection on Autoware ,7,0,18,1203,43345143,2015-10-29T03:13:48Z,"Why isn't this type `enum RcnnDetectorClasses` ?
+",syohex,
+45558127,54,amc-nu,2015-09-21T14:52:38Z,Euclidean Clustering can optionally publish filtered point cloud and/or filtered ground points,4,0,3,119,40171480,2015-09-23T05:16:13Z,"`ROS_INFO` says publishing **/points_Ground**, but this argument is **/points_filtered**.
+Why ?
+
+And you use absolute topic path, is this right ?
+",syohex,
+45558127,54,amc-nu,2015-09-21T14:52:38Z,Euclidean Clustering can optionally publish filtered point cloud and/or filtered ground points,4,0,3,119,40171485,2015-09-23T05:16:25Z,"Ditto.
+",syohex,
+45529405,52,manato,2015-09-21T09:42:09Z,Fix kf,2,0,3,18,39955383,2015-09-21T09:58:07Z,"@amc-nu ,
+(Sorry for contacting when you are busy...)
+
+Could you please check whether the index added here is correct?
+I found that /image_obj_tracked didn't contain range information (it was always zero) and added assign statement, but I'm not sure this ""i""th range value is correspond to one for detection[i].
+
+I would appreciate if you check this modification and merge this PR if it's no problem.
+",manato,
+45172804,49,TomohitoAndo,2015-09-16T13:44:48Z,Velocity set,8,0,2,351,39706869,2015-09-17T02:28:51Z,"コメントの桁位置が変わっているだけです. 本質的でないので含めない方が望ましいです.
+",syohex,
+45172804,49,TomohitoAndo,2015-09-16T13:44:48Z,Velocity set,8,0,2,351,39706890,2015-09-17T02:29:15Z,"上に同じ
+",syohex,
+45172804,49,TomohitoAndo,2015-09-16T13:44:48Z,Velocity set,8,0,2,351,39707041,2015-09-17T02:32:37Z,"親クラス `Path`に同じようなメソッド `getCurrentPath`があるのですが, 新規に定義する必要があるのでしょうか ? (名前が違っているというのはありますが...)
+",syohex,
+45172804,49,TomohitoAndo,2015-09-16T13:44:48Z,Velocity set,8,0,2,351,39707106,2015-09-17T02:34:18Z,"メンバを変更しない関数の後ろに constをつけておくと, コンパイラが中でメンバを変更しているとエラーとしてくれるのでより安全なコードが書けます.
+",syohex,
+45172804,49,TomohitoAndo,2015-09-16T13:44:48Z,Velocity set,8,0,2,351,39707180,2015-09-17T02:36:12Z,"`checkWayPoint`の第二引数は文字列リテラルしか渡していないようなので, `const char *`で良いかもしれません. (`std::string`への変換コストを気にしないならどうでもよいですが)
+",syohex,
+45172804,49,TomohitoAndo,2015-09-16T13:44:48Z,Velocity set,8,0,2,351,39707257,2015-09-17T02:38:19Z,"``` c
+if (condition)
+    return;
+```
+
+のような方が見やすいかと思います.
+",syohex,
+45172804,49,TomohitoAndo,2015-09-16T13:44:48Z,Velocity set,8,0,2,351,39707293,2015-09-17T02:39:10Z,"`_current_vel*_current_vel + 2*_decel*interval*`はループ内では不変なので, ループ外で一度計算すればよいのではないでしょうか.
+",syohex,
+45172804,49,TomohitoAndo,2015-09-16T13:44:48Z,Velocity set,8,0,2,351,39707309,2015-09-17T02:39:34Z,"`else`はない方がよいと思います.
+",syohex,
+45172804,49,TomohitoAndo,2015-09-16T13:44:48Z,Velocity set,8,0,2,351,39707380,2015-09-17T02:41:03Z,"`temp <= 0`の方を breakにした方が見やすいかと思います.
+",syohex,
+45172804,49,TomohitoAndo,2015-09-16T13:44:48Z,Velocity set,8,0,2,351,39707502,2015-09-17T02:44:12Z,"本質的な変更でない.
+",syohex,
+45172804,49,TomohitoAndo,2015-09-16T13:44:48Z,Velocity set,8,0,2,351,39707518,2015-09-17T02:44:37Z,"同上.
+",syohex,
+45172804,49,TomohitoAndo,2015-09-16T13:44:48Z,Velocity set,8,0,2,351,39707531,2015-09-17T02:44:57Z,"同上
+",syohex,
+45172804,49,TomohitoAndo,2015-09-16T13:44:48Z,Velocity set,8,0,2,351,39707580,2015-09-17T02:46:00Z,"関数の終わりのカッコが namespaceに囲まれているわけでもないのに, 行頭にないのは変なので元に戻していただけないでしょうか.
+",syohex,
+44946157,38,amc-nu,2015-09-14T15:45:09Z,updated fusion to optionally read from any points to image projection,4,0,6,110,39590610,2015-09-16T03:22:12Z,"Original code uses relative topic path `image_obj` however you use absolute topic path `/image_obj`.
+Is this correct ?
+",syohex,
+44946157,38,amc-nu,2015-09-14T15:45:09Z,updated fusion to optionally read from any points to image projection,4,0,6,110,39590626,2015-09-16T03:22:57Z,"Ditto.
+",syohex,
+44946157,38,amc-nu,2015-09-14T15:45:09Z,updated fusion to optionally read from any points to image projection,4,0,6,110,39591628,2015-09-16T03:48:25Z,"@syohex ,
+Thanks for notification.
+I think `image_obj` should be relative topic path.
+But with regard to `vscan_image`, it's OK to be absolute one because `vscan_image` doesn't belongs to any namespace.
+I will confirm the behavior of this branch. 
+",manato,

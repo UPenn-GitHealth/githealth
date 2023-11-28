@@ -1,0 +1,703 @@
+pull_request_id,pull_request_number,pull_request_user_id,pull_request_created_at,pull_request_title,pull_request_commits,pull_request_checks,pull_request_files_changed,pull_request_lines_changed,comment_id,comment_created_at,comment_text,comment_author,comment_parent_id
+280584046,2271,amc-nu,2019-05-21T00:25:49Z,CUDA CMake detection logic update,60,0,13,91,287204638,2019-05-24T03:28:33Z,"""Set the env var AUTOWARE_COMPILE_WITH_CUDA=1"" -> ""Set the AUTOWARE_COMPILE_WITH_CUDA environment variable""",gbiggs,
+280584046,2271,amc-nu,2019-05-21T00:25:49Z,CUDA CMake detection logic update,60,0,13,91,287205263,2019-05-24T03:33:35Z,done!,amc-nu,287204638
+279383811,2265,amc-nu,2019-05-16T07:42:56Z,Melodic CPU/GPU compilation flag,42,1,12,146,284920344,2019-05-16T22:23:15Z,Where else is `CPU_ONLY` used? The logic would read better if it were `ENABLE_CUDA` (i.e. reverse the logic).,gbiggs,
+279383811,2265,amc-nu,2019-05-16T07:42:56Z,Melodic CPU/GPU compilation flag,42,1,12,146,284920886,2019-05-16T22:25:48Z,"If you change the flag name, this message will also need to change to ""CUDA support is disabled. Use -DENABLE_CUDA=TRUE and install CMake >= 3.12.3 and Eigen >= 3.3.6 to enable it.""",gbiggs,
+279383811,2265,amc-nu,2019-05-16T07:42:56Z,Melodic CPU/GPU compilation flag,42,1,12,146,284921511,2019-05-16T22:28:24Z,You could make a couple of macros for this (one for just the CMake check and one that has both CMake and Eigen checks) and put them in the `autoware_build_flags-extras.cmake` file.,gbiggs,
+279383811,2265,amc-nu,2019-05-16T07:42:56Z,Melodic CPU/GPU compilation flag,42,1,12,146,284934132,2019-05-16T23:29:31Z,got it. pushing once I finish testing locally.,amc-nu,284920344
+279383811,2265,amc-nu,2019-05-16T07:42:56Z,Melodic CPU/GPU compilation flag,42,1,12,146,284934227,2019-05-16T23:30:01Z,Thanks to #2267 We'll just ask for Eigen,amc-nu,284920886
+279383811,2265,amc-nu,2019-05-16T07:42:56Z,Melodic CPU/GPU compilation flag,42,1,12,146,285403207,2019-05-19T23:47:06Z,"Only search for CUDA if the user has explicitly enabled it. i.e. something like:
+
+    USE_CUDA=FALSE
+    if(ENABLE_CUDA)
+      if (""$ENV{ROS_DISTRO}"" STREQUAL ""melodic"")
+        find_package(CUDA REQUIRED)
+        if (${CUDA_VERSION} etc. etc.)
+          USE_CUDA=TRUE
+        endif()
+      else()
+        message(FATAL ""CUDA support requires ROS Melodic or greater"")
+      endif()
+    else()
+      message(STATUS ""CUDA support is disabled. Use -DENABLE_CUDA=TRUE and install Eigen >= 3.3.7 to enable it"")
+    endif()
+
+Then you can also just do a check on `USE_CUDA` rather than needing to check both `ENABLE_CUDA` and `CUDA_FOUND` elsewhere.",gbiggs,
+279383811,2265,amc-nu,2019-05-16T07:42:56Z,Melodic CPU/GPU compilation flag,42,1,12,146,285508672,2019-05-20T09:46:08Z,"got it, preparing a new PR",amc-nu,285403207
+279195951,2262,sgvandijk,2019-05-15T17:35:18Z,Add tests around Openplanner utilities,3,0,4,235,284522851,2019-05-16T02:56:53Z,Please do fixes like this in a separate PR so we can review them separately.,gbiggs,
+279195951,2262,sgvandijk,2019-05-15T17:35:18Z,Add tests around Openplanner utilities,3,0,4,235,284602736,2019-05-16T08:51:19Z,"Thanks, I have reverted the argument name fix, even though it feels bad leaving 'micro' there while the expected unit is nanoseconds :) but I'll indeed  make a separate PR for that. Are there any other changes you refer to? I don't expect you mean the actual bug fixes to make the tests pass?",sgvandijk,284522851
+279195951,2262,sgvandijk,2019-05-15T17:35:18Z,Add tests around Openplanner utilities,3,0,4,235,284924256,2019-05-16T22:40:29Z,"I think opinions would probably be divided on whether adding tests and fixing the code in response to those tests should be separate PRs. :) In this case, I have enough PRs to review already...",gbiggs,284522851
+279073875,2261,YamatoAndo,2019-05-15T12:25:09Z,ndt_slam,15,1,37,3970,285430399,2019-05-20T05:13:12Z,pls change to tf2,yukkysaito,
+279073875,2261,YamatoAndo,2019-05-15T12:25:09Z,ndt_slam,15,1,37,3970,285430634,2019-05-20T05:15:19Z,"Why is it necessary? I want to be independent of jsk msgs. 
+It maybe cause trouble when upgrading",yukkysaito,
+279073875,2261,YamatoAndo,2019-05-15T12:25:09Z,ndt_slam,15,1,37,3970,285430854,2019-05-20T05:17:11Z,"ROS_ERROR. 
+Because we do not know who is outputting",yukkysaito,
+279073875,2261,YamatoAndo,2019-05-15T12:25:09Z,ndt_slam,15,1,37,3970,285430864,2019-05-20T05:17:20Z,"ROS_ERROR. 
+Because we do not know who is outputting",yukkysaito,
+279073875,2261,YamatoAndo,2019-05-15T12:25:09Z,ndt_slam,15,1,37,3970,285812406,2019-05-21T00:24:12Z,"@yukkysaito thank you for your review.
+Fixed!",YamatoAndo,285430399
+279073875,2261,YamatoAndo,2019-05-15T12:25:09Z,ndt_slam,15,1,37,3970,285813286,2019-05-21T00:29:45Z,"@yukkysaito 
+I made it to display the histogram of the nearest distance of map pointcloud and LiDAR pointcloud for visualization.
+If you prefer not to use jsk msgs, I would like to remove this feature.",YamatoAndo,285430634
+279073875,2261,YamatoAndo,2019-05-15T12:25:09Z,ndt_slam,15,1,37,3970,285815634,2019-05-21T00:45:06Z,removed,YamatoAndo,285430634
+279073875,2261,YamatoAndo,2019-05-15T12:25:09Z,ndt_slam,15,1,37,3970,285818411,2019-05-21T01:03:53Z,"@yukkysaito 
+I do not want to depend on ROS for library as much as possible.
+How about changing it as follows?
+`std::cerr << ""[autoware_lidar_localizer]: no exist"" << path << std::endl;`",YamatoAndo,285430854
+279073875,2261,YamatoAndo,2019-05-15T12:25:09Z,ndt_slam,15,1,37,3970,286055591,2019-05-21T14:28:43Z,Are these data structures needed? It would be better to use the ones in `geometry_msgs`,sgermanserrano,
+279073875,2261,YamatoAndo,2019-05-15T12:25:09Z,ndt_slam,15,1,37,3970,286280202,2019-05-22T01:10:47Z,"I do not want to depend on ROS for library as much as possible.
+",YamatoAndo,286055591
+279073875,2261,YamatoAndo,2019-05-15T12:25:09Z,ndt_slam,15,1,37,3970,286280706,2019-05-22T01:14:36Z,"Can you please explain why can't you use [original](https://github.com/PointCloudLibrary/pcl) PCL implementation?
+
+It is also unclear what are your modifications to the file.",amc-nu,
+279073875,2261,YamatoAndo,2019-05-15T12:25:09Z,ndt_slam,15,1,37,3970,286280954,2019-05-22T01:16:08Z,"the same for this
+https://github.com/PointCloudLibrary/pcl/blob/master/registration/src/ndt.cpp",amc-nu,
+279073875,2261,YamatoAndo,2019-05-15T12:25:09Z,ndt_slam,15,1,37,3970,286281448,2019-05-22T01:19:01Z,"can you add documentation to the launch file?
+http://wiki.ros.org/roslaunch/XML/arg#Attributes",amc-nu,
+279073875,2261,YamatoAndo,2019-05-15T12:25:09Z,ndt_slam,15,1,37,3970,286281645,2019-05-22T01:20:22Z,Please documentation to your methods in [doxygen](http://wiki.ros.org/rosdoc_lite) format.,amc-nu,
+279073875,2261,YamatoAndo,2019-05-15T12:25:09Z,ndt_slam,15,1,37,3970,286281801,2019-05-22T01:21:26Z,"I highly recommend switching to `dynamic_reconfigure`, instead of growing the dependency of these type of messages.",amc-nu,
+279073875,2261,YamatoAndo,2019-05-15T12:25:09Z,ndt_slam,15,1,37,3970,286281848,2019-05-22T01:21:45Z,Please add something descriptive,amc-nu,
+279073875,2261,YamatoAndo,2019-05-15T12:25:09Z,ndt_slam,15,1,37,3970,286281956,2019-05-22T01:22:26Z,why are you changing this? it is unrelated,amc-nu,
+279073875,2261,YamatoAndo,2019-05-15T12:25:09Z,ndt_slam,15,1,37,3970,286282018,2019-05-22T01:22:49Z,why changes here?,amc-nu,
+279073875,2261,YamatoAndo,2019-05-15T12:25:09Z,ndt_slam,15,1,37,3970,286360480,2019-05-22T08:05:29Z,Is there a reason for that decision? Since Autoware is built on ROS effectively duplicating available data type increases the maintainability needs,sgermanserrano,286055591
+279073875,2261,YamatoAndo,2019-05-15T12:25:09Z,ndt_slam,15,1,37,3970,286773026,2019-05-23T04:36:16Z,"@amc-nu Thank you!
+It seems that atom of my editor was set to delete extra whitespace at the end of the line when saving the file.",YamatoAndo,286281956
+279073875,2261,YamatoAndo,2019-05-15T12:25:09Z,ndt_slam,15,1,37,3970,286773079,2019-05-23T04:36:45Z,reverted,YamatoAndo,286282018
+279073875,2261,YamatoAndo,2019-05-15T12:25:09Z,ndt_slam,15,1,37,3970,286791618,2019-05-23T06:25:08Z,"I also think that it is better to use dynamic_reconfigure.
+However, at present, there are few nodes that use dynamic_reconfigure in Autoware.
+If we mix both Autoware Runtime Manager's config and dynamic_reconfigure, I think users will cause confusion.
+So I think I will not switch now.",YamatoAndo,286281801
+279073875,2261,YamatoAndo,2019-05-15T12:25:09Z,ndt_slam,15,1,37,3970,286795837,2019-05-23T06:41:09Z,added,YamatoAndo,286281848
+279073875,2261,YamatoAndo,2019-05-15T12:25:09Z,ndt_slam,15,1,37,3970,286800078,2019-05-23T06:56:52Z,"I changed to output Hessian.
+Hessian is used to calculate the covariance of `/ndt_pose_with_covariance`.",YamatoAndo,286280706
+279073875,2261,YamatoAndo,2019-05-15T12:25:09Z,ndt_slam,15,1,37,3970,286810789,2019-05-23T07:31:28Z,"If you use `std::err` then this will:
+- Be interleaved with output from the node in an uncontrollable way
+- Not be manageable using the ROS logging output tools
+
+If you do not want to depend on ROS logging mechanisms, then you should at least be using something like log4cpp so the output is controllable.",gbiggs,285430854
+279073875,2261,YamatoAndo,2019-05-15T12:25:09Z,ndt_slam,15,1,37,3970,286815776,2019-05-23T07:46:25Z,added,YamatoAndo,286281448
+279073875,2261,YamatoAndo,2019-05-15T12:25:09Z,ndt_slam,15,1,37,3970,286817000,2019-05-23T07:50:10Z,This is a very generic name. It should be more specific to the actual algorithm used.,gbiggs,
+279073875,2261,YamatoAndo,2019-05-15T12:25:09Z,ndt_slam,15,1,37,3970,286820177,2019-05-23T07:58:49Z,"I understand that doxygen should be described because it is useful as a document.
+However, there is no rule that we must write doxygen.
+I'm sorry I don't have time to write all the methods, I will write in another PR.
+Is it OK?",YamatoAndo,286281645
+279073875,2261,YamatoAndo,2019-05-15T12:25:09Z,ndt_slam,15,1,37,3970,286821004,2019-05-23T08:00:57Z,"If you create threads like this outside of ROS, we cannot manage execution time properly.",gbiggs,
+279073875,2261,YamatoAndo,2019-05-15T12:25:09Z,ndt_slam,15,1,37,3970,286830241,2019-05-23T08:25:59Z,"@gbiggs So, should I use ros::Timer?",YamatoAndo,286821004
+278937624,2255,s-azumi,2019-05-15T05:02:30Z,Modify stop states,20,1,17,344,288435831,2019-05-29T07:54:44Z,"@s-azumi What is ""invalid index""? -1? ",mitsudome-r,
+278937624,2255,s-azumi,2019-05-15T05:02:30Z,Modify stop states,20,1,17,344,288438597,2019-05-29T08:02:03Z,"Please fix typo.
+publihsh -> publish",mitsudome-r,
+278937624,2255,s-azumi,2019-05-15T05:02:30Z,Modify stop states,20,1,17,344,288445366,2019-05-29T08:19:29Z,"If you are not changing any members, it's a good practice to put const on the function. 
+Same with calcRequiredDistForStop",mitsudome-r,
+278937624,2255,s-azumi,2019-05-15T05:02:30Z,Modify stop states,20,1,17,344,288447145,2019-05-29T08:24:07Z,"You have new topic published, but no information about this in README.md",mitsudome-r,
+278937624,2255,s-azumi,2019-05-15T05:02:30Z,Modify stop states,20,1,17,344,289242830,2019-05-31T02:58:44Z,"The index from the vehicle position to the end of the waypoint is valid.
+I added this description into README.md",s-azumi,288435831
+278937624,2255,s-azumi,2019-05-15T05:02:30Z,Modify stop states,20,1,17,344,289242934,2019-05-31T02:59:43Z,Fixed.,s-azumi,288438597
+278937624,2255,s-azumi,2019-05-15T05:02:30Z,Modify stop states,20,1,17,344,289243311,2019-05-31T03:02:35Z,Added const option to some functions.,s-azumi,288445366
+278937624,2255,s-azumi,2019-05-15T05:02:30Z,Modify stop states,20,1,17,344,289243410,2019-05-31T03:03:11Z,Added its desctiption to README.md,s-azumi,288447145
+278937624,2255,s-azumi,2019-05-15T05:02:30Z,Modify stop states,20,1,17,344,289252011,2019-05-31T04:16:22Z,"Please fix typo: 
+sill -> will",mitsudome-r,
+278937624,2255,s-azumi,2019-05-15T05:02:30Z,Modify stop states,20,1,17,344,289286658,2019-05-31T07:39:41Z,fixed.,s-azumi,289252011
+278551664,2253,isamu-takagi,2019-05-14T07:23:50Z,Fix autoware launcher readme.,16,1,16,195,285482949,2019-05-20T08:45:30Z,"These links don't work. Please update them
+https://drive.google.com/open?id=1ZwNQIJolJ2ogzpNprh89jCj6NocLi78f",amc-nu,
+278551664,2253,isamu-takagi,2019-05-14T07:23:50Z,Fix autoware launcher readme.,16,1,16,195,285484958,2019-05-20T08:50:12Z,"Autoware Launcher is designed to help users and developers to launch sets of nodes and its parameters. The profiles are stored in files that can be shared with other users, or used to quickly launch different set-ups in a breeze.",amc-nu,
+278551664,2253,isamu-takagi,2019-05-14T07:23:50Z,Fix autoware launcher readme.,16,1,16,195,285485625,2019-05-20T08:51:37Z,"1. Create the `.autoware` directory in your home directory.
+1. Inside this, extract the previously downloaded files.",amc-nu,
+278551664,2253,isamu-takagi,2019-05-14T07:23:50Z,Fix autoware launcher readme.,16,1,16,195,285486427,2019-05-20T08:53:29Z,"1. If you have a previously created profile, you can load it selecting **Load Profile** from the **File** menu.",amc-nu,
+278551664,2253,isamu-takagi,2019-05-14T07:23:50Z,Fix autoware launcher readme.,16,1,16,195,285491023,2019-05-20T09:03:47Z,View -> Simulation,amc-nu,
+278551664,2253,isamu-takagi,2019-05-14T07:23:50Z,Fix autoware launcher readme.,16,1,16,195,285491149,2019-05-20T09:04:06Z,Push -> Select,amc-nu,
+278551664,2253,isamu-takagi,2019-05-14T07:23:50Z,Fix autoware launcher readme.,16,1,16,195,285491512,2019-05-20T09:04:52Z,"```suggestion
+Developer Mode can be enabled selecting *Develop Mode* from the *View* menu.<br>
+```",amc-nu,
+278551664,2253,isamu-takagi,2019-05-14T07:23:50Z,Fix autoware launcher readme.,16,1,16,195,285491777,2019-05-20T09:05:28Z,"```suggestion
+Useful shortcuts
+---
+```",amc-nu,
+278551664,2253,isamu-takagi,2019-05-14T07:23:50Z,Fix autoware launcher readme.,16,1,16,195,285492655,2019-05-20T09:07:31Z,"```suggestion
+* While on the treeview widget on *Developer mode*. `R` key will launch the selected item, while `T` will terminate it.
+```",amc-nu,
+278551664,2253,isamu-takagi,2019-05-14T07:23:50Z,Fix autoware launcher readme.,16,1,16,195,285493091,2019-05-20T09:08:28Z,"```suggestion
+* While on the Summary panel. The`I` key will reset the parameters to its default.
+```",amc-nu,
+278551664,2253,isamu-takagi,2019-05-14T07:23:50Z,Fix autoware launcher readme.,16,1,16,195,285493239,2019-05-20T09:08:48Z,what do you mean with this?,amc-nu,
+278551664,2253,isamu-takagi,2019-05-14T07:23:50Z,Fix autoware launcher readme.,16,1,16,195,285517121,2019-05-20T10:06:57Z,Update the URL.,isamu-takagi,285482949
+278551664,2253,isamu-takagi,2019-05-14T07:23:50Z,Fix autoware launcher readme.,16,1,16,195,285517479,2019-05-20T10:07:49Z,Applied your suggestion.,isamu-takagi,285484958
+278551664,2253,isamu-takagi,2019-05-14T07:23:50Z,Fix autoware launcher readme.,16,1,16,195,285517610,2019-05-20T10:08:09Z,Applied your suggestion.,isamu-takagi,285485625
+278551664,2253,isamu-takagi,2019-05-14T07:23:50Z,Fix autoware launcher readme.,16,1,16,195,285517795,2019-05-20T10:08:41Z,Applied your suggestion.,isamu-takagi,285486427
+278551664,2253,isamu-takagi,2019-05-14T07:23:50Z,Fix autoware launcher readme.,16,1,16,195,285519184,2019-05-20T10:12:16Z,"Update similar to the above sentence.
+`Show simulation panel by selecting Simulation from the View menu.`",isamu-takagi,285491023
+278551664,2253,isamu-takagi,2019-05-14T07:23:50Z,Fix autoware launcher readme.,16,1,16,195,285519732,2019-05-20T10:13:40Z,Replaced push with select for step 4 to 7.  ,isamu-takagi,285491149
+278551664,2253,isamu-takagi,2019-05-14T07:23:50Z,Fix autoware launcher readme.,16,1,16,195,285519964,2019-05-20T10:14:21Z,Applied your suggestion.,isamu-takagi,285491512
+278551664,2253,isamu-takagi,2019-05-14T07:23:50Z,Fix autoware launcher readme.,16,1,16,195,285520434,2019-05-20T10:15:42Z,Applied your suggestion.,isamu-takagi,285491777
+278551664,2253,isamu-takagi,2019-05-14T07:23:50Z,Fix autoware launcher readme.,16,1,16,195,285520468,2019-05-20T10:15:49Z,Applied your suggestion.,isamu-takagi,285492655
+278551664,2253,isamu-takagi,2019-05-14T07:23:50Z,Fix autoware launcher readme.,16,1,16,195,285520511,2019-05-20T10:15:55Z,Applied your suggestion.,isamu-takagi,285493091
+278551664,2253,isamu-takagi,2019-05-14T07:23:50Z,Fix autoware launcher readme.,16,1,16,195,285523792,2019-05-20T10:24:54Z,"Updated as following.
+`Currently Save Profile from the File menu does not work. Use Save Profile As instead.`",isamu-takagi,285493239
+278551664,2253,isamu-takagi,2019-05-14T07:23:50Z,Fix autoware launcher readme.,16,1,16,195,287182758,2019-05-24T00:51:05Z,"```suggestion
+Autoware Launcher is designed to help users and developers to launch sets of nodes and its parameters. Sets are stored in profile files (in YAML format) that can be shared with other users, or used to quickly launch different set-ups.
+```",amc-nu,
+278551664,2253,isamu-takagi,2019-05-14T07:23:50Z,Fix autoware launcher readme.,16,1,16,195,287183270,2019-05-24T00:54:41Z,"```suggestion
+Developer mode contains advanced features that allow to customize the profiles. However, this mode is still under heavy development and not widely tested. Please be advised of its instability while using it.
+```",amc-nu,
+278551664,2253,isamu-takagi,2019-05-14T07:23:50Z,Fix autoware launcher readme.,16,1,16,195,287183387,2019-05-24T00:55:21Z,"```suggestion
+# Rosbag Example
+```",amc-nu,
+278551664,2253,isamu-takagi,2019-05-14T07:23:50Z,Fix autoware launcher readme.,16,1,16,195,287183411,2019-05-24T00:55:31Z,"```suggestion
+## Example Data
+```",amc-nu,
+278551664,2253,isamu-takagi,2019-05-14T07:23:50Z,Fix autoware launcher readme.,16,1,16,195,287183499,2019-05-24T00:56:12Z,"```suggestion
+1. If you previously created a profile, you can load it selecting *Load Profile* from the *File* menu.<br>
+```",amc-nu,
+278551664,2253,isamu-takagi,2019-05-14T07:23:50Z,Fix autoware launcher readme.,16,1,16,195,287183547,2019-05-24T00:56:32Z,"```suggestion
+1. Open the simulation panel selecting *Simulation* from the *View* menu.<br>
+```",amc-nu,
+278551664,2253,isamu-takagi,2019-05-14T07:23:50Z,Fix autoware launcher readme.,16,1,16,195,287183652,2019-05-24T00:57:09Z,"```suggestion
+
+```",amc-nu,
+278551664,2253,isamu-takagi,2019-05-14T07:23:50Z,Fix autoware launcher readme.,16,1,16,195,287184190,2019-05-24T01:01:14Z,"```suggestion
+1. To play the rosbag, click the *Simulation Mode* check box,
+1. Press the *Browse* Button, and select the previously downloaded example rosbag.
+1. Once loaded, press the *Play* button
+```",amc-nu,
+278537693,2252,TakaHoribe,2019-05-14T06:32:19Z,MPC waypoints follower,47,1,41,4286,284610158,2019-05-16T09:09:26Z,can you please switch to [doxygen](http://wiki.ros.org/rosdoc_lite) comment formatting?,amc-nu,
+278537693,2252,TakaHoribe,2019-05-14T06:32:19Z,MPC waypoints follower,47,1,41,4286,284611062,2019-05-16T09:11:36Z,please add comments for your methods,amc-nu,
+278537693,2252,TakaHoribe,2019-05-14T06:32:19Z,MPC waypoints follower,47,1,41,4286,284611247,2019-05-16T09:12:03Z,please change your comments to [doxygen](http://wiki.ros.org/rosdoc_lite) format,amc-nu,
+278537693,2252,TakaHoribe,2019-05-14T06:32:19Z,MPC waypoints follower,47,1,41,4286,284611413,2019-05-16T09:12:28Z,please add [comments](http://wiki.ros.org/rosdoc_lite),amc-nu,
+278537693,2252,TakaHoribe,2019-05-14T06:32:19Z,MPC waypoints follower,47,1,41,4286,284614533,2019-05-16T09:19:48Z,please use argument description using the `doc` [attribute](http://wiki.ros.org/roslaunch/XML/arg#Attributes),amc-nu,
+278537693,2252,TakaHoribe,2019-05-14T06:32:19Z,MPC waypoints follower,47,1,41,4286,284615139,2019-05-16T09:21:12Z,descri**b**ed,amc-nu,
+278537693,2252,TakaHoribe,2019-05-14T06:32:19Z,MPC waypoints follower,47,1,41,4286,284616004,2019-05-16T09:23:10Z,please add [comments](http://wiki.ros.org/rosdoc_lite).,amc-nu,
+278537693,2252,TakaHoribe,2019-05-14T06:32:19Z,MPC waypoints follower,47,1,41,4286,284616461,2019-05-16T09:24:06Z,please add [comments](http://wiki.ros.org/rosdoc_lite),amc-nu,
+278537693,2252,TakaHoribe,2019-05-14T06:32:19Z,MPC waypoints follower,47,1,41,4286,285529279,2019-05-20T10:40:08Z,Why the re-implementation? This is already available in [amathutils](https://github.com/autowarefoundation/autoware/blob/ee08fad4717fc218023aa3ee47e49b8ffa14803a/ros/src/common/libs/amathutils_lib/src/Amathutils.cpp#L97),sgermanserrano,
+278537693,2252,TakaHoribe,2019-05-14T06:32:19Z,MPC waypoints follower,47,1,41,4286,285556329,2019-05-20T12:03:15Z,This function seems general enough to be part of `amathutils` for other packages to re-use,sgermanserrano,
+278537693,2252,TakaHoribe,2019-05-14T06:32:19Z,MPC waypoints follower,47,1,41,4286,285557106,2019-05-20T12:05:36Z,Please add `in`/`out`/`inout` to the parameters that need it as you have in `qp_solver_qpoases.h`. It clarifies further the documentation for other users,sgermanserrano,
+278537693,2252,TakaHoribe,2019-05-14T06:32:19Z,MPC waypoints follower,47,1,41,4286,285557642,2019-05-20T12:07:11Z,is this dead code?,sgermanserrano,
+278537693,2252,TakaHoribe,2019-05-14T06:32:19Z,MPC waypoints follower,47,1,41,4286,285561208,2019-05-20T12:17:36Z,"Typo, `prediction_horizon`. You can do find and replace for all ocurrences",sgermanserrano,
+278537693,2252,TakaHoribe,2019-05-14T06:32:19Z,MPC waypoints follower,47,1,41,4286,285562445,2019-05-20T12:20:38Z,"The functionality to change angle units is already available in `amathutils`, please update",sgermanserrano,
+278537693,2252,TakaHoribe,2019-05-14T06:32:19Z,MPC waypoints follower,47,1,41,4286,285565088,2019-05-20T12:26:45Z,Can you add a reference to where the kinematics and dynamics model comes from?,sgermanserrano,
+278537693,2252,TakaHoribe,2019-05-14T06:32:19Z,MPC waypoints follower,47,1,41,4286,285570110,2019-05-20T12:37:52Z,"Typo, `steering_angle`",sgermanserrano,
+278537693,2252,TakaHoribe,2019-05-14T06:32:19Z,MPC waypoints follower,47,1,41,4286,285842819,2019-05-21T04:00:04Z,"removed this function, uses one in amathutils",TakaHoribe,285529279
+278537693,2252,TakaHoribe,2019-05-14T06:32:19Z,MPC waypoints follower,47,1,41,4286,285842859,2019-05-21T04:00:25Z,moved to amathutils.,TakaHoribe,285556329
+278537693,2252,TakaHoribe,2019-05-14T06:32:19Z,MPC waypoints follower,47,1,41,4286,285842901,2019-05-21T04:00:41Z,modified documents,TakaHoribe,285557106
+278537693,2252,TakaHoribe,2019-05-14T06:32:19Z,MPC waypoints follower,47,1,41,4286,285842934,2019-05-21T04:00:53Z,removed this,TakaHoribe,285557642
+278537693,2252,TakaHoribe,2019-05-14T06:32:19Z,MPC waypoints follower,47,1,41,4286,285842979,2019-05-21T04:01:08Z,fix for all codes,TakaHoribe,285561208
+278537693,2252,TakaHoribe,2019-05-14T06:32:19Z,MPC waypoints follower,47,1,41,4286,285843041,2019-05-21T04:01:34Z,"remove definition, use function of amathutils",TakaHoribe,285562445
+278537693,2252,TakaHoribe,2019-05-14T06:32:19Z,MPC waypoints follower,47,1,41,4286,285843058,2019-05-21T04:01:42Z,fix typo,TakaHoribe,285570110
+278537693,2252,TakaHoribe,2019-05-14T06:32:19Z,MPC waypoints follower,47,1,41,4286,285844519,2019-05-21T04:13:08Z,I added reference in README.,TakaHoribe,285565088
+278537693,2252,TakaHoribe,2019-05-14T06:32:19Z,MPC waypoints follower,47,1,41,4286,286048588,2019-05-21T14:16:05Z,Can you document your state-space representation for the kinematic and dynamic models? ,sgermanserrano,
+278537693,2252,TakaHoribe,2019-05-14T06:32:19Z,MPC waypoints follower,47,1,41,4286,286049296,2019-05-21T14:17:24Z,"This file is overwriting the default config for rviz which leads to disruptions of the rosbag demo, can you remove it from the PR?",sgermanserrano,
+278537693,2252,TakaHoribe,2019-05-14T06:32:19Z,MPC waypoints follower,47,1,41,4286,286311868,2019-05-22T04:49:19Z,Added state space reprensation.,TakaHoribe,286048588
+278537693,2252,TakaHoribe,2019-05-14T06:32:19Z,MPC waypoints follower,47,1,41,4286,286311979,2019-05-22T04:50:03Z,sorry for that. I reverted it.,TakaHoribe,286049296
+278537693,2252,TakaHoribe,2019-05-14T06:32:19Z,MPC waypoints follower,47,1,41,4286,286839990,2019-05-23T08:52:30Z,Please add a couple of tests for angles greater and smaller than 2PI,sgermanserrano,
+278537693,2252,TakaHoribe,2019-05-14T06:32:19Z,MPC waypoints follower,47,1,41,4286,286844909,2019-05-23T09:03:27Z,`const` input if it is not to be modified inside the function,sgermanserrano,
+278516958,2251,s-azumi,2019-05-14T04:39:23Z,Split drive state,10,1,24,1829,288431562,2019-05-29T07:42:39Z,"What was the reason to change the latch option? 
+@s-azumi ",mitsudome-r,
+278516958,2251,s-azumi,2019-05-14T04:39:23Z,Split drive state,10,1,24,1829,288950955,2019-05-30T11:14:26Z,"The twist_gate node throws the topic `/state_cmd` with `emergency` key, and then the decision_maker state transitions to the `Emergency` state.
+After that, when you restart the decision_maker node, the ""emergency"" command is latched and the state transitions to ""Emergency"" immediately.",s-azumi,288431562
+278045159,2247,TakaHoribe,2019-05-12T11:01:18Z,ekf_localizer,30,1,24,2642,283275211,2019-05-13T10:09:39Z,@TakaHoribe  Can you please add comments to your header files? (doxygen format http://wiki.ros.org/rosdoc_lite),amc-nu,
+278045159,2247,TakaHoribe,2019-05-12T11:01:18Z,ekf_localizer,30,1,24,2642,283275339,2019-05-13T10:10:01Z,Same here. (Comments),amc-nu,
+278045159,2247,TakaHoribe,2019-05-12T11:01:18Z,ekf_localizer,30,1,24,2642,283278193,2019-05-13T10:18:59Z,why are you using `const` in several of the variables inside the methods?,amc-nu,
+278045159,2247,TakaHoribe,2019-05-12T11:01:18Z,ekf_localizer,30,1,24,2642,283280215,2019-05-13T10:24:47Z,why not use stderr instead?,amc-nu,
+278045159,2247,TakaHoribe,2019-05-12T11:01:18Z,ekf_localizer,30,1,24,2642,283281269,2019-05-13T10:27:35Z,what about changing from `should be return false` to `false expected`?,amc-nu,
+278045159,2247,TakaHoribe,2019-05-12T11:01:18Z,ekf_localizer,30,1,24,2642,283282206,2019-05-13T10:30:01Z,there are no tests for `ekf_localizer`.,amc-nu,
+278045159,2247,TakaHoribe,2019-05-12T11:01:18Z,ekf_localizer,30,1,24,2642,283283127,2019-05-13T10:32:28Z,please use doxygen comment [formatting](http://www.doxygen.nl/manual/docblocks.html#cppblock),amc-nu,
+278045159,2247,TakaHoribe,2019-05-12T11:01:18Z,ekf_localizer,30,1,24,2642,283284288,2019-05-13T10:36:06Z,missing tests for `vehicle_status_converter`,amc-nu,
+278045159,2247,TakaHoribe,2019-05-12T11:01:18Z,ekf_localizer,30,1,24,2642,283287309,2019-05-13T10:44:46Z,this is [unnecessary](http://wiki.ros.org/roscpp/Overview/Messages#Message_Generation). ,amc-nu,
+278045159,2247,TakaHoribe,2019-05-12T11:01:18Z,ekf_localizer,30,1,24,2642,283288665,2019-05-13T10:48:50Z,why not use [mathutils](https://github.com/autowarefoundation/autoware/blob/master/ros/src/common/libs/amathutils_lib/include/amathutils_lib/amathutils.hpp#L18) if you already included it?,amc-nu,
+278045159,2247,TakaHoribe,2019-05-12T11:01:18Z,ekf_localizer,30,1,24,2642,283289622,2019-05-13T10:51:38Z,why a single file implementation?,amc-nu,
+278045159,2247,TakaHoribe,2019-05-12T11:01:18Z,ekf_localizer,30,1,24,2642,283289794,2019-05-13T10:52:09Z,why not use [mathutils](https://github.com/autowarefoundation/autoware/blob/master/ros/src/common/libs/amathutils_lib/include/amathutils_lib/amathutils.hpp#L27)? if its already being included.,amc-nu,
+278045159,2247,TakaHoribe,2019-05-12T11:01:18Z,ekf_localizer,30,1,24,2642,283290606,2019-05-13T10:54:33Z,can you please explain when is this applicable?,amc-nu,
+278045159,2247,TakaHoribe,2019-05-12T11:01:18Z,ekf_localizer,30,1,24,2642,283290750,2019-05-13T10:55:00Z,can you please add a default value column?,amc-nu,
+278045159,2247,TakaHoribe,2019-05-12T11:01:18Z,ekf_localizer,30,1,24,2642,283291240,2019-05-13T10:56:37Z,"can you please add a default value column?
+
+how are these used? how can these params be set, fine tuned?",amc-nu,
+278045159,2247,TakaHoribe,2019-05-12T11:01:18Z,ekf_localizer,30,1,24,2642,283628785,2019-05-14T05:16:37Z,"For instance, tests for these methods.
+
+I see you have a timer and you repeat 10 times in case the TF cannot be obtained.
+
+1. Why 10 times?
+1. What happens if TF cannot be obtained after 10 tries?
+",amc-nu,
+278045159,2247,TakaHoribe,2019-05-12T11:01:18Z,ekf_localizer,30,1,24,2642,283629326,2019-05-14T05:19:20Z,"this is another method you can test. 
+1. What are the expected inputs? (both valid and invalid)
+1. What is the expected behavior if an invalid pose is received?",amc-nu,
+278045159,2247,TakaHoribe,2019-05-12T11:01:18Z,ekf_localizer,30,1,24,2642,283693344,2019-05-14T08:55:26Z,"There were some discusssion for amathutils.hpp (#2045). I'm not sure it will be removed or modified, so I didn't want to depend on it. ",TakaHoribe,283288665
+278045159,2247,TakaHoribe,2019-05-12T11:01:18Z,ekf_localizer,30,1,24,2642,283701047,2019-05-14T09:13:26Z,"Sorry, which part did you mention?",TakaHoribe,283287309
+278045159,2247,TakaHoribe,2019-05-12T11:01:18Z,ekf_localizer,30,1,24,2642,283701705,2019-05-14T09:14:58Z,updated for doxygen format in 10a8a56.,TakaHoribe,283275211
+278045159,2247,TakaHoribe,2019-05-12T11:01:18Z,ekf_localizer,30,1,24,2642,283702048,2019-05-14T09:15:50Z,updated for doxygen format in 10a8a56. (I also changed class name from KalmanFIlterDelayedMeasurement to TimeDelayKalmanFIlter. ),TakaHoribe,283275339
+278045159,2247,TakaHoribe,2019-05-12T11:01:18Z,ekf_localizer,30,1,24,2642,283702424,2019-05-14T09:16:47Z,To clarify for users that these variables are input. ,TakaHoribe,283278193
+278045159,2247,TakaHoribe,2019-05-12T11:01:18Z,ekf_localizer,30,1,24,2642,283707020,2019-05-14T09:27:49Z,modified following your suggestion in a62ee25. ,TakaHoribe,283281269
+278045159,2247,TakaHoribe,2019-05-12T11:01:18Z,ekf_localizer,30,1,24,2642,283707069,2019-05-14T09:27:54Z,great!,amc-nu,283275211
+278045159,2247,TakaHoribe,2019-05-12T11:01:18Z,ekf_localizer,30,1,24,2642,283707794,2019-05-14T09:29:43Z,"The initialization of the covariance matrix. 
+The for block contained in
+`for (int i = 0; i < 36; ++i)`",amc-nu,283287309
+278045159,2247,TakaHoribe,2019-05-12T11:01:18Z,ekf_localizer,30,1,24,2642,283726945,2019-05-14T10:18:45Z,"> Note that all fields in a message are currently initialized to a default value of 0 (or empty for strings and variable-length arrays).
+
+I get it. thanks!",TakaHoribe,283287309
+278045159,2247,TakaHoribe,2019-05-12T11:01:18Z,ekf_localizer,30,1,24,2642,283772122,2019-05-14T12:31:14Z,I changed printf to std::cerr. pls check it.,TakaHoribe,283280215
+278045159,2247,TakaHoribe,2019-05-12T11:01:18Z,ekf_localizer,30,1,24,2642,283772263,2019-05-14T12:31:40Z,update to doxygen format. pls check it.,TakaHoribe,283283127
+278045159,2247,TakaHoribe,2019-05-12T11:01:18Z,ekf_localizer,30,1,24,2642,283772387,2019-05-14T12:31:59Z,remove initialization. pls check it.,TakaHoribe,283287309
+278045159,2247,TakaHoribe,2019-05-12T11:01:18Z,ekf_localizer,30,1,24,2642,283772552,2019-05-14T12:32:24Z,split this file into .hpp and .cpp. pls check it.,TakaHoribe,283289622
+270461780,2205,drwnz,2019-04-15T10:40:36Z,Fix bug that limits the data rate of DataRateCheckerPlugin,6,1,2,58,275608524,2019-04-16T02:20:56Z,This variable doesn't appear to be used.,gbiggs,
+270461780,2205,drwnz,2019-04-15T10:40:36Z,Fix bug that limits the data rate of DataRateCheckerPlugin,6,1,2,58,275610527,2019-04-16T02:34:41Z,"Well spotted. I have removed it, thanks.",drwnz,275608524
+267874034,2190,EfimiaPanagiotaki-StreetDrone,2019-04-05T15:43:33Z,sd vehicle interface,6,0,1,4,272816265,2019-04-07T03:20:22Z,@esteve Should this be `drivers/streetdrone`?,gbiggs,
+267874034,2190,EfimiaPanagiotaki-StreetDrone,2019-04-05T15:43:33Z,sd vehicle interface,6,0,1,4,272957610,2019-04-08T09:29:34Z,"@gbiggs not sure, on the one hand yes it's the driver for SD's vehicle interface. However, it's so vehicle-specific and their repository may contain other related packages in the future (e.g. URDF model, simulation worlds, etc.) that I suggested @EfimiaPanagiotaki-StreetDrone to put it in `vehicles/sd`. This is akin to OpenEmbedded, where they have drivers for each component, and then the BSP packages that aggregate the drivers and add configurations.",esteve,272816265
+267874034,2190,EfimiaPanagiotaki-StreetDrone,2019-04-05T15:43:33Z,sd vehicle interface,6,0,1,4,275181115,2019-04-15T00:07:41Z,Works for me. :+1: ,gbiggs,272816265
+267874034,2190,EfimiaPanagiotaki-StreetDrone,2019-04-05T15:43:33Z,sd vehicle interface,6,0,1,4,275332530,2019-04-15T12:19:55Z,@EfimiaPanagiotaki-StreetDrone could you tag this? It'll be easier to track bugs if the users can tell us what version of the interface they are using. Thanks!,esteve,
+267874034,2190,EfimiaPanagiotaki-StreetDrone,2019-04-05T15:43:33Z,sd vehicle interface,6,0,1,4,275591040,2019-04-16T00:26:28Z,"This is for the master of Autoware. Do we want to allow the master of Autoware to also use the master of its dependencies, or do we want to always depend on an explicit version?",gbiggs,275332530
+266587458,2184,sgermanserrano,2019-04-02T10:46:31Z,Update gitlab ci,2,0,1,6,271303713,2019-04-02T13:28:36Z,"This has the problem that if a pull request does not change the contents of autoware.repos, the master branches will be fetched.",esteve,
+266587458,2184,sgermanserrano,2019-04-02T10:46:31Z,Update gitlab ci,2,0,1,6,271304707,2019-04-02T13:30:48Z,"You could copy the original directory (`$CI_PROJECT_DIR`) over, so that the files that are tested are the ones from the pull request.",esteve,271303713
+265216417,2161,gbiggs,2019-03-28T07:33:36Z,Add .repos file for setting up an Autoware workspace using vcs,5,0,1,49,269910416,2019-03-28T09:12:05Z,"Will this repo end up being empty? If we follow the ROS2 structure, the ros2 repository only contains a repos file and a README.",esteve,
+265216417,2161,gbiggs,2019-03-28T07:33:36Z,Add .repos file for setting up an Autoware workspace using vcs,5,0,1,49,269913094,2019-03-28T09:20:01Z,"We'll have to come up with a style guide for spelling as well. I don't mind we either adopt the Commonwealth/British or American spellings (I'm not a native speaker, so I don't have much of a say), as long as we are mostly consistent.",esteve,
+265216417,2161,gbiggs,2019-03-28T07:33:36Z,Add .repos file for setting up an Autoware workspace using vcs,5,0,1,49,269914074,2019-03-28T09:22:39Z,"The lgvsl_msgs package was released into the ROS buildfarm (https://index.ros.org/r/lgsvl_msgs/github-lgsvl-lgsvl_msgs/), so we no longer need to add it here.",esteve,
+265216417,2161,gbiggs,2019-03-28T07:33:36Z,Add .repos file for setting up an Autoware workspace using vcs,5,0,1,49,270233097,2019-03-28T23:11:58Z,"That's the goal, although something that needs to be discussed is whether project-wide documentation should be in this repo or its own. ROS 2 uses a dedicated repo, and currently that's what I've set up. That's the need for the checkout. If we decide to stick with documentation in its own repository, I'll remove it.",gbiggs,269910416
+265216417,2161,gbiggs,2019-03-28T07:33:36Z,Add .repos file for setting up an Autoware workspace using vcs,5,0,1,49,270233722,2019-03-28T23:15:01Z,"Alas, I didn't even think about it when I used the *correct* English spelling. :wink:
+
+The Japanese use <strike>Wrong</strike>American English spelling, and we have many users in the USA, so maybe that's the way to go. I don't want to waste time choosing the language for the bike shed signs, so I'm just going to go with that. It will give us consistency with ROS, too.",gbiggs,269913094
+265216417,2161,gbiggs,2019-03-28T07:33:36Z,Add .repos file for setting up an Autoware workspace using vcs,5,0,1,49,270770258,2019-04-01T08:54:06Z,"That's fine. The target directory still points to `autoware/visualisation`, though.",esteve,269913094
+263812163,2145,amc-nu,2019-03-23T05:52:40Z,Feature/melodic,50,0,53,738,268833178,2019-03-25T20:20:23Z,"This package isn't available in 18.04. It also isn't necessary as a dependency. The only package in Autoware that references it is the pointgrey driver and that driver depends on gscam, which depends on the appropriate version of gstreamer for the selected ROS release/Ubuntu version.",JWhitleyWork,
+263812163,2145,amc-nu,2019-03-23T05:52:40Z,Feature/melodic,50,0,53,738,268934556,2019-03-26T03:47:34Z,@JWhitleyAStuff you're right. The Dockerfile files will also need to be updated. We would need also to address #2098 and #2082.,amc-nu,268833178
+262774881,2139,aohsato,2019-03-20T09:05:04Z,Support full functions of g30esli_interface,37,1,25,1490,284573215,2019-05-16T07:35:28Z,Could you change rad to deg?,wep21,
+262774881,2139,aohsato,2019-03-20T09:05:04Z,Support full functions of g30esli_interface,37,1,25,1490,284678513,2019-05-16T12:22:44Z,"I think that ""!"" is unnecessary if the purpose is to wait for not entering the stop function for a certain period.",yn-mrse,
+262774881,2139,aohsato,2019-03-20T09:05:04Z,Support full functions of g30esli_interface,37,1,25,1490,284680008,2019-05-16T12:26:50Z,I think you should substitute the initial value of `end_reset_time` before putting it in the comparison.,yn-mrse,
+262774881,2139,aohsato,2019-03-20T09:05:04Z,Support full functions of g30esli_interface,37,1,25,1490,284963768,2019-05-17T02:59:51Z,"Mistake, fixed. Thanks.",aohsato,284573215
+262774881,2139,aohsato,2019-03-20T09:05:04Z,Support full functions of g30esli_interface,37,1,25,1490,284963862,2019-05-17T03:00:40Z,It's bug. Fixed. ,aohsato,284678513
+262774881,2139,aohsato,2019-03-20T09:05:04Z,Support full functions of g30esli_interface,37,1,25,1490,284964464,2019-05-17T03:05:12Z,Fixed by adding initialization.,aohsato,284680008
+262774881,2139,aohsato,2019-03-20T09:05:04Z,Support full functions of g30esli_interface,37,1,25,1490,284984797,2019-05-17T05:48:06Z,Do you need to initialize commands_ and status_?,wep21,
+262774881,2139,aohsato,2019-03-20T09:05:04Z,Support full functions of g30esli_interface,37,1,25,1490,285049271,2019-05-17T09:34:48Z,"https://github.com/autowarefoundation/autoware/blob/d720d23de83de708d9a59d6d8c17986003aa8c49/ros/src/actuation/vehicles/packages/ymc/node/g30esli_interface/g30esli_ros.cpp#L43
+The same idea as above, but for `Joystick` we need to assume `engage` and `reset_command_`.
+```suggestion
+  bool send_speed = msg.cross && engage && !reset_command_;
+  cmd.command.speed = send_speed ? 16.0 * msg.r2 + 3.0 : 0.0;
+```",yn-mrse,
+262774881,2139,aohsato,2019-03-20T09:05:04Z,Support full functions of g30esli_interface,37,1,25,1490,285056905,2019-05-17T09:54:12Z,"`stop_keep_secs_` needs to be a little bigger.
+When we tested online, at 1.0 sec we saw behavior that stopped immediately after the launch.
+Changing this from 1.0 to 2.0 seconds will eliminate this anomalous behavior.
+```suggestion
+  : alive_(0), reset_command_(false), stop_keep_secs_(2.0), reset_keep_secs_(0.6), disable_reset_secs_(3.0)
+```",yn-mrse,
+262774881,2139,aohsato,2019-03-20T09:05:04Z,Support full functions of g30esli_interface,37,1,25,1490,285421074,2019-05-20T03:38:52Z,g30esli command and status are initialized in `g30esli`.,aohsato,284984797
+262774881,2139,aohsato,2019-03-20T09:05:04Z,Support full functions of g30esli_interface,37,1,25,1490,285421429,2019-05-20T03:41:56Z,Good point. Thanks.,aohsato,285049271
+262774881,2139,aohsato,2019-03-20T09:05:04Z,Support full functions of g30esli_interface,37,1,25,1490,285421805,2019-05-20T03:45:58Z,"Thanks!
+NOTE: I think they're not needed to modify for each vehicle after this PR because of these are common parameters between golfcar.",aohsato,285056905
+261593614,2131,TakaHoribe,2019-03-15T15:20:54Z,kalman filter for localization,41,1,385,8698,267401705,2019-03-20T15:31:28Z,"```suggestion
+```
+This is managed by autoware_build_flag",yukkysaito,
+261593614,2131,TakaHoribe,2019-03-15T15:20:54Z,kalman filter for localization,41,1,385,8698,267402229,2019-03-20T15:32:26Z,"```suggestion
+```
+Please only depend on tf2 ",yukkysaito,
+261593614,2131,TakaHoribe,2019-03-15T15:20:54Z,kalman filter for localization,41,1,385,8698,267402772,2019-03-20T15:33:28Z,"```suggestion
+```
+Please only depend on tf2 ",yukkysaito,
+261593614,2131,TakaHoribe,2019-03-15T15:20:54Z,kalman filter for localization,41,1,385,8698,267403178,2019-03-20T15:34:13Z,"```suggestion
+${catkin_INCLUDE_DIRS}
+${EIGEN3_INCLUDE_DIR}
+```",yukkysaito,
+261593614,2131,TakaHoribe,2019-03-15T15:20:54Z,kalman filter for localization,41,1,385,8698,267404292,2019-03-20T15:36:26Z,Describe the lidar yaw bias used for ndt,yukkysaito,
+261593614,2131,TakaHoribe,2019-03-15T15:20:54Z,kalman filter for localization,41,1,385,8698,267405417,2019-03-20T15:38:34Z,indent,yukkysaito,
+261593614,2131,TakaHoribe,2019-03-15T15:20:54Z,kalman filter for localization,41,1,385,8698,267405667,2019-03-20T15:39:05Z,"if you use vs code, you can use xml formatter",yukkysaito,267405417
+261593614,2131,TakaHoribe,2019-03-15T15:20:54Z,kalman filter for localization,41,1,385,8698,267406866,2019-03-20T15:41:12Z,It seems that the function name and the implementation do not match. why not setX() and setP?,yukkysaito,
+261593614,2131,TakaHoribe,2019-03-15T15:20:54Z,kalman filter for localization,41,1,385,8698,267408655,2019-03-20T15:44:46Z,"If ""Current"" is used, it will be mistaken if it is the current time",yukkysaito,
+261593614,2131,TakaHoribe,2019-03-15T15:20:54Z,kalman filter for localization,41,1,385,8698,267408767,2019-03-20T15:44:59Z,"If ""Current"" is used, it will be mistaken if it is the current time",yukkysaito,
+261593614,2131,TakaHoribe,2019-03-15T15:20:54Z,kalman filter for localization,41,1,385,8698,267412370,2019-03-20T15:51:42Z,"If receive a twist or pose earlier than the timer period, the message will not be dropped?",yukkysaito,
+261593614,2131,TakaHoribe,2019-03-15T15:20:54Z,kalman filter for localization,41,1,385,8698,267414550,2019-03-20T15:55:59Z,"```suggestion
+  constexpr int dim_y = 3; // pos_x, pos_y, yaw, depending on NDT output
+```",yukkysaito,
+261593614,2131,TakaHoribe,2019-03-15T15:20:54Z,kalman filter for localization,41,1,385,8698,267416919,2019-03-20T16:00:30Z,"I think that it is better to convert to a vector once and normalize it by atan2
+https://github.com/CPFL/Autoware/blob/ae86b06f7638b8b3b4a12381a2844d26ea569f3f/ros/src/common/libs/amathutils_lib/src/vector2d.cpp#L15
+https://github.com/CPFL/Autoware/blob/ae86b06f7638b8b3b4a12381a2844d26ea569f3f/ros/src/common/libs/amathutils_lib/src/vector2d.cpp#L30",yukkysaito,
+261593614,2131,TakaHoribe,2019-03-15T15:20:54Z,kalman filter for localization,41,1,385,8698,267417017,2019-03-20T16:00:42Z,"I think that it is better to convert to a vector once and normalize it by atan2
+https://github.com/CPFL/Autoware/blob/ae86b06f7638b8b3b4a12381a2844d26ea569f3f/ros/src/common/libs/amathutils_lib/src/vector2d.cpp#L15
+https://github.com/CPFL/Autoware/blob/ae86b06f7638b8b3b4a12381a2844d26ea569f3f/ros/src/common/libs/amathutils_lib/src/vector2d.cpp#L30",yukkysaito,
+261593614,2131,TakaHoribe,2019-03-15T15:20:54Z,kalman filter for localization,41,1,385,8698,267418255,2019-03-20T16:03:01Z,"```suggestion
+  ros::Time current_time =  ros::Time::now();
+  pose_cov.header.stamp = current_time;
+```",yukkysaito,
+261593614,2131,TakaHoribe,2019-03-15T15:20:54Z,kalman filter for localization,41,1,385,8698,267418460,2019-03-20T16:03:25Z,"```suggestion
+    p.header.stamp = current_time;
+```",yukkysaito,
+261593614,2131,TakaHoribe,2019-03-15T15:20:54Z,kalman filter for localization,41,1,385,8698,267419256,2019-03-20T16:05:00Z,"I think this code should use mathutil. (But not merged)
+https://github.com/CPFL/Autoware/blob/ae86b06f7638b8b3b4a12381a2844d26ea569f3f/ros/src/common/libs/amathutils_lib/include/amathutils_lib/unit_convert.hpp",yukkysaito,
+261593614,2131,TakaHoribe,2019-03-15T15:20:54Z,kalman filter for localization,41,1,385,8698,267419919,2019-03-20T16:06:22Z,What if ndt uses multiple lidar data?,yukkysaito,267404292
+261593614,2131,TakaHoribe,2019-03-15T15:20:54Z,kalman filter for localization,41,1,385,8698,267420140,2019-03-20T16:06:46Z,pls change to tf2,yukkysaito,
+261593614,2131,TakaHoribe,2019-03-15T15:20:54Z,kalman filter for localization,41,1,385,8698,267611764,2019-03-21T02:42:11Z,"(@sgermanserrano Because there is a lot of such code in autoware, I want to standardize)",yukkysaito,267416919
+261593614,2131,TakaHoribe,2019-03-15T15:20:54Z,kalman filter for localization,41,1,385,8698,267611805,2019-03-21T02:42:35Z,"(@sgermanserrano Because there is a lot of such code in autoware, I want to standardize)",yukkysaito,267419256
+261593614,2131,TakaHoribe,2019-03-15T15:20:54Z,kalman filter for localization,41,1,385,8698,267665991,2019-03-21T09:03:02Z,"@yukkysaito that is already available [here](https://github.com/CPFL/Autoware/blob/e8fe86bf72e21bc84d52b4f198b6d8b2c3339f6f/ros/src/common/libs/amathutils_lib/include/amathutils_lib/amathutils.hpp#L18), so it can be used while the work you are doing in the mathutils is reviewed",sgermanserrano,267419256
+261593614,2131,TakaHoribe,2019-03-15T15:20:54Z,kalman filter for localization,41,1,385,8698,268024438,2019-03-22T02:57:21Z,"@yukkysaito @sgermanserrano Thank you for your review and comments. I checked the current amathutils.hpp, but there is ```using namespace std;```  in there. I haven't checked if it works in this kalman code, but I think it is a little bit dangerous... Could I use my original code for this review?",TakaHoribe,267419256
+261593614,2131,TakaHoribe,2019-03-15T15:20:54Z,kalman filter for localization,41,1,385,8698,268931519,2019-03-26T03:27:24Z,I've removed all tf dependency,TakaHoribe,267420140
+261593614,2131,TakaHoribe,2019-03-15T15:20:54Z,kalman filter for localization,41,1,385,8698,268931599,2019-03-26T03:27:50Z,I've modified following your suggestion.,TakaHoribe,267418460
+261593614,2131,TakaHoribe,2019-03-15T15:20:54Z,kalman filter for localization,41,1,385,8698,268931623,2019-03-26T03:27:56Z,I've modified following your suggestion.,TakaHoribe,267418255
+261593614,2131,TakaHoribe,2019-03-15T15:20:54Z,kalman filter for localization,41,1,385,8698,268932352,2019-03-26T03:31:56Z,I've modified following your suggestion.,TakaHoribe,267417017
+261593614,2131,TakaHoribe,2019-03-15T15:20:54Z,kalman filter for localization,41,1,385,8698,268932408,2019-03-26T03:32:23Z,I've modified following your suggestion. remove predictXandP() function.,TakaHoribe,267406866
+261593614,2131,TakaHoribe,2019-03-15T15:20:54Z,kalman filter for localization,41,1,385,8698,268932453,2019-03-26T03:32:41Z,"Change name from ""current"" to ""latest""",TakaHoribe,267408655
+261593614,2131,TakaHoribe,2019-03-15T15:20:54Z,kalman filter for localization,41,1,385,8698,268932478,2019-03-26T03:32:50Z,"Change name from ""current"" to ""latest""",TakaHoribe,267408767
+261045117,2123,ChenxiTU,2019-03-14T06:55:05Z,[fix] rosbag_controller's split function,2,0,3,8,265810689,2019-03-15T00:03:52Z,"Why are you replacing a call to `ceil` with a type cast? And an unsafe one, at that.",gbiggs,
+261045117,2123,ChenxiTU,2019-03-14T06:55:05Z,[fix] rosbag_controller's split function,2,0,3,8,265833650,2019-03-15T02:44:42Z,"Sorry, I replace it for debug and forgot to change it back. Now I replace it back to `ceil`. ",ChenxiTU,265810689
+261045117,2123,ChenxiTU,2019-03-14T06:55:05Z,[fix] rosbag_controller's split function,2,0,3,8,266268057,2019-03-18T00:12:28Z,You have changed from gibibytes to gigabytes. Please explain why.,gbiggs,
+261045117,2123,ChenxiTU,2019-03-14T06:55:05Z,[fix] rosbag_controller's split function,2,0,3,8,266278220,2019-03-18T02:22:54Z,"Because Ubuntu directly show data size in gigabytes. If we use gibibytes, it will lead to inconsistent  of our input and recorded data size showed by Ubuntu, like we set split size as 20GB but obtain a 21.5GB data. 
+Some user report this issue to us, and say they are confused by this. So we decide to change to  gigabytes.",ChenxiTU,266268057
+261045117,2123,ChenxiTU,2019-03-14T06:55:05Z,[fix] rosbag_controller's split function,2,0,3,8,266281041,2019-03-18T02:47:52Z,Your PR description does not mention that at all. Please update the description to state what you have actually changed and why.,gbiggs,266268057
+261045117,2123,ChenxiTU,2019-03-14T06:55:05Z,[fix] rosbag_controller's split function,2,0,3,8,266282328,2019-03-18T02:58:47Z,My bad. Thank you for your reminding. I update the PR now.,ChenxiTU,266268057
+260987224,2122,k0suke-murakami,2019-03-14T00:39:10Z,[fix] not predicting objects at x<=0 or y<=0,3,1,4,18,265395679,2019-03-14T01:55:08Z,"This would stop predicting objects behind and to the right (in lidar frame). is this what you intended? 
+or you meant `fabs(x) < THRESHOLD` ??",amc-nu,
+260987224,2122,k0suke-murakami,2019-03-14T00:39:10Z,[fix] not predicting objects at x<=0 or y<=0,3,1,4,18,265400224,2019-03-14T02:26:14Z,"![glossary_scheme_128](https://user-images.githubusercontent.com/10920881/54326781-ff85e500-464a-11e9-919d-e6535ff50653.gif)
+
+Sorry.  Coordinate is wrong. will post another pic 
+
+Currently only predicting objects in the above image's area.
+
+>is this what you intended?
+
+I think `prediction` needs to predicts objects without constraining objects' location.
+
+Do you have a reason for restricting objects' location? 
+
+",k0suke-murakami,265395679
+260987224,2122,k0suke-murakami,2019-03-14T00:39:10Z,[fix] not predicting objects at x<=0 or y<=0,3,1,4,18,265406710,2019-03-14T03:13:17Z,"We would need to add a threshold to stop predicting points hitting the ego-vehicle chassis. 
+`fabs(x) < THRESHOLD` and `fabs(y) < THRESHOLD` would work for this purpose.",amc-nu,265395679
+259780694,2109,yukkysaito,2019-03-10T18:53:03Z,Fix/gazebo with colcon,11,0,24,75,264498236,2019-03-12T02:16:18Z,"the problem is here. you're downloading the files, putting them in `/tmp`, and then moving them to an arbitrary location.
+
+Instead of installing them directly.",amc-nu,
+259780694,2109,yukkysaito,2019-03-10T18:53:03Z,Fix/gazebo with colcon,11,0,24,75,264498456,2019-03-12T02:18:00Z,this is the arbitrary location. this should be pointing to the install space.,amc-nu,
+259780694,2109,yukkysaito,2019-03-10T18:53:03Z,Fix/gazebo with colcon,11,0,24,75,264498994,2019-03-12T02:21:16Z,"why are you forcing the download? this is wrong in my opinion. what do you think @sgermanserrano ?
+this will require to download extra whopping ~450 MB for every installation. (https://bitbucket.org/osrf/gazebo_models/downloads/)
+This script should be optional, only users who wish to use the simulator should be executing this script.",amc-nu,
+259780694,2109,yukkysaito,2019-03-10T18:53:03Z,Fix/gazebo with colcon,11,0,24,75,264532577,2019-03-12T06:09:18Z,"Thank you @amc-nu . I talked with him, it looks like it's better to change to symlink",yukkysaito,264498994
+259679936,2104,hakuturu583,2019-03-09T10:28:15Z,Feature/update health checker threashold by rosparam,9,1,33,992,265297777,2019-03-13T19:34:19Z,This class is already defined in twist_gate.h.,yn-mrse,
+257920374,2077,sgermanserrano,2019-03-04T12:14:53Z,Fix/costmap generator,8,0,15,43,262338338,2019-03-05T03:47:59Z,maybe we can remove this one? it is a dependency of `grid_map_ros`.,amc-nu,
+257920374,2077,sgermanserrano,2019-03-04T12:14:53Z,Fix/costmap generator,8,0,15,43,262428704,2019-03-05T10:10:39Z,@amc-nu thanks for pointing that out. I have removed it,sgermanserrano,262338338
+257350799,2056,isamu-takagi,2019-03-01T07:53:43Z,Feature/update autoware launcher,24,1,76,1359,265378213,2019-03-14T00:03:30Z,What is this format?,yukkysaito,
+257350799,2056,isamu-takagi,2019-03-01T07:53:43Z,Feature/update autoware launcher,24,1,76,1359,265492118,2019-03-14T09:56:54Z,It is for detecting the change of yaml file format by version upgrade.,isamu-takagi,265378213
+257350799,2056,isamu-takagi,2019-03-01T07:53:43Z,Feature/update autoware launcher,24,1,76,1359,265899241,2019-03-15T09:13:59Z,@isamu-takagi Please a notice to appear in console informing that this feature is on experimental conditions as was done for announcing catkin deprecation [here](https://github.com/CPFL/Autoware/blob/2b8fb78ddd7f831a77aa8addccb82cb5ebc5cbd2/ros/catkin_make_release#L4). It should be kept there until #2129 is closed,sgermanserrano,
+257230625,2049,YamatoAndo,2019-02-28T21:14:32Z,Feature/ndt slam,20,1,37,3756,263066566,2019-03-06T18:09:40Z,"add install to the all executables,libraries,headers,launch files.",hakuturu583,
+257230625,2049,YamatoAndo,2019-02-28T21:14:32Z,Feature/ndt slam,20,1,37,3756,263068551,2019-03-06T18:14:52Z,"Why Dummy Class is necessary?
+There are already base class.",hakuturu583,
+257230625,2049,YamatoAndo,2019-02-28T21:14:32Z,Feature/ndt slam,20,1,37,3756,263068848,2019-03-06T18:15:39Z,use namespace,hakuturu583,
+256227470,2029,k0suke-murakami,2019-02-26T10:34:30Z,Feature/point pillars,39,1,25,3629,261020379,2019-02-28T01:53:23Z,License should read `Apache 2.0`,amc-nu,
+256227470,2029,k0suke-murakami,2019-02-26T10:34:30Z,Feature/point pillars,39,1,25,3629,261020582,2019-02-28T01:54:29Z,This will never pass CI. `cuda-toolkit-10-0` is not installable.,amc-nu,
+256227470,2029,k0suke-murakami,2019-02-26T10:34:30Z,Feature/point pillars,39,1,25,3629,261021377,2019-02-28T01:58:46Z,"You might try `nvidia-cuda-dev`
+https://github.com/ros/rosdistro/blob/master/rosdep/base.yaml#L4109
+However, it's not sure which version will be installed by this package. 
+
+In my opinion, it might be better to remove this dependency. Let `FindCUDA`, and your CMake script to decide whether or not to compile the package.",amc-nu,
+256227470,2029,k0suke-murakami,2019-02-26T10:34:30Z,Feature/point pillars,39,1,25,3629,261021763,2019-02-28T02:01:10Z,could you also add which version is required?,amc-nu,
+256227470,2029,k0suke-murakami,2019-02-26T10:34:30Z,Feature/point pillars,39,1,25,3629,261031099,2019-02-28T02:58:34Z,Thank you for the advice!,k0suke-murakami,261021377
+256227470,2029,k0suke-murakami,2019-02-26T10:34:30Z,Feature/point pillars,39,1,25,3629,261039453,2019-02-28T03:57:26Z,"Even if the package won't be compiled, you need to declare and empty package.
+Have a look [here](https://github.com/CPFL/Autoware/blob/develop/ros/src/driveworks/packages/autoware_driveworks_gmsl_interface/CMakeLists.txt#L94)",amc-nu,
+256227470,2029,k0suke-murakami,2019-02-26T10:34:30Z,Feature/point pillars,39,1,25,3629,261040042,2019-02-28T04:02:22Z,"Thanks! Will add.
+Could you tell me what would be caused without the empty package declaration for future reference?",k0suke-murakami,261039453
+256227470,2029,k0suke-murakami,2019-02-26T10:34:30Z,Feature/point pillars,39,1,25,3629,261845749,2019-03-02T23:18:53Z,"Why `CATKIN_GLOBAL_BIN_DESTINATION` instead of `CATKIN_PACKAGE_BIN_DESTINATION`?
+http://docs.ros.org/kinetic/api/catkin/html/user_guide/variables.html#CATKIN_GLOBAL_BIN_DESTINATION
+http://docs.ros.org/kinetic/api/catkin/html/user_guide/variables.html#CATKIN_PACKAGE_BIN_DESTINATION",mitsudome-r,
+256227470,2029,k0suke-murakami,2019-02-26T10:34:30Z,Feature/point pillars,39,1,25,3629,261896376,2019-03-04T00:10:22Z,"Thank you for checking! 
+Will update to 'CATKIN_PACKAGE_BIN_DESTINATION'",k0suke-murakami,261845749
+256227470,2029,k0suke-murakami,2019-02-26T10:34:30Z,Feature/point pillars,39,1,25,3629,262853678,2019-03-06T09:22:46Z,missing `autoware_build_flags`,amc-nu,
+256227470,2029,k0suke-murakami,2019-02-26T10:34:30Z,Feature/point pillars,39,1,25,3629,262873663,2019-03-06T10:12:27Z,"`nvinfer`, `nvonnxparser`, `cudnn`, `cublas`, and `curand` are also required. Please add them to the detection.",amc-nu,
+256227470,2029,k0suke-murakami,2019-02-26T10:34:30Z,Feature/point pillars,39,1,25,3629,262875046,2019-03-06T10:15:55Z,"remove the default value of `pfe_onnx_file` and `rpn_onnx_file`, these are required.",amc-nu,
+256227470,2029,k0suke-murakami,2019-02-26T10:34:30Z,Feature/point pillars,39,1,25,3629,262892734,2019-03-06T11:03:14Z,remember to also write the `label`,amc-nu,
+256227470,2029,k0suke-murakami,2019-02-26T10:34:30Z,Feature/point pillars,39,1,25,3629,263216843,2019-03-07T02:29:28Z,"you are probably going to hate me but, can you please move all your includes to `/include/lidar_point_pillars/`
+
+You'll need to change your includes to prefix `lidar_point_pillars/` in all your sources includes.
+
+If I'm not clear enough:
+Currently you have this
+```
+├── include
+│   ├── anchor_mask_cuda.h
+│   ├── common.h
+│   ├── nms_cuda.h
+│   ├── point_pillars.h
+│   ├── point_pillars_ros.h
+│   ├── postprocess_cuda.h
+│   ├── preprocess_points_cuda.h
+│   ├── preprocess_points.h
+│   └── scatter_cuda.h
+```
+
+Change it to:
+```
+├── include
+│   └── lidar_point_pillars
+│            ├── anchor_mask_cuda.h
+│            ├── common.h
+│            ├── nms_cuda.h
+│            ├── point_pillars.h
+│            ├── point_pillars_ros.h
+│            ├── postprocess_cuda.h
+│            ├── preprocess_points_cuda.h
+│            ├── preprocess_points.h
+│            └── scatter_cuda.h
+```
+and update your source files, adding the `lidar_point_pillars` prefix:
+i.e.
+```
+--- a/ros/src/computing/perception/detection/lidar_detector/packages/lidar_point_pillars/nodes/anchor_mask_cuda.cu
++++ b/ros/src/computing/perception/detection/lidar_detector/packages/lidar_point_pillars/nodes/anchor_mask_cuda.cu
+@@ -16,7 +16,7 @@
+ 
+ //headers in local files
+-#include ""anchor_mask_cuda.h""
++#include ""lidar_point_pillars/anchor_mask_cuda.h""
+```
+
+Finally, change the install command to 
+```
+         DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}/lidar_point_pillars
+```
+
+If you wonder why? Please have a look here:
+http://wiki.ros.org/Packages#Common_Files_and_Directories",amc-nu,
+256227470,2029,k0suke-murakami,2019-02-26T10:34:30Z,Feature/point pillars,39,1,25,3629,263224256,2019-03-07T03:17:13Z,why not use a const instead of 2*4 ?,amc-nu,
+256227470,2029,k0suke-murakami,2019-02-26T10:34:30Z,Feature/point pillars,39,1,25,3629,263225008,2019-03-07T03:22:25Z,"In CUDA, even the const variable is considered as runtime changeable variable, plus it is not allowed to have array with changeable size inside the kernel. 
+So got error while compiling code like `float corners[NUM_BOX_CORNERS] = {float(-0.5*box_dx), float(-0.5*box_dy)`  ",k0suke-murakami,263224256
+256227470,2029,k0suke-murakami,2019-02-26T10:34:30Z,Feature/point pillars,39,1,25,3629,263225461,2019-03-07T03:25:39Z,what about a def?,amc-nu,263224256
+256227470,2029,k0suke-murakami,2019-02-26T10:34:30Z,Feature/point pillars,39,1,25,3629,263225750,2019-03-07T03:27:25Z,"what are these magic numbers? -39.9 and 0.1
+Strictly these also should be `-39.9f` and `0.1f`",amc-nu,
+256227470,2029,k0suke-murakami,2019-02-26T10:34:30Z,Feature/point pillars,39,1,25,3629,263226869,2019-03-07T03:35:37Z,Using this (`ros::package::getPath`) requires you to add `roslib` as dependency.,amc-nu,
+256227470,2029,k0suke-murakami,2019-02-26T10:34:30Z,Feature/point pillars,39,1,25,3629,263228239,2019-03-07T03:46:25Z,"just for completeness, please use `git mv` so you don't lose your history.",amc-nu,263216843
+256227470,2029,k0suke-murakami,2019-02-26T10:34:30Z,Feature/point pillars,39,1,25,3629,263228530,2019-03-07T03:48:16Z,can you briefly explain what are you testing with this?,amc-nu,
+256227470,2029,k0suke-murakami,2019-02-26T10:34:30Z,Feature/point pillars,39,1,25,3629,263234465,2019-03-07T04:30:33Z,there is a typo here NUM_THRE**S**D,amc-nu,
+256227470,2029,k0suke-murakami,2019-02-26T10:34:30Z,Feature/point pillars,39,1,25,3629,263234578,2019-03-07T04:31:39Z,"other typo here :)
+NUM_THREDS",amc-nu,
+256227470,2029,k0suke-murakami,2019-02-26T10:34:30Z,Feature/point pillars,39,1,25,3629,263234682,2019-03-07T04:32:28Z,Remove the `_` from `NUM_OUTPUT_BOX_FEATURE_` to match your definition.,amc-nu,
+256227470,2029,k0suke-murakami,2019-02-26T10:34:30Z,Feature/point pillars,39,1,25,3629,263234909,2019-03-07T04:34:18Z,typo here. Please update it.,amc-nu,
+256227470,2029,k0suke-murakami,2019-02-26T10:34:30Z,Feature/point pillars,39,1,25,3629,263641009,2019-03-08T01:51:52Z,Thank you for the advice. Your suggestion works.,k0suke-murakami,263224256
+256227470,2029,k0suke-murakami,2019-02-26T10:34:30Z,Feature/point pillars,39,1,25,3629,268414125,2019-03-24T00:39:08Z,"@gbiggs @esteve @kfunaoka this package uses a pre-trained network that is not for commercial purposes. 
+
+I think that we need to find a way to clearly mark such packages, otherwise it will be difficult to find them later and it will also cause confusion with Autoware users trying to commercialize such packages.",dejanpan,
+256227470,2029,k0suke-murakami,2019-02-26T10:34:30Z,Feature/point pillars,39,1,25,3629,268459811,2019-03-24T23:32:25Z,"Yes, I agree. I'll add it to my notes for the documentation template.
+
+I think we also need a way for a user to easily select between using a non-commercial pre-trained network that we provide and a network they provide themselves (as well as a good method and documentation for how to train a network). This would improve the usefulness of Autoware without placing a burden on us to provide trained networks. I'll add *this* to my increasing pile of notes on what Autoware should be. :)",gbiggs,268414125
+255793822,2018,s-azumi,2019-02-25T08:14:41Z,Add stop state type,70,1,66,7938,266319906,2019-03-18T07:36:48Z,"same problem here, use FindPackage",amc-nu,
+255793822,2018,s-azumi,2019-02-25T08:14:41Z,Add stop state type,70,1,66,7938,266320014,2019-03-18T07:37:18Z,"same problem `config` doesn't exist.
+https://travis-ci.org/CPFL/Autoware/jobs/498699468#L1289",amc-nu,
+255784555,2017,s-azumi,2019-02-25T07:31:29Z,Feature/split drive state,59,1,66,7816,266315448,2019-03-18T07:15:40Z,"this is wrong, use FindPackage",amc-nu,
+255784555,2017,s-azumi,2019-02-25T07:31:29Z,Feature/split drive state,59,1,66,7816,266315654,2019-03-18T07:16:50Z,"there is no `config` directory to be installed.
+https://travis-ci.org/CPFL/Autoware/jobs/498668551#L1278",amc-nu,
+255467233,2014,maximosipov,2019-02-22T17:07:37Z,[MERGE AFTER #2007] Use ament for autoware_build_flags,7,1,30,1221,259459870,2019-02-22T18:28:46Z,"Many packages (like ros-${ROS2_DISTRO}-ament-cmake) depend on many of the packages below. Even with --no-install-recommends, it should still automatically install the dependencies. Is it required for some reason to list them out below if they are dependencies of another package? ament-cmake covers -core, -export-definitions, -export-dependencies, -export-include-directories, -export-libraries, -export-link-flags, -libraries, -python, -target-dependencies, -test, and -workspace.",JWhitleyWork,
+255467233,2014,maximosipov,2019-02-22T17:07:37Z,[MERGE AFTER #2007] Use ament for autoware_build_flags,7,1,30,1221,259461277,2019-02-22T18:33:06Z,"Is there a reason for this change? The ha pool isn't listed here: https://sks-keyservers.net/overview-of-pools.php and, since we are using port 80 to avoid Dockerhub restrictions, doesn't p80 make more sense?",JWhitleyWork,
+255467233,2014,maximosipov,2019-02-22T17:07:37Z,[MERGE AFTER #2007] Use ament for autoware_build_flags,7,1,30,1221,259615677,2019-02-24T11:28:30Z,@JWhitleyAStuff I think it is very useful for clarity of what we do here. These packages (and ROS2 in parallel with ROS1) are just a temporary solution to facilitate the transition to ROS2 and will go away once ROS_DISTRO becomes crystal. However at the moment it is nice to have it here listed in the most explicit way.,maximosipov,259459870
+255467233,2014,maximosipov,2019-02-22T17:07:37Z,[MERGE AFTER #2007] Use ament for autoware_build_flags,7,1,30,1221,259615698,2019-02-24T11:29:20Z,"Noted, thank you! However it comes from #1982 - I'll mention it there.",maximosipov,259461277
+254233174,2007,maximosipov,2019-02-19T12:25:17Z,[MERGE AFTER #1982] Integrate ament into CI and docker builds,6,1,26,1209,258478512,2019-02-20T13:24:23Z,ROS_DISTRO is already defined at the top of the file before the FROM statement.,filiperinaldi,
+254233174,2007,maximosipov,2019-02-19T12:25:17Z,[MERGE AFTER #1982] Integrate ament into CI and docker builds,6,1,26,1209,258484724,2019-02-20T13:40:18Z,"Add ROS2's GPG key, see: https://github.com/osrf/docker_images/blob/4f09cf3ebe9300879f9a27eca2c60632ff980431/ros/ardent/ubuntu/xenial/ros-core/Dockerfile
+",filiperinaldi,
+254233174,2007,maximosipov,2019-02-19T12:25:17Z,[MERGE AFTER #1982] Integrate ament into CI and docker builds,6,1,26,1209,258485912,2019-02-20T13:43:09Z,"Replace xenial with `lsb_release -sc` to simplify next time we update the base OS. You may need to add ""lsb-release"" to the installation list on line 10.
+",filiperinaldi,
+254233174,2007,maximosipov,2019-02-19T12:25:17Z,[MERGE AFTER #1982] Integrate ament into CI and docker builds,6,1,26,1209,258486700,2019-02-20T13:45:15Z,"Combine apt-get update and apt-get install on the same RUN command to avoid bloating the Docker layers. Also add ""rm -rf /var/lib/apt/lists/*"" at the end of the same RUN command.",filiperinaldi,
+254233174,2007,maximosipov,2019-02-19T12:25:17Z,[MERGE AFTER #1982] Integrate ament into CI and docker builds,6,1,26,1209,258487362,2019-02-20T13:47:02Z,You may drop the curly brackets syntax to be consistent with the rest of the file.,filiperinaldi,
+254233174,2007,maximosipov,2019-02-19T12:25:17Z,[MERGE AFTER #1982] Integrate ament into CI and docker builds,6,1,26,1209,258487511,2019-02-20T13:47:21Z,Drop curly brackets.,filiperinaldi,
+254233174,2007,maximosipov,2019-02-19T12:25:17Z,[MERGE AFTER #1982] Integrate ament into CI and docker builds,6,1,26,1209,258610861,2019-02-20T18:11:59Z,I think you need to repeat ARG if using it FROM as the first one had a scope of the following FROM command only - https://docs.docker.com/engine/reference/builder/#understand-how-arg-and-from-interact,maximosipov,258478512
+254233174,2007,maximosipov,2019-02-19T12:25:17Z,[MERGE AFTER #1982] Integrate ament into CI and docker builds,6,1,26,1209,258620355,2019-02-20T18:36:27Z,"We use FROM ros:$ROS_DISTRO here, so ROS GPG key is already imported:
+<pre>
+apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 421C365BD9FF1F717815A3895523BAEEB01FA116
+Executing: /tmp/tmp.3Qb23No1Wz/gpg.1.sh --keyserver
+hkp://keyserver.ubuntu.com:80
+--recv-keys
+421C365BD9FF1F717815A3895523BAEEB01FA116
+gpg: requesting key B01FA116 from hkp server keyserver.ubuntu.com
+gpg: key B01FA116: ""ROS Builder <rosbuild@ros.org>"" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+</pre>",maximosipov,258484724
+254233174,2007,maximosipov,2019-02-19T12:25:17Z,[MERGE AFTER #1982] Integrate ament into CI and docker builds,6,1,26,1209,258622928,2019-02-20T18:42:49Z,Yep,maximosipov,258485912
+254233174,2007,maximosipov,2019-02-19T12:25:17Z,[MERGE AFTER #1982] Integrate ament into CI and docker builds,6,1,26,1209,258624482,2019-02-20T18:46:40Z,Yep,maximosipov,258486700
+254233174,2007,maximosipov,2019-02-19T12:25:17Z,[MERGE AFTER #1982] Integrate ament into CI and docker builds,6,1,26,1209,258629238,2019-02-20T18:58:26Z,Yep,maximosipov,258487511
+254233174,2007,maximosipov,2019-02-19T12:25:17Z,[MERGE AFTER #1982] Integrate ament into CI and docker builds,6,1,26,1209,258629326,2019-02-20T18:58:38Z,Yep,maximosipov,258487362
+254233174,2007,maximosipov,2019-02-19T12:25:17Z,[MERGE AFTER #1982] Integrate ament into CI and docker builds,6,1,26,1209,263024537,2019-03-06T16:30:07Z,"Just a minor thing, the packages for apt-get install should be in alphabetical order. Otherwise, the patch is a +1 from me on the Dockerfile changes.
+",filiperinaldi,258478512
+254156338,2004,hakuturu583,2019-02-19T08:23:39Z,Feature/autoware health analyzer,19,1,21,575,258378044,2019-02-20T08:35:45Z,Why did you change to points_ground?,yn-mrse,
+254156338,2004,hakuturu583,2019-02-19T08:23:39Z,Feature/autoware health analyzer,19,1,21,575,258406177,2019-02-20T09:53:05Z,"Parameter name ""warn_threashold"" is difficult to understand.
+You should change to ""warn_nodes_count_threshold"", etc.",yn-mrse,
+254156338,2004,hakuturu583,2019-02-19T08:23:39Z,Feature/autoware health analyzer,19,1,21,575,258407276,2019-02-20T09:55:54Z,"""threashold"" is a typo.
+Please correct it to ""threshold"".",yn-mrse,
+254156338,2004,hakuturu583,2019-02-19T08:23:39Z,Feature/autoware health analyzer,19,1,21,575,259187767,2019-02-22T01:51:29Z,fix typo.,hakuturu583,258407276
+254156338,2004,hakuturu583,2019-02-19T08:23:39Z,Feature/autoware health analyzer,19,1,21,575,259187943,2019-02-22T01:52:28Z,fixed.,hakuturu583,258378044
+254156338,2004,hakuturu583,2019-02-19T08:23:39Z,Feature/autoware health analyzer,19,1,21,575,259188123,2019-02-22T01:53:35Z,renamed to warn_nodes_count_threshold,hakuturu583,258406177
+254004698,2000,sgermanserrano,2019-02-18T18:07:34Z,Fix/colcon build,3,1,1,2,257790902,2019-02-18T18:10:18Z,"Looks great. Just a minor thing, could you break this down into separate lines and sort them alphabetically?",esteve,
+254004698,2000,sgermanserrano,2019-02-18T18:07:34Z,Fix/colcon build,3,1,1,2,257871815,2019-02-19T02:28:43Z,"needs to point to `install` space instead of `devel`
+```suggestion
+RUN echo ""source /home/$USERNAME/Autoware/ros/install/setup.bash"" >> /home/$USERNAME/.bashrc
+```",amc-nu,
+254004698,2000,sgermanserrano,2019-02-18T18:07:34Z,Fix/colcon build,3,1,1,2,257872122,2019-02-19T02:31:01Z,"I recommend using `sudo -E` in the script to allow the build arguments to be passed. This is useful when running behind a proxy.
+```suggestion
+RUN /bin/bash -c 'source /opt/ros/kinetic/setup.bash; cd /home/$USERNAME/Autoware/ros/src; git submodule update --init --recursive; cd ../; sudo -E rosdep install -y --from-paths /home/$USERNAME/Autoware/ros/src --ignore-src --rosdistro kinetic; ./colcon_release'
+```",amc-nu,
+253327763,1987,yn-mrse,2019-02-15T07:03:24Z,Add emergency_handler,54,1,62,2767,257137345,2019-02-15T08:11:06Z,I think inclusion is better than inheritance.,hakuturu583,
+253327763,1987,yn-mrse,2019-02-15T07:03:24Z,Add emergency_handler,54,1,62,2767,257138076,2019-02-15T08:14:03Z,you should use enum when you select behavior.,hakuturu583,
+253327763,1987,yn-mrse,2019-02-15T07:03:24Z,Add emergency_handler,54,1,62,2767,257143878,2019-02-15T08:37:04Z,"@yn-mrse is _system_status_subscriber_ supposed to be built in this package? If so, it is not being built, hence the CI failures",sgermanserrano,
+253327763,1987,yn-mrse,2019-02-15T07:03:24Z,Add emergency_handler,54,1,62,2767,257221775,2019-02-15T12:51:00Z,"Thank you, sgermanserrano.
+`system_status_subscriber` library is external dependence; in `autoware_health_checker` package.
+Am I misunderstanding how to install libraries?",yn-mrse,257143878
+253327763,1987,yn-mrse,2019-02-15T07:03:24Z,Add emergency_handler,54,1,62,2767,257327253,2019-02-15T17:37:10Z,@yn-mrse #1992 fixes the CI problems,sgermanserrano,257143878
+253327763,1987,yn-mrse,2019-02-15T07:03:24Z,Add emergency_handler,54,1,62,2767,257498324,2019-02-17T10:39:03Z,using enum in ROS Message is better.,hakuturu583,257138076
+253327763,1987,yn-mrse,2019-02-15T07:03:24Z,Add emergency_handler,54,1,62,2767,257929358,2019-02-19T08:20:56Z,I will fix.,yn-mrse,257137345
+253327763,1987,yn-mrse,2019-02-15T07:03:24Z,Add emergency_handler,54,1,62,2767,257929644,2019-02-19T08:21:49Z,"In order to review the composition, changes will be made.",yn-mrse,257138076
+252706306,1982,sgermanserrano,2019-02-13T14:05:02Z,crossbuild dockerhub ,5,1,23,997,259616212,2019-02-24T11:41:05Z,"From @JWhitleyAStuff - Is there a reason for this change? The ha pool isn't listed here: https://sks-keyservers.net/overview-of-pools.php and, since we are using port 80 to avoid Dockerhub restrictions, doesn't p80 make more sense?",maximosipov,
+250322992,1959,kfunaoka,2019-02-05T08:54:50Z,Add reviewers' checklist into pull-request-template,1,0,1,12,253927467,2019-02-05T16:00:06Z,"```suggestion
+- [ ] Create Unit Tests
+- [ ] Check that install directives are in CMakelists
+```",sgermanserrano,
+249556771,1950,isamu-takagi,2019-02-01T10:35:06Z,[Feature] Autoware Launcher,11,0,156,4768,253253484,2019-02-02T04:28:48Z,Please uncomment install lines and write install destination.,hakuturu583,
+249556771,1950,isamu-takagi,2019-02-01T10:35:06Z,[Feature] Autoware Launcher,11,0,156,4768,253328970,2019-02-04T00:41:47Z,"```suggestion
+```",kfunaoka,
+249556771,1950,isamu-takagi,2019-02-01T10:35:06Z,[Feature] Autoware Launcher,11,0,156,4768,253328982,2019-02-04T00:42:04Z,"```suggestion
+```",kfunaoka,
+249556771,1950,isamu-takagi,2019-02-01T10:35:06Z,[Feature] Autoware Launcher,11,0,156,4768,256675291,2019-02-14T03:00:32Z,please remove unused lines.,hakuturu583,
+249556771,1950,isamu-takagi,2019-02-01T10:35:06Z,[Feature] Autoware Launcher,11,0,156,4768,256675309,2019-02-14T03:00:45Z,can you write some tests??,hakuturu583,
+249556771,1950,isamu-takagi,2019-02-01T10:35:06Z,[Feature] Autoware Launcher,11,0,156,4768,256675938,2019-02-14T03:05:14Z,Why do not use ROS_ERROR_STREAM ??,hakuturu583,
+249556771,1950,isamu-takagi,2019-02-01T10:35:06Z,[Feature] Autoware Launcher,11,0,156,4768,256680714,2019-02-14T03:37:22Z,Apply Clang-Format,hakuturu583,
+249556771,1950,isamu-takagi,2019-02-01T10:35:06Z,[Feature] Autoware Launcher,11,0,156,4768,258772723,2019-02-21T04:00:48Z,Remove archive and runtime lines.,isamu-takagi,256675291
+249556771,1950,isamu-takagi,2019-02-01T10:35:06Z,[Feature] Autoware Launcher,11,0,156,4768,258772812,2019-02-21T04:01:40Z,Fixed it.,isamu-takagi,256675938
+249556771,1950,isamu-takagi,2019-02-01T10:35:06Z,[Feature] Autoware Launcher,11,0,156,4768,258892658,2019-02-21T11:45:08Z,Add test for plugin files.,isamu-takagi,256675309
+249556771,1950,isamu-takagi,2019-02-01T10:35:06Z,[Feature] Autoware Launcher,11,0,156,4768,258893643,2019-02-21T11:48:26Z,Applied.,isamu-takagi,256680714
+249556771,1950,isamu-takagi,2019-02-01T10:35:06Z,[Feature] Autoware Launcher,11,0,156,4768,258915160,2019-02-21T12:58:05Z,Good!!,hakuturu583,256675291
+249556771,1950,isamu-takagi,2019-02-01T10:35:06Z,[Feature] Autoware Launcher,11,0,156,4768,258915478,2019-02-21T12:58:57Z,Looks Good To me,hakuturu583,256675309
+249556771,1950,isamu-takagi,2019-02-01T10:35:06Z,[Feature] Autoware Launcher,11,0,156,4768,258916482,2019-02-21T13:02:09Z,Good!!,hakuturu583,256680714
+249556771,1950,isamu-takagi,2019-02-01T10:35:06Z,[Feature] Autoware Launcher,11,0,156,4768,258916786,2019-02-21T13:02:48Z,Good!!,hakuturu583,256675938
+249331781,1946,filiperinaldi,2019-01-31T17:18:29Z,Docker cleanup,5,1,18,917,260824127,2019-02-27T16:13:29Z,here points to `devel`,amc-nu,
+249331781,1946,filiperinaldi,2019-01-31T17:18:29Z,Docker cleanup,5,1,18,917,260826682,2019-02-27T16:18:36Z,Why the change to `/usr/lib`? `/usr/local/lib` makes more sense IMHO,esteve,
+249331781,1946,filiperinaldi,2019-01-31T17:18:29Z,Docker cleanup,5,1,18,917,260827324,2019-02-27T16:19:53Z,What's the value of `$LIB`? It doesn't seem to be set anywhere.,esteve,
+249331781,1946,filiperinaldi,2019-01-31T17:18:29Z,Docker cleanup,5,1,18,917,261096191,2019-02-28T08:52:50Z,@esteve that change was made to address a duplication problem: [https://github.com/filiperinaldi/Autoware/pull/10](https://github.com/filiperinaldi/Autoware/pull/10),sgermanserrano,260826682
+249331781,1946,filiperinaldi,2019-01-31T17:18:29Z,Docker cleanup,5,1,18,917,261556958,2019-03-01T10:46:50Z,"I'd advise against using rosdep here as it prevents Docker from using the cache effectively. There's also no trace of what packages are being installed, and more importantly, given that ROS1 does not guarantee ABI compatibility, any  ROS package installed afterwards may cause a segfault.",esteve,
+249331781,1946,filiperinaldi,2019-01-31T17:18:29Z,Docker cleanup,5,1,18,917,261664871,2019-03-01T16:16:31Z,"The previous Dockerfile had a list of ROS packages being installed. They were not comprehensive and were very likely to be out of sync as the dependencies change from version to version.
+
+The rationale for doing it like this was that for a given version of Autoware, its corresponding Docker base image will have the dependencies pre-installed. If you are using this based to develop new features, then you will have to manually run rosdep again to complement the new dependencies required.
+
+The effect on Docker's cache could be minimised with a list, but the cache would still be discarded eventually when the list gets updated. It is a trade-off between getting the dependencies automatically sorted out (instead of someone manually finding them out and updating the Dockerfile) vs increasing the usage of cache.
+What do you think would be a better balance? Perhaps splitting ros-desktop-full and a few other basic ROS packages out into their own RUN command to at least re-use that layer? Move the rosdep step to be part of the build steps?
+
+I'm not sure I understand the compatibility issue. Aren't these all deb packages which are meant to be compatible on the same distro?",filiperinaldi,261556958
+249331781,1946,filiperinaldi,2019-01-31T17:18:29Z,Docker cleanup,5,1,18,917,261669561,2019-03-01T16:28:53Z,"> What do you think would be a better balance? Perhaps splitting ros-desktop-full and a few other basic ROS packages out into their own RUN command to at least re-use that layer? Move the rosdep step to be part of the build steps?
+
+I think having a list of known packages and then running rosdep install is a good compromise. OSRF has the process entirely automated in their images, perhaps in the future we could just have a script that runs rosdep install and if there are any new packages, add them to Dockerfile and commit the changes.
+
+> I'm not sure I understand the compatibility issue. Aren't these all deb packages which are meant to be compatible on the same distro?
+
+Unfortunately not. If I have packages installed from a previous sync and I install new ones, they are most certainly to crash because they are not ABI-compatible. ROS releases must be upgraded/installed all at once, you can't mix packages from different syncs, even if they are from the same distribution.",esteve,261556958
+249331781,1946,filiperinaldi,2019-01-31T17:18:29Z,Docker cleanup,5,1,18,917,261673051,2019-03-01T16:37:35Z,"Just a correction, it's not certain as I stated, but there's a chance that the packages are incompatible.",esteve,261556958
+249331781,1946,filiperinaldi,2019-01-31T17:18:29Z,Docker cleanup,5,1,18,917,263346305,2019-03-07T11:42:15Z,Done.,filiperinaldi,261556958
+249331781,1946,filiperinaldi,2019-01-31T17:18:29Z,Docker cleanup,5,1,18,917,264065745,2019-03-10T23:43:41Z,Good job! This is where I want to add.,MouriNaruto,
+249261164,1945,aohsato,2019-01-31T14:12:04Z,[Feature] Improve AS vehicle interface,17,1,10,731,252699251,2019-01-31T14:55:52Z,"Delete pointers initialized in the constructor, or do not use pointers.",yn-mrse,
+249261164,1945,aohsato,2019-01-31T14:12:04Z,[Feature] Improve AS vehicle interface,17,1,10,731,252705499,2019-01-31T15:10:24Z,"Will not be divided by 0?
+Is there a guarantee that `adaptive_ger_ratio_` will not be 0?",yn-mrse,
+249261164,1945,aohsato,2019-01-31T14:12:04Z,[Feature] Improve AS vehicle interface,17,1,10,731,252731081,2019-01-31T16:08:31Z,"Since support for Ubuntu 14.04/ROS Indigo is no longer required, we should be able to support C++11 features like using a smart pointer here for memory management, correct?",JWhitleyWork,252699251
+249261164,1945,aohsato,2019-01-31T14:12:04Z,[Feature] Improve AS vehicle interface,17,1,10,731,252731752,2019-01-31T16:10:02Z,"msg_steering_wheel->output could be 0 if the wheel is perfectly centered. This would cause a divide-by-zero error here, as @yn-mrse points out.",JWhitleyWork,252705499
+249261164,1945,aohsato,2019-01-31T14:12:04Z,[Feature] Improve AS vehicle interface,17,1,10,731,253884933,2019-02-05T14:28:01Z,Has this been fixed? @aohsato ,snehagn,252705499
+249261164,1945,aohsato,2019-01-31T14:12:04Z,[Feature] Improve AS vehicle interface,17,1,10,731,259374619,2019-02-22T14:56:46Z,"@yn-mrse @JWhitleyAStuff @snehagn Thanks a lot. Fixed.
+https://github.com/CPFL/Autoware/pull/1945/commits/ea6f8089fe671a23974833366bf74c73050ac10d",aohsato,252705499
+249131193,1943,hakuturu583,2019-01-31T06:18:51Z,Feature/autoware health checker,44,1,82,3021,252741783,2019-01-31T16:32:36Z,What is the difference between the variable initialized at the same time as the init of the constructor and the variable initialized at a later time?,yn-mrse,
+249131193,1943,hakuturu583,2019-01-31T06:18:51Z,Feature/autoware health checker,44,1,82,3021,252744534,2019-01-31T16:38:56Z,"I think that the `[ ]` operator of std::map is not thread-safe.
+For element accesses that are not intended to change the value, we recommend accessing `at()` as much as possible.
+If it can not be done, it seems necessary to set `mutex` in order to secure thread-safe.",yn-mrse,
+249131193,1943,hakuturu583,2019-01-31T06:18:51Z,Feature/autoware health checker,44,1,82,3021,252746478,2019-01-31T16:43:25Z,"Does it really seem necessary to copy?
+I think that copying all the data seems to be useless.
+Is it okay to pass by reference?",yn-mrse,
+249131193,1943,hakuturu583,2019-01-31T06:18:51Z,Feature/autoware health checker,44,1,82,3021,252749669,2019-01-31T16:51:02Z,"I think that it is not clear whether it is `<` or `>` as seen from the name.
+For example, it should be `isOlderTimestamp(a, b)`.",yn-mrse,
+249131193,1943,hakuturu583,2019-01-31T06:18:51Z,Feature/autoware health checker,44,1,82,3021,252751889,2019-01-31T16:56:17Z,"I think that it is a specification that receives the same topic from many nodes, but is it not necessary to set the queue size to be large or to be changed by the parameter?",yn-mrse,
+249131193,1943,hakuturu583,2019-01-31T06:18:51Z,Feature/autoware health checker,44,1,82,3021,252758039,2019-01-31T17:11:31Z,The contents of `convert()` are closed and I think that it can be removed from mutex.,yn-mrse,
+249131193,1943,hakuturu583,2019-01-31T06:18:51Z,Feature/autoware health checker,44,1,82,3021,252759104,2019-01-31T17:14:17Z,Why copy the node handle?,yn-mrse,
+249131193,1943,hakuturu583,2019-01-31T06:18:51Z,Feature/autoware health checker,44,1,82,3021,252760382,2019-01-31T17:17:43Z,"Over the whole area, you should replace `push_back()` with `emplace_back()`.",yn-mrse,
+249131193,1943,hakuturu583,2019-01-31T06:18:51Z,Feature/autoware health checker,44,1,82,3021,252771724,2019-01-31T17:48:27Z,"Are `diag_buffers_`, `rate_checkers_`, and `node_activated_` thread-safe?",yn-mrse,
+249131193,1943,hakuturu583,2019-01-31T06:18:51Z,Feature/autoware health checker,44,1,82,3021,252942707,2019-02-01T06:15:33Z,I think it will be no problem.,hakuturu583,252751889
+249131193,1943,hakuturu583,2019-01-31T06:18:51Z,Feature/autoware health checker,44,1,82,3021,253362154,2019-02-04T07:05:34Z,Renamed,hakuturu583,252749669
+249131193,1943,hakuturu583,2019-01-31T06:18:51Z,Feature/autoware health checker,44,1,82,3021,253362308,2019-02-04T07:06:27Z,It is good to export as Nodelet.,hakuturu583,252759104
+249131193,1943,hakuturu583,2019-01-31T06:18:51Z,Feature/autoware health checker,44,1,82,3021,253362770,2019-02-04T07:09:53Z,replaced to emplace_back.,hakuturu583,252760382
+249131193,1943,hakuturu583,2019-01-31T06:18:51Z,Feature/autoware health checker,44,1,82,3021,253363318,2019-02-04T07:14:06Z,add scoped lock to the function.,hakuturu583,252744534
+249131193,1943,hakuturu583,2019-01-31T06:18:51Z,Feature/autoware health checker,44,1,82,3021,253364350,2019-02-04T07:21:17Z,add mutex for node_status_publisher.,hakuturu583,252771724
+249131193,1943,hakuturu583,2019-01-31T06:18:51Z,Feature/autoware health checker,44,1,82,3021,253364391,2019-02-04T07:21:33Z,rate_checker and diag_buffer Class is thread-safe.,hakuturu583,252771724
+249131193,1943,hakuturu583,2019-01-31T06:18:51Z,Feature/autoware health checker,44,1,82,3021,253364872,2019-02-04T07:25:20Z,"health_aggregator buffers data into the buffer and publish bufferd data in constant frequency.
+So, I think it is necessary to get mutex.",hakuturu583,252758039
+249131193,1943,hakuturu583,2019-01-31T06:18:51Z,Feature/autoware health checker,44,1,82,3021,253365146,2019-02-04T07:27:20Z,It is very small data and it is safe to pass as copy.,hakuturu583,252746478
+249131193,1943,hakuturu583,2019-01-31T06:18:51Z,Feature/autoware health checker,44,1,82,3021,253365984,2019-02-04T07:32:29Z,It is const public variables.,hakuturu583,252741783
+249131193,1943,hakuturu583,2019-01-31T06:18:51Z,Feature/autoware health checker,44,1,82,3021,259683297,2019-02-25T05:49:08Z,you should not do the `==` comparison with float,dejanpan,
+249131193,1943,hakuturu583,2019-01-31T06:18:51Z,Feature/autoware health checker,44,1,82,3021,259697124,2019-02-25T07:12:06Z,"I hope the question is referring to why some are initialised that way and some are not. I have the same question... why is `key_` not initialised in the member initialiser list, for example?",gbiggs,252741783
+248045590,1930,yukkysaito,2019-01-28T07:55:21Z,Feature/gazebo simulator,60,0,183,61774,251718910,2019-01-29T07:37:05Z,Plz fork this repo to CPFL and re-link,aohsato,
+248045590,1930,yukkysaito,2019-01-28T07:55:21Z,Feature/gazebo simulator,60,0,183,61774,251720510,2019-01-29T07:44:41Z,Follow submodule modification,aohsato,
+248045590,1930,yukkysaito,2019-01-28T07:55:21Z,Feature/gazebo simulator,60,0,183,61774,251721263,2019-01-29T07:48:05Z,"```suggestion
+  <exec_depend>velodyne_description</exec_depend>
+  <exec_depend>mercurial</exec_depend>
+
+```",aohsato,
+248045590,1930,yukkysaito,2019-01-28T07:55:21Z,Feature/gazebo simulator,60,0,183,61774,251724921,2019-01-29T08:04:20Z,"Why do you need this directory structure like `launcher/vehicle_gazebo_simulation_launcher`?
+I think it's better to create `gazebo_simulator` package simply.",aohsato,
+248045590,1930,yukkysaito,2019-01-28T07:55:21Z,Feature/gazebo simulator,60,0,183,61774,251741826,2019-01-29T09:01:01Z,"```suggestion
+echo ""Install car_demo models""
+```",aohsato,
+248045590,1930,yukkysaito,2019-01-28T07:55:21Z,Feature/gazebo simulator,60,0,183,61774,251752948,2019-01-29T09:32:41Z,Why as package?,aohsato,
+248045590,1930,yukkysaito,2019-01-28T07:55:21Z,Feature/gazebo simulator,60,0,183,61774,251752989,2019-01-29T09:32:48Z,TODO,aohsato,
+248045590,1930,yukkysaito,2019-01-28T07:55:21Z,Feature/gazebo simulator,60,0,183,61774,251753042,2019-01-29T09:32:57Z,"Apache 2
+```suggestion
+  <license>Apache 2</license>
+```",aohsato,
+248045590,1930,yukkysaito,2019-01-28T07:55:21Z,Feature/gazebo simulator,60,0,183,61774,251753219,2019-01-29T09:33:23Z,same with camera_descripation,aohsato,
+248045590,1930,yukkysaito,2019-01-28T07:55:21Z,Feature/gazebo simulator,60,0,183,61774,251755175,2019-01-29T09:38:25Z,"```suggestion
+sudo apt install gazebo7 gazebo7-common gazebo7-plugin-base libgazebo7 libgazebo7-dev libignition-math2 libignition-math2-dev libsdformat4 libsdformat4-dev sdformat-sdf
+```
+better like this?",aohsato,
+248045590,1930,yukkysaito,2019-01-28T07:55:21Z,Feature/gazebo simulator,60,0,183,61774,251757095,2019-01-29T09:43:27Z,for use `hg`,aohsato,251721263
+248045590,1930,yukkysaito,2019-01-28T07:55:21Z,Feature/gazebo simulator,60,0,183,61774,251757617,2019-01-29T09:44:45Z,"```suggestion
+  <license>Apache 2</license>
+```",aohsato,
+248045590,1930,yukkysaito,2019-01-28T07:55:21Z,Feature/gazebo simulator,60,0,183,61774,251757714,2019-01-29T09:45:00Z,"```suggestion
+  <license>Apache 2</license>
+```",aohsato,
+248045590,1930,yukkysaito,2019-01-28T07:55:21Z,Feature/gazebo simulator,60,0,183,61774,251759654,2019-01-29T09:49:57Z,"In general, use `/vehicle_cmd` topic for the desired speed and steering angle instead of `twist/ctrl_cmd` in Autoware.",aohsato,
+248045590,1930,yukkysaito,2019-01-28T07:55:21Z,Feature/gazebo simulator,60,0,183,61774,251762810,2019-01-29T09:57:56Z,why latched?,aohsato,
+248045590,1930,yukkysaito,2019-01-28T07:55:21Z,Feature/gazebo simulator,60,0,183,61774,251764522,2019-01-29T10:02:24Z,`/vehicle_info` namespace is used for describing vehicle parameter as rosparam in Autoware so this topic name is a little bit confused. I suggest using local namespace like `/gazebo_vehicle/pose`.,aohsato,251762810
+248045590,1930,yukkysaito,2019-01-28T07:55:21Z,Feature/gazebo simulator,60,0,183,61774,251764997,2019-01-29T10:03:39Z,"`ns_` is needed, right? ",aohsato,
+248045590,1930,yukkysaito,2019-01-28T07:55:21Z,Feature/gazebo simulator,60,0,183,61774,251765878,2019-01-29T10:06:15Z,And I want ground troth mode to use GT pose as tf. Could you realize this by additional node?,aohsato,251762810
+248045590,1930,yukkysaito,2019-01-28T07:55:21Z,Feature/gazebo simulator,60,0,183,61774,251766554,2019-01-29T10:08:10Z,"velocity and steering_angle can be merged to Twist topic. In `vel_pose_connetct`, `geometry_msgs/TwistStamped` message is needed.",aohsato,
+248045590,1930,yukkysaito,2019-01-28T07:55:21Z,Feature/gazebo simulator,60,0,183,61774,251767169,2019-01-29T10:09:55Z,Please describe the architecture around this gazebo simurator by `rqt_graph` or PPT figure?,aohsato,
+248045590,1930,yukkysaito,2019-01-28T07:55:21Z,Feature/gazebo simulator,60,0,183,61774,251768209,2019-01-29T10:12:41Z,"These subscribers can be merged to `vehicle_cmd`, then it's better users to be able to switch to use `twist` or `ctrl` in `vehicle_cmd` by rosparam.",aohsato,
+248045590,1930,yukkysaito,2019-01-28T07:55:21Z,Feature/gazebo simulator,60,0,183,61774,251768662,2019-01-29T10:13:53Z,Define this threshold as a constant variable.,aohsato,
+248045590,1930,yukkysaito,2019-01-28T07:55:21Z,Feature/gazebo simulator,60,0,183,61774,251768952,2019-01-29T10:14:38Z,What is `4.0`?,aohsato,
+248045590,1930,yukkysaito,2019-01-28T07:55:21Z,Feature/gazebo simulator,60,0,183,61774,251769529,2019-01-29T10:16:13Z,"In current Autoware version, this `base_footprint` definition is `base_link`.",aohsato,
+248045590,1930,yukkysaito,2019-01-28T07:55:21Z,Feature/gazebo simulator,60,0,183,61774,251769632,2019-01-29T10:16:28Z,indent,aohsato,
+248045590,1930,yukkysaito,2019-01-28T07:55:21Z,Feature/gazebo simulator,60,0,183,61774,251769744,2019-01-29T10:16:48Z,"```suggestion
+  <license>Apache 2</license>
+```",aohsato,
+248045590,1930,yukkysaito,2019-01-28T07:55:21Z,Feature/gazebo simulator,60,0,183,61774,251769964,2019-01-29T10:17:21Z,"```suggestion
+  <license>Apache 2</license>
+```",aohsato,
+248045590,1930,yukkysaito,2019-01-28T07:55:21Z,Feature/gazebo simulator,60,0,183,61774,251950398,2019-01-29T18:04:37Z,fde128a1ed56965f3a5ba68083ee046934fdd846,yukkysaito,251769632
+248045590,1930,yukkysaito,2019-01-28T07:55:21Z,Feature/gazebo simulator,60,0,183,61774,251951418,2019-01-29T18:07:35Z,It is a constraint that the theory does not turn more than 90 degrees,yukkysaito,251768952
+248045590,1930,yukkysaito,2019-01-28T07:55:21Z,Feature/gazebo simulator,60,0,183,61774,251953621,2019-01-29T18:13:28Z,Thank you! I followed the official instructions directly,yukkysaito,251755175
+247587949,1924,ChenxiTU,2019-01-25T07:54:54Z,fix rosbag_controller license,2,0,2,30,251289394,2019-01-28T06:00:01Z,"```suggestion
+********************************************************************
+```",kfunaoka,
+247587949,1924,ChenxiTU,2019-01-25T07:54:54Z,fix rosbag_controller license,2,0,2,30,251289776,2019-01-28T06:03:26Z,"```suggestion
+********************************************************************
+```",kfunaoka,
+247263642,1920,kfunaoka,2019-01-24T09:52:04Z,Create decision maker panel package to fix the conflict with #1791,8,0,8,124,250556040,2019-01-24T10:54:32Z,"please add this codes.
+```suggestion
+    <run_depend>libqt5-widgets</run_depend>
+
+    <export>
+        <rviz plugin=""${prefix}/plugin_description.xml""/>
+    </export>
+```",s-azumi,
+245089090,1893,hakuturu583,2019-01-16T10:11:07Z,Feature/lgsvl sim configurator,9,1,15,456,248260911,2019-01-16T12:26:14Z,"Here.
+Make sure the files and directories actually exist.",amc-nu,
+245089090,1893,hakuturu583,2019-01-16T10:11:07Z,Feature/lgsvl sim configurator,9,1,15,456,248261422,2019-01-16T12:28:00Z,Or any of the above install commands.,amc-nu,248260911
+244000018,1878,mitsudome-r,2019-01-11T11:58:19Z,Feature/nmea to mgrs,2,1,10,128,247301392,2019-01-12T03:44:21Z,"you'll need to add an IF to don't compile this on ARM architectures, this package is not available.",amc-nu,
+244000018,1878,mitsudome-r,2019-01-11T11:58:19Z,Feature/nmea to mgrs,2,1,10,128,247301737,2019-01-12T04:03:12Z,"really?
+I used geodesy in Jetson TX2 by using rosdep.",hakuturu583,247301392
+244000018,1878,mitsudome-r,2019-01-11T11:58:19Z,Feature/nmea to mgrs,2,1,10,128,247301794,2019-01-12T04:06:42Z,"Then, please have a look at the log of GitlabCi which is failing the arm build.",amc-nu,247301392
+243224290,1848,hakuturu583,2019-01-09T06:25:33Z,Feature/vehicle description,6,0,47,8609,246307457,2019-01-09T09:19:52Z,"typo?
+<mesh filename=""package://vehicle_description/mmesh/xe.dae"" scale=""1.0 1.0 1.0""/>",yukkysaito,
+243224290,1848,hakuturu583,2019-01-09T06:25:33Z,Feature/vehicle description,6,0,47,8609,246307550,2019-01-09T09:20:13Z,mmesh -> mesh,yukkysaito,246307457
+243224290,1848,hakuturu583,2019-01-09T06:25:33Z,Feature/vehicle description,6,0,47,8609,246308614,2019-01-09T09:23:40Z,pls change license,yukkysaito,
+243224290,1848,hakuturu583,2019-01-09T06:25:33Z,Feature/vehicle description,6,0,47,8609,246313519,2019-01-09T09:37:34Z,@yukkysaito fixked.,hakuturu583,246308614
+242857399,1837,amc-nu,2019-01-08T04:55:58Z,"[fix] SSD detector, cmake colcon",5,1,11,88,245953226,2019-01-08T10:52:46Z,"This can be removed and add the following in `add_dependencies()`:
+
+```
+    add_dependencies(vision_ssd_detect
+            ${autoware_msgs_generate_messages_cpp}
+            ${autoware_config_msgs_generate_messages_cpp}
+            ${catkin_EXPORTED_TARGETS}
+            )
+```
+
+The reason for not using the `find_package(catkin REQUIRED COMPONENTS ...)` idiom is that it was removed in ROS2, and given that we're now adding colcon, I thought it'd save us some time in the future in case we wanted to add ROS2.",esteve,
+242857399,1837,amc-nu,2019-01-08T04:55:58Z,"[fix] SSD detector, cmake colcon",5,1,11,88,245954775,2019-01-08T10:58:05Z,"I see. However, for some reason, it won't build on catkin unless the messages are added to the `catkin REQUIRED COMPONENTS`",amc-nu,245953226
+242857399,1837,amc-nu,2019-01-08T04:55:58Z,"[fix] SSD detector, cmake colcon",5,1,11,88,245955326,2019-01-08T11:00:01Z,"The good news is that the problematic packages are marked as `deprecated`, and will be removed with  #1664 on 1.11",amc-nu,245953226
+242857399,1837,amc-nu,2019-01-08T04:55:58Z,"[fix] SSD detector, cmake colcon",5,1,11,88,245956925,2019-01-08T11:06:09Z,In that case... awesome :-),esteve,245953226

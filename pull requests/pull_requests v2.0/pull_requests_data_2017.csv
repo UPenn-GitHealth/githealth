@@ -1,0 +1,324 @@
+pull_request_id,pull_request_number,pull_request_user_id,pull_request_created_at,pull_request_title,pull_request_commits,pull_request_checks,pull_request_files_changed,pull_request_lines_changed,comment_id,comment_created_at,comment_text,comment_author,comment_parent_id
+160212797,1008,yk-fujii,2017-12-27T08:33:42Z, integration week 2 (inheritance of # 995),36,1,33,1252,159125927,2017-12-30T17:34:15Z,@yk-fujii should we for now then leave this function in or do you still plan to re-implement it?,dejanpan,
+160212797,1008,yk-fujii,2017-12-27T08:33:42Z, integration week 2 (inheritance of # 995),36,1,33,1252,159125934,2017-12-30T17:35:21Z,@yk-fujii this must be `setFlagTime = ros::Time::now().toSec();` - correct?,dejanpan,
+160212797,1008,yk-fujii,2017-12-27T08:33:42Z, integration week 2 (inheritance of # 995),36,1,33,1252,159125943,2017-12-30T17:36:00Z,@aohsato which publishing flag?,dejanpan,
+160212797,1008,yk-fujii,2017-12-27T08:33:42Z, integration week 2 (inheritance of # 995),36,1,33,1252,159125952,2017-12-30T17:36:48Z,@amc-nu why is this hardcoded to 100?,dejanpan,
+160212797,1008,yk-fujii,2017-12-27T08:33:42Z, integration week 2 (inheritance of # 995),36,1,33,1252,159126048,2017-12-30T17:41:52Z,"@amc-nu what is ""[]"" in this line? 
+
+Also move return into a new line. ",dejanpan,
+160212797,1008,yk-fujii,2017-12-27T08:33:42Z, integration week 2 (inheritance of # 995),36,1,33,1252,159127097,2017-12-30T18:45:16Z,"@yk-fujii I did this here: https://github.com/CPFL/Autoware/pull/1008/commits/6227d56a457a49bb9d74720de75fcdc5abc11b8d
+
+Can you check if it is correct? ",dejanpan,
+160212797,1008,yk-fujii,2017-12-27T08:33:42Z, integration week 2 (inheritance of # 995),36,1,33,1252,160305971,2018-01-09T02:22:37Z,"Thanks, That's correct!",yk-fujii,159127097
+160212797,1008,yk-fujii,2017-12-27T08:33:42Z, integration week 2 (inheritance of # 995),36,1,33,1252,160307423,2018-01-09T02:36:02Z,"I want to leave.
+The decisionmaker decide whether to start after stopping in this function.
+
+However, I thinking that doing this filtering in the decisionmaker  is not a good way,
+so I'll integrate filtering part to detector in the future.",yk-fujii,159125927
+160212797,1008,yk-fujii,2017-12-27T08:33:42Z, integration week 2 (inheritance of # 995),36,1,33,1252,160308670,2018-01-09T02:48:33Z,"correct.
+I set that the obstacle can not be seen for 1 second as the start condition  because detection results may disappear momentarily.",yk-fujii,159125934
+160212797,1008,yk-fujii,2017-12-27T08:33:42Z, integration week 2 (inheritance of # 995),36,1,33,1252,160895848,2018-01-11T09:01:11Z,"Like this. 
+https://github.com/CPFL/Autoware/blob/1c49dc7846eb2776a969743f3bb0b3268ac3eab4/ros/src/computing/planning/motion/packages/waypoint_follower/nodes/pure_pursuit/pure_pursuit_core.cpp#L136
+
+But I think that flag is not needed and purepursuit should publish twist/angle/curverture every time. We can pick up one topic on actuation layer.",aohsato,159125943
+160212797,1008,yk-fujii,2017-12-27T08:33:42Z, integration week 2 (inheritance of # 995),36,1,33,1252,161146379,2018-01-12T06:09:06Z,@yk-fujii not sure if you understood me. You have `==` and I think that it should be `=`. correct? Can you fix it?,dejanpan,159125934
+160212797,1008,yk-fujii,2017-12-27T08:33:42Z, integration week 2 (inheritance of # 995),36,1,33,1252,161147961,2018-01-12T06:23:09Z,"oops, I did not look, sorry.
+I'll re-check and fix it",yk-fujii,159125934
+160212797,1008,yk-fujii,2017-12-27T08:33:42Z, integration week 2 (inheritance of # 995),36,1,33,1252,161423097,2018-01-15T02:48:12Z,@yk-fujii so we fix or not? I'd like to merge....,dejanpan,159125934
+160212797,1008,yk-fujii,2017-12-27T08:33:42Z, integration week 2 (inheritance of # 995),36,1,33,1252,161432284,2018-01-15T05:13:44Z,"@dejanpan 
+We should fix.
+I had fixed this and pushed.",yk-fujii,159125934
+160154400,1007,hatem-darweesh,2017-12-26T18:09:37Z,"- Add modularized OpenPlanner to autoware , 2nd PR",3,0,112,19690,158735430,2017-12-26T19:47:50Z,"Should this be ""DeceisionMaker.h""?",Capri2014,
+160154400,1007,hatem-darweesh,2017-12-26T18:09:37Z,"- Add modularized OpenPlanner to autoware , 2nd PR",3,0,112,19690,158740404,2017-12-26T21:12:34Z,Same here,Capri2014,
+160154400,1007,hatem-darweesh,2017-12-26T18:09:37Z,"- Add modularized OpenPlanner to autoware , 2nd PR",3,0,112,19690,158742601,2017-12-26T21:50:03Z,"If I understand it right, if ""enableSwerving"" is set, ""enableFollowing"" would be set and then in ""StateMachine"" the state would be updated to ""Following"" or ""Obstacle Avoidance"" depending on whether obstacle is fully blocking or not. Would it be more reasonable to incorporate this part of logic into StateMachine instead of doing it in different places ? Like  ""BehaviorGen"", ""TrajectoryGen"", ""MotionPrediction"", ""TrajectoryEval"" separately?",Capri2014,
+160154400,1007,hatem-darweesh,2017-12-26T18:09:37Z,"- Add modularized OpenPlanner to autoware , 2nd PR",3,0,112,19690,159127364,2017-12-30T19:00:55Z,does this DecisionMaker have anything to do with https://github.com/CPFL/Autoware/tree/develop/ros/src/computing/planning/decision/packages/decision_maker?,dejanpan,
+160154400,1007,hatem-darweesh,2017-12-26T18:09:37Z,"- Add modularized OpenPlanner to autoware , 2nd PR",3,0,112,19690,159127383,2017-12-30T19:01:49Z,this should have an actual name of author,dejanpan,
+160154400,1007,hatem-darweesh,2017-12-26T18:09:37Z,"- Add modularized OpenPlanner to autoware , 2nd PR",3,0,112,19690,159127416,2017-12-30T19:03:27Z,"if you use this syntax:
+```
+/// \file
+/// \brief Line about this file
+```
+
+then doxygen will automatically extract file name.",dejanpan,
+160154400,1007,hatem-darweesh,2017-12-26T18:09:37Z,"- Add modularized OpenPlanner to autoware , 2nd PR",3,0,112,19690,159127483,2017-12-30T19:06:39Z,"Comment functions. I highly suggest this syntax:
+```
+/// \brief one liner
+/// \param[in] obj_list ...
+/// \param[out] currPose ...
+/// \return what should function return
+```",dejanpan,
+160154400,1007,hatem-darweesh,2017-12-26T18:09:37Z,"- Add modularized OpenPlanner to autoware , 2nd PR",3,0,112,19690,159127568,2017-12-30T19:07:01Z,obviously all functions in the PR should be commented,dejanpan,159127483
+160154400,1007,hatem-darweesh,2017-12-26T18:09:37Z,"- Add modularized OpenPlanner to autoware , 2nd PR",3,0,112,19690,159127642,2017-12-30T19:10:17Z,how do you decide between passing args as pointers or as references?,dejanpan,
+160154400,1007,hatem-darweesh,2017-12-26T18:09:37Z,"- Add modularized OpenPlanner to autoware , 2nd PR",3,0,112,19690,159127720,2017-12-30T19:14:28Z,to make the reviews easier it would be actually great if you guys would use 120 char line width,dejanpan,
+160154400,1007,hatem-darweesh,2017-12-26T18:09:37Z,"- Add modularized OpenPlanner to autoware , 2nd PR",3,0,112,19690,159127750,2017-12-30T19:16:27Z,are these params also settable through `runtime_manager` or any other config possibility?,dejanpan,
+160154400,1007,hatem-darweesh,2017-12-26T18:09:37Z,"- Add modularized OpenPlanner to autoware , 2nd PR",3,0,112,19690,159127782,2017-12-30T19:18:19Z,parametrize,dejanpan,
+160154400,1007,hatem-darweesh,2017-12-26T18:09:37Z,"- Add modularized OpenPlanner to autoware , 2nd PR",3,0,112,19690,159127793,2017-12-30T19:19:09Z,it is really a good practice to use {} after every control structure,dejanpan,
+160154400,1007,hatem-darweesh,2017-12-26T18:09:37Z,"- Add modularized OpenPlanner to autoware , 2nd PR",3,0,112,19690,159127807,2017-12-30T19:20:21Z,I wonder what is your style guide. In above 2 lines you use 2 styles,dejanpan,
+160154400,1007,hatem-darweesh,2017-12-26T18:09:37Z,"- Add modularized OpenPlanner to autoware , 2nd PR",3,0,112,19690,159127855,2017-12-30T19:24:26Z,"just something to be aware of. `push_back`, `pop`, ... allocate and deallocate memory which leads to memory fragmentation. It is better to use reserve() to reserve and re-use a contiguous memory.",dejanpan,
+160154400,1007,hatem-darweesh,2017-12-26T18:09:37Z,"- Add modularized OpenPlanner to autoware , 2nd PR",3,0,112,19690,159127868,2017-12-30T19:25:06Z,possible division by 0,dejanpan,
+160154400,1007,hatem-darweesh,2017-12-26T18:09:37Z,"- Add modularized OpenPlanner to autoware , 2nd PR",3,0,112,19690,159128243,2017-12-30T19:43:03Z,you should return `nullptr` if you do not end up in above if,dejanpan,
+160154400,1007,hatem-darweesh,2017-12-26T18:09:37Z,"- Add modularized OpenPlanner to autoware , 2nd PR",3,0,112,19690,159128263,2017-12-30T19:44:21Z,remove dead code,dejanpan,
+160154400,1007,hatem-darweesh,2017-12-26T18:09:37Z,"- Add modularized OpenPlanner to autoware , 2nd PR",3,0,112,19690,159128331,2017-12-30T19:49:31Z,in general you should check if the pointer is valid before you try to use it,dejanpan,
+160154400,1007,hatem-darweesh,2017-12-26T18:09:37Z,"- Add modularized OpenPlanner to autoware , 2nd PR",3,0,112,19690,159128359,2017-12-30T19:52:09Z,why this alignment?,dejanpan,
+160154400,1007,hatem-darweesh,2017-12-26T18:09:37Z,"- Add modularized OpenPlanner to autoware , 2nd PR",3,0,112,19690,159128446,2017-12-30T19:58:06Z,"Did you consider using smart_ptr too?
+
+The rule would be this - if you know that an entity must take a certain kind of ownership of the object, always use smart pointers - the one that gives you the kind of ownership you need. If there is no notion of ownership, never use smart pointers.",dejanpan,
+160154400,1007,hatem-darweesh,2017-12-26T18:09:37Z,"- Add modularized OpenPlanner to autoware , 2nd PR",3,0,112,19690,159128457,2017-12-30T19:58:38Z,parametrize,dejanpan,
+160154400,1007,hatem-darweesh,2017-12-26T18:09:37Z,"- Add modularized OpenPlanner to autoware , 2nd PR",3,0,112,19690,159128482,2017-12-30T19:59:43Z,div by 0,dejanpan,
+160154400,1007,hatem-darweesh,2017-12-26T18:09:37Z,"- Add modularized OpenPlanner to autoware , 2nd PR",3,0,112,19690,159128545,2017-12-30T20:05:06Z,parametrize,dejanpan,
+160154400,1007,hatem-darweesh,2017-12-26T18:09:37Z,"- Add modularized OpenPlanner to autoware , 2nd PR",3,0,112,19690,159128557,2017-12-30T20:06:00Z,parametrize,dejanpan,
+160154400,1007,hatem-darweesh,2017-12-26T18:09:37Z,"- Add modularized OpenPlanner to autoware , 2nd PR",3,0,112,19690,159128563,2017-12-30T20:06:18Z,remove dead code,dejanpan,
+160154400,1007,hatem-darweesh,2017-12-26T18:09:37Z,"- Add modularized OpenPlanner to autoware , 2nd PR",3,0,112,19690,159128607,2017-12-30T20:09:10Z,parametrize,dejanpan,
+160154400,1007,hatem-darweesh,2017-12-26T18:09:37Z,"- Add modularized OpenPlanner to autoware , 2nd PR",3,0,112,19690,159128646,2017-12-30T20:12:37Z,DBL_MAX?,dejanpan,
+160154400,1007,hatem-darweesh,2017-12-26T18:09:37Z,"- Add modularized OpenPlanner to autoware , 2nd PR",3,0,112,19690,159128759,2017-12-30T20:20:14Z,param for 0.1,dejanpan,
+160154400,1007,hatem-darweesh,2017-12-26T18:09:37Z,"- Add modularized OpenPlanner to autoware , 2nd PR",3,0,112,19690,159128781,2017-12-30T20:21:45Z,div by 0,dejanpan,
+160032890,1002,TomohitoAndo,2017-12-25T07:37:52Z,Feature/occupancygrid filter,15,0,29,3156,161649779,2018-01-16T02:34:46Z,this should be in {},yk-fujii,
+159823413,998,YamatoAndo,2017-12-22T08:40:43Z,[Bugfix]  fix previous_gnss_pose does not set when first initial pose,2,0,1,90,158641338,2017-12-25T12:21:45Z,"Why previous_gnss_pose = current_gnss_pose here? offset_x/y/z will be 0 at line 558, 559, 560.",kitsukawa,
+159823413,998,YamatoAndo,2017-12-22T08:40:43Z,[Bugfix]  fix previous_gnss_pose does not set when first initial pose,2,0,1,90,158919759,2017-12-28T09:42:59Z,"@kitsukawa 
+of course, offset_x/y/z is 0 at first step. 
+But previous_gnss_pose is static variable. so next step, line 538 will be ignored.",YamatoAndo,158641338
+159793662,995,dejanpan,2017-12-22T03:21:41Z,integration week 2,24,0,29,877,158430043,2017-12-22T05:07:07Z,This is a sketchy way to check for division by zero. I would define a minimum linear x instead,christopherho-ApexAI,
+159793662,995,dejanpan,2017-12-22T03:21:41Z,integration week 2,24,0,29,877,158431505,2017-12-22T05:30:54Z,"Please put curly braces around all if statements. While this is technically ok to do, it's terrible coding practice and makes for unsustainable code.",christopherho-ApexAI,
+159793662,995,dejanpan,2017-12-22T03:21:41Z,integration week 2,24,0,29,877,158640499,2017-12-25T12:01:45Z,"@yk-fujii do you agree, will you fix?",dejanpan,158430043
+159793662,995,dejanpan,2017-12-22T03:21:41Z,integration week 2,24,0,29,877,158640677,2017-12-25T12:06:27Z,@amc-nu this is probably your code - what does it do?,dejanpan,
+159793662,995,dejanpan,2017-12-22T03:21:41Z,integration week 2,24,0,29,877,158640697,2017-12-25T12:06:46Z,"@amc-nu this is ugly, put } into new line",dejanpan,
+159793662,995,dejanpan,2017-12-22T03:21:41Z,integration week 2,24,0,29,877,158640724,2017-12-25T12:07:31Z,why is this hardcoded to 100?,dejanpan,
+159793662,995,dejanpan,2017-12-22T03:21:41Z,integration week 2,24,0,29,877,158669874,2017-12-26T05:54:15Z,"yep, I agree.
+I had fixed  this. Please check it.
+@christopherho-ApexAI ",yk-fujii,158430043
+159793662,995,dejanpan,2017-12-22T03:21:41Z,integration week 2,24,0,29,877,158723466,2017-12-26T17:13:32Z,remove commented out code,christopherho-ApexAI,
+159793662,995,dejanpan,2017-12-22T03:21:41Z,integration week 2,24,0,29,877,158916818,2017-12-28T09:16:12Z,I fixed here to check external input from decision maker.,aohsato,158431505
+156888503,954,kitsukawa,2017-12-07T02:15:04Z,Fix/tf mapping,16,0,12,232,156006678,2017-12-11T08:29:16Z,what does this change do?,dejanpan,
+156888503,954,kitsukawa,2017-12-07T02:15:04Z,Fix/tf mapping,16,0,12,232,156240211,2017-12-12T00:19:49Z,"Sorry, temporary parameter change was included unintentionally. This should be tuned in launch file. I will fix this later.",kitsukawa,156006678
+156888503,954,kitsukawa,2017-12-07T02:15:04Z,Fix/tf mapping,16,0,12,232,158641720,2017-12-25T12:31:25Z,@kitsukawa was this ever changed?,dejanpan,156006678
+156888503,954,kitsukawa,2017-12-07T02:15:04Z,Fix/tf mapping,16,0,12,232,158643876,2017-12-25T13:23:55Z,@dejanpan Fixed in #1005 .,kitsukawa,156006678
+155548994,936,yk-fujii,2017-11-30T08:50:09Z,Feature/decision: Enhancement decision maker node,66,1,64,3950,156011163,2017-12-11T08:52:29Z,division by 0 when no acceleration,dejanpan,
+155548994,936,yk-fujii,2017-11-30T08:50:09Z,Feature/decision: Enhancement decision maker node,66,1,64,3950,156011487,2017-12-11T08:54:00Z,this should be in {},dejanpan,
+155548994,936,yk-fujii,2017-11-30T08:50:09Z,Feature/decision: Enhancement decision maker node,66,1,64,3950,156011828,2017-12-11T08:55:41Z,here and everywhere should be {},dejanpan,
+155548994,936,yk-fujii,2017-11-30T08:50:09Z,Feature/decision: Enhancement decision maker node,66,1,64,3950,156012784,2017-12-11T09:00:10Z,functions above should really have some documentation,dejanpan,
+155548994,936,yk-fujii,2017-11-30T08:50:09Z,Feature/decision: Enhancement decision maker node,66,1,64,3950,156012956,2017-12-11T09:00:59Z,why are these param not loaded from e.g. param yaml file?,dejanpan,
+155548994,936,yk-fujii,2017-11-30T08:50:09Z,Feature/decision: Enhancement decision maker node,66,1,64,3950,156013455,2017-12-11T09:03:27Z,what us 0.35? why is it hard coded?,dejanpan,
+155548994,936,yk-fujii,2017-11-30T08:50:09Z,Feature/decision: Enhancement decision maker node,66,1,64,3950,156013742,2017-12-11T09:04:45Z,why are x and y swapped here?,dejanpan,
+155548994,936,yk-fujii,2017-11-30T08:50:09Z,Feature/decision: Enhancement decision maker node,66,1,64,3950,156014324,2017-12-11T09:07:10Z,i don't see where do you delete these 2 points?,dejanpan,
+154957264,932,christopherho-ApexAI,2017-11-28T01:18:49Z,Feature #931: Create Unit Testing Example,1,0,7,1031,153471247,2017-11-28T11:59:14Z,"@christopherho-ApexAI why is this needed? (moving it to a ""library"")",amc-nu,
+154957264,932,christopherho-ApexAI,2017-11-28T01:18:49Z,Feature #931: Create Unit Testing Example,1,0,7,1031,153473164,2017-11-28T12:08:42Z,what does TOL stand for?,amc-nu,
+154957264,932,christopherho-ApexAI,2017-11-28T01:18:49Z,Feature #931: Create Unit Testing Example,1,0,7,1031,153473988,2017-11-28T12:13:20Z,Each test goes into a different header file?,amc-nu,
+154957264,932,christopherho-ApexAI,2017-11-28T01:18:49Z,Feature #931: Create Unit Testing Example,1,0,7,1031,153474248,2017-11-28T12:14:43Z,how could I test this with other nodes?,amc-nu,
+154957264,932,christopherho-ApexAI,2017-11-28T01:18:49Z,Feature #931: Create Unit Testing Example,1,0,7,1031,154268689,2017-12-01T05:03:38Z,"This is because the unit test itself is an executable. To my knowledge, there's no way for the unit test executable to reach code from the node executable. As a library, both the unit test executable and the node executable can use the same code.",cho3,153471247
+154957264,932,christopherho-ApexAI,2017-11-28T01:18:49Z,Feature #931: Create Unit Testing Example,1,0,7,1031,154270278,2017-12-01T05:24:27Z,"Ideally you would want to break up the code in such a way that it makes it easy to test and reason about. For instance, you could have an inner class in the node that only takes in points or pointclouds as inputs, and the ros node itself only calls public methods in the class.
+
+Failing that, I added a friend class to give the unit tests access to the private methods I want to test. So you would need to add friend class as above for each unit test that accesses private methods/members.",christopherho-ApexAI,153473988
+154957264,932,christopherho-ApexAI,2017-11-28T01:18:49Z,Feature #931: Create Unit Testing Example,1,0,7,1031,154270373,2017-12-01T05:25:45Z,"Tolerance. I use this to check if floating point numbers are close enough (I use `ASSERT_LT(fabsf(a-b), TOL)` below)
+
+Gtest technically. has `EXPECT_FLOAT_EQ`, but I've used this for numbers that should be more or less correct to account for a bunch of math operations in between. ",christopherho-ApexAI,153473164
+154957264,932,christopherho-ApexAI,2017-11-28T01:18:49Z,Feature #931: Create Unit Testing Example,1,0,7,1031,154270517,2017-12-01T05:27:36Z,"You would add more unit tests in the header file (`test/include/test_raygroundfilter.h`, or another appropriately named header file), and then in your cmake, you would link the libraries that have the functionality you're testing to this gtest instance. 
+
+For other tests in other packages, you'd basically copy paste the main function here, and do something similar as I do in the cmakelists file.",christopherho-ApexAI,153474248
+153271281,908,amc-nu,2017-11-17T11:06:24Z,Initial release of image processor,1,1,9,521,151851537,2017-11-19T00:38:50Z,"@amc-nu  you do not need to do this, this will be done by a release script: https://github.com/CPFL/Autoware/issues/766#issuecomment-325096495 (step 3., `catkin_prepare_release`).",dejanpan,
+153271281,908,amc-nu,2017-11-17T11:06:24Z,Initial release of image processor,1,1,9,521,151851758,2017-11-19T00:55:32Z,Good to know! Thanks!,amc-nu,151851537
+151866762,888,YamatoAndo,2017-11-10T09:56:44Z,"refactor CMakeLists.txt. use automoc, autouic and autorcc",1,1,21,372,150372268,2017-11-11T02:48:08Z,I wonder why you removed this part? This file for instance is still in the repo: https://github.com/CPFL/Autoware/blob/develop/ros/src/computing/perception/detection/packages/lidar_tracker/nodes/vscan_lidar_track/rbsspfvehicletracker.h.,dejanpan,
+151866762,888,YamatoAndo,2017-11-10T09:56:44Z,"refactor CMakeLists.txt. use automoc, autouic and autorcc",1,1,21,372,150372403,2017-11-11T02:53:47Z,"Never mind, I just saw that you actually included them below.",dejanpan,150372268
+151314930,876,yn-mrse,2017-11-08T07:57:15Z,Add velocity visualizer with 3D graph,4,1,3,243,149600988,2017-11-08T08:29:01Z,"plz change ""visualize"" to ""visualizer"", in whole of your code.",aohsato,
+151314930,876,yn-mrse,2017-11-08T07:57:15Z,Add velocity visualizer with 3D graph,4,1,3,243,149601188,2017-11-08T08:30:04Z,"sort by r, g, b, a",aohsato,
+151314930,876,yn-mrse,2017-11-08T07:57:15Z,Add velocity visualizer with 3D graph,4,1,3,243,149602027,2017-11-08T08:34:30Z,why do yo use DBL_MIN?,aohsato,
+151314930,876,yn-mrse,2017-11-08T07:57:15Z,Add velocity visualizer with 3D graph,4,1,3,243,149602516,2017-11-08T08:36:44Z,Don't you need to use current time for stamp by ros::Time::now()?,aohsato,
+151314930,876,yn-mrse,2017-11-08T07:57:15Z,Add velocity visualizer with 3D graph,4,1,3,243,149609723,2017-11-08T09:09:22Z,sort here too,aohsato,
+151314930,876,yn-mrse,2017-11-08T07:57:15Z,Add velocity visualizer with 3D graph,4,1,3,243,149620929,2017-11-08T09:55:14Z,"Thank you for your review.
+When the the cylinder height is 0 or less, a warning occurs in RViz.
+For this reason, The value was set with a minimum value that does not occur a warning.",yn-mrse,149602027
+151314930,876,yn-mrse,2017-11-08T07:57:15Z,Add velocity visualizer with 3D graph,4,1,3,243,149883344,2017-11-09T07:32:56Z,"Ah, I see. But this is like just hacking, so you should not push that Marker object to MarkerArray. Plz modify.",aohsato,149602027
+151314930,876,yn-mrse,2017-11-08T07:57:15Z,Add velocity visualizer with 3D graph,4,1,3,243,149883458,2017-11-09T07:33:51Z,"There are many other places that are already doing the same processing elsewhere, so fix it when refactoring next time.",yn-mrse,149602516
+151314930,876,yn-mrse,2017-11-08T07:57:15Z,Add velocity visualizer with 3D graph,4,1,3,243,149883590,2017-11-09T07:34:49Z,Good.,aohsato,149602516
+151314930,876,yn-mrse,2017-11-08T07:57:15Z,Add velocity visualizer with 3D graph,4,1,3,243,149885765,2017-11-09T07:50:58Z,"There are some other places that are already doing the same processing elsewhere, so fixed all places.",yn-mrse,149601188
+151314930,876,yn-mrse,2017-11-08T07:57:15Z,Add velocity visualizer with 3D graph,4,1,3,243,149941102,2017-11-09T11:52:11Z,Fixed.,yn-mrse,149600988
+151314930,876,yn-mrse,2017-11-08T07:57:15Z,Add velocity visualizer with 3D graph,4,1,3,243,149941277,2017-11-09T11:52:40Z,Fixed.,yn-mrse,149609723
+151314930,876,yn-mrse,2017-11-08T07:57:15Z,Add velocity visualizer with 3D graph,4,1,3,243,150141823,2017-11-10T02:30:32Z,Thx,aohsato,149601188
+151314930,876,yn-mrse,2017-11-08T07:57:15Z,Add velocity visualizer with 3D graph,4,1,3,243,150152713,2017-11-10T04:37:24Z,"It is necessary to update every frame. If you do not update the old name space, it will  remain on RViz. Therefore, another method must be considered.
+In order to make the cylinder height  be 0 or more, I propose a method of adding a minute amount which does not affect the display all the time.
+",yn-mrse,149602027
+147265947,844,messi49,2017-10-18T10:43:14Z,Feature/remote monitor,38,1,154,13517,145380118,2017-10-18T10:57:21Z,Is this ppa needed ? plz check.,aohsato,
+147265947,844,messi49,2017-10-18T10:43:14Z,Feature/remote monitor,38,1,154,13517,145384942,2017-10-18T11:23:47Z,"plz add below.
+```
+$ cd /ui/web/remote_monitor
+```",aohsato,
+147265947,844,messi49,2017-10-18T10:43:14Z,Feature/remote monitor,38,1,154,13517,145385196,2017-10-18T11:25:12Z,remove this ?,aohsato,
+147265947,844,messi49,2017-10-18T10:43:14Z,Feature/remote monitor,38,1,154,13517,145385590,2017-10-18T11:27:16Z,modify to write configurations to *.yaml.,aohsato,
+147265947,844,messi49,2017-10-18T10:43:14Z,Feature/remote monitor,38,1,154,13517,145649836,2017-10-19T09:46:51Z,"Note this watching thread is also written by ros::Timer, but no problem in this case.",aohsato,
+147265947,844,messi49,2017-10-18T10:43:14Z,Feature/remote monitor,38,1,154,13517,145650741,2017-10-19T09:50:44Z,remove extra tab,aohsato,
+147265947,844,messi49,2017-10-18T10:43:14Z,Feature/remote monitor,38,1,154,13517,145652465,2017-10-19T09:57:48Z,"autoware_msgs has each specific message definitions, accel_cmd.msg, brake_cmd ... and so on. Please replace.",aohsato,
+147265947,844,messi49,2017-10-18T10:43:14Z,Feature/remote monitor,38,1,154,13517,145656882,2017-10-19T10:14:22Z,"I suggest 'vehicle_cmd', it means finally decided command.",aohsato,
+147265947,844,messi49,2017-10-18T10:43:14Z,Feature/remote monitor,38,1,154,13517,145657312,2017-10-19T10:15:36Z,Steer info is used twice. Is 'steer' value [rad/s] or [rad] ?,aohsato,
+147265947,844,messi49,2017-10-18T10:43:14Z,Feature/remote monitor,38,1,154,13517,145657810,2017-10-19T10:17:00Z,"Please use roscpp/logging.
+http://wiki.ros.org/roscpp/Overview/Logging",aohsato,
+147265947,844,messi49,2017-10-18T10:43:14Z,Feature/remote monitor,38,1,154,13517,145658831,2017-10-19T10:20:02Z,Use autoware_msgs like above comment and use geometry_msgs::Twist for linear_x and angular_z.,aohsato,
+147265947,844,messi49,2017-10-18T10:43:14Z,Feature/remote monitor,38,1,154,13517,145659619,2017-10-19T10:22:45Z,"How do you use linear_x and linear_velocity ? If they have different meanings, please change to clear names.",aohsato,145658831
+147224725,842,aohsato,2017-10-18T07:15:37Z,Feature/fusion_filter - fusion multiple lidar,11,1,7,185,146184513,2017-10-23T07:39:14Z,Please add the underscore `tfl` -> `tfl_`. I also recommend to use more significant names. (i.e. `transform_listener_`),amc-nu,
+147224725,842,aohsato,2017-10-18T07:15:37Z,Feature/fusion_filter - fusion multiple lidar,11,1,7,185,146184707,2017-10-23T07:40:14Z,"I recommend to use more significant names. (i.e. `node_handle_`, `private_handle_`).",amc-nu,
+147224725,842,aohsato,2017-10-18T07:15:37Z,Feature/fusion_filter - fusion multiple lidar,11,1,7,185,146184996,2017-10-23T07:41:38Z,What about `output_frame` or `output_cloud_frame`? I think it is easier to understand what this param actually does.,amc-nu,
+147224725,842,aohsato,2017-10-18T07:15:37Z,Feature/fusion_filter - fusion multiple lidar,11,1,7,185,146185535,2017-10-23T07:44:30Z,"`ApproximateTime` will lead to a better frame rate, most of the scans are being dropped.
+http://wiki.ros.org/message_filters#ApproximateTime_Policy",amc-nu,
+144582586,830,TomohitoAndo,2017-10-04T04:56:42Z,Add pacmod interface,6,0,37,855,142590389,2017-10-04T06:35:44Z,"This commit contains code that depends on ""module_comm_msgs"".
+But ""module_comm_msgs"" does not exist.",yk-fujii,
+144582586,830,TomohitoAndo,2017-10-04T04:56:42Z,Add pacmod interface,6,0,37,855,142590483,2017-10-04T06:36:33Z,2017,yk-fujii,
+144582586,830,TomohitoAndo,2017-10-04T04:56:42Z,Add pacmod interface,6,0,37,855,142590561,2017-10-04T06:37:11Z,2017,yk-fujii,
+144582586,830,TomohitoAndo,2017-10-04T04:56:42Z,Add pacmod interface,6,0,37,855,142590572,2017-10-04T06:37:17Z,2017,yk-fujii,
+144357220,828,aohsato,2017-10-03T07:53:06Z,Add ground_filter config for runtime_manager,1,1,6,153,142337495,2017-10-03T08:17:07Z,Please add some description about these params,amc-nu,
+144357220,828,aohsato,2017-10-03T07:53:06Z,Add ground_filter config for runtime_manager,1,1,6,153,142352144,2017-10-03T09:24:04Z,"Thx for review. Actually so, few developers write that description field ...",aohsato,142337495
+142050792,804,hiro-ya-iv,2017-09-20T09:28:33Z,Feature/web ui,7,0,68,74303,139967634,2017-09-20T13:25:35Z,Please write your name and e-mail,yk-fujii,
+142050792,804,hiro-ya-iv,2017-09-20T09:28:33Z,Feature/web ui,7,0,68,74303,139967672,2017-09-20T13:25:43Z,BSD,yk-fujii,
+137195366,784,amc-nu,2017-08-23T11:36:31Z,Feature/enet image segmenter,12,1,7,486,135387493,2017-08-26T11:40:50Z,"Since caffe-enet is contained in submodule, recursive option is necessary.
+
+`git clone --recursive https://github.com/TimoSaemann/ENet.git`",yk-fujii,
+137195366,784,amc-nu,2017-08-23T11:36:31Z,Feature/enet image segmenter,12,1,7,486,135387501,2017-08-26T11:41:36Z,Please add authors' instruction link,yk-fujii,
+137195366,784,amc-nu,2017-08-23T11:36:31Z,Feature/enet image segmenter,12,1,7,486,135388922,2017-08-26T13:26:37Z,@yk-fujii Done,amc-nu,135387493
+137195366,784,amc-nu,2017-08-23T11:36:31Z,Feature/enet image segmenter,12,1,7,486,135388925,2017-08-26T13:26:46Z,Done,amc-nu,135387501
+137195366,784,amc-nu,2017-08-23T11:36:31Z,Feature/enet image segmenter,12,1,7,486,135452113,2017-08-28T06:50:33Z,"The problem with this in ROS is that you would also need to have these dependencies in package.xml file to correctly resolve dependencies when releasing this package. See: http://wiki.ros.org/catkin/package.xml:
+""
+Your system package dependencies are declared in package.xml. If they are missing or incorrect, you may be able to build from source and run tests on your own machine, but your package will not work correctly when released to the ROS community.
+""
+
+In other words, Autoware should really maintain 2 branches: jade and kinetic.",dejanpan,
+137195366,784,amc-nu,2017-08-23T11:36:31Z,Feature/enet image segmenter,12,1,7,486,135452709,2017-08-28T06:54:45Z,"you are missing:
+```
+cv_bridge
+image_transport
+roscpp
+```",dejanpan,
+137195366,784,amc-nu,2017-08-23T11:36:31Z,Feature/enet image segmenter,12,1,7,486,135452969,2017-08-28T06:56:36Z,"you are never using:
+```
+std_msgs
+autoware_msgs
+```
+So, remove?",dejanpan,
+137195366,784,amc-nu,2017-08-23T11:36:31Z,Feature/enet image segmenter,12,1,7,486,135453618,2017-08-28T07:01:36Z,see google style guide for order of includes. cafffe and opencv should go after system libs.,dejanpan,
+137195366,784,amc-nu,2017-08-23T11:36:31Z,Feature/enet image segmenter,12,1,7,486,135453788,2017-08-28T07:02:58Z,"do not use, see https://google.github.io/styleguide/cppguide.html#Namespaces",dejanpan,
+137195366,784,amc-nu,2017-08-23T11:36:31Z,Feature/enet image segmenter,12,1,7,486,135453976,2017-08-28T07:04:18Z,use {} also around one line control structures,dejanpan,
+137195366,784,amc-nu,2017-08-23T11:36:31Z,Feature/enet image segmenter,12,1,7,486,135457810,2017-08-28T07:29:29Z,"I'm planning to use them in a future release. But, I agree, I'm not using them, I'll remove them.",amc-nu,135452969
+136680551,780,yk-fujii,2017-08-21T04:56:13Z,Feature/multiple crosswalk ,3,1,5,241,134646109,2017-08-23T02:41:28Z,add arg 'enable_multiple...' to launch file,aohsato,
+133402966,754,sujiwo,2017-08-01T07:13:17Z,Visual Place Recognition,2,0,22,887,131009211,2017-08-02T22:05:04Z,this is not a very elegant solution to edit stuff in /opt/ros/indigo/lib/python2.7. Do you mean a SIGINT as a result of Ctrl+C or where does SIGINT come from?,dejanpan,
+133402966,754,sujiwo,2017-08-01T07:13:17Z,Visual Place Recognition,2,0,22,887,131009624,2017-08-02T22:07:13Z,Why not a bool?,dejanpan,
+133402966,754,sujiwo,2017-08-01T07:13:17Z,Visual Place Recognition,2,0,22,887,131009697,2017-08-02T22:07:39Z,"dead code, should we remove?",dejanpan,
+133402966,754,sujiwo,2017-08-01T07:13:17Z,Visual Place Recognition,2,0,22,887,131012109,2017-08-02T22:21:07Z,curly bracket into new line?,dejanpan,
+133402966,754,sujiwo,2017-08-01T07:13:17Z,Visual Place Recognition,2,0,22,887,131012170,2017-08-02T22:21:29Z,curly bracket after else,dejanpan,
+133402966,754,sujiwo,2017-08-01T07:13:17Z,Visual Place Recognition,2,0,22,887,131012577,2017-08-02T22:23:59Z,ROS Style guide forbids this: https://google.github.io/styleguide/cppguide.html#Namespaces,dejanpan,
+133402966,754,sujiwo,2017-08-01T07:13:17Z,Visual Place Recognition,2,0,22,887,131012691,2017-08-02T22:24:42Z,"""return 0"" is better here no?",dejanpan,
+133402966,754,sujiwo,2017-08-01T07:13:17Z,Visual Place Recognition,2,0,22,887,131012765,2017-08-02T22:25:08Z,5 could be made a command line arg,dejanpan,
+133402966,754,sujiwo,2017-08-01T07:13:17Z,Visual Place Recognition,2,0,22,887,131014281,2017-08-02T22:33:49Z,"Unix shortcuts are discouraged: https://google.github.io/styleguide/cppguide.html#Names_and_Order_of_Includes.
+You can path to common.h in https://github.com/CPFL/Autoware/blob/a23a6f25f403dd953c000fb463acf8c6fcedeffb/ros/src/computing/perception/localization/packages/orb_localizer/CMakeLists.txt#L74.
+",dejanpan,
+133402966,754,sujiwo,2017-08-01T07:13:17Z,Visual Place Recognition,2,0,22,887,131014307,2017-08-02T22:33:58Z,discouraged,dejanpan,
+133402966,754,sujiwo,2017-08-01T07:13:17Z,Visual Place Recognition,2,0,22,887,131014583,2017-08-02T22:35:41Z,"shouldn't it be ""ORB_SLAM_VOCABULARY""?",dejanpan,
+133402966,754,sujiwo,2017-08-01T07:13:17Z,Visual Place Recognition,2,0,22,887,131014733,2017-08-02T22:36:37Z,"this is ugly, put in launch file",dejanpan,
+133402966,754,sujiwo,2017-08-01T07:13:17Z,Visual Place Recognition,2,0,22,887,131015726,2017-08-02T22:43:00Z,function arguments could be documented,dejanpan,
+133402966,754,sujiwo,2017-08-01T07:13:17Z,Visual Place Recognition,2,0,22,887,131015808,2017-08-02T22:43:30Z,I never saw that you delete any of the pointers,dejanpan,
+133402966,754,sujiwo,2017-08-01T07:13:17Z,Visual Place Recognition,2,0,22,887,131016279,2017-08-02T22:46:40Z,this is a bit risky since you throw lots of exceptions in loadFromDisk but do not handle them,dejanpan,
+133402966,754,sujiwo,2017-08-01T07:13:17Z,Visual Place Recognition,2,0,22,887,131016542,2017-08-02T22:48:28Z,could 0.75 be a parameter?,dejanpan,
+133402966,754,sujiwo,2017-08-01T07:13:17Z,Visual Place Recognition,2,0,22,887,131016662,2017-08-02T22:49:11Z,where did you get these magic numbers from?,dejanpan,
+133402966,754,sujiwo,2017-08-01T07:13:17Z,Visual Place Recognition,2,0,22,887,131016708,2017-08-02T22:49:33Z,{,dejanpan,
+133402966,754,sujiwo,2017-08-01T07:13:17Z,Visual Place Recognition,2,0,22,887,131016976,2017-08-02T22:51:07Z,everywhere  with single line ifelse I would put {} ,dejanpan,
+133402966,754,sujiwo,2017-08-01T07:13:17Z,Visual Place Recognition,2,0,22,887,131017055,2017-08-02T22:51:42Z,"put {} in ""for"" and ""if""",dejanpan,
+133402966,754,sujiwo,2017-08-01T07:13:17Z,Visual Place Recognition,2,0,22,887,131017120,2017-08-02T22:52:10Z,why 50? could you make it a parameter?,dejanpan,
+133402966,754,sujiwo,2017-08-01T07:13:17Z,Visual Place Recognition,2,0,22,887,131017698,2017-08-02T22:55:38Z,{},dejanpan,
+133402966,754,sujiwo,2017-08-01T07:13:17Z,Visual Place Recognition,2,0,22,887,131018316,2017-08-02T22:59:34Z,I would check if imageDir exists,dejanpan,
+133402966,754,sujiwo,2017-08-01T07:13:17Z,Visual Place Recognition,2,0,22,887,140414527,2017-09-22T05:28:14Z,"At this time I do not have good solution for this, because saving large ORB map eats too much time.",sujiwo,131009211
+132943353,749,aohsato,2017-07-28T10:49:19Z,Add 'use_vmap' mode in obj_fusion,6,1,3,518,130795464,2017-08-02T06:31:59Z,"technically this is not now but latest_available, see http://wiki.ros.org/tf/Tutorials/tf%20and%20Time%20%28C%2B%2B%29#Wait_for_transforms.",dejanpan,
+132943353,749,aohsato,2017-07-28T10:49:19Z,Add 'use_vmap' mode in obj_fusion,6,1,3,518,130795868,2017-08-02T06:35:34Z,"I think that Autoware follows ROS cpp style guide. In there braces go into a new line: http://wiki.ros.org/CppStyleGuide#Formatting.
+
+@yk-fujii is that correct?",dejanpan,
+132943353,749,aohsato,2017-07-28T10:49:19Z,Add 'use_vmap' mode in obj_fusion,6,1,3,518,130796560,2017-08-02T06:41:00Z,I am not sure why are you using ++i and j++. For for loop either works but looks nicer if consistent.,dejanpan,
+132943353,749,aohsato,2017-07-28T10:49:19Z,Add 'use_vmap' mode in obj_fusion,6,1,3,518,130796916,2017-08-02T06:43:29Z,I recommend using braces even in case of one liners,dejanpan,
+132943353,749,aohsato,2017-07-28T10:49:19Z,Add 'use_vmap' mode in obj_fusion,6,1,3,518,130797119,2017-08-02T06:44:42Z,I would suggest creating an enum type for the labels which will also add semantics to it.,dejanpan,
+132943353,749,aohsato,2017-07-28T10:49:19Z,Add 'use_vmap' mode in obj_fusion,6,1,3,518,130799068,2017-08-02T06:58:36Z,what will happen is use_vmap = false?,dejanpan,
+132943353,749,aohsato,2017-07-28T10:49:19Z,Add 'use_vmap' mode in obj_fusion,6,1,3,518,130800005,2017-08-02T07:04:36Z,Why wouldn't you use http://wiki.ros.org/rviz/DisplayTypes/Axes instead of 3 arrows?,dejanpan,
+132943353,749,aohsato,2017-07-28T10:49:19Z,Add 'use_vmap' mode in obj_fusion,6,1,3,518,131053165,2017-08-03T04:51:22Z,"Yes, there braces go into a new line.
+We are suggesting developers to use clang-format with ros style.
+https://github.com/davetcoleman/roscpp_code_format",yk-fujii,130795868
+132943353,749,aohsato,2017-07-28T10:49:19Z,Add 'use_vmap' mode in obj_fusion,6,1,3,518,131317272,2017-08-04T06:03:22Z,I fixed this name 'now' to 'latest_time'. It's better.,aohsato,130795464
+132943353,749,aohsato,2017-07-28T10:49:19Z,Add 'use_vmap' mode in obj_fusion,6,1,3,518,131317478,2017-08-04T06:05:18Z,"At this suggestion, it's formated with clang-format. ",aohsato,130795868
+132943353,749,aohsato,2017-07-28T10:49:19Z,Add 'use_vmap' mode in obj_fusion,6,1,3,518,131318655,2017-08-04T06:16:48Z,"The increment style is unified, '++i'.",aohsato,130796560
+132943353,749,aohsato,2017-07-28T10:49:19Z,Add 'use_vmap' mode in obj_fusion,6,1,3,518,131319300,2017-08-04T06:23:26Z,I inserted braces.,aohsato,130796916
+132943353,749,aohsato,2017-07-28T10:49:19Z,Add 'use_vmap' mode in obj_fusion,6,1,3,518,131319626,2017-08-04T06:26:01Z,"I add the object labels, 'car', 'person', and 'unkown', as an enum type.",aohsato,130797119
+132943353,749,aohsato,2017-07-28T10:49:19Z,Add 'use_vmap' mode in obj_fusion,6,1,3,518,131320028,2017-08-04T06:29:16Z,"If 'use_vmap' is false, the object is not rotated and the result of euclidean cluster is used as it is.",aohsato,130799068
+132943353,749,aohsato,2017-07-28T10:49:19Z,Add 'use_vmap' mode in obj_fusion,6,1,3,518,131320900,2017-08-04T06:36:55Z,"In order to use it, this node needs to broadcast the object pose as TF.
+I want to reduce the burden on /tf topic.",aohsato,130800005
+132943353,749,aohsato,2017-07-28T10:49:19Z,Add 'use_vmap' mode in obj_fusion,6,1,3,518,131323864,2017-08-04T07:00:07Z,"hmm, that's actually true, you can not publish just an axes alone. ",dejanpan,130800005
+132943353,749,aohsato,2017-07-28T10:49:19Z,Add 'use_vmap' mode in obj_fusion,6,1,3,518,131325314,2017-08-04T07:11:03Z,"right, but it's not simple code, I think so too.
+In ROS standard, we use geometry_msgs/Pose, but it's cheap visualization.",aohsato,130800005
+130486285,728,andoh104,2017-07-13T23:09:51Z,Add vector_map_server to RuntimeManager,5,0,3,11,127375356,2017-07-14T02:47:49Z,"日本語で失礼します。
+param: other と gui: 以下の指定は不要かもしれません。
+
+parameters: 以降の末尾のotherは、かなり以前にサンプル的なものとして残してたように記憶してます。
+将来使うかもしれないので、用意しておいたまま残っている状態だと思います。
+upload_rate_ms, download_rate_ms というパラメータが含まれてますが、
+cmd_param, rosparam, topic などの指定がなく、現状では2つのパラメータはどこにも反映されません。
+
+また、computing.yamlと同様に desc: xxxx として説明の文字列を追加して頂ければ、マウスカーソルが重なったときにTooltipとして説明が表示されるようになります。
+",kondoh2,
+130278573,727,ChenxiTU,2017-07-13T03:17:22Z,Feature/velodyne compression,6,0,6,696,127396821,2017-07-14T07:05:00Z,"Rename the topic to ""velodyne_packets_compressed"".",kitsukawa,
+123446265,669,amc-nu,2017-06-01T08:44:08Z,Feature/yolo2,11,0,9,723,119769488,2017-06-02T02:18:55Z,"It seems darknet's API of get_region_boxes was modificated by following commit:
+https://github.com/pjreddie/darknet/commit/6731a3552d9c95280d7a27b18cea342751d79e3d
+
+Could you follow up?
+                                                                         ^
+",yk-fujii,
+121951653,655,n-patiphon,2017-05-23T09:28:36Z,Added new Ground Filter (Ring based),14,0,5,520,129368998,2017-07-25T17:18:37Z,Why UNKNOWN = 2?,dejanpan,
+121951653,655,n-patiphon,2017-05-23T09:28:36Z,Added new Ground Filter (Ring based),14,0,5,520,129370769,2017-07-25T17:25:56Z,I couldn't see where is this file used? You still define subcriber/publisher topics in the launch file and cpp code itself.,dejanpan,
+121951653,655,n-patiphon,2017-05-23T09:28:36Z,Added new Ground Filter (Ring based),14,0,5,520,129371117,2017-07-25T17:27:18Z,this could be any integer number?,dejanpan,
+121951653,655,n-patiphon,2017-05-23T09:28:36Z,Added new Ground Filter (Ring based),14,0,5,520,129374330,2017-07-25T17:39:23Z,"In general I always ask why the buffer queue is 10? That number normally depends on how fast the messages come in and how long the computation time takes for subscribers. If timing is violated then there should be a warning message. 
+
+Here a good explanation on queue size on the publishing side: http://wiki.ros.org/rospy/Overview/Publishers%20and%20Subscribers#Choosing_a_good_queue_size",dejanpan,
+121951653,655,n-patiphon,2017-05-23T09:28:36Z,Added new Ground Filter (Ring based),14,0,5,520,129374744,2017-07-25T17:41:05Z,I would always suggest to use curly brackets,dejanpan,
+121951653,655,n-patiphon,2017-05-23T09:28:36Z,Added new Ground Filter (Ring based),14,0,5,520,129375122,2017-07-25T17:42:42Z,"can this result in division by 0? 
+EDIT: yes if x0 and y0 == 0",dejanpan,
+121951653,655,n-patiphon,2017-05-23T09:28:36Z,Added new Ground Filter (Ring based),14,0,5,520,129441959,2017-07-25T22:28:06Z,"Put ROS_INFO into 2 lines. 
+It would be in general great to stick to max line length 120 chars and to enforce this with a linter: http://wiki.ros.org/roslint.
+
+Otherwise I right now have to actually review this offline.",dejanpan,
+121951653,655,n-patiphon,2017-05-23T09:28:36Z,Added new Ground Filter (Ring based),14,0,5,520,129442780,2017-07-25T22:33:07Z,It is always great practice to have default in switch statement(s): https://stackoverflow.com/questions/4649423/should-switch-statements-always-contain-a-default-clause,dejanpan,
+121951653,655,n-patiphon,2017-05-23T09:28:36Z,Added new Ground Filter (Ring based),14,0,5,520,129446681,2017-07-25T22:57:20Z,"I reviewed above algorithm but having some documentation would actually help. You are doing gradient on the vertical beams, right?",dejanpan,
+121951653,655,n-patiphon,2017-05-23T09:28:36Z,Added new Ground Filter (Ring based),14,0,5,520,129446822,2017-07-25T22:58:03Z,new line,dejanpan,
+121951653,655,n-patiphon,2017-05-23T09:28:36Z,Added new Ground Filter (Ring based),14,0,5,520,129461682,2017-07-26T00:57:29Z,Indeed,amc-nu,129368998
+121951653,655,n-patiphon,2017-05-23T09:28:36Z,Added new Ground Filter (Ring based),14,0,5,520,129462222,2017-07-26T01:02:59Z,"It's a value in the middle, supposing around 0.18 degrees of azimuth resolution",amc-nu,129371117
+121951653,655,n-patiphon,2017-05-23T09:28:36Z,Added new Ground Filter (Ring based),14,0,5,520,129462253,2017-07-26T01:03:20Z,Noted,amc-nu,129441959
+121951653,655,n-patiphon,2017-05-23T09:28:36Z,Added new Ground Filter (Ring based),14,0,5,520,129462260,2017-07-26T01:03:26Z,Noted,amc-nu,129442780
+121951653,655,n-patiphon,2017-05-23T09:28:36Z,Added new Ground Filter (Ring based),14,0,5,520,129462287,2017-07-26T01:03:41Z,"Indeed, noted",amc-nu,129374330
+121951653,655,n-patiphon,2017-05-23T09:28:36Z,Added new Ground Filter (Ring based),14,0,5,520,129462298,2017-07-26T01:03:47Z,noted,amc-nu,129374744
+121951653,655,n-patiphon,2017-05-23T09:28:36Z,Added new Ground Filter (Ring based),14,0,5,520,129462342,2017-07-26T01:04:19Z,"this should never happen due to the Sensor specs, but the check was added",amc-nu,129375122
+121951653,655,n-patiphon,2017-05-23T09:28:36Z,Added new Ground Filter (Ring based),14,0,5,520,129462353,2017-07-26T01:04:23Z,noted,amc-nu,129446822
+121951653,655,n-patiphon,2017-05-23T09:28:36Z,Added new Ground Filter (Ring based),14,0,5,520,129462369,2017-07-26T01:04:36Z,file removed,amc-nu,129370769
+121951653,655,n-patiphon,2017-05-23T09:28:36Z,Added new Ground Filter (Ring based),14,0,5,520,129469270,2017-07-26T02:17:17Z,@n-patiphon could you please share the paper ?,amc-nu,129446681
+121951653,655,n-patiphon,2017-05-23T09:28:36Z,Added new Ground Filter (Ring based),14,0,5,520,129479685,2017-07-26T04:28:22Z,"@amc-nu @dejanpan  apologies for slow response, I don't have full documentation explaining the algorithm yet. However, I do have some PowerPoint slides which explain main idea of the algorithm. In case you would like to take a look, I uploaded it to the following link https://drive.google.com/file/d/0B8iMqYxCmvZAZGRVOUhVQmhsSVE/view?usp=sharing",n-patiphon,129446681
+121951653,655,n-patiphon,2017-05-23T09:28:36Z,Added new Ground Filter (Ring based),14,0,5,520,129484808,2017-07-26T05:35:08Z,"@n-patiphon this is great, exactly something like this I had in my mind.
+@amc-nu If I understand correctly you guys keep documentation in: https://github.com/CPFL/Autoware-Manuals, no?
+
+If that is correct I propose that @n-patiphon 
+a )generates a pdf from above gdoc, 
+b) uploads it https://github.com/CPFL/Autoware-Manuals/tree/master/en
+c) We add the following line here: https://github.com/CPFL/Autoware/blob/046b973dae7e21b1cfa73f772fade9557e5b1157/ros/src/sensing/filters/packages/points_preprocessor/nodes/ground_filter/ground_filter.cpp#L5
+""Algorithm is documented here <link to github doc>""",dejanpan,129446681
+121951653,655,n-patiphon,2017-05-23T09:28:36Z,Added new Ground Filter (Ring based),14,0,5,520,129488923,2017-07-26T06:19:21Z,this line here gets executed very often and it is not obvious to me why,dejanpan,
+121951653,655,n-patiphon,2017-05-23T09:28:36Z,Added new Ground Filter (Ring based),14,0,5,520,129491231,2017-07-26T06:38:26Z,"I'm I'll check this with @n-patiphon  Before merging 
+Thanks",amc-nu,129488923
+121019922,649,yukitsuji,2017-05-17T10:08:53Z,Feature/dataprocessor,5,0,47,6955,117152109,2017-05-18T02:51:37Z,NUM_CPUs was deprecated at ubuntu 16.04's psutil library,yk-fujii,
+117884894,637,yk-fujii,2017-04-27T08:29:51Z,Add Kinetic support,20,0,207,3368,113657811,2017-04-27T09:53:32Z,**NOTE: Following packages are not supported in Kinetic.**,kitsukawa,
+117884894,637,yk-fujii,2017-04-27T08:29:51Z,Add Kinetic support,20,0,207,3368,113659326,2017-04-27T10:02:15Z,Can you delete the unnecessary comments?,kitsukawa,
+117884894,637,yk-fujii,2017-04-27T08:29:51Z,Add Kinetic support,20,0,207,3368,113659594,2017-04-27T10:04:02Z,Is this right?,kitsukawa,
+116692419,635,amc-nu,2017-04-20T05:18:50Z,Feature/lidar segmentation,91,0,20,2249,113611550,2017-04-27T04:05:07Z,"This file is not included in pcl package on the ubuntu 14.04 (trusty).
+I think that it should keep compatibility with the current recommended environment for a while.
+
+Please keep compatibility with 14.04 by switching the function depending on version of distribution.",yk-fujii,
+114756710,624,MasatoTange,2017-04-07T07:14:50Z,Added sys dialog of ssd node.,3,0,5,81,110333346,2017-04-07T07:43:14Z,"Please add a trailing underscor to member variables.
+See http://wiki.ros.org/CppStyleGuide#Member_variables.",syouji,
+114756710,624,MasatoTange,2017-04-07T07:14:50Z,Added sys dialog of ssd node.,3,0,5,81,110334585,2017-04-07T07:50:47Z,"Is it necessary to call node_handle_.subscribe() more than once?
+",syouji,
+114756710,624,MasatoTange,2017-04-07T07:14:50Z,Added sys dialog of ssd node.,3,0,5,81,110336402,2017-04-07T08:02:39Z,"The position of ros::this_node::getNamespace() is wrong.
+",syouji,
+114756710,624,MasatoTange,2017-04-07T07:14:50Z,Added sys dialog of ssd node.,3,0,5,81,110336997,2017-04-07T08:06:43Z,You'd better break the line.,syouji,110336402
+114756710,624,MasatoTange,2017-04-07T07:14:50Z,Added sys dialog of ssd node.,3,0,5,81,110337165,2017-04-07T08:07:47Z,Please insert whitespace after '='.,syouji,
+114756710,624,MasatoTange,2017-04-07T07:14:50Z,Added sys dialog of ssd node.,3,0,5,81,110339063,2017-04-07T08:20:31Z,"use ""~"" or ""$HOME"" instead of ""$(echo $HOME)"" 
+
+write proper tooltip description at desc:xxx, please",kondoh2,
+114756710,624,MasatoTange,2017-04-07T07:14:50Z,Added sys dialog of ssd node.,3,0,5,81,110339943,2017-04-07T08:25:49Z,"should use checkbox , instead of menu",kondoh2,
+114756710,624,MasatoTange,2017-04-07T07:14:50Z,Added sys dialog of ssd node.,3,0,5,81,110340587,2017-04-07T08:30:08Z,should use bool as use_gpu type,kondoh2,
+114756710,624,MasatoTange,2017-04-07T07:14:50Z,Added sys dialog of ssd node.,3,0,5,81,110364780,2017-04-07T10:55:26Z,need parameter is score_threshold only ?,kondoh2,
+114756710,624,MasatoTange,2017-04-07T07:14:50Z,Added sys dialog of ssd node.,3,0,5,81,110365833,2017-04-07T11:03:00Z,"add cmd_param: ... , to score_threadshold ?",kondoh2,
