@@ -1,0 +1,845 @@
+issues_title,issues_created_at,issues_thread_id,issues_comment_id,issues_comment_type,issues_comment_text,issues_comment_author,issues_time_to_close,issues_time_to_first_response,issues_no_of_comments,issues_commits,issues_checks,issues_files_changed,issues_lines_changed
+"Runtime Manager Quick Start tab, fix launch_kill proc for Rviz",2015-12-28T07:49:43Z,124031354,,,,kondoh2,,,0,1,0,1,9
+"Runtime Manager Quick Start tab, fix rviz/cmd.sh",2015-12-28T02:05:55Z,124007263,,,,kondoh2,,,0,1,0,1,6
+Support setting nice value,2015-12-27T07:03:46Z,123958065,167390376.0,reply,"Great, thanks!
+2015/12/27 12:36 ""Syohei YOSHIDA"" notifications@github.com:
+
+> Merged #187 https://github.com/CPFL/Autoware/pull/187.
+> 
+> —
+> Reply to this email directly or view it on GitHub
+> https://github.com/CPFL/Autoware/pull/187#event-500835586.
+",shinpei0208,646.0,13075.0,1,3,0,3,72
+"Runtime Manager Quick Start tab, Rviz remote",2015-12-25T08:57:35Z,123866133,,,,kondoh2,,,0,2,0,3,68
+Improve handling junction lane,2015-12-25T04:31:42Z,123851869,,,,syouji,,,0,1,0,1,4
+Update AutowareRoute,2015-12-24T11:25:23Z,123793481,,,,syouji,,,0,1,0,1,0
+Don't use absolute path,2015-12-24T10:21:34Z,123786670,,,,syohex,,,0,1,0,4,14
+Implement process manager,2015-12-24T10:17:20Z,123770192,167084648.0,comment,"NOTE: You need to input password when you execute `ros/run` script.
+
+今後 `ros/run`を実行する際にパスワードを入力する必要があります.
+問題がありましたらお知らせください.
+",syohex,10112.0,10191.0,1,2,0,3,193
+Update ndt matching,2015-12-24T07:26:59Z,123770148,,,,kitsukawa,,,0,2,0,3,203
+Apply bashrc pull requests,2015-12-23T06:54:05Z,123610651,,,,syohex,,,0,4,0,2,32
+Develop waypoint loader,2015-12-22T08:21:05Z,123437125,,,,h-ohta,,,0,2,0,1,48
+Fix waypoint maker,2015-12-22T07:18:35Z,123429609,,,,h-ohta,,,0,2,0,3,6
+Parse old CSV format,2015-12-22T05:39:09Z,123415320,166515218.0,comment,"@h-ohta 現状公開している waypoint_loader用の CSVファイルは、yaw角のカラムを含まないため、ロードすると SEGV が発生しておりました。一時的な対応になるかもしれませんが、古いフォーマットも読めるように修正いたしました。
+",syouji,261.0,584.0,2,1,0,1,69
+Parse old CSV format,2015-12-22T07:05:01Z,123415320,166534490.0,reply,"@syouji 動作確認が出来ました。実装もこれで問題ないと思います。お手数おかけして申し訳ありませんでした。ありがとうございました。
+",h-ohta,261.0,584.0,2,1,0,1,69
+Avoid forced termination,2015-12-18T12:47:46Z,122943072,,,,TomohitoAndo,,,0,1,0,1,7
+Add udon_socket package,2015-12-18T11:19:42Z,122930546,,,,syouji,,,0,1,0,6,701
+Fix lane planner,2015-12-18T10:43:18Z,122925248,,,,h-ohta,,,0,2,0,2,24
+Mod tlr,2015-12-18T08:10:28Z,122901982,165710482.0,comment,"Please notify me if problems happen by this PR
+",manato,52.0,46.0,1,2,0,3,23
+Make the run command more agnostic to different terminals,2015-12-23T07:12:49Z,122746609,166818390.0,reply,"Thanks for PR. I have merged your commit at #180.
+",syohex,491668.0,491668.0,1,1,0,1,31
+Some suggested hardware requirements,2015-12-23T07:12:25Z,122719848,166818237.0,reply,"Thanks for PR. I have merged your commit at #180.
+",syohex,501957.0,501957.0,1,1,0,1,3
+More complete demo install instructions,2015-12-24T10:32:43Z,122718514,167087356.0,reply,"Thanks for suggestion. I have merged your change partially.
+",syohex,600951.0,600951.0,1,1,0,1,23
+Fix wf simulator,2015-12-17T10:03:45Z,122701719,,,,h-ohta,,,0,3,0,2,173
+Fix visualization for simulation mode,2015-12-17T10:03:33Z,122701686,,,,TomohitoAndo,,,0,1,0,1,10
+Develop multi lane,2015-12-17T08:08:01Z,122683839,,,,h-ohta,,,0,17,0,21,3565
+Communicate by key value data format,2015-12-17T07:51:59Z,122681659,,,,syouji,,,0,2,0,4,217
+Synchronize button view with vehicle information,2015-12-17T07:35:24Z,122679610,,,,syouji,,,0,1,0,3,198
+Define meter color,2015-12-17T07:04:35Z,122675086,,,,syouji,,,0,1,0,4,68
+Develop velocity set,2015-12-17T06:03:31Z,122667361,,,,TomohitoAndo,,,0,7,0,4,747
+Accelerate euclidean cluster,2015-12-11T04:06:12Z,121633648,,,,h-ohta,,,0,3,0,3,105
+"Runtime Manager, add Autoware logo, update Icon",2015-12-10T09:56:27Z,121445769,,,,kondoh2,,,0,1,0,6,28
+Fix get closest waypoint,2015-12-09T10:06:36Z,121201128,,,,h-ohta,,,0,2,0,1,24
+ndt_matching supports setup tab.,2015-12-08T15:45:27Z,121034792,,,,kitsukawa,,,0,1,0,3,50
+Velocity set dev,2015-12-08T06:33:29Z,120943196,,,,TomohitoAndo,,,0,3,0,4,94
+"Runtime Manager Setup tab, fix about Vehicle Model path",2015-12-08T05:27:03Z,120933830,,,,kondoh2,,,0,1,0,3,10
+"Runtime Manager Setup tab, fix PCD Binarizer path",2015-12-08T05:13:08Z,120912288,162768705.0,comment,"コミットメッセージが間違っていました。
+本対応は Setupタブ Vehicle Model path についての修正で、
+Mapタブ PCD Binarizer の設定とは関係ありません。
+",kondoh2,7.0,12072.0,1,1,0,1,3
+"Runtime Manager Setup tab, add Setup tab",2015-12-07T03:58:53Z,120693536,,,,kondoh2,,,0,1,0,4,270
+Ndt matching mod tf tree,2015-12-04T10:26:21Z,120373479,,,,kitsukawa,,,0,4,0,3,96
+"Runtime Manger Computing tab, add sched policy GUI",2015-12-04T09:29:48Z,120363693,161919060.0,reply,"**NOTE: rootで Runtime Managerを起動しないと機能しません**
+
+@kondoh2 対応有難うございました.
+",syohex,24.0,148.0,1,1,0,2,44
+Stop publishing messages of lane namespace,2015-12-04T05:12:06Z,120334599,,,,syouji,,,0,1,0,2,112
+"Put vehicle model(default.dae, prius.dae) under ros/src/.config/model",2015-12-03T15:33:49Z,120197781,,,,kitsukawa,,,0,1,0,7,22705
+"Runtime Manager, update get_top() call to built-in next() call",2015-12-03T09:25:54Z,120125857,,,,kondoh2,,,0,1,0,1,39
+Bug fix for the probrem about range of circle,2015-12-02T10:55:14Z,119916745,,,,h-ohta,,,0,1,0,1,21
+Fix invalid pointer access issue,2015-12-02T09:53:06Z,119905813,,,,TomohitoAndo,,,0,1,0,1,10
+"Runtime Manager Computing tab, update sys app link design",2015-12-02T07:04:51Z,119881602,,,,kondoh2,,,0,1,0,1,8
+"Runtime Manager Map tab, add pcd tools",2015-12-02T06:42:58Z,119878191,,,,kondoh2,,,0,2,0,4,150
+Move initialization of points_nr,2015-11-30T16:28:58Z,119527820,,,,syouji,,,0,1,0,1,3
+Add map_tools.,2015-11-27T14:19:52Z,119203391,,,,kitsukawa,,,0,1,0,4,140
+Replace Prius Model.,2015-11-26T12:48:25Z,119038413,,,,kitsukawa,,,0,1,0,2,12448
+Some Fix for libwaypointfollower,2015-11-25T12:31:37Z,118826913,,,,h-ohta,,,0,4,0,2,156
+Filter lateral acceleration ,2015-11-19T13:15:32Z,117811587,,,,h-ohta,,,0,5,0,7,75
+Add yaw data in lane waypoints,2015-11-19T12:57:55Z,117808030,158050139.0,comment,"@syouji 
+waypoint_saverとwaypoint_loaderについて、yawデータを含む形式のcsvファイルを扱えるように修正しました。
+lane_navi、waypoint_clickerの変更と合わせてご確認頂き、問題が無いようであればマージをお願いできますでしょうか。
+",h-ohta,2412654.0,171.0,3,10,0,8,200
+Add yaw data in lane waypoints,2015-12-17T10:31:42Z,117808030,165412820.0,comment,"@syouji 
+コンフリクトと種々の調整を行いました。
+そちらの変更と合わせてご確認頂き、問題なければマージおねがいします。
+",h-ohta,2412654.0,171.0,3,10,0,8,200
+Add yaw data in lane waypoints,2015-12-17T11:05:24Z,117808030,165423793.0,reply,"@h-ohta
+
+> コンフリクトと種々の調整を行いました。
+> そちらの変更と合わせてご確認頂き、問題なければマージおねがいします。
+
+コンフリクトの解決ありがとうございます。
+問題ないと思います。
+
+lane_navi、waypoint_clicker の yaw角対応を追加いたしました。
+- lane_navi の変更点
+  - Androidタブレットから受信した経路データから yaw角を計算し、その値を CSVファイルへ保存
+  - yaw角から orientation を計算し、LaneArrayメッセージへ格納
+- waypoint_clicker
+  - クリックした点と対応するベクタ地図のウェイポイントからyaw角を計算し、ファイルへ保存
+",syouji,2412654.0,171.0,3,10,0,8,200
+Mod vscan,2015-11-19T08:29:10Z,117764958,157988009.0,comment,"Please notify my if you have issue about this PR
+",manato,67.0,171.0,1,2,0,2,91
+Fix package name which has velodyne launch files,2015-11-19T06:17:44Z,117748963,,,,h-ohta,,,0,1,0,1,8
+Klt improvements,2015-11-19T03:02:00Z,117730156,157934218.0,comment,"Could you check it Yosh-san? @syohex 
+If it's ok, could you please merge it into master?
+Thanks
+",amc-nu,2552.0,395.0,1,15,0,3,47
+Update velodyne subtree,2015-11-19T05:42:58Z,117501975,157958365.0,comment,"Please report me if you have issue about this PR.
+",syohex,96413.0,96434.0,1,2,0,5,5
+"Runtime Manager Map tab, fix pcd load OK msg at filed",2015-11-17T10:09:46Z,117322165,,,,kondoh2,,,0,1,0,1,6
+Always check return value from CUDA API,2015-11-16T10:53:03Z,117097865,,,,syohex,,,0,1,0,5,275
+Don't use older option name,2015-11-16T07:18:46Z,117067093,,,,syohex,,,0,1,0,1,2
+Correct kenyn fix,2015-11-16T07:11:00Z,117066443,,,,syohex,,,0,3,0,1,21
+Need one more convStream element,2015-11-16T05:55:03Z,117055936,156923879.0,reply,"Looks good.
+",syohex,791.0,455.0,2,1,0,1,2
+Need one more convStream element,2015-11-16T06:01:57Z,117055936,156924519.0,reply,"BTW There are many magic number in GPU code. They are hard to read and understand and may causes bug like this issue.
+",syohex,791.0,455.0,2,1,0,1,2
+[WIP] CUDA api error check and correct invalid API calling,2015-11-13T08:06:35Z,116701331,156358237.0,comment,"There are some memory leaks. Log of `cuda-memcheck` is here.
+
+https://gist.github.com/syohex/ec06cc13aab79366c8ed
+",syohex,266621.0,10658.0,1,4,0,5,286
+"Runtime Manager, fix bottom area height",2015-11-13T04:36:54Z,116698555,,,,kondoh2,,,0,1,0,1,2
+Update how to get Autoware,2015-11-13T01:42:50Z,116681523,,,,syohex,,,0,1,0,1,2
+bug fix,2015-11-12T11:37:42Z,116532640,,,,h-ohta,,,0,1,0,1,6
+Develop motion planner,2015-11-12T11:27:18Z,116531319,,,,h-ohta,,,0,9,0,4,248
+"Runtime Manager Computing tab, fix remain link at item hide",2015-11-12T09:51:12Z,116514846,,,,kondoh2,,,0,1,0,1,2
+"Runtime Manager Computing tab, fix cmd_param drop",2015-11-12T08:50:14Z,116504417,,,,kondoh2,,,0,1,0,1,8
+Develop velocity set,2015-11-12T08:47:07Z,116504030,,,,TomohitoAndo,,,0,2,0,1,59
+Add periodic transmission,2015-11-11T07:52:06Z,116284410,,,,syouji,,,0,3,0,2,83
+Improve tablet_receiver,2015-11-11T05:02:44Z,116266423,,,,syouji,,,0,3,0,1,43
+Add current pose to temporal waypoints,2015-11-10T10:36:39Z,116080343,,,,TomohitoAndo,,,0,1,0,1,10
+made more stable,2015-11-10T09:52:53Z,116072776,,,,h-ohta,,,0,1,0,2,24
+Fix waypoint follower,2015-11-10T08:19:39Z,116059615,,,,h-ohta,,,0,5,0,3,340
+KLT based Multi Tracking,2015-11-11T01:31:56Z,116032861,155625823.0,comment,"Yes, please. Thanks!
+",amc-nu,78295.0,70872.0,5,8,0,11,983
+KLT based Multi Tracking,2015-11-11T02:13:33Z,116032861,155632552.0,reply,"Done rebase and squash.
+",syohex,78295.0,70872.0,5,8,0,11,983
+KLT based Multi Tracking,2015-11-11T02:24:28Z,116032861,155635820.0,comment,"どうもありがとうございます
+",amc-nu,78295.0,70872.0,5,8,0,11,983
+KLT based Multi Tracking,2015-11-11T03:00:47Z,116032861,155644335.0,reply,"I have confirmed build is successful on both ROS indigo and ROS jade. Please merge if you have no problems.
+",syohex,78295.0,70872.0,5,8,0,11,983
+KLT based Multi Tracking,2015-11-11T03:35:28Z,116032861,155652500.0,comment,"Thank you Yosh
+",amc-nu,78295.0,70872.0,5,8,0,11,983
+Show message box when calibration_path is none.,2015-11-10T03:07:37Z,116015904,,,,kuriking,,,0,1,0,1,3
+Integrate velodyne,2015-11-09T07:21:50Z,115818949,,,,syohex,,,0,6,0,101,10797
+Fix off-by-one error,2015-11-06T08:27:55Z,115458872,154343156.0,reply,"Thanks for PR.
+
+@manato Could you review this patch.
+",syohex,35151769.0,260.0,3,1,0,1,4
+Fix off-by-one error,2016-01-14T04:53:09Z,115458872,171529421.0,reply,"@manato Could you review this patch?
+",shinpei0208,35151769.0,260.0,3,1,0,1,4
+Fix off-by-one error,2016-01-14T09:10:11Z,115458872,171580632.0,reply,"I'm sorry for my late reply. I overlooked that I assigned this conversation.
+I reviewed this PR briefly and I feel there seems to be no problem.
+Thank you very much for pointing out this error! > @KenYN 
+",manato,35151769.0,260.0,3,1,0,1,4
+Remove extra level of indirection from cuMemFreeHost,2015-11-06T08:24:47Z,115457661,154342704.0,reply,"Thanks for PR :+1: 
+
+> (BTW, use of CUDA_CHECK would have detected this issue earlier.)
+
+Could you add return value check(`CUDA_CHECK`) to each `cuMemFreeHost` for avoiding regression ?
+
+@manato Could you review this patch ?
+",syohex,860388.0,773.0,4,2,0,1,21
+Remove extra level of indirection from cuMemFreeHost,2015-11-06T08:32:13Z,115457661,154344013.0,comment,"OK, done! Today is ノー残業デー so I must fly...
+",KenYN,860388.0,773.0,4,2,0,1,21
+Remove extra level of indirection from cuMemFreeHost,2015-11-06T09:12:09Z,115457661,154351184.0,reply,"@KenYN , @syohex ,
+
+Thank you very much for pointing out.
+Except typo @syohex found, I think this PR has no problem.
+",manato,860388.0,773.0,4,2,0,1,21
+Remove extra level of indirection from cuMemFreeHost,2015-11-16T07:12:18Z,115457661,156943678.0,reply,"@KenYN I have merged your changes at #131. And fix your small mistakes. Thanks for PR.
+",syohex,860388.0,773.0,4,2,0,1,21
+Show waypoint guide,2015-11-04T10:14:05Z,115018793,,,,syouji,,,0,3,0,3,395
+Develop planner,2015-11-02T08:34:41Z,114548368,,,,h-ohta,,,0,92,0,32,2784
+Update ndt matching config,2015-11-02T07:55:57Z,114544075,,,,kondoh2,,,0,2,0,2,15
+Refactoring CMakeLists.txt,2015-10-30T10:54:23Z,114247573,,,,syohex,,,0,1,0,6,39
+Improve cmake CUDA configuration,2015-10-30T09:48:53Z,114235048,,,,syohex,,,0,1,0,2,14
+Fix include path and linked library setting issue on Ubuntu 15.04,2015-10-30T09:00:54Z,114227796,,,,syohex,,,0,1,0,2,52
+Cpu prio,2015-10-30T03:51:06Z,114194666,,,,kondoh2,,,0,2,0,2,204
+Add number of zeros behind parameter,2015-10-29T07:18:54Z,113994425,,,,syouji,,,0,3,0,6,38
+Remove needless dependencies,2015-10-29T05:01:29Z,113980220,,,,syohex,,,0,1,0,1,2
+Modified scan2image & calibration_test for calibration_publisher node,2015-10-29T10:52:58Z,113853268,152145749.0,comment,"本コードは、私がフルスクラッチしたものですが、ROSのチュートリアルのファイル（https://raw.githubusercontent.com/ros/ros_tutorials/hydro-devel/roscpp_tutorials/listener/listener.cpp ）を複製してファイルを生成してコードを記述していったためライセンスが残っておりました。
+このような場合、どのようにしたほうがよろしいでしょうか？実際ベースにした範囲はmain関数の定義ぐらいです。
+",yukkysaito,1599418.0,68511.0,5,8,0,8,550
+Modified scan2image & calibration_test for calibration_publisher node,2015-10-29T13:04:27Z,113853268,152173872.0,reply,"@yukkysaito それであれば書き換えても問題ないと思うのですが, できましたらその旨をコミットログに書いていただけないでしょうか. 今後からで良いので.
+
+#### 例
+
+```
+Correct copyright license
+
+Because all of this code is written by me.
+```
+
+全員(弊社含む)に言えるのかもしれないですが, コミットログはより具体的に書いていただけるとよいと思います(コードを変更したとかは見ればわかるので, 特に書く必要はない). バグを直した場合は, こういう場合にバグが発生したので直したとか具体的に書いてあると後からログを見た時にどういう修正をしたかが理解しやすくなります.
+
+例えば  96c3b77ea3bfb83b5bdeb16882b104ffedde22f3 の場合,  `fixed bug of init`とありますが, これだけでは意味を把握することが難しいです.  私自身理解できていないので間違っているかもしれないですが, zero clearしていないので○○な問題が発生していたとか, 最後に `max_y`, `min_y`を `NO_DATA`にリセットしていなかったため xxな問題が起きていた等も記述していただけるとよいかと思います. (後から見た時に同じ問題に気をつけないともなります).
+
+githubを利用しているので issueを立てそこに具体的な問題を書き, `Fix issue #xx`のように書くのでもよいかと思います. (この場合でも具体的にコミットログを書くに越したことはないですが)
+",syohex,1599418.0,68511.0,5,8,0,8,550
+Modified scan2image & calibration_test for calibration_publisher node,2015-10-30T06:24:17Z,113853268,152441591.0,comment,"承知いたしました。アドバイスありがとうございます。
+
+i, count のstaticに関して 407a7a8 にて修正いたしました。
+",yukkysaito,1599418.0,68511.0,5,8,0,8,550
+Modified scan2image & calibration_test for calibration_publisher node,2015-10-30T07:07:26Z,113853268,152446193.0,reply,"@manato 全体の確認をお願いします. (私では意味的なレベルで把握できないため)
+",syohex,1599418.0,68511.0,5,8,0,8,550
+Modified scan2image & calibration_test for calibration_publisher node,2015-11-12T09:58:30Z,113853268,156054236.0,comment,"@syohex アドバイスありがとうございます。
+アドバイスを参考にfill_nへ変更いたしました。 
+よければマージをお願いいたします
+",yukkysaito,1599418.0,68511.0,5,8,0,8,550
+"Runtime Manger, chaged icon, RTM to RUN",2015-10-28T02:12:47Z,113728578,,,,kondoh2,,,0,1,0,1,1674
+Update driving_planner and computing.yaml,2015-10-24T20:21:09Z,113180869,150847594.0,comment,"So there is an issue here... we would need the dbw_mkz_msgs, however, on that particular vehicle they live outside of autoware, so adding them again in the autoware repo may be redundant? I have them to include, but I'm not sure how to proceed?
+",travelbureau,1929416.0,367.0,5,11,0,13,952
+Update driving_planner and computing.yaml,2015-10-25T00:31:09Z,113180869,150876208.0,reply,"Why did you change file permissions from `0644` to `0755` ? It is not necessary.
+",syohex,1929416.0,367.0,5,11,0,13,952
+Update driving_planner and computing.yaml,2015-11-10T09:49:36Z,113180869,155372829.0,reply,"@travelbureau 
+I'm sorry for late reply.
+I overhauled lattice_trajectory_gen and it worked on moriyama in my environment.
+Would you confim whether it works or not in simulation?
+
+Yet I could not have decided what I should do about dbw_mkz_msgs.
+So , I commented out some code related to mkz temporarily.
+Please wait a little more.
+",h-ohta,1929416.0,367.0,5,11,0,13,952
+Update driving_planner and computing.yaml,2015-11-10T09:58:15Z,113180869,155374346.0,reply,"@syohex 
+
+> Why did you change file permissions from 0644 to 0755 ? It is not necessary.
+
+I fixed file permissions.
+",h-ohta,1929416.0,367.0,5,11,0,13,952
+Update driving_planner and computing.yaml,2015-11-12T12:27:46Z,113180869,156091537.0,comment,"I will have a quick look at the changes, sorry I only just saw this...
+",travelbureau,1929416.0,367.0,5,11,0,13,952
+Fix pos_db's bugs about the time.,2015-10-24T13:34:30Z,113160429,,,,kuriking,,,0,1,0,4,54
+Remove sound player execution from traffic_light_recognition.launch,2015-10-22T12:33:30Z,112793038,,,,manato,,,0,1,0,1,1
+Maybe fix the stopping problem of pos_db.,2015-10-22T12:08:36Z,112789545,,,,kuriking,,,0,1,0,4,193
+Fix tablet receiver,2015-10-21T14:31:29Z,112570629,149914852.0,reply,"@h-ohta
+実験と動作確認、ありがとうございました。
+修正、問題ありませんのでマージいたします。
+",syouji,9373.0,9369.0,1,2,0,1,2
+Goodbye hydro hello jade,2015-10-21T10:20:02Z,112532049,149847734.0,comment,"現状 hydroを使っているケース, もしくは Ubuntu 13.04, Ubuntu 13.10を使っているケースというのはあるのでしょうか ? それがなければマージしようと考えています. 問題等ありましたら, お知らせください.
+",syohex,68671.0,8016.0,4,5,0,34,349
+Goodbye hydro hello jade,2015-10-21T10:57:01Z,112532049,149854466.0,reply,"13系とhydroはサポート中止しましょう。READMEに13系とhydro使いたければ今日以前のコミットをチェックアウトするよう注意書を追加できますか。
+2015/10/21 19:20 ""Syohei YOSHIDA"" notifications@github.com:
+
+> 現状 hydroを使っているケース, もしくは Ubuntu 13.04, Ubuntu 13.10を使っているケースというのはあるのでしょうか ?
+> それがなければマージしようと考えています. 問題等ありましたら, お知らせください.
+> 
+> —
+> Reply to this email directly or view it on GitHub
+> https://github.com/CPFL/Autoware/pull/94#issuecomment-149847734.
+",shinpei0208,68671.0,8016.0,4,5,0,34,349
+Goodbye hydro hello jade,2015-10-22T02:28:26Z,112532049,150086917.0,comment,"注意書きを追加しました.
+",syohex,68671.0,8016.0,4,5,0,34,349
+Goodbye hydro hello jade,2015-10-22T03:12:18Z,112532049,150094611.0,comment,"I have merged. Please report if you have any bulld issue.
+",syohex,68671.0,8016.0,4,5,0,34,349
+Integrated velodyne-point-cloud as submodule,2015-10-21T04:19:17Z,112509434,,,,syohex,,,0,9,0,5,53
+Invert sign of azimuth,2015-10-19T07:30:15Z,112087367,,,,syouji,,,0,1,0,2,2
+Update readme,2015-10-21T01:43:44Z,112078756,149754414.0,reply,"@syohex 
+velodyne pointcloudの依存関係に関してはソースからビルドする形に変えておりますので、aptからインストールする必要はなくなっております。
+ビルド方法等詳細はInstall Velodyne Driver Dependenciesに記載しております。
+",h-ohta,202.0,156897.0,30,2,0,1,6
+Update readme,2015-10-21T01:55:02Z,112078756,149756042.0,comment,"なぜそうする必要があるのでしょうか ? パッケージ版では動かないというような問題があるのでしょうか ? (jadeでは velodyne-pointcloudパッケージは提供されていないので, ソースから構築する必要がありましたが). パッケージ版を使うべきでない理由があるのであれば, そのことを明記すべきだと思います.
+
+またソースコードからビルドする際, リビジョンの指定が特にないのですが, 最新版で常にビルドできることが保証されているのでしょうか, また動作保証ができているのでしょうか ?
+
+特定のバージョンを利用する必要がある, パッケージ版では問題がある等であれば, ソースコードを手動でチェックアウトするのではなく, git submodule, subtree等を使った方がよいと思います.
+
+よろしくお願いします.
+",syohex,202.0,156897.0,30,2,0,1,6
+Update readme,2015-10-21T02:09:23Z,112078756,149758161.0,reply,"aptで提供されているパッケージ版ではyaml-cpp 0.5のサポートが不十分で、実際にキャリブレーションファイルの読み込みができませんでした。当時の最新ソースコードではその問題が修正されていたので、ソースからビルドする形に切り替えたという経緯があります。
+
+git subtreeというものがあるのですね。初めて知りました。
+これはあるコミットタイミングでのvelodyneリポジトリをAutowareに取り込むという理解でよろしいでしょうか。
+不勉強で申し訳ありません。
+
+よろしくお願いします。
+",h-ohta,202.0,156897.0,30,2,0,1,6
+Update readme,2015-10-21T02:26:45Z,112078756,149761468.0,comment,"> aptで提供されているパッケージ版ではyaml-cpp 0.5のサポートが不十分で、実際にキャリブレーションファイルの読み込みができませんでした。当時の最新ソースコードではその問題が修正されていたので、ソースからビルドする形に切り替えたという経緯があります。
+
+これは indigoでの話でしょうか ? indigoのパッケージだとバージョン 1.2.0が使われており, そのバージョンには yaml-cpp 0.5に対するサポートが含まれているように見えます(以下のコミットが含まれる.)
+
+https://github.com/ros-drivers/velodyne/commit/0b7a20918f65962f1bf0b4183722589aef239584
+
+パッケージ版が利用できる方が, ユーザ的にもメンテな的にも便利なので, それで動くかどうかよろしければ
+確認いただけないでしょうか ?
+
+> git subtreeというものがあるのですね。初めて知りました。
+> これはあるコミットタイミングでのvelodyneリポジトリをAutowareに取り込むという理解でよろしいでしょうか。
+> 不勉強で申し訳ありません。
+
+はい, そのような認識でよいです.
+",syohex,202.0,156897.0,30,2,0,1,6
+Update readme,2015-10-21T02:35:07Z,112078756,149765018.0,reply,"> これは indigoでの話でしょうか ? indigoのパッケージだとバージョン 1.2.0が使われており, そのバージョンには yaml-cpp 0.5に対するサポートが含まれているように見えます(以下のコミットが含まれる.)
+> 
+> ros-drivers/velodyne@0b7a209
+
+確かサポートはされているが内部的なバグがあった覚えがあります。
+この後のコミットの
+ros-drivers/velodyne@fc20169
+ros-drivers/velodyne@fdba8a3
+によりそのバグが修正されたようです。
+これは1.2.0以後のものなのでおそらく1.2.0ではまだ修正されていないはずですが、一度確認してみます。
+",h-ohta,202.0,156897.0,30,2,0,1,6
+Update readme,2015-10-21T02:45:52Z,112078756,149766085.0,comment,"http://repos.ros.org/repos/building/pool/main/r/ros-indigo-velodyne-pointcloud/
+
+パッケージのソースコードを見ると, その変更はまだ取り込まれていないようです.
+READMEを修正します.
+",syohex,202.0,156897.0,30,2,0,1,6
+Update readme,2015-10-21T02:47:39Z,112078756,149766556.0,reply,"お手数おかけして申し訳ありません。
+それではgit subtreeにて取り込む形に成るということでしょうか。
+",h-ohta,202.0,156897.0,30,2,0,1,6
+Update readme,2015-10-21T02:51:21Z,112078756,149767128.0,comment,"とりあえずその方向で試してみます
+",syohex,202.0,156897.0,30,2,0,1,6
+Update readme,2015-10-21T03:41:16Z,112078756,149772077.0,comment,"すでに `velodyne`というパッケージ(`sensing/drivers/lidar/packages/velodyne/`)があるので単純に `ros/src`の下に置くということはできませんでした(こうすると catkin_init_workspaceやら source devel/setup.bashをせずに済むのですが...). 依存関係用のディレクトリを作成し, その下に submoduleを置くことにします.
+",syohex,202.0,156897.0,30,2,0,1,6
+Update readme,2015-10-21T05:02:00Z,112078756,149783508.0,comment,"マージしました.
+
+velodyne-pointcloudパッケージを submoduleとして追加しました.
+`./catkin_make_release`コマンドを使ってビルドを行う場合は何の問題もないはずです. cakin_makeコマンドを行う場合は, 事前に `git submodule init && git submodule update`が必要になります.
+
+問題があればお知らせください.
+よろしくお願いします.
+",syohex,202.0,156897.0,30,2,0,1,6
+Update readme,2015-10-21T05:17:45Z,112078756,149785227.0,reply,"迅速な対応有難うございました。
+こちらでも確認します。
+
+ちなみに、`catkin_make`時に毎回`git submodule init && git submodule update`しなければならないのでしょうか。それとも一度`./catkin_make_release`した後に`catkin_make`をする場合は、上記は必要ないのでしょうか。
+",h-ohta,202.0,156897.0,30,2,0,1,6
+Update readme,2015-10-21T05:26:42Z,112078756,149786784.0,comment,"> ちなみに、catkin_make時に毎回git submodule init && git submodule updateしなければならないのでしょうか。それとも一度./catkin_make_releaseした後にcatkin_makeをする場合は、上記は必要ないのでしょうか。
+
+一度だけでいいです. `ros/depends/src/velodyne`以下にソースコードが取得されていれば実行する必要はありません.
+",syohex,202.0,156897.0,30,2,0,1,6
+Update readme,2015-10-21T05:30:12Z,112078756,149787887.0,reply,"> 一度だけでいいです. ros/depends/src/velodyne以下にソースコードが取得されていれば実行する必要はありません.
+
+承知いたしました。対応並びにご教示ありがとうございました。
+",h-ohta,202.0,156897.0,30,2,0,1,6
+Update readme,2015-10-23T19:04:14Z,112078756,150664804.0,reply,"本日外での実験で気づいたのですが、インターネット接続がない場合./catkin_make_releaseを実行するとvelodyneレポジトリのクローンで止まってしまいます。
+外で実験をする場合インターネット接続がない場合が多数ですので、これは解決しないといけません。
+タイムアウト時間を短くすればいいとは思うのですが、そのようなことは可能なのでしょうか。
+",h-ohta,202.0,156897.0,30,2,0,1,6
+Update readme,2015-10-23T22:50:53Z,112078756,150710476.0,comment,"Autowareの clone時に `--recursive`オプションをつけて submoduleも cloneしておくか,  インターネット下で一度でも構築しておけば問題は回避できると思います. それが無理な場合はソースコードをバンドル必要があると思います.
+
+> 外で実験をする場合インターネット接続がない場合が多数ですので、これは解決しないといけません。
+> タイムアウト時間を短くすればいいとは思うのですが、そのようなことは可能なのでしょうか。
+
+タイムアウトする場合, 必要なソースコードがないということになってしまうので, 適切ではないものと思います.
+",syohex,202.0,156897.0,30,2,0,1,6
+Update readme,2015-11-02T13:28:21Z,112078756,153016291.0,reply,"@syohex 
+
+velodyne_driverのSubmodule化に関してですが，
+こちらでは最新のセンサにドライバを対応させるため，
+下記のような変更を加えて使用しています．
+
+``` diff
+diff --git a/velodyne_driver/src/driver/driver.cc b/velodyne_driver/src/driver/driver.cc
+index dbc36af..aec42ff 100644
+--- a/velodyne_driver/src/driver/driver.cc
++++ b/velodyne_driver/src/driver/driver.cc
+@@ -43,6 +43,11 @@ VelodyneDriver::VelodyneDriver(ros::NodeHandle node,
+       packet_rate = 3472.17;            // 1333312 / 384
+       model_full_name = std::string(""HDL-"") + config_.model;
+     }
++  else if (config_.model == ""64E_S3"")
++    {
++      packet_rate = 5800.0;
++      model_full_name = std::string(""HDL-"") + config_.model;
++    }
+   else if (config_.model == ""64E"")
+     {
+       packet_rate = 2600.0;
+
+```
+
+この変更は，最新のドライバソース(https://github.com/ros-drivers/velodyne/blob/master/velodyne_driver/src/driver/driver.cc)やパッケージ版では対応がされておらず，
+新規にAutowareをセットアップするごとに，こちらで毎回ソースコードを
+変更しております．
+（かつ，追加行の3行目にある5800.0という値は実験的な値であり，
+正確なものでは無いため，今後変更する可能性があります）
+
+このセンサは今後ユーザが増えると考えられるため，この変更を
+可能であればAutowareに組み込みたい（catkin_make_release時に自動的に反映されるようにしたい）のですが，何か良い方法をご存知でしたら，ご教示いただけませんでしょうか？
+
+ご多用のところ，誠に恐れ入りますが，上記ご検討のほどよろしくお願い致します．
+",manato,202.0,156897.0,30,2,0,1,6
+Update readme,2015-11-02T14:01:47Z,112078756,153024311.0,comment,"1. 本家に変更を取り込んでもらい, 適用後 submoduleのリビジョンを更新する
+2. パッチを同梱し, ビルドスクリプト実行時に適用する
+3. velodyneを(一時的?)に forkし, その差分を適用, submoduleの参照先をそちらにする
+
+のいずれかになるかと思います. 1.が最も望ましい形ではあると思いますが, packet_rateが
+定まっていないということでマージは難しいのではないかと思います. PRの傾向を見ても
+安易にマージしてくれるプロダクトではなさそう.
+
+となると 2, 3でしょうか. 今後変更することがないのであれば, 2の方が楽かと思いますが,
+変更を頻繁に行う可能性がるとなると 3でしょうか.
+",syohex,202.0,156897.0,30,2,0,1,6
+Update readme,2015-11-04T00:26:24Z,112078756,153532747.0,reply,"@syohex 
+ご教示，ありがとうございます．
+どの方法で行くか，先生と相談したいと思います．
+
+@shinpei0208 
+今後の変更可能性を考慮して，3で行こうと思うのですが，CPFL直下にforkしてしまって大丈夫でしょうか？
+",manato,202.0,156897.0,30,2,0,1,6
+Update readme,2015-11-06T05:59:32Z,112078756,154310428.0,reply,"@syohex @manato
+先生との議論の結果、3で行くことになりました。
+また、submoduleの置く場所ですが、
+元あった/ros/src/sensing/drivers/lidar/packages/velodyneパッケージを削除してその場所に置き、元あったvelodyneパッケージにあるlaunchファイルをsubmoduleのほうに移動させることでdependsディレクトリを使わずに済むようになると思います。
+仕様が二転三転して大変申し訳ありません。
+このような形でよろしいでしょうか。
+",h-ohta,202.0,156897.0,30,2,0,1,6
+Update readme,2015-11-09T02:42:20Z,112078756,154905383.0,comment,"それでうまくいくかをとりあえず試してみようかと思います.
+",syohex,202.0,156897.0,30,2,0,1,6
+Update readme,2015-11-09T07:23:23Z,112078756,154977980.0,comment,"https://github.com/CPFL/Autoware/pull/90#issuecomment-154310428 に対応するための PRを出しました. https://github.com/CPFL/Autoware/pull/114 ご確認ください. よろしくお願いします.
+
+Velodyneパッケージは https://github.com/CPFL/velodyne に forkしました. 本家と同期を取るために masterブランチは手を付けずに Autowareブランチを利用するようにしています.
+",syohex,202.0,156897.0,30,2,0,1,6
+Update readme,2015-11-10T10:15:20Z,112078756,155377679.0,reply,"@syohex 
+対応有難うございます。
+subtreeの仕様になれることが出来れば大変使いやすいものに感じました。
+velodyneドライバを編集した後のpushには気をつけます。
+ただ、subtreeであることを知らない方が修正し、間違ってpushしてしまうこともありえますので、周知するようにReadmeなどに記載をお願いできますでしょうか。
+",h-ohta,202.0,156897.0,30,2,0,1,6
+Update readme,2015-11-10T11:07:49Z,112078756,155390588.0,comment,"https://github.com/CPFL/Autoware/commit/ab8dfb617f646434f3dc8e74c4a332a43e8f85f3
+
+追加しました.
+",syohex,202.0,156897.0,30,2,0,1,6
+Update readme,2015-11-11T01:05:28Z,112078756,155620635.0,reply,"@syohex 
+ありがとうございます。
+
+@manato @shinpei0208 
+以上でいかがでしょうか。
+",h-ohta,202.0,156897.0,30,2,0,1,6
+Update readme,2015-11-11T09:21:25Z,112078756,155712061.0,reply,"@syohex , @h-ohta 
+ご対応ありがとうございます。大丈夫だと思いますので、マージをお願い致します。
+",manato,202.0,156897.0,30,2,0,1,6
+Update readme,2015-11-11T09:58:06Z,112078756,155720003.0,comment,"マージしました.
+",syohex,202.0,156897.0,30,2,0,1,6
+Update readme,2015-11-11T10:04:03Z,112078756,155721119.0,comment,"I have integrated velodyne source code into this repository as `git subtree`. Original repository is here(https://github.com/CPFL/velodyne), this is forked version. Please be careful for changing velodyne code from this repository. That may break repository history. You must learn about `git subtree`, `git subtree push`, `git subtree split` etc.
+
+Velodyneのソースコードを Autowareリポジトリに `git subtree`として取り込みました. オリジナルは https://github.com/CPFL/velodyne にあります(本家の fork版です). velodyneのコードを本リポジトリから修正する場合は注意が必要です. 他のソースコードと同じように `git push`をすると履歴がいろいろと壊れます. 変更する場合は, `git subtree push`, `git subtree split`を使う必要があります.
+",syohex,202.0,156897.0,30,2,0,1,6
+Update readme,2015-11-17T09:01:35Z,112078756,157312996.0,reply,"@syohex 
+subtreeを編集し、`git subtree push` を行おうとしたのですが、
+403で弾かれてしまいます。
+権限などはどうなっていますでしょうか？
+",pdsljp,202.0,156897.0,30,2,0,1,6
+Update readme,2015-11-17T09:08:30Z,112078756,157314113.0,comment,"`git subtree push`の際, どのようなコマンドを実行したか示していただけないでしょうか ?
+",syohex,202.0,156897.0,30,2,0,1,6
+Update readme,2015-11-17T09:14:19Z,112078756,157315571.0,comment,"無理なようでしたら, https://github.com/CPFL/velodyne を直接操作していただくというのでも良いですが.
+",syohex,202.0,156897.0,30,2,0,1,6
+created .gitignore,2015-10-16T11:02:22Z,111808672,148684443.0,comment,"申し訳ありませんが、適宜ignoreファイルを追加おねがいします
+",pdsljp,42960.0,91.0,10,2,0,1,19
+created .gitignore,2015-10-16T11:06:44Z,111808672,148685119.0,reply,"ignoreファイルは以下に存在しています.
+
+```
+% git ls-files | grep .gitignore
+ros/.gitignore
+ros/src/computing/perception/detection/packages/road_wizard/.gitignore
+ros/src/sensing/drivers/gnss/packages/javad_navsat_driver/.gitignore
+ros/src/sensing/fusion/packages/calibration_camera_lidar/.gitignore
+ros/src/sensing/fusion/packages/points2image/.gitignore
+ros/src/util/packages/RobotSDK/glviewer/.gitignore
+ros/src/util/packages/RobotSDK/rosinterface/.gitignore
+ros/src/util/packages/runtime_manager/scripts/.gitignore
+ui/tablet/AutowareRider/.gitignore
+ui/watch/Voice/.gitignore
+ui/watch/Voice/mobile/.gitignore
+ui/watch/Voice/wear/.gitignore
+ui/watch/mapdemo/.gitignore
+ui/watch/mapdemo/app/.gitignore
+ui/watch/mapdemo/mobile/.gitignore
+vehicle/zmp/hv/.gitignore
+vehicle/zmp/hv2/.gitignore
+```
+",syohex,42960.0,91.0,10,2,0,1,19
+created .gitignore,2015-10-16T11:11:03Z,111808672,148686110.0,reply,"旧リポジトリは以下のようになっていました.
+
+```
+# GNU global tags
+GTAGS
+GRTAGS
+GSYMS
+GPATH
+
+# Python byte-compile file
+__pycache__/
+*.py[co]
+
+# editor backup files
+*~
+\#*\#
+
+#eclipse settings
+.cproject
+.project
+.pydevproject
+.settings/
+```
+",syohex,42960.0,91.0,10,2,0,1,19
+created .gitignore,2015-10-16T11:35:38Z,111808672,148691566.0,reply,"@syohex 
+旧リポジトリと同じ構成でお願いできないでしょうか。
+お手数おかけして申し訳ございません。
+",h-ohta,42960.0,91.0,10,2,0,1,19
+created .gitignore,2015-10-16T11:46:18Z,111808672,148692965.0,reply,"トップディレクトリ以外は同じはずなので, トップディレクトリだけ合わせれば済むものと思います.
+",syohex,42960.0,91.0,10,2,0,1,19
+created .gitignore,2015-10-16T11:57:05Z,111808672,148697662.0,reply,"@syohex 
+承知いたしました。
+それではこちらで合わせてもよろしいでしょうか。
+",h-ohta,42960.0,91.0,10,2,0,1,19
+created .gitignore,2015-10-16T11:57:32Z,111808672,148697841.0,reply,"> 承知いたしました。
+> それではこちらで合わせてもよろしいでしょうか。
+
+はいお願いします.
+",syohex,42960.0,91.0,10,2,0,1,19
+created .gitignore,2015-10-16T12:00:14Z,111808672,148698280.0,reply,"@syohex 
+修正いたしました。
+お手数おかけしますが、ご確認よろしくお願いします。
+",h-ohta,42960.0,91.0,10,2,0,1,19
+created .gitignore,2015-10-16T21:49:48Z,111808672,148844527.0,reply,"問題ないと思います.
+",syohex,42960.0,91.0,10,2,0,1,19
+created .gitignore,2015-10-16T22:56:46Z,111808672,148860081.0,reply,"@syohex 
+ではマージいたします。
+お時間いただきありがとうございました。
+",h-ohta,42960.0,91.0,10,2,0,1,19
+Fix ndt_stat handling,2015-10-16T05:35:53Z,111763637,,,,syouji,,,0,1,0,4,38
+Develop waypoint saver,2015-10-16T03:06:02Z,111749034,,,,pdsljp,,,0,4,0,4,381
+Publish gnss topics,2015-10-15T09:09:30Z,111574607,,,,syouji,,,0,3,0,8,271
+Merge map_db with map_file.,2015-10-13T15:07:15Z,111200541,,,,kuriking,,,0,1,0,5,655
+Set use_predict_pose off.,2015-10-13T08:32:18Z,111132195,,,,kitsukawa,,,0,1,0,1,1
+Develop velocity set,2015-10-13T02:39:05Z,111092120,,,,TomohitoAndo,,,0,2,0,3,46
+Integration of RCNN object detection on Autoware ,2015-10-08T07:10:30Z,110382023,146440120.0,comment,"> 2nd argument of ConvertImageToBlob is reference, while 2nd argument of ConvertRoisToBlob is pointer. why ?
+
+I was just testing your patience my dear @syohex 
+http://redcloudinfotechii2012b.pbworks.com/f/1354563451/why.jpg
+Really, thank you for your suggestions. 
+I'll continue later with the rest.
+",amc-nu,1808087.0,2423.0,5,7,0,18,1203
+Integration of RCNN object detection on Autoware ,2015-10-29T01:03:03Z,110382023,152044250.0,comment,"ping @syohex 
+",amc-nu,1808087.0,2423.0,5,7,0,18,1203
+Integration of RCNN object detection on Autoware ,2015-10-29T02:07:59Z,110382023,152051859.0,reply,"To download data file takes too long time. Please wait a while.
+",syohex,1808087.0,2423.0,5,7,0,18,1203
+Integration of RCNN object detection on Autoware ,2015-10-29T02:08:53Z,110382023,152051960.0,comment,"Thanks Yosh-san
+
+> On Oct 29, 2015, at 11:08, Syohei YOSHIDA notifications@github.com wrote:
+> 
+> To download data file takes too long time. Please wait a while.
+> 
+> ―
+> Reply to this email directly or view it on GitHub.
+",amc-nu,1808087.0,2423.0,5,7,0,18,1203
+Integration of RCNN object detection on Autoware ,2015-10-29T03:25:41Z,110382023,152063379.0,comment,"> > Why isn't this type enum RcnnDetectorClasses ?
+
+You can change it if you wish Yosh
+",amc-nu,1808087.0,2423.0,5,7,0,18,1203
+Support direction angle,2015-10-08T06:01:59Z,110379591,,,,syouji,,,0,4,0,4,589
+"Runtime Manager, fix bottom top5 showing from thread",2015-10-07T01:09:03Z,110133422,,,,kondoh2,,,0,1,0,1,4
+"Goodbye hydro, Hello jade",2015-10-07T10:26:04Z,109923957,146145797.0,comment,"Could anyone check whether Autoware works on jade ?
+",syohex,1302831.0,115069.0,2,4,0,32,154
+"Goodbye hydro, Hello jade",2015-10-21T04:22:29Z,109923957,149777666.0,comment,"I should improve Qt5 configuration. I'll send PR again.
+",syohex,1302831.0,115069.0,2,4,0,32,154
+Update region_tlr,2015-10-02T12:12:29Z,109478700,145000471.0,comment,"@syohex 
+Could you please review modifications and merge PR if there is no problem?
+I appreciate your always help.
+",manato,224131.0,440.0,3,1,0,3,30
+Update region_tlr,2015-10-05T02:20:49Z,109478700,145412501.0,reply,"Merged.
+",syohex,224131.0,440.0,3,1,0,3,30
+Update region_tlr,2015-10-05T11:34:01Z,109478700,145501439.0,comment,"Thanks for reviewing. 
+",manato,224131.0,440.0,3,1,0,3,30
+Fix circular dependency,2015-10-02T23:30:06Z,109245961,145182885.0,reply,"Yosh-san
+
+I think your solution is great, thank you for taking the time for checking and fixing it.
+
+Best regards,
+Abraham
+
+Syohei YOSHIDA さんは書きました : 
+
+> @amc-nu There is circular dependency between klt package and cv_tracker package. cv_tracker links klt library, while klt uses cv_tracker message headers.
+> 
+> Currently klt package does not declare its dependency about cv_tracker(There is add_dependencies, but this is not enough, because cv_tracker is not declared in CATKIN_DEPENDS and package.xml). Build is failed if I declare klt dependency by that CMake finds circular dependency and raises error as below.
+> 
+> CMake Error at /home/syohei/Autoware/ros/build/catkin_generated/order_packages.cmake:179 (message): Circular dependency in subset of packages: cv_tracker, klt 
+> 
+> klt library is linked only from cv_tracker so I suppose klt library need not to be the own package.
+> How about you ?
+> 
+> You can view, comment on, or merge this pull request online at:
+> 
+>   https://github.com/CPFL/Autoware/pull/76
+> 
+> Commit Summary
+> 
+> Fix circular dependency 
+> 
+> File Changes
+> 
+> D ros/src/computing/perception/detection/lib/image/klt/CMakeLists.txt (45) D ros/src/computing/perception/detection/lib/image/klt/package.xml (12) M ros/src/computing/perception/detection/packages/cv_tracker/CMakeLists.txt (14) R ros/src/computing/perception/detection/packages/cv_tracker/lib/lktracker/LkTracker.cpp (0) R ros/src/computing/perception/detection/packages/cv_tracker/lib/lktracker/LkTracker.hpp (1) R ros/src/computing/perception/detection/packages/cv_tracker/lib/lktracker/klt.cpp (2) M ros/src/computing/perception/detection/packages/cv_tracker/nodes/klt_track/klt_track.cpp (8) 
+> 
+> Patch Links:
+> 
+> https://github.com/CPFL/Autoware/pull/76.patchhttps://github.com/CPFL/Autoware/pull/76.diff 
+> 
+> —
+> Reply to this email directly or view it on GitHub.￼
+",amc-nu,322075.0,143365.0,2,1,0,7,82
+Fix circular dependency,2015-10-05T01:19:58Z,109245961,145407895.0,comment,"Thanks for reviewing. I have merged.
+",syohex,322075.0,143365.0,2,1,0,7,82
+"Runtime Manager, add top5 showing",2015-09-30T09:53:32Z,109053324,,,,kondoh2,,,0,1,0,1,69
+Fix region tlr,2015-09-29T15:46:51Z,108897660,144099360.0,comment,"I merge this PR tentatively.
+Please notify me if there are any problem.
+",manato,193.0,189.0,1,2,0,4,21
+"Runtime Manager Topics tab, fix topic echo off, immediately",2015-09-29T06:47:16Z,108804899,,,,kondoh2,,,0,1,0,3,38
+"Runtime Manager Topics tab, Echo ckbox default OFF, syslog OFF",2015-09-29T05:53:11Z,108799474,,,,kondoh2,,,0,1,0,3,8
+"Runtime Manager Statu tab, stdout,stderr default off",2015-09-29T05:19:37Z,108796285,,,,kondoh2,,,0,1,0,2,8
+Fix velocity computation on crossroads,2015-09-29T05:09:35Z,108795538,,,,syouji,,,0,1,0,1,7
+"Runtime Manager Status tab, modify top cmd view width",2015-09-29T03:16:18Z,108786562,,,,kondoh2,,,0,1,0,1,7
+Modify to deal with acceleration,2015-09-28T13:41:26Z,108660240,,,,TomohitoAndo,,,0,1,0,2,15
+"Runtime Manager Status tab, update top command results font",2015-09-28T08:37:17Z,108612674,,,,kondoh2,,,0,1,0,1,3
+Modified ndt_matching.launch to support 3D URG.,2015-09-27T19:32:48Z,108556131,,,,kitsukawa,,,0,1,0,1,4
+Add predict_pose.,2015-09-27T18:53:11Z,108554210,,,,kitsukawa,,,0,1,0,2,27
+Fix no-GPU platform issue,2015-09-25T12:39:35Z,108306828,143208502.0,reply,"マージしました。
+対応ありがとうございます。
+",TomohitoAndo,4762.0,4831.0,1,1,0,1,2
+Develop sensor gnss,2015-09-25T10:54:17Z,108304187,,,,h-ohta,,,0,5,0,20,89
+Correct package name,2015-09-25T07:29:54Z,108277196,,,,syohex,,,0,1,0,1,2
+"Runtime Manager, brushup about link color setting",2015-09-25T04:01:16Z,108258321,,,,kondoh2,,,0,1,0,1,29
+"Runtime Manager, brushup about wx.BoxSizer",2015-09-25T03:23:44Z,108254736,,,,kondoh2,,,0,1,0,1,39
+"Runtime Manager Status tab, que clear at Stdout OFF and Stderr OFF",2015-09-24T08:00:31Z,108078482,142845914.0,reply,"ありがとうございます！
+2015/09/24 16:58 ""kondoh2"" notifications@github.com:
+
+> Merged #58 https://github.com/CPFL/Autoware/pull/58.
+> 
+> —
+> Reply to this email directly or view it on GitHub
+> https://github.com/CPFL/Autoware/pull/58#event-417826911.
+",shinpei0208,25.0,162.0,1,1,0,1,8
+"Runtime Manager Sensing Tab, add config to Javad",2015-09-24T06:22:33Z,108066343,,,,kondoh2,,,0,1,0,2,27
+Mod dpm ocv,2015-09-24T01:55:46Z,108041407,,,,syohex,,,0,5,0,8,263
+Clipping input detections to eschew an exception,2015-09-23T08:03:15Z,107869023,,,,amc-nu,,,0,1,0,1,15
+Euclidean Clustering can optionally publish filtered point cloud and/or filtered ground points,2015-09-23T07:43:29Z,107530035,142520923.0,reply,"@amc-nu ,
+Thanks for your great work.
+
+This is a comparison picture.
+![screenshot from 2015-09-23 16 21 12](https://cloud.githubusercontent.com/assets/3022416/10039948/e994db50-6211-11e5-9a64-0e8e89592090.jpg)
+
+(The picture shows that ranging with /points_filtered can detect cars in far place which /vscan_image can't)
+
+But, with regard to processing speed, points_filtered somewhat slower than vscan.
+I'll send comparison video link later.
+",manato,331908.0,147051.0,4,4,0,3,119
+Euclidean Clustering can optionally publish filtered point cloud and/or filtered ground points,2015-09-25T02:19:25Z,107530035,143105518.0,comment,"so, can we merge this one? @manato @syohex ??
+",amc-nu,331908.0,147051.0,4,4,0,3,119
+Euclidean Clustering can optionally publish filtered point cloud and/or filtered ground points,2015-09-25T02:38:29Z,107530035,143107481.0,reply,"I think yes.
+",syohex,331908.0,147051.0,4,4,0,3,119
+Euclidean Clustering can optionally publish filtered point cloud and/or filtered ground points,2015-09-25T04:42:47Z,107530035,143125573.0,reply,"I think so too.
+",manato,331908.0,147051.0,4,4,0,3,119
+Velocity set,2015-09-21T12:59:09Z,107506450,,,,TomohitoAndo,,,0,4,0,5,88
+Fix kf,2015-09-21T10:58:38Z,107476865,141941058.0,reply,"I think you nailed it!
+",amc-nu,4655.0,4589.0,2,2,0,3,18
+Fix kf,2015-09-21T11:25:30Z,107476865,141945944.0,comment,"I appreciate your help! 
+",manato,4655.0,4589.0,2,2,0,3,18
+Change variable name,2015-09-21T08:04:34Z,107462270,,,,TomohitoAndo,,,0,1,0,2,14
+Ndt matching dev,2015-09-17T09:43:03Z,106947576,,,,kitsukawa,,,0,3,0,7,203
+Velocity set,2015-09-17T10:05:52Z,106776820,141032724.0,comment,"吉田様、丁寧にご教示いただきありがとうございます。
+レビューしていただいた箇所を修正し、pushしました。
+お手数ですが、もう一度ご確認お願いします。
+親クラスに同じようなメソッドがある点と、関数にconstをつける点については、親クラス Path も変更する必要がありそうでしたので、太田さんと相談したのち、修正を加える予定です。
+",TomohitoAndo,163918.0,73264.0,4,8,0,2,351
+Velocity set,2015-09-18T10:01:28Z,106776820,141408974.0,reply,"こちらいつ頃マージできそうですか
+",shinpei0208,163918.0,73264.0,4,8,0,2,351
+Velocity set,2015-09-18T11:17:00Z,106776820,141421598.0,reply,"マージしました.
+",syohex,163918.0,73264.0,4,8,0,2,351
+Velocity set,2015-09-18T12:14:02Z,106776820,141432843.0,reply,"ありがとうございます！！
+2015/09/18 20:17 ""Syohei YOSHIDA"" notifications@github.com:
+
+> マージしました.
+> 
+> —
+> Reply to this email directly or view it on GitHub
+> https://github.com/CPFL/Autoware/pull/49#issuecomment-141421598.
+",shinpei0208,163918.0,73264.0,4,8,0,2,351
+fix-dependency,2015-09-16T10:52:02Z,106748202,,,,h-ohta,,,0,1,0,2,4
+Fix subscribing topic names,2015-09-16T08:20:38Z,106723120,,,,syouji,,,0,1,0,1,10
+Cache current waypoints,2015-09-16T08:08:33Z,106721143,,,,syouji,,,0,1,0,2,68
+"sound_player, update about sound file relative path",2015-09-16T06:28:26Z,106708306,,,,kondoh2,,,0,2,0,1,9
+Use modified OpenCV function for adjusting parameter,2015-09-17T01:55:00Z,106702335,140942049.0,comment,"This change was merged into [mod_dpm_ocv](https://github.com/CPFL/Autoware/tree/mod_dpm_ocv) branch
+",syohex,72791.0,72791.0,1,1,0,1,46
+"sound_player, add Autoware path to relative sound file path",2015-09-16T03:57:22Z,106693671,,,,kondoh2,,,0,1,0,1,10
+Remove unnecessary code.,2015-09-15T10:13:38Z,106525163,,,,kitsukawa,,,0,1,0,1,13
+Add estimate_twist.,2015-09-15T09:40:02Z,106520160,,,,kitsukawa,,,0,3,0,4,765
+Added new sound files into sound_player,2015-09-15T08:14:06Z,106505297,,,,manato,,,0,1,0,4,3
+Show lane_stop configurations,2015-09-15T02:48:42Z,106466429,,,,syouji,,,0,1,0,1,4
+updated fusion to optionally read from any points to image projection,2015-09-16T03:12:07Z,106370328,140613423.0,reply,"平林君、こちらテストお願いできますか。
+
+2015-09-15 0:45 GMT+09:00 Abraham notifications@github.com:
+
+> - updated fusion to optionally subscribe to any points to image
+>   projected topic(vscan_image, points_image, any output generated by
+>   points2image) via argument points_node. default topic: vscan_image (not
+>   changed)
+> 
+> -updated points2image topic to optionally project any pointcloud2 topic
+> via argument point_node (i.e. segmentation, road,...).
+> default topic: points_raw (not changed)
+> 
+> Could anybody test with a real rosbag file please?
+> 
+> ## Thanks in advance
+> 
+> You can view, comment on, or merge this pull request online at:
+> 
+>   https://github.com/CPFL/Autoware/pull/38
+> Commit Summary
+> - updated fusion to optionally read from any points to image projected
+>   topic via argument points_node.
+> 
+> File Changes
+> - _M_
+>   ros/src/computing/perception/detection/packages/cv_tracker/launch/ranging.launch
+>   https://github.com/CPFL/Autoware/pull/38/files#diff-0 (4)
+> - _M_
+>   ros/src/computing/perception/detection/packages/cv_tracker/nodes/range_fusion/range_fusion.cpp
+>   https://github.com/CPFL/Autoware/pull/38/files#diff-1 (28)
+> - _M_
+>   ros/src/sensing/fusion/packages/points2image/nodes/points2image/points2image.cpp
+>   https://github.com/CPFL/Autoware/pull/38/files#diff-2 (15)
+> 
+> Patch Links:
+> - https://github.com/CPFL/Autoware/pull/38.patch
+> - https://github.com/CPFL/Autoware/pull/38.diff
+> 
+> —
+> Reply to this email directly or view it on GitHub
+> https://github.com/CPFL/Autoware/pull/38.
+",shinpei0208,238525.0,127618.0,7,4,0,6,110
+updated fusion to optionally read from any points to image projection,2015-09-16T10:13:58Z,106370328,140696042.0,reply,"@amc-nu ,
+When I specify the /points_image as input of ranging, no detection results appear on viewer.
+![rviz_screenshot](https://cloud.githubusercontent.com/assets/3022416/9901954/edb21408-5ca5-11e5-8ada-cc47eb709fa8.png)
+
+I think I have heard that /vscan_image contains some information (about height or something?) that /points_image doesn't while data type are same.
+If ranging node uses the information, I think the compatibility between two topics may be lost.
+
+Could you check it in source code?
+As I can check the behavior, please notify if you need.
+
+Thank you!
+",manato,238525.0,127618.0,7,4,0,6,110
+updated fusion to optionally read from any points to image projection,2015-09-16T10:45:09Z,106370328,140702948.0,comment,"Hirabayashi-san
+
+Thank you very much for testing. I'll modify the code according to your feedback.
+
+Have a good night
+
+Greetings
+Abraham
+
+Manato Hirabayashi さんは書きました : 
+
+> @amc-nu ,
+> When I specify the /points_image as input of ranging, no detection results appear on viewer.
+> ￼
+> 
+> I think I have heard that /vscan_image contains some information (about height or something?) that /points_image doesn't while data type are same.
+> If ranging node uses the information, I think the compatibility between two topics may be lost.
+> 
+> Could you check it in source code?
+> As I can check the behavior, please notify if you need.
+> 
+> Thank you!
+> 
+> —
+> Reply to this email directly or view it on GitHub.￼
+",amc-nu,238525.0,127618.0,7,4,0,6,110
+updated fusion to optionally read from any points to image projection,2015-09-16T15:16:11Z,106370328,140773115.0,comment,"@manato 
+I think this will make it. サンキュー
+Could you please check it?
+",amc-nu,238525.0,127618.0,7,4,0,6,110
+updated fusion to optionally read from any points to image projection,2015-09-17T08:41:58Z,106370328,141007394.0,reply,"@amc-nu 
+Thank you for great work!
+Now this branch's modification looks working well.
+(I'll send a link to comparison video by e-mail because I'm not sure to write here)
+
+If you finish modification on this branch, please ask @syohex  to review code and merge to the master.
+Thanks!
+",manato,238525.0,127618.0,7,4,0,6,110
+updated fusion to optionally read from any points to image projection,2015-09-17T09:07:07Z,106370328,141017989.0,comment,"@syohex , Yosh-san could you check if everything is ok with this branch. If so, could you please merge it.
+Thank you.
+",amc-nu,238525.0,127618.0,7,4,0,6,110
+updated fusion to optionally read from any points to image projection,2015-09-17T10:10:21Z,106370328,141034552.0,reply,"@amc-nu Please don't mix TAB and Spaces(This time, I have fixed). And your commit message does not accord with general git commit message rules. I suppose you should read git commit message guilde line(for example following URL). It is useful when you participate in open source projects.
+
+See also
+- http://chris.beams.io/posts/git-commit/ 
+",syohex,238525.0,127618.0,7,4,0,6,110
+Fix pos_db's bad message.,2015-09-14T08:30:28Z,106294767,,,,kuriking,,,0,1,0,3,8
+added sleep,2015-09-14T06:08:48Z,106277347,139971941.0,comment,"動作確認が出来ましたのでマージします。
+",h-ohta,28.0,25.0,1,1,0,1,1
+modified velocity_set.cpp,2015-09-12T11:15:27Z,106148791,,,,TomohitoAndo,,,0,1,0,1,63
+modified velocity_set,2015-09-11T14:11:46Z,106018895,,,,TomohitoAndo,,,0,1,0,5,667
+add ui/oculus,2015-09-10T12:13:12Z,105793574,,,,KenjiroYamada,,,0,1,0,14,3039
+Fix subscribing topic,2015-09-10T11:54:40Z,105791061,,,,syouji,,,0,1,0,1,2
+Publish /estimated_vel_mps and /estimated_vel_kmph.,2015-09-10T09:22:37Z,105767426,,,,kitsukawa,,,0,1,0,1,14
+fix typo,2015-09-10T09:04:34Z,105764679,,,,h-ohta,,,0,1,0,2,10
+"Runtime Manager, update red alert condition",2015-09-10T07:24:17Z,105746203,,,,kondoh2,,,0,1,0,2,32
+Fix car_pose and Change alpha value.,2015-09-10T07:17:44Z,105745416,,,,kuriking,,,0,1,0,1,96
+Add waypoint_clicker,2015-09-10T05:13:58Z,105733128,,,,syouji,,,0,1,0,3,112
+Update documents.,2015-09-09T12:54:32Z,105590312,,,,kuriking,,,0,1,0,4,0
+Modified viewers to make them resizable and to make close button enable,2015-09-09T12:01:49Z,105582384,,,,manato,,,0,1,0,7,101
+Added checkbox to runtime manger in order to boot baumer camera node,2015-09-09T10:37:47Z,105570183,,,,manato,,,0,1,0,1,3
+Mod road wizard,2015-09-09T10:02:58Z,105564884,,,,manato,,,0,2,0,3,89
+Import SmartWatch Application,2015-09-09T05:01:01Z,105512564,138784622.0,reply,"@syohex Thanks. I think it looks good.:ok_hand: 
+",syouji,7409.0,4712.0,1,1,0,201,10492
+Improve local2global.cpp,2015-09-07T16:12:30Z,105242169,,,,kitsukawa,,,0,1,0,1,48
+Thin color of car and pedestrian for old data.,2015-09-07T13:32:34Z,105216860,,,,kuriking,,,0,1,0,1,169
+Fix road sign warning on Rviz,2015-09-07T06:22:00Z,105154478,,,,syouji,,,0,1,0,1,12
+Add ladybug node,2015-09-04T07:23:36Z,104822557,137664312.0,comment,"@amc-nu Can you check PR ?
+",syohex,33198.0,15107.0,3,1,0,5,448
+Add ladybug node,2015-09-04T09:57:57Z,104822557,137693854.0,reply,"Hello @syohex
+
+Yes, I see it. You can merge it if everything is OK. Thanks.
+",amc-nu,33198.0,15107.0,3,1,0,5,448
+Add ladybug node,2015-09-04T10:01:40Z,104822557,137694387.0,comment,"Thanks for reviewing. However many commits of old repository were merged. I think we should remove them before merging this PR. Hmm.
+",syohex,33198.0,15107.0,3,1,0,5,448
+Publish without change in default of vmap,2015-09-03T06:44:07Z,104632156,,,,syouji,,,0,1,0,2,74
+Update dpm_ocv,2015-09-02T09:13:49Z,104434392,,,,syohex,,,0,1,0,85,23319
+"Runtime Manager, update load bar color",2015-09-02T08:15:54Z,104424692,,,,kondoh2,,,0,1,0,1,2
+"Runtime Manager, add top cmd alert level setting",2015-09-02T07:50:06Z,104421127,,,,kondoh2,,,0,1,0,2,9
+"Runtime Manager Sensing tab, add params to calibration publisher",2015-09-02T05:49:19Z,104407219,,,,kondoh2,,,0,1,0,1,27
+"Runtime Manager Computing tab, add region_tlr diloag",2015-09-02T05:34:42Z,104405382,,,,kondoh2,,,0,1,0,2,11
+"Runtime Manager Computing tab, add feat_proj dialog and adjust_xy msg",2015-09-02T05:16:53Z,104403843,,,,kondoh2,,,0,2,0,4,21
+"Runtime Manager, update top command setting",2015-09-02T04:07:05Z,104399268,,,,kondoh2,,,0,1,0,2,27
+"Runtime Manager, add bar to system load info",2015-08-31T11:57:52Z,104040035,,,,kondoh2,,,0,1,0,3,138
+Add bar to cpu load,2015-08-31T11:28:00Z,104035188,,,,kondoh2,,,0,2753,0,8,157
+Better video links,2015-08-27T10:48:23Z,103479264,,,,syohex,,,0,1,0,1,18
+Update link,2015-08-26T08:09:18Z,103204843,,,,syohex,,,0,1,0,1,2
+Fix compile warnings,2015-08-26T07:35:03Z,103197887,,,,syohex,,,0,1,0,4,33
+bag file to try autoware software-suites,2015-08-26T08:20:05Z,103194471,134894759.0,reply,"Please see page 16 of docs/jp/autoware-users-manual.pdf.
+
+デモ用の launch ファイルを生成するスクリプト
+http://db3.ertl.jp/autoware/sample_data/my_launch.sh
+デモで使うデータ(守山地区の地図・キャリブレーション・経路)
+http://db3.ertl.jp/autoware/sample_data/sample_moriyama_data.tar.gz
+ROSBAG データ
+http://db3.ertl.jp/autoware/sample_data/sample_moriyama_150324.tar.gz
+",kuriking,4324.0,4270.0,2,0,0,0,0
+bag file to try autoware software-suites,2015-08-26T08:20:59Z,103194471,134894909.0,comment,"thanks a lot!
+",garaemon,4324.0,4270.0,2,0,0,0,0
+Add the state lattice motion planning features,2015-08-26T05:50:07Z,103181007,,,,syohex,,,0,1,0,19,4544
+Smooth acceleration and deceleration at crossroads,2015-08-26T03:57:08Z,103167610,,,,syouji,,,0,1,0,1,61
