@@ -1,0 +1,27 @@
+Repository Name,Description,API URL,HTML URL,Stars,Forks
+autoware_msgs,,https://api.github.com/repos/autowarefoundation/autoware_msgs,https://github.com/autowarefoundation/autoware_msgs,10,23
+autoware_adapi_msgs,,https://api.github.com/repos/autowarefoundation/autoware_adapi_msgs,https://github.com/autowarefoundation/autoware_adapi_msgs,2,14
+autoware_common,,https://api.github.com/repos/autowarefoundation/autoware_common,https://github.com/autowarefoundation/autoware_common,16,48
+autoware.core,,https://api.github.com/repos/autowarefoundation/autoware.core,https://github.com/autowarefoundation/autoware.core,33,17
+autoware_auto_msgs,Forked from https://gitlab.com/autowarefoundation/autoware.auto/autoware_auto_msgs,https://api.github.com/repos/tier4/autoware_auto_msgs,https://github.com/tier4/autoware_auto_msgs,11,22
+autoware.universe,,https://api.github.com/repos/autowarefoundation/autoware.universe,https://github.com/autowarefoundation/autoware.universe,584,387
+tier4_ad_api_adaptor,,https://api.github.com/repos/tier4/tier4_ad_api_adaptor,https://github.com/tier4/tier4_ad_api_adaptor,1,13
+tier4_autoware_msgs,TIER IV's extension messages for Autoware,https://api.github.com/repos/tier4/tier4_autoware_msgs,https://github.com/tier4/tier4_autoware_msgs,14,20
+MORAI-ROS2_morai_msgs,MORAI Simulator ROS2 message set,https://api.github.com/repos/MORAI-Autonomous/MORAI-ROS2_morai_msgs,https://github.com/MORAI-Autonomous/MORAI-ROS2_morai_msgs,1,5
+muSSP,An exact and efficient min-cost flow algorithm for data-association in multi-object tracking,https://api.github.com/repos/tier4/muSSP,https://github.com/tier4/muSSP,1,5
+ndt_omp,Multi-threaded and SSE friendly NDT algorithm,https://api.github.com/repos/tier4/ndt_omp,https://github.com/tier4/ndt_omp,9,14
+pointcloud_to_laserscan,Converts a 3D Point Cloud into a 2D laser scan.,https://api.github.com/repos/tier4/pointcloud_to_laserscan,https://github.com/tier4/pointcloud_to_laserscan,1,6
+eagleye,Precise localization based on GNSS and IMU.,https://api.github.com/repos/MapIV/eagleye,https://github.com/MapIV/eagleye,491,116
+rtklib_ros_bridge,ROS bridge for RTKLIB,https://api.github.com/repos/MapIV/rtklib_ros_bridge,https://github.com/MapIV/rtklib_ros_bridge,81,15
+llh_converter,,https://api.github.com/repos/MapIV/llh_converter,https://github.com/MapIV/llh_converter,4,3
+autoware_launch,,https://api.github.com/repos/autowarefoundation/autoware_launch,https://github.com/autowarefoundation/autoware_launch,17,88
+sensor_component_description,,https://api.github.com/repos/tier4/sensor_component_description,https://github.com/tier4/sensor_component_description,1,6
+tamagawa_imu_driver,ROS drivers for TAMAGAWA SEIKI IMUs.,https://api.github.com/repos/tier4/tamagawa_imu_driver,https://github.com/tier4/tamagawa_imu_driver,0,9
+nebula,,https://api.github.com/repos/tier4/nebula,https://github.com/tier4/nebula,6,9
+transport_drivers,A set of ROS2 drivers for transport-layer protocols.,https://api.github.com/repos/MapIV/transport_drivers,https://github.com/MapIV/transport_drivers,1,2
+sample_sensor_kit_launch,,https://api.github.com/repos/autowarefoundation/sample_sensor_kit_launch,https://github.com/autowarefoundation/sample_sensor_kit_launch,6,43
+awsim_sensor_kit_launch,AWF Autoware sensor kit for AWSIM simulator,https://api.github.com/repos/RobotecAI/awsim_sensor_kit_launch,https://github.com/RobotecAI/awsim_sensor_kit_launch,0,7
+sample_vehicle_launch,,https://api.github.com/repos/autowarefoundation/sample_vehicle_launch,https://github.com/autowarefoundation/sample_vehicle_launch,4,28
+pacmod_interface,,https://api.github.com/repos/tier4/pacmod_interface,https://github.com/tier4/pacmod_interface,4,11
+autoware_individual_params,,https://api.github.com/repos/autowarefoundation/autoware_individual_params,https://github.com/autowarefoundation/autoware_individual_params,2,27
+heaphook,Replace all the dynamic heap allocation functions by LD_PRELOAD.,https://api.github.com/repos/tier4/heaphook,https://github.com/tier4/heaphook,13,2
