@@ -66,27 +66,27 @@ export default function Home() {
 
       {/* CommentCountByDiscussionThreadAuthor and Image side by side */}
       <div className="flex my-8">
-        <section style={{ maxHeight: '817px', overflow: 'auto', marginRight: '16px' }}>
+        <section style={{ maxHeight: '817px', overflow: 'auto', marginRight: '16px', maxWidth: '450px' }}>
           <CommentCountByDiscussionThreadAuthor />
         </section>
         <Image
           src="/discussion_dataset_network_visualization.png"
           alt="Discussion Dataset Network Visualization"
-          width={1820/2.5}
-          height={2042/2.5}
+          width={728}
+          height={817}
         />
       </div>
 
       {/* CommenterDTAConnectionCountAcrossOrganizations and Image side by side */}
       <div className="flex my-8">
-        <section style={{ maxHeight: '633px', overflow: 'auto', marginRight: '16px' }}>
+        <section style={{ maxHeight: '814px', overflow: 'auto', marginRight: '16px', maxWidth: '450px' }}>
           <CommenterDTAConnectionCountAcrossOrganizations />
         </section>
         <Image
           src="/commenter-dta_connection_network_across_organizations.png"
           alt="Commenter DTA Connection Network Across Organizations"
-          width={1415/2.5}
-          height={1582/2.5}
+          width={728}
+          height={814}
         />
       </div>
 
