@@ -1,0 +1,31 @@
+[
+    {
+        "title": "Consider the structure of sensor/vehicle description/launch",
+        "user_id": "kenji-miyake",
+        "created_at": "2021-12-27T02:13:52Z",
+        "comments": [
+            {
+                "user_id": "kenji-miyake",
+                "created_at": "2021-12-27T02:16:02Z",
+                "comment_text": "FYI sensor_component: https://github.com/tier4/sensor_description.iv"
+            },
+            {
+                "user_id": "kenji-miyake",
+                "created_at": "2022-02-26T19:58:20Z",
+                "comment_text": "Unified.\r\nhttps://github.com/autowarefoundation/sample_vehicle_launch\r\nhttps://github.com/autowarefoundation/sample_sensor_kit_launch"
+            }
+        ]
+    },
+    {
+        "title": "Prepare a development environment for autoware.universe",
+        "user_id": "kenji-miyake",
+        "created_at": "2021-12-21T06:25:05Z",
+        "comments": [
+            {
+                "user_id": "kenji-miyake",
+                "created_at": "2022-01-14T13:37:44Z",
+                "comment_text": "Can be closed by https://github.com/autowarefoundation/autoware/pull/8 and https://github.com/autowarefoundation/autoware/pull/14."
+            }
+        ]
+    }
+]
