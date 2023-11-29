@@ -21,10 +21,26 @@ export default function Home() {
         <CommentCountByDiscussionThreadAuthor />
       </section>
 
+      {/* Now, we add the corresponding network visualization image*/}
+      <Image
+        src="/discussions/discussion_dataset_network_visualization.png"
+        alt="Network Visualization #1"
+        width={800}
+        height={600}
+      />
+
       {/* The section where you include the CommenterDTAConnectionCountAcrossOrganizations client component */}
       <section className="my-8">
         <CommenterDTAConnectionCountAcrossOrganizations />
       </section>
+
+      {/* Now, we add the corresponding network visualization image*/}
+      <Image
+        src="/discussions/commenter-dta_connection_network_across_organizations.png"
+        alt="Network Visualization #2"
+        width={800}
+        height={600}
+      />
 
     </main>
   );
