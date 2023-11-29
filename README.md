@@ -6,3 +6,6 @@
 #### Most Recent Version [issues_data] Folder : `Issues_Data>issues_data_v5.0`
 
 #### Most Recent Version [Pull_Request_data] Folder : `pull requests > pull requests v2.0`
+
+
+#### Added new version [user details data] Folder : `user_details`

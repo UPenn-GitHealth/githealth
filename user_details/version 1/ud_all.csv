@@ -1,0 +1,547 @@
+name,company,user_id,Unnamed: 3,skills,email,location,social_media_link,followers,followings
+Bonolo Mathibela*,AWF,BonoloAWF,@BonoloAWF,Technical Project Management,,,,,
+Haoru Xue,AWF,HaoruXue,@HaoruXue,"C++, Python, Racing ODD, Control, Perception, Deep Learning",,,,,
+Zhijie Qiao,AWF,QZJGeorge,@QZJGeorge,"C++, Python, ROS2, Machine Learning, Embedded Systems, Control",,,,,
+,,,,,,,,,
+Filipe Rinaldi,Arm,filiperinaldi,@filipe.rinaldi.arm,Anything related to Arm IP and work planning from Arm,,,,,
+Ambroise Vincent,Arm,ambroise-arm,@ambroise.vincent,C++,,,,,
+Luca Foschiani,Arm,LucaFos,@LucaFos,"C++, Machine Learning, ModelZoo",,,,,
+Luca Vizzarro,Arm,Sevenarth,@Sevenarth,C++,,,,,
+Narendar Selvaraj,Arm,narendarselva,,"C++ , ROS2 , Planning and control",,,,,
+John Cory,Arm,jcory-xilinx,,"Python, ML",,,,,
+Ryohsuke Mitsudome*,"TIER IV, AWF",mitsudome-r,@mitsudome-r,,,,,,
+Takamasa Horibe,TIER IV,TakaHoribe,,"C++, ROS2, Planning, Control, DBW",,,,,
+Esteve Fernandez,TIER IV,esteve,@esteve,"C++, ROS2, DDS, Python, network, embedded systems",,,,,
+Yukihiro SAITO,TIER IV,yukkysaito,@yukkysaito,"C++, ROS2, Autonomous driving architect(Perception, Sensing, Localization, Planning and Control), Machine Learning, embedded system, Real time OS ",,,,,
+Sugatyon,TIER IV,kyoichi-sugahara,@Sugatyon,"C++, MARLAB, ROS2, Planning, Control",,,,,
+Fumiya Watanabe,TIER IV,rej55,@fwatanabe,"C++, Planning, Control, Mathematical Optimization",,,,,
+Takayuki Murooka,TIER IV,takayuki5168,@takayuki5168,"C++, Python, ROS2, Planning, Control",,,,,
+Daisuke Nishimatsu,TIER IV,wep21,@wep21,,,,,,
+Maxime Clément,TIER IV,maxime-clem,@maximeclement,,,,,,
+Kenji Miyake*,TIER IV,kenji-miyake,,"C++, Python, ROS2, GitHub Actions, Software Design",,,,,
+Kosuke Takeuchi ,TIER IV,kosuke55,@kosuke55,"C++, Python, ROS2",,,,,
+Hiroki Ota,TIER IV,h-ohta,,"C++, Python, ROS2",,,,,
+Keisuke Shima,TIER IV,KeisukeShima,,"C++, ROS2",,,,,
+Makoto Kurihara,TIER IV,mkuri,,"C++, Planning, Control",,,,,
+Fumihito Ito,TIER IV,ito-san,,"C++, Python, ROS2, System Diagnosis, Functional Safety, Cyber Security, OS, Computing Platform",,,,,
+Koji Minoda,TIER IV,kminoda,,,,,,,
+Yusuke Muramatsu,TIER IV,yukke42,@yukke42,"C++, Python, ROS2, Machine Learning",,,,,
+Shunsuke Miura,TIER IV,miursh,,"C++, Python, ROS2, Machine Learning, Sensing, Perception",,,,,
+Makoto Yabuta,TIER IV,yabuta,,"Python, javascript, React, Qt, GUI Tool",,,,,
+Yamato Ando,TIER IV,YamatoAndo,,"C++, ROS2, Localization",,,,,
+Nguyen Ba Dai,TIER IV,badai-nguyen,,"C++, Python, ROS2, Machine Learning",,,,,
+Naoyori Tanzawa,TIER IV,NaoyoriTanzawa,,Project management,,,,,
+Tomoya Kimura,TIER IV,tkimura4,,"C++, ROS2",,,,,
+Hiroshi Igata,TIER IV,igata-ctrl,,"ODD, Vehcile Interface",,,,,
+Ryu Yamamoto,TIER IV,RyuYamamoto,,"C++, ROS2, Localization",,,,,
+TaikiTanaka,TIER IV,taikitanaka3,,"C++, ROS2, Planning",,,,,
+Satoshi Tanaka,TIER IV,scepter914,,"C++, Python, ROS2, Sensing, Perception",,,,,
+Koichi Obitsu,TIER IV,k-obitsu,,"C++, Python",,,,,
+Takeshi Miura,TIER IV,1222-takeshi,,"C++, Python, ROS2",,,,,
+Takayuki Akamine,TIER IV,takam5f2,,"C++, Python, ROS2, Linux, and performance and real-time",,,,,
+Eiji Sekiya,TIER IV,eratostennis,,"Python, AWS",,,,,
+Muhammad Zulfaqar Azmi,TIER IV,zulfaqar-azmi-t4,,"C++, Planning",,,,,
+Shinnosuke Hirakawa,TIER IV,0x126,,"C++, Python, ROS2",,,,,
+satoshi Ota,TIER IV,satoshi-ota,,,,,,,
+Kei Kato,TIER IV,kei-t4,,Computing Platform,,,,,
+Guolong Zhang,TIER IV,Guolong-Zhang,@Guolong-Zhang,"C++, Python, ROS2, Machine Learning, Unity3D, simulation",,,,,
+Tan Kah Hooi,TIER IV,tkhmy,@khtan,"C++, Python, ROS2, Qt, GUI Tool",,,,,
+Yutaka Shimizu,TIER IV,purewater0901,,"C++, Python, ROS",,,,,
+Tomohito Ando,TIER IV,TomohitoAndo,,"C++, ROS2",,,,,
+Tao Zhong,TIER IV,tzhong518,,"C++, Python, ROS2, Machine Learning",,,,,
+Xinyu Wang,TIER IV,angry-crab,,"C++, Python, ROS2, Machine Learning, Localization",,,,,
+Akihito Ohsato,TIER IV,aohsato,@aohsato,"C++, Python, ROS2, Machine Learning, Sensing, Perception",,,,,
+Kenzo Lobos Tsunekawa,TIER IV,knzo25,,"C++, Python, ROS2, Perception, Machine Learning",,,,,
+"Takagi, Isamu",TIER IV,isamu-takagi,@isamu-takagi,"C++, Python, ROS2, Qt",,,,,
+Kento Yabuuchi,TIER IV,KYabuuchi,,"C++, Python",,,,,
+Shintaro Tomie,TIER IV,Shin-kyoto,,"Python, Machine Learning, Sensing, Perception",,,,,
+Shumpei Wakabayashi,TIER IV,shmpwk,,"C++, Python, ROS2",,,,,
+Shinya Nishimoto,TIER IV,nisshan-x,,System Engineering,,,,,
+Kotaro Uetake,TIER IV,ktro2828,,"C++, Python, ROS2, Machine Learning, Sensing, Perception",,,,,
+Azumi Suzuki,TIER IV,s-azumi,,"C++, ROS2",,,,,
+Hidenaga Ushijima,TIER IV,hidenaga41,,"Python, Javascript, React",,,,,
+Yuma Nihei,TIER IV,yn-mrse,,"C++, ROS2, Python",,,,,
+Manato Hirabayashi,TIER IV,manato,,"C++, Python, ROS2, Sensing, Perceptoin, CUDA",,,,,
+David Wong,TIER IV,drwnz,@drwnz,"C++, Python, ROS2, Sensing, Perception, Localization",,,,,
+Mamoru Sobue,TIER IV,soblin,,"C++, ROS2, Python, Planning, Control",,,,,
+Kazuki Matsumoto,TIER IV,kazuki527,,"C++, ROS2",,,,,
+Yohei Mishina,TIER IV,YoheiMishina,,"C++, ROS2",,,,,
+Abraham Cano,TIER IV,amc-nu,,Perception,,,,,
+Yoshi Ri,TIER IV,yoshiri,,"C++, Python, Sensing, ROS2",,,,,
+Akihiro Sakurai,TIER IV,asana17,,"C++, Python, ROS2, System Diagnosis, Functional Safety, OS, Computing Platform",,,,,
+Mingyu Li,TIER IV,Mingyu1991,,"C++, Python, Sensing, Perception, ROS2",,,,,
+Kotaro Yoshimoto,TIER IV,HansRobo,,"C++, ROS2, Simulation",,,,,
+Masahiro Sakamoto,TIER IV,Motsu-san,,Localization,,,,,
+Ryuta Kambe,TIER IV,veqcc,,"OS, Computing Platform",,,,,
+Takahiro Ishikawa,TIER IV,sykwer,,"OS, Computing Platform",,,,,
+Dan Umeda,TIER IV,dan-dnn,,"C++, Python, Perception, Machine Learning, CUDA, TensorRT",,,,,
+Yu Asabe,TIER IV,yuasabe,,,,,,,
+Shintaro Sakoda,TIER IV,SakodaShintaro,,"C++, Python, Machine Learning, Localization",,,,,
+Skihisa Nagata,TIER IV,asa-naki,,,,,,,
+Taiki Yamada,TIER IV,TaikiYamada4,,"C++, ROS2",,,,,
+Naoto Hiramatsu,TIER IV,Naophis,,"C++, ROS2",,,,,
+Atsushi Yano,TIER IV,atsushi421,,"OS, Computing Platform",,,,,
+Adam Dabrowski,Robotec.ai,adamdbrw,@adamdbrw,"C++, deep ros2 work, performance, simulation",,,,,
+Piotr Jaroszek,Robotec.ai,pijaro,@piotrjaroszek,"C++, python, Unity3D, simulation",,,,,
+Daniel Marczak,Robotec.ai,danielm1405,@danielm1405,,,,,,
+Piotr Zyskowski,Robotec.ai,piotr-zyskowski-rai,@pzyskowski,,,,,,
+Michal Kielczykowski,Robotec.ai,kielczykowski-rai,@kielczykowski-rai,,,,,,
+Łukasz Chojnacki,Robotec.ai,lchojnack,,,,,,,
+Bartłomiej Styczeń,Robotec.ai,styczen,,,,,,,
+Mateusz Palczuk,Robotec.ai,TauTheLepton,,,,,,,
+Josh Whitley*,Whitley Software Services,JWhitleyWork,@JWhitleyWork,"C++, architecture, ROS2, drive-by-wire interfaces",,,,,
+M. Fatih Cırıt*,"LeoDrive.ai, AWF",xmfcx,@xmfcx,"Perception, Mapping & Localization, C++",,,,,
+Melike Tanrıkulu,LeoDrive.ai,meliketanrikulu,@meliket,Mapping & Localization,,,,,
+Kaan Çolak,LeoDrive.ai,kaancolak,@kcolak,"Perception, C++, ROS2",,,,,
+Mehmet Doğru,LeoDrive.ai,mehmetdogru,@mehmetdogru,Path Planning & Decision Making,,,,,
+Beyza Nur Kaya,LeoDrive.ai,beyzanurkaya,@beyzanurkaya,Path Planning & Decision Making,,,,,
+Mert Çolak,LeoDrive.ai,MertClk,@MertClk,"Vehicle Control, Path Tracking",,,,,
+Berkay Karaman,LeoDrive.ai,brkay54,@berkay6,"Vehicle Control, Path Tracking",,,,,
+İrem Sena Gölcük,LeoDrive.ai,senagolcuk,@senagolcuk,Integration Test,,,,,
+Zeynep Akbalık,LeoDrive.ai,Zeysthingz,@Zeysthingz,"Perception, C++, ROS2",,,,,
+Nilay Şener,LeoDrive.ai,NilaySener,,Integration Test,,,,,
+Ata Parlar,LeoDrive.ai,ataparlar,ataparlar,Mapping & Localization,,,,,
+Khalil Selyan,LeoDrive.ai,KhalilSelyan,KhalilSelyan,Full Stack Developer,,,,,
+Barış Zeren,LeoDrive.ai,StepTurtle,,Camera Based Mapping & Localization,,,,,
+Batuhan Beytekin,LeoDrive.ai,batuhanbeytekin,,Perception,,,,,
+İsmet Atabay,LeoDrive.ai,ismetatabay,,Path Planning & Decision Making,,,,,
+Yavuz Köseoğlu,LeoDrive.ai,yvzksgl,,"Perception, Localization",,,,,
+Ahmed Ebrahim,LeoDrive.ai,ahmeddesokyebrahim,,Planning & Control,,,,,
+Alexey Panferov,LeoDrive.ai,lexavtanke,,"Perception, Localization",,,,,
+Oğuz Öztürk,LeoDrive.ai,oguzkaganozt,,"Containers, C++, ROS2, DevOps, Software Scalibility",,,,,
+Cui Liu,Autocore.ai   ,cyn-liu,@cyn-liu,"Localization, GNSS",,,,,
+Ximing Wang,Autocore.ai   ,wjxjmj,@wjxjmj,"Localization, Kalman filter, PHD in Automation",,,,,
+Huanhuan Xiong,Autocore.ai   ,NorahXiong,,"Planning, expert in parking algorithm",,,,,
+Shaojie Song,Autocore.ai   ,shulanbushangshu,,"Planning, expert in lane driving algorithm",,,,,
+Li li,Autocore.ai,Tom-Li-Lee,,"C++, OS",,,,,
+Ramanjaneyulu Kattula,Interplai.ai,raminterpl,@ram_interplai,"System /SW architecture, Requirements, Functional safety design, Docs, Simulation testing",,,,,
+Sujith Vemishetty,Interplai.ai,sujithvemi,,,,,,,
+Mark Crawford,Interplai.ai,markcrawfordjr,,,,,,,
+Alexander Carballo,Nagoya University,alexandrx,@alexandrx,"LiDARs in general, 3D perception and localization/mapping, C++/Python",,,,,
+Huei-Ru Tseng,ITRI,hueirutseng,@hueirutseng,ODD system design,,,,,
+Yi-Ling Wu,ITRI,yi_ling,@yi_ling,"Perception, Deep learning, C++",,,,,
+Shu-Kang Tseng,ITRI,jason914,@jason914,"Computer Vision, C++",,,,,
+Henry Chang,ITRI,holyhenry,@henryc1126,"C++/Python, Vehicle Control, Decision, Planning",,,,,
+Brian Lin,ITRI,brian841102,@brian841102,"Python, C/C++, DL/ML, Multiple Object Tracking, Pose Estimation, Action Recognition",,,,,
+Mike Chan,ITRI,mikechan0731,@mikechan0731,"C/C++, Python, Pytorch, LiDAR object detection",,,,,
+Po-Sheng Huang,ITRI,bshuang,@bshuang,"C/C++, Python, Pytorch, LiDAR object detection",,,,,
+Devansh Mehta,Robotiz3d,DevanshRobotiz3d,,,,,,,
+Phillip Karle,TUM,phkarle,phkarle,"C++, Python, Pytorch, Motion Prediction, Scenario Understanding, Object Tracking",,,,,
+William He,WSU,Croquembouche,,"Python, CARLA, Camera and LiDAR Perception, ROS2",,,,,
+Liangkai Liu,,Torreskai0722,@Torreskai0722,"Python, C++, ROS, ROS2, Machine Learning, Linux",,,,,
+ChenYing Kuo (CY),ADLINK,evshary,@evshary,"C/C++, ROS2, DDS, Zenoh",,,,,
+Yuki Kitsukawa,MAP IV,kitsukawa,,"C++, Localization, Mapping",,,,,
+Jacob Lambert,MAP IV,jacoblambert,,"C++, Python, Architecture, ROS2, Sensing, Perception, ML/DL",,,,,
+Patiphon Narksri,MAP IV,n-patiphon,,"C++, Python, Localization, Mapping, Planning, Control",,,,,
+Anh Nguyen,MAP IV,anhnv3991,,"C++, CUDA",,,,,
+Nozomu Ohashi,MAP IV,NozomuOhashi,,"C++, Localization, Mapping",,,,,
+Osamu Sekino,MAP IV,OsamuSekino,,"C++, Localization, System Integration",,,,,
+Koki Aoki,MAP IV,KOKIAOKI,,"C++, ROS2, Python, Localization, Mapping",,,,,
+Ryohei Sasaki,MAP IV,rsasaki0109,,"C++, ROS2, Localization, Mapping",,,,,
+Kunihiro Ueda,MAP IV,screenflip,,"C++, Localization, Mapping",,,,,
+Tomoya Sato,MAP IV,Tomoya-Sato,,"C++, Localization, Mapping",,,,,
+Keisuke Urasaki,MAP IV,urasakikeisuke,,"C++, Python, Sensing, Perception, ML/DL",,,,,
+Yudai Yamazaki,MAP IV,yyamazaki933,,"C++, Python, Localization, System Integration",,,,,
+Nozomu Hatta,MAP IV,n-hachi,,"C++, System Integration",,,,,
+Vincent Richard,Macnica,VRichardJP,@vrichard,Integration and deployment,,,,,
+Vinjohn Chirakkal,SpringCloud,vin-cloud,@vin-cloud,"C++, Python, ROS2, Control, Planning, Localization",,,,,
+Jongseo Lee,SpringCloud,Jongseo92,@Jongseo92,"C++, Python, ROS2, ML/DL, Sensing, Perception",,,,,
+Jimin Jeong,SpringCloud,jmjeong-cloud,@j-jimin,"C++, Python, ROS2, ML/DL, Sensing, Perception",,,,,
+Sungwoo Cho,SpringCloud,swcho-springcloud,,"C++, Python, ROS2, Control, Planning, Localization",,,,,
+Heejun Oh,SpringCloud,Springcloud03,,"Hardware, Power distribution (wiring harness and Junction box), C",,,,,
+Seongmin Kim,SpringCloud,Seongmin-SpringCloud,@Seongmin-SpringCloud,"ROS1, DAQ System",,,,,
+Jaeyoung Jang,SpringCloud,jaey5oung,,"JavaScript, TypeScript, React, Next.js",,,,,
+Junsang Woo,SpringCloud,Junsang900615,,"C++, Python, Simulator",,,,,
+Eunji Yang,SpringCloud,ejyang77,,"HTML, Figma, CSS, JavaScript",,,,,
+Phoebe Wu,Foxconn,PhoebeWu21,,Software development,,,,,
+Rick Liu,Foxconn,fxnrick,,Software development,,,,,
+Mark Jin,PIX Moving,ahuazuipiaoliang,,Software development,,,,,
+Lucas Dai,JD Logistics,lucasdai,,Software development,,,,,
+Leo Wang,JD Logistics,whbcumtb,,Software development,,,,,
+Tony Cai,JD Logistics,cycyc1949,,Software development,,,,,
+Howie Ge,JD Logistics,smileghp,,Software development,,,,,
+Kris Wang,JD Logistics,wbq0206,,Software development,,,,,
+Ray Zhang,JD Logistics,greensky0802,,Software development,,,,,
+George Wang,University of Pennsylvania,unlim-int-soumya,,,,,,,
+Soumya Dash,University of Pennsylvania,gorgew,,,,,,,
+Jun Zhan,baidu usa ,xczhanjun,,,zhanjun@gmail.com,Sunnyvale,https://github.com/xczhanjun,32,105
+Ali BOYALI,,boyali,,,,Japan,https://github.com/boyali,16,54
+,,HuaweiAlgolux,,,,,https://github.com/HuaweiAlgolux,1,1
+David Mo,,Unknown,,,,"New York, NY",https://github.com/unknown,51,19
+Armağan Arslan,Leo Drive Teknoloji A.Ş.,armaganarsln,,,,Turkey Istanbul,https://github.com/armaganarsln,0,0
+Hiroshi IGATA,TIER IV,Igata-ctrl,,,,,https://github.com/Igata-ctrl,1,0
+Kasper Mecklenburg,Arm,kaspermeck-arm,,,,"San Jose, CA, USA",https://github.com/kaspermeck-arm,1,0
+Doğan Ulus,Boğaziçi University @bouncmpe ,doganulus,,,dogan.ulus@boun.edu.tr,"Istanbul, TR",https://github.com/doganulus,39,16
+Chi-Sheng (Daniel) Shih,National Taiwan University,chishengshih,,,cshih@csie.ntu.edu.tw,"Taipei, Taiwan",https://github.com/chishengshih,10,3
+,,ralwing,,,,,https://github.com/ralwing,0,0
+,,LLplane,,,,,https://github.com/LLplane,0,1
+Shark,@autocore-ai ,Sharrrrk,,,,Nanjing,https://github.com/Sharrrrk,5,3
+,,major2012ye,,,,,https://github.com/major2012ye,0,0
+Andreas Färber,SUSE Software Solutions Germany GmbH,afaerber,,,afaerber@suse.de,Germany,https://github.com/afaerber,94,1
+,,YoshinoriTsutake,,,,,https://github.com/YoshinoriTsutake,0,0
+PengfeiLin0609,,PengfeiLin0609,,,,,https://github.com/PengfeiLin0609,0,0
+,,emi0116,,,,,https://github.com/emi0116,4,13
+Sevostianov Ilia,,sevocrear,,,,,https://github.com/sevocrear,17,6
+Thomas LUK,,TZECHIN6,,,,,https://github.com/TZECHIN6,6,7
+plane.li,@autocore-ai,plane-li,,,,Nanjing/China,https://github.com/plane-li,0,0
+,,mschratter,,,,,https://github.com/mschratter,3,0
+Albers Franz,@rst-tu-dortmund ,FranzAlbers,,,,,https://github.com/FranzAlbers,5,0
+,@autocore-ai,storrrrrrrrm,,,,,https://github.com/storrrrrrrrm,5,9
+Takeshi Ishita,,IshitaTakeshi,,,ishitah.takeshi@gmail.com,Tokyo,https://github.com/IshitaTakeshi,133,48
+Gakuki Ise,TIER IV,g-ise,,,,,https://github.com/g-ise,1,0
+Daniel Enright,"University of California, Riverside",Denri006,,,Denri006@ucr.edu,"Riverside, Ca",https://github.com/Denri006,0,0
+,,crazydude123,,,,,https://github.com/crazydude123,0,2
+Chihow,,Mud-B,,,,,https://github.com/Mud-B,7,13
+Ajay,,ajay1606,,,,,https://github.com/ajay1606,6,35
+,,nainaigetuide,,,,,https://github.com/nainaigetuide,1,8
+Hector Cruz,,hect95,,,,"Birmingham,England",https://github.com/hect95,7,10
+,,amtommy,,,,,https://github.com/amtommy,1,10
+Max Schmeller,Tier IV,mojomex,,,,"Tokyo, Japan",https://github.com/mojomex,2,8
+Wojciech Jaworski,,WJaworskiRobotec,,,,,https://github.com/WJaworskiRobotec,1,0
+,,sglee-morai,,,,,https://github.com/sglee-morai,0,1
+,,chris-interplai,,,,,https://github.com/chris-interplai,0,0
+Muhammad Tufail,,08beeqtufail-sudo,,,08beeqtufail@gmail.com,,https://github.com/08beeqtufail-sudo,0,0
+Tetsuo Watanabe,,nabetetsu,,,,,https://github.com/nabetetsu,0,0
+Lntsh854,CRRC,lntsh854,,,,Changsha,https://github.com/lntsh854,7,9
+,,anushamandalapu-tomtom,,,,,https://github.com/anushamandalapu-tomtom,0,0
+Jessica Tegner,@uber ,JessicaTegner,,,jessica@jessicategner.com,Denmark,https://github.com/JessicaTegner,53,10
+Hirokazu Ishida,"PhD student, JSK lab, U. of Tokyo",HiroIshida,,,,Tokyo,https://github.com/HiroIshida,100,220
+Sameh Mohamed,Motional,samehmohamed88,,,sameh4@gmx.com,"Boston, USA",https://github.com/samehmohamed88,21,23
+,,Danior2235,,,,,https://github.com/Danior2235,0,0
+,,mimimidododo,,,,,https://github.com/mimimidododo,0,1
+,,gayar-helm,,,,,https://github.com/gayar-helm,0,0
+LiangHuang,,LiangHuangBC,,,,,https://github.com/LiangHuangBC,2,9
+Hatem Darweesh,Nagoya University,hatem-darweesh,,,,"Nagoya, Japan",https://github.com/hatem-darweesh,128,1
+Mert Yavuz,Adastec,mertyavuz41,,,,,https://github.com/mertyavuz41,2,12
+Tanishq Chaudhary,IIT(ISM) Dhanbad,Tanishq30052002,,,tanishqchaudhary101010@gmail.com,"Gwalior, Madhya Pradesh",https://github.com/Tanishq30052002,10,32
+Kenji Funaoka,TIER IV,kfunaoka,,,kfunaoka@gmail.com,"Tokyo, Japan",https://github.com/kfunaoka,15,2
+,,lhakim85,,,,,https://github.com/lhakim85,0,1
+Andre Padilha,Seazone,andrejpadilha2,,,,São Paulo - Brazil,https://github.com/andrejpadilha2,2,4
+Hyeongseok Jeon - MORAI Inc.,,Hyeongseok-Jeon,,,,,https://github.com/Hyeongseok-Jeon,2,3
+Koray Koca,,koraykoca,,,,Munich,https://github.com/koraykoca,8,16
+Çağrı Çatık,,CagriCatik,,,mccatik@gmail.com,Germany,https://github.com/CagriCatik,1,3
+,,JToolGD,,,,,https://github.com/JToolGD,0,0
+Tomoyuki Watanabe,,TomoyukiaW,,,,,https://github.com/TomoyukiaW,0,1
+SAYON DEEP,,sayondeep,,,sayondeep0710@rediffmail.com,,https://github.com/sayondeep,1,0
+,,bariskapaligoz,,,,,https://github.com/bariskapaligoz,0,2
+wxg,,wangxianggang1997,,,,,https://github.com/wangxianggang1997,0,8
+,,jihwankimqd,,,,,https://github.com/jihwankimqd,1,1
+,,JordanCrawfordx,,,,,https://github.com/JordanCrawfordx,0,1
+,,deansaco,,,,,https://github.com/deansaco,1,0
+,,MrOCW,,,,Singapore,https://github.com/MrOCW,6,5
+Hasan Özfidan,Yildiz Technical University,hasanzfdn,,,,Istanbul,https://github.com/hasanzfdn,9,22
+twbabyduck,,twbabyduck,,,twbabyduck@gmail.com,"Espoo, Finland",https://github.com/twbabyduck,11,24
+,,YueChuCheng,,,,,https://github.com/YueChuCheng,1,0
+,,kasper-helm,,,,,https://github.com/kasper-helm,0,0
+,Nankai University,youxiho1,,,,TianJin,https://github.com/youxiho1,17,28
+,,paolacanuto,,,,,https://github.com/paolacanuto,1,0
+Andreas Korb,,akorb,,,,,https://github.com/akorb,15,2
+Kenichiro Hatayama,TIER 4,kenichirohatayama,,,kenichiro.hatayama@tier4.jp,,https://github.com/kenichirohatayama,0,7
+,,jiangguoding,,,,,https://github.com/jiangguoding,3,0
+,,simon-t4,,,,,https://github.com/simon-t4,3,0
+David W,,HamburgDave,,,,,https://github.com/HamburgDave,0,1
+Takami Sato,,tkm2261,,,,Tokyo,https://github.com/tkm2261,154,0
+jack chen,,Autostone-c,,,,,https://github.com/Autostone-c,0,3
+takeshi-iwanari,@tier4,takeshi-iwanari,,,,,https://github.com/takeshi-iwanari,5,0
+Ruben_Kim,,HyunkiKim0407,,,,,https://github.com/HyunkiKim0407,2,11
+,,liuypcoding,,,,,https://github.com/liuypcoding,1,15
+gaokao,,gaokao123,,,,,https://github.com/gaokao123,0,0
+,,lsteinosk,,,,,https://github.com/lsteinosk,0,0
+Ashish Choudhary,,ashishrrs,,,,,https://github.com/ashishrrs,5,11
+Kim Min-su,,Kim-mins,,,,,https://github.com/Kim-mins,14,20
+Xinyu Ji,thu,J-xinyu,,,,Bei Jing,https://github.com/J-xinyu,1,1
+HarryMechatron,,HarryMechatron,,,,"Chennai, India",https://github.com/HarryMechatron,0,0
+,,bdcong,,,,,https://github.com/bdcong,0,3
+Chenguang Zhang,Peking University,fightingnoble,,,zhangchg@stu.pku.edu.cn,"No.5 Yiheyuan Road, Haidian District, Beijing 100871, P.R.China",https://github.com/fightingnoble,6,8
+Traun Leyden,Indie Hacker (formerly Databricks),tleyden,,,traun.leyden@gmail.com,Oakland / SF,https://github.com/tleyden,197,15
+Domagoj,Technical University of Munich,domajstorovic,,,domagoj.majstorovic@gmail.com,Munich,https://github.com/domajstorovic,5,13
+,,Madhuvd,,,,,https://github.com/Madhuvd,0,0
+Eric Olson,OSHCORP - Advanced Products,osholsonel20,,,,Oshkosh,https://github.com/osholsonel20,1,1
+,,RalphGarson,,,,,https://github.com/RalphGarson,1,3
+,,PaGu3,,,,,https://github.com/PaGu3,0,2
+,,marcusvinicius178,,,,,https://github.com/marcusvinicius178,11,10
+Gürsel Türkeri,,gurselturkeri,,,gurselturkeri@hotmail.com,Turkey,https://github.com/gurselturkeri,13,18
+Shigekazu Fukuta,,sfukuta,,,,,https://github.com/sfukuta,0,0
+,,okataka123,,,,,https://github.com/okataka123,1,2
+,,djargot,,,,,https://github.com/djargot,0,1
+Ahmet Ceyhun Bilir,@SUBU-AISET ,cyhunblr,,,ahmetceyhunbilir16@gmail.com,Turkey,https://github.com/cyhunblr,8,68
+,autocore.ai,liuXinGangChina,,,,,https://github.com/liuXinGangChina,0,0
+Ehsan Malayjerdi,,malayjerdi,,,,,https://github.com/malayjerdi,0,1
+,,msanchezvicom,,,,,https://github.com/msanchezvicom,0,0
+Yutaro Uramoto,,urayuto,,,,,https://github.com/urayuto,1,0
+,TIER IV,mackierx111,,,,,https://github.com/mackierx111,7,0
+,,hzkkk1997,,,,,https://github.com/hzkkk1997,0,1
+,,rolandvanvenrooy-tomtom,,,,,https://github.com/rolandvanvenrooy-tomtom,0,0
+Daichi Murakami,"TIER IV, Inc.",harihitode,,,daichi@murakami.name,"Tokyo, Japan",https://github.com/harihitode,14,0
+,,anilbommareddy,,,,,https://github.com/anilbommareddy,0,1
+,,arjunshetty955,,,,,https://github.com/arjunshetty955,0,0
+,,guankou,,,,,https://github.com/guankou,0,1
+Cai Yuexiang,autocore.ai,caiyuexiang,,,,Nanjing,https://github.com/caiyuexiang,0,0
+Hamed Mesri,,HamedMesri-TomTom,,,,,https://github.com/HamedMesri-TomTom,0,3
+,,enesadastec,,,,,https://github.com/enesadastec,5,3
+,,phoenares,,,,,https://github.com/phoenares,0,0
+,,MarioAlmelaUMH,,,,,https://github.com/MarioAlmelaUMH,0,0
+,,damodarRohit,,,,,https://github.com/damodarRohit,1,0
+Andreas F. Schneider,Hochschule Heilbronn,lionator,,,schneider4887@icloud.com,Germany,https://github.com/lionator,3,3
+,,tseco15,,,,,https://github.com/tseco15,0,0
+Siddharth Saha,,sisaha9,,,sisahawork@gmail.com,"California, United States",https://github.com/sisaha9,14,3
+,,ashkildighin,,,,,https://github.com/ashkildighin,0,0
+Ryuji Yasukochi,M2labo,Ryujiyasu,,,ryuji.yasu@gmail.com,shizuoka,https://github.com/Ryujiyasu,13,43
+Nick,,nbehrnbehr,,,,,https://github.com/nbehrnbehr,0,1
+Mert Bacaksız,,mertbacaksiz,,,,,https://github.com/mertbacaksiz,6,8
+,,zhuyingxiang95,,,,,https://github.com/zhuyingxiang95,0,2
+Max Chen,,cjffly,,,cjffly0423@gmail.com,,https://github.com/cjffly,0,1
+,,tongyucong,,,,,https://github.com/tongyucong,0,4
+Yoshifumi Hayashi,"Tier IV, Inc.",Youneko,,,yoshifumi.hayashi95@gmail.com,,https://github.com/Youneko,0,2
+,,donnieliu,,,,,https://github.com/donnieliu,0,21
+fengziHK,,fengziHK,,,,,https://github.com/fengziHK,87,17
+Mario Sebasco,HDT  Global,mariosebasco,,,mariosebasco@yahoo.com,"Miami, FL",https://github.com/mariosebasco,2,2
+,,adnanhaf,,,,,https://github.com/adnanhaf,0,1
+Kirill Mitkovskii,,Robotics010,,,,Innopolis,https://github.com/Robotics010,8,1
+Qing Joe Wong,HelloWorld Robotics,joewong00,,,,"Kuala Lumpur, Malaysia",https://github.com/joewong00,13,13
+,,AndriiChumak145,,,,,https://github.com/AndriiChumak145,2,0
+,,patelabhay-12,,,,,https://github.com/patelabhay-12,0,0
+,,mshah72,,,,,https://github.com/mshah72,1,5
+Lee Seho,,leeseho,,,,,https://github.com/leeseho,10,8
+Avner Bensoussan,King's College London,AviBen96,,,,,https://github.com/AviBen96,0,2
+Md. Muhaimin Rahman,,sezan92,,,sezan92@gmail.com,Japan,https://github.com/sezan92,156,15
+,,saicsk-deloitte,,,,,https://github.com/saicsk-deloitte,0,0
+Shrijal Pradhan,DLR SE,pradhanshrijal,,,pradhan.shrijal@gmail.com,Oldenburg,https://github.com/pradhanshrijal,2,1
+Yoshi T,TIER IV,pukachupenn,,,,Tokyo,https://github.com/pukachupenn,2,1
+,,YusufDALAK,,,,,https://github.com/YusufDALAK,3,2
+,,nitro6206,,,,,https://github.com/nitro6206,0,0
+Fadime Cetiner,,fadimecetiner,,,,,https://github.com/fadimecetiner,0,3
+Samet Kütük,@leo-drive,samet-kutuk,,,,"Zurich, Switzerland",https://github.com/samet-kutuk,0,3
+,,mgarnett21,,,,,https://github.com/mgarnett21,2,0
+,,izzetbasli,,,,,https://github.com/izzetbasli,2,16
+sauron,,wutianze,,,1369130123@qq.com,,https://github.com/wutianze,25,9
+,,jbyang1,,,,,https://github.com/jbyang1,0,0
+JackSilb,,jacksilb,,,,,https://github.com/jacksilb,0,0
+Amadeusz Szymko,,amadeuszsz,,,,,https://github.com/amadeuszsz,13,2
+Fetullah Atas ,NMBU,jediofgever,,,fetulahatas1@gmail.com,Norway,https://github.com/jediofgever,90,21
+Benjamin Bray,,benrbray,,,benrbray@gmail.com,"Tokyo, Japan",https://github.com/benrbray,47,5
+AlbiM (Danlaw),,albiim,,,,,https://github.com/albiim,0,0
+Sudharsan Babu Srikanthan,,sudhsrik,,,,,https://github.com/sudhsrik,0,0
+,,mayacarla2070,,,,,https://github.com/mayacarla2070,0,0
+,,villaoningfootball,,,,,https://github.com/villaoningfootball,0,0
+,,Nick79919030,,,,,https://github.com/Nick79919030,0,0
+,,liuzf1988,,,,,https://github.com/liuzf1988,0,11
+Zillur Rahman,"University of Nevada, Las Vegas",zillur-av,,,,"Las Vegas, USA",https://github.com/zillur-av,2,0
+,@autocore-ai,beginningfan,,,,,https://github.com/beginningfan,0,0
+Hensbag,,Hensbag,,,,,https://github.com/Hensbag,3,30
+,@autocore-ai,JianKangEgon,,,,"Nanjing, China",https://github.com/JianKangEgon,0,0
+"Hablitzel, Jonas",,JonasHablitzel,,,,Stuttgart,https://github.com/JonasHablitzel,1,1
+Мухаммад Алифф Муаззам,,Tester2009,,,,Malaysia,https://github.com/Tester2009,33,132
+,,sahapratik5656,,,,,https://github.com/sahapratik5656,0,0
+Davut Can Akbaş,ADASTEC Corp.,davutcanakbas,,,akbasdavutcan@gmail.com,"Istanbul, TURKEY",https://github.com/davutcanakbas,47,157
+zeidk,National Institute of Standards and Technology,zeidk,,,zeid.kootbally@nist.gov,"Gaithersburg, MD",https://github.com/zeidk,18,9
+,,LIIHWF,,,,,https://github.com/LIIHWF,6,1
+Di Chen,,goomy241,,,meavecc@gmail.com,,https://github.com/goomy241,1,1
+Gautham Narayan,Carnegie Mellon University,gauthamnarayan,,,gauthamnarayan@hotmail.com,"Pittsburgh, PA",https://github.com/gauthamnarayan,1,3
+,,logihp,,,,,https://github.com/logihp,0,0
+,,zymgp,,,,,https://github.com/zymgp,0,2
+,,shintaro-mori,,,,,https://github.com/shintaro-mori,0,0
+,,kshitiz-deloitte,,,,,https://github.com/kshitiz-deloitte,0,0
+,,dilloncsr,,,,,https://github.com/dilloncsr,0,1
+Lukas Gerstlauer,,LGerstla01,,,,Heilbronn,https://github.com/LGerstla01,0,1
+AutoStack,CASIC,L-Net-1992,,,,Harbin,https://github.com/L-Net-1992,8,215
+Changnam Hong,,hcn1519,,,hcn1519@gmail.com,"Irvine, CA",https://github.com/hcn1519,56,19
+,,markusschratter,,,,,https://github.com/markusschratter,5,0
+,,prabanjanGITHUB,,,,,https://github.com/prabanjanGITHUB,1,0
+,,RamanaBotta,,,,,https://github.com/RamanaBotta,3,11
+Kai,,yaukaizhi,,,,,https://github.com/yaukaizhi,2,2
+,,lishizhen1412,,,,,https://github.com/lishizhen1412,0,7
+Boris,,BritvaBo,,,,,https://github.com/BritvaBo,25,213
+,,museas-azm,,,,,https://github.com/museas-azm,0,0
+sarubito,,sarubito,,,,,https://github.com/sarubito,7,16
+,,inwoong32,,,,,https://github.com/inwoong32,3,0
+Pedro Rito,@nap-it,pedrorito,,,pedrorito@av.it.pt,"Aveiro, Portugal",https://github.com/pedrorito,26,56
+DaikiNiimi,,DaikiNiimi,,,,,https://github.com/DaikiNiimi,0,0
+,,letsgoniaoniao,,,,,https://github.com/letsgoniaoniao,0,2
+Felix F Xu,,felixf4xu,,,,Shanghai,https://github.com/felixf4xu,2,31
+Yuntianyi Chen,"University of California, Irvine",yuntianyi-chen,,,yuntianc@uci.edu,Irvine,https://github.com/yuntianyi-chen,6,9
+,,kedarnadh-123,,,,,https://github.com/kedarnadh-123,0,0
+,,porizou,,,porizou.electro@gmail.com,,https://github.com/porizou,13,15
+,,polurik,,,,,https://github.com/polurik,0,1
+,,tomaszkapron,,,,,https://github.com/tomaszkapron,9,16
+David Cole,Danlaw Inc.,davidc0619,,,,Novi MI USA,https://github.com/davidc0619,0,0
+,,RogerJung,,,,,https://github.com/RogerJung,0,0
+,,mosss-code,,,,,https://github.com/mosss-code,0,1
+,,fiwz789,,,,,https://github.com/fiwz789,0,1
+coffee,,hoppss,,,,"Beijing, China",https://github.com/hoppss,13,274
+,,lixianqiang,,,,,https://github.com/lixianqiang,4,1
+,,Levinskis,,,,,https://github.com/Levinskis,3,2
+Amr Elkenawy,,AElkenawy,,,,"Riga, Latvia",https://github.com/AElkenawy,1,1
+,,xoofee,,,,,https://github.com/xoofee,2,0
+KAIPA SRI CHARAN,,Kaipa-Charan,,,,Hyderabad,https://github.com/Kaipa-Charan,1,2
+Huzefa Dossaji,,hdossaji94,,,,,https://github.com/hdossaji94,0,0
+Masaya Kataoka,TIER Ⅳ.inc,hakuturu583,,,ms.kataoka@gmail.com,Kyoto,https://github.com/hakuturu583,165,101
+Chris Battista,,plainspoken-chris,,,,,https://github.com/plainspoken-chris,0,8
+deng chao,,gdengchao,,,,,https://github.com/gdengchao,0,0
+,,yama42326,,,,,https://github.com/yama42326,0,0
+Yoshi Ri,,YoshiRi,,,yoshiyoshidetteiu@gmail.com,"Shinagawa, Tokyo, Japan",https://github.com/YoshiRi,14,4
+Hakan Aktas,,hakanaktass,,,,,https://github.com/hakanaktass,3,2
+,,muratgozum45,,,,,https://github.com/muratgozum45,0,0
+MechanoPixel,,MechanoPixel,,,,"Saitama-shi, Japan",https://github.com/MechanoPixel,0,0
+,,TUMGEKA,,,,,https://github.com/TUMGEKA,0,1
+LinuxTN,,TAICHInoda,,,,,https://github.com/TAICHInoda,0,0
+,,norikenpi,,,,,https://github.com/norikenpi,0,2
+,,lorenzzhao,,,,,https://github.com/lorenzzhao,0,0
+Ioannis Souflas,,isouf,,,,"UK, GR, KSA",https://github.com/isouf,3,50
+,,jerry73204,,,jerry73204@gmail.com,,https://github.com/jerry73204,71,18
+,,TobiasMascetta,,,,,https://github.com/TobiasMascetta,0,0
+,,eromreve123,,,,,https://github.com/eromreve123,0,1
+,,dotun457,,,,,https://github.com/dotun457,0,1
+ Ziri,,ziri4k,,,,,https://github.com/ziri4k,0,2
+,,hliu869,,,,,https://github.com/hliu869,0,1
+,,mkakh,,,,Japan,https://github.com/mkakh,8,8
+,,adi-driveu,,,,,https://github.com/adi-driveu,0,0
+,,yuanchao16,,,,,https://github.com/yuanchao16,0,2
+,,doyan00,,,,,https://github.com/doyan00,1,0
+Bonolo Mathibela,,idorobotics,,,,,https://github.com/idorobotics,1,0
+,,IDS-zhangxr,,,,,https://github.com/IDS-zhangxr,0,0
+,,buraakozcan,,,,,https://github.com/buraakozcan,0,0
+,,danicannt,,,,,https://github.com/danicannt,0,2
+,,KASUYASU,,,,,https://github.com/KASUYASU,4,0
+João Amaral,,jp-amaral,,,,,https://github.com/jp-amaral,9,11
+,,chivas1000,,,,,https://github.com/chivas1000,1,3
+Dylan Gonzalez,,dylan-gonzalez,,,,,https://github.com/dylan-gonzalez,7,12
+Pham Nhat Quang Nguyen,,npnquang,,,,,https://github.com/npnquang,0,1
+danielsanchezaran,,danielsanchezaran,,,,,https://github.com/danielsanchezaran,0,2
+,,kondoh2,,,,,https://github.com/kondoh2,2,0
+Shinpei Kato,TIER IV,shinpei0208,,,,Tokyo,https://github.com/shinpei0208,76,0
+syouji,,syouji,,,syouji@axe.bz,,https://github.com/syouji,2,0
+Shohei YOSHIDA,,syohex,,,syohex@gmail.com,"Tokyo, Japan",https://github.com/syohex,713,156
+USUDA Hisashi,,kuriking,,,kuriking@gmail.com,,https://github.com/kuriking,0,0
+Ken Yasumoto-Nicolson,,KenYN,,,,Japan,https://github.com/KenYN,0,0
+Matthew O'Kelly,University of Pennsylvania,travelbureau,,,,Philadelphia,https://github.com/travelbureau,23,2
+,,pdsljp,,,,,https://github.com/pdsljp,1,0
+,,KenjiroYamada,,,,,https://github.com/KenjiroYamada,1,1
+Ryohei Ueda,@GITAI ,garaemon,,,garaemon@gmail.com,Tokyo,https://github.com/garaemon,140,19
+Sunny,NIO AutonomousDriving,HongweiSunny,,,,"Shanghai, China",https://github.com/HongweiSunny,0,0
+Geoffrey Biggs,,gbiggs,,,,,https://github.com/gbiggs,156,6
+Adi Sujiwo,,sujiwo,,,,,https://github.com/sujiwo,4,0
+Tushar Dadlani,Walmart,tushar-dadlani,,,,"San Francisco, CA",https://github.com/tushar-dadlani,19,11
+Yuki Iida,TierIV,messi49,,,,,https://github.com/messi49,19,1
+Gustavo Cevallos,,wgcv,,,,Guayaquil-Ecuador,https://github.com/wgcv,79,41
+Matt Droter,,droter,,,matt@droter.com,,https://github.com/droter,70,34
+Denise R James,Self Employed,DeniseJames,,,denisetoo@gmail.com,"Chicago, IL",https://github.com/DeniseJames,18,6
+,,beetleskin,,,,,https://github.com/beetleskin,2,7
+,,badguy07,,,,,https://github.com/badguy07,0,1
+Jit Ray Chowdhury,,jitrc,,,,California,https://github.com/jitrc,48,18
+Dejan Pangercic,,dejanpan,,,dejan.pangercic@gmail.com,,https://github.com/dejanpan,81,0
+Yusuke FUJII,,yk-fujii,,,yusuke.fujii@tier4.jp,"Tokyo, Japan",https://github.com/yk-fujii,39,5
+Leon,@xiaopeng,asimay,,,asimay_y@126.com,Guangzhou,https://github.com/asimay,26,18
+,,munirfarzeen,,,,,https://github.com/munirfarzeen,0,4
+Daisuke Fukutomi,,daifuku07,,,,,https://github.com/daifuku07,3,4
+ZhaoLei,,jdclzl,,,1272717213@qq.com,,https://github.com/jdclzl,0,2
+deepmeng,BeiHang University,deepmeng,,,,"china,beijing",https://github.com/deepmeng,62,223
+,,christopherho-ApexAI,,,,,https://github.com/christopherho-ApexAI,1,0
+Isaac Saito,,130s,,,,"Atlanta, GA / Tochigi, Japan",https://github.com/130s,191,46
+,,chinhyuntai,,,,,https://github.com/chinhyuntai,0,0
+,,hiro-ya-iv,,,,,https://github.com/hiro-ya-iv,1,1
+,,colinsung,,,,,https://github.com/colinsung,0,0
+Weisong Wen (Welson),"Hong Kong Polytechnic University/University of California, Berkeley",weisongwen,,,wenwsrobo@gmail.com,"Hung Hom, Kwolon, Hong Kong/CA, USA",https://github.com/weisongwen,447,53
+,,czluck,,,,,https://github.com/czluck,1,4
+Toshi Ando,,andoh104,,,,"Aichi,Japan",https://github.com/andoh104,1,0
+,,geogrewang,,,,,https://github.com/geogrewang,0,0
+,,ChenxiTU,,,,,https://github.com/ChenxiTU,7,1
+Caleb Kirksey,@google,ckirksey3,,,,"Atlanta, GA",https://github.com/ckirksey3,62,18
+Yuki Tsuji,"Preferred Networks, Inc.",yukitsuji,,,yukitsuji020832@gmail.com,"Tokyo, Japan",https://github.com/yukitsuji,104,5
+Anna Born,,annaborn,,,,Bremen,https://github.com/annaborn,5,1
+Isaac Kargar,SUPPLYZ.eu,kargarisaac,,,,Finland,https://github.com/kargarisaac,135,213
+,Nanyang Technological University,ompugao,,,fujii.shohei@gmail.com,Robotics,https://github.com/ompugao,46,41
+Masato Tange,"Axe, inc.",MasatoTange,,,tange@axe.bz,Kyoto,https://github.com/MasatoTange,0,0
+,,gchen2016,,,,,https://github.com/gchen2016,2,12
+Brian Abrams,@ReliableCarriers ,brianabrams,,,hello@brian-abrams.com,"Detroit, MI",https://github.com/brianabrams,7,99
+Takahiro Miki,,mktk1117,,,takahiro.miki1992@gmail.com,,https://github.com/mktk1117,40,0
+,,LukeAI,,,,,https://github.com/LukeAI,11,9
+Kosuke Murakami,,k0suke-murakami,,,cirpue49@gmail.com,,https://github.com/k0suke-murakami,44,2
+Servando,,sgermanserrano,,,,,https://github.com/sgermanserrano,21,1
+Theodore Grey,Linaro,TheodoreRTG,,,,,https://github.com/TheodoreRTG,3,0
+moelang,,moelang,,,moelang@hotmail.com,,https://github.com/moelang,26,25
+,,hamkuchan,,,,,https://github.com/hamkuchan,1,2
+Yang,,HEGALLIS,,,,,https://github.com/HEGALLIS,6,5
+,,lanhaigit,,,,beijing,https://github.com/lanhaigit,0,0
+Marco Cecotti,Cranfield University,MarcoCecotti,,,,,https://github.com/MarcoCecotti,4,3
+Brian Holt,Parkopedia,bdholt1,,,,"London, UK",https://github.com/bdholt1,101,16
+Wai Kennedy,,kennedywai,,,kennedywaiisawesome@gmail.com,"Kuala Lumpur, Malaysia",https://github.com/kennedywai,11,38
+,,saihideyasu,,,,,https://github.com/saihideyasu,3,0
+,,Tpsych,,,,,https://github.com/Tpsych,1,0
+mourya,,mouryaraj,,,mouryakumarraju@gmail.com,hyderabad,https://github.com/mouryaraj,0,5
+Maxim Osipov,Heading Health,maximosipov,,,,,https://github.com/maximosipov,5,1
+Matt Cooper,GitHub,vtbassmatt,,,vtbassmatt@gmail.com,"North Carolina, United States",https://github.com/vtbassmatt,115,19
+Punnu P.,,LukePhairatt,,,,,https://github.com/LukePhairatt,3,0
+,,droneboxid,,,,,https://github.com/droneboxid,0,12
+Shota Tokunaga,,T-Shota,,,tokunaga@hopf.sys.es.osaka-u.ac.jp,Japan,https://github.com/T-Shota,3,3
+Jeremiah Liou,,Squigglywave,,,,,https://github.com/Squigglywave,1,0
+,,sousou1,,,,,https://github.com/sousou1,1,1
+Angie,,rorypeck,,,,China,https://github.com/rorypeck,267,4037
+,,alexampa,,,,,https://github.com/alexampa,1,0
+,National Cheng Kung University,allenchen8210,,,allenchen8210@gmail.com,Tainan,https://github.com/allenchen8210,0,0
+Yosuke Ueno,,yuteno,,,youten622@yahoo.co.jp,,https://github.com/yuteno,1,0
+Alexey Simonov,,asimonov-hitachi,,,,,https://github.com/asimonov-hitachi,0,2
+Maciej,,MTDzi,,,,"Warsaw, Poland",https://github.com/MTDzi,24,10
+,,1L2PGesner,,,,,https://github.com/1L2PGesner,0,0
+Manivannan Sadhasivam,"Linaro, 96Boards ",Mani-Sadhasivam,,,mani@kernel.org,"Erode,Tamilnadu,India",https://github.com/Mani-Sadhasivam,105,5
+Sumanth Nirmal,,sumanth-nirmal,,,sumanth.724@gmail.com,"Sunnyvale, CA",https://github.com/sumanth-nirmal,15,2
+Hadi Tabatabaee,Amazon Lab126,hadiTab,,,,San Francisco Bay Area,https://github.com/hadiTab,33,21
+Mor,reachauto,Mor-harry,,,,,https://github.com/Mor-harry,17,7
+,,wsung1,,,,,https://github.com/wsung1,0,7
+Giovanni Claudio,Medtronic,jokla,,,,London,https://github.com/jokla,69,11
+,,koenlek,,,koenlekkerkerker@gmail.com,,https://github.com/koenlek,6,2
+Huckleberry Febbo,Honda,huckl3b3rry87,,,febbo@umich.edu,San Jose,https://github.com/huckl3b3rry87,39,11
+Asier Bilbao,,abilbaotm,,,,,https://github.com/abilbaotm,32,22
+Italo José,@herbjs,italojs,,,italo.i@live.com,Brazil,https://github.com/italojs,385,57
+Federico Proni,,pronif,,,,London,https://github.com/pronif,2,0
+,,sgvandijk,,,,,https://github.com/sgvandijk,17,0
+hunkyu,,hunkyu,,,,Southwest University of Science and Technology ,https://github.com/hunkyu,32,67
+,,javcursor,,,,,https://github.com/javcursor,0,0
+Sneha Ganesh,,snehagn,,,,United States,https://github.com/snehagn,0,1
+,,golnazhabibi3,,,,,https://github.com/golnazhabibi3,1,1
+EfimiaPanagiotaki-StreetDrone,StreetDrone,EfimiaPanagiotaki-StreetDrone,,,,Oxford,https://github.com/EfimiaPanagiotaki-StreetDrone,6,2
+Tek Raj Chhetri,University of Southampton,tekrajchhetri,,,,United Kingdom,https://github.com/tekrajchhetri,3,2
+Joshua Whitley,,maximus5684,,,maximus5684@gmail.com,,https://github.com/maximus5684,2,1
+,,ubercool2,,,,,https://github.com/ubercool2,6,0
+Kenji Mouri (Qi Lu),Day: @QieTV / Night: @Chuyu-Team @M2Team,MouriNaruto,,,Kenji.Mouri@outlook.com,,https://github.com/MouriNaruto,606,275
+snail333,,snail333,,,,Beijing,https://github.com/snail333,6,8
+Ian Colwell,,icolwell,,,,Canada,https://github.com/icolwell,13,13
+AdamShan,,AbangLZU,,,,"Beijing, Wangjing",https://github.com/AbangLZU,596,17
+MagicSource,Google,lucasjinreal,,,nicholasjela@gmail.com,Sanfancisco,https://github.com/lucasjinreal,2211,396
+,,14212094,,,,,https://github.com/14212094,0,17
+,,zzhh00,,,,,https://github.com/zzhh00,1,53
+,,urbansound8K,,,,,https://github.com/urbansound8K,0,1
+Aaryan Murgunde,,aaryanmurgunde,,,,"Pune, IN",https://github.com/aaryanmurgunde,7,7
+,,jfkkf123,,,,,https://github.com/jfkkf123,3,122
+,,SoohyeokPark-MORAI,,,,,https://github.com/SoohyeokPark-MORAI,0,0
+shpark - MORAI Inc.,MORAI Inc.,Soohyeok-Park,,,,,https://github.com/Soohyeok-Park,0,1
+Deleted user,,ghost,,,,"Nothing to see here, move along.",https://github.com/ghost,8292,0
+levie,,LevieSun,,,,beijing,https://github.com/LevieSun,0,0
+,,may012345,,,,,https://github.com/may012345,0,0
+Makoto Tokunaga,@tier4 ,vios-fish,,,,Tokyo,https://github.com/vios-fish,4,1
+DeeKay Goswami,University at Buffalo,DeeKayG,,,,Buffalo,https://github.com/DeeKayG,0,0
+David Gossow,,david-vay,,,,,https://github.com/david-vay,0,0
+,,AvinashRamashray,,,,,https://github.com/AvinashRamashray,2,2
+Benjamin Gilby,,bgilby59,,,,,https://github.com/bgilby59,3,2
+Jang Hyun Cho,Kyung Hee University,cho-jang-hyun,,,,Suwon,https://github.com/cho-jang-hyun,14,21
+,,jyh3690,,,,,https://github.com/jyh3690,0,1
+Ronald Ensing,,RonaldEnsing,,,,,https://github.com/RonaldEnsing,3,0
+,,guchangjun,,,,,https://github.com/guchangjun,1,3
+uknowWho,42 Wolfsburg,mdabir1203,,,,"Hannover,Germany ",https://github.com/mdabir1203,63,140
+Khasreto,Robotec.ai,adamkrawczyk,,,,Poland,https://github.com/adamkrawczyk,21,26
+,,lymcs,,,,,https://github.com/lymcs,0,0
+Allen,,tl230419,,,chenwenhao888168@gmail.com,China,https://github.com/tl230419,0,3
+maleicacid,,kazuki0824,,,,,https://github.com/kazuki0824,42,96
+Jochen Sprickerhof,,jspricke,,,github@jochen.sprickerhof.de,,https://github.com/jspricke,205,0
+Ahmad Amine,University of Pennsylvania,AhmadAmine998,,,,"Philadelphia, PA",https://github.com/AhmadAmine998,3,2
+,,0xd1ma,,,,,https://github.com/0xd1ma,1,3
+brewmaster,,harderthan,,,,,https://github.com/harderthan,16,59
+,,haoliliang,,,,,https://github.com/haoliliang,0,0
+,,aicarmark,,,,,https://github.com/aicarmark,3,4
+,,masa1228masa,,,,,https://github.com/masa1228masa,1,0
+Francis Joseph,,francisvac,,,,,https://github.com/francisvac,0,0
+zhenya.liu,,huiyi1990,,,,,https://github.com/huiyi1990,7,30
+Ming Rutar,,mingrutar,,,,"Portland, Oregon",https://github.com/mingrutar,9,8
+Qi Luo,,Capri2014,,,qi.stephen.luo@gmail.com,,https://github.com/Capri2014,354,173
+,,cho3,,,,,https://github.com/cho3,2,0
+kernyan,,kernyan,,,,,https://github.com/kernyan,1,3
