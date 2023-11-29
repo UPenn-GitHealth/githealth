@@ -22,66 +22,74 @@ export default function Home() {
         <h1 className="text-xl font-bold ml-8">Welcome to GitHealth!</h1>
       </header>
 
+      {/* IssueDataFirstResp and Image side by side */}
+      <div className="flex my-8">
+        <section style={{ maxHeight: '600px', maxWidth: '200px', overflow: 'auto', marginRight: '16px' }}>
+          <IssueDataFirstResp />
+        </section>
+        <section>
+          <Image
+            src="/avg_first_resp_time_plot.png"
+            alt="Average First Response Time Plot"
+            width={600}
+            height={400}
+          />
+          <Image
+          src="/median_first_resp_time_plot.png"
+          alt="Median First Response Time Plot"
+          width={600}
+          height={400}
+          />
+        </section>
+      </div>
 
-      {/* IssueData client component */}
-      <section className="my-8" style={{ maxHeight: '350px', maxWidth: '200px', overflow: 'auto' }}>
-        <IssueDataFirstResp />
-      </section>
-      <section className="my-8" style={{ maxHeight: '350px', maxWidth: '200px', overflow: 'auto' }}>
-        <IssueDataClose />
-      </section>
+      {/* IssueDataFirstResp and Image side by side */}
+      <div className="flex my-8">
+        <section style={{ maxHeight: '600px', maxWidth: '200px', overflow: 'auto', marginRight: '16px' }}>
+          <IssueDataClose />
+        </section>
+        <section>
+          <Image
+            src="/avg_close_time_plot.png"
+            alt="Average Close Time Plot"
+            width={600}
+            height={400}
+          />
+          <Image
+          src="/median_close_time_plot.png"
+          alt="Median Close Time Plot"
+          width={600}
+          height={400}
+          />
+        </section>
+      </div>
 
-      {/* Average First Response Time Plot */}
-      <Image
-        src="/avg_first_resp_time_plot.png"
-        alt="Average First Response Time Plot"
-        width={1200/2}
-        height={800/2}
-      />
-      {/* Median First Response Time Plot */}
-      <Image
-        src="/median_first_resp_time_plot.png"
-        alt="Median First Response Time Plot"
-        width={1200/2}
-        height={800/2}
-      />
-      {/* Average Close Time Plot */}
-      <Image
-        src="/avg_close_time_plot.png"
-        alt="Average Close Time Plot"
-        width={1200/2}
-        height={800/2}
-      />
-      {/* Median Close Time Plot */}
-      <Image
-        src="/median_close_time_plot.png"
-        alt="Median Close Time Plot"
-        width={1200/2}
-        height={800/2}
-      />
+      {/* CommentCountByDiscussionThreadAuthor and Image side by side */}
+      <div className="flex my-8">
+        <section style={{ maxHeight: '817px', overflow: 'auto', marginRight: '16px' }}>
+          <CommentCountByDiscussionThreadAuthor />
+        </section>
+        <Image
+          src="/discussion_dataset_network_visualization.png"
+          alt="Discussion Dataset Network Visualization"
+          width={1820/2.5}
+          height={2042/2.5}
+        />
+      </div>
 
-      <section className="my-8" style={{ maxHeight: '350px', maxWidth: '500px', overflow: 'auto' }}>
-        <CommentCountByDiscussionThreadAuthor />
-      </section>
+      {/* CommenterDTAConnectionCountAcrossOrganizations and Image side by side */}
+      <div className="flex my-8">
+        <section style={{ maxHeight: '633px', overflow: 'auto', marginRight: '16px' }}>
+          <CommenterDTAConnectionCountAcrossOrganizations />
+        </section>
+        <Image
+          src="/commenter-dta_connection_network_across_organizations.png"
+          alt="Commenter DTA Connection Network Across Organizations"
+          width={1415/2.5}
+          height={1582/2.5}
+        />
+      </div>
 
-      <section className="my-8" style={{ maxHeight: '350px', maxWidth: '500px', overflow: 'auto' }}>
-        <CommenterDTAConnectionCountAcrossOrganizations />
-      </section>
-
-      {/* Commenter DTA Connection Network Across Organizations */}
-      <Image
-        src="/commenter-dta_connection_network_across_organizations.png"
-        alt="Commenter DTA Connection Network Across Organizations"
-        width={1415/2.5}
-        height={1582/2.5}
-      />
-      {/* Discussion Dataset Network Visualization */}
-      <Image
-        src="/discussion_dataset_network_visualization.png"
-        alt="Discussion Dataset Network Visualization"
-        width={1820/2.5}
-        height={2042/2.5}
-      />
 
     </main>
   );
