@@ -8,4 +8,4 @@
 #### Most Recent Version [Pull_Request_data] Folder : `pull requests > pull requests v2.0`
 
 
-#### Added new version [user details data] Folder : `user_details`
+#### Added new version [user details data] Folder : `user_details > version 1`
