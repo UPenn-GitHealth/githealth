@@ -28,14 +28,14 @@ class IssueResponseTime(BaseModel):
     issues_time_to_first_response_hours: float
 
 class CommentCountByDiscussionThreadAuthor(BaseModel):
-    discussion_thread_author: int
-    comment_author: int
+    discussion_thread_author: str
+    comment_author: str
     comment_count: int
     normalized_comment_count: float
 
 class CommenterDTAConnectionCountAcrossOrganizations(BaseModel):
-    commenter_organization: int
-    discussion_thread_author_organization: int
+    commenter_organization: str
+    discussion_thread_author_organization: str
     commenter_dta_connection_count: int
 
 # First response time across all issues
@@ -100,6 +100,7 @@ async def generate_comment_countdiscussion_thread_author_table():
     gb_df_2["Normalized Comment ID"] = gb_df_2['Comment ID'] / total_comments
 
     gb_df_2 = gb_df_2.rename(columns={"User ID": "discussion_thread_author", "Comment Author": "comment_author", "Comment ID": "comment_count", "Normalized Comment ID": "normalized_comment_count"})
+    gb_df_2 = gb_df_2[gb_df_2['comment_count'] > 5]
 
     # # Now, use the nx library to created a directed graph (DiGraph) that we can then use to run PageRank/Gini coefficient analyses
     # # and generate other networked level metrics
@@ -138,10 +139,10 @@ async def generate_comment_countdiscussion_thread_author_table():
     return response_list
 
 # Commenter DTA connection count across organizations
-@app.get("/discussions/commenter_dta_connection_count_across_organizations", response_model=List[CommenterDTAConnectionCountAcrossOrganizations])
+@app.get("/discussions/commenter-dta-connection-count-across-organizations", response_model=List[CommenterDTAConnectionCountAcrossOrganizations])
 async def generate_commenter_dta_connection_count_across_organizations():
-    final_discussion_data = pd.read_csv("final_github_discussion_data.csv")
-    autoware_membership_data = pd.read_csv("autoware_contributors.csv")
+    final_discussion_data = pd.read_csv("Discussions_Data/final_github_discussion_data.csv")
+    autoware_membership_data = pd.read_csv("Discussions_Data/autoware_contributors.csv")
 
     # Join the autoware contributors CSV with the final discussion data CSV to get inter-organization metrics
     full_autoware_data = pd.merge(final_discussion_data, autoware_membership_data, left_on='discussion_comment_author', right_on='Github username', how='inner')
