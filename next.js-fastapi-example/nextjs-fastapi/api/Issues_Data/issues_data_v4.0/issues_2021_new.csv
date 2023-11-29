@@ -1,6 +1,0 @@
-issues_title,issues_created_at,issues_thread_id,issues_comment_id,issues_comment_type,issues_comment_text,issues_comment_author,issues_time_to_close,issues_time_to_first_response,issues_no_of_comments,issues_commits,issues_checks,issues_files_changed,issues_lines_changed
-Consider the structure of sensor/vehicle description/launch,2021-12-27T02:16:02Z,1284821216,1166428237,questioned,FYI sensor_component: https://github.com/tier4/sensor_description.iv,kenji-miyake,5334268.0,130.0,2,0,0,0,0
-Consider the structure of sensor/vehicle description/launch,2022-02-26T19:58:20Z,1284821216,1166428239,questioned,"Unified.
-https://github.com/autowarefoundation/sample_vehicle_launch
-https://github.com/autowarefoundation/sample_sensor_kit_launch",kenji-miyake,5334268.0,130.0,2,0,0,0,0
-Prepare a development environment for autoware.universe,2022-01-14T13:37:44Z,1284821238,1166428274,questioned,Can be closed by https://github.com/autowarefoundation/autoware/pull/8 and https://github.com/autowarefoundation/autoware/pull/14.,kenji-miyake,3727181.0,2099559.0,1,0,0,0,0
