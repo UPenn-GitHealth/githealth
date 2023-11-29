@@ -22,11 +22,12 @@ export default function Home() {
         <h1 className="text-xl font-bold ml-8">Welcome to GitHealth!</h1>
       </header>
 
-      {/* IssueData client components */}
-      <section className="my-8">
+
+      {/* IssueData client component */}
+      <section className="my-8" style={{ maxHeight: '350px', maxWidth: '200px', overflow: 'auto' }}>
         <IssueDataFirstResp />
       </section>
-      <section className="my-8">
+      <section className="my-8" style={{ maxHeight: '350px', maxWidth: '200px', overflow: 'auto' }}>
         <IssueDataClose />
       </section>
 
@@ -59,11 +60,11 @@ export default function Home() {
         height={800/2}
       />
 
-      <section className="my-8">
+      <section className="my-8" style={{ maxHeight: '350px', maxWidth: '500px', overflow: 'auto' }}>
         <CommentCountByDiscussionThreadAuthor />
       </section>
 
-      <section className="my-8">
+      <section className="my-8" style={{ maxHeight: '350px', maxWidth: '500px', overflow: 'auto' }}>
         <CommenterDTAConnectionCountAcrossOrganizations />
       </section>
 
