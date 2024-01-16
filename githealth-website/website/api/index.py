@@ -46,7 +46,7 @@ class CommenterDTAConnectionCountAcrossOrganizations(BaseModel):
 # First response time across all issues
 @app.get("/issues/first-response-time", response_model=List[IssueResponseTime])
 async def generate_issues_first_resp_table():
-    csv_dir = 'Issues_Data/issues_data_v4.0' 
+    csv_dir = 'api/Issues_Data/issues_data_v4.0' 
     csv_pattern = os.path.join(csv_dir, 'issues_*.csv')
     csv_files = glob.glob(csv_pattern)
 
@@ -82,7 +82,7 @@ async def generate_issues_first_resp_table():
 
 @app.get("/issues/time-to-close", response_model=List[IssueTimeToClose])
 async def generate_issues_time_to_close_table():
-    csv_dir = 'Issues_Data/issues_data_v4.0'
+    csv_dir = 'api/Issues_Data/issues_data_v4.0'
     csv_pattern = os.path.join(csv_dir, 'issues_*.csv')
     csv_files = glob.glob(csv_pattern)
 
@@ -119,7 +119,7 @@ async def generate_issues_time_to_close_table():
 # Comment count by discussion thread author
 @app.get("/discussions/comment-count-by-discussion-thread-author", response_model=List[CommentCountByDiscussionThreadAuthor])
 async def generate_comment_countdiscussion_thread_author_table():
-    discussion_data = pd.read_csv("Discussions_Data/github_discussion_data.csv")
+    discussion_data = pd.read_csv("api/Discussions_Data/github_discussion_data.csv")
 
     # We want to primarily focus on those discussions that have been answered - those are the most informative
     answered_discussion_data = discussion_data[discussion_data['Answered/Unanswered'] == 'Answered']
@@ -182,8 +182,8 @@ async def generate_comment_countdiscussion_thread_author_table():
 # Commenter DTA connection count across organizations
 @app.get("/discussions/commenter-dta-connection-count-across-organizations", response_model=List[CommenterDTAConnectionCountAcrossOrganizations])
 async def generate_commenter_dta_connection_count_across_organizations():
-    final_discussion_data = pd.read_csv("Discussions_Data/final_github_discussion_data.csv")
-    autoware_membership_data = pd.read_csv("Discussions_Data/autoware_contributors.csv")
+    final_discussion_data = pd.read_csv("api/Discussions_Data/final_github_discussion_data.csv")
+    autoware_membership_data = pd.read_csv("api/Discussions_Data/autoware_contributors.csv")
 
     # Join the autoware contributors CSV with the final discussion data CSV to get inter-organization metrics
     full_autoware_data = pd.merge(final_discussion_data, autoware_membership_data, left_on='discussion_comment_author', right_on='Github username', how='inner')
