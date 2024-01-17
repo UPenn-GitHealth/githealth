@@ -40,26 +40,24 @@ export default function IssueData() {
     }
 
     return (
-        <div className="overflow-x-auto">
-            <table className="table">
-                <thead>
-                    <tr>
-                        <th>Year</th>
-                        <th>Month</th>
-                        <th>First Response Time (Hours)</th>
+        <table className="table">
+            <thead>
+                <tr>
+                    <th>Year</th>
+                    <th>Month</th>
+                    <th>First Response Time (Hours)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {issueData.map((issue, index) => (
+                    <tr key={index}>
+                        <td>{issue.year}</td>
+                        <td>{issue.month}</td>
+                        <td>{issue.issues_time_to_first_response_hours.toFixed(2)}</td>
                     </tr>
-                </thead>
-                <tbody>
-                    {issueData.map((issue, index) => (
-                        <tr key={index}>
-                            <td>{issue.year}</td>
-                            <td>{issue.month}</td>
-                            <td>{issue.issues_time_to_first_response_hours.toFixed(2)}</td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
-        </div>
+                ))}
+            </tbody>
+        </table>
     );
 }
 
