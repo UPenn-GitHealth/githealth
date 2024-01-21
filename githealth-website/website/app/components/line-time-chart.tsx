@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React from "react";
 import {
     Chart as ChartJS,
     Colors,
@@ -11,9 +11,9 @@ import {
     Title,
     Tooltip,
     Legend,
-} from 'chart.js';
-import 'chartjs-adapter-date-fns';
-import { Line } from 'react-chartjs-2';
+} from "chart.js";
+import "chartjs-adapter-date-fns";
+import { Line } from "react-chartjs-2";
 
 ChartJS.register(
     Colors,
@@ -23,42 +23,45 @@ ChartJS.register(
     LineElement,
     Title,
     Tooltip,
-    Legend
+    Legend,
 );
+
+export interface LineTimeChartPoint {
+    x: Date;
+    y: number;
+}
 
 type LineTimeChartProps = {
     title?: string;
-    legend: string;
-    data?: { x: Date, y: number }[]
-}
+    legend?: string;
+    data?: LineTimeChartPoint[];
+};
 
 export default function LineTimeChart(props: LineTimeChartProps) {
     const options = {
         plugins: {
             title: {
                 display: true,
-                text: props.title ? props.title : "Untittled chart"
-            }
+                text: props.title ? props.title : "Untittled chart",
+            },
         },
         scales: {
             x: {
                 type: "time",
                 time: {
-                    unit: "day"
-                }
-            }
-        }
+                    unit: "day",
+                },
+            },
+        },
     };
 
-    // TODO: Remove dummy data
-    const default_dataset = [{ x: new Date("2069-04-20"), y: 5 },
-    { x: new Date("2069-06-09"), y: 2 }
-    ];
-
     const data = {
-        datasets: [{
-            data: props.data ? props.data : default_dataset
-        }]
-    }
-    return <Line options={options} data={data} />
+        datasets: [
+            {
+                label: props.legend ? props.legend : "Data",
+                data: props.data ? props.data : [],
+            },
+        ],
+    };
+    return <Line options={options} data={data} />;
 }

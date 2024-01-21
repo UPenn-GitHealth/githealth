@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 interface IssueResponseTime {
     year: number;
@@ -15,9 +15,9 @@ export default function IssueData() {
     useEffect(() => {
         async function fetchIssueData() {
             try {
-                const response = await fetch('http://127.0.0.1:8000/issues/first-response-time');
+                const response = await fetch("/api/issues/first-response-time");
                 if (!response.ok) {
-                    throw new Error('Network response was not ok');
+                    throw new Error("Network response was not ok");
                 }
                 const data: IssueResponseTime[] = await response.json();
                 setIssueData(data);
@@ -60,6 +60,3 @@ export default function IssueData() {
         </table>
     );
 }
-
-
-

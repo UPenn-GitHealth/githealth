@@ -1,16 +1,16 @@
-import React from 'react';
-import Image from 'next/image';
-import IssueDataFirstResp from './issues/issues-first-response.client';
-import IssueDataClose from './issues/issues-close.client';
-import CommentCountByDiscussionThreadAuthor from './discussions/comment-count-by-discussion-thread-author.client';
-import CommenterDTAConnectionCountAcrossOrganizations from './discussions/commenter-dta-connection-count-across-organizations.client';
-import LineTimeChart from './components/line-time-chart';
+import React from "react";
+import Image from "next/image";
+import IssueDataFirstResp from "./issues/issues-first-response.client";
+import IssueDataClose from "./issues/issues-close.client";
+import CommentCountByDiscussionThreadAuthor from "./discussions/comment-count-by-discussion-thread-author.client";
+import CommenterDTAConnectionCountAcrossOrganizations from "./discussions/commenter-dta-connection-count-across-organizations.client";
+import LineTimeChart from "./components/line-time-chart";
+import FirstResponseMeanChart from "./issues/first-response-mean-chart";
+import FirstResponseMedian from "./issues/first-response-median-chart";
 
 export default function Home() {
-
     return (
         <main className="flex flex-col min-h-screen justify-between p-24">
-
             {/* Header */}
             <header className="w-full flex justify-start items-center">
                 <Image
@@ -23,10 +23,18 @@ export default function Home() {
                 <h1 className="text-xl font-bold ml-8">Welcome to GitHealth!</h1>
             </header>
 
-            <LineTimeChart title="My chart" legend="my legend" />
+            <FirstResponseMeanChart />
+            <FirstResponseMedian />
             {/* IssueDataFirstResp and Image side by side */}
             <div className="flex my-8">
-                <section style={{ maxHeight: '600px', maxWidth: '200px', overflow: 'auto', marginRight: '16px' }}>
+                <section
+                    style={{
+                        maxHeight: "600px",
+                        maxWidth: "200px",
+                        overflow: "auto",
+                        marginRight: "16px",
+                    }}
+                >
                     <IssueDataFirstResp />
                 </section>
                 <section>
@@ -47,7 +55,14 @@ export default function Home() {
 
             {/* IssueDataFirstResp and Image side by side */}
             <div className="flex my-8">
-                <section style={{ maxHeight: '600px', maxWidth: '200px', overflow: 'auto', marginRight: '16px' }}>
+                <section
+                    style={{
+                        maxHeight: "600px",
+                        maxWidth: "200px",
+                        overflow: "auto",
+                        marginRight: "16px",
+                    }}
+                >
                     <IssueDataClose />
                 </section>
                 <section>
@@ -68,7 +83,14 @@ export default function Home() {
 
             {/* CommentCountByDiscussionThreadAuthor and Image side by side */}
             <div className="flex my-8">
-                <section style={{ maxHeight: '817px', overflow: 'auto', marginRight: '16px', maxWidth: '450px' }}>
+                <section
+                    style={{
+                        maxHeight: "817px",
+                        overflow: "auto",
+                        marginRight: "16px",
+                        maxWidth: "450px",
+                    }}
+                >
                     <CommentCountByDiscussionThreadAuthor />
                 </section>
                 <Image
@@ -81,7 +103,14 @@ export default function Home() {
 
             {/* CommenterDTAConnectionCountAcrossOrganizations and Image side by side */}
             <div className="flex my-8">
-                <section style={{ maxHeight: '814px', overflow: 'auto', marginRight: '16px', maxWidth: '450px' }}>
+                <section
+                    style={{
+                        maxHeight: "814px",
+                        overflow: "auto",
+                        marginRight: "16px",
+                        maxWidth: "450px",
+                    }}
+                >
                     <CommenterDTAConnectionCountAcrossOrganizations />
                 </section>
                 <Image
@@ -91,8 +120,6 @@ export default function Home() {
                     height={814}
                 />
             </div>
-
-
         </main>
     );
 }
