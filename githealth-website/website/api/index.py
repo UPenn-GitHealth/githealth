@@ -64,7 +64,7 @@ def get_response_times():
         return response_times
 
     # TODO: Use database instead of CSV
-    csv_dir = "api/Issues_Data/issues_data_v4.0"
+    csv_dir = "Issues_Data/issues_data_v4.0"
     csv_pattern = os.path.join(csv_dir, "issues_*.csv")
     csv_files = glob.glob(csv_pattern)
 
@@ -166,7 +166,7 @@ async def first_response_median():
 
 @app.get("/issues/time-to-close", response_model=List[IssueTimeToClose])
 async def generate_issues_time_to_close_table():
-    csv_dir = "api/Issues_Data/issues_data_v4.0"
+    csv_dir = "Issues_Data/issues_data_v4.0"
     csv_pattern = os.path.join(csv_dir, "issues_*.csv")
     csv_files = glob.glob(csv_pattern)
 
@@ -211,7 +211,7 @@ async def generate_issues_time_to_close_table():
     response_model=List[CommentCountByDiscussionThreadAuthor],
 )
 async def generate_comment_countdiscussion_thread_author_table():
-    discussion_data = pd.read_csv("api/Discussions_Data/github_discussion_data.csv")
+    discussion_data = pd.read_csv("Discussions_Data/github_discussion_data.csv")
 
     # We want to primarily focus on those discussions that have been answered - those are the most informative
     answered_discussion_data = discussion_data[
@@ -300,10 +300,10 @@ async def generate_comment_countdiscussion_thread_author_table():
 )
 async def generate_commenter_dta_connection_count_across_organizations():
     final_discussion_data = pd.read_csv(
-        "api/Discussions_Data/final_github_discussion_data.csv"
+        "Discussions_Data/final_github_discussion_data.csv"
     )
     autoware_membership_data = pd.read_csv(
-        "api/Discussions_Data/autoware_contributors.csv"
+        "Discussions_Data/autoware_contributors.csv"
     )
 
     # Join the autoware contributors CSV with the final discussion data CSV to get inter-organization metrics

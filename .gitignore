@@ -8,3 +8,4 @@ layer/
 **/layer.zip
 *.tfstate
 *.tfstate.*
+node_modules/ 
