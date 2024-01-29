@@ -45,12 +45,6 @@ export default function LineTimeChart(props: LineTimeChartProps) {
     const [filteredData, setFilteredData] = useState<LineTimeChartPoint[]>([]);
 
     const options = {
-        plugins: {
-            title: {
-                display: true,
-                text: props.title ? props.title : "Untittled chart",
-            },
-        },
         scales: {
             x: {
                 grid: {
@@ -99,7 +93,7 @@ export default function LineTimeChart(props: LineTimeChartProps) {
 
     return (
         <div>
-
+            <h2 className="text-center text-xl text-blue-500 font-bold my-4">{props.title ?? "Untitled chart"}</h2>
             {props.filter ?
                 <>
 
