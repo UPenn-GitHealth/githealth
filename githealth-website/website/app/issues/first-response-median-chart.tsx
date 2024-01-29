@@ -33,7 +33,7 @@ export default function FirstResponseMedian() {
     return (
         <LineTimeChart
             title="Median First Response Time"
-            legend="Median First Resposne Time (hours)"
+            legend="Median First Response Time (hours)"
             data={issueData}
         />
     );

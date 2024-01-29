@@ -10,6 +10,9 @@ import io
 import matplotlib.pyplot as plt
 import math
 import datetime
+from datetime import date
+from typing import List, Optional
+from fastapi import Query
 
 app = FastAPI()
 
@@ -54,7 +57,7 @@ class CommenterDTAConnectionCountAcrossOrganizations(BaseModel):
     commenter_dta_connection_count: int
 
 
-# Calculate first resposne times a single time:
+# Calculate first response times a single time:
 response_times: List[IssueResponseTime] = []
 
 
@@ -113,30 +116,22 @@ async def generate_issues_first_resp_table():
 
 
 @app.get("/issues/first-response-time/mean", response_model=List[IssueResponseDate])
-async def first_response_mean():
+async def first_response_mean(start_date: Optional[date] = Query(None), end_date: Optional[date] = Query(None)):
     response_times = get_response_times()
     df = pd.DataFrame(response_times)
-    res: List[IssueResponseDate] = []
 
-    # Group by year and month, then calculate the average time to first response
-    monthly_avg = (
-        df.groupby(["year", "month"])["issues_time_to_first_response_hours"]
-        .mean()
-        .reset_index()
-    )
+    # Convert 'date' column to datetime object
+    df['date'] = pd.to_datetime(df.assign(day=1)[['year', 'month', 'day']])
 
-    # Convert 'year' and 'month' into a datetime object
-    monthly_avg["date"] = pd.to_datetime(
-        monthly_avg.assign(day=1)[["year", "month", "day"]]
-    )
+    # Filter data based on start_date and end_date
+    if start_date:
+        df = df[df['date'] >= pd.to_datetime(start_date)]
+    if end_date:
+        df = df[df['date'] <= pd.to_datetime(end_date)]
 
-    monthly_avg.drop(columns=["year", "month"], inplace=True)
-
-    monthly_avg = monthly_avg.reindex(
-        columns=["date", "issues_time_to_first_response_hours"]
-    )
-    return monthly_avg.to_dict(orient="records")
-
+    # Group by date and calculate the average time to first response
+    monthly_avg = df.groupby('date')['issues_time_to_first_response_hours'].mean().reset_index()
+    return monthly_avg.to_dict(orient='records')
 
 @app.get("/issues/first-response-time/median", response_model=List[IssueResponseDate])
 async def first_response_median():

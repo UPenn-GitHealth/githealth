@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import IssueDataFirstResp from './issues-first-response.client';
-import IssueDataClose from './issues-close.client';
+// import IssueDataFirstResp from './issues-first-response.client';
+// import IssueDataClose from './issues-close.client';
 import FirstResponseMeanChart from "./first-response-mean-chart";
 import FirstResponseMedian from "./first-response-median-chart";
 import Header from "../components/Header";
