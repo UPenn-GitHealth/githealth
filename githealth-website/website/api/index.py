@@ -27,6 +27,7 @@ app.add_middleware(
 
 
 # Define a Pydantic model for the response data structure
+# TODO: Rename
 class IssueResponseTime(BaseModel):
     year: int
     month: int
@@ -38,9 +39,14 @@ class IssueResponseDate(BaseModel):
     issues_time_to_first_response_hours: float
 
 
-class IssueTimeToClose(BaseModel):
+class IssueCloseTime(BaseModel):
     year: int
     month: int
+    issues_time_to_close_hours: float
+
+
+class IssueCloseDate(BaseModel):
+    date: datetime.date
     issues_time_to_close_hours: float
 
 
@@ -57,8 +63,10 @@ class CommenterDTAConnectionCountAcrossOrganizations(BaseModel):
     commenter_dta_connection_count: int
 
 
-# Calculate first response times a single time:
+# Calculate issue data a single time:
+# TODO: add some sort of timed caching method:
 response_times: List[IssueResponseTime] = []
+close_times: List[IssueCloseTime] = []
 
 
 def get_response_times():
@@ -108,36 +116,33 @@ def get_response_times():
     return response_times
 
 
-# First response time across all issues
-@app.get("/issues/first-response-time", response_model=List[IssueResponseTime])
-async def generate_issues_first_resp_table():
-    response_times = get_response_times()
-    return response_times
-
-
 @app.get("/issues/first-response-time/mean", response_model=List[IssueResponseDate])
-async def first_response_mean(start_date: Optional[date] = Query(None), end_date: Optional[date] = Query(None)):
+async def first_response_mean(
+    start_date: Optional[date] = Query(None), end_date: Optional[date] = Query(None)
+):
     response_times = get_response_times()
     df = pd.DataFrame(response_times)
 
     # Convert 'date' column to datetime object
-    df['date'] = pd.to_datetime(df.assign(day=1)[['year', 'month', 'day']])
+    df["date"] = pd.to_datetime(df.assign(day=1)[["year", "month", "day"]])
 
     # Filter data based on start_date and end_date
     if start_date:
-        df = df[df['date'] >= pd.to_datetime(start_date)]
+        df = df[df["date"] >= pd.to_datetime(start_date)]
     if end_date:
-        df = df[df['date'] <= pd.to_datetime(end_date)]
+        df = df[df["date"] <= pd.to_datetime(end_date)]
 
     # Group by date and calculate the average time to first response
-    monthly_avg = df.groupby('date')['issues_time_to_first_response_hours'].mean().reset_index()
-    return monthly_avg.to_dict(orient='records')
+    monthly_avg = (
+        df.groupby("date")["issues_time_to_first_response_hours"].mean().reset_index()
+    )
+    return monthly_avg.to_dict(orient="records")
+
 
 @app.get("/issues/first-response-time/median", response_model=List[IssueResponseDate])
 async def first_response_median():
     response_times = get_response_times()
     df = pd.DataFrame(response_times)
-    res: List[IssueResponseDate] = []
 
     # Group by year and month, then calculate the average time to first response
     monthly_avg = (
@@ -159,8 +164,7 @@ async def first_response_median():
     return monthly_avg.to_dict(orient="records")
 
 
-@app.get("/issues/time-to-close", response_model=List[IssueTimeToClose])
-async def generate_issues_time_to_close_table():
+def get_close_times():
     csv_dir = "Issues_Data/issues_data_v4.0"
     csv_pattern = os.path.join(csv_dir, "issues_*.csv")
     csv_files = glob.glob(csv_pattern)
@@ -195,9 +199,54 @@ async def generate_issues_time_to_close_table():
     close_data = sorted_issues_data[["year", "month", "issues_time_to_close_hours"]]
 
     # Convert the pandas DataFrame to a list of dictionaries
-    close_list = close_data.to_dict(orient="records")
+    global close_times
+    close_times = close_data.to_dict(orient="records")
 
-    return close_list
+    return close_times
+
+
+@app.get("/issues/close-time/mean", response_model=List[IssueCloseDate])
+async def close_time_mean():
+    close_times = get_close_times()
+    df = pd.DataFrame(close_times)
+
+    # Group by year and month, then calculate the average time to first response
+    monthly_avg = (
+        df.groupby(["year", "month"])["issues_time_to_close_hours"].mean().reset_index()
+    )
+
+    # Convert 'year' and 'month' into a datetime object
+    monthly_avg["date"] = pd.to_datetime(
+        monthly_avg.assign(day=1)[["year", "month", "day"]]
+    )
+
+    monthly_avg.drop(columns=["year", "month"], inplace=True)
+
+    monthly_avg = monthly_avg.reindex(columns=["date", "issues_time_to_close_hours"])
+    return monthly_avg.to_dict(orient="records")
+
+
+@app.get("/issues/close-time/median", response_model=List[IssueCloseDate])
+async def close_time_median():
+    close_times = get_close_times()
+    df = pd.DataFrame(close_times)
+
+    # Group by year and month, then calculate the average time to first response
+    monthly_avg = (
+        df.groupby(["year", "month"])["issues_time_to_close_hours"]
+        .median()
+        .reset_index()
+    )
+
+    # Convert 'year' and 'month' into a datetime object
+    monthly_avg["date"] = pd.to_datetime(
+        monthly_avg.assign(day=1)[["year", "month", "day"]]
+    )
+
+    monthly_avg.drop(columns=["year", "month"], inplace=True)
+
+    monthly_avg = monthly_avg.reindex(columns=["date", "issues_time_to_close_hours"])
+    return monthly_avg.to_dict(orient="records")
 
 
 # Comment count by discussion thread author
@@ -297,9 +346,7 @@ async def generate_commenter_dta_connection_count_across_organizations():
     final_discussion_data = pd.read_csv(
         "Discussions_Data/final_github_discussion_data.csv"
     )
-    autoware_membership_data = pd.read_csv(
-        "Discussions_Data/autoware_contributors.csv"
-    )
+    autoware_membership_data = pd.read_csv("Discussions_Data/autoware_contributors.csv")
 
     # Join the autoware contributors CSV with the final discussion data CSV to get inter-organization metrics
     full_autoware_data = pd.merge(
