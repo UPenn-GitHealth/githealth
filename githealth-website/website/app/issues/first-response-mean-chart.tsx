@@ -92,7 +92,7 @@ const FirstResponseMeanChart = () => {
 
     return (
         <div>
-            <h2 className="text-center text-blue-500 text-xl font-bold my-4">First Response Mean Time</h2>
+            <h2 className="text-center text-xl text-blue-500 font-bold my-4">First Response Mean Time</h2>
             <div className="flex justify-center gap-2 mb-4">
                 <input 
                     type="date" 
@@ -105,7 +105,29 @@ const FirstResponseMeanChart = () => {
                     onChange={(e) => setEndDate(e.target.value)} 
                 />
             </div>
-            {chartData && <Chart data={chartData} options={{ responsive: true }} />}
+            <div style={{ width: '75%', backgroundColor: 'rgba(255, 255, 255, 0.8)', padding: '10px', borderRadius: '10px' }}>
+                {chartData && (
+                    <Chart
+                        data={chartData}
+                        options={{
+                            responsive: true,
+                            maintainAspectRatio: true, // Add this to maintain aspect ratio
+                            scales: {
+                                x: {
+                                    grid: {
+                                        display: false
+                                    }
+                                },
+                                y: {
+                                    grid: {
+                                        display: false
+                                    }
+                                }
+                            }
+                        }}
+                    />
+                )}
+            </div>
         </div>
     );
 };
