@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
     Chart as ChartJS,
     Colors,
@@ -32,12 +32,18 @@ export interface LineTimeChartPoint {
 }
 
 type LineTimeChartProps = {
+    filter?: boolean;
     title?: string;
     legend?: string;
     data?: LineTimeChartPoint[];
 };
 
 export default function LineTimeChart(props: LineTimeChartProps) {
+
+    const [startDate, setStartDate] = useState<Date>(new Date());
+    const [endDate, setEndDate] = useState<Date>(new Date());
+    const [filteredData, setFilteredData] = useState<LineTimeChartPoint[]>([]);
+
     const options = {
         plugins: {
             title: {
@@ -47,9 +53,17 @@ export default function LineTimeChart(props: LineTimeChartProps) {
         },
         scales: {
             x: {
+                grid: {
+                    display: false,
+                },
                 type: "time",
                 time: {
-                    unit: "day",
+                    unit: "month",
+                },
+            },
+            y: {
+                grid: {
+                    display: false,
                 },
             },
         },
@@ -59,9 +73,63 @@ export default function LineTimeChart(props: LineTimeChartProps) {
         datasets: [
             {
                 label: props.legend ? props.legend : "Data",
-                data: props.data ? props.data : [],
+                data: filteredData,
+                borderColor: "rgb(75, 192, 192)",
+                tension: 0.1
             },
         ],
     };
-    return <Line options={options} data={data} />;
+
+
+    useEffect(() => {
+        setFilteredData(props.data ?? [])
+        props.data?.sort();
+        setStartDate(props.data?.at(0)?.x ?? new Date());
+        setEndDate(props.data?.at(props.data?.length - 1)?.x ?? new Date());
+    }, [props.data])
+
+    useEffect(() => {
+        if (startDate && endDate) {
+            const filteredData = props.data?.filter((item: LineTimeChartPoint) => {
+                return item.x >= startDate && item.x <= endDate;
+            });
+            setFilteredData(filteredData ?? []);
+        }
+    }, [props.data, startDate, endDate])
+
+    return (
+        <div>
+
+            {props.filter ?
+                <>
+
+                    <div className="flex justify-center gap-2 mb-4">
+                        <input
+                            type="date"
+                            value={startDate.toString()}
+                            onChange={(e) => setStartDate(e.target.value)}
+
+                        />
+                        <input
+                            type="date"
+                            value={endDate.toString()}
+                            onChange={(e) => setEndDate(e.target.value)}
+                        />
+                    </div>
+                </> : <></>}
+
+            < div
+                style={{
+                    width: "75%",
+                    backgroundColor: "rgba(255, 255, 255, 0.8)",
+                    padding: "10px",
+                    borderRadius: "10px",
+                }
+                }
+            >
+                <Line options={options} data={data} />
+            </div >
+
+        </div>
+    );
 }
