@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 import {
     Chart as ChartJS,
     Colors,
+    CategoryScale, 
     TimeScale,
     LinearScale,
     PointElement,
@@ -39,91 +40,100 @@ type LineTimeChartProps = {
 };
 
 export default function LineTimeChart(props: LineTimeChartProps) {
-
-    const [startDate, setStartDate] = useState<Date>(new Date());
-    const [endDate, setEndDate] = useState<Date>(new Date());
+    const [startDate, setStartDate] = useState('');
+    const [endDate, setEndDate] = useState('');
     const [filteredData, setFilteredData] = useState<LineTimeChartPoint[]>([]);
 
+    useEffect(() => {
+        if (props.data) {
+            let data = props.data;
+            // If startDate is set, filter the data to include points after the startDate
+            if (startDate) {
+                data = data.filter((point) => new Date(point.x) >= new Date(startDate));
+            }
+            // If endDate is set, filter the data to include points before the endDate
+            if (endDate) {
+                data = data.filter((point) => new Date(point.x) <= new Date(endDate));
+            }
+            setFilteredData(data);
+        }
+    }, [props.data, startDate, endDate]);
+
     const options = {
-        scales: {
-            x: {
-                grid: {
-                    display: false,
-                },
-                type: "time",
-                time: {
-                    unit: "month",
-                },
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                position: 'top' as const,
             },
-            y: {
-                grid: {
-                    display: false,
-                },
+            title: {
+                display: true,
+                text: props.title ?? 'Chart',
             },
         },
-    };
-
-    const data = {
-        datasets: [
-            {
-                label: props.legend ? props.legend : "Data",
-                data: filteredData,
-                borderColor: "rgb(75, 192, 192)",
-                tension: 0.1
+        scales: {
+            x: {
+                type: 'time',
+                time: {
+                    unit: 'month',
+                    displayFormats: {
+                        month: 'MMM yyyy'
+                    }
+                },
+                title: {
+                    display: true,
+                    text: 'Date'
+                }
             },
-        ],
+            y: {
+                title: {
+                    display: true,
+                    text: props.legend ?? 'Value'
+                }
+            }
+        }
     };
 
+    const chartData = {
+        labels: filteredData.map(d => d.x),
+        datasets: [{
+            label: props.legend ?? 'Dataset',
+            data: filteredData.map(d => ({ x: d.x, y: d.y })),
+            borderColor: 'rgb(75, 192, 192)',
+            tension: 0.1,
+            fill: false,
+        }]
+    };
 
-    useEffect(() => {
-        setFilteredData(props.data ?? [])
-        props.data?.sort();
-        setStartDate(props.data?.at(0)?.x ?? new Date());
-        setEndDate(props.data?.at(props.data?.length - 1)?.x ?? new Date());
-    }, [props.data])
-
-    useEffect(() => {
-        if (startDate && endDate) {
-            const filteredData = props.data?.filter((item: LineTimeChartPoint) => {
-                return item.x >= startDate && item.x <= endDate;
-            });
-            setFilteredData(filteredData ?? []);
-        }
-    }, [props.data, startDate, endDate])
+    // Define a style object for the chart container
+    const chartContainerStyle = {
+        width: '100%', // Use 100% to make the chart responsive
+        height: '400px', // Define a fixed height or use vh for viewport height
+        backgroundColor: 'rgba(255, 255, 255, 0.8)',
+        padding: '10px',
+        borderRadius: '10px',
+    };
 
     return (
         <div>
-            <h2 className="text-center text-xl text-blue-500 font-bold my-4">{props.title ?? "Untitled chart"}</h2>
-            {props.filter ?
-                <>
-
-                    <div className="flex justify-center gap-2 mb-4">
-                        <input
-                            type="date"
-                            value={startDate.toString()}
-                            onChange={(e) => setStartDate(e.target.value)}
-
-                        />
-                        <input
-                            type="date"
-                            value={endDate.toString()}
-                            onChange={(e) => setEndDate(e.target.value)}
-                        />
-                    </div>
-                </> : <></>}
-
-            < div
-                style={{
-                    width: "75%",
-                    backgroundColor: "rgba(255, 255, 255, 0.8)",
-                    padding: "10px",
-                    borderRadius: "10px",
-                }
-                }
-            >
-                <Line options={options} data={data} />
-            </div >
-
+            <h2 className="text-center text-xl text-blue-500 font-bold my-4">{props.title ?? "Untitled Chart"}</h2>
+            {props.filter && (
+                <div className="flex justify-center gap-2 mb-4">
+                    <input
+                        type="date"
+                        value={startDate}
+                        onChange={(e) => setStartDate(e.target.value)}
+                    />
+                    <input
+                        type="date"
+                        value={endDate}
+                        onChange={(e) => setEndDate(e.target.value)}
+                    />
+                </div>
+            )}
+            <div style={chartContainerStyle}>
+                <Line options={options} data={chartData} /> {/* Use chartData instead of data */}
+            </div>
         </div>
     );
 }
