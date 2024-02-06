@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+const PRODUCTION_API_DOMAIN = "https://githealth-backend.onrender.com/";
 const nextConfig = {
     rewrites: async () => {
         return [
@@ -7,7 +8,7 @@ const nextConfig = {
                 destination:
                     process.env.NODE_ENV === "development"
                         ? "http://127.0.0.1:8000/:path*"
-                        : "/api/",
+                        : PRODUCTION_API_DOMAIN + ":path*",
             },
             {
                 source: "/docs",
