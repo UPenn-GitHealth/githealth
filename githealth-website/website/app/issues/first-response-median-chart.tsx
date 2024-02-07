@@ -18,6 +18,7 @@ export default function FirstResponseMedian() {
             fetch("/api/issues/first-response-time/median")
                 .then((res) => res.json())
                 .then((data) => {
+                    // @ts-ignore
                     data.forEach((element) => {
                         element.x = element.date;
                         element.y = element.issues_time_to_first_response_hours;

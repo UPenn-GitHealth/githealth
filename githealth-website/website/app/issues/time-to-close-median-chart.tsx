@@ -18,6 +18,7 @@ export default function TimeToCloseMedian() {
             fetch("/api/issues/close-time/median")
                 .then((res) => res.json())
                 .then((data) => {
+                    // @ts-ignore
                     data.forEach((element) => {
                         element.x = element.date;
                         element.y = element.issues_time_to_close_hours;

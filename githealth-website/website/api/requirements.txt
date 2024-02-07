@@ -5,10 +5,9 @@ fastapi==0.104.1
 h11==0.14.0
 httptools==0.6.1
 idna==3.4
-<<<<<<< HEAD
-=======
+matplotlib
 networkx
->>>>>>> 5d86f957e2057247185e05933af4b8a8ee305b31
+pandas
 pydantic==2.5.1
 pydantic_core==2.14.3
 python-dotenv==1.0.0

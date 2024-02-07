@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import {
     Chart as ChartJS,
     Colors,
-    CategoryScale, 
+    CategoryScale,
     TimeScale,
     LinearScale,
     PointElement,
@@ -12,6 +12,7 @@ import {
     Title,
     Tooltip,
     Legend,
+    ChartOptions,
 } from "chart.js";
 import "chartjs-adapter-date-fns";
 import { Line } from "react-chartjs-2";
@@ -59,7 +60,7 @@ export default function LineTimeChart(props: LineTimeChartProps) {
         }
     }, [props.data, startDate, endDate]);
 
-    const options = {
+    const options: ChartOptions<"line"> = {
         responsive: true,
         maintainAspectRatio: false,
         plugins: {

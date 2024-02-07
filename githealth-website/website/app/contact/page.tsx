@@ -21,12 +21,12 @@ const ContactUs = () => {
                     </div>
                     <div>
                         <label htmlFor="message" className="text-sm font-medium text-gray-900 block mb-2">Your Message</label>
-                        <textarea id="message" name="message" rows="4" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Your message..." required></textarea>
+                        <textarea id="message" name="message" rows={4} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Your message..." required></textarea>
                     </div>
                     <button type="submit" className="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Submit</button>
                 </form>
-            </div>
-        </div>
+            </div >
+        </div >
     );
 };
 
