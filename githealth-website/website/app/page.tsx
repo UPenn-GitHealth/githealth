@@ -52,35 +52,6 @@ const HomePage = () => {
                 <span className="text-blue-600 hover:underline mt-4 block">View Discussions Metrics</span>
               </Link>
             </div>
-            {/* Card for CDI */}
-            <div className="bg-gray-100 rounded-xl p-6 hover:shadow-lg transition duration-300 ease-in-out">
-              <h3 className="text-2xl font-bold text-gray-800 mb-3">Corporate Diversity Index (In Progress)</h3>
-              <p className="text-gray-600">
-                Assess diversity of contributers
-              </p>
-              <Link href="/discussions">
-                <span className="text-blue-600 hover:underline mt-4 block">View CDI</span>
-              </Link>
-            </div>
-            {/* Card for TSDoC */}
-            <div className="bg-gray-100 rounded-xl p-6 hover:shadow-lg transition duration-300 ease-in-out">
-              <h3 className="text-2xl font-bold text-gray-800 mb-3">Time Series Distribution of Contribution (In Progress)</h3>
-              <p className="text-gray-600">
-                Contribution should be consistent and minimally volatile
-              </p>
-              <Link href="/discussions">
-                <span className="text-blue-600 hover:underline mt-4 block">View TSDoC</span>
-              </Link>
-            </div>
-            {/* Card for  */}
-            <div className="bg-gray-100 rounded-xl p-6 hover:shadow-lg transition duration-300 ease-in-out">
-              <h3 className="text-2xl font-bold text-gray-800 mb-3">Coming soon...</h3>
-              <p className="text-gray-600">
-              </p>
-              {/* <Link href="/discussions">
-                <span className="text-blue-600 hover:underline mt-4 block">View CDI</span>
-              </Link> */}
-            </div>
           </div>
         </div>
       </div>
