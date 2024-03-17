@@ -7,7 +7,7 @@ const teamMembers = [
   { name: "Zain Khan", title: "Role or Title", imageSrc: "/headshots/zain.jpg", description: "CIS Senior" },
   { name: "Anshul Sukhlecha", title: "Role or Title", imageSrc: "/headshots/anshul.jpg", description: "CIS Senior" },
   { name: "George Wang", title: "Role or Title", imageSrc: "/headshots/george.jpg", description: "CIS Senior" },
-  { name: "Valery Yakubovich", title: "Role or Title", imageSrc: "/headshots/valery.jpg", description: "Director of Mack Institute" },
+  { name: "Valery Yakubovich", title: "Role or Title", imageSrc: "/headshots/valery.jpg", description: "Executive Director of Mack Institute" },
   { name: "Soumya Dash", title: "Role or Title", imageSrc: "/headshots/soumya.jpg", description: "Master's Student" },
   { name: "Rahul Mangharam", title: "Role or Title", imageSrc: "/headshots/rahul.jpg", description: "ESE Professor" },
   { name: "Patricia Barr", title: "Role or Title", imageSrc: "/headshots/patricia.png", description: "Associate Director of Innovation Ecosystems at Mack Institute" }
