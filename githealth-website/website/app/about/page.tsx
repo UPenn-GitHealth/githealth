@@ -9,8 +9,8 @@ const teamMembers = [
   { name: "George Wang", title: "Role or Title", imageSrc: "/headshots/george.jpg", description: "CIS Senior" },
   { name: "Valery Yakubovich", title: "Role or Title", imageSrc: "/headshots/valery.jpg", description: "Executive Director of Mack Institute" },
   { name: "Soumya Dash", title: "Role or Title", imageSrc: "/headshots/soumya.jpg", description: "Master's Student" },
-  { name: "Rahul Mangharam", title: "Role or Title", imageSrc: "/headshots/rahul.jpg", description: "ESE Professor" },
-  { name: "Patricia Barr", title: "Role or Title", imageSrc: "/headshots/patricia.png", description: "Associate Director of Innovation Ecosystems at Mack Institute" }
+  { name: "Rahul Mangharam", title: "Role or Title", imageSrc: "/headshots/rahul.jpg", description: "ESE Associate Professor" },
+  { name: "Patricia Gruver-Barr", title: "Role or Title", imageSrc: "/headshots/patricia.png", description: "Associate Director of Innovation Ecosystems at Mack Institute" }
 ];
 
 const About = () => {

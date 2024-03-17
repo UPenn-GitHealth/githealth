@@ -12,7 +12,12 @@ const IssuesPage = () => {
             <div className="text-center p-4 bg-blue-600 text-white">
                 <h2 className="text-2xl font-bold">Issues Data</h2>
                 <p className="mt-2">
-                    This section provides an analysis of issue response times within the Autoware community. Use the date pickers to filter the data according to specific time frames. 
+                    This section provides an analysis of issue response times within the Autoware community.
+                </p>
+                <p className="mt-2">
+                    Use the date pickers to filter the data according to specific time frames.
+                </p>
+                <p className="mt-2">
                     This metric provides insight into the efficiency and responsiveness of the community to issues over time.
                 </p>
             </div>

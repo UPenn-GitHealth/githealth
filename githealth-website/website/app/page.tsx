@@ -5,24 +5,17 @@ import Link from 'next/link';
 
 const HomePage = () => {
   return (
+
     <div className="bg-gray-50 min-h-screen">
       <Header />
       {/* Welcome Section with Background Image */}
       <div className="relative text-center py-20 px-6 bg-cover bg-center" style={{ backgroundImage: 'url(/githealth_background.jpg)' }}>
         <div className="bg-opacity-50 bg-black p-10 rounded-md inline-block">
-          <Image
-            src="/GitHealth_Logo.jpeg"
-            alt="GitHealth Logo"
-            width={200}
-            height={200}
-            className="mb-8 inline-block"
-          />
           <h1 className="text-5xl font-extrabold text-white sm:text-6xl">
             Welcome to <span className="text-blue-300">GitHealth</span>
           </h1>
           <p className="mt-4 text-xl text-gray-200 max-w-xl mx-auto">
-            A platform providing insights into open-source GitHub communities. 
-            Discover metrics that matter and evaluate the health of collaborative projects with ease.
+            Easily evaluate the health of open-source GitHub communities with insightful metrics.
           </p>
         </div>
       </div>
