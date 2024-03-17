@@ -36,11 +36,6 @@ const Header = () => {
                 <span className="text-blue-600 hover:text-blue-700">About</span>
             </Link>
           </li>
-          <li>
-            <Link href="/contact">
-                <span className="text-blue-600 hover:text-blue-700">Contact Us</span>
-            </Link>
-          </li>
         </ul>
       </nav>
     </header>
