@@ -3,14 +3,14 @@ import Image from "next/image";
 import Header from '../components/Header';
 
 const teamMembers = [
-  { name: "Riju Datta", title: "Role or Title", imageSrc: "/path-to-riju-image.jpg", description: "CIS Senior" },
-  { name: "Zain Khan", title: "Role or Title", imageSrc: "/path-to-zain-image.jpg", description: "CIS Senior" },
-  { name: "Anshul Sukhlecha", title: "Role or Title", imageSrc: "/path-to-anshul-image.jpg", description: "CIS Senior" },
-  { name: "George Wang", title: "Role or Title", imageSrc: "/path-to-george-image.jpg", description: "CIS Senior" },
-  { name: "Valery Yakubovich", title: "Role or Title", imageSrc: "/path-to-valery-image.jpg", description: "Director of Mack Institute" },
-  { name: "Soumya Dash", title: "Role or Title", imageSrc: "/path-to-soumya-image.jpg", description: "Master's Student" },
-  { name: "Rahul Mangharam", title: "Role or Title", imageSrc: "/path-to-rahul-image.jpg", description: "ESE Professor" },
-  { name: "Patricia Barr", title: "Role or Title", imageSrc: "/path-to-patricia-image.jpg", description: "Associate Director of Innovation Ecosystems at Mack Institute" }
+  { name: "Riju Datta", title: "Role or Title", imageSrc: "/headshots/riju.png", description: "CIS Senior" },
+  { name: "Zain Khan", title: "Role or Title", imageSrc: "/headshots/zain.jpg", description: "CIS Senior" },
+  { name: "Anshul Sukhlecha", title: "Role or Title", imageSrc: "/headshots/anshul.jpg", description: "CIS Senior" },
+  { name: "George Wang", title: "Role or Title", imageSrc: "/headshots/george.jpg", description: "CIS Senior" },
+  { name: "Valery Yakubovich", title: "Role or Title", imageSrc: "/headshots/valery.jpg", description: "Director of Mack Institute" },
+  { name: "Soumya Dash", title: "Role or Title", imageSrc: "/headshots/soumya.jpg", description: "Master's Student" },
+  { name: "Rahul Mangharam", title: "Role or Title", imageSrc: "/headshots/rahul.jpg", description: "ESE Professor" },
+  { name: "Patricia Barr", title: "Role or Title", imageSrc: "/headshots/patricia.png", description: "Associate Director of Innovation Ecosystems at Mack Institute" }
 ];
 
 const About = () => {
