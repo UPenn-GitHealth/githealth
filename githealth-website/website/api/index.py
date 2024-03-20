@@ -62,6 +62,98 @@ class CommenterDTAConnectionCountAcrossOrganizations(BaseModel):
     discussion_thread_author_organization: str
     commenter_dta_connection_count: int
 
+class UserContribution(BaseModel):
+    user: str
+    user_affiliation: str
+    issues_created: int
+    issues_commented: int
+    average_time_to_first_response_hours: float
+    average_time_to_close_hours: float
+    total_comments: int
+    total_commits: int
+    total_checks: int
+    total_files_changed: int
+    total_lines_changed: int
+
+# Function to parse the CSV file and return user contribution data
+def get_user_contributions() -> List[UserContribution]:
+
+    # Read the CSV file into a DataFrame
+    df = pd.read_csv("Issues_Data/issues_data+users_v7.0/final_merged_issues_data.csv")
+
+    # Convert time-related columns from seconds to hours
+    df['issues_time_to_first_response_hours'] = df['issues_time_to_first_response'] / 3600
+    df['issues_time_to_close_hours'] = df['issues_time_to_close'] / 3600
+
+    # Aggregate data by issue creator
+    issues_by_creator = df.groupby('issues_thread_creator').agg({
+        'issues_title': 'count',
+        'issues_time_to_first_response_hours': 'mean',
+        'issues_time_to_close_hours': 'mean'
+    }).rename(columns={
+        'issues_title': 'issues_created',
+        'issues_time_to_first_response_hours': 'average_time_to_first_response_hours',
+        'issues_time_to_close_hours': 'average_time_to_close_hours'
+    }).reset_index()
+
+    # Aggregate data by comment author
+    comments_by_author = df.groupby('issues_comment_author').agg({
+        'issues_comment_id': 'count',
+        'issues_commits': 'sum',
+        'issues_checks': 'sum',
+        'issues_files_changed': 'sum',
+        'issues_lines_changed': 'sum'
+    }).rename(columns={
+        'issues_comment_id': 'issues_commented',
+        'issues_commits': 'total_commits',
+        'issues_checks': 'total_checks',
+        'issues_files_changed': 'total_files_changed',
+        'issues_lines_changed': 'total_lines_changed'
+    }).reset_index()
+
+    # Merge the dataframes on the user identifier
+    contributions = pd.merge(
+        issues_by_creator,
+        comments_by_author,
+        left_on='issues_thread_creator',
+        right_on='issues_comment_author',
+        how='outer'
+    )
+
+    # Fill NaN values with 0 for users who may have created issues but made no comments (or vice versa)
+    contributions.fillna(0, inplace=True)
+
+    # Assuming affiliation is the same for a user whether they are a creator or commenter
+    contributions['user_affiliation'] = contributions.apply(
+    lambda row: row.get('issues_thread_creator_affiliation', '') or row.get('issues_comment_author_affiliation', ''), 
+    axis=1
+)
+
+
+    # Prepare the final list of Pydantic models
+    user_contributions = [
+        UserContribution(
+            user=row['issues_thread_creator'] or row['issues_comment_author'],
+            user_affiliation=row['user_affiliation'],
+            issues_created=row['issues_created'],
+            issues_commented=row['issues_commented'],
+            average_time_to_first_response_hours=row['average_time_to_first_response_hours'],
+            average_time_to_close_hours=row['average_time_to_close_hours'],
+            total_comments=row['issues_commented'],  # Assuming issues_commented represents the total comments made
+            total_commits=row['total_commits'],
+            total_checks=row['total_checks'],
+            total_files_changed=row['total_files_changed'],
+            total_lines_changed=row['total_lines_changed']
+        )
+        for index, row in contributions.iterrows()
+    ]
+
+    return user_contributions
+
+@app.get("/users/contributions", response_model=List[UserContribution])
+async def users_contributions():
+    contributions = get_user_contributions()
+    return contributions
 
 # Calculate issue data a single time:
 # TODO: add some sort of timed caching method:
@@ -74,41 +166,36 @@ def get_response_times():
     if len(response_times) != 0:
         return response_times
 
-    # TODO: Use database instead of CSV
-    csv_dir = "Issues_Data/issues_data_v4.0"
-    csv_pattern = os.path.join(csv_dir, "issues_*.csv")
-    csv_files = glob.glob(csv_pattern)
+    # # TODO: Use database instead of CSV
+    # csv_dir = "Issues_Data/issues_data+users_v7.0"
+    # csv_pattern = os.path.join(csv_dir, 'final_merged_issues_data.csv')
+    # csv_files = glob.glob(csv_pattern)
 
-    all_issues_data_list = []
+    # Read the CSV file into a DataFrame
+    df = pd.read_csv("Issues_Data/issues_data+users_v7.0/final_merged_issues_data.csv")
+    # Convert 'issues_created_at' column to datetime
+    df["issues_created_at"] = pd.to_datetime(df["issues_created_at"], errors="coerce")
+    # Drop rows with invalid datetime conversion
+    df = df.dropna(subset=["issues_created_at"])
+    # Drop rows with NaN in 'issues_time_to_first_response'
+    df = df.dropna(subset=["issues_time_to_first_response"])
+    # Drop duplicate issue threads
+    df = df.drop_duplicates(subset=["issues_thread_id"])
+    # Extract year and month from 'issues_created_at'
+    df["year"] = df["issues_created_at"].dt.year
+    df["month"] = df["issues_created_at"].dt.month
+    # Set a threshold to filter out automatic responses
+    threshold_seconds = 5
+    df = df[df["issues_time_to_first_response"] > threshold_seconds]
 
-    for file in csv_files:
-        df = pd.read_csv(file)
-        df["issues_created_at"] = pd.to_datetime(
-            df["issues_created_at"], format="%Y-%m-%dT%H:%M:%SZ", errors="coerce"
-        )
-        df = df[~df["issues_created_at"].isnull()]
-        df = df.dropna(subset=["issues_time_to_first_response"])
-        df = df.drop_duplicates(subset=["issues_thread_id"])
-        df["year"] = df["issues_created_at"].dt.year
-        df["month"] = df["issues_created_at"].dt.month
-        threshold_seconds = 5
-        df = df[df["issues_time_to_first_response"] > threshold_seconds]
-
-        if not df.empty:
-            all_issues_data_list.append(df)
-
-    if not all_issues_data_list:
+    if df.empty:
         raise HTTPException(status_code=404, detail="No issues data found")
 
-    all_issues_data = pd.concat(all_issues_data_list, ignore_index=True)
-    all_issues_data["issues_time_to_first_response_hours"] = (
-        all_issues_data["issues_time_to_first_response"] / 3600
-    )
+    # Calculate the average time to first response in hours
+    df["issues_time_to_first_response_hours"] = df["issues_time_to_first_response"] / 3600
 
-    sorted_issues_data = all_issues_data.sort_values(by=["year", "month"])
-    response_data = sorted_issues_data[
-        ["year", "month", "issues_time_to_first_response_hours"]
-    ]
+    sorted_issues_data = df.sort_values(by=["year", "month"])
+    response_data = sorted_issues_data[["year", "month", "issues_time_to_first_response_hours"]]
 
     # Convert the pandas DataFrame to a list of dictionaries
     response_times = response_data.to_dict(orient="records")
@@ -165,41 +252,20 @@ async def first_response_median():
 
 
 def get_close_times():
-    csv_dir = "Issues_Data/issues_data_v4.0"
-    csv_pattern = os.path.join(csv_dir, "issues_*.csv")
-    csv_files = glob.glob(csv_pattern)
+    df = pd.read_csv("Issues_Data/issues_data+users_v7.0/final_merged_issues_data.csv")
 
-    all_issues_data_list = []
+    df["issues_created_at"] = pd.to_datetime(df["issues_created_at"], errors="coerce")
+    df = df.dropna(subset=["issues_created_at", "issues_time_to_close"])
+    df = df.drop_duplicates(subset=["issues_thread_id"])
+    df["year"] = df["issues_created_at"].dt.year
+    df["month"] = df["issues_created_at"].dt.month
+    df = df[df["issues_time_to_close"] > 5]  # Using 5 seconds as the threshold
+    df["issues_time_to_close_hours"] = df["issues_time_to_close"] / 3600
 
-    for file in csv_files:
-        df = pd.read_csv(file)
-        df["issues_created_at"] = pd.to_datetime(
-            df["issues_created_at"], format="%Y-%m-%dT%H:%M:%SZ", errors="coerce"
-        )
-        df = df[~df["issues_created_at"].isnull()]
-        df = df.dropna(subset=["issues_time_to_close"])
-        df = df.drop_duplicates(subset=["issues_thread_id"])
-        df["year"] = df["issues_created_at"].dt.year
-        df["month"] = df["issues_created_at"].dt.month
-        threshold_seconds = 5
-        df = df[df["issues_time_to_close"] > threshold_seconds]
-
-        if not df.empty:
-            all_issues_data_list.append(df)
-
-    if not all_issues_data_list:
-        raise HTTPException(status_code=404, detail="No issues data found")
-
-    all_issues_data = pd.concat(all_issues_data_list, ignore_index=True)
-    all_issues_data["issues_time_to_close_hours"] = (
-        all_issues_data["issues_time_to_close"] / 3600
-    )
-
-    sorted_issues_data = all_issues_data.sort_values(by=["year", "month"])
+    sorted_issues_data = df.sort_values(by=["year", "month"])
     close_data = sorted_issues_data[["year", "month", "issues_time_to_close_hours"]]
 
     # Convert the pandas DataFrame to a list of dictionaries
-    global close_times
     close_times = close_data.to_dict(orient="records")
 
     return close_times

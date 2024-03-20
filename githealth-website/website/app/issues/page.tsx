@@ -4,6 +4,7 @@ import FirstResponseMeanChart from "./first-response-mean-chart";
 import FirstResponseMedian from "./first-response-median-chart";
 import TimeToCloseMean from './time-to-close-mean-chart';
 import TimeToCloseMedian from './time-to-close-median-chart';
+import ContributionsList from './user-contributions'; 
 
 const IssuesPage = () => {
     return (
@@ -35,6 +36,10 @@ const IssuesPage = () => {
                     <div className="mb-8 w-full">
                         <TimeToCloseMedian />
                     </div>
+                </div>
+                {/* Move ContributionsList outside the grid to make it full width */}
+                <div className="mb-8 w-full">
+                    <ContributionsList />
                 </div>
             </div>
         </div>
