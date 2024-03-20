@@ -15,7 +15,7 @@ const HomePage = () => {
             Welcome to <span className="text-blue-300">GitHealth</span>
           </h1>
           <p className="mt-4 text-xl text-gray-200 max-w-xl mx-auto">
-            Easily evaluate the health of open-source GitHub communities with insightful metrics.
+          Insightful metrics to easily evaluate the health of open-source communities.
           </p>
         </div>
       </div>
