@@ -4,7 +4,7 @@ import matplotlib.dates as mdates
 import os
 import glob
 
-csv_dir = 'Issues_Data/issues_data_v4.0' 
+csv_dir = 'Issues_Data/issues_data+users_v7.0' 
 
 # Pattern to match all CSV files
 csv_pattern = os.path.join(csv_dir, 'issues_*.csv')

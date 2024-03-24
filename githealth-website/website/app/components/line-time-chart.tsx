@@ -1,9 +1,8 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import {
     Chart as ChartJS,
-    Colors,
     CategoryScale,
     TimeScale,
     LinearScale,
@@ -12,13 +11,12 @@ import {
     Title,
     Tooltip,
     Legend,
-    ChartOptions,
 } from "chart.js";
 import "chartjs-adapter-date-fns";
 import { Line } from "react-chartjs-2";
 
 ChartJS.register(
-    Colors,
+    CategoryScale,
     TimeScale,
     LinearScale,
     PointElement,
@@ -34,43 +32,62 @@ export interface LineTimeChartPoint {
 }
 
 type LineTimeChartProps = {
-    filter?: boolean;
     title?: string;
     legend?: string;
     data?: LineTimeChartPoint[];
 };
 
+function subtractDate(date: Date, months: number, years: number) {
+    let newDate = new Date(date.getTime());
+    newDate.setFullYear(newDate.getFullYear() - years);
+    newDate.setMonth(newDate.getMonth() - months);
+    newDate.setDate(newDate.getDate());
+    return newDate;
+}
+
 export default function LineTimeChart(props: LineTimeChartProps) {
-    const [startDate, setStartDate] = useState('');
-    const [endDate, setEndDate] = useState('');
-    const [filteredData, setFilteredData] = useState<LineTimeChartPoint[]>([]);
+    const [filteredData, setFilteredData] = useState<LineTimeChartPoint[]>(props.data || []);
 
     useEffect(() => {
-        if (props.data) {
-            let data = props.data;
-            // If startDate is set, filter the data to include points after the startDate
-            if (startDate) {
-                data = data.filter((point) => new Date(point.x) >= new Date(startDate));
-            }
-            // If endDate is set, filter the data to include points before the endDate
-            if (endDate) {
-                data = data.filter((point) => new Date(point.x) <= new Date(endDate));
-            }
-            setFilteredData(data);
-        }
-    }, [props.data, startDate, endDate]);
+        setFilteredData(props.data || []);
+    }, [props.data]);
 
-    const options: ChartOptions<"line"> = {
+    const setTimeRangeBasedOnEndDate = (months: number, years: number, end: Date) => {
+        let data = props.data || [];
+        if (months || years) {
+            const startDate = subtractDate(end, months, years);
+            data = data.filter(point =>
+                new Date(point.x) >= startDate && new Date(point.x) <= end
+            );
+        }
+        setFilteredData(data);
+    };
+
+    const setTimeRange = (months: number, years: number) => {
+        const endDate = new Date();
+        setTimeRangeBasedOnEndDate(months, years, endDate);
+    };
+
+    const options = useMemo(() => ({
         responsive: true,
         maintainAspectRatio: false,
         plugins: {
             legend: {
-                position: 'top' as const,
+                position: 'top',
             },
             title: {
                 display: true,
                 text: props.title ?? 'Chart',
             },
+            tooltip: {
+                callbacks: {
+                    title: function (tooltipItems) {
+                        // Ensure that we're getting a valid date object
+                        const date = new Date(tooltipItems[0].parsed.x);
+                        return date.toLocaleString('default', { month: 'short', year: 'numeric' });
+                    }
+                }
+            }
         },
         scales: {
             x: {
@@ -93,23 +110,22 @@ export default function LineTimeChart(props: LineTimeChartProps) {
                 }
             }
         }
-    };
+    }), [props.title, props.legend]);
 
-    const chartData = {
+    const chartData = useMemo(() => ({
         labels: filteredData.map(d => d.x),
         datasets: [{
             label: props.legend ?? 'Dataset',
-            data: filteredData.map(d => ({ x: d.x, y: d.y })),
+            data: filteredData,
             borderColor: 'rgb(75, 192, 192)',
             tension: 0.1,
             fill: false,
-        }]
-    };
+        }],
+    }), [filteredData, props.legend]);
 
-    // Define a style object for the chart container
     const chartContainerStyle = {
-        width: '100%', // Use 100% to make the chart responsive
-        height: '400px', // Define a fixed height or use vh for viewport height
+        width: '100%',
+        height: '400px',
         backgroundColor: 'rgba(255, 255, 255, 0.8)',
         padding: '10px',
         borderRadius: '10px',
@@ -118,22 +134,16 @@ export default function LineTimeChart(props: LineTimeChartProps) {
     return (
         <div>
             <h2 className="text-center text-xl text-blue-500 font-bold my-4">{props.title ?? "Untitled Chart"}</h2>
-            {props.filter && (
-                <div className="flex justify-center gap-2 mb-4">
-                    <input
-                        type="date"
-                        value={startDate}
-                        onChange={(e) => setStartDate(e.target.value)}
-                    />
-                    <input
-                        type="date"
-                        value={endDate}
-                        onChange={(e) => setEndDate(e.target.value)}
-                    />
-                </div>
-            )}
+            <div className="flex justify-center gap-2 mb-4">
+                <button onClick={() => setTimeRange(1, 0)} style={{ color: 'blue' }}>1M</button>
+                <button onClick={() => setTimeRange(3, 0)} style={{ color: 'blue' }}>3M</button>
+                <button onClick={() => setTimeRange(6, 0)} style={{ color: 'blue' }}>6M</button>
+                <button onClick={() => setTimeRange(0, 1)} style={{ color: 'blue' }}>1YR</button>
+                <button onClick={() => setTimeRange(0, 5)} style={{ color: 'blue' }}>5YR</button>
+                <button onClick={() => setTimeRangeBasedOnEndDate(0, 0, new Date())} style={{ color: 'blue' }}>ALL</button>
+            </div>
             <div style={chartContainerStyle}>
-                <Line options={options} data={chartData} /> {/* Use chartData instead of data */}
+                <Line options={options} data={chartData} />
             </div>
         </div>
     );
