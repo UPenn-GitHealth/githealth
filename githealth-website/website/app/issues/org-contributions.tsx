@@ -4,9 +4,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './ContributionsTable.css';
 
-interface UserContribution {
-    user: string;
-    user_affiliation: string;
+interface OrganizationContribution {
+    organization: string;
     issues_created: number;
     issues_commented: number;
     average_time_to_first_response_hours: number;
@@ -18,13 +17,13 @@ interface UserContribution {
     total_lines_changed: number;
 }
 
-const UserContributionsTable: React.FC = () => {
-    const [contributions, setContributions] = useState<UserContribution[]>([]);
+const OrganizationContributionsTable: React.FC = () => {
+    const [contributions, setContributions] = useState<OrganizationContribution[]>([]);
     const [sortField, setSortField] = useState<string>('issues_commented');
 
     useEffect(() => {
         const fetchContributions = async () => {
-            const response = await axios.get<UserContribution[]>('/api/users/contributions');
+            const response = await axios.get<OrganizationContribution[]>('/api/organizations/contributions');
             setContributions(response.data);
         };
 
@@ -32,14 +31,14 @@ const UserContributionsTable: React.FC = () => {
     }, []);
 
     const sortedContributions = [...contributions].sort((a, b) => {
-        const key = sortField as keyof UserContribution;
+        const key = sortField as keyof OrganizationContribution;
         return (b[key] as number) - (a[key] as number);
     });
 
     return (
         <div>
             <select
-                className="select-dropdown" // Add this class
+                className="select-dropdown"
                 value={sortField}
                 onChange={(e) => setSortField(e.target.value)}
             >
@@ -50,12 +49,11 @@ const UserContributionsTable: React.FC = () => {
                 <option value="total_lines_changed">Most Lines Changed</option>
             </select>
 
-            <div className="table-container"> {/* Add this div to wrap the table */}
+            <div className="table-container">
                 <table>
                     <thead>
                         <tr>
-                            <th>User</th>
-                            <th>Affiliation</th>
+                            <th>Organization</th>
                             <th>Issues Created</th>
                             <th>Issues Commented</th>
                             <th>Avg Time to First Response (hrs)</th>
@@ -70,8 +68,7 @@ const UserContributionsTable: React.FC = () => {
                     <tbody>
                         {sortedContributions.map((contribution, index) => (
                             <tr key={index}>
-                                <td>{contribution.user}</td>
-                                <td>{contribution.user_affiliation}</td>
+                                <td>{contribution.organization}</td>
                                 <td>{contribution.issues_created}</td>
                                 <td>{contribution.issues_commented}</td>
                                 <td>{contribution.average_time_to_first_response_hours.toFixed(2)}</td>
@@ -90,4 +87,4 @@ const UserContributionsTable: React.FC = () => {
     );
 };
 
-export default UserContributionsTable;
+export default OrganizationContributionsTable;

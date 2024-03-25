@@ -138,7 +138,9 @@ export default function LineTimeChart(props: LineTimeChartProps) {
                 <button onClick={() => setTimeRange(1, 0)} style={{ color: 'blue' }}>1M</button>
                 <button onClick={() => setTimeRange(3, 0)} style={{ color: 'blue' }}>3M</button>
                 <button onClick={() => setTimeRange(6, 0)} style={{ color: 'blue' }}>6M</button>
+                <button onClick={() => setTimeRange(9, 0)} style={{ color: 'blue' }}>9M</button>
                 <button onClick={() => setTimeRange(0, 1)} style={{ color: 'blue' }}>1YR</button>
+                <button onClick={() => setTimeRange(0, 2)} style={{ color: 'blue' }}>2YR</button>
                 <button onClick={() => setTimeRange(0, 5)} style={{ color: 'blue' }}>5YR</button>
                 <button onClick={() => setTimeRangeBasedOnEndDate(0, 0, new Date())} style={{ color: 'blue' }}>ALL</button>
             </div>

@@ -4,7 +4,8 @@ import FirstResponseMeanChart from "./first-response-mean-chart";
 import FirstResponseMedian from "./first-response-median-chart";
 import TimeToCloseMean from './time-to-close-mean-chart';
 import TimeToCloseMedian from './time-to-close-median-chart';
-import ContributionsList from './user-contributions'; 
+import UserContributionsTable from './user-contributions'; 
+import OrganizationContributionsTable from './org-contributions';
 
 const IssuesPage = () => {
     return (
@@ -37,9 +38,19 @@ const IssuesPage = () => {
                         <TimeToCloseMedian />
                     </div>
                 </div>
-                {/* Move ContributionsList outside the grid to make it full width */}
                 <div className="mb-8 w-full">
-                    <ContributionsList />
+                    <h3 className="text-lg font-semibold mb-4 text-blue-800">User Contributions</h3>
+                    <p className="mb-4 text-gray-700">
+                        This table shows the contributions of individual users to the Autoware community, including the number of issues created and commented on, average response times, and more.
+                    </p>
+                    <UserContributionsTable />
+                </div>
+                <div className="mb-8 w-full">
+                    <h3 className="text-lg font-semibold mb-4 text-blue-800">Organization Contributions</h3>
+                    <p className="mb-4 text-gray-700">
+                        This table displays the aggregated contributions of organizations to the Autoware community, providing insights into the involvement of different organizations in issue discussions and resolutions.
+                    </p>
+                    <OrganizationContributionsTable />
                 </div>
             </div>
         </div>

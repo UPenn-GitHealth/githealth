@@ -75,9 +75,7 @@ class UserContribution(BaseModel):
     total_files_changed: int
     total_lines_changed: int
 
-# Function to parse the CSV file and return user contribution data
 def get_user_contributions() -> List[UserContribution]:
-
     # Read the CSV file into a DataFrame
     df = pd.read_csv("Issues_Data/issues_data+users_v7.0/final_merged_issues_data.csv")
 
@@ -86,7 +84,7 @@ def get_user_contributions() -> List[UserContribution]:
     df['issues_time_to_close_hours'] = df['issues_time_to_close'] / 3600
 
     # Aggregate data by issue creator
-    issues_by_creator = df.groupby('issues_thread_creator').agg({
+    issues_by_creator = df.groupby(['issues_thread_creator', 'issues_thread_creator_affiliation']).agg({
         'issues_title': 'count',
         'issues_time_to_first_response_hours': 'mean',
         'issues_time_to_close_hours': 'mean'
@@ -97,7 +95,7 @@ def get_user_contributions() -> List[UserContribution]:
     }).reset_index()
 
     # Aggregate data by comment author
-    comments_by_author = df.groupby('issues_comment_author').agg({
+    comments_by_author = df.groupby(['issues_comment_author', 'issues_comment_author_affiliation']).agg({
         'issues_comment_id': 'count',
         'issues_commits': 'sum',
         'issues_checks': 'sum',
@@ -115,25 +113,26 @@ def get_user_contributions() -> List[UserContribution]:
     contributions = pd.merge(
         issues_by_creator,
         comments_by_author,
-        left_on='issues_thread_creator',
-        right_on='issues_comment_author',
+        left_on=['issues_thread_creator', 'issues_thread_creator_affiliation'],
+        right_on=['issues_comment_author', 'issues_comment_author_affiliation'],
         how='outer'
     )
 
     # Fill NaN values with 0 for users who may have created issues but made no comments (or vice versa)
     contributions.fillna(0, inplace=True)
 
-    # Assuming affiliation is the same for a user whether they are a creator or commenter
+    # Create a combined user and affiliation column
+    contributions['user'] = contributions.apply(
+        lambda row: row['issues_thread_creator'] or row['issues_comment_author'], axis=1
+    )
     contributions['user_affiliation'] = contributions.apply(
-    lambda row: row.get('issues_thread_creator_affiliation', '') or row.get('issues_comment_author_affiliation', ''), 
-    axis=1
-)
-
+        lambda row: row['issues_thread_creator_affiliation'] or row['issues_comment_author_affiliation'], axis=1
+    )
 
     # Prepare the final list of Pydantic models
     user_contributions = [
         UserContribution(
-            user=row['issues_thread_creator'] or row['issues_comment_author'],
+            user=row['user'],
             user_affiliation=row['user_affiliation'],
             issues_created=row['issues_created'],
             issues_commented=row['issues_commented'],
@@ -154,6 +153,89 @@ def get_user_contributions() -> List[UserContribution]:
 async def users_contributions():
     contributions = get_user_contributions()
     return contributions
+
+class OrganizationContribution(BaseModel):
+    organization: str
+    issues_created: int
+    issues_commented: int
+    average_time_to_first_response_hours: float
+    average_time_to_close_hours: float
+    total_comments: int
+    total_commits: int
+    total_checks: int
+    total_files_changed: int
+    total_lines_changed: int
+
+def get_organization_contributions() -> List[OrganizationContribution]:
+    # Read the CSV file into a DataFrame
+    df = pd.read_csv("Issues_Data/issues_data+users_v7.0/final_merged_issues_data.csv")
+
+    # Convert time-related columns from seconds to hours
+    df['issues_time_to_first_response_hours'] = df['issues_time_to_first_response'] / 3600
+    df['issues_time_to_close_hours'] = df['issues_time_to_close'] / 3600
+
+    # Aggregate data by issue creator's affiliation
+    issues_by_org = df.groupby('issues_thread_creator_affiliation').agg({
+        'issues_title': 'count',
+        'issues_time_to_first_response_hours': 'mean',
+        'issues_time_to_close_hours': 'mean'
+    }).rename(columns={
+        'issues_title': 'issues_created',
+        'issues_time_to_first_response_hours': 'average_time_to_first_response_hours',
+        'issues_time_to_close_hours': 'average_time_to_close_hours'
+    }).reset_index()
+
+    # Aggregate data by comment author's affiliation
+    comments_by_org = df.groupby('issues_comment_author_affiliation').agg({
+        'issues_comment_id': 'count',
+        'issues_commits': 'sum',
+        'issues_checks': 'sum',
+        'issues_files_changed': 'sum',
+        'issues_lines_changed': 'sum'
+    }).rename(columns={
+        'issues_comment_id': 'issues_commented',
+        'issues_commits': 'total_commits',
+        'issues_checks': 'total_checks',
+        'issues_files_changed': 'total_files_changed',
+        'issues_lines_changed': 'total_lines_changed'
+    }).reset_index()
+
+    # Merge the dataframes on the organization
+    contributions = pd.merge(
+        issues_by_org,
+        comments_by_org,
+        left_on='issues_thread_creator_affiliation',
+        right_on='issues_comment_author_affiliation',
+        how='outer'
+    )
+
+    # Fill NaN values with 0 for organizations that may have created issues but made no comments (or vice versa)
+    contributions.fillna(0, inplace=True)
+
+    # Prepare the final list of Pydantic models
+    org_contributions = [
+        OrganizationContribution(
+            organization=row['issues_thread_creator_affiliation'] or row['issues_comment_author_affiliation'],
+            issues_created=row['issues_created'],
+            issues_commented=row['issues_commented'],
+            average_time_to_first_response_hours=row['average_time_to_first_response_hours'],
+            average_time_to_close_hours=row['average_time_to_close_hours'],
+            total_comments=row['issues_commented'],  # Assuming issues_commented represents the total comments made
+            total_commits=row['total_commits'],
+            total_checks=row['total_checks'],
+            total_files_changed=row['total_files_changed'],
+            total_lines_changed=row['total_lines_changed']
+        )
+        for index, row in contributions.iterrows()
+    ]
+
+    return org_contributions
+
+@app.get("/organizations/contributions", response_model=List[OrganizationContribution])
+async def organizations_contributions():
+    contributions = get_organization_contributions()
+    return contributions
+
 
 # Calculate issue data a single time:
 # TODO: add some sort of timed caching method:
