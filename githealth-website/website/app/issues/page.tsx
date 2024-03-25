@@ -4,8 +4,8 @@ import FirstResponseMeanChart from "./first-response-mean-chart";
 import FirstResponseMedian from "./first-response-median-chart";
 import TimeToCloseMean from './time-to-close-mean-chart';
 import TimeToCloseMedian from './time-to-close-median-chart';
-import UserContributionsTable from './user-contributions'; 
-import OrganizationContributionsTable from './org-contributions';
+import UserContributionsTable from '../users/user-contributions'; 
+import OrganizationContributionsTable from '../organizations/org-contributions';
 
 const IssuesPage = () => {
     return (

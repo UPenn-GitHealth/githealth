@@ -8,7 +8,6 @@ export default function Metrics() {
             <Header />
             <main className="flex-grow flex flex-col items-center justify-center">
               <div className="w-full max-w-4xl p-10 space-y-8">
-                {/* Centered grid of navigation links */}
                 <div className="w-full max-w-2xl grid grid-cols-2 gap-10 p-10">
                     <Link href="/issues">
                         <div className="flex flex-col items-center justify-center h-40 bg-white rounded-lg shadow-md cursor-pointer hover:bg-blue-100 transition duration-300">
@@ -22,7 +21,18 @@ export default function Metrics() {
                             <span className="text-sm text-gray-600">View discussions metrics</span>
                         </div>
                     </Link>
-                    {/* Add more grid items as needed */}
+                    <Link href="/users">
+                        <div className="flex flex-col items-center justify-center h-40 bg-white rounded-lg shadow-md cursor-pointer hover:bg-blue-100 transition duration-300">
+                            <span className="text-lg font-semibold text-blue-600">Users</span>
+                            <span className="text-sm text-gray-600">Explore user contributions</span>
+                        </div>
+                    </Link>
+                    <Link href="/organizations">
+                        <div className="flex flex-col items-center justify-center h-40 bg-white rounded-lg shadow-md cursor-pointer hover:bg-blue-100 transition duration-300">
+                            <span className="text-lg font-semibold text-blue-600">Organizations</span>
+                            <span className="text-sm text-gray-600">Explore organization contributions</span>
+                        </div>
+                    </Link>
                 </div>
               </div>
             </main>

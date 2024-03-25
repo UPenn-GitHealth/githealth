@@ -2,10 +2,11 @@
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './ContributionsTable.css';
+import '../ContributionsTable.css';
 
-interface OrganizationContribution {
-    organization: string;
+interface UserContribution {
+    user: string;
+    user_affiliation: string;
     issues_created: number;
     issues_commented: number;
     average_time_to_first_response_hours: number;
@@ -17,13 +18,13 @@ interface OrganizationContribution {
     total_lines_changed: number;
 }
 
-const OrganizationContributionsTable: React.FC = () => {
-    const [contributions, setContributions] = useState<OrganizationContribution[]>([]);
+const UserContributionsTable: React.FC = () => {
+    const [contributions, setContributions] = useState<UserContribution[]>([]);
     const [sortField, setSortField] = useState<string>('issues_commented');
 
     useEffect(() => {
         const fetchContributions = async () => {
-            const response = await axios.get<OrganizationContribution[]>('/api/organizations/contributions');
+            const response = await axios.get<UserContribution[]>('/api/users/contributions');
             setContributions(response.data);
         };
 
@@ -31,14 +32,14 @@ const OrganizationContributionsTable: React.FC = () => {
     }, []);
 
     const sortedContributions = [...contributions].sort((a, b) => {
-        const key = sortField as keyof OrganizationContribution;
+        const key = sortField as keyof UserContribution;
         return (b[key] as number) - (a[key] as number);
     });
 
     return (
         <div>
             <select
-                className="select-dropdown"
+                className="select-dropdown" // Add this class
                 value={sortField}
                 onChange={(e) => setSortField(e.target.value)}
             >
@@ -49,11 +50,12 @@ const OrganizationContributionsTable: React.FC = () => {
                 <option value="total_lines_changed">Most Lines Changed</option>
             </select>
 
-            <div className="table-container">
+            <div className="table-container"> {/* Add this div to wrap the table */}
                 <table>
                     <thead>
                         <tr>
-                            <th>Organization</th>
+                            <th>User</th>
+                            <th>Affiliation</th>
                             <th>Issues Created</th>
                             <th>Issues Commented</th>
                             <th>Avg Time to First Response (hrs)</th>
@@ -68,7 +70,8 @@ const OrganizationContributionsTable: React.FC = () => {
                     <tbody>
                         {sortedContributions.map((contribution, index) => (
                             <tr key={index}>
-                                <td>{contribution.organization}</td>
+                                <td>{contribution.user}</td>
+                                <td>{contribution.user_affiliation}</td>
                                 <td>{contribution.issues_created}</td>
                                 <td>{contribution.issues_commented}</td>
                                 <td>{contribution.average_time_to_first_response_hours.toFixed(2)}</td>
@@ -87,4 +90,4 @@ const OrganizationContributionsTable: React.FC = () => {
     );
 };
 
-export default OrganizationContributionsTable;
+export default UserContributionsTable;
