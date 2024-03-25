@@ -11,6 +11,7 @@ import {
     Title,
     Tooltip,
     Legend,
+    ChartOptions,
 } from "chart.js";
 import "chartjs-adapter-date-fns";
 import { Line } from "react-chartjs-2";
@@ -68,12 +69,12 @@ export default function LineTimeChart(props: LineTimeChartProps) {
         setTimeRangeBasedOnEndDate(months, years, endDate);
     };
 
-    const options = useMemo(() => ({
+    const options: ChartOptions<"line"> = useMemo(() => ({
         responsive: true,
         maintainAspectRatio: false,
         plugins: {
             legend: {
-                position: 'top',
+                position: 'top' as const, // Explicitly set the position to 'top'
             },
             title: {
                 display: true,
@@ -81,7 +82,7 @@ export default function LineTimeChart(props: LineTimeChartProps) {
             },
             tooltip: {
                 callbacks: {
-                    title: function (tooltipItems) {
+                    title: function (tooltipItems: { parsed: { x: string | number | Date; }; }[]) {
                         // Ensure that we're getting a valid date object
                         const date = new Date(tooltipItems[0].parsed.x);
                         return date.toLocaleString('default', { month: 'short', year: 'numeric' });
@@ -150,3 +151,4 @@ export default function LineTimeChart(props: LineTimeChartProps) {
         </div>
     );
 }
+
