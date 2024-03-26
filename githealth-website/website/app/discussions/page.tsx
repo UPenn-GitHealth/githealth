@@ -10,8 +10,21 @@ const DiscussionsPage = () => {
     return (
         <div className="bg-gray-100 min-h-screen flex flex-col">
             <Header />
+            <div className="text-center p-4 bg-blue-600 text-white">
+                <h2 className="text-2xl font-bold">Discussions Data</h2>
+                <p className="mt-2">
+                    This section visualizes discussions data within the Autoware community.
+                </p>
+                <p className="mt-2">
+                    The bokeh graphs are interactive. Hover over a node to see connections.
+                </p>
+                <p className="mt-2">
+                    This metric shows how people collaborate with each other across organizational boundaries.
+                </p>
+            </div>
             <div>
                 <h2 className="text-center text-3xl text-black">Discussions Data</h2>
+
                 {/* <CommentCountByDiscussionThreadAuthor /> */} 
                 {/* <CommenterDTAConnectionCountAcrossOrganizations /> */} 
                 {/* Commenter DTA Connection Network Across Organizations */}

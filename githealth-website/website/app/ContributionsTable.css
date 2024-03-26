@@ -1,0 +1,40 @@
+.table-container {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 4px; /* Adds rounded corners */
+    background-color: #fff; /* Sets background color to white */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Removes space between table borders */
+}
+
+th, td {
+    padding: 8px; /* Adds padding to table cells */
+    text-align: left; /* Aligns text to the left */
+    border-bottom: 1px solid #ccc; /* Adds a border to the bottom of each cell */
+}
+
+th {
+    background-color: #f2f2f2; /* Sets a background color for the header row */
+    color: black; /* Sets text color to black */
+}
+
+td {
+    color: black; /* Sets the text color to black */
+}
+
+tr:hover {
+    background-color: #f5f5f5; /* Adds a hover effect to rows */
+}
+
+/* Optional: Add styles for the select dropdown */
+select {
+    margin-bottom: 10px; /* Adds some space below the dropdown */
+    padding: 5px; /* Adds padding inside the dropdown */
+    border-radius
+    : 4px; /* Adds rounded corners */
+    border: 1px solid #ccc; /* Adds a border */
+}
