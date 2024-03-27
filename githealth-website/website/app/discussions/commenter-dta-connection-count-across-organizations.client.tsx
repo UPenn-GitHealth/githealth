@@ -33,7 +33,7 @@ export default function CommenterDTAConnectionCountAcrossOrganizationsData() {
         };
 
         const fetchAndEmbedPlot = () => {
-            fetch('http://127.0.0.1:8000/discussions/commenter-dta-connection-count-across-organizations')
+            fetch('/api/discussions/commenter-dta-connection-count-across-organizations')
                 .then((response) => response.json())
                 .then((data) => {
                     console.log(data);
@@ -89,7 +89,7 @@ export default function CommenterDTAConnectionCountAcrossOrganizationsData() {
             <div className='box-border h-360 w-90 p-4 border-4'>
                 <div className="flex flex-row justify-around items-center">
                     <div id="commenter_dta_connection_count_across_orgs"></div>
-                        <div className='max-h-[500px] overflow-y-auto'>
+                    <div className='max-h-[500px] overflow-y-auto'>
                         <table className="border border-gray-800 bg-gray-200 text-black">
                             <thead>
                                 <tr>
