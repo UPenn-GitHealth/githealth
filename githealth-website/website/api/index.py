@@ -13,6 +13,27 @@ import datetime
 from datetime import date
 from typing import List, Optional
 from fastapi import Query
+from collections import defaultdict
+from networkx.algorithms import community
+
+from bokeh.io import output_notebook, show, save
+from bokeh.models import Range1d, Circle, ColumnDataSource, MultiLine, EdgesAndLinkedNodes, NodesAndLinkedEdges, LabelSet
+from bokeh.plotting import figure
+from bokeh.plotting import from_networkx
+from bokeh.palettes import Turbo256
+from networkx.algorithms import community
+
+from bokeh.embed import components
+from bokeh.models import HoverTool
+from bokeh.resources import CDN 
+from bokeh.embed import json_item
+
+import bokeh.io
+import bokeh.plotting
+from bokeh.palettes import Category20, Reds8
+
+from fastapi.responses import HTMLResponse, JSONResponse
+import json
 
 app = FastAPI()
 
@@ -62,6 +83,180 @@ class CommenterDTAConnectionCountAcrossOrganizations(BaseModel):
     discussion_thread_author_organization: str
     commenter_dta_connection_count: int
 
+class UserContribution(BaseModel):
+    user: str
+    user_affiliation: str
+    issues_created: int
+    issues_commented: int
+    average_time_to_first_response_hours: float
+    average_time_to_close_hours: float
+    total_comments: int
+    total_commits: int
+    total_checks: int
+    total_files_changed: int
+    total_lines_changed: int
+
+def get_user_contributions() -> List[UserContribution]:
+    # Read the CSV file into a DataFrame
+    df = pd.read_csv("Issues_Data/issues_data+users_v7.0/final_merged_issues_data.csv")
+
+    # Convert time-related columns from seconds to hours
+    df['issues_time_to_first_response_hours'] = df['issues_time_to_first_response'] / 3600
+    df['issues_time_to_close_hours'] = df['issues_time_to_close'] / 3600
+
+    # Aggregate data by issue creator
+    issues_by_creator = df.groupby(['issues_thread_creator', 'issues_thread_creator_affiliation']).agg({
+        'issues_title': 'count',
+        'issues_time_to_first_response_hours': 'mean',
+        'issues_time_to_close_hours': 'mean'
+    }).rename(columns={
+        'issues_title': 'issues_created',
+        'issues_time_to_first_response_hours': 'average_time_to_first_response_hours',
+        'issues_time_to_close_hours': 'average_time_to_close_hours'
+    }).reset_index()
+
+    # Aggregate data by comment author
+    comments_by_author = df.groupby(['issues_comment_author', 'issues_comment_author_affiliation']).agg({
+        'issues_comment_id': 'count',
+        'issues_commits': 'sum',
+        'issues_checks': 'sum',
+        'issues_files_changed': 'sum',
+        'issues_lines_changed': 'sum'
+    }).rename(columns={
+        'issues_comment_id': 'issues_commented',
+        'issues_commits': 'total_commits',
+        'issues_checks': 'total_checks',
+        'issues_files_changed': 'total_files_changed',
+        'issues_lines_changed': 'total_lines_changed'
+    }).reset_index()
+
+    # Merge the dataframes on the user identifier
+    contributions = pd.merge(
+        issues_by_creator,
+        comments_by_author,
+        left_on=['issues_thread_creator', 'issues_thread_creator_affiliation'],
+        right_on=['issues_comment_author', 'issues_comment_author_affiliation'],
+        how='outer'
+    )
+
+    # Fill NaN values with 0 for users who may have created issues but made no comments (or vice versa)
+    contributions.fillna(0, inplace=True)
+
+    # Create a combined user and affiliation column
+    contributions['user'] = contributions.apply(
+        lambda row: row['issues_thread_creator'] or row['issues_comment_author'], axis=1
+    )
+    contributions['user_affiliation'] = contributions.apply(
+        lambda row: row['issues_thread_creator_affiliation'] or row['issues_comment_author_affiliation'], axis=1
+    )
+
+    # Prepare the final list of Pydantic models
+    user_contributions = [
+        UserContribution(
+            user=row['user'],
+            user_affiliation=row['user_affiliation'],
+            issues_created=row['issues_created'],
+            issues_commented=row['issues_commented'],
+            average_time_to_first_response_hours=row['average_time_to_first_response_hours'],
+            average_time_to_close_hours=row['average_time_to_close_hours'],
+            total_comments=row['issues_commented'],  # Assuming issues_commented represents the total comments made
+            total_commits=row['total_commits'],
+            total_checks=row['total_checks'],
+            total_files_changed=row['total_files_changed'],
+            total_lines_changed=row['total_lines_changed']
+        )
+        for index, row in contributions.iterrows()
+    ]
+
+    return user_contributions
+
+@app.get("/users/contributions", response_model=List[UserContribution])
+async def users_contributions():
+    contributions = get_user_contributions()
+    return contributions
+
+class OrganizationContribution(BaseModel):
+    organization: str
+    issues_created: int
+    issues_commented: int
+    average_time_to_first_response_hours: float
+    average_time_to_close_hours: float
+    total_comments: int
+    total_commits: int
+    total_checks: int
+    total_files_changed: int
+    total_lines_changed: int
+
+def get_organization_contributions() -> List[OrganizationContribution]:
+    # Read the CSV file into a DataFrame
+    df = pd.read_csv("Issues_Data/issues_data+users_v7.0/final_merged_issues_data.csv")
+
+    # Convert time-related columns from seconds to hours
+    df['issues_time_to_first_response_hours'] = df['issues_time_to_first_response'] / 3600
+    df['issues_time_to_close_hours'] = df['issues_time_to_close'] / 3600
+
+    # Aggregate data by issue creator's affiliation
+    issues_by_org = df.groupby('issues_thread_creator_affiliation').agg({
+        'issues_title': 'count',
+        'issues_time_to_first_response_hours': 'mean',
+        'issues_time_to_close_hours': 'mean'
+    }).rename(columns={
+        'issues_title': 'issues_created',
+        'issues_time_to_first_response_hours': 'average_time_to_first_response_hours',
+        'issues_time_to_close_hours': 'average_time_to_close_hours'
+    }).reset_index()
+
+    # Aggregate data by comment author's affiliation
+    comments_by_org = df.groupby('issues_comment_author_affiliation').agg({
+        'issues_comment_id': 'count',
+        'issues_commits': 'sum',
+        'issues_checks': 'sum',
+        'issues_files_changed': 'sum',
+        'issues_lines_changed': 'sum'
+    }).rename(columns={
+        'issues_comment_id': 'issues_commented',
+        'issues_commits': 'total_commits',
+        'issues_checks': 'total_checks',
+        'issues_files_changed': 'total_files_changed',
+        'issues_lines_changed': 'total_lines_changed'
+    }).reset_index()
+
+    # Merge the dataframes on the organization
+    contributions = pd.merge(
+        issues_by_org,
+        comments_by_org,
+        left_on='issues_thread_creator_affiliation',
+        right_on='issues_comment_author_affiliation',
+        how='outer'
+    )
+
+    # Fill NaN values with 0 for organizations that may have created issues but made no comments (or vice versa)
+    contributions.fillna(0, inplace=True)
+
+    # Prepare the final list of Pydantic models
+    org_contributions = [
+        OrganizationContribution(
+            organization=row['issues_thread_creator_affiliation'] or row['issues_comment_author_affiliation'],
+            issues_created=row['issues_created'],
+            issues_commented=row['issues_commented'],
+            average_time_to_first_response_hours=row['average_time_to_first_response_hours'],
+            average_time_to_close_hours=row['average_time_to_close_hours'],
+            total_comments=row['issues_commented'],  # Assuming issues_commented represents the total comments made
+            total_commits=row['total_commits'],
+            total_checks=row['total_checks'],
+            total_files_changed=row['total_files_changed'],
+            total_lines_changed=row['total_lines_changed']
+        )
+        for index, row in contributions.iterrows()
+    ]
+
+    return org_contributions
+
+@app.get("/organizations/contributions", response_model=List[OrganizationContribution])
+async def organizations_contributions():
+    contributions = get_organization_contributions()
+    return contributions
+
 
 # Calculate issue data a single time:
 # TODO: add some sort of timed caching method:
@@ -74,41 +269,36 @@ def get_response_times():
     if len(response_times) != 0:
         return response_times
 
-    # TODO: Use database instead of CSV
-    csv_dir = "Issues_Data/issues_data_v4.0"
-    csv_pattern = os.path.join(csv_dir, "issues_*.csv")
-    csv_files = glob.glob(csv_pattern)
+    # # TODO: Use database instead of CSV
+    # csv_dir = "Issues_Data/issues_data+users_v7.0"
+    # csv_pattern = os.path.join(csv_dir, 'final_merged_issues_data.csv')
+    # csv_files = glob.glob(csv_pattern)
 
-    all_issues_data_list = []
+    # Read the CSV file into a DataFrame
+    df = pd.read_csv("Issues_Data/issues_data+users_v7.0/final_merged_issues_data.csv")
+    # Convert 'issues_created_at' column to datetime
+    df["issues_created_at"] = pd.to_datetime(df["issues_created_at"], errors="coerce")
+    # Drop rows with invalid datetime conversion
+    df = df.dropna(subset=["issues_created_at"])
+    # Drop rows with NaN in 'issues_time_to_first_response'
+    df = df.dropna(subset=["issues_time_to_first_response"])
+    # Drop duplicate issue threads
+    df = df.drop_duplicates(subset=["issues_thread_id"])
+    # Extract year and month from 'issues_created_at'
+    df["year"] = df["issues_created_at"].dt.year
+    df["month"] = df["issues_created_at"].dt.month
+    # Set a threshold to filter out automatic responses
+    threshold_seconds = 5
+    df = df[df["issues_time_to_first_response"] > threshold_seconds]
 
-    for file in csv_files:
-        df = pd.read_csv(file)
-        df["issues_created_at"] = pd.to_datetime(
-            df["issues_created_at"], format="%Y-%m-%dT%H:%M:%SZ", errors="coerce"
-        )
-        df = df[~df["issues_created_at"].isnull()]
-        df = df.dropna(subset=["issues_time_to_first_response"])
-        df = df.drop_duplicates(subset=["issues_thread_id"])
-        df["year"] = df["issues_created_at"].dt.year
-        df["month"] = df["issues_created_at"].dt.month
-        threshold_seconds = 5
-        df = df[df["issues_time_to_first_response"] > threshold_seconds]
-
-        if not df.empty:
-            all_issues_data_list.append(df)
-
-    if not all_issues_data_list:
+    if df.empty:
         raise HTTPException(status_code=404, detail="No issues data found")
 
-    all_issues_data = pd.concat(all_issues_data_list, ignore_index=True)
-    all_issues_data["issues_time_to_first_response_hours"] = (
-        all_issues_data["issues_time_to_first_response"] / 3600
-    )
+    # Calculate the average time to first response in hours
+    df["issues_time_to_first_response_hours"] = df["issues_time_to_first_response"] / 3600
 
-    sorted_issues_data = all_issues_data.sort_values(by=["year", "month"])
-    response_data = sorted_issues_data[
-        ["year", "month", "issues_time_to_first_response_hours"]
-    ]
+    sorted_issues_data = df.sort_values(by=["year", "month"])
+    response_data = sorted_issues_data[["year", "month", "issues_time_to_first_response_hours"]]
 
     # Convert the pandas DataFrame to a list of dictionaries
     response_times = response_data.to_dict(orient="records")
@@ -165,41 +355,20 @@ async def first_response_median():
 
 
 def get_close_times():
-    csv_dir = "Issues_Data/issues_data_v4.0"
-    csv_pattern = os.path.join(csv_dir, "issues_*.csv")
-    csv_files = glob.glob(csv_pattern)
+    df = pd.read_csv("Issues_Data/issues_data+users_v7.0/final_merged_issues_data.csv")
 
-    all_issues_data_list = []
+    df["issues_created_at"] = pd.to_datetime(df["issues_created_at"], errors="coerce")
+    df = df.dropna(subset=["issues_created_at", "issues_time_to_close"])
+    df = df.drop_duplicates(subset=["issues_thread_id"])
+    df["year"] = df["issues_created_at"].dt.year
+    df["month"] = df["issues_created_at"].dt.month
+    df = df[df["issues_time_to_close"] > 5]  # Using 5 seconds as the threshold
+    df["issues_time_to_close_hours"] = df["issues_time_to_close"] / 3600
 
-    for file in csv_files:
-        df = pd.read_csv(file)
-        df["issues_created_at"] = pd.to_datetime(
-            df["issues_created_at"], format="%Y-%m-%dT%H:%M:%SZ", errors="coerce"
-        )
-        df = df[~df["issues_created_at"].isnull()]
-        df = df.dropna(subset=["issues_time_to_close"])
-        df = df.drop_duplicates(subset=["issues_thread_id"])
-        df["year"] = df["issues_created_at"].dt.year
-        df["month"] = df["issues_created_at"].dt.month
-        threshold_seconds = 5
-        df = df[df["issues_time_to_close"] > threshold_seconds]
-
-        if not df.empty:
-            all_issues_data_list.append(df)
-
-    if not all_issues_data_list:
-        raise HTTPException(status_code=404, detail="No issues data found")
-
-    all_issues_data = pd.concat(all_issues_data_list, ignore_index=True)
-    all_issues_data["issues_time_to_close_hours"] = (
-        all_issues_data["issues_time_to_close"] / 3600
-    )
-
-    sorted_issues_data = all_issues_data.sort_values(by=["year", "month"])
+    sorted_issues_data = df.sort_values(by=["year", "month"])
     close_data = sorted_issues_data[["year", "month", "issues_time_to_close_hours"]]
 
     # Convert the pandas DataFrame to a list of dictionaries
-    global close_times
     close_times = close_data.to_dict(orient="records")
 
     return close_times
@@ -252,7 +421,7 @@ async def close_time_median():
 # Comment count by discussion thread author
 @app.get(
     "/discussions/comment-count-by-discussion-thread-author",
-    response_model=List[CommentCountByDiscussionThreadAuthor],
+    response_model=None,
 )
 async def generate_comment_countdiscussion_thread_author_table():
     discussion_data = pd.read_csv("Discussions_Data/github_discussion_data.csv")
@@ -298,7 +467,106 @@ async def generate_comment_countdiscussion_thread_author_table():
             "Normalized Comment ID": "normalized_comment_count",
         }
     )
-    gb_df_2 = gb_df_2[gb_df_2["comment_count"] > 5]
+    # gb_df_2 = gb_df_2[gb_df_2["comment_count"] > 5]
+
+    # Set a threshold for comment_count
+    comment_count_threshold = 3
+
+    # Filter the DataFrame based on the threshold
+    filtered_df = gb_df_2[gb_df_2['comment_count'] > comment_count_threshold]
+
+    # Generate the network graph
+    G_new = nx.from_pandas_edgelist(filtered_df, 'discussion_thread_author', 'comment_author', ['comment_count', 'normalized_comment_count'])
+
+    # Create a dictionary that can be used to keep track of the number of connections from an individual to another
+    indiv_connection_count_dict = defaultdict(list)
+
+    # Iterate through filtered_df to create a sample network
+    for _, row in filtered_df.iterrows():
+        commenter = row["comment_author"]
+        dta = row["discussion_thread_author"]
+        commenter_dta_count = row['comment_count']
+
+        indiv_connection_count_dict[dta].append(f"{commenter}:{commenter_dta_count}")
+
+    # Sort each list in org_connection_count_dict
+    for dta in indiv_connection_count_dict.keys():
+        indiv_connection_count_dict[dta] = sorted(indiv_connection_count_dict[dta], key=lambda x: int(x.split(":")[1]), reverse=True)
+
+    # Calculate the betweenness centrality for each node, as well as the weighted degree metric
+    betweenness_centrality_dict_new = nx.betweenness_centrality(G_new, weight='normalized_comment_count')
+    nx.set_node_attributes(G_new, name='betweenness', values=betweenness_centrality_dict_new)
+
+    # nx.degree(G2, weight='commenter_dta_connection_count')
+    # weighted_degree_dict = dict(nx.degree(G2, weight='commenter_dta_connection_count'))
+    nx.set_node_attributes(G_new, name='weighted_degree', values=indiv_connection_count_dict)
+
+    # Now, determine what are the distinct communities within the network
+    communities_G_new = community.greedy_modularity_communities(G_new)
+
+    # Create empty dictionary
+    modularity_class_G_new = {}
+    modularity_color_G_new = {}
+
+    # Loop through each community in the network
+    for community_number, comm in enumerate(communities_G_new):
+        # For each member of the community, add their community number
+        for name in comm:
+            modularity_class_G_new[name] = community_number
+            modularity_color_G_new[name] = Turbo256[community_number*8]
+
+    nx.set_node_attributes(G_new, modularity_class_G_new, 'modularity_class')
+    nx.set_node_attributes(G_new, modularity_color_G_new, 'modularity_color')
+    color_attr = 'modularity_color'
+
+    title = 'Initializer-Commenter Relationship Network'
+
+    hover_vals_new = [
+        ("Organization", "@index"),
+        ("Betweenness", "@betweenness"),
+        ("Most Frequent Commenters", "@weighted_degree"),
+        ("Modularity Color", "$color[swatch]:modularity_color")
+    ]
+
+    plot_new = figure(tooltips = hover_vals_new, active_scroll='wheel_zoom',
+                x_range=Range1d(-20.1, 20.1), y_range=Range1d(-20.1, 20.1), title=title)
+
+    # Create a network graph object with the corrected layout
+    mapping_new = dict((n, i) for i, n in enumerate(G_new.nodes))
+    H_new = nx.relabel_nodes(G_new, mapping_new)
+    network_new = from_networkx(H_new, nx.fruchterman_reingold_layout, scale=150, center=(0, 0))
+
+    # Use node_renderer to attach hover tool
+    network_new.node_renderer.glyph = Circle(size=10, fill_color=color_attr)
+    network_new.node_renderer.hover_glyph = Circle(size=10, fill_color='white', line_width=2)
+    network_new.node_renderer.selection_glyph = Circle(size=10, fill_color='white', line_width=2)
+
+    # Customize the hover tool to filter by dta_org
+    hover_new = HoverTool(
+        tooltips=hover_vals_new,
+        renderers=[network_new.node_renderer],  # Use node_renderer for hover tool
+        mode='mouse'
+    )
+
+    x_new, y_new = zip(*network_new.layout_provider.graph_layout.values())
+    node_labels_new = list(G_new.nodes())
+    src_new = ColumnDataSource({'x': x_new, 'y': y_new, 'name': [node_labels_new[i] for i in range(len(x_new))]})
+    lbls_new = LabelSet(x='x', y='y', text='name', source=src_new, background_fill_color='white', text_font_size='10px', background_fill_alpha=.9)
+    plot_new.renderers.append(lbls_new)
+
+    # Add the hover tool to the plot
+    plot_new.add_tools(hover_new)
+
+    network_new.edge_renderer.glyph = MultiLine(line_alpha=0.3, line_width=1)
+    network_new.edge_renderer.selection_glyph = MultiLine(line_color='black', line_width=2)
+    network_new.edge_renderer.hover_glyph = MultiLine(line_color='black', line_width=2)
+
+    network_new.selection_policy = NodesAndLinkedEdges()
+    network_new.inspection_policy = NodesAndLinkedEdges()
+
+    plot_new.renderers.append(network_new)
+
+    # show(plot_new)
 
     # # Now, use the nx library to created a directed graph (DiGraph) that we can then use to run PageRank/Gini coefficient analyses
     # # and generate other networked level metrics
@@ -332,9 +600,35 @@ async def generate_comment_countdiscussion_thread_author_table():
     # plt.show()
 
     # Convert the pandas DataFrame to a list of dictionaries
-    response_list = gb_df_2.to_dict(orient="records")
+    response_list = filtered_df.to_dict(orient="records")
 
-    return response_list
+    return JSONResponse(content={'plot_json': json_item(plot_new, "commenter_dta_connection_network"), 'response_list': response_list})
+    # return json_item(plot_new, "commenter_dta_connection_network"), response_list
+
+    # Bokeh plot creation code (replace the show(plot_new) with the following):
+    # script, div = components(plot_new, wrap_script=False)
+    # print(div)
+
+    # # CDN lines
+    # cdn_js = CDN.js_files[0]
+    # print(cdn_js)
+
+    # # # Include other relevant information you want to send to the frontend
+    # response_info = {
+    #     "script": script,
+    #     "div": div,
+    #     "cdn_js": cdn_js,
+    #     "response_list": response_list
+    # }
+
+    # # Convert the Bokeh plot to JSON
+    # plot_json = json.dumps(json_item(plot_new, "myplot"))
+
+    # return JSONResponse(content={'plot_json': plot_json})
+
+    # return response_info
+
+    # return response_list
 
 
 # Commenter DTA connection count across organizations
@@ -463,6 +757,100 @@ async def generate_commenter_dta_connection_count_across_organizations():
         }
     )
 
+    # # Enable viewing Bokeh plots in the notebook
+    # bokeh.io.output_notebook()
+
+    # Generate the network graph
+    G2 = nx.from_pandas_edgelist(commenter_DTA_gb_df, 'commenter_organization', 'discussion_thread_author_organization', 'commenter_dta_connection_count')
+
+    # Create a dictionary that can be used to keep track of the number of connections from an organization to another
+    org_connection_count_dict = defaultdict(list)
+
+    # Iterate through autoware_network_diff_orgs to create a sample network
+    for _, row in commenter_DTA_gb_df.iterrows():
+        commenter_org = row["commenter_organization"]
+        dta_org = row["discussion_thread_author_organization"]
+        commenter_dta_count = row['commenter_dta_connection_count']
+
+        org_connection_count_dict[dta_org].append(f"{commenter_org}:{commenter_dta_count}")
+
+    # Sort each list in org_connection_count_dict
+    for dta_org in org_connection_count_dict.keys():
+        org_connection_count_dict[dta_org] = sorted(org_connection_count_dict[dta_org], key=lambda x: int(x.split(":")[1]), reverse=True)
+
+    # Calculate the betweenness centrality for each node, as well as the weighted degree metric
+    betweenness_centrality_dict = nx.betweenness_centrality(G2, weight='commenter_dta_connection_count')
+    nx.set_node_attributes(G2, name='betweenness', values=betweenness_centrality_dict)
+
+    # nx.degree(G2, weight='commenter_dta_connection_count')
+    # weighted_degree_dict = dict(nx.degree(G2, weight='commenter_dta_connection_count'))
+    nx.set_node_attributes(G2, name='weighted_degree', values=org_connection_count_dict)
+
+    # Now, determine what are the distinct communities within the network
+    communities = community.greedy_modularity_communities(G2)
+
+    # Create empty dictionary
+    modularity_class = {}
+    modularity_color = {}
+
+    # Loop through each community in the network
+    for community_number, comm in enumerate(communities):
+        # For each member of the community, add their community number
+        for name in comm:
+            modularity_class[name] = community_number
+            modularity_color[name] = Reds8[community_number*3]
+
+    nx.set_node_attributes(G2, modularity_class, 'modularity_class')
+    nx.set_node_attributes(G2, modularity_color, 'modularity_color')
+    color_attr = 'modularity_color'
+
+    title = 'Commenter-DTA Connection Network Across Organizations'
+
+    hover_vals = [
+        ("Organization", "@index"),
+        ("Betweenness", "@betweenness"),
+        ("Most Frequent Commenters by Organization", "@weighted_degree"),
+        ("Modularity Color", "$color[swatch]:modularity_color")
+    ]
+
+    plot = figure(tooltips = hover_vals, active_scroll='wheel_zoom',
+                x_range=Range1d(-20.1, 20.1), y_range=Range1d(-20.1, 20.1), title=title)
+
+    # Create a network graph object with the corrected layout
+    mapping = dict((n, i) for i, n in enumerate(G2.nodes))
+    H = nx.relabel_nodes(G2, mapping)
+    network = from_networkx(H, nx.spring_layout, scale=50, center=(0, 0))
+
+    # Use node_renderer to attach hover tool
+    network.node_renderer.glyph = Circle(size=10, fill_color=color_attr)
+    network.node_renderer.hover_glyph = Circle(size=10, fill_color='white', line_width=2)
+    network.node_renderer.selection_glyph = Circle(size=10, fill_color='white', line_width=2)
+
+    # Customize the hover tool to filter by dta_org
+    hover = HoverTool(
+        tooltips=hover_vals,
+        renderers=[network.node_renderer],  # Use node_renderer for hover tool
+        mode='mouse'
+    )
+
+    x, y = zip(*network.layout_provider.graph_layout.values())
+    node_labels = list(G2.nodes())
+    src = ColumnDataSource({'x': x, 'y': y, 'name': [node_labels[i] for i in range(len(x))]})
+    lbls = LabelSet(x='x', y='y', text='name', source=src, background_fill_color='white', text_font_size='10px', background_fill_alpha=.9)
+    plot.renderers.append(lbls)
+
+    # Add the hover tool to the plot
+    plot.add_tools(hover)
+
+    network.edge_renderer.glyph = MultiLine(line_alpha=0.3, line_width=1)
+    network.edge_renderer.selection_glyph = MultiLine(line_color='black', line_width=2)
+    network.edge_renderer.hover_glyph = MultiLine(line_color='black', line_width=2)
+
+    network.selection_policy = NodesAndLinkedEdges()
+    network.inspection_policy = NodesAndLinkedEdges()
+
+    plot.renderers.append(network)
+
     # # We want arrows in a directed graph illustrating the above data to go from commenter organization to discussion thread author
     # # organization (while either demonstrate inter-organizational collaboration, the commentor-thread author arrow direction indicates
     # # at the organization level which group was most informative/influential in maintaining the activity and overall health of the community itself)
@@ -515,4 +903,4 @@ async def generate_commenter_dta_connection_count_across_organizations():
     # Convert the pandas DataFrame to a list of dictionaries
     response_list = commenter_DTA_gb_df.to_dict(orient="records")
 
-    return response_list
+    return JSONResponse(content={'plot_json': json_item(plot, "commenter_dta_connection_count_across_orgs"), 'response_list': response_list})
