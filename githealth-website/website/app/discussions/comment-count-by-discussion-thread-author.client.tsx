@@ -11,10 +11,10 @@ declare global {
 }
 
 interface CommentCountByDiscussionThreadAuthor {
-    discussion_thread_author: string
-    comment_author: string
-    comment_count: number
-    normalized_comment_count: number
+    discussion_thread_author_id: string
+    discussion_comment_author: string
+    discussion_comment_author_affiliation: number
+    number_of_comments_across_DTA_threads: number
 }
 
 
@@ -72,19 +72,19 @@ export default function CommentCountByDiscussionThreadAuthor() {
                         <table className="border border-gray-800 bg-gray-200 text-black">
                             <thead>
                                 <tr>
-                                    <th>Discussion Thread Author</th>
-                                    <th>Comment Author</th>
-                                    <th>Comment Count</th>
-                                    <th>Normalized Comment Count</th>
+                                    <th className='text-center'>Discussion Thread Author (DTA)</th>
+                                    <th className='text-center'>Discussion Comment Author</th>
+                                    <th className='text-center'>Discussion Comment Author Affiliation</th>
+                                    <th className='text-center'>Number of Comments Across DTA Threads </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {commentCountByDiscussionThreadAuthorData.map((commentCountByDiscussionThreadAuthor, index) => (
                                     <tr key={index}>
-                                        <td>{commentCountByDiscussionThreadAuthor.discussion_thread_author}</td>
-                                        <td>{commentCountByDiscussionThreadAuthor.comment_author}</td>
-                                        <td>{commentCountByDiscussionThreadAuthor.comment_count}</td>
-                                        <td>{commentCountByDiscussionThreadAuthor.normalized_comment_count.toFixed(5)}</td>
+                                        <td className='text-center'>{commentCountByDiscussionThreadAuthor.discussion_thread_author_id}</td>
+                                        <td className='text-center'>{commentCountByDiscussionThreadAuthor.discussion_comment_author}</td>
+                                        <td className='text-center'>{commentCountByDiscussionThreadAuthor.discussion_comment_author_affiliation}</td>
+                                        <td className='text-center'>{commentCountByDiscussionThreadAuthor.number_of_comments_across_DTA_threads}</td>
                                     </tr>
                                 ))}
                             </tbody>

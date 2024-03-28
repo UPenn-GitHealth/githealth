@@ -424,108 +424,221 @@ async def close_time_median():
     response_model=None,
 )
 async def generate_comment_countdiscussion_thread_author_table():
-    discussion_data = pd.read_csv("Discussions_Data/github_discussion_data.csv")
+    # discussion_data = pd.read_csv("Discussions_Data/github_discussion_data.csv")
 
-    # We want to primarily focus on those discussions that have been answered - those are the most informative
-    answered_discussion_data = discussion_data[
-        discussion_data["Answered/Unanswered"] == "Answered"
-    ]
+    # # We want to primarily focus on those discussions that have been answered - those are the most informative
+    # answered_discussion_data = discussion_data[
+    #     discussion_data["Answered/Unanswered"] == "Answered"
+    # ]
 
-    # This gives us the user IDs of those whose discussions generate the most comments
-    gb_df_1 = (
-        answered_discussion_data.groupby("User ID")["Comment Author"]
-        .count()
-        .reset_index()
-    )
-    gb_df_1 = gb_df_1[gb_df_1["User ID"] != "Unknown"]
-    gb_df_1 = gb_df_1.sort_values(
-        by="Comment Author", ascending=False, ignore_index=True
-    )
+    # # This gives us the user IDs of those whose discussions generate the most comments
+    # gb_df_1 = (
+    #     answered_discussion_data.groupby("User ID")["Comment Author"]
+    #     .count()
+    #     .reset_index()
+    # )
+    # gb_df_1 = gb_df_1[gb_df_1["User ID"] != "Unknown"]
+    # gb_df_1 = gb_df_1.sort_values(
+    #     by="Comment Author", ascending=False, ignore_index=True
+    # )
 
-    # This groupby generates the number of comments specific individuals make on a certain person's discussions
-    # (can be used to measure collaboration index and define weight edges for a graph when normalized)
-    gb_df_2 = (
-        answered_discussion_data.groupby(["User ID", "Comment Author"])["Comment ID"]
-        .count()
-        .reset_index()
-    )
-    gb_df_2 = gb_df_2[gb_df_2["User ID"] != gb_df_2["Comment Author"]]
-    gb_df_2 = gb_df_2[
-        (gb_df_2["User ID"] != "Unknown") & (gb_df_2["Comment Author"] != "Unknown")
-    ]
-    gb_df_2 = gb_df_2.sort_values(by="Comment ID", ascending=False, ignore_index=True)
+    # # This groupby generates the number of comments specific individuals make on a certain person's discussions
+    # # (can be used to measure collaboration index and define weight edges for a graph when normalized)
+    # gb_df_2 = (
+    #     answered_discussion_data.groupby(["User ID", "Comment Author"])["Comment ID"]
+    #     .count()
+    #     .reset_index()
+    # )
+    # gb_df_2 = gb_df_2[gb_df_2["User ID"] != gb_df_2["Comment Author"]]
+    # gb_df_2 = gb_df_2[
+    #     (gb_df_2["User ID"] != "Unknown") & (gb_df_2["Comment Author"] != "Unknown")
+    # ]
+    # gb_df_2 = gb_df_2.sort_values(by="Comment ID", ascending=False, ignore_index=True)
 
-    # Could be used for PageRank initialization
-    total_comments = gb_df_2["Comment ID"].sum()
-    gb_df_2["Normalized Comment ID"] = gb_df_2["Comment ID"] / total_comments
+    # # Could be used for PageRank initialization
+    # total_comments = gb_df_2["Comment ID"].sum()
+    # gb_df_2["Normalized Comment ID"] = gb_df_2["Comment ID"] / total_comments
 
-    gb_df_2 = gb_df_2.rename(
-        columns={
-            "User ID": "discussion_thread_author",
-            "Comment Author": "comment_author",
-            "Comment ID": "comment_count",
-            "Normalized Comment ID": "normalized_comment_count",
-        }
-    )
-    # gb_df_2 = gb_df_2[gb_df_2["comment_count"] > 5]
+    # gb_df_2 = gb_df_2.rename(
+    #     columns={
+    #         "User ID": "discussion_thread_author",
+    #         "Comment Author": "comment_author",
+    #         "Comment ID": "comment_count",
+    #         "Normalized Comment ID": "normalized_comment_count",
+    #     }
+    # )
+    # # gb_df_2 = gb_df_2[gb_df_2["comment_count"] > 5]
+
+    # # Set a threshold for comment_count
+    # comment_count_threshold = 3
+
+    # # Filter the DataFrame based on the threshold
+    # filtered_df = gb_df_2[gb_df_2['comment_count'] > comment_count_threshold]
+
+    # # Generate the network graph
+    # G_new = nx.from_pandas_edgelist(filtered_df, 'discussion_thread_author', 'comment_author', ['comment_count', 'normalized_comment_count'])
+
+    # # Create a dictionary that can be used to keep track of the number of connections from an individual to another
+    # indiv_connection_count_dict = defaultdict(list)
+
+    # # Iterate through filtered_df to create a sample network
+    # for _, row in filtered_df.iterrows():
+    #     commenter = row["comment_author"]
+    #     dta = row["discussion_thread_author"]
+    #     commenter_dta_count = row['comment_count']
+
+    #     indiv_connection_count_dict[dta].append(f"{commenter}:{commenter_dta_count}")
+
+    # # Sort each list in org_connection_count_dict
+    # for dta in indiv_connection_count_dict.keys():
+    #     indiv_connection_count_dict[dta] = sorted(indiv_connection_count_dict[dta], key=lambda x: int(x.split(":")[1]), reverse=True)
+
+    # # Calculate the betweenness centrality for each node, as well as the weighted degree metric
+    # betweenness_centrality_dict_new = nx.betweenness_centrality(G_new, weight='normalized_comment_count')
+    # nx.set_node_attributes(G_new, name='betweenness', values=betweenness_centrality_dict_new)
+
+    # # nx.degree(G2, weight='commenter_dta_connection_count')
+    # # weighted_degree_dict = dict(nx.degree(G2, weight='commenter_dta_connection_count'))
+    # nx.set_node_attributes(G_new, name='weighted_degree', values=indiv_connection_count_dict)
+
+    # # Now, determine what are the distinct communities within the network
+    # communities_G_new = community.greedy_modularity_communities(G_new)
+
+    # # Create empty dictionary
+    # modularity_class_G_new = {}
+    # modularity_color_G_new = {}
+
+    # # Loop through each community in the network
+    # for community_number, comm in enumerate(communities_G_new):
+    #     # For each member of the community, add their community number
+    #     for name in comm:
+    #         modularity_class_G_new[name] = community_number
+    #         modularity_color_G_new[name] = Turbo256[community_number*8]
+
+    # nx.set_node_attributes(G_new, modularity_class_G_new, 'modularity_class')
+    # nx.set_node_attributes(G_new, modularity_color_G_new, 'modularity_color')
+    # color_attr = 'modularity_color'
+
+    # title = 'Initializer-Commenter Relationship Network'
+
+    # hover_vals_new = [
+    #     ("Organization", "@index"),
+    #     ("Betweenness", "@betweenness"),
+    #     ("Most Frequent Commenters", "@weighted_degree"),
+    #     ("Modularity Color", "$color[swatch]:modularity_color")
+    # ]
+
+    # plot_new = figure(tooltips = hover_vals_new, active_scroll='wheel_zoom',
+    #             x_range=Range1d(-20.1, 20.1), y_range=Range1d(-20.1, 20.1), title=title)
+
+    # # Create a network graph object with the corrected layout
+    # mapping_new = dict((n, i) for i, n in enumerate(G_new.nodes))
+    # H_new = nx.relabel_nodes(G_new, mapping_new)
+    # network_new = from_networkx(H_new, nx.fruchterman_reingold_layout, scale=150, center=(0, 0))
+
+    # # Use node_renderer to attach hover tool
+    # network_new.node_renderer.glyph = Circle(size=10, fill_color=color_attr)
+    # network_new.node_renderer.hover_glyph = Circle(size=10, fill_color='white', line_width=2)
+    # network_new.node_renderer.selection_glyph = Circle(size=10, fill_color='white', line_width=2)
+
+    # # Customize the hover tool to filter by dta_org
+    # hover_new = HoverTool(
+    #     tooltips=hover_vals_new,
+    #     renderers=[network_new.node_renderer],  # Use node_renderer for hover tool
+    #     mode='mouse'
+    # )
+
+    # x_new, y_new = zip(*network_new.layout_provider.graph_layout.values())
+    # node_labels_new = list(G_new.nodes())
+    # src_new = ColumnDataSource({'x': x_new, 'y': y_new, 'name': [node_labels_new[i] for i in range(len(x_new))]})
+    # lbls_new = LabelSet(x='x', y='y', text='name', source=src_new, background_fill_color='white', text_font_size='10px', background_fill_alpha=.9)
+    # plot_new.renderers.append(lbls_new)
+
+    # # Add the hover tool to the plot
+    # plot_new.add_tools(hover_new)
+
+    # network_new.edge_renderer.glyph = MultiLine(line_alpha=0.3, line_width=1)
+    # network_new.edge_renderer.selection_glyph = MultiLine(line_color='black', line_width=2)
+    # network_new.edge_renderer.hover_glyph = MultiLine(line_color='black', line_width=2)
+
+    # network_new.selection_policy = NodesAndLinkedEdges()
+    # network_new.inspection_policy = NodesAndLinkedEdges()
+
+    # plot_new.renderers.append(network_new)
+
+    #######
+
+    final_merged_discussions_data = pd.read_csv("Discussions_Data/final_merged_discussions_data.csv")
+    answered_discussion_data = final_merged_discussions_data[final_merged_discussions_data['discussion_answered_or_unanswered'] == 'Answered']
+
+    new_df = answered_discussion_data.groupby(["discussion_thread_author_id", "discussion_comment_author", "discussion_comment_author_affiliation"])['discussion_comment_id'].count().reset_index()
+    new_df = new_df[new_df["discussion_thread_author_id"] != new_df["discussion_comment_author"]]
+    new_df = new_df[(new_df["discussion_thread_author_id"] != "Unknown") & (new_df["discussion_comment_author"] != "Unknown")]
+    new_df = new_df.sort_values(by='discussion_comment_id', ascending=False, ignore_index=True)
+    new_df = new_df.rename(columns={'discussion_comment_id': "number_of_comments_across_DTA_threads"})
+
+    new_df['unique_comment_author_descriptor'] = new_df['discussion_comment_author'] + " (" + new_df['discussion_comment_author_affiliation'] + ")"
+
+    output_df = new_df[['discussion_thread_author_id', 'discussion_comment_author', 'discussion_comment_author_affiliation', 'number_of_comments_across_DTA_threads']]
 
     # Set a threshold for comment_count
-    comment_count_threshold = 3
+    comment_count_threshold = 2
 
     # Filter the DataFrame based on the threshold
-    filtered_df = gb_df_2[gb_df_2['comment_count'] > comment_count_threshold]
+    filtered_new_df = new_df[new_df['number_of_comments_across_DTA_threads'] > comment_count_threshold]
 
     # Generate the network graph
-    G_new = nx.from_pandas_edgelist(filtered_df, 'discussion_thread_author', 'comment_author', ['comment_count', 'normalized_comment_count'])
+    G_new = nx.from_pandas_edgelist(filtered_new_df, 'discussion_thread_author_id', 'unique_comment_author_descriptor', ['number_of_comments_across_DTA_threads'])
 
     # Create a dictionary that can be used to keep track of the number of connections from an individual to another
     indiv_connection_count_dict = defaultdict(list)
 
     # Iterate through filtered_df to create a sample network
-    for _, row in filtered_df.iterrows():
-        commenter = row["comment_author"]
-        dta = row["discussion_thread_author"]
-        commenter_dta_count = row['comment_count']
+    for _, row in filtered_new_df.iterrows():
+        commenter = row["unique_comment_author_descriptor"]
+        dta = row["discussion_thread_author_id"]
+        commenter_dta_count = row['number_of_comments_across_DTA_threads']
 
-        indiv_connection_count_dict[dta].append(f"{commenter}:{commenter_dta_count}")
+        indiv_connection_count_dict[dta].append(f"{commenter}: {commenter_dta_count}")
 
     # Sort each list in org_connection_count_dict
     for dta in indiv_connection_count_dict.keys():
         indiv_connection_count_dict[dta] = sorted(indiv_connection_count_dict[dta], key=lambda x: int(x.split(":")[1]), reverse=True)
 
-    # Calculate the betweenness centrality for each node, as well as the weighted degree metric
-    betweenness_centrality_dict_new = nx.betweenness_centrality(G_new, weight='normalized_comment_count')
-    nx.set_node_attributes(G_new, name='betweenness', values=betweenness_centrality_dict_new)
-
     # nx.degree(G2, weight='commenter_dta_connection_count')
     # weighted_degree_dict = dict(nx.degree(G2, weight='commenter_dta_connection_count'))
     nx.set_node_attributes(G_new, name='weighted_degree', values=indiv_connection_count_dict)
+    # nx.set_node_attributes(G_new, name='organization', values=)
 
-    # Now, determine what are the distinct communities within the network
-    communities_G_new = community.greedy_modularity_communities(G_new)
+    # # Now, determine what are the distinct communities within the network (use the discussion_comment_author_affiliation field)
+    # communities_G_new = community.greedy_modularity_communities(G_new)
+
+    comment_author_affiliations = defaultdict(set)
+
+    # Generate a list of sets by iterating through the entire new_df dataframe
+
+    # This generates a dictionary where keys are the affiliations of the comment 
+    # author and the values are sets of nodes that are part of that 
+    # comment author affiliation
+    for _, row in filtered_new_df.iterrows():
+        comment_author_affiliations[row['discussion_comment_author_affiliation']].add(row['unique_comment_author_descriptor'])
 
     # Create empty dictionary
-    modularity_class_G_new = {}
     modularity_color_G_new = {}
 
     # Loop through each community in the network
-    for community_number, comm in enumerate(communities_G_new):
-        # For each member of the community, add their community number
-        for name in comm:
-            modularity_class_G_new[name] = community_number
-            modularity_color_G_new[name] = Turbo256[community_number*8]
+    for val, (_, nodes) in enumerate(comment_author_affiliations.items()):
+        # For each member of the community, color it using the same value
+        for name in nodes:
+            modularity_color_G_new[name] = Turbo256[val*12]
 
-    nx.set_node_attributes(G_new, modularity_class_G_new, 'modularity_class')
     nx.set_node_attributes(G_new, modularity_color_G_new, 'modularity_color')
     color_attr = 'modularity_color'
 
-    title = 'Initializer-Commenter Relationship Network'
+    title = 'Individual Comments by Discussion Thread Author'
 
     hover_vals_new = [
-        ("Organization", "@index"),
-        ("Betweenness", "@betweenness"),
-        ("Most Frequent Commenters", "@weighted_degree"),
-        ("Modularity Color", "$color[swatch]:modularity_color")
+        ("Most Active Comment Authors", "@weighted_degree"),
     ]
 
     plot_new = figure(tooltips = hover_vals_new, active_scroll='wheel_zoom',
@@ -534,7 +647,10 @@ async def generate_comment_countdiscussion_thread_author_table():
     # Create a network graph object with the corrected layout
     mapping_new = dict((n, i) for i, n in enumerate(G_new.nodes))
     H_new = nx.relabel_nodes(G_new, mapping_new)
-    network_new = from_networkx(H_new, nx.fruchterman_reingold_layout, scale=150, center=(0, 0))
+    network_new = from_networkx(H_new, nx.spring_layout, scale=150, center=(0, 0))
+
+    degrees = dict(nx.degree(H_new))
+    sizes = [5 + degrees[n]*2 for n in H_new.nodes()]
 
     # Use node_renderer to attach hover tool
     network_new.node_renderer.glyph = Circle(size=10, fill_color=color_attr)
@@ -600,9 +716,11 @@ async def generate_comment_countdiscussion_thread_author_table():
     # plt.show()
 
     # Convert the pandas DataFrame to a list of dictionaries
-    response_list = filtered_df.to_dict(orient="records")
+    # response_list = filtered_df.to_dict(orient="records")
+    response_list = output_df.to_dict(orient="records")
 
     return JSONResponse(content={'plot_json': json_item(plot_new, "commenter_dta_connection_network"), 'response_list': response_list})
+
     # return json_item(plot_new, "commenter_dta_connection_network"), response_list
 
     # Bokeh plot creation code (replace the show(plot_new) with the following):
