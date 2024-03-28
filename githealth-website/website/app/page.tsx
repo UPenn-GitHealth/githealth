@@ -17,7 +17,7 @@ const HomePage = () => {
           </p>
         </div>
       </div>
-      <div className="bg-white py-10">
+      <div className="py-10" style={{ background: 'linear-gradient(to right, #00B4DB, #09b50c)' }}> {/* Updated this line */}
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-extrabold text-gray-900">
             Explore Our Metrics

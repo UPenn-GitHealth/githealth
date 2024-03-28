@@ -33,6 +33,7 @@ export interface LineTimeChartPoint {
 }
 
 type LineTimeChartProps = {
+    filter: boolean;
     title?: string;
     legend?: string;
     data?: LineTimeChartPoint[];
@@ -82,7 +83,7 @@ export default function LineTimeChart(props: LineTimeChartProps) {
             },
             tooltip: {
                 callbacks: {
-                    title: function (tooltipItems: { parsed: { x: string | number | Date; }; }[]) {
+                    title: function(tooltipItems: { parsed: { x: string | number | Date; }; }[]) {
                         // Ensure that we're getting a valid date object
                         const date = new Date(tooltipItems[0].parsed.x);
                         return date.toLocaleString('default', { month: 'short', year: 'numeric' });
