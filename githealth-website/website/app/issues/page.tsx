@@ -6,6 +6,7 @@ import TimeToCloseMean from './time-to-close-mean-chart';
 import TimeToCloseMedian from './time-to-close-median-chart';
 import UserContributionsTable from '../users/user-contributions'; 
 import OrganizationContributionsTable from '../organizations/org-contributions';
+import UserIssueDataTable from './user-issues-data';
 
 const IssuesPage = () => {
     return (
@@ -45,6 +46,14 @@ const IssuesPage = () => {
                     </p>
                     <UserContributionsTable />
                 </div>
+                <div className="mb-8 w-full">
+                    <h3 className="text-lg font-semibold mb-4 text-blue-800">User Collaboration Indexes</h3>
+                    <p className="mb-4 text-gray-700">
+                        This table displays the collaboration indexes for each user, which are calculated based on the ratio of external to total contributions for threads and contributions. The Thread Collaboration Index represents the ratio of external threads to the total number of threads, and the Contribution Collaboration Index represents the ratio of external contributions to the total number of contributions.
+                    </p>
+                    <UserIssueDataTable />
+                </div>
+
                 <div className="mb-8 w-full">
                     <h3 className="text-lg font-semibold mb-4 text-blue-800">Organization Contributions</h3>
                     <p className="mb-4 text-gray-700">

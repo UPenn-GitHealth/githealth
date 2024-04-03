@@ -96,6 +96,40 @@ class UserContribution(BaseModel):
     total_files_changed: int
     total_lines_changed: int
 
+class UserIssueData(BaseModel):
+    users: str
+    thread: int
+    thread_internal: int
+    thread_external: int
+    thread_collaboration_index: float
+    contribution: int
+    contribution_internal: int
+    contribution_external: int
+    contribution_collaboration_index: float
+
+def get_user_issue_data() -> List[UserIssueData]:
+    # Read the CSV file into a DataFrame
+    df = pd.read_csv("metrics & network analysis/issue_metrics.csv")
+
+    # Calculate the collaboration indexes
+    df['thread_collaboration_index'] = df['thread_external'] / (df['thread_external'] + df['thread_internal'])
+    df['contribution_collaboration_index'] = df['contribution_external'] / (df['contribution_external'] + df['contribution_internal'])
+
+    # Replace NaN values with 0 (for cases where both internal and external contributions are 0)
+    df.fillna(0, inplace=True)
+
+    # Convert the DataFrame to a list of dictionaries
+    data_dict = df.to_dict(orient="records")
+
+    # Convert the list of dictionaries to a list of UserIssueData objects
+    user_issue_data = [UserIssueData(**item) for item in data_dict]
+
+    return user_issue_data
+
+@app.get("/issues/user-issues-data", response_model=List[UserIssueData])
+async def user_issue_data():
+    return get_user_issue_data()
+
 def get_user_contributions() -> List[UserContribution]:
     # Read the CSV file into a DataFrame
     df = pd.read_csv("Issues_Data/issues_data+users_v7.0/final_merged_issues_data.csv")
@@ -537,9 +571,9 @@ async def generate_comment_countdiscussion_thread_author_table():
     network_new = from_networkx(H_new, nx.fruchterman_reingold_layout, scale=150, center=(0, 0))
 
     # Use node_renderer to attach hover tool
-    network_new.node_renderer.glyph = Circle(size=10, fill_color=color_attr)
-    network_new.node_renderer.hover_glyph = Circle(size=10, fill_color='white', line_width=2)
-    network_new.node_renderer.selection_glyph = Circle(size=10, fill_color='white', line_width=2)
+    network_new.node_renderer.glyph = Circle(radius=0.3, fill_color=color_attr)
+    network_new.node_renderer.hover_glyph = Circle(radius=0.3, fill_color='white', line_width=2)
+    network_new.node_renderer.selection_glyph = Circle(radius=0.3, fill_color='white', line_width=2)
 
     # Customize the hover tool to filter by dta_org
     hover_new = HoverTool(
@@ -822,9 +856,9 @@ async def generate_commenter_dta_connection_count_across_organizations():
     network = from_networkx(H, nx.spring_layout, scale=50, center=(0, 0))
 
     # Use node_renderer to attach hover tool
-    network.node_renderer.glyph = Circle(size=10, fill_color=color_attr)
-    network.node_renderer.hover_glyph = Circle(size=10, fill_color='white', line_width=2)
-    network.node_renderer.selection_glyph = Circle(size=10, fill_color='white', line_width=2)
+    network.node_renderer.glyph = Circle(radius=0.35, fill_color=color_attr)
+    network.node_renderer.hover_glyph = Circle(radius=0.35, fill_color='white', line_width=2)
+    network.node_renderer.selection_glyph = Circle(radius=0.35, fill_color='white', line_width=2)
 
     # Customize the hover tool to filter by dta_org
     hover = HoverTool(
