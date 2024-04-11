@@ -286,6 +286,53 @@ def get_organization_contributions() -> List[OrganizationContribution]:
 
     return org_contributions
 
+@app.get("/users/thread-contribution-metrics", response_model=None)
+async def generate_user_contribution_metrics():
+    discussion_metrics = pd.read_csv("Discussions_Data/discussion_metrics.csv")
+    issues_metrics = pd.read_csv("Issues_Data/issues_data+users_v7.0/issues_all_users.csv")
+
+    # Join the two DataFrames on the 'users' column
+    joined_metrics = pd.merge(discussion_metrics, issues_metrics, on='users', how='inner')
+
+    # Let's determine and compare the most active members by setting a minimum 
+    # threshold of the number of threads and contributions a user must have
+    min_dis_thread_threshold = 3
+    min_dis_contribution_threshold = 3
+
+    joined_metrics = joined_metrics[joined_metrics['dis_thread'] > min_dis_thread_threshold]
+    joined_metrics = joined_metrics[joined_metrics['dis_contribution'] > min_dis_contribution_threshold]
+
+    joined_metrics = joined_metrics[joined_metrics['iss_thread'] > 0]
+    # joined_metrics = joined_metrics[joined_metrics['iss_contribution'] > min_iss_contribution_threshold]
+
+    joined_metrics['scaled_contribution_to_thread_ratio'] = 20 * joined_metrics['iss_contribution'] / joined_metrics['iss_thread']
+    joined_metrics = joined_metrics.reset_index(drop=True)
+
+    source = ColumnDataSource(joined_metrics)
+
+    p = figure(title="Evaluating Contribution to Thread Ratios Across Discussion and Issue Threads",
+            x_axis_label='Discussion Thread Count', y_axis_label='Discussion Contribution Count')
+
+    # Add hover tool
+    hover = HoverTool()
+    hover.tooltips=[
+        ('User', '@users'),
+        ('Discussion Threads', '@dis_thread'),
+        ('Discussion Contributions', '@dis_contribution'),
+        ('Scaled Issue Contribution to Thread Ratio', '@scaled_contribution_to_thread_ratio')
+    ]
+
+    p.add_tools(hover)
+
+    lbls_scatter = LabelSet(x='dis_thread', y='dis_contribution', text='users', source=source, background_fill_color='white', text_font_size='10px', background_fill_alpha=.9)
+    p.renderers.append(lbls_scatter)
+
+    # Scatter plot
+    p.scatter('dis_thread', 'dis_contribution', size='scaled_contribution_to_thread_ratio', source=source,
+            fill_alpha=0.6, line_color=None)
+    
+    return JSONResponse(content={'plot_json': json_item(p, "thread_contribution_metrics")})
+
 @app.get("/organizations/contributions", response_model=List[OrganizationContribution])
 async def organizations_contributions():
     contributions = get_organization_contributions()
@@ -959,10 +1006,7 @@ async def generate_commenter_dta_connection_count_across_organizations():
     title = 'Commenter-DTA Connection Network Across Organizations'
 
     hover_vals = [
-        ("Organization", "@index"),
-        ("Betweenness", "@betweenness"),
         ("Most Frequent Commenters by Organization", "@weighted_degree"),
-        ("Modularity Color", "$color[swatch]:modularity_color")
     ]
 
     plot = figure(tooltips = hover_vals, active_scroll='wheel_zoom',
