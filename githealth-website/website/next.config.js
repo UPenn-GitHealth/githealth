@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-const PRODUCTION_API_DOMAIN = "https://githealth-backend.onrender.com/";
+const PRODUCTION_API_DOMAIN = "https://githealth-backend-j6sy.onrender.com/";
 const nextConfig = {
     rewrites: async () => {
         return [
