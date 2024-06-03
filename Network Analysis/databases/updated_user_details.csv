@@ -1,0 +1,568 @@
+Unnamed: 0,user_id,skills,email,location,affiliation,name,discussion_thread,discussion_thread_internal,discussion_thread_external,discussion_contribution,discussion_contribution_internal,discussion_contribution_external,discussions_collaboration_index,discussions_collab_index_2,issues_thread,issues_thread_internal,issues_thread_external,issues_contribution,issues_contribution_internal,issues_contribution_external,issues_collaboration_index,issues_collab_index_2,discussions_participation_index,issues_participation_index
+0,BonoloAWF,Technical Project Management,bonolo.mathibela@autoware.org,,awf,Bonolo Mathibela*,54.0,23.0,24.0,11.0,5.0,6.0,0.1937,0.4588,0.0,0.0,0.0,1.0,1.0,0.0,1.22,0.0,16.3439,0.22
+1,HaoruXue,"C++, Python, Racing ODD, Control, Perception, Deep Learning",xuehaoru233@gmail.com,,awf,Haoru Xue,5.0,2.0,3.0,3.0,1.0,2.0,0.6604,0.2972,,,,,,,,,1.8694,
+2,QZJGeorge,"C++, Python, ROS2, Machine Learning, Embedded Systems, Control",zhijie.qiao@autoware.org,,awf,Zhijie Qiao,10.0,3.0,1.0,1.0,0.0,1.0,0.3223,-0.3622,,,,,,,,,2.8403,
+3,filiperinaldi,Anything related to Arm IP and work planning from Arm,filipe.rinaldi@gmail.com,,arm,Filipe Rinaldi,,,,,,,,,1.0,1.0,1.0,2.0,1.0,1.0,1.2648,-0.1833,,0.5785
+4,ambroise-arm,C++,ambroise.vincent@arm.com,,arm,Ambroise Vincent,2.0,2.0,2.0,8.0,3.0,5.0,1.5909,3.6922,1.0,1.0,0.0,0.0,0.0,0.0,0.8783,inf,1.9696,0.1385
+5,LucaFos,"C++, Machine Learning, ModelZoo",foschiani01@gmail.com,,arm,Luca Foschiani,0.0,0.0,0.0,1.0,0.0,1.0,1.1797,0.0,,,,,,,,,0.1797,
+6,Sevenarth,C++,luca.vizzarro@arm.com,,arm,Luca Vizzarro,,,,,,,,,,,,,,,,,,
+7,narendarselva,"C++ , ROS2 , Planning and control",kosuke.tnp@gmail.com,,arm,Narendar Selvaraj,,,,,,,,,,,,,,,,,,
+8,jcory-xilinx,"Python, ML",,,arm,John Cory,,,,,,,,,,,,,,,,,,
+9,mitsudome-r,,ryohsuke.mitsudome@tier4.jp,,tier4,Ryohsuke Mitsudome,41.0,13.0,8.0,112.0,57.0,55.0,1.7739,1.1807,17.0,4.0,12.0,12.0,2.0,10.0,1.0849,1.0615,31.0331,4.9952
+10,TakaHoribe,"C++, ROS2, Planning, Control, DBW",horibe.takamasa@gmail.com,,tier4,Takamasa Horibe,5.0,1.0,3.0,39.0,22.0,17.0,3.4363,2.2927,5.0,4.0,11.0,12.0,3.0,9.0,2.1504,3.1142,8.338,3.3327
+11,esteve,"C++, ROS2, DDS, Python, network, embedded systems",esteve@fluidinfo.com,,tier4,Esteve Fernandez,2.0,1.0,2.0,13.0,3.0,10.0,2.1773,5.0075,68.0,37.0,58.0,72.0,32.0,40.0,1.616,1.1602,2.868,25.2607
+12,yukkysaito,"C++, ROS2, Autonomous driving architect(Perception, Sensing, Localization, Planning and Control), Machine Learning, embedded system, Real time OS ",yukky.saito@gmail.com,,tier4,Yukihiro Saito,8.0,4.0,5.0,59.0,31.0,28.0,3.7083,1.9146,37.0,7.0,13.0,24.0,11.0,13.0,1.0251,1.0112,12.7298,10.4059
+13,kyoichi-sugahara,"C++, MARLAB, ROS2, Planning, Control",kyoichi.sugahara@tier4.jp,,tier4,Kyoichi Sugahara,0.0,0.0,0.0,4.0,3.0,1.0,1.7187,-0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0715,0.5264,0.7187,0.3585
+14,rej55,"C++, Planning, Control, Mathematical Optimization",rej55.g@gmail.com,,tier4,Fumiya Watanabe,0.0,0.0,0.0,2.0,1.0,1.0,1.3594,0.0,,,,,,,,,0.3594,
+15,takayuki5168,"C++, Python, ROS2, Planning, Control",takayuki5168@gmail.com,,tier4,Takayuki Murooka,4.0,2.0,3.0,55.0,28.0,27.0,5.2719,3.0979,,,,,,,,,10.9468,
+16,wep21,,daisuke.nishimatsu1021@gmail.com,,tier4,Daisuke Nishimatsu,0.0,0.0,0.0,3.0,2.0,1.0,1.5391,-0.0,15.0,5.0,13.0,2.0,2.0,0.0,0.4678,0.1034,0.5391,2.5181
+17,maxime-clem,,maxime.clement@tier4.jp,,tier4,Maxime CLEMENT,16.0,9.0,11.0,101.0,62.0,39.0,3.6424,1.5922,2.0,1.0,1.0,4.0,1.0,3.0,1.4721,-3.0769,22.405,1.1571
+18,kenji-miyake,"C++, Python, ROS2, GitHub Actions, Software Design",kenji.miyake@tier4.jp,,tier4,Kenji Miyake*,2.0,2.0,2.0,98.0,73.0,25.0,12.1459,10.4801,71.0,23.0,57.0,91.0,26.0,65.0,1.9398,1.2163,18.1411,29.8563
+19,kosuke55,"C++, Python, ROS2",kosuke.tnp@gmail.com,,tier4,Kosuke Takeuchi,2.0,0.0,2.0,16.0,6.0,10.0,2.5291,5.5701,,,,,,,,,3.4071,
+20,h-ohta,"C++, Python, ROS2",,,tier4,Hiroki OTA,1.0,0.0,1.0,0.0,0.0,0.0,0.7899,inf,69.0,9.0,10.0,16.0,7.0,9.0,0.4281,0.6933,0.2661,13.0792
+21,KeisukeShima,"C++, ROS2",kenji.miyake@tier4.jp,,tier4,Keisuke Shima,,,,,,,,,,,,,,,,,,
+22,mkuri,"C++, Planning, Control",mkuri8m@gmail.com,,tier4,Makoto Kurihara,,,,,,,,,,,,,,,,,,
+23,ito-san,"C++, Python, ROS2, System Diagnosis, Functional Safety, Cyber Security, OS, Computing Platform",fumihito.ito@tier4.jp,,tier4,ito-san,,,,,,,,,,,,,,,,,,
+24,kminoda,,koji.minoda@tier4.jp,,tier4,Koji Minoda,24.0,15.0,19.0,56.0,35.0,21.0,1.4978,1.1593,1.0,0.0,0.0,0.0,0.0,0.0,0.8783,inf,16.4478,0.1385
+25,yukke42,"C++, Python, ROS2, Machine Learning",yusuke.muramatsu@tier4.jp,,tier4,Yusuke Muramatsu,0.0,0.0,0.0,9.0,6.0,3.0,2.6172,-0.0,6.0,4.0,3.0,6.0,3.0,3.0,1.2669,1.5673,1.6172,2.1512
+26,miursh,"C++, Python, ROS2, Machine Learning, Sensing, Perception",shunsuke.miura@tier4.jp,,tier4,Shunsuke Miura,0.0,0.0,0.0,13.0,4.0,9.0,3.3359,-0.0,,,,,,,,,2.3359,
+27,yabuta,"Python, javascript, React, Qt, GUI Tool",makoto.yabuta@tier4.jp,,tier4,yabuta,0.0,0.0,0.0,1.0,1.0,0.0,1.1797,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,0.1797,0.0
+28,YamatoAndo,"C++, ROS2, Localization",yamato.ando@gmail.com,,tier4,Yamato Ando,2.0,2.0,2.0,23.0,15.0,8.0,3.3501,6.5532,36.0,9.0,20.0,12.0,5.0,7.0,0.6079,0.756,4.6648,7.6274
+29,badai-nguyen,"C++, Python, ROS2, Machine Learning",dai.nguyen@tier4.jp,,tier4,badai nguyen,1.0,0.0,0.0,9.0,4.0,5.0,2.0672,-4.5696,1.0,1.0,1.0,1.0,0.0,1.0,1.0715,0.5264,1.8832,0.3585
+30,NaoyoriTanzawa,Project management,,,tier4,Naoyori Tanzawa,0.0,0.0,0.0,1.0,0.0,1.0,1.1797,0.0,,,,,,,,,0.1797,
+31,tkimura4,"C++, ROS2",tomoya.kimura@tier4.jp,,tier4,Tomoya Kimura,,,,,,,,,,,,,,,,,,
+32,igata-ctrl,"ODD, Vehcile Interface",,,tier4,Hiroshi Igata,,,,,,,,,,,,,,,,,,
+33,RyuYamamoto,"C++, ROS2, Localization",rottertarmenation.y11.r18@gmail.com,,tier4,RyuYamamoto,2.0,2.0,2.0,3.0,2.0,1.0,1.0045,1.035,,,,,,,,,1.0712,
+34,taikitanaka3,"C++, ROS2, Planning",kenji.miyake@tier4.jp,,tier4,TaikiTanaka,0.0,0.0,0.0,8.0,5.0,3.0,2.4375,-0.0,2.0,1.0,0.0,0.0,0.0,0.0,0.783,inf,1.4375,0.2771
+35,scepter914,"C++, Python, ROS2, Sensing, Perception",scepter914@gmail.com,,tier4,Satoshi Tanaka,2.0,2.0,2.0,4.0,2.0,2.0,1.1218,1.8144,,,,,,,,,1.2509,
+36,k-obitsu,"C++, Python",koichi.obitsu@tier4.jp,,tier4,Koichi Obitsu,,,,,,,,,,,,,,,,,,
+37,1222-takeshi,"C++, Python, ROS2",m.takeshi1995@gmail.com,,tier4,Takeshi Miura,,,,,,,,,,,,,,,,,,
+38,takam5f2,"C++, Python, ROS2, Linux, and performance and real-time",,,tier4,Takayuki AKAMINE,1.0,0.0,0.0,3.0,1.0,2.0,1.2156,-1.1791,,,,,,,,,0.8051,
+39,eratostennis,"Python, AWS",eiji.sekiya.0326@gmail.com,,tier4,Eiji Sekiya,,,,,,,,,1.0,0.0,1.0,0.0,0.0,0.0,0.8783,inf,,0.1385
+40,zulfaqar-azmi-t4,"C++, Planning",zulfaqar.azmi@tier4.jp,,tier4,Zulfaqar Azmi,0.0,0.0,0.0,17.0,10.0,7.0,4.0546,-0.0,1.0,0.0,1.0,0.0,0.0,0.0,0.8783,inf,3.0546,0.1385
+41,0x126,"C++, Python, ROS2",shinnosuke.hirakawa@tier4.jp,,tier4,Shinnosuke Hirakawa,,,,,,,,,0.0,0.0,0.0,1.0,1.0,0.0,1.22,0.0,,0.22
+42,satoshi-ota,,satoshi.ota928@gmail.com,,tier4,Satoshi OTA,2.0,1.0,2.0,22.0,6.0,16.0,3.2328,6.4328,,,,,,,,,4.4852,
+43,kei-t4,Computing Platform,,,tier4,Kei Kato,0.0,0.0,0.0,1.0,0.0,1.0,1.1797,0.0,,,,,,,,,0.1797,
+44,Guolong-Zhang,"C++, Python, ROS2, Machine Learning, Unity3D, simulation",,,tier4,Guolong Zhang,,,,,,,,,,,,,,,,,,
+45,tkhmy,"C++, Python, ROS2, Qt, GUI Tool",tkh.my.p@gmail.com,,tier4,Kah Hooi Tan,0.0,0.0,0.0,1.0,1.0,0.0,1.1797,0.0,1.0,1.0,1.0,2.0,2.0,0.0,1.2648,-0.1833,0.1797,0.5785
+46,purewater0901,"C++, Python, ROS",purewater0901@gmail.com,,tier4,Yutaka Shimizu,1.0,0.0,1.0,2.0,1.0,1.0,1.0737,0.0723,1.0,0.0,1.0,0.0,0.0,0.0,0.8783,inf,0.6254,0.1385
+47,TomohitoAndo,"C++, ROS2",tomohito.ando@tier4.jp,,tier4,Tomohito ANDO,,,,,,,,,56.0,6.0,5.0,4.0,3.0,1.0,0.2147,0.2861,,8.6382
+48,tzhong518,"C++, Python, ROS2, Machine Learning",sworgun@gmail.com,,tier4,Tao Zhong,,,,,,,,,,,,,,,,,,
+49,angry-crab,"C++, Python, ROS2, Machine Learning, Localization",xinyu.wang@tier4.jp,,tier4,Xinyu Wang,3.0,2.0,2.0,15.0,8.0,7.0,2.055,2.571,3.0,1.0,2.0,0.0,0.0,0.0,0.7064,-inf,3.4934,0.4156
+50,aohsato,"C++, Python, ROS2, Machine Learning, Sensing, Perception",aohsato@gmail.com,,tier4,Akihito Ohsato,0.0,0.0,0.0,9.0,6.0,3.0,2.6172,-0.0,31.0,18.0,29.0,31.0,15.0,16.0,1.4769,1.1882,1.6172,11.1147
+51,knzo25,"C++, Python, ROS2, Perception, Machine Learning",kenzo.lobos@tier4.jp,,tier4,Kenzo Lobos Tsunekawa,1.0,0.0,1.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+52,isamu-takagi,"C++, Python, ROS2, Qt",isamu.takagi@tier4.jp,,tier4,"Takagi, Isamu",7.0,6.0,6.0,26.0,15.0,11.0,1.9815,1.567,16.0,8.0,12.0,9.0,1.0,8.0,0.9264,0.9371,6.5342,4.1966
+53,KYabuuchi,"C++, Python",moc.liamg.8y8@gmail.com,,tier4,Kento Yabuuchi,3.0,3.0,2.0,15.0,11.0,4.0,2.055,2.571,1.0,0.0,1.0,1.0,0.0,1.0,1.0715,0.5264,3.4934,0.3585
+54,Shin-kyoto,"Python, Machine Learning, Sensing, Perception",,,tier4,Shintaro Tomie,0.0,0.0,0.0,9.0,5.0,4.0,2.6172,-0.0,2.0,1.0,0.0,0.0,0.0,0.0,0.783,inf,1.6172,0.2771
+55,shmpwk,"C++, Python, ROS2",shumpei.wakabayashi@tier4.jp,,tier4,Shumpei Wakabayashi,11.0,9.0,9.0,43.0,25.0,18.0,2.2223,1.4681,16.0,4.0,7.0,4.0,2.0,2.0,0.5845,0.4856,10.6531,3.0966
+56,nisshan-x,System Engineering,nisshan.x@gmail.com,,tier4,Shinya Nishimoto,,,,,,,,,,,,,,,,,,
+57,ktro2828,"C++, Python, ROS2, Machine Learning, Sensing, Perception",ktro310115@gmail.com,,tier4,Kotaro Uetake,0.0,0.0,0.0,5.0,0.0,5.0,1.8984,-0.0,,,,,,,,,0.8984,
+58,s-azumi,"C++, ROS2",azumi.suzuki@tier4.jp,,tier4,Azumi Suzuki,,,,,,,,,15.0,11.0,18.0,10.0,3.0,7.0,1.0396,1.0329,,4.2781
+59,hidenaga41,"Python, Javascript, React",hidenaga.u@gmail.com,,tier4,Hidenaga Ushijima,,,,,,,,,,,,,,,,,,
+60,yn-mrse,"C++, ROS2, Python",yuma.nihei@tier4.jp,,tier4,Yuma Nihei,,,,,,,,,16.0,4.0,7.0,3.0,1.0,2.0,0.5161,0.3254,,2.8766
+61,manato,"C++, Python, ROS2, Sensing, Perceptoin, CUDA",hirabayashi.manato@c.mbox.nagoya-u.ac.jp,,tier4,Manato Hirabayashi,0.0,0.0,0.0,1.0,0.0,1.0,1.1797,0.0,34.0,17.0,9.0,18.0,15.0,3.0,0.8686,0.9319,0.1797,8.6703
+62,drwnz,"C++, Python, ROS2, Sensing, Perception, Localization",david.wong@tier4.jp,,tier4,David Wong,14.0,3.0,2.0,6.0,4.0,2.0,0.4398,0.4644,9.0,5.0,5.0,2.0,1.0,1.0,0.6409,0.1467,4.803,1.6869
+63,soblin,"C++, ROS2, Python, Planning, Control",mamoru.sobue@tier4.jp,,tier4,Mamoru Sobue,6.0,5.0,5.0,3.0,2.0,1.0,0.5928,0.2603,1.0,0.0,1.0,1.0,0.0,1.0,1.0715,0.5264,2.1354,0.3585
+64,kazuki527,"C++, ROS2",kazuki.matsumoto@tier4.jp,,tier4,Kazuki Matsumoto,,,,,,,,,,,,,,,,,,
+65,YoheiMishina,"C++, ROS2",yohei.mishina@tier4.jp,,tier4,Yohei Mishina,,,,,,,,,,,,,,,,,,
+66,amc-nu,Perception,abrahammonrroy@yahoo.com,,map4,Abraham Monrroy Cano,0.0,0.0,0.0,2.0,2.0,0.0,1.3594,0.0,142.0,46.0,71.0,106.0,44.0,62.0,1.1764,1.0427,0.3594,42.9925
+67,yoshiri,"C++, Python, Sensing, ROS2",yoshiyoshidetteiu@gmail.com,,tier4,Yoshi Ri,,,,,,,,,,,,,,,,,,
+68,asana17,"C++, Python, ROS2, System Diagnosis, Functional Safety, OS, Computing Platform",akihiro.sakurai@tier4.jp,,tier4,Akihiro Sakurai,1.0,0.0,0.0,0.0,0.0,0.0,0.7899,inf,,,,,,,,,0.2661,
+69,Mingyu1991,"C++, Python, Sensing, Perception, ROS2",mingyu.li@tier4.jp,,tier4,Mingyu Li,3.0,2.0,2.0,2.0,1.0,1.0,0.756,-0.0302,,,,,,,,,1.1576,
+70,HansRobo,"C++, ROS2, Simulation",ouxt.polaris.robotx@gmail.com,,tier4,Kotaro Yoshimoto,0.0,0.0,0.0,6.0,2.0,4.0,2.0781,-0.0,3.0,2.0,1.0,3.0,1.0,2.0,1.1726,4.7905,1.0781,1.0756
+71,Motsu-san,Localization,masahiro.sakamoto@tier4.jp,,tier4,Motz,,,,,,,,,,,,,,,,,,
+72,veqcc,"OS, Computing Platform",kambe3141@gmail.com,,tier4,Ryuta Kambe,,,,,,,,,,,,,,,,,,
+73,sykwer,"OS, Computing Platform",sykwer@gmail.com,,tier4,Takahiro Ishikawa,1.0,0.0,1.0,2.0,1.0,1.0,1.0737,0.0723,2.0,1.0,2.0,1.0,1.0,0.0,0.9553,1.8138,0.6254,0.4971
+74,dan-dnn,"C++, Python, Perception, Machine Learning, CUDA, TensorRT",dan.umeda@tier4.jp,,tier4,Dan Umeda,,,,,,,,,,,,,,,,,,
+75,yuasabe,,yu.asabe@tier4.jp,,tier4,Yu Asabe,10.0,4.0,2.0,10.0,6.0,4.0,0.764,0.8016,,,,,,,,,4.4575,
+76,SakodaShintaro,"C++, Python, Machine Learning, Localization",rgbygscrsedppbwg@gmail.com,,tier4,SakodaShintaro,6.0,5.0,3.0,6.0,4.0,2.0,0.8004,0.7326,0.0,0.0,0.0,1.0,0.0,1.0,1.22,0.0,2.6745,0.22
+77,asa-naki,,akihisa.nagata@tier4.jp,,tier4,Akihisa Nagata,4.0,2.0,2.0,2.0,1.0,1.0,0.6585,-0.022,,,,,,,,,1.4236,
+78,TaikiYamada4,"C++, ROS2",taiki.yamada@tier4.jp,,tier4,Taiki Yamada,3.0,2.0,2.0,3.0,1.0,2.0,0.8559,0.4932,,,,,,,,,1.3372,
+79,Naophis,"C++, ROS2",nao1288stusj@gmail.com,,tier4,Naophis,2.0,1.0,2.0,2.0,0.0,2.0,0.8872,-0.0634,1.0,0.0,0.0,0.0,0.0,0.0,0.8783,inf,0.8915,0.1385
+80,atsushi421,"OS, Computing Platform",atsushi.yano.2@tier4.jp,,tier4,atsushi yano,,,,,,,,,,,,,,,,,,
+81,adamdbrw,"C++, deep ros2 work, performance, simulation",adamdbrw@gmail.com,,robotec,Adam Dąbrowski,,,,,,,,,,,,,,,,,,
+82,pijaro,"C++, python, Unity3D, simulation",piotr.jaroszek@robotec.ai,,robotec,Piotr Jaroszek,,,,,,,,,,,,,,,,,,
+83,danielm1405,,danielm1405@gmail.com,,robotec,Daniel Marczak,,,,,,,,,,,,,,,,,,
+84,piotr-zyskowski-rai,,piotr.zyskowski@robotec.ai,,robotec,Piotr Zyskowski,0.0,0.0,0.0,2.0,1.0,1.0,1.3594,0.0,,,,,,,,,0.3594,
+85,kielczykowski-rai,,michal.kielczykowski@robotec.ai,,robotec,Michał Kiełczykowski,1.0,1.0,0.0,0.0,0.0,0.0,0.7899,inf,,,,,,,,,0.2661,
+86,lchojnack,,lukasz@chojnacki.page,,robotec,Lukasz Chojnacki,1.0,1.0,0.0,0.0,0.0,0.0,0.7899,inf,,,,,,,,,0.2661,
+87,styczen,,styczen.bartlomiej@gmail.com,,robotec,Bartlomiej Styczen,,,,,,,,,,,,,,,,,,
+88,TauTheLepton,,,,robotec,Mateusz Palczuk,,,,,,,,,,,,,,,,,,
+89,xmfcx,"Perception, Mapping & Localization, C++",,,leodrive,M. Fatih Cırıt,35.0,16.0,17.0,83.0,49.0,34.0,1.5432,1.1457,19.0,8.0,14.0,34.0,16.0,18.0,2.3346,1.5307,24.2259,10.1122
+90,meliketanrikulu,Mapping & Localization,melike.153t@gmail.com,,leodrive,melike tanrikulu,12.0,8.0,10.0,15.0,8.0,7.0,0.8813,0.9216,,,,,,,,,5.888,
+91,kaancolak,"Perception, C++, ROS2",kaancolak95@gmail.com,,leodrive,Kaan Çolak,1.0,1.0,1.0,7.0,3.0,4.0,1.7833,-3.794,,,,,,,,,1.5238,
+92,mehmetdogru,Path Planning & Decision Making,mdogru@leodrive.ai,,leodrive,Mehmet Dogru,14.0,7.0,13.0,23.0,10.0,13.0,1.0863,1.0449,1.0,0.0,0.0,0.0,0.0,0.0,0.8783,inf,7.8576,0.1385
+93,beyzanurkaya,Path Planning & Decision Making,bnk@leodrive.ai,,leodrive,Beyza Nur Kaya,3.0,2.0,2.0,2.0,1.0,1.0,0.756,-0.0302,,,,,,,,,1.1576,
+94,MertClk,"Vehicle Control, Path Tracking",colakmert01995@gmail.com,,leodrive,Mert Çolak,0.0,0.0,0.0,10.0,6.0,4.0,2.7968,-0.0,,,,,,,,,1.7968,
+95,brkay54,"Vehicle Control, Path Tracking",berkay@leodrive.ai,,leodrive,Berkay Karaman,9.0,7.0,7.0,19.0,9.0,10.0,1.3003,1.1893,2.0,1.0,1.0,2.0,1.0,1.0,1.1276,-0.6316,5.8085,0.7171
+96,senagolcuk,Integration Test,sena@leodrive.ai,,leodrive,Irem Sena GOLCUK,,,,,,,,,,,,,,,,,,
+97,Zeysthingz,"Perception, C++, ROS2",,,leodrive,Zeynep  Akbalık,2.0,1.0,2.0,4.0,2.0,2.0,1.1218,1.8144,,,,,,,,,1.2509,
+98,NilaySener,Integration Test,nilay@leodrive.ai,,leodrive,Nilay,1.0,0.0,1.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+99,ataparlar,Mapping & Localization,ataparlars5@gmail.com,,leodrive,Ata Parlar,1.0,0.0,0.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+100,KhalilSelyan,Full Stack Developer,,,leodrive,Khalil Selyan,3.0,2.0,2.0,2.0,1.0,1.0,0.756,-0.0302,,,,,,,,,1.1576,
+101,StepTurtle,Camera Based Mapping & Localization,,,leodrive,Barış Zeren,6.0,4.0,5.0,5.0,4.0,1.0,0.7312,0.6083,,,,,,,,,2.4948,
+102,batuhanbeytekin,Perception,,,leodrive,Batuhan Beytekin,1.0,0.0,1.0,0.0,0.0,0.0,0.7899,inf,,,,,,,,,0.2661,
+103,ismetatabay,Path Planning & Decision Making,ismet@leodrive.ai,,leodrive,Ismet Atabay,1.0,1.0,1.0,3.0,3.0,0.0,1.2156,-1.1791,,,,,,,,,0.8051,
+104,yvzksgl,"Perception, Localization",koseoglumu18@itu.edu.tr,,leodrive,Muhammed Yavuz Köseoğlu,1.0,0.0,1.0,2.0,0.0,2.0,1.0737,0.0723,,,,,,,,,0.6254,
+105,ahmeddesokyebrahim,Planning & Control,ahmed.a.d.ebrahim@gmail.com,,leodrive,Ahmed Ebrahim,5.0,1.0,4.0,10.0,5.0,5.0,1.2002,1.2339,2.0,2.0,0.0,2.0,2.0,0.0,1.1276,-0.6316,3.1271,0.7171
+106,lexavtanke,"Perception, Localization",lexavtanke@gmail.com,,leodrive,Alexey Panferov,2.0,0.0,0.0,3.0,2.0,1.0,1.0045,1.035,4.0,2.0,7.0,3.0,2.0,1.0,1.0681,1.4266,1.0712,1.2142
+107,oguzkaganozt,"Containers, C++, ROS2, DevOps, Software Scalibility",oguzkaganozt@gmail.com,,wg-leads,oguzkaganozt,12.0,1.0,0.0,3.0,1.0,2.0,0.3671,0.1768,3.0,2.0,1.0,0.0,0.0,0.0,0.7064,-inf,3.7318,0.4156
+108,oguzkaganozt,"Containers, C++, ROS2, DevOps, Software Scalibility",oguzkaganozt@gmail.com,,leodrive,oguzkaganozt,12.0,1.0,0.0,3.0,1.0,2.0,0.3671,0.1768,3.0,2.0,1.0,0.0,0.0,0.0,0.7064,-inf,3.7318,0.4156
+109,cyn-liu,"Localization, GNSS",cynthia.liu@autocore.ai,,autocore,Cui Liu,9.0,0.0,4.0,6.0,1.0,5.0,0.6122,0.574,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,3.4727,0.0
+110,wjxjmj,"Localization, Kalman filter, PHD in Automation",wjxjmj@126.com,,autocore,Ximing Wang,,,,,,,,,,,,,,,,,,
+111,NorahXiong,"Planning, expert in parking algorithm",norah.xiong@autocore.ai,,autocore,Huanhuan Xiong,4.0,3.0,3.0,5.0,4.0,1.0,0.9197,0.8405,,,,,,,,,1.9627,
+112,shulanbushangshu,"Planning, expert in lane driving algorithm",jack.song@autocore.ai,,autocore,Shaojie Song,7.0,4.0,3.0,4.0,0.0,4.0,0.6004,0.4129,,,,,,,,,2.5812,
+113,Tom-Li-Lee,"C++, OS",lili_blue@126.com,,autocore,Li li,0.0,0.0,0.0,1.0,1.0,0.0,1.1797,0.0,,,,,,,,,0.1797,
+114,raminterpl,"System /SW architecture, Requirements, Functional safety design, Docs, Simulation testing",egon.kang@autocore.ai,,interplai.ai,Ramanjaneyulu Kattula,2.0,2.0,1.0,4.0,0.0,4.0,1.1218,1.8144,,,,,,,,,1.2509,
+115,sujithvemi,,sujith.3920@gmail.com,,interplai.ai,Sujith Vemishetty,,,,,,,,,,,,,,,,,,
+116,markcrawfordjr,,,,interplai.ai,Mark Crawford,,,,,,,,,,,,,,,,,,
+117,alexandrx,"LiDARs in general, 3D perception and localization/mapping, C++/Python",,,nagoya,Alexander Carballo,0.0,0.0,0.0,1.0,1.0,0.0,1.1797,0.0,26.0,10.0,27.0,12.0,7.0,5.0,0.791,0.8638,0.1797,6.242
+118,hueirutseng,ODD system design,,,itri,Huei-Ru Tseng,0.0,0.0,0.0,11.0,8.0,3.0,2.9765,-0.0,,,,,,,,,1.9765,
+119,yi_ling,"Perception, Deep learning, C++",,,itri,Yi-Ling Wu,,,,,,,,,,,,,,,,,,
+120,jason914,"Computer Vision, C++",,,itri,Shu-Kang Tseng,3.0,2.0,3.0,3.0,1.0,2.0,0.8559,0.4932,,,,,,,,,1.3372,
+121,holyhenry,"C++/Python, Vehicle Control, Decision, Planning",,,itri,Henry Chang,,,,,,,,,,,,,,,,,,
+122,brian841102,"Python, C/C++, DL/ML, Multiple Object Tracking, Pose Estimation, Action Recognition",,,itri,Brian Lin,6.0,6.0,4.0,6.0,5.0,1.0,0.8004,0.7326,,,,,,,,,2.6745,
+123,mikechan0731,"C/C++, Python, Pytorch, LiDAR object detection",m7807031@gmail.com,,itri,Mike Chan,,,,,,,,,,,,,,,,,,
+124,bshuang,"C/C++, Python, Pytorch, LiDAR object detection",,,itri,Po-Sheng Huang,,,,,,,,,,,,,,,,,,
+125,DevanshRobotiz3d,,wojciech.jaworski@robotec.ai,,robotec,Devansh Mehta,,,,,,,,,,,,,,,,,,
+126,phkarle,"C++, Python, Pytorch, Motion Prediction, Scenario Understanding, Object Tracking",phillip.karle@tum.de,,tum,Phillip Karle,0.0,0.0,0.0,2.0,1.0,1.0,1.3594,0.0,,,,,,,,,0.3594,
+127,Croquembouche,"Python, CARLA, Camera and LiDAR Perception, ROS2",,,wsu,Yuankai(William) He,4.0,1.0,3.0,5.0,2.0,3.0,0.9197,0.8405,1.0,1.0,6.0,3.0,0.0,3.0,1.458,-0.5985,1.9627,0.7985
+128,Torreskai0722,"Python, C++, ROS, ROS2, Machine Learning, Linux",liangkai@wayne.edu,,wsu,Liangkai Liu,1.0,0.0,1.0,0.0,0.0,0.0,0.7899,inf,,,,,,,,,0.2661,
+129,evshary,"C/C++, ROS2, DDS, Zenoh",evshary@gmail.com,,adlink,ChenYing Kuo,8.0,4.0,6.0,35.0,24.0,11.0,2.3298,1.6172,,,,,,,,,8.4174,
+130,kitsukawa,"C++, Localization, Mapping",,,map4,Yuki Kitsukawa,,,,,,,,,78.0,12.0,22.0,21.0,10.0,11.0,0.476,0.7486,,15.426
+131,jacoblambert,"C++, Python, Architecture, ROS2, Sensing, Perception, ML/DL",jacob.lambert@robotics.utias.utoronto.ca,,map4,Jacob Lambert,,,,,,,,,6.0,2.0,2.0,0.0,0.0,0.0,0.5461,-inf,,0.8312
+132,n-patiphon,"C++, Python, Localization, Mapping, Planning, Control",,,wg-leads,Patiphon Narksri,18.0,1.0,2.0,11.0,5.0,6.0,0.5142,0.6551,1.0,1.0,2.0,1.0,1.0,0.0,1.0715,0.5264,6.7656,0.3585
+133,n-patiphon,"C++, Python, Localization, Mapping, Planning, Control",n.patiphon@gmail.com,,map4,Patiphon Narksri,18.0,1.0,2.0,11.0,5.0,6.0,0.5142,0.6551,1.0,1.0,2.0,1.0,1.0,0.0,1.0715,0.5264,6.7656,0.3585
+134,anhnv3991,"C++, CUDA",anh@ertl.jp,,map4,Anh Nguyen,,,,,,,,,9.0,2.0,8.0,0.0,0.0,0.0,0.4451,-inf,,1.2469
+135,NozomuOhashi,"C++, Localization, Mapping",nozomu.ohashi@map4.jp,,map4,Nozomu Ohashi,,,,,,,,,,,,,,,,,,
+136,OsamuSekino,"C++, Localization, System Integration",osamu.sekino@gmail.com,,map4,OsamuSekino,,,,,,,,,,,,,,,,,,
+137,KOKIAOKI,"C++, ROS2, Python, Localization, Mapping",koki.aoki@map4.jp,,map4,KokiAoki,,,,,,,,,,,,,,,,,,
+138,rsasaki0109,"C++, ROS2, Localization, Mapping",rsasaki0109@gmail.com,,map4,Ryohei Sasaki,2.0,2.0,1.0,20.0,12.0,8.0,2.9982,6.1746,1.0,1.0,1.0,2.0,1.0,1.0,1.2648,-0.1833,4.1258,0.5785
+139,screenflip,"C++, Localization, Mapping",screenflip@gmail.com,,map4,Kunihiro Ueda,2.0,0.0,2.0,1.0,0.0,1.0,0.77,-1.9413,,,,,,,,,0.7118,
+140,Tomoya-Sato,"C++, Localization, Mapping",tomoya.sato@map4.jp,,map4,Tomoya Sato,,,,,,,,,1.0,1.0,0.0,0.0,0.0,0.0,0.8783,inf,,0.1385
+141,urasakikeisuke,"C++, Python, Sensing, Perception, ML/DL",,,map4,Keisuke Urasaki,,,,,,,,,,,,,,,,,,
+142,yyamazaki933,"C++, Python, Localization, System Integration",,,map4,Yudai Yamazaki,,,,,,,,,,,,,,,,,,
+143,n-hachi,"C++, System Integration",nozomuhatta@gmail.com,,map4,Nozomu Hatta,,,,,,,,,,,,,,,,,,
+144,VRichardJP,Integration and deployment,vincent.francois.richard@gmail.com,,macnica,Vincent Richard,21.0,13.0,10.0,32.0,20.0,12.0,1.0247,1.0105,8.0,2.0,6.0,4.0,0.0,4.0,0.8917,0.7908,11.3372,1.9883
+145,vin-cloud,"C++, Python, ROS2, Control, Planning, Localization",,,springcloud,Vinjohn-SpringCloud,,,,,,,,,,,,,,,,,,
+146,Jongseo92,"C++, Python, ROS2, ML/DL, Sensing, Perception",,,springcloud,Jongseo-SpringCloud,,,,,,,,,,,,,,,,,,
+147,jmjeong-cloud,"C++, Python, ROS2, ML/DL, Sensing, Perception",,,springcloud,Jimin Jeong,,,,,,,,,,,,,,,,,,
+148,swcho-springcloud,"C++, Python, ROS2, Control, Planning, Localization",,,springcloud,Sungwoo-SpringCloud,,,,,,,,,,,,,,,,,,
+149,Springcloud03,"Hardware, Power distribution (wiring harness and Junction box), C",,,springcloud,HeeJun-SpringCloud,,,,,,,,,,,,,,,,,,
+150,Seongmin-SpringCloud,"ROS1, DAQ System",,,springcloud,Seongmin Kim,,,,,,,,,,,,,,,,,,
+151,jaey5oung,"JavaScript, TypeScript, React, Next.js",jaey5oung@naver.com,,springcloud,Jaeyoung Jang,,,,,,,,,,,,,,,,,,
+152,Junsang900615,"C++, Python, Simulator",,,springcloud,Junsang-SpringCloud,,,,,,,,,,,,,,,,,,
+153,ejyang77,"HTML, Figma, CSS, JavaScript",,,springcloud,Eunji-SpringCloud,,,,,,,,,,,,,,,,,,
+154,PhoebeWu21,Software development,wwcphoebe@gmail.com,,foxconn,Phoebe Wu,,,,,,,,,,,,,,,,,,
+155,fxnrick,Software development,,,foxconn,Rick Liu,,,,,,,,,,,,,,,,,,
+156,ahuazuipiaoliang,Software development,mouse_zy@qq.com,,pixmoving,Mark Jin,0.0,0.0,0.0,1.0,1.0,0.0,1.1797,0.0,,,,,,,,,0.1797,
+157,lucasdai,Software development,ilucas.dai@gmail.com,,jdlogistics,lucasdai,,,,,,,,,,,,,,,,,,
+158,whbcumtb,Software development,whbcumtb@163.com,,jdlogistics,Leo Wang,1.0,0.0,1.0,14.0,9.0,5.0,2.7768,-5.9332,,,,,,,,,2.7816,
+159,cycyc1949,Software development,,,jdlogistics,Tony Cai,0.0,0.0,0.0,6.0,2.0,4.0,2.0781,-0.0,,,,,,,,,1.0781,
+160,smileghp,Software development,,,jdlogistics,Howie Ge,,,,,,,,,,,,,,,,,,
+161,wbq0206,Software development,,,jdlogistics,Kris Wang,0.0,0.0,0.0,8.0,2.0,6.0,2.4375,-0.0,,,,,,,,,1.4375,
+162,greensky0802,Software development,zhr_fj@163.com,,jdlogistics,Ray Zhang,0.0,0.0,0.0,2.0,1.0,1.0,1.3594,0.0,,,,,,,,,0.3594,
+163,gorgew,,,,upenn,George Wang,,,,,,,,,,,,,,,,,,
+164,unlim-int-soumya,,,,upenn,Soumya Dash,,,,,,,,,,,,,,,,,,
+165,xczhanjun,,zhanjun@gmail.com,Sunnyvale,baidu usa,Jun Zhan,2.0,2.0,2.0,3.0,3.0,0.0,1.0045,1.035,2.0,1.0,2.0,0.0,0.0,0.0,0.783,inf,1.0712,0.2771
+166,boyali,,,Japan,tier4,Ali BOYALI,0.0,0.0,0.0,1.0,1.0,0.0,1.1797,0.0,,,,,,,,,0.1797,
+167,HuaweiAlgolux,,,,Huawei,,3.0,2.0,3.0,6.0,4.0,2.0,1.1557,1.3881,,,,,,,,,1.8763,
+168,Unknown,,,"New York, NY",,David Mo,40.0,15.0,17.0,30.0,18.0,12.0,0.5489,0.7978,,,,,,,,,16.033,
+169,armaganarsln,,,Turkey Istanbul,wg-leads,Armağan Arslan,26.0,2.0,2.0,12.0,4.0,8.0,0.3986,0.6027,,,,,,,,,9.0738,
+170,Igata-ctrl,,,,tier4,Hiroshi IGATA,80.0,3.0,1.0,6.0,2.0,4.0,0.0933,0.265,,,,,,,,,22.3631,
+171,Igata-ctrl,,,,wg-leads,Hiroshi IGATA,80.0,3.0,1.0,6.0,2.0,4.0,0.0933,0.265,,,,,,,,,22.3631,
+172,kaspermeck-arm,,kasper.mecklenburg@arm.com,"San Jose, CA, USA",wg-leads,Kasper Mecklenburg,10.0,7.0,9.0,21.0,7.0,14.0,1.304,1.1766,4.0,1.0,4.0,1.0,0.0,1.0,0.785,-1.2549,6.434,0.7742
+173,kaspermeck-arm,,kasper.mecklenburg@arm.com,"San Jose, CA, USA",arm,Kasper Mecklenburg,10.0,7.0,9.0,21.0,7.0,14.0,1.304,1.1766,4.0,1.0,4.0,1.0,0.0,1.0,0.785,-1.2549,6.434,0.7742
+174,doganulus,,dogan.ulus@boun.edu.tr,"Istanbul, TR",Boğaziçi University @bouncmpe,Doğan Ulus,2.0,0.0,0.0,16.0,5.0,11.0,2.5291,5.5701,0.0,0.0,0.0,1.0,0.0,1.0,1.22,0.0,3.4071,0.22
+175,chishengshih,,cshih@csie.ntu.edu.tw,"Taipei, Taiwan",wg-leads,Chi-Sheng (Daniel) Shih,17.0,7.0,3.0,14.0,9.0,5.0,0.6365,0.7662,,,,,,,,,7.0386,
+176,ralwing,,gglowacki@autonomous-systems.pl,,Autonomous Systems,,1.0,1.0,1.0,6.0,3.0,3.0,1.6414,-3.3183,,,,,,,,,1.3442,
+177,LLplane,,,,,,1.0,1.0,1.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+178,Sharrrrk,,huiyuan.liu@autocore.ai,Nanjing,autocore,Shark,4.0,4.0,1.0,15.0,8.0,7.0,1.7901,1.8748,4.0,4.0,8.0,6.0,1.0,5.0,1.4928,3.1185,3.7595,1.8742
+179,Sharrrrk,,huiyuan.liu@autocore.ai,Nanjing,maintainers,Shark,4.0,4.0,1.0,15.0,8.0,7.0,1.7901,1.8748,4.0,4.0,8.0,6.0,1.0,5.0,1.4928,3.1185,3.7595,1.8742
+180,major2012ye,,,,,,2.0,2.0,2.0,4.0,2.0,2.0,1.1218,1.8144,,,,,,,,,1.2509,
+181,afaerber,,afaerber@suse.de,Germany,wg-leads,Andreas Färber,0.0,0.0,0.0,1.0,0.0,1.0,1.1797,0.0,,,,,,,,,0.1797,
+182,YoshinoriTsutake,,,,tier4,,0.0,0.0,0.0,3.0,1.0,2.0,1.5391,-0.0,,,,,,,,,0.5391,
+183,PengfeiLin0609,,,,Tsukada Lab,PengfeiLin0609,1.0,1.0,1.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+184,emi0116,,,,,,0.0,0.0,0.0,1.0,1.0,0.0,1.1797,0.0,,,,,,,,,0.1797,
+185,sevocrear,,sevocrear@gmail.com,,Innopolis University�,Sevostianov Ilia,1.0,1.0,1.0,1.0,1.0,0.0,0.9318,2.2114,,,,,,,,,0.4457,
+186,TZECHIN6,,,,,Thomas LUK,2.0,0.0,2.0,7.0,1.0,6.0,1.4736,3.3305,2.0,2.0,0.0,0.0,0.0,0.0,0.783,inf,1.7899,0.2771
+187,plane-li,,plane.li@autocore.ai,Nanjing/China,autocore,plane.li,1.0,1.0,1.0,3.0,3.0,0.0,1.2156,-1.1791,1.0,0.0,2.0,0.0,0.0,0.0,0.8783,inf,0.8051,0.1385
+188,mschratter,,m.schratter@gmx.at,,,,0.0,0.0,0.0,1.0,1.0,0.0,1.1797,0.0,,,,,,,,,0.1797,
+189,FranzAlbers,,franz.albers@tu-dortmund.de,,@rst-tu-dortmund,Albers Franz,0.0,0.0,0.0,1.0,1.0,0.0,1.1797,0.0,,,,,,,,,0.1797,
+190,storrrrrrrrm,,chang.su@autocore.ai,,autocore,,3.0,2.0,3.0,6.0,4.0,2.0,1.1557,1.3881,,,,,,,,,1.8763,
+191,IshitaTakeshi,,ishitah.takeshi@gmail.com,Tokyo,tier4,Takeshi Ishita,12.0,9.0,7.0,7.0,5.0,2.0,0.5385,0.5689,4.0,2.0,4.0,1.0,0.0,1.0,0.785,-1.2549,4.4505,0.7742
+192,g-ise,,,,tier4,Gakuki Ise,1.0,0.0,0.0,2.0,2.0,0.0,1.0737,0.0723,,,,,,,,,0.6254,
+193,Denri006,,denri006@ucr.edu,"Riverside, Ca","University of California, Riverside",Daniel Enright,2.0,2.0,2.0,2.0,2.0,0.0,0.8872,-0.0634,,,,,,,,,0.8915,
+194,crazydude123,,,,,,1.0,1.0,1.0,1.0,1.0,0.0,0.9318,2.2114,,,,,,,,,0.4457,
+195,Mud-B,,,,,Chihow,1.0,0.0,1.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+196,ajay1606,,,,,Ajay,2.0,1.0,2.0,3.0,0.0,3.0,1.0045,1.035,,,,,,,,,1.0712,
+197,nainaigetuide,,,,,,3.0,1.0,1.0,3.0,0.0,3.0,0.8559,0.4932,,,,,,,,,1.3372,
+198,hect95,,hector_cruz95@live.com,"Birmingham,England",University of Birmingham,Hector Cruz,0.0,0.0,0.0,1.0,0.0,1.0,1.1797,0.0,,,,,,,,,0.1797,
+199,amtommy,,amtommy6@gmail.com,,,,2.0,2.0,2.0,2.0,1.0,1.0,0.8872,-0.0634,,,,,,,,,0.8915,
+200,mojomex,,maxi.schmeller@live.de,"Tokyo, Japan",tier4,Max Schmeller,2.0,2.0,1.0,1.0,1.0,0.0,0.77,-1.9413,,,,,,,,,0.7118,
+201,WJaworskiRobotec,,wojciech.jaworski@robotec.ai,,wg-leads,Wojciech Jaworski,27.0,0.0,2.0,4.0,2.0,2.0,0.21,0.2254,,,,,,,,,7.9024,
+202,WJaworskiRobotec,,wojciech.jaworski@robotec.ai,,robotec,Wojciech Jaworski,27.0,0.0,2.0,4.0,2.0,2.0,0.21,0.2254,,,,,,,,,7.9024,
+203,sglee-morai,,,,MORAI,,9.0,1.0,0.0,3.0,2.0,1.0,0.4534,0.204,,,,,,,,,2.9336,
+204,chris-interplai,,,,Interpl.ai,,2.0,2.0,1.0,1.0,1.0,0.0,0.77,-1.9413,,,,,,,,,0.7118,
+205,08beeqtufail-sudo,,08beeqtufail@gmail.com,,,Muhammad Tufail,1.0,1.0,1.0,1.0,1.0,0.0,0.9318,2.2114,,,,,,,,,0.4457,
+206,nabetetsu,,,,tier4,Tetsuo Watanabe,2.0,1.0,1.0,2.0,1.0,1.0,0.8872,-0.0634,,,,,,,,,0.8915,
+207,lntsh854,,,Changsha,CRRC,Lntsh854,0.0,0.0,0.0,2.0,0.0,2.0,1.3594,0.0,,,,,,,,,0.3594,
+208,anushamandalapu-tomtom,,,,TOMTOM,,1.0,1.0,1.0,1.0,1.0,0.0,0.9318,2.2114,,,,,,,,,0.4457,
+209,JessicaTegner,,jessica.tegner@outlook.com,Denmark,@uber,Jessica Tegner,0.0,0.0,0.0,1.0,0.0,1.0,1.1797,0.0,,,,,,,,,0.1797,
+210,HiroIshida,,spitfire.docomo@gmail.com,Tokyo,"PhD student, JSK lab, U. of Tokyo",Hirokazu Ishida,0.0,0.0,0.0,1.0,0.0,1.0,1.1797,0.0,,,,,,,,,0.1797,
+211,samehmohamed88,,sameh4@gmx.com,"Boston, USA",Motional,Sameh Mohamed,1.0,1.0,1.0,2.0,2.0,0.0,1.0737,0.0723,,,,,,,,,0.6254,
+212,Danior2235,,,,,,0.0,0.0,0.0,1.0,1.0,0.0,1.1797,0.0,,,,,,,,,0.1797,
+213,mimimidododo,,,,,,1.0,1.0,1.0,1.0,1.0,0.0,0.9318,2.2114,,,,,,,,,0.4457,
+214,gayar-helm,,,,Helm.ai,,1.0,1.0,1.0,2.0,1.0,1.0,1.0737,0.0723,,,,,,,,,0.6254,
+215,LiangHuangBC,,,,,LiangHuang,1.0,1.0,0.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+216,hatem-darweesh,,hatem.darweesh@gmail.com,"Nagoya, Japan",Nagoya University,Hatem Darweesh,3.0,3.0,3.0,9.0,3.0,6.0,1.4554,1.9116,9.0,6.0,9.0,9.0,7.0,2.0,1.3263,1.3789,2.4153,3.2269
+217,mertyavuz41,,,,adastec,Mert Yavuz,3.0,2.0,3.0,4.0,2.0,2.0,0.9558,0.8646,,,,,,,,,1.5169,
+218,Tanishq30052002,,tanishqchaudhary101010@gmail.com,"Gwalior, Madhya Pradesh",IIT(ISM) Dhanbad,Tanishq Chaudhary,2.0,2.0,2.0,6.0,4.0,2.0,1.3564,2.9129,,,,,,,,,1.6102,
+219,kfunaoka,,kfunaoka@gmail.com,"Tokyo, Japan",tier4,Kenji Funaoka,0.0,0.0,0.0,1.0,1.0,0.0,1.1797,0.0,46.0,16.0,32.0,47.0,20.0,27.0,1.5381,1.1697,0.1797,16.7128
+220,lhakim85,,,,,,5.0,3.0,5.0,16.0,7.0,9.0,1.6628,1.5995,,,,,,,,,4.2052,
+221,andrejpadilha2,,,São Paulo - Brazil,Seazone,Andre Padilha,1.0,0.0,0.0,1.0,1.0,0.0,0.9318,2.2114,,,,,,,,,0.4457,
+222,Hyeongseok-Jeon,,hsjeon@morai.ai,,wg-leads,Hyeongseok Jeon - MORAI Inc.,5.0,0.0,0.0,2.0,1.0,1.0,0.5833,-0.0182,,,,,,,,,1.6897,
+223,koraykoca,,koraykoca34@gmail.com,Munich,BMW Group,Koray Koca,3.0,2.0,2.0,2.0,2.0,0.0,0.756,-0.0302,,,,,,,,,1.1576,
+224,CagriCatik,,mccatik@gmail.com,Germany,,Çağrı Çatık,1.0,1.0,1.0,3.0,1.0,2.0,1.2156,-1.1791,,,,,,,,,0.8051,
+225,JToolGD,,,,,,0.0,0.0,0.0,1.0,1.0,0.0,1.1797,0.0,,,,,,,,,0.1797,
+226,TomoyukiaW,,,,MACNICA,Tomoyuki Watanabe,1.0,1.0,1.0,1.0,1.0,0.0,0.9318,2.2114,,,,,,,,,0.4457,
+227,sayondeep,,sayondeep0710@rediffmail.com,,IIT Hyderabad,SAYON DEEP,0.0,0.0,0.0,3.0,1.0,2.0,1.5391,-0.0,,,,,,,,,0.5391,
+228,bariskapaligoz,,,,adastec,,1.0,0.0,1.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+229,wangxianggang1997,,,,,wxg,11.0,7.0,9.0,4.0,2.0,2.0,0.4377,0.3229,,,,,,,,,3.6454,
+230,jihwankimqd,,,,,,1.0,1.0,1.0,1.0,1.0,0.0,0.9318,2.2114,,,,,,,,,0.4457,
+231,JordanCrawfordx,,,,,,2.0,2.0,1.0,1.0,1.0,0.0,0.77,-1.9413,,,,,,,,,0.7118,
+232,deansaco,,,,,,1.0,1.0,1.0,1.0,1.0,0.0,0.9318,2.2114,,,,,,,,,0.4457,
+233,MrOCW,,ocw_97@hotmail.com,Singapore,,,34.0,16.0,25.0,16.0,7.0,9.0,0.3857,0.642,,,,,,,,,11.921,
+234,hasanzfdn,,hsnzfdn@gmail.com,Istanbul,Yildiz Technical University,Hasan Özfidan,0.0,0.0,0.0,1.0,0.0,1.0,1.1797,0.0,,,,,,,,,0.1797,
+235,twbabyduck,,twbabyduck@gmail.com,"Espoo, Finland",,twbabyduck,2.0,1.0,2.0,2.0,1.0,1.0,0.8872,-0.0634,,,,,,,,,0.8915,
+236,YueChuCheng,,,,National Taiwan University,,0.0,0.0,0.0,1.0,0.0,1.0,1.1797,0.0,,,,,,,,,0.1797,
+237,kasper-helm,,,,Helm.ai,,4.0,2.0,3.0,2.0,1.0,1.0,0.6585,-0.022,,,,,,,,,1.4236,
+238,youxiho1,,youxihouzainali@163.com,TianJin,Nankai University,,2.0,1.0,2.0,1.0,1.0,0.0,0.77,-1.9413,,,,,,,,,0.7118,
+239,paolacanuto,,,,,,0.0,0.0,0.0,1.0,1.0,0.0,1.1797,0.0,,,,,,,,,0.1797,
+240,akorb,,,,Technical University of Munich,Andreas Korb,2.0,1.0,1.0,2.0,0.0,2.0,0.8872,-0.0634,,,,,,,,,0.8915,
+241,kenichirohatayama,,kenichiro.hatayama@tier4.jp,,tier4,Kenichiro Hatayama,1.0,1.0,1.0,1.0,1.0,0.0,0.9318,2.2114,,,,,,,,,0.4457,
+242,jiangguoding,,,,,,1.0,1.0,1.0,1.0,1.0,0.0,0.9318,2.2114,,,,,,,,,0.4457,
+243,simon-t4,,simon.thompson@tier4.jp,,tier4,,0.0,0.0,0.0,1.0,0.0,1.0,1.1797,0.0,0.0,0.0,0.0,1.0,1.0,0.0,1.22,0.0,0.1797,0.22
+244,HamburgDave,,,,wg-leads,David W,30.0,5.0,3.0,4.0,2.0,2.0,0.1914,0.2176,,,,,,,,,8.7006,
+245,tkm2261,,,Tokyo,UC Irvine,Takami Sato,1.0,0.0,1.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+246,Autostone-c,,,,,jack chen,11.0,6.0,3.0,15.0,6.0,9.0,0.9411,0.9603,,,,,,,,,5.6219,
+247,takeshi-iwanari,,takeshi.iwanari@tier4.jp,,tier4,takeshi-iwanari,2.0,0.0,1.0,2.0,0.0,2.0,0.8872,-0.0634,,,,,,,,,0.8915,
+248,HyunkiKim0407,,,,,Ruben_Kim,1.0,0.0,0.0,1.0,1.0,0.0,0.9318,2.2114,,,,,,,,,0.4457,
+249,liuypcoding,,,,,,0.0,0.0,0.0,2.0,1.0,1.0,1.3594,0.0,,,,,,,,,0.3594,
+250,gaokao123,,,,,gaokao,4.0,0.0,2.0,3.0,0.0,3.0,0.7456,0.3597,,,,,,,,,1.6033,
+251,lsteinosk,,,,,,0.0,0.0,0.0,2.0,1.0,1.0,1.3594,0.0,,,,,,,,,0.3594,
+252,ashishrrs,,,,,Ashish Choudhary,0.0,0.0,0.0,1.0,0.0,1.0,1.1797,0.0,,,,,,,,,0.1797,
+253,Kim-mins,,dlxhshzh@korea.ac.kr,,Korea University,Kim Min-su,5.0,5.0,5.0,6.0,3.0,3.0,0.8918,0.8365,,,,,,,,,2.4084,
+254,J-xinyu,,,Bei Jing,thu,Xinyu Ji,6.0,2.0,3.0,9.0,1.0,8.0,1.008,1.0088,2.0,1.0,3.0,0.0,0.0,0.0,0.783,inf,3.2135,0.2771
+255,HarryMechatron,,,"Chennai, India",,HarryMechatron,0.0,0.0,0.0,1.0,0.0,1.0,1.1797,0.0,,,,,,,,,0.1797,
+256,bdcong,,,,,,2.0,1.0,1.0,1.0,1.0,0.0,0.77,-1.9413,,,,,,,,,0.7118,
+257,fightingnoble,,chinesefuturenobleman@gmail.com,"No.5 Yiheyuan Road, Haidian District, Beijing 100871, P.R.China",Peking University,Chenguang Zhang,1.0,1.0,1.0,1.0,1.0,0.0,0.9318,2.2114,,,,,,,,,0.4457,
+258,tleyden,,hideki.itakura@gmail.com,Oakland / SF,Indie Hacker (formerly Databricks),Traun Leyden,6.0,5.0,4.0,6.0,5.0,1.0,0.8004,0.7326,1.0,0.0,0.0,0.0,0.0,0.0,0.8783,inf,2.6745,0.1385
+259,domajstorovic,,domagoj.majstorovic@gmail.com,Munich,Technical University of Munich,Domagoj,0.0,0.0,0.0,1.0,1.0,0.0,1.1797,0.0,,,,,,,,,0.1797,
+260,Madhuvd,,,,,,0.0,0.0,0.0,1.0,0.0,1.0,1.1797,0.0,,,,,,,,,0.1797,
+261,osholsonel20,,,Oshkosh,OSHCORP - Advanced Products,Eric Olson,4.0,2.0,3.0,2.0,1.0,1.0,0.6585,-0.022,,,,,,,,,1.4236,
+262,RalphGarson,,,,,,1.0,1.0,1.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+263,PaGu3,,,,,,1.0,1.0,1.0,2.0,1.0,1.0,1.0737,0.0723,,,,,,,,,0.6254,
+264,marcusvinicius178,,marcusvini178@gmail.com,,,,3.0,2.0,3.0,3.0,2.0,1.0,0.8559,0.4932,,,,,,,,,1.3372,
+265,gurselturkeri,,gurselt33@gmail.com,Turkey,Gaziantep University,Gürsel Türkeri,7.0,2.0,6.0,5.0,1.0,4.0,0.6632,0.5505,,,,,,,,,2.7609,
+266,sfukuta,,shigekazu.fukuta@tier4.jp,,tier4,Shigekazu Fukuta,1.0,1.0,1.0,1.0,1.0,0.0,0.9318,2.2114,,,,,,,,,0.4457,
+267,okataka123,,tekepika@gmail.com,,,,3.0,2.0,2.0,3.0,1.0,2.0,0.8559,0.4932,,,,,,,,,1.3372,
+268,djargot,,dominik.jargot@robotec.ai,,wg-leads,,0.0,0.0,0.0,1.0,0.0,1.0,1.1797,0.0,,,,,,,,,0.1797,
+269,cyhunblr,,ahmetceyhunbilir16@gmail.com,Turkey,@SUBU-AISET,Ahmet Ceyhun Bilir,0.0,0.0,0.0,1.0,0.0,1.0,1.1797,0.0,,,,,,,,,0.1797,
+270,liuXinGangChina,,,,autocore,,0.0,0.0,0.0,20.0,6.0,14.0,4.5937,-0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,3.5937,0.0
+271,malayjerdi,,malayjerdi@gmail.com,,,Ehsan Malayjerdi,1.0,0.0,1.0,1.0,1.0,0.0,0.9318,2.2114,,,,,,,,,0.4457,
+272,msanchezvicom,,,,,,1.0,0.0,0.0,1.0,0.0,1.0,0.9318,2.2114,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,0.4457,0.0
+273,urayuto,,,,tier4,Yutaro Uramoto,0.0,0.0,0.0,1.0,0.0,1.0,1.1797,0.0,,,,,,,,,0.1797,
+274,mackierx111,,mackierx111@gmail.com,,tier4,,0.0,0.0,0.0,4.0,0.0,4.0,1.7187,-0.0,,,,,,,,,0.7187,
+275,hzkkk1997,,,,,,6.0,2.0,4.0,7.0,2.0,5.0,0.8696,0.8376,,,,,,,,,2.8542,
+276,rolandvanvenrooy-tomtom,,,,TOMTOM,,0.0,0.0,0.0,1.0,0.0,1.0,1.1797,0.0,,,,,,,,,0.1797,
+277,harihitode,,harihitode@gmail.com,"Tokyo, Japan",tier4,Daichi Murakami,0.0,0.0,0.0,1.0,0.0,1.0,1.1797,0.0,,,,,,,,,0.1797,
+278,anilbommareddy,,,,,,5.0,2.0,3.0,4.0,1.0,3.0,0.7376,0.521,1.0,0.0,1.0,0.0,0.0,0.0,0.8783,inf,2.049,0.1385
+279,arjunshetty955,,,,,,2.0,0.0,1.0,2.0,0.0,2.0,0.8872,-0.0634,,,,,,,,,0.8915,
+280,guankou,,,,,,0.0,0.0,0.0,1.0,0.0,1.0,1.1797,0.0,,,,,,,,,0.1797,
+281,caiyuexiang,,sinan.cai@autocore.ai,Nanjing,autocore,Cai Yuexiang,0.0,0.0,0.0,1.0,0.0,1.0,1.1797,0.0,1.0,0.0,2.0,0.0,0.0,0.0,0.8783,inf,0.1797,0.1385
+282,HamedMesri-TomTom,,,,TOMTOM,Hamed Mesri,1.0,0.0,1.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+283,enesadastec,,,,adastec,,3.0,2.0,1.0,2.0,1.0,1.0,0.756,-0.0302,,,,,,,,,1.1576,
+284,phoenares,,,,,,2.0,1.0,2.0,1.0,1.0,0.0,0.77,-1.9413,,,,,,,,,0.7118,
+285,MarioAlmelaUMH,,,,,,7.0,7.0,7.0,7.0,5.0,2.0,0.7888,0.758,,,,,,,,,3.1202,
+286,damodarRohit,,,,Danlaw,,7.0,5.0,5.0,11.0,4.0,7.0,1.0399,1.0367,,,,,,,,,3.839,
+287,lionator,,schneider4887@icloud.com,Germany,Hochschule Heilbronn,Andreas F. Schneider,1.0,0.0,0.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+288,tseco15,,,,,,1.0,1.0,1.0,2.0,1.0,1.0,1.0737,0.0723,,,,,,,,,0.6254,
+289,sisaha9,,sisahawork@gmail.com,"California, United States",,Siddharth Saha,4.0,2.0,4.0,5.0,1.0,4.0,0.9197,0.8405,,,,,,,,,1.9627,
+290,ashkildighin,,,,,,1.0,0.0,0.0,2.0,0.0,2.0,1.0737,0.0723,,,,,,,,,0.6254,
+291,Ryujiyasu,,ryuji.yasu@gmail.com,shizuoka,M2labo,Ryuji Yasukochi,2.0,2.0,2.0,2.0,0.0,2.0,0.8872,-0.0634,,,,,,,,,0.8915,
+292,nbehrnbehr,,,,,Nick,2.0,1.0,1.0,1.0,0.0,1.0,0.77,-1.9413,,,,,,,,,0.7118,
+293,mertbacaksiz,,,,,Mert Bacaksız,0.0,0.0,0.0,1.0,0.0,1.0,1.1797,0.0,,,,,,,,,0.1797,
+294,zhuyingxiang95,,,,,,4.0,2.0,3.0,3.0,0.0,3.0,0.7456,0.3597,,,,,,,,,1.6033,
+295,cjffly,,cjffly0423@gmail.com,,,Max Chen,7.0,5.0,4.0,4.0,2.0,2.0,0.6004,0.4129,2.0,0.0,2.0,0.0,0.0,0.0,0.783,inf,2.5812,0.2771
+296,tongyucong,,,,,,1.0,0.0,1.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+297,Youneko,,yoshifumi.hayashi@tier4.jp,,tier4,Yoshifumi Hayashi,1.0,0.0,1.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+298,donnieliu,,donnieliu@163.com,,,,2.0,0.0,2.0,2.0,0.0,2.0,0.8872,-0.0634,,,,,,,,,0.8915,
+299,fengziHK,,,,,fengziHK,0.0,0.0,0.0,1.0,1.0,0.0,1.1797,0.0,,,,,,,,,0.1797,
+300,mariosebasco,,support@github.com,"Miami, FL",HDT  Global,Mario Sebasco,1.0,1.0,1.0,1.0,1.0,0.0,0.9318,2.2114,,,,,,,,,0.4457,
+301,adnanhaf,,,,Tome Software,,4.0,2.0,2.0,1.0,0.0,1.0,0.5715,-0.6746,,,,,,,,,1.2439,
+302,Robotics010,,kirill.mitkovskii@gmail.com,Innopolis,,Kirill Mitkovskii,4.0,2.0,3.0,4.0,3.0,1.0,0.8326,0.6305,,,,,,,,,1.783,
+303,joewong00,,,"Kuala Lumpur, Malaysia",HelloWorld Robotics,Qing Joe Wong,2.0,1.0,1.0,1.0,0.0,1.0,0.77,-1.9413,,,,,,,,,0.7118,
+304,AndriiChumak145,,,,,,2.0,2.0,2.0,2.0,0.0,2.0,0.8872,-0.0634,,,,,,,,,0.8915,
+305,patelabhay-12,,,,,,3.0,1.0,2.0,1.0,0.0,1.0,0.656,-0.9251,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,0.9779,0.0
+306,mshah72,,mshah72@asu.edu,,Arizona State University,,3.0,3.0,3.0,2.0,2.0,0.0,0.756,-0.0302,,,,,,,,,1.1576,
+307,leeseho,,,,,Lee Seho,1.0,0.0,1.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+308,AviBen96,,k20013502@kcl.ac.uk,,King's College London,Avner Bensoussan,1.0,0.0,1.0,2.0,0.0,2.0,1.0737,0.0723,,,,,,,,,0.6254,
+309,sezan92,,sezan92@gmail.com,Japan,LegalOn Technologies,Md. Muhaimin Rahman,0.0,0.0,0.0,1.0,0.0,1.0,1.1797,0.0,,,,,,,,,0.1797,
+310,saicsk-deloitte,,chamkumar@deloitte.com,,,,3.0,1.0,2.0,2.0,0.0,2.0,0.756,-0.0302,,,,,,,,,1.1576,
+311,pradhanshrijal,,pradhan.shrijal@gmail.com,Oldenburg,DLR SE,Shrijal Pradhan,1.0,0.0,1.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+312,pukachupenn,,,Tokyo,tier4,Yoshi T,1.0,0.0,1.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+313,YusufDALAK,,,,,,3.0,3.0,3.0,3.0,3.0,0.0,0.8559,0.4932,,,,,,,,,1.3372,
+314,nitro6206,,,,,,2.0,1.0,2.0,2.0,1.0,1.0,0.8872,-0.0634,,,,,,,,,0.8915,
+315,fadimecetiner,,,,,Fadime Cetiner,0.0,0.0,0.0,2.0,0.0,2.0,1.3594,0.0,,,,,,,,,0.3594,
+316,samet-kutuk,,,"Zurich, Switzerland",wg-leads,Samet Kütük,0.0,0.0,0.0,1.0,0.0,1.0,1.1797,0.0,,,,,,,,,0.1797,
+317,mgarnett21,,,,,,0.0,0.0,0.0,2.0,1.0,1.0,1.3594,0.0,,,,,,,,,0.3594,
+318,izzetbasli,,,,,,1.0,0.0,1.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+319,wutianze,,,,,sauron,1.0,0.0,1.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+320,jbyang1,,jbyang@morai.ai,,MORAI Inc.,,1.0,1.0,1.0,1.0,1.0,0.0,0.9318,2.2114,,,,,,,,,0.4457,
+321,jacksilb,,,,wg-leads,JackSilb,0.0,0.0,0.0,1.0,1.0,0.0,1.1797,0.0,,,,,,,,,0.1797,
+322,amadeuszsz,,amadeusz.szymko@put.poznan.pl,,Poznan University of Technology,Amadeusz Szymko,0.0,0.0,0.0,2.0,2.0,0.0,1.3594,0.0,,,,,,,,,0.3594,
+323,jediofgever,,fetulahatas1@gmail.com,Norway,NMBU,Fetullah Atas,1.0,1.0,1.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+324,benrbray,,benrbray@umich.edu,"Tokyo, Japan",Univeristy of Michigan,Benjamin Bray,1.0,1.0,1.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+325,albiim,,,,Danlaw,AlbiM (Danlaw),1.0,1.0,1.0,2.0,0.0,2.0,1.0737,0.0723,,,,,,,,,0.6254,
+326,sudhsrik,,,,,Sudharsan Babu Srikanthan,1.0,1.0,1.0,2.0,0.0,2.0,1.0737,0.0723,,,,,,,,,0.6254,
+327,mayacarla2070,,,,,,1.0,1.0,1.0,2.0,1.0,1.0,1.0737,0.0723,,,,,,,,,0.6254,
+328,villaoningfootball,,,,,,0.0,0.0,0.0,2.0,1.0,1.0,1.3594,0.0,,,,,,,,,0.3594,
+329,Nick79919030,,,,,,1.0,1.0,1.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+330,liuzf1988,,carl.liu@autocore.ai,,autocore,,0.0,0.0,0.0,1.0,1.0,0.0,1.1797,0.0,,,,,,,,,0.1797,
+331,zillur-av,,,"Las Vegas, USA","University of Nevada, Las Vegas",Zillur Rahman,20.0,10.0,17.0,20.0,8.0,12.0,0.7267,0.8531,,,,,,,,,8.9149,
+332,beginningfan,,beginning.fan@autocore.ai,,autocore,,8.0,1.0,5.0,8.0,1.0,7.0,0.7791,0.7764,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,3.566,0.0
+333,Hensbag,,,,,Hensbag,13.0,7.0,9.0,7.0,2.0,5.0,0.5064,0.5486,1.0,0.0,1.0,0.0,0.0,0.0,0.8783,inf,4.7166,0.1385
+334,JianKangEgon,,egon.kang@autocore.ai,"Nanjing, China",autocore,,4.0,2.0,1.0,1.0,1.0,0.0,0.5715,-0.6746,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,1.2439,0.0
+335,JonasHablitzel,,jonas.hablitzel@gmx.de,Stuttgart,Forschungsinstitut für Kraftfahrwesen und Fahrzeugmotoren Stuttgart,"Hablitzel, Jonas",0.0,0.0,0.0,1.0,0.0,1.0,1.1797,0.0,,,,,,,,,0.1797,
+336,Tester2009,,sulakecorporation1232@gmail.com,Malaysia,,Мухаммад Алифф Муаззам,2.0,0.0,2.0,2.0,0.0,2.0,0.8872,-0.0634,1.0,0.0,0.0,0.0,0.0,0.0,0.8783,inf,0.8915,0.1385
+337,sahapratik5656,,,,,,0.0,0.0,0.0,1.0,0.0,1.0,1.1797,0.0,,,,,,,,,0.1797,
+338,davutcanakbas,,akbasdavutcan@gmail.com,"Istanbul, TURKEY",adastec,Davut Can Akbaş,2.0,1.0,2.0,2.0,0.0,2.0,0.8872,-0.0634,,,,,,,,,0.8915,
+339,zeidk,,zeid.kootbally@nist.gov,"Gaithersburg, MD",National Institute of Standards and Technology,zeidk,1.0,1.0,1.0,2.0,2.0,0.0,1.0737,0.0723,,,,,,,,,0.6254,
+340,LIIHWF,,li.changwen@outlook.com,,,,1.0,1.0,1.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+341,goomy241,,meavecc@gmail.com,,,Di Chen,1.0,0.0,1.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+342,gauthamnarayan,,gauthamnarayan@hotmail.com,"Pittsburgh, PA",Carnegie Mellon University,Gautham Narayan,1.0,1.0,1.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+343,logihp,,zhudove@126.com,,,,1.0,0.0,1.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+344,zymgp,,,,,,1.0,1.0,1.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+345,shintaro-mori,,,,,,3.0,2.0,3.0,3.0,2.0,1.0,0.8559,0.4932,,,,,,,,,1.3372,
+346,kshitiz-deloitte,,,,,,1.0,1.0,1.0,1.0,1.0,0.0,0.9318,2.2114,,,,,,,,,0.4457,
+347,dilloncsr,,,,,,1.0,0.0,1.0,2.0,0.0,2.0,1.0737,0.0723,,,,,,,,,0.6254,
+348,LGerstla01,,,Heilbronn,,Lukas Gerstlauer,1.0,1.0,1.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+349,L-Net-1992,,,Harbin,CASIC,AutoStack,2.0,1.0,2.0,2.0,1.0,1.0,0.8872,-0.0634,,,,,,,,,0.8915,
+350,hcn1519,,hcn1519@gmail.com,"Irvine, CA",,Changnam Hong,1.0,1.0,1.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+351,markusschratter,,markus.schratter@v2c2.at,,,,0.0,0.0,0.0,1.0,0.0,1.0,1.1797,0.0,,,,,,,,,0.1797,
+352,prabanjanGITHUB,,,,,,4.0,3.0,2.0,2.0,2.0,0.0,0.6585,-0.022,,,,,,,,,1.4236,
+353,RamanaBotta,,,,,,0.0,0.0,0.0,1.0,1.0,0.0,1.1797,0.0,,,,,,,,,0.1797,
+354,yaukaizhi,,,,,Kai,4.0,1.0,3.0,2.0,0.0,2.0,0.6585,-0.022,,,,,,,,,1.4236,
+355,lishizhen1412,,lsz964449276@163.com,,,,1.0,1.0,1.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+356,BritvaBo,,,,,Boris,0.0,0.0,0.0,1.0,0.0,1.0,1.1797,0.0,,,,,,,,,0.1797,
+357,museas-azm,,,,,,1.0,1.0,1.0,1.0,1.0,0.0,0.9318,2.2114,,,,,,,,,0.4457,
+358,sarubito,,,,Osaka Institute of Technology,sarubito,1.0,1.0,1.0,1.0,1.0,0.0,0.9318,2.2114,,,,,,,,,0.4457,
+359,inwoong32,,,,,,2.0,2.0,2.0,2.0,1.0,1.0,0.8872,-0.0634,,,,,,,,,0.8915,
+360,pedrorito,,brian.marks@taxbit.com,"Aveiro, Portugal",@nap-it,Pedro Rito,0.0,0.0,0.0,1.0,0.0,1.0,1.1797,0.0,,,,,,,,,0.1797,
+361,DaikiNiimi,,,,,DaikiNiimi,1.0,0.0,1.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+362,letsgoniaoniao,,,,,,1.0,0.0,0.0,1.0,1.0,0.0,0.9318,2.2114,,,,,,,,,0.4457,
+363,felixf4xu,,felixfxu@gmail.com,Shanghai,,Felix F Xu,9.0,4.0,4.0,7.0,4.0,3.0,0.6651,0.6563,3.0,0.0,2.0,0.0,0.0,0.0,0.7064,-inf,3.6523,0.4156
+364,yuntianyi-chen,,,Irvine,"University of California, Irvine",Yuntianyi Chen,2.0,1.0,2.0,4.0,1.0,3.0,1.1218,1.8144,,,,,,,,,1.2509,
+365,kedarnadh-123,,,,,,0.0,0.0,0.0,1.0,0.0,1.0,1.1797,0.0,,,,,,,,,0.1797,
+366,porizou,,porizou.electro@gmail.com,,,,2.0,1.0,1.0,1.0,0.0,1.0,0.77,-1.9413,,,,,,,,,0.7118,
+367,polurik,,,,tier4,,1.0,0.0,1.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+368,tomaszkapron,,,,,,1.0,1.0,1.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+369,davidc0619,,,Novi MI USA,wg-leads,David Cole,2.0,2.0,1.0,1.0,1.0,0.0,0.77,-1.9413,,,,,,,,,0.7118,
+370,RogerJung,,tommy135721@gmail.com,,,,0.0,0.0,0.0,1.0,1.0,0.0,1.1797,0.0,,,,,,,,,0.1797,
+371,mosss-code,,,,,,1.0,0.0,1.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+372,fiwz789,,,,,,2.0,1.0,1.0,1.0,1.0,0.0,0.77,-1.9413,,,,,,,,,0.7118,
+373,hoppss,,lminujs@gmail.com,"Beijing, China",,coffee,1.0,1.0,1.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+374,lixianqiang,,lxq243808918@gmail.com,,,,2.0,1.0,1.0,1.0,1.0,0.0,0.77,-1.9413,1.0,1.0,0.0,1.0,1.0,0.0,1.0715,0.5264,0.7118,0.3585
+375,Levinskis,,a.levinskis@gmail.com,,,,0.0,0.0,0.0,1.0,1.0,0.0,1.1797,0.0,,,,,,,,,0.1797,
+376,AElkenawy,,amora.samy@gmail.com,"Riga, Latvia",,Amr Elkenawy,1.0,1.0,1.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+377,xoofee,,xoofee@gmail.com,,,,1.0,0.0,1.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+378,Kaipa-Charan,,,Hyderabad,,KAIPA SRI CHARAN,2.0,1.0,2.0,3.0,1.0,2.0,1.0045,1.035,,,,,,,,,1.0712,
+379,hdossaji94,,,, Airtrek Robotics,Huzefa Dossaji,2.0,2.0,2.0,2.0,2.0,0.0,0.8872,-0.0634,,,,,,,,,0.8915,
+380,hakuturu583,,ouxt.share@gmail.com,Kyoto,tier4,Masaya Kataoka,0.0,0.0,0.0,2.0,0.0,2.0,1.3594,0.0,28.0,5.0,32.0,14.0,6.0,8.0,0.8362,0.9021,0.3594,6.9591
+381,plainspoken-chris,,,,,Chris Battista,1.0,0.0,1.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+382,gdengchao,,,,,deng chao,0.0,0.0,0.0,1.0,1.0,0.0,1.1797,0.0,,,,,,,,,0.1797,
+383,yama42326,,,,,,1.0,1.0,1.0,1.0,1.0,0.0,0.9318,2.2114,,,,,,,,,0.4457,
+384,YoshiRi,,yoshiyoshidetteiu@gmail.com,"Shinagawa, Tokyo, Japan",tier4,Yoshi Ri,0.0,0.0,0.0,1.0,0.0,1.0,1.1797,0.0,1.0,0.0,1.0,0.0,0.0,0.0,0.8783,inf,0.1797,0.1385
+385,hakanaktass,,hakan.aktas98@outlook.com,,,Hakan Aktas,3.0,1.0,2.0,2.0,1.0,1.0,0.756,-0.0302,,,,,,,,,1.1576,
+386,muratgozum45,,,,,,4.0,3.0,3.0,4.0,2.0,2.0,0.8326,0.6305,,,,,,,,,1.783,
+387,MechanoPixel,,,"Saitama-shi, Japan",,MechanoPixel,1.0,1.0,1.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+388,TUMGEKA,,,,TUM,,0.0,0.0,0.0,1.0,0.0,1.0,1.1797,0.0,,,,,,,,,0.1797,
+389,TAICHInoda,,,,,LinuxTN,1.0,1.0,1.0,1.0,1.0,0.0,0.9318,2.2114,,,,,,,,,0.4457,
+390,norikenpi,,,,tier4,,2.0,0.0,2.0,2.0,0.0,2.0,0.8872,-0.0634,,,,,,,,,0.8915,
+391,lorenzzhao,,,,,,1.0,1.0,1.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+392,isouf,,isouflas@gmail.com,"UK, GR, KSA",,Ioannis Souflas,0.0,0.0,0.0,1.0,0.0,1.0,1.1797,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,0.1797,0.0
+393,jerry73204,,jerry73204@gmail.com,,,,0.0,0.0,0.0,1.0,0.0,1.0,1.1797,0.0,,,,,,,,,0.1797,
+394,TobiasMascetta,,,,,,1.0,1.0,1.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+395,eromreve123,,,,,,1.0,1.0,1.0,1.0,1.0,0.0,0.9318,2.2114,,,,,,,,,0.4457,
+396,dotun457,,dotmann123@gmail.com,,,,1.0,1.0,1.0,1.0,1.0,0.0,0.9318,2.2114,,,,,,,,,0.4457,
+397,ziri4k,,onydave025@gmail.com,,,Ziri,3.0,2.0,2.0,2.0,1.0,1.0,0.756,-0.0302,,,,,,,,,1.1576,
+398,hliu869,,,,,,2.0,2.0,2.0,2.0,2.0,0.0,0.8872,-0.0634,,,,,,,,,0.8915,
+399,mkakh,,akhs3214@gmail.com,Japan,tier4,,1.0,1.0,1.0,1.0,1.0,0.0,0.9318,2.2114,,,,,,,,,0.4457,
+400,adi-driveu,,,,,,1.0,0.0,1.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+401,yuanchao16,,,,,,2.0,0.0,2.0,2.0,0.0,2.0,0.8872,-0.0634,,,,,,,,,0.8915,
+402,doyan00,,,,,,1.0,0.0,1.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+403,idorobotics,,bonolo.mathibela@oxon.org,,awf,Bonolo Mathibela,0.0,0.0,0.0,4.0,1.0,3.0,1.7187,-0.0,,,,,,,,,0.7187,
+404,IDS-zhangxr,,,,,,1.0,0.0,1.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+405,buraakozcan,,,,,,0.0,0.0,0.0,1.0,1.0,0.0,1.1797,0.0,,,,,,,,,0.1797,
+406,danicannt,,,,,,4.0,1.0,3.0,3.0,1.0,2.0,0.7456,0.3597,,,,,,,,,1.6033,
+407,KASUYASU,,k-hamada@gifu-u.ac.jp,,,,1.0,1.0,1.0,2.0,1.0,1.0,1.0737,0.0723,,,,,,,,,0.6254,
+408,jp-amaral,,jp.amaral@ua.pt,,,João Amaral,0.0,0.0,0.0,1.0,0.0,1.0,1.1797,0.0,,,,,,,,,0.1797,
+409,chivas1000,,,,,,1.0,1.0,1.0,1.0,1.0,0.0,0.9318,2.2114,,,,,,,,,0.4457,
+410,dylan-gonzalez,,dylcg10@gmail.com,,,Dylan Gonzalez,0.0,0.0,0.0,1.0,0.0,1.0,1.1797,0.0,,,,,,,,,0.1797,
+411,npnquang,,nguyenjoe0201@gmail.com,,,Pham Nhat Quang Nguyen,1.0,1.0,1.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+412,danielsanchezaran,,,,tier4,danielsanchezaran,1.0,0.0,1.0,1.0,0.0,1.0,0.9318,2.2114,,,,,,,,,0.4457,
+413,kondoh2,,,,Computing Platforms Federated Labratory,,,,,,,,,,100.0,5.0,4.0,3.0,2.0,1.0,0.1118,0.1611,,14.5139
+414,shinpei0208,,shinpei.kato@gmail.com,Tokyo,tier4,Shinpei Kato,,,,,,,,,4.0,1.0,0.0,9.0,2.0,7.0,1.9174,4.1082,,2.5342
+415,syouji,,syouji@axe.bz,,Computing Platforms Federated Labratory,syouji,,,,,,,,,58.0,2.0,2.0,7.0,4.0,3.0,0.2811,0.4643,,9.5753
+416,syohex,,syohex@gmail.com,"Tokyo, Japan",Computing Platforms Federated Labratory,Shohei YOSHIDA,,,,,,,,,57.0,19.0,9.0,41.0,20.0,21.0,1.1263,1.0434,,16.9167
+417,kuriking,,kuriking@gmail.com,,Aisan Tech,USUDA Hisashi,,,,,,,,,31.0,0.0,2.0,3.0,0.0,3.0,0.3135,0.2378,,4.9547
+418,KenYN,,ken.nicolson@jp.panasonic.com,Japan,,Ken Yasumoto-Nicolson,,,,,,,,,4.0,0.0,6.0,0.0,0.0,0.0,0.6434,-inf,,0.5542
+419,travelbureau,,okelly.5@osu.edu,Philadelphia,upenn,Matthew O'Kelly,,,,,,,,,1.0,1.0,2.0,1.0,1.0,0.0,1.0715,0.5264,,0.3585
+420,pdsljp,,pdsljp@gmail.com,,,,,,,,,,,,5.0,0.0,4.0,0.0,0.0,0.0,0.5908,-inf,,0.6927
+421,KenjiroYamada,,yamada.kenjirou@a.mbox.nagoya-u.ac.jp,,tier4,,,,,,,,,,1.0,0.0,0.0,0.0,0.0,0.0,0.8783,inf,,0.1385
+422,garaemon,,kei.okada@gmail.com,Tokyo,@GITAI,Ryohei Ueda,,,,,,,,,1.0,1.0,1.0,1.0,1.0,0.0,1.0715,0.5264,,0.3585
+423,HongweiSunny,,,"Shanghai, China",NIO AutonomousDriving,Sunny,,,,,,,,,0.0,0.0,0.0,1.0,0.0,1.0,1.22,0.0,,0.22
+424,gbiggs,,,,OSRF,Geoffrey Biggs,,,,,,,,,21.0,3.0,4.0,65.0,15.0,50.0,3.9137,1.77,,17.2093
+425,sujiwo,,sujiwo@gmail.com,,Nagoya University,Adi Sujiwo,,,,,,,,,7.0,3.0,11.0,4.0,3.0,1.0,0.9544,0.8998,,1.8498
+426,tushar-dadlani,,dreeve@pivotal.io,"San Francisco, CA",Walmart,Tushar Dadlani,,,,,,,,,2.0,0.0,1.0,0.0,0.0,0.0,0.783,inf,,0.2771
+427,messi49,,aiueo.0409@gmail.com,,tier4,Yuki Iida,,,,,,,,,12.0,3.0,0.0,3.0,2.0,1.0,0.6235,0.3875,,2.3225
+428,wgcv,,,Guayaquil-Ecuador,,Gustavo Cevallos,,,,,,,,,1.0,0.0,0.0,0.0,0.0,0.0,0.8783,inf,,0.1385
+429,droter,,matt@droter.com,,,Matt Droter,,,,,,,,,1.0,0.0,1.0,0.0,0.0,0.0,0.8783,inf,,0.1385
+430,DeniseJames,,denisetoo@gmail.com,"Chicago, IL",Self Employed,Denise R James,,,,,,,,,0.0,0.0,0.0,1.0,0.0,1.0,1.22,0.0,,0.22
+431,beetleskin,,,,,,,,,,,,,,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,,0.0
+432,badguy07,,,,,,,,,,,,,,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,,0.0
+433,jitrc,,jit.ray.c@gmail.com,California,Ridecell,Jit Ray Chowdhury,,,,,,,,,2.0,1.0,3.0,1.0,1.0,0.0,0.9553,1.8138,,0.4971
+434,dejanpan,,dejan.pangercic@gmail.com,,apexai,Dejan Pangercic,,,,,,,,,15.0,6.0,9.0,57.0,9.0,48.0,4.3988,2.0381,,14.6181
+435,yk-fujii,,yusuke.fujii@tier4.jp,"Tokyo, Japan",tier4,Yusuke FUJII,,,,,,,,,46.0,21.0,18.0,63.0,34.0,29.0,2.0155,1.2724,,20.2328
+436,asimay,,asimay_y@126.com,Guangzhou,@xiaopeng,Leon,,,,,,,,,4.0,3.0,3.0,9.0,3.0,6.0,1.9174,4.1082,,2.5342
+437,munirfarzeen,,farzeen49@gmail.com,,,,,,,,,,,,1.0,1.0,0.0,0.0,0.0,0.0,0.8783,inf,,0.1385
+438,daifuku07,,yamato.ando@gmail.com,,PlatIV,Daisuke Fukutomi,,,,,,,,,2.0,0.0,0.0,2.0,0.0,2.0,1.1276,-0.6316,,0.7171
+439,jdclzl,,1272717213@qq.com,,,ZhaoLei,,,,,,,,,1.0,0.0,0.0,0.0,0.0,0.0,0.8783,inf,,0.1385
+440,deepmeng,,,"china,beijing",BeiHang University,deepmeng,,,,,,,,,2.0,0.0,1.0,0.0,0.0,0.0,0.783,inf,,0.2771
+441,christopherho-ApexAI,,,,apexai,,,,,,,,,,3.0,3.0,1.0,2.0,2.0,0.0,1.0172,1.4673,,0.8556
+442,130s,,,"Atlanta, GA / Tochigi, Japan",,Isaac Saito,,,,,,,,,2.0,1.0,1.0,0.0,0.0,0.0,0.783,inf,,0.2771
+443,chinhyuntai,,,,,,,,,,,,,,1.0,0.0,0.0,0.0,0.0,0.0,0.8783,inf,,0.1385
+444,hiro-ya-iv,,,,tier4,,,,,,,,,,4.0,1.0,3.0,0.0,0.0,0.0,0.6434,-inf,,0.5542
+445,colinsung,,,,,,,,,,,,,,1.0,0.0,0.0,0.0,0.0,0.0,0.8783,inf,,0.1385
+446,weisongwen,,wenwsrobo@gmail.com,"Hung Hom, Kwolon, Hong Kong/CA, USA","Hong Kong Polytechnic University/University of California, Berkeley",Weisong Wen (Welson),,,,,,,,,0.0,0.0,0.0,1.0,0.0,1.0,1.22,0.0,,0.22
+447,czluck,,czluck123@gmail.com,,,,,,,,,,,,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,,0.0
+448,andoh104,,toandoh104@gmail.com,"Aichi,Japan",tier4,Toshi Ando,,,,,,,,,11.0,8.0,9.0,8.0,6.0,2.0,1.0935,1.1013,,3.2839
+449,geogrewang,,,,,,,,,,,,,,1.0,0.0,2.0,0.0,0.0,0.0,0.8783,inf,,0.1385
+450,ChenxiTU,,tu.chenxi@g.sp.m.is.nagoya-u.ac.jp,,,,,,,,,,,,7.0,1.0,9.0,1.0,1.0,0.0,0.6194,-0.5304,,1.1898
+451,ckirksey3,,ckirksey3@gmail.com,"Atlanta, GA",google,Caleb Kirksey,,,,,,,,,2.0,1.0,3.0,1.0,1.0,0.0,0.9553,1.8138,,0.4971
+452,yukitsuji,,yukitsuji020832@gmail.com,"Tokyo, Japan","Preferred Networks, Inc.",Yuki Tsuji,,,,,,,,,5.0,1.0,1.0,0.0,0.0,0.0,0.5908,-inf,,0.6927
+453,annaborn,,,Bremen,,Anna Born,,,,,,,,,2.0,0.0,5.0,0.0,0.0,0.0,0.783,inf,,0.2771
+454,kargarisaac,,kargarisaac@yahoo.com,Finland,SUPPLYZ.eu,Isaac Kargar,,,,,,,,,0.0,0.0,0.0,2.0,1.0,1.0,1.44,-0.0,,0.44
+455,ompugao,,fujii.shohei@gmail.com,Robotics,Nanyang Technological University,,,,,,,,,,3.0,0.0,6.0,0.0,0.0,0.0,0.7064,-inf,,0.4156
+456,MasatoTange,,tange@axe.bz,Kyoto,"Axe, inc.",Masato Tange,,,,,,,,,2.0,0.0,1.0,0.0,0.0,0.0,0.783,inf,,0.2771
+457,gchen2016,,gchen2016@hotmail.com,,,,,,,,,,,,1.0,0.0,1.0,0.0,0.0,0.0,0.8783,inf,,0.1385
+458,brianabrams,,hello@brian-abrams.com,"Detroit, MI",@ReliableCarriers,Brian Abrams,,,,,,,,,1.0,0.0,0.0,0.0,0.0,0.0,0.8783,inf,,0.1385
+459,mktk1117,,takahiro.miki1992@gmail.com,,,Takahiro Miki,,,,,,,,,1.0,0.0,0.0,0.0,0.0,0.0,0.8783,inf,,0.1385
+460,LukeAI,,,,,,,,,,,,,,2.0,1.0,1.0,1.0,0.0,1.0,0.9553,1.8138,,0.4971
+461,k0suke-murakami,,kosuke.murakami@tier4.jp,,tier4,Kosuke Murakami,,,,,,,,,25.0,13.0,19.0,12.0,6.0,6.0,0.8155,0.8789,,6.1035
+462,sgermanserrano,,,,Linaro,Servando,,,,,,,,,60.0,16.0,36.0,34.0,8.0,26.0,0.9106,0.9662,,15.7923
+463,TheodoreRTG,,greytrt@gmail.com,,Linaro,Theodore Grey,,,,,,,,,2.0,0.0,2.0,0.0,0.0,0.0,0.783,inf,,0.2771
+464,moelang,,moelang@hotmail.com,,,moelang,,,,,,,,,1.0,0.0,1.0,0.0,0.0,0.0,0.8783,inf,,0.1385
+465,hamkuchan,,,,,,,,,,,,,,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,,0.0
+466,HEGALLIS,,,,Linaro,Yang,,,,,,,,,0.0,0.0,0.0,2.0,0.0,2.0,1.44,-0.0,,0.44
+467,lanhaigit,,,beijing,,,,,,,,,,,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,,0.0
+468,MarcoCecotti,,,,Cranfield University,Marco Cecotti,,,,,,,,,1.0,0.0,2.0,1.0,0.0,1.0,1.0715,0.5264,,0.3585
+469,bdholt1,,bdholt1@gmail.com,"London, UK",Parkopedia,Brian Holt,,,,,,,,,0.0,0.0,0.0,2.0,1.0,1.0,1.44,-0.0,,0.44
+470,kennedywai,,kennedywai@hotmail.com,"Kuala Lumpur, Malaysia",HelloWorld Robotics,Wai Kennedy,,,,,,,,,0.0,0.0,0.0,1.0,0.0,1.0,1.22,0.0,,0.22
+471,saihideyasu,,,,,,,,,,,,,,2.0,0.0,1.0,0.0,0.0,0.0,0.783,inf,,0.2771
+472,Tpsych,,,,,,,,,,,,,,1.0,0.0,0.0,0.0,0.0,0.0,0.8783,inf,,0.1385
+473,mouryaraj,,mouryakumarraju@gmail.com,hyderabad,,mourya,,,,,,,,,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,,0.0
+474,maximosipov,,maxim.osipov@gmail.com,,Heading Health,Maxim Osipov,,,,,,,,,9.0,2.0,3.0,6.0,2.0,4.0,1.0326,1.0467,,2.5669
+475,vtbassmatt,,vtbassmatt@gmail.com,"North Carolina, United States",GitHub,Matt Cooper,,,,,,,,,0.0,0.0,0.0,1.0,1.0,0.0,1.22,0.0,,0.22
+476,LukePhairatt,,,,,Punnu P.,,,,,,,,,2.0,0.0,5.0,2.0,0.0,2.0,1.1276,-0.6316,,0.7171
+477,droneboxid,,,,,,,,,,,,,,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,,0.0
+478,T-Shota,,s.toku.24@gmail.com,Japan,EmbIV,Shota Tokunaga,,,,,,,,,0.0,0.0,0.0,1.0,0.0,1.0,1.22,0.0,,0.22
+479,Squigglywave,,jeremiahjliou@gmail.com,,,Jeremiah Liou,,,,,,,,,2.0,1.0,3.0,1.0,0.0,1.0,0.9553,1.8138,,0.4971
+480,sousou1,,tamusou6953@gmail.com,,,,,,,,,,,,0.0,0.0,0.0,1.0,1.0,0.0,1.22,0.0,,0.22
+481,rorypeck,,,China,,Angie,,,,,,,,,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,,0.0
+482,alexampa,,alexampa@ece.auth.gr,,,,,,,,,,,,2.0,0.0,2.0,0.0,0.0,0.0,0.783,inf,,0.2771
+483,allenchen8210,,allenchen8210@gmail.com,Tainan,National Cheng Kung University,,,,,,,,,,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,,0.0
+484,yuteno,,youten622@yahoo.co.jp,,tier4,Yosuke Ueno,,,,,,,,,1.0,1.0,0.0,0.0,0.0,0.0,0.8783,inf,,0.1385
+485,asimonov-hitachi,,,,,Alexey Simonov,,,,,,,,,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,,0.0
+486,MTDzi,,mtdziubinski@gmail.com,"Warsaw, Poland",,Maciej,,,,,,,,,0.0,0.0,0.0,1.0,0.0,1.0,1.22,0.0,,0.22
+487,1L2PGesner,,,,,,,,,,,,,,1.0,1.0,0.0,0.0,0.0,0.0,0.8783,inf,,0.1385
+488,Mani-Sadhasivam,,mani@kernel.org,"Erode,Tamilnadu,India","Linaro, 96Boards ",Manivannan Sadhasivam,,,,,,,,,2.0,1.0,0.0,0.0,0.0,0.0,0.783,inf,,0.2771
+489,sumanth-nirmal,,sumanth.724@gmail.com,"Sunnyvale, CA",apexai,Sumanth Nirmal,,,,,,,,,21.0,0.0,11.0,2.0,0.0,2.0,0.3684,0.0866,,3.3493
+490,hadiTab,,hadi.tabatabaee@lge.com,San Francisco Bay Area,Amazon Lab126,Hadi Tabatabaee,,,,,,,,,0.0,0.0,0.0,1.0,0.0,1.0,1.22,0.0,,0.22
+491,Mor-harry,,,,reachauto,Mor,,,,,,,,,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,,0.0
+492,wsung1,,,,,,,,,,,,,,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,,0.0
+493,jokla,,jokla89@gmail.com,London,Medtronic,Giovanni Claudio,,,,,,,,,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,,0.0
+494,koenlek,,koenlekkerkerker@gmail.com,,,,,,,,,,,,1.0,1.0,3.0,2.0,0.0,2.0,1.2648,-0.1833,,0.5785
+495,huckl3b3rry87,,febbo@umich.edu,San Jose,Honda,Huckleberry Febbo,,,,,,,,,5.0,1.0,4.0,1.0,0.0,1.0,0.7207,-0.8124,,0.9127
+496,abilbaotm,,abilbaotm@gmail.com,,,Asier Bilbao,,,,,,,,,1.0,1.0,0.0,0.0,0.0,0.0,0.8783,inf,,0.1385
+497,italojs,,italo.i@live.com,Brazil,@herbjs,Italo José,,,,,,,,,1.0,0.0,2.0,1.0,0.0,1.0,1.0715,0.5264,,0.3585
+498,pronif,,,London,,Federico Proni,,,,,,,,,1.0,0.0,0.0,0.0,0.0,0.0,0.8783,inf,,0.1385
+499,sgvandijk,,sgvandijk@gmail.com,,,,,,,,,,,,2.0,1.0,3.0,0.0,0.0,0.0,0.783,inf,,0.2771
+500,hunkyu,,,Southwest University of Science and Technology,Southwest University of Science and Technology,hunkyu,,,,,,,,,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,,0.0
+501,javcursor,,,,,,,,,,,,,,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,,0.0
+502,snehagn,,snehag@g.clemson.edu,United States,Clemson University,Sneha Ganesh,,,,,,,,,3.0,2.0,0.0,0.0,0.0,0.0,0.7064,-inf,,0.4156
+503,golnazhabibi3,,golnaz.habibi@gmail.com,,,,,,,,,,,,1.0,0.0,0.0,0.0,0.0,0.0,0.8783,inf,,0.1385
+504,EfimiaPanagiotaki-StreetDrone,,fionan@streetdrone.com,Oxford,StreetDrone,EfimiaPanagiotaki-StreetDrone,,,,,,,,,4.0,1.0,4.0,0.0,0.0,0.0,0.6434,-inf,,0.5542
+505,tekrajchhetri,,tekrajchhetri@gmail.com,United Kingdom,University of Southampton,Tek Raj Chhetri,,,,,,,,,0.0,0.0,0.0,1.0,0.0,1.0,1.22,0.0,,0.22
+506,maximus5684,,maximus5684@gmail.com,,apexai,Joshua Whitley,,,,,,,,,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,,0.0
+507,ubercool2,,,,,,,,,,,,,,0.0,0.0,0.0,1.0,0.0,1.0,1.22,0.0,,0.22
+508,MouriNaruto,,Kenji.Mouri@outlook.com,,Day: @QieTV / Night: @Chuyu-Team @M2Team,Kenji Mouri (Qi Lu),,,,,,,,,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,,0.0
+509,snail333,,,Beijing,,snail333,,,,,,,,,1.0,0.0,0.0,0.0,0.0,0.0,0.8783,inf,,0.1385
+510,icolwell,,icolwell@gsd.uwaterloo.ca,Canada,apexai,Ian Colwell,,,,,,,,,0.0,0.0,0.0,1.0,0.0,1.0,1.22,0.0,,0.22
+511,AbangLZU,,,"Beijing, Wangjing",,AdamShan,,,,,,,,,1.0,1.0,1.0,2.0,1.0,1.0,1.2648,-0.1833,,0.5785
+512,lucasjinreal,,nicholasjela@gmail.com,Sanfancisco,google,MagicSource,,,,,,,,,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,,0.0
+513,14212094,,,,,,,,,,,,,,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,,0.0
+514,zzhh00,,,,,,,,,,,,,,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,,0.0
+515,urbansound8K,,,,,,1.0,0.0,0.0,0.0,0.0,0.0,0.7899,inf,3.0,1.0,2.0,1.0,0.0,1.0,0.8618,-4.2138,0.2661,0.6356
+516,aaryanmurgunde,,,"Pune, IN",RigBetel Labs LLP,Aaryan Murgunde,,,,,,,,,2.0,1.0,3.0,0.0,0.0,0.0,0.783,inf,,0.2771
+517,jfkkf123,,jfkkf123@gmail.com,,,,,,,,,,,,0.0,0.0,0.0,1.0,1.0,0.0,1.22,0.0,,0.22
+518,SoohyeokPark-MORAI,,shpark.morai@gmail.com,,MORAI Inc.,,,,,,,,,,1.0,1.0,0.0,1.0,1.0,0.0,1.0715,0.5264,,0.3585
+519,Soohyeok-Park,,,,MORAI Inc.,shpark - MORAI Inc.,,,,,,,,,1.0,1.0,0.0,0.0,0.0,0.0,0.8783,inf,,0.1385
+520,ghost,,,"Nothing to see here, move along.",,Deleted user,,,,,,,,,5.0,2.0,4.0,2.0,0.0,2.0,0.8507,0.2829,,1.1327
+521,LevieSun,,,beijing,,levie,,,,,,,,,0.0,0.0,0.0,1.0,1.0,0.0,1.22,0.0,,0.22
+522,may012345,,,,,,,,,,,,,,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,,0.0
+523,vios-fish,,,Tokyo,tier4,Makoto Tokunaga,,,,,,,,,1.0,0.0,0.0,0.0,0.0,0.0,0.8783,inf,,0.1385
+524,DeeKayG,,dhavalpu@buffalo.edu,Buffalo,University at Buffalo,DeeKay Goswami,,,,,,,,,1.0,0.0,1.0,0.0,0.0,0.0,0.8783,inf,,0.1385
+525,david-vay,,,,,David Gossow,,,,,,,,,1.0,0.0,1.0,0.0,0.0,0.0,0.8783,inf,,0.1385
+526,AvinashRamashray,,,,,,,,,,,,,,3.0,1.0,2.0,1.0,1.0,0.0,0.8618,-4.2138,,0.6356
+527,bgilby59,,gilbybenjamin@gmail.com,,tier4,Benjamin Gilby,,,,,,,,,2.0,1.0,1.0,0.0,0.0,0.0,0.783,inf,,0.2771
+528,cho-jang-hyun,,,Suwon,Kyung Hee University,Jang Hyun Cho,,,,,,,,,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,,0.0
+529,jyh3690,,,,,,,,,,,,,,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,,0.0
+530,RonaldEnsing,,,,TU Delft Intelligent Vehicles,Ronald Ensing,,,,,,,,,1.0,0.0,2.0,0.0,0.0,0.0,0.8783,inf,,0.1385
+531,guchangjun,,,,,,,,,,,,,,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,,0.0
+532,mdabir1203,,,"Hannover,Germany ",42 Wolfsburg,uknowWho,,,,,,,,,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,,0.0
+533,adamkrawczyk,,lobell.oden@gmail.com,Poland,robotec,Khasreto,,,,,,,,,,,,,,,,,,
+534,lymcs,,,,,,,,,,,,,,2.0,1.0,1.0,1.0,1.0,0.0,0.9553,1.8138,,0.4971
+535,tl230419,,tl230419@gmail.com,China,,Allen,,,,,,,,,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,,0.0
+536,kazuki0824,,,,OUXT-Polaris,maleicacid,,,,,,,,,1.0,1.0,1.0,0.0,0.0,0.0,0.8783,inf,,0.1385
+537,jspricke,,git@jochen.sprickerhof.de,,,Jochen Sprickerhof,,,,,,,,,0.0,0.0,0.0,2.0,1.0,1.0,1.44,-0.0,,0.44
+538,AhmadAmine998,,ahmadamine998@gmail.com,"Philadelphia, PA",upenn,Ahmad Amine,1.0,1.0,1.0,0.0,0.0,0.0,0.7899,inf,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,0.2661,0.0
+539,0xd1ma,,,,,,,,,,,,,,1.0,0.0,1.0,0.0,0.0,0.0,0.8783,inf,,0.1385
+540,harderthan,,,,,brewmaster,,,,,,,,,1.0,0.0,0.0,0.0,0.0,0.0,0.8783,inf,,0.1385
+541,haoliliang,,haoliliang88@126.com,,,,,,,,,,,,1.0,0.0,0.0,0.0,0.0,0.0,0.8783,inf,,0.1385
+542,aicarmark,,cheng.carmark@gmail.com,,Linaro,,,,,,,,,,1.0,1.0,0.0,0.0,0.0,0.0,0.8783,inf,,0.1385
+543,masa1228masa,,masahiro.kitazawa@gmail.com,,Computing Platforms Federated Labratory,,,,,,,,,,1.0,0.0,0.0,0.0,0.0,0.0,0.8783,inf,,0.1385
+544,francisvac,,francisvac@gmail.com,,,Francis Joseph,,,,,,,,,1.0,1.0,0.0,0.0,0.0,0.0,0.8783,inf,,0.1385
+545,huiyi1990,,,,,zhenya.liu,,,,,,,,,3.0,0.0,3.0,0.0,0.0,0.0,0.7064,-inf,,0.4156
+546,mingrutar,,rutar.ming@gmail.com,"Portland, Oregon",,Ming Rutar,,,,,,,,,1.0,0.0,2.0,0.0,0.0,0.0,0.8783,inf,,0.1385
+547,Capri2014,,luoqi06@baidu.com,,,Qi Luo,,,,,,,,,,,,,,,,,,
+548,cho3,,christopherj.ho@gmail.com,,,,,,,,,,,,,,,,,,,,,
+549,kernyan,,hky.victor@gmail.com,,,kernyan,,,,,,,,,,,,,,,,,,
+550,taichiH,,,,tier4,Taichi Higashide,,,,,,,,,,,,,,,,,,
+551,Hidenaga41,,,,tier4,Hidenaga Ushijima,,,,,,,,,,,,,,,,,,
+552,technolojin,,technolojin@gmail.com,,tier4,Taekjin LEE,,,,,,,,,,,,,,,,,,
+553,HansOersted,,lucidshenzhe@gmail.com,,tier4,Zhe Shen,,,,,,,,,,,,,,,,,,
+554,yuki-takagi-66,,yuki.takagi@tier4.jp,,tier4,Yuki TAKAGI,,,,,,,,,,,,,,,,,,
+555,rahulmangharam,,rahulm@seas.upenn.edu,,wg-leads,Rahul Mangharam,,,,,,,,,,,,,,,,,,
+556,cledorze,,peerbunk@gmail.com,,wg-leads,cledorze,,,,,,,,,,,,,,,,,,
+557,joesusecom,,joe@suse.com,,wg-leads,Joachim Werner,,,,,,,,,,,,,,,,,,
+558,mak3r,,mabrams@helpguest.com,,wg-leads,,,,,,,,,,,,,,,,,,,
+559,JohannesBetz,,joebetz@seas.upenn.edu,,wg-leads,Johannes Betz,3.0,0.0,0.0,0.0,0.0,0.0,0.5561,-inf,,,,,,,,,0.7982,
+560,pojenwang,,pw.pjwang@gmail.com,,wg-leads,,9.0,1.0,1.0,0.0,0.0,0.0,0.2946,-inf,,,,,,,,,2.3946,
+561,pojenwang,,pw.pjwang@gmail.com,,awf,,9.0,1.0,1.0,0.0,0.0,0.0,0.2946,-inf,,,,,,,,,2.3946,
+562,Deepak3994,,meetdeepaknayak03@gmail.com,,interplai.ai,Deepak Nayak,,,,,,,,,,,,,,,,,,
+563,markacrawfordjr,,,,interplai.ai,,,,,,,,,,,,,,,,,,,
+564,karishma1911,,karishma@interpl.ai,,interplai.ai,,,,,,,,,,,,,,,,,,,
+565,santosh-sanku,,,,interplai.ai,,,,,,,,,,,,,,,,,,,
+566,mdrwiega,,drwiega.michal@gmail.com,,robotec,Michał Drwięga,,,,,,,,,,,,,,,,,,

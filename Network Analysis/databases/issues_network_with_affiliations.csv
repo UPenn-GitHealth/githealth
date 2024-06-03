@@ -1,0 +1,535 @@
+consumer,contributor,consumption,contributor_affiliation,consumer_affiliation
+kondoh2,syohex,1,Computing Platforms Federated Labratory,Computing Platforms Federated Labratory
+kondoh2,syouji,1,Computing Platforms Federated Labratory,Computing Platforms Federated Labratory
+kondoh2,yk-fujii,1,tier4,Computing Platforms Federated Labratory
+kondoh2,shinpei0208,1,tier4,Computing Platforms Federated Labratory
+syohex,syouji,1,Computing Platforms Federated Labratory,Computing Platforms Federated Labratory
+syohex,kitsukawa,1,map4,Computing Platforms Federated Labratory
+syohex,h-ohta,1,tier4,Computing Platforms Federated Labratory
+syohex,TomohitoAndo,1,tier4,Computing Platforms Federated Labratory
+syohex,manato,1,tier4,Computing Platforms Federated Labratory
+syohex,amc-nu,1,map4,Computing Platforms Federated Labratory
+syohex,kuriking,1,Aisan Tech,Computing Platforms Federated Labratory
+syohex,yukkysaito,1,tier4,Computing Platforms Federated Labratory
+syohex,pdsljp,1,,Computing Platforms Federated Labratory
+syohex,shinpei0208,1,tier4,Computing Platforms Federated Labratory
+syohex,beetleskin,1,,Computing Platforms Federated Labratory
+syohex,badguy07,1,,Computing Platforms Federated Labratory
+syouji,h-ohta,1,tier4,Computing Platforms Federated Labratory
+kitsukawa,syohex,1,Computing Platforms Federated Labratory,map4
+kitsukawa,amc-nu,1,map4,map4
+kitsukawa,dejanpan,1,apexai,map4
+kitsukawa,asimay,1,@xiaopeng,map4
+kitsukawa,aohsato,1,tier4,map4
+kitsukawa,daifuku07,1,PlatIV,map4
+kitsukawa,shinpei0208,1,tier4,map4
+kitsukawa,gbiggs,1,OSRF,map4
+kitsukawa,HongweiSunny,1,NIO AutonomousDriving,map4
+kitsukawa,DeniseJames,1,Self Employed,map4
+kitsukawa,weisongwen,1,"Hong Kong Polytechnic University/University of California, Berkeley",map4
+h-ohta,syohex,1,Computing Platforms Federated Labratory,tier4
+h-ohta,syouji,1,Computing Platforms Federated Labratory,tier4
+h-ohta,manato,1,tier4,tier4
+h-ohta,kuriking,1,Aisan Tech,tier4
+h-ohta,sujiwo,1,Nagoya University,tier4
+h-ohta,kenji-miyake,1,tier4,tier4
+TomohitoAndo,syohex,1,Computing Platforms Federated Labratory,tier4
+TomohitoAndo,amc-nu,1,map4,tier4
+TomohitoAndo,yk-fujii,1,tier4,tier4
+TomohitoAndo,YamatoAndo,1,tier4,tier4
+TomohitoAndo,dejanpan,1,apexai,tier4
+TomohitoAndo,shinpei0208,1,tier4,tier4
+TomohitoAndo,gbiggs,1,OSRF,tier4
+manato,syohex,1,Computing Platforms Federated Labratory,tier4
+manato,kitsukawa,1,map4,tier4
+manato,amc-nu,1,map4,tier4
+manato,yk-fujii,1,tier4,tier4
+manato,shinpei0208,1,tier4,tier4
+ghost,syohex,1,Computing Platforms Federated Labratory,
+ghost,amc-nu,1,map4,
+ghost,yukkysaito,1,tier4,
+ghost,YamatoAndo,1,tier4,
+ghost,aohsato,1,tier4,
+ghost,eratostennis,1,tier4,
+ghost,gbiggs,1,OSRF,
+amc-nu,syohex,1,Computing Platforms Federated Labratory,map4
+amc-nu,kitsukawa,1,map4,map4
+amc-nu,manato,1,tier4,map4
+amc-nu,yk-fujii,1,tier4,map4
+amc-nu,dejanpan,1,apexai,map4
+amc-nu,alexandrx,1,nagoya,map4
+amc-nu,hakuturu583,1,tier4,map4
+amc-nu,aohsato,1,tier4,map4
+amc-nu,shinpei0208,1,tier4,map4
+amc-nu,kfunaoka,1,tier4,map4
+amc-nu,esteve,1,tier4,map4
+amc-nu,k0suke-murakami,1,tier4,map4
+amc-nu,sgermanserrano,1,Linaro,map4
+amc-nu,JWhitleyWork,1,,map4
+amc-nu,gbiggs,1,OSRF,map4
+amc-nu,droneboxid,1,,map4
+amc-nu,Mor-harry,1,reachauto,map4
+amc-nu,tekrajchhetri,1,University of Southampton,map4
+KenYN,syohex,1,Computing Platforms Federated Labratory,
+KenYN,manato,1,tier4,
+KenYN,kuriking,1,Aisan Tech,
+KenYN,shinpei0208,1,tier4,
+kuriking,yukkysaito,1,tier4,Aisan Tech
+kuriking,shinpei0208,1,tier4,Aisan Tech
+yukkysaito,syohex,1,Computing Platforms Federated Labratory,tier4
+yukkysaito,amc-nu,1,map4,tier4
+yukkysaito,dejanpan,1,apexai,tier4
+yukkysaito,aohsato,1,tier4,tier4
+yukkysaito,yukitsuji,1,"Preferred Networks, Inc.",tier4
+yukkysaito,esteve,1,tier4,tier4
+yukkysaito,sgermanserrano,1,Linaro,tier4
+yukkysaito,gbiggs,1,OSRF,tier4
+yukkysaito,isamu-takagi,1,tier4,tier4
+travelbureau,syohex,1,Computing Platforms Federated Labratory,upenn
+travelbureau,h-ohta,1,tier4,upenn
+pdsljp,syohex,1,Computing Platforms Federated Labratory,
+pdsljp,h-ohta,1,tier4,
+pdsljp,amc-nu,1,map4,
+pdsljp,shinpei0208,1,tier4,
+garaemon,kuriking,1,Aisan Tech,@GITAI
+tushar-dadlani,yukkysaito,1,tier4,Walmart
+messi49,yk-fujii,1,tier4,tier4
+messi49,aohsato,1,tier4,tier4
+sujiwo,kitsukawa,1,map4,Nagoya University
+sujiwo,dejanpan,1,apexai,Nagoya University
+sujiwo,asimay,1,@xiaopeng,Nagoya University
+sujiwo,hakuturu583,1,tier4,Nagoya University
+sujiwo,gbiggs,1,OSRF,Nagoya University
+mingrutar,h-ohta,1,tier4,
+mingrutar,kuriking,1,Aisan Tech,
+droter,messi49,1,tier4,
+droter,shinpei0208,1,tier4,
+hatem-darweesh,kitsukawa,1,map4,Nagoya University
+hatem-darweesh,h-ohta,1,tier4,Nagoya University
+hatem-darweesh,amc-nu,1,map4,Nagoya University
+hatem-darweesh,yk-fujii,1,tier4,Nagoya University
+hatem-darweesh,dejanpan,1,apexai,Nagoya University
+hatem-darweesh,shinpei0208,1,tier4,Nagoya University
+hatem-darweesh,kfunaoka,1,tier4,Nagoya University
+hatem-darweesh,esteve,1,tier4,Nagoya University
+jitrc,syohex,1,Computing Platforms Federated Labratory,Ridecell
+jitrc,kitsukawa,1,map4,Ridecell
+jitrc,h-ohta,1,tier4,Ridecell
+yk-fujii,kitsukawa,1,map4,tier4
+yk-fujii,amc-nu,1,map4,tier4
+yk-fujii,messi49,1,tier4,tier4
+yk-fujii,YamatoAndo,1,tier4,tier4
+yk-fujii,dejanpan,1,apexai,tier4
+yk-fujii,asimay,1,@xiaopeng,tier4
+yk-fujii,aohsato,1,tier4,tier4
+yk-fujii,shinpei0208,1,tier4,tier4
+yk-fujii,k0suke-murakami,1,tier4,tier4
+yk-fujii,gbiggs,1,OSRF,tier4
+yk-fujii,czluck,1,,tier4
+yk-fujii,wsung1,1,,tier4
+anhnv3991,kitsukawa,1,map4,map4
+anhnv3991,yk-fujii,1,tier4,map4
+anhnv3991,YamatoAndo,1,tier4,map4
+anhnv3991,dejanpan,1,apexai,map4
+anhnv3991,asimay,1,@xiaopeng,map4
+anhnv3991,munirfarzeen,1,,map4
+YamatoAndo,kitsukawa,1,map4,tier4
+YamatoAndo,amc-nu,1,map4,tier4
+YamatoAndo,yukkysaito,1,tier4,tier4
+YamatoAndo,messi49,1,tier4,tier4
+YamatoAndo,yk-fujii,1,tier4,tier4
+YamatoAndo,dejanpan,1,apexai,tier4
+YamatoAndo,asimay,1,@xiaopeng,tier4
+YamatoAndo,aohsato,1,tier4,tier4
+YamatoAndo,daifuku07,1,PlatIV,tier4
+YamatoAndo,gbiggs,1,OSRF,tier4
+YamatoAndo,hunkyu,1,Southwest University of Science and Technology,tier4
+YamatoAndo,javcursor,1,,tier4
+dejanpan,amc-nu,1,map4,apexai
+dejanpan,yk-fujii,1,tier4,apexai
+dejanpan,YamatoAndo,1,tier4,apexai
+dejanpan,sumanth-nirmal,1,apexai,apexai
+alexandrx,amc-nu,1,map4,nagoya
+alexandrx,yukkysaito,1,tier4,nagoya
+alexandrx,dejanpan,1,apexai,nagoya
+alexandrx,aohsato,1,tier4,nagoya
+alexandrx,esteve,1,tier4,nagoya
+alexandrx,sgermanserrano,1,Linaro,nagoya
+alexandrx,gbiggs,1,OSRF,nagoya
+yn-mrse,yk-fujii,1,tier4,tier4
+yn-mrse,dejanpan,1,apexai,tier4
+yn-mrse,hakuturu583,1,tier4,tier4
+yn-mrse,aohsato,1,tier4,tier4
+yn-mrse,andoh104,1,tier4,tier4
+yn-mrse,gbiggs,1,OSRF,tier4
+yn-mrse,hadiTab,1,Amazon Lab126,tier4
+christopherho-ApexAI,amc-nu,1,map4,apexai
+christopherho-ApexAI,dejanpan,1,apexai,apexai
+hiro-ya-iv,yk-fujii,1,tier4,tier4
+hiro-ya-iv,dejanpan,1,apexai,tier4
+hiro-ya-iv,shinpei0208,1,tier4,tier4
+asimay,yk-fujii,1,tier4,@xiaopeng
+asimay,dejanpan,1,apexai,@xiaopeng
+130s,amc-nu,1,map4,
+130s,yk-fujii,1,tier4,
+130s,dejanpan,1,apexai,
+hakuturu583,amc-nu,1,map4,tier4
+hakuturu583,yukkysaito,1,tier4,tier4
+hakuturu583,yk-fujii,1,tier4,tier4
+hakuturu583,YamatoAndo,1,tier4,tier4
+hakuturu583,dejanpan,1,apexai,tier4
+hakuturu583,yn-mrse,1,tier4,tier4
+hakuturu583,mitsudome-r,1,tier4,tier4
+hakuturu583,k0suke-murakami,1,tier4,tier4
+hakuturu583,sgermanserrano,1,Linaro,tier4
+hakuturu583,gbiggs,1,OSRF,tier4
+hakuturu583,wep21,1,tier4,tier4
+aohsato,kitsukawa,1,map4,tier4
+aohsato,amc-nu,1,map4,tier4
+aohsato,kuriking,1,Aisan Tech,tier4
+aohsato,messi49,1,tier4,tier4
+aohsato,yk-fujii,1,tier4,tier4
+aohsato,YamatoAndo,1,tier4,tier4
+aohsato,dejanpan,1,apexai,tier4
+aohsato,yn-mrse,1,tier4,tier4
+aohsato,hakuturu583,1,tier4,tier4
+aohsato,kfunaoka,1,tier4,tier4
+aohsato,esteve,1,tier4,tier4
+aohsato,sgermanserrano,1,Linaro,tier4
+aohsato,JWhitleyWork,1,,tier4
+aohsato,gbiggs,1,OSRF,tier4
+aohsato,wep21,1,tier4,tier4
+aohsato,hamkuchan,1,,tier4
+aohsato,kennedywai,1,HelloWorld Robotics,tier4
+andoh104,kitsukawa,1,map4,tier4
+andoh104,amc-nu,1,map4,tier4
+andoh104,yk-fujii,1,tier4,tier4
+andoh104,dejanpan,1,apexai,tier4
+andoh104,yn-mrse,1,tier4,tier4
+andoh104,gbiggs,1,OSRF,tier4
+annaborn,amc-nu,1,map4,
+annaborn,yk-fujii,1,tier4,
+annaborn,dejanpan,1,apexai,
+annaborn,gbiggs,1,OSRF,
+geogrewang,yukkysaito,1,tier4,
+geogrewang,dejanpan,1,apexai,
+huiyi1990,yk-fujii,1,tier4,
+ChenxiTU,kitsukawa,1,map4,
+ChenxiTU,amc-nu,1,map4,
+ChenxiTU,dejanpan,1,apexai,
+ChenxiTU,shinpei0208,1,tier4,
+ChenxiTU,kfunaoka,1,tier4,
+ChenxiTU,mitsudome-r,1,tier4,
+ChenxiTU,sgermanserrano,1,Linaro,
+ChenxiTU,isamu-takagi,1,tier4,
+ckirksey3,h-ohta,1,tier4,google
+ckirksey3,yk-fujii,1,tier4,google
+yukitsuji,yk-fujii,1,tier4,"Preferred Networks, Inc."
+daifuku07,gbiggs,1,OSRF,PlatIV
+n-patiphon,amc-nu,1,map4,wg-leads
+n-patiphon,amc-nu,1,map4,map4
+n-patiphon,dejanpan,1,apexai,wg-leads
+n-patiphon,dejanpan,1,apexai,map4
+n-patiphon,kargarisaac,1,SUPPLYZ.eu,wg-leads
+n-patiphon,kargarisaac,1,SUPPLYZ.eu,map4
+shinpei0208,yk-fujii,1,tier4,tier4
+shinpei0208,asimay,1,@xiaopeng,tier4
+320835,207,1,,
+ompugao,amc-nu,1,map4,Nanyang Technological University
+ompugao,yk-fujii,1,tier4,Nanyang Technological University
+MasatoTange,syouji,1,Computing Platforms Federated Labratory,"Axe, inc."
+LukeAI,sgermanserrano,1,Linaro,
+LukeAI,gbiggs,1,OSRF,
+kfunaoka,amc-nu,1,map4,tier4
+kfunaoka,yn-mrse,1,tier4,tier4
+kfunaoka,aohsato,1,tier4,tier4
+kfunaoka,esteve,1,tier4,tier4
+kfunaoka,k0suke-murakami,1,tier4,tier4
+kfunaoka,sgermanserrano,1,Linaro,tier4
+kfunaoka,JWhitleyWork,1,,tier4
+kfunaoka,gbiggs,1,OSRF,tier4
+kfunaoka,bdholt1,1,Parkopedia,tier4
+mitsudome-r,amc-nu,1,map4,tier4
+mitsudome-r,yukkysaito,1,tier4,tier4
+mitsudome-r,YamatoAndo,1,tier4,tier4
+mitsudome-r,gbiggs,1,OSRF,tier4
+mitsudome-r,kenji-miyake,1,tier4,tier4
+mitsudome-r,xmfcx,1,leodrive,tier4
+TheodoreRTG,sgermanserrano,1,Linaro,Linaro
+esteve,kitsukawa,1,map4,tier4
+esteve,amc-nu,1,map4,tier4
+esteve,yukkysaito,1,tier4,tier4
+esteve,hatem-darweesh,1,Nagoya University,tier4
+esteve,yk-fujii,1,tier4,tier4
+esteve,dejanpan,1,apexai,tier4
+esteve,kfunaoka,1,tier4,tier4
+esteve,mitsudome-r,1,tier4,tier4
+esteve,sgermanserrano,1,Linaro,tier4
+esteve,JWhitleyWork,1,,tier4
+esteve,gbiggs,1,OSRF,tier4
+esteve,isamu-takagi,1,tier4,tier4
+esteve,kenji-miyake,1,tier4,tier4
+esteve,kaspermeck-arm,1,wg-leads,tier4
+esteve,kaspermeck-arm,1,arm,tier4
+esteve,xmfcx,1,leodrive,tier4
+esteve,Sharrrrk,1,autocore,tier4
+esteve,Sharrrrk,1,maintainers,tier4
+esteve,lexavtanke,1,leodrive,tier4
+esteve,HEGALLIS,1,Linaro,tier4
+esteve,bdholt1,1,Parkopedia,tier4
+esteve,vtbassmatt,1,GitHub,tier4
+esteve,asimonov-hitachi,1,,tier4
+esteve,MTDzi,1,,tier4
+esteve,maximus5684,1,apexai,tier4
+esteve,jspricke,1,,tier4
+moelang,gbiggs,1,OSRF,
+k0suke-murakami,amc-nu,1,map4,tier4
+k0suke-murakami,yukkysaito,1,tier4,tier4
+k0suke-murakami,yk-fujii,1,tier4,tier4
+k0suke-murakami,hakuturu583,1,tier4,tier4
+k0suke-murakami,aohsato,1,tier4,tier4
+k0suke-murakami,kfunaoka,1,tier4,tier4
+k0suke-murakami,sgermanserrano,1,Linaro,tier4
+k0suke-murakami,gbiggs,1,OSRF,tier4
+k0suke-murakami,kargarisaac,1,SUPPLYZ.eu,tier4
+k0suke-murakami,hamkuchan,1,,tier4
+sgermanserrano,amc-nu,1,map4,Linaro
+sgermanserrano,yukkysaito,1,tier4,Linaro
+sgermanserrano,yk-fujii,1,tier4,Linaro
+sgermanserrano,hakuturu583,1,tier4,Linaro
+sgermanserrano,aohsato,1,tier4,Linaro
+sgermanserrano,kfunaoka,1,tier4,Linaro
+sgermanserrano,esteve,1,tier4,Linaro
+sgermanserrano,k0suke-murakami,1,tier4,Linaro
+sgermanserrano,s-azumi,1,tier4,Linaro
+sgermanserrano,gbiggs,1,OSRF,Linaro
+sgermanserrano,maximosipov,1,Heading Health,Linaro
+sgermanserrano,HEGALLIS,1,Linaro,Linaro
+sgermanserrano,lanhaigit,1,,Linaro
+sgermanserrano,icolwell,1,apexai,Linaro
+harderthan,esteve,1,tier4,
+MarcoCecotti,gbiggs,1,OSRF,Cranfield University
+jacoblambert,amc-nu,1,map4,map4
+haoliliang,jacoblambert,1,map4,
+drwnz,amc-nu,1,map4,tier4
+drwnz,gbiggs,1,OSRF,tier4
+drwnz,kargarisaac,1,SUPPLYZ.eu,tier4
+saihideyasu,JWhitleyWork,1,,
+saihideyasu,gbiggs,1,OSRF,
+s-azumi,yk-fujii,1,tier4,tier4
+s-azumi,dejanpan,1,apexai,tier4
+s-azumi,yn-mrse,1,tier4,tier4
+s-azumi,hakuturu583,1,tier4,tier4
+s-azumi,kfunaoka,1,tier4,tier4
+s-azumi,mitsudome-r,1,tier4,tier4
+s-azumi,sgermanserrano,1,Linaro,tier4
+s-azumi,gbiggs,1,OSRF,tier4
+Tpsych,amc-nu,1,map4,
+Tpsych,mouryaraj,1,,
+aicarmark,gbiggs,1,OSRF,Linaro
+LukePhairatt,dejanpan,1,apexai,
+LukePhairatt,esteve,1,tier4,
+LukePhairatt,gbiggs,1,OSRF,
+LukePhairatt,bdholt1,1,Parkopedia,
+LukePhairatt,allenchen8210,1,National Cheng Kung University,
+Squigglywave,amc-nu,1,map4,
+Squigglywave,yk-fujii,1,tier4,
+Squigglywave,gbiggs,1,OSRF,
+Squigglywave,T-Shota,1,EmbIV,
+Squigglywave,sousou1,1,,
+Squigglywave,rorypeck,1,,
+alexampa,kitsukawa,1,map4,
+alexampa,amc-nu,1,map4,
+alexampa,kfunaoka,1,tier4,
+alexampa,gbiggs,1,OSRF,
+masa1228masa,kitsukawa,1,map4,Computing Platforms Federated Labratory
+Mani-Sadhasivam,manato,1,tier4,"Linaro, 96Boards "
+Mani-Sadhasivam,amc-nu,1,map4,"Linaro, 96Boards "
+Mani-Sadhasivam,yk-fujii,1,tier4,"Linaro, 96Boards "
+sumanth-nirmal,amc-nu,1,map4,apexai
+sumanth-nirmal,dejanpan,1,apexai,apexai
+francisvac,yk-fujii,1,tier4,
+eratostennis,messi49,1,tier4,tier4
+koenlek,amc-nu,1,map4,
+koenlek,esteve,1,tier4,
+koenlek,bdholt1,1,Parkopedia,
+koenlek,jokla,1,Medtronic,
+huckl3b3rry87,amc-nu,1,map4,Honda
+huckl3b3rry87,dejanpan,1,apexai,Honda
+huckl3b3rry87,gbiggs,1,OSRF,Honda
+italojs,gbiggs,1,OSRF,@herbjs
+JWhitleyWork,amc-nu,1,map4,
+JWhitleyWork,sgermanserrano,1,Linaro,
+JWhitleyWork,gbiggs,1,OSRF,
+gbiggs,JWhitleyWork,1,,OSRF
+gbiggs,TakaHoribe,1,tier4,OSRF
+TakaHoribe,amc-nu,1,map4,tier4
+TakaHoribe,yukkysaito,1,tier4,tier4
+TakaHoribe,sgermanserrano,1,Linaro,tier4
+TakaHoribe,gbiggs,1,OSRF,tier4
+TakaHoribe,hunkyu,1,Southwest University of Science and Technology,tier4
+sgvandijk,hatem-darweesh,1,Nagoya University,
+sgvandijk,gbiggs,1,OSRF,
+isamu-takagi,amc-nu,1,map4,tier4
+isamu-takagi,yukkysaito,1,tier4,tier4
+isamu-takagi,hakuturu583,1,tier4,tier4
+isamu-takagi,kfunaoka,1,tier4,tier4
+isamu-takagi,mitsudome-r,1,tier4,tier4
+isamu-takagi,sgermanserrano,1,Linaro,tier4
+isamu-takagi,gbiggs,1,OSRF,tier4
+isamu-takagi,kenji-miyake,1,tier4,tier4
+isamu-takagi,tkhmy,1,tier4,tier4
+isamu-takagi,xmfcx,1,leodrive,tier4
+isamu-takagi,yabuta,1,tier4,tier4
+wep21,amc-nu,1,map4,tier4
+wep21,yukkysaito,1,tier4,tier4
+wep21,kfunaoka,1,tier4,tier4
+wep21,gbiggs,1,OSRF,tier4
+wep21,kenji-miyake,1,tier4,tier4
+wep21,yukke42,1,tier4,tier4
+wep21,xmfcx,1,leodrive,tier4
+wep21,ubercool2,1,,tier4
+wep21,stale[bot],1,,tier4
+0xd1ma,gbiggs,1,OSRF,
+snehagn,aohsato,1,tier4,Clemson University
+snehagn,kfunaoka,1,tier4,Clemson University
+EfimiaPanagiotaki-StreetDrone,esteve,1,tier4,StreetDrone
+EfimiaPanagiotaki-StreetDrone,sgermanserrano,1,Linaro,StreetDrone
+EfimiaPanagiotaki-StreetDrone,gbiggs,1,OSRF,StreetDrone
+purewater0901,gbiggs,1,OSRF,tier4
+maximosipov,gbiggs,1,OSRF,Heading Health
+filiperinaldi,sgermanserrano,1,Linaro,arm
+filiperinaldi,MouriNaruto,1,Day: @QieTV / Night: @Chuyu-Team @M2Team,arm
+AbangLZU,yukkysaito,1,tier4,
+AbangLZU,lucasjinreal,1,google,
+AbangLZU,14212094,1,,
+AbangLZU,zzhh00,1,,
+kenji-miyake,ghost,1,,tier4
+kenji-miyake,yukkysaito,1,tier4,tier4
+kenji-miyake,hakuturu583,1,tier4,tier4
+kenji-miyake,mitsudome-r,1,tier4,tier4
+kenji-miyake,esteve,1,tier4,tier4
+kenji-miyake,isamu-takagi,1,tier4,tier4
+kenji-miyake,wep21,1,tier4,tier4
+kenji-miyake,filiperinaldi,1,arm,tier4
+kenji-miyake,xmfcx,1,leodrive,tier4
+kenji-miyake,xczhanjun,1,baidu usa,tier4
+kenji-miyake,oguzkaganozt,1,wg-leads,tier4
+kenji-miyake,oguzkaganozt,1,leodrive,tier4
+kenji-miyake,0x126,1,tier4,tier4
+kenji-miyake,stale[bot],1,,tier4
+anilbommareddy,kenji-miyake,1,tier4,
+anilbommareddy,shmpwk,1,tier4,
+anilbommareddy,patelabhay-12,1,,
+kaspermeck-arm,ghost,1,,wg-leads
+kaspermeck-arm,ghost,1,,arm
+kaspermeck-arm,kenji-miyake,1,tier4,wg-leads
+kaspermeck-arm,kenji-miyake,1,tier4,arm
+pre-commit-ci[bot],kenji-miyake,1,tier4,
+pre-commit-ci[bot],xmfcx,1,leodrive,
+shmpwk,kenji-miyake,1,tier4,tier4
+shmpwk,xmfcx,1,leodrive,tier4
+cjffly,isamu-takagi,1,tier4,
+cjffly,kenji-miyake,1,tier4,
+cjffly,xmfcx,1,leodrive,
+cjffly,taikitanaka3,1,tier4,
+cjffly,kyoichi-sugahara,1,tier4,
+cjffly,isouf,1,,
+cjffly,AhmadAmine998,1,upenn,
+awf-autoware-bot[bot],kenji-miyake,1,tier4,
+awf-autoware-bot[bot],xmfcx,1,leodrive,
+TZECHIN6,xmfcx,1,leodrive,
+TZECHIN6,BonoloAWF,1,awf,
+tkhmy,isamu-takagi,1,tier4,tier4
+angry-crab,kenji-miyake,1,tier4,tier4
+angry-crab,ambroise-arm,1,arm,tier4
+angry-crab,IshitaTakeshi,1,tier4,tier4
+pjj707278870,kenji-miyake,1,tier4,
+yukke42,kenji-miyake,1,tier4,tier4
+yukke42,angry-crab,1,tier4,tier4
+yukke42,xmfcx,1,leodrive,tier4
+yukke42,VRichardJP,1,macnica,tier4
+yukke42,LevieSun,1,,tier4
+yukke42,may012345,1,,tier4
+mehmetdogru,taikitanaka3,1,tier4,leodrive
+maxime-clem,kenji-miyake,1,tier4,tier4
+YoshiRi,kenji-miyake,1,tier4,tier4
+urbansound8K,mitsudome-r,1,tier4,
+urbansound8K,xmfcx,1,leodrive,
+dependabot[bot],kenji-miyake,1,tier4,
+xmfcx,ghost,1,,leodrive
+xmfcx,yukkysaito,1,tier4,leodrive
+xmfcx,mitsudome-r,1,tier4,leodrive
+xmfcx,esteve,1,tier4,leodrive
+xmfcx,TakaHoribe,1,tier4,leodrive
+xmfcx,kenji-miyake,1,tier4,leodrive
+xmfcx,shmpwk,1,tier4,leodrive
+xmfcx,oguzkaganozt,1,wg-leads,leodrive
+xmfcx,oguzkaganozt,1,leodrive,leodrive
+xmfcx,VRichardJP,1,macnica,leodrive
+xmfcx,doganulus,1,Boğaziçi University @bouncmpe,leodrive
+aaryanmurgunde,kenji-miyake,1,tier4,RigBetel Labs LLP
+Sharrrrk,kenji-miyake,1,tier4,autocore
+Sharrrrk,kenji-miyake,1,tier4,maintainers
+Sharrrrk,kaspermeck-arm,1,wg-leads,autocore
+Sharrrrk,kaspermeck-arm,1,wg-leads,maintainers
+Sharrrrk,kaspermeck-arm,1,arm,autocore
+Sharrrrk,kaspermeck-arm,1,arm,maintainers
+Sharrrrk,xmfcx,1,leodrive,autocore
+Sharrrrk,xmfcx,1,leodrive,maintainers
+Sharrrrk,BonoloAWF,1,awf,autocore
+Sharrrrk,BonoloAWF,1,awf,maintainers
+Sharrrrk,doganulus,1,Boğaziçi University @bouncmpe,autocore
+Sharrrrk,doganulus,1,Boğaziçi University @bouncmpe,maintainers
+Sharrrrk,liuXinGangChina,1,autocore,autocore
+Sharrrrk,liuXinGangChina,1,autocore,maintainers
+Croquembouche,maxime-clem,1,tier4,wsu
+Croquembouche,msanchezvicom,1,,wsu
+Croquembouche,jfkkf123,1,,wsu
+Soohyeok-Park,xmfcx,1,leodrive,MORAI Inc.
+ambroise-arm,kenji-miyake,1,tier4,arm
+ambroise-arm,xmfcx,1,leodrive,arm
+plane-li,Sharrrrk,1,autocore,autocore
+plane-li,Sharrrrk,1,maintainers,autocore
+plane-li,JianKangEgon,1,autocore,autocore
+plane-li,cyn-liu,1,autocore,autocore
+plane-li,beginningfan,1,autocore,autocore
+brkay54,kenji-miyake,1,tier4,leodrive
+mengmenghu-Alex,shmpwk,1,tier4,
+xczhanjun,kenji-miyake,1,tier4,baidu usa
+xczhanjun,yukke42,1,tier4,baidu usa
+IshitaTakeshi,wep21,1,tier4,tier4
+IshitaTakeshi,kenji-miyake,1,tier4,tier4
+IshitaTakeshi,xczhanjun,1,baidu usa,tier4
+oguzkaganozt,mitsudome-r,1,tier4,wg-leads
+oguzkaganozt,mitsudome-r,1,tier4,leodrive
+HansRobo,xmfcx,1,leodrive,tier4
+lexavtanke,esteve,1,tier4,leodrive
+lexavtanke,KYabuuchi,1,tier4,leodrive
+AmirInt,xmfcx,1,leodrive,
+badai-nguyen,esteve,1,tier4,tier4
+felixf4xu,xmfcx,1,leodrive,
+felixf4xu,SakodaShintaro,1,tier4,
+DeeKayG,xmfcx,1,leodrive,University at Buffalo
+J-xinyu,angry-crab,1,tier4,thu
+J-xinyu,maxime-clem,1,tier4,thu
+J-xinyu,cho-jang-hyun,1,Kyung Hee University,thu
+VRichardJP,mitsudome-r,1,tier4,macnica
+VRichardJP,TakaHoribe,1,tier4,macnica
+VRichardJP,kenji-miyake,1,tier4,macnica
+VRichardJP,ambroise-arm,1,arm,macnica
+VRichardJP,simon-t4,1,tier4,macnica
+VRichardJP,mdabir1203,1,42 Wolfsburg,macnica
+RonaldEnsing,maxime-clem,1,tier4,TU Delft Intelligent Vehicles
+RonaldEnsing,jyh3690,1,,TU Delft Intelligent Vehicles
+RonaldEnsing,guchangjun,1,,TU Delft Intelligent Vehicles
+Tester2009,mitsudome-r,1,tier4,
+taikitanaka3,yukkysaito,1,tier4,tier4
+lymcs,xmfcx,1,leodrive,
+lymcs,tl230419,1,,
+sykwer,kenji-miyake,1,tier4,tier4
+sykwer,xmfcx,1,leodrive,tier4
+kazuki0824,HansRobo,1,tier4,OUXT-Polaris
+caiyuexiang,kenji-miyake,1,tier4,autocore
+rsasaki0109,yukkysaito,1,tier4,map4
+rsasaki0109,kminoda,1,tier4,map4
